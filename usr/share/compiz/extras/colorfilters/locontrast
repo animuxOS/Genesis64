@@ -1,0 +1,7 @@
+!!ARBfp1.0
+TEMP output;
+TEX output, fragment.texcoord[0], texture[0], RECT;
+SUB output.rgb, output, 0.5;
+MAD output.rgb, output, 0.3, 0.5;
+MOV result.color, output;
+END

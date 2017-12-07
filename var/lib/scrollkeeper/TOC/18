@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<toc>
+<tocsect1 linkid="preface">Termes et conventions utilisés dans ce manuel
+</tocsect1>
+<tocsect1 linkid="overview">Vue d'ensemble
+<tocsect2 linkid="introduction">Introduction
+</tocsect2>
+<tocsect2 linkid="stability">Stabilité de l'interface
+</tocsect2>
+<tocsect2 linkid="daemonov">Le démon GDM
+</tocsect2>
+<tocsect2 linkid="displaytypes">Différents types d'affichage
+</tocsect2>
+<tocsect2 linkid="xdmcp">XDMCP
+</tocsect2>
+<tocsect2 linkid="secureremote">Sécurisation de connexions distantes avec SSH
+</tocsect2>
+<tocsect2 linkid="gtkgreeter">La bannière GTK+
+</tocsect2>
+<tocsect2 linkid="themedgreeter">La bannière à thème
+</tocsect2>
+<tocsect2 linkid="facebrowser">Le navigateur de figures GDM
+</tocsect2>
+<tocsect2 linkid="logging">Journalisation
+</tocsect2>
+<tocsect2 linkid="fileaccess">Accès aux fichiers
+</tocsect2>
+<tocsect2 linkid="performance">Performances de GDM
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="security">Sécurité
+<tocsect2 linkid="PAM">PAM
+</tocsect2>
+<tocsect2 linkid="utmpwtmp">utmp/wtmp
+</tocsect2>
+<tocsect2 linkid="gdmuser">L'utilisateur GDM
+</tocsect2>
+<tocsect2 linkid="xauth">Processus d'authentification du serveur X
+</tocsect2>
+<tocsect2 linkid="firewall">Sécurité du pare-feu
+</tocsect2>
+<tocsect2 linkid="nfssecurity">Sécurité GDM avec NFS
+</tocsect2>
+<tocsect2 linkid="xdmcpsecurity">Sécurité XDMCP
+</tocsect2>
+<tocsect2 linkid="xdmcpaccess">Contrôle d'accès XDMCP
+</tocsect2>
+<tocsect2 linkid="rbac">RBAC (Contrôle d'accès basé sur les rôles)
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="consolekit">Prise en charge de ConsoleKit
+</tocsect1>
+<tocsect1 linkid="gdmsetupusage">Utilisation de gdmsetup pour configurer GDM
+<tocsect2 linkid="gdmsetuplocaltab">Onglet Locale
+</tocsect2>
+<tocsect2 linkid="gdmsetupremotetab">Onglet Distante
+</tocsect2>
+<tocsect2 linkid="gdmsetupaccessibilitytab">Onglet Accessibilité
+</tocsect2>
+<tocsect2 linkid="gdmsetupsecuritytab">Onglet Sécurité
+</tocsect2>
+<tocsect2 linkid="gdmsetupuserstab">Onglet Utilisateurs
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="configuration">Configuration
+<tocsect2 linkid="scriptdirs">Les répertoires de scripts
+</tocsect2>
+<tocsect2 linkid="configfile">Les fichiers de configuration - le fichier de configuration par défaut du système GDM et le fichier de configuration personnalisé GDM
+<tocsect3 linkid="daemonsection">Configuration du démon
+</tocsect3>
+<tocsect3 linkid="securitysection">Options de sécurité
+</tocsect3>
+<tocsect3 linkid="xdmcpsection">Prise en charge de XDMCP
+</tocsect3>
+<tocsect3 linkid="commonguioptions">Options de configuration courantes de l'interface graphique
+</tocsect3>
+<tocsect3 linkid="greetersection">Configuration de la bannière
+</tocsect3>
+<tocsect3 linkid="choosersection">Options du sélecteur XDMCP
+</tocsect3>
+<tocsect3 linkid="debugsection">Configuration de débogage
+</tocsect3>
+<tocsect3 linkid="customcmdsection">Commandes personnalisées
+</tocsect3>
+<tocsect3 linkid="xserverdefs">Définitions du serveur X
+</tocsect3>
+<tocsect3 linkid="attacheddisplayconfig">Configuration des affichages liés
+</tocsect3>
+</tocsect2>
+<tocsect2 linkid="userconfig">Configuration par utilisateur
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="controlling">Supervision de GDM
+<tocsect2 linkid="commands">Commandes
+</tocsect2>
+<tocsect2 linkid="fifoprot">Le protocole FIFO
+</tocsect2>
+<tocsect2 linkid="socketprot">Protocole socket
+<tocsect3 linkid="adddynamic">ADD_DYNAMIC_DISPLAY
+</tocsect3>
+<tocsect3 linkid="allservers">ALL_SERVERS
+</tocsect3>
+<tocsect3 linkid="attachedservers">ATTACHED_SERVERS
+</tocsect3>
+<tocsect3 linkid="authlocal">AUTH_LOCAL
+</tocsect3>
+<tocsect3 linkid="close">CLOSE
+</tocsect3>
+<tocsect3 linkid="flexixnest">FLEXI_XNEST
+</tocsect3>
+<tocsect3 linkid="flexixnestuser">FLEXI_XNEST_USER
+</tocsect3>
+<tocsect3 linkid="flexixserver">FLEXI_XSERVER
+</tocsect3>
+<tocsect3 linkid="flexixserveruser">FLEXI_XSERVER_USER
+</tocsect3>
+<tocsect3 linkid="getconfig">GET_CONFIG
+</tocsect3>
+<tocsect3 linkid="getconfigfile">GET_CONFIG_FILE
+</tocsect3>
+<tocsect3 linkid="getcustomconfigfile">GET_CUSTOM_CONFIG_FILE
+</tocsect3>
+<tocsect3 linkid="getserverdetails">GET_SERVER_DETAILS
+</tocsect3>
+<tocsect3 linkid="getserverlist">GET_SERVER_LIST
+</tocsect3>
+<tocsect3 linkid="greeterpids">GREETERPIDS
+</tocsect3>
+<tocsect3 linkid="querylogoutaction">QUERY_LOGOUT_ACTION
+</tocsect3>
+<tocsect3 linkid="querycustomcmdlabels">QUERY_CUSTOM_CMD_LABELS
+</tocsect3>
+<tocsect3 linkid="querycustomcmdnorestartstatus">QUERY_CUSTOM_CMD_NO_RESTART_STATUS
+</tocsect3>
+<tocsect3 linkid="queryvt">QUERY_VT
+</tocsect3>
+<tocsect3 linkid="releasedynamic">RELEASE_DYNAMIC_DISPLAYS
+</tocsect3>
+<tocsect3 linkid="removedynamic">REMOVE_DYNAMIC_DISPLAY
+</tocsect3>
+<tocsect3 linkid="serverbusy">SERVER_BUSY
+</tocsect3>
+<tocsect3 linkid="setlogoutaction">SET_LOGOUT_ACTION
+</tocsect3>
+<tocsect3 linkid="setsafelogoutaction">SET_SAFE_LOGOUT_ACTION
+</tocsect3>
+<tocsect3 linkid="setvt">SET_VT
+</tocsect3>
+<tocsect3 linkid="updateconfig">UPDATE_CONFIG
+</tocsect3>
+<tocsect3 linkid="queryversion">VERSION
+</tocsect3>
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="binaries">Commandes GDM
+<tocsect2 linkid="bindir_binaries">Commandes utilisateur GDM
+<tocsect3 linkid="gdmxnestchoosercommandline">Options en ligne de commande de gdmXnestchooser et gdmXnest
+</tocsect3>
+<tocsect3 linkid="gdmflexichoosercommandline">Options en ligne de commande de gdmflexichooser
+</tocsect3>
+<tocsect3 linkid="gdmdynamiccommandline">Options en ligne de commande de gdmdynamic
+</tocsect3>
+<tocsect3 linkid="gdmphotosetupcommandline">Options en ligne de commande de gdmphotosetup
+</tocsect3>
+<tocsect3 linkid="gdmthemetestercommandline">Options en ligne de commande de gdmthemetester
+</tocsect3>
+</tocsect2>
+<tocsect2 linkid="sbindir_binaries">Commandes GDM pour l'administrateur (root)
+<tocsect3 linkid="gdmcommandline">Options en ligne de commande de gdm et gdm-binary
+</tocsect3>
+<tocsect3 linkid="gdmsetupcommandline">Options en ligne de commande de gdmsetup
+</tocsect3>
+<tocsect3 linkid="gdmrestartcommandline">Options en ligne de commande de gdm-restart
+</tocsect3>
+<tocsect3 linkid="gdmsaferestartcommandline">Options en ligne de commande de gdm-safe-restart
+</tocsect3>
+<tocsect3 linkid="gdmstopcommandline">Options en ligne de commande de gdm-stop
+</tocsect3>
+</tocsect2>
+<tocsect2 linkid="libexecdir_binaries">Commandes internes de GDM
+<tocsect3 linkid="gdmgreeterlogincommandline">Options en ligne de commande de gdmchooser et gdmlogin
+</tocsect3>
+<tocsect3 linkid="gdmchoosercommandline">Options en ligne de commande de gdmchooser
+</tocsect3>
+<tocsect3 linkid="gdm-ssh-session">gdm-ssh-session
+</tocsect3>
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="thememanual">Bannière avec thème
+<tocsect2 linkid="themeover">Aperçu des thèmes
+</tocsect2>
+<tocsect2 linkid="descofthemeformat">Description détaillée du format XML de thème
+<tocsect3 linkid="greetertag">Balise greeter
+</tocsect3>
+<tocsect3 linkid="boxnodes">Nœuds boîtes (box)
+</tocsect3>
+<tocsect3 linkid="fixednodes">Nœuds fixes (fixed)
+</tocsect3>
+<tocsect3 linkid="itemnodes">Nœuds éléments (item)
+</tocsect3>
+<tocsect3 linkid="positionnodes">Nœud de position (pos)
+</tocsect3>
+<tocsect3 linkid="shownodes">Nœuds d'affichage (show)
+</tocsect3>
+<tocsect3 linkid="noractprenodes">Nœuds normal/actif/survol
+</tocsect3>
+<tocsect3 linkid="listcoloronodes">Nœuds de couleur des icônes et étiquettes du navigateur de figures
+</tocsect3>
+<tocsect3 linkid="textnodes">Nœud texte
+</tocsect3>
+<tocsect3 linkid="stocklabels">Nœud prédéfini (stock)
+</tocsect3>
+<tocsect3 linkid="customwidgetry">Widgets personnalisés
+</tocsect3>
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="accessibility">Accessibilité
+<tocsect2 linkid="accessibilityconfig">Configuration de l'accessibilité
+<tocsect3 linkid="accessibilitytheming">Thèmes et accessibilité
+</tocsect3>
+<tocsect3 linkid="accessibilityatprograms">Prise en charge des aides techniques
+</tocsect3>
+<tocsect3 linkid="accessibilitytroubleshooting">Dépannage des aides techniques
+</tocsect3>
+<tocsect3 linkid="accessibilitysound">Configuration du son de la connexion accessible
+</tocsect3>
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="solaris">Fonctionnalités spécifiques à Solaris
+<tocsect2 linkid="solarisusing">Utilisation de GDM sur Solaris
+</tocsect2>
+<tocsect2 linkid="solarisconfiguration">Configuration de Solaris
+</tocsect2>
+<tocsect2 linkid="solarislogindevperm">Solaris et /etc/logindevperm
+</tocsect2>
+<tocsect2 linkid="solarisautomaticlogin">Connexion automatique sur Solaris
+</tocsect2>
+<tocsect2 linkid="solarisrbac">Prise en charge de RBAC sur Solaris pour l'extinction, le redémarrage et la mise en veille
+</tocsect2>
+<tocsect2 linkid="solarisother">Autres fonctionnalités sur Solaris
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="exampleconf">Exemples de configuration
+<tocsect2 linkid="customcommand">Définition de commandes personnalisées
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="troubleshooting">Dépannage
+<tocsect2 linkid="wontstart">GDM ne démarre pas
+</tocsect2>
+<tocsect2 linkid="notaccessfile">GDM n'accède pas aux paramètres de l'utilisateur
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="license">Licence
+</tocsect1>
+</toc>

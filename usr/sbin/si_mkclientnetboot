@@ -1,0 +1,172 @@
+#!/usr/bin/perl -w
+
+#
+# "SystemImager" 
+#
+#  Copyright (C) 2002 Bald Guy Software 
+#                     <brian.finley@baldguysoftware.com>
+#
+#  $Id: si_mkclientnetboot 2872 2004-09-29 18:36:18Z brianfinley $
+#
+
+# set some variables
+$VERSION="3.6.3";
+my $program_name="si_mkclientnetboot";
+my $get_help = "  Try \"$program_name --help\" for more options.";
+
+# declare modules
+use lib "/usr/lib/systemimager/perl";
+use strict;
+use Socket;
+use File::Copy;
+use File::Path;
+use Net::hostent;
+use Getopt::Long;
+use SystemImager::Config;
+use SystemImager::Common;
+use SystemImager::Server;
+use SystemImager::Options;
+
+use vars qw($config $VERSION);
+
+### BEGIN parse the config file ###
+
+my $tftp_dir = $config->tftp_dir();
+if (!$tftp_dir) { die "TFTP_DIR not defined in the config file."; }
+
+my $localboot_file = "/etc/systemimager/pxelinux.cfg/syslinux.cfg.localboot";
+my $netboot_file = "/etc/systemimager/pxelinux.cfg/syslinux.cfg";
+
+#
+### END parse the config file ###
+
+# set version information
+my $version_info = <<"EOF";
+$program_name (part of SystemImager) version $VERSION
+
+EOF
+
+$version_info .= SystemImager::Options->copyright();
+
+# Help stuff
+my $help_info = $version_info . SystemImager::Options->mkclientnetboot_options_header();
+$help_info = $help_info . SystemImager::Options->generic_options_help_version();
+$help_info = $help_info . SystemImager::Options->mkclientnetboot_options_body();
+$help_info = $help_info . SystemImager::Options->generic_footer();
+
+GetOptions( 
+    "help"              => \my $help,
+    "version"           => \my $version,
+    "verbose"           => \my $verbose,
+    "localboot"         => \my $localboot,
+    "netboot"           => \my $netboot,
+    "clients=s"         => \my $clients,
+) or die qq($help_info);
+
+# if requested, print help information
+if($help) {
+    print qq($help_info);
+    exit 0;
+}
+
+# if requested, print version and copyright information
+if($version) {
+    print qq($version_info);
+    exit 0;
+}
+
+unless($clients) {
+    print qq(FATAL: Please specify one or more clients with --clients.\n);
+    print qq($get_help\n);
+    exit 1;
+}
+
+unless( ($localboot) or ($netboot) ) {
+    print qq(FATAL: Please specify --localboot or --netboot.\n);
+    print qq($get_help\n);
+    exit 1;
+}
+
+SystemImager::Common->check_if_root();
+
+# Make array from --clients "hostnames and ip addresses" -BEF-
+$_ = $clients;
+my @array = split;
+
+my $source_file;
+if($localboot) {
+    $source_file = $localboot_file;
+} elsif($netboot) {
+    $source_file = $netboot_file;
+}
+
+foreach my $client (@array) {
+    # IP or Hostname?
+    if(SystemImager::Common->valid_ip_quad($client)) {
+        my $ip = $client;
+        cp_boot_file($ip, $source_file);
+    } else {
+        my @ips = get_ips($client);
+        foreach my $ip ( @ips ) {
+            cp_boot_file($ip, $source_file);
+        }
+    }
+}
+
+
+################################################################################
+#
+#   Subroutines
+#
+################################################################################
+
+
+################################################################################
+#
+# Description:
+# Creates a boot file for a node.
+#
+# Usage:
+# cp_boot_file($ip_dec, $source_file);
+sub cp_boot_file {
+
+    my ($ip_dec, $source_file) = @_;
+    my $ip_hex;
+
+    $ip_hex = SystemImager::Server->ip_quad_2_ip_hex($ip_dec);
+
+    my $file = $tftp_dir . "/pxelinux.cfg/" . $ip_hex;
+    if ($verbose) { print "Creating $file.\n"; }
+
+    # copy file over
+    copy("$source_file","$file") or die "Copy failed: $!";
+
+    return 1;
+}
+
+
+################################################################################
+#
+# Description:
+# Produce a list of IP addresses from a host name.
+#
+# Usage:
+# my @ips = get_ips($hostname);
+sub get_ips {
+
+    my $host = $_[0];
+
+    my ($hinfo, @ips);
+    if ( $hinfo = gethost($host) ) { 
+        foreach my $addr ( @{$hinfo->addr_list} ) {
+            push @ips, inet_ntoa($addr);
+        }
+    } else {
+        die "Can't find an IP address for $host!\n";
+    }
+
+    return @ips;
+
+}
+
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<westley jah_title="Fly In">
+  <producer id="producer0" in="0" out="74">
+    <property name="resource">bad_picture.jpg</property>
+    <property name="meta.fx_cut">1</property>
+    <filter id="filter0" jah_title="bad picture">
+      <property name="composite.geometry">0,0,100%,100%:25</property>
+      <property name="resource">noise:</property>
+      <property name="mlt_type">filter</property>
+      <property name="mlt_service">watermark</property>
+      <property name="composite.distort">1</property>
+      <property name="composite.always_active">1</property>
+    </filter>
+  </producer>
+</westley>

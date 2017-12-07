@@ -1,0 +1,911 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Lăţimea ferestrei">
+                                                        <longdesc>Lăţimea ferestrei afişate</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Înălţimea ferestrei">
+                                                        <longdesc>Înălţimea ferestrei afişate</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Comanda care va fi rulată la o combinaţie de taste">
+                                                        <longdesc>Cheile /apps/metacity/global_keybindings/run_command_N definesc combinaţiile de taste corespunzătoare acestor comenzi. Apăsând combinaţia de taste pentru run_command_N se va executa command_N.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Comanda pentru captură ecran a ferestrei">
+                                                        <longdesc>Cheia /apps/metacity/global_keybindings/run_command_window_screenshot defineşte combinaţia de taste corespunzătoare acestei comenzi.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Comanda pentru captură ecran">
+                                                        <longdesc>Cheia /apps/metacity/global_keybindings/run_command_screenshot defineşte combinaţia de taste corespunzătoare acestei comenzi.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Rulează o comandă definită">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Rulează un terminal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Realizează o captură a ecranului">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Captură ecran">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Afişează dialogul pentru rulare al panoului">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Afişează panoul de meniu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Du-te la ecranul situat sub acesta">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Du-te la ecranul situat deasupra acestuia">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Du-te la ecranul din dreapta">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Du-te la ecranul din stânga">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Du-te la ecranul 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Du-te la ecranul 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Du-te la ecranul 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Du-te la ecranul 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Du-te la ecranul 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Du-te la ecranul 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Du-te la ecranul 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Du-te la ecranul 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Du-te la ecranul 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Du-te la ecranul 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Du-te la ecranul 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Du-te la ecranul 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Ascunde toate ferestrele şi focalizează desktop-ul">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Mută imediat înapoi între panouri şi desktop">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Mută imediat între panouri şi desktop">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Mută imediat înapoi între ferestre ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Mută imediat între ferestre ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Mută înapoi între ferestrele unei aplicaţii cu popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Mută între ferestrele unei aplicaţii cu popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Mută imediat înapoi între ferestrele unei aplicaţii">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Mută imediat între ferestrele unei aplicaţii">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Mută înapoi între panouri şi desktop cu popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Mută între panouri şi desktop cu popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Mută focalizarea înapoi între ferestre folosind afişare popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Mută între ferestre cu popup">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Mută fereastra către partea de vest a ecranului">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Mută fereastra către partea de est a ecranului">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Mută fereastra către partea de sud a ecranului">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Mută fereastra către partea de nord a ecranului">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Mută fereastra către colţul din sud-est">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Mută fereastra către colţul din sud-vest">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Mută fereastra către colţul din nord-est">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Mută fereastra către colţul din nord-vest">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Maximizează fereastra pe orizontală">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Maximizează fereastra pe verticală">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Coboară fereastra sub alte ferestre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Ridică fereastra deasupra celorlalte ferestre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Ridică fereastra obturată, altfel o coboară">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Mută fereastra un ecran mai jos">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Mută fereastra un ecran mai sus">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Mută fereastra un ecran la dreapta">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Mută fereastra un ecran la stânga">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Mută fereastra către ecranul 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Mută fereastra către ecranul 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Mută fereastra către ecranul 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Mută fereastra către ecranul 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Mută fereastra către ecranul 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Mută fereastra către ecranul 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Mută fereastra către ecranul 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Mută fereastra către ecranul 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Mută fereastra către ecranul 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Mută fereastra către ecranul 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Mută fereastra către ecranul 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Mută fereastra către ecranul 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Comută fereastra pe toate spaţiile de lucru">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Redimensionează fereastra">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Mută fereastra">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Minimizează fereastra">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Închide fereastra">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Comută starea de umbrire">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Demaximizează fereastra">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Maximizează fereastra">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Comută starea de maximizare">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Comută întotdeauna deasupra">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Comută modul pe tot ecranul">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Activează meniul ferestei">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Numele spaţiului de lucru">
+                                                        <longdesc>Numele spaţiului de lucru</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Dezactivează facilităţile care sunt cerute de aplicaţiile vechi sau stricate">
+                                                        <longdesc>Unele aplicaţii nu iau în seamă specificaţiile într-un mod care duce la funcţionarea defectuoasă a managerului de ferestre. Această opţiune pune Metacity într-un mod riguros corect, ceea ce duce la o interfaţă utilizator mai consistentă, admiţând că nu este nevoie să rulaţi nici o aplicaţie problematică.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Nu e implementat) Navigaţia se referă la aplicaţii şi nu la ferestre">
+                                                        <longdesc>Dacă este adevărat, atunci Metacity operează cu aplicaţii mai degrabă decât cu ferestre. Conceptul este puţin abstract, dar în general setarea unei aplicaţii va fi mai apropiată de stilul Mac decât de cel Windows. Când focalizezi o fereastra în modul bazat pe aplicaţie, toate ferestrele din aplicaţie vor fi ridicate. De asemenea, în acest mod click-urile de focalizare nu sunt transmise prin fereastre către alte aplicaţii. Modul bazat pe aplicaţie este implementat doar în stadiu incipient pentru moment.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Daca este true, reduce uzabilitatea în favoarea ocupării a mai puţine resurse">
+                                                        <longdesc>Daca este true, metacity va furniza mai puţin feedback folosind wireframe, dezactivand animaţiile şi alte efecte. În acest fel uzabilitatea va fi mult înrăutăţită pentru utilizatori, dar multe aplicaţii mai vechi şi servere de terminale vor putea funcţiona doar în aceste condiţii. Totuşi, facilitatea de wireframe este dezactivată când accesibilitatea este activată.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="Manager de compoziţie">
+                                                        <longdesc>Determină dacă Metacity este un manager de compoziţie.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Tipul de bip vizual">
+                                                        <longdesc>Instruieşte Metacity cum să implementeze indicaţia vizuală despre producerea unui bip. Pentru moment sunt două valori, „fullscreen”, ce produce un flash alb-negru pe tot ecranul, şi „frame_flash”, ce produce un flash la nivelul barei de titlu al aplicaţiei ce a cauzat bip-ul. Dacă aplicaţia care a trimis bip-ul nu poate fi determinată (ca în cazul bip-ului de sistem), va clipi bara de titlu a ferestrei care are focusul în acel moment.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Bip-ul de sistem este audio">
+                                                        <longdesc>Determină dacă aplicaţia sau sistemul va genera „bip”-uri audio; poate fi folosit împreună cu „bip”-urile vizuale, pentru a permite „bip”-uri silenţioase.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Activează bip vizual">
+                                                        <longdesc>Activează un indicator vizual când o aplicatie sau sistemul produce un bip; este util pentru persoanele cu handicap auditiv şî pentru folosirea în medii extrem de zgomotoase.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Numărul de ecrane">
+                                                        <longdesc>Numărul de ecrane. Trebuie să fie mai mare decât zero, şi are un maxim fix pentru a preveni distrugerea accidentală a desktopului cerând un număr prea mare de ecrane.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Font titlu fereastră">
+                                                        <longdesc>O descriere pentru fontul folosit pentru bările de titlu. Mărimea din descriere va fi folosită doar dacă opţiunea titlebar_font_size este setată la 0. De asemenea, această opţiune este dezactivată dacă opţiunea titlebar_uses_desktop_font este setată ca true.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Foloseşte fontul standard al sistemului pentru titlul ferestrei">
+                                                        <longdesc>Dacă este adevărat, ignoră opţiunea titlebar_font, şi foloseşte fontul standard de aplicaţii pentru titlul ferestrelor.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Tema curentă">
+                                                        <longdesc>Tema determină aspectul marginilor ferestrei, a bării de titlu şi aşa mai departe. </longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Întârzierea în milisecunde pentru opţiunea de ridicare automată">
+                                                        <longdesc>Întârzierea de timp după care se ridică o fereastră când auto_raise este setată ca adevărată. Întârzierea este dată în miimi de secundă.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Ridică automat fereastra focalizată">
+                                                        <longdesc>Dacă este true, şi modul de focus este fie „sloppy”, fie „mouse”, atunci fereastra care primeşte focus va fi automat adusă în prim plan după o întârziere specificată de cheia auto_raise_delay. Acest lucru nu are legătură cu a da clic pe o fereastră pentru a o aduce în prim-plan, nici a intra într-o fereastră prin tragere-şi-plasare.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="Acţiune la clic dreapta pe bara de titlu">
+                                                        <longdesc>Această opţiune determină efectele unui clic dreapta pe bara de titlu. Opţiunile valide curente sunt „toggle_shade”, care va înfăşura/desfăşura fereastra, „toggle_maximize” care va maximiza/demaximiza fereastra, „minimize” care va minimiza fereastra, şi „none” care nu va face nimic.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="Acţiune la clic cu butonul din mijloc pe bara de titlu">
+                                                        <longdesc>Această opţiune determină efectele unui clic cu butonul din mijloc pe bara de titlu. Opţiunile valide curente sunt „toggle_shade”, care va înfăşura/desfăşura fereastra, „toggle_maximize” care va maximiza/demaximiza fereastra, „minimize” care va minimiza fereastra, şi „none” care nu va face nimic.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Acţiune la dublu-click pe bara de titlu">
+                                                        <longdesc>Această opţiune determină efectele unui dublu-clic pe bara de titlu. Opţiunile valide curente sunt „toggle_shade”, care va înfăşura/desfăşura fereastra, „toggle_maximize” care va maximiza/demaximiza fereastra, „minimize” care va minimiza fereastra, şi „none” care nu va face nimic.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Dacă aducerea în prim plan să fie un efect al altor interacţii cu utilizatorul">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Controlează felul în care ferestrele noi primesc focus">
+                                                        <longdesc>Această opţiune furnizează un control adiţional la cum ferestrele nou create primesc focus. Are valori posibile, „smart” furnizează modul normal de focus, iar „strict” face ca ferestrele pornite dintr-un terminal să nu primească focus.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Modul de focalizare al ferestrei">
+                                                        <longdesc>Modul de focalizare al ferestrei indică modul în care ferestrele sunt activate. Are trei valori posibile: „click” înseamnă că fereastra trebuie click-ată pentru a fi focalizată, „leneş” înseamnă ca fereastra este focalizată când mouse-ul se suprapune ferestrei, şi „mouse” înseamnă că ferestrele sunt focalizate când mouse-ul se suprapune ferestrei, şi pierde focusul în momentul când acesta nu se mai suprapune.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Aranjamentul butoanelor în bara de titlu">
+                                                        <longdesc>Aranjamentul butoanelor în bara de titlu. Valoarea ar trebui să fie un şir, ca de exemplu „menu:minimize,maximize,close”;cele două puncte separă colţul din stânga al ferestrei de cel din dreapta, şi numele butoanelor sunt separate prin virgulă. Butoanele duplicat nu sunt permise. Numele butoanelor necunoscute sunt ignorate pentru ca butoanele să poată fi adăugate în viitor fără a strica versiunile vechi.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Modificatorul folosit pentru acţiunile speciale asupra ferestrei">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Aplicaţie implicită de vizualizare înglobată">
+                                                                <longdesc>Aplicaţie de utilizat pentru vizualizarea fişierelor ce necesită o componentă de vizualizare. Parametrul %s va fi înlocuit cu URI-ul fişierului, iar parametrul %c va fi înlocuit cu componenta IID.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Argument „exec” pentru terminalul implicit">
+                                                                <longdesc>Argumentul „exec” de utilizat pentru aplicaţia terminal implicită.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Aplicaţie terminal implicită">
+                                                                <longdesc>Aplicaţia terminal implicită de utilizat pentru programele ce necesită un terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Porneşte programul într-un terminal">
+                                                                <longdesc>La activare, comanda asociată acestui tip de URL va fi pornită în terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programul asociat adreselor „h323”">
+                                                                <longdesc>Comanda asociată URL-urilor „h323” la activare.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Specifică dacă programul ales va fi asociat URL-urilor „h323”">
+                                                                <longdesc>La activare, comanda specificată în cheia „command” va fi asociată adreselor „h323”.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Porneşte programul într-un terminal">
+                                                                <longdesc>La activare, comanda asociată acestui tip de URL va fi pornită în terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programul asociat adreselor „callto”">
+                                                                <longdesc>Comanda asociată URL-urile „callto” la activare.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Specifică dacă programul ales va fi asociat URL-urilor „callto”">
+                                                                <longdesc>La activare, comanda specificată în cheia „command” va fi asociată adreselor „callto”.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Porneşte programul într-un terminal">
+                                                                <longdesc>La activare, comanda asociată acestui tip de URL va fi pornită în terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programul asociat adreselor „mailto”">
+                                                                <longdesc>Comanda asociată URL-urilor „mailto” la activare.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Specifică dacă programul ales va fi asociat URL-urilor „mailto”">
+                                                                <longdesc>La activare, comanda specificată în cheia „command” va fi asociată adreselor „mailto”.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Porneşte programul într-un terminal">
+                                                                <longdesc>La activare, comanda asociată acestui tip de URL va fi pornită în terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programul asociat adreselor „https”">
+                                                                <longdesc>Comanda asociată URL-urilor „https” la activare.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Specifică dacă programul ales va fi asociat URL-urilor „https”">
+                                                                <longdesc>La activare, comanda specificată în cheia „command” va fi asociată adreselor „https”.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Porneşte programul într-un terminal">
+                                                                <longdesc>La activare, comanda asociată acestui tip de URL va fi pornită în terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Porneşte programul într-un terminal">
+                                                                <longdesc>La activare, comanda asociată acestui tip de URL va fi pornită în terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programul asociat adreselor „http”">
+                                                                <longdesc>Comanda asociată URL-urilor „http” la activare.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Specifică dacă programul ales va fi asociat URL-urilor „http”">
+                                                                <longdesc>La activare, comanda specificată în cheia „command” va fi asociată adreselor „http”.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Porneşte programul într-un terminal">
+                                                                <longdesc>La activare, comanda asociată acestui tip de URL va fi pornită în terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programul asociat adreselor „man”">
+                                                                <longdesc>Comanda asociată URL-urilor „man” la activare.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Specifică dacă programul ales va fi asociat URL-urilor „man”">
+                                                                <longdesc>La activare, comanda specificată în cheia „command” va fi asociată adreselor „man”.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Porneşte programul într-un terminal">
+                                                                <longdesc>La activare, comanda asociată acestui tip de URL va fi pornită în terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programul asociat adreselor „info”">
+                                                                <longdesc>Comanda asociată URL-urilor „info” la activare.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Specifică dacă programul ales va fi asociat URL-urilor „info”">
+                                                                <longdesc>La activare, comanda specificată în cheia „command” va fi asociată adreselor „info”.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Porneşte programul într-un terminal">
+                                                                <longdesc>La activare, comanda asociată acestui tip de URL va fi pornită în terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programul asociat adreselor „ghelp”">
+                                                                <longdesc>Comanda asociată URL-urilor „ghelp” la activare.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Specifică dacă programul ales va fi asociat URL-urilor „ghelp”">
+                                                                <longdesc>La activare, comanda specificată în cheia „command” va fi asociată adreselor „ghelp”.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Porneşte programul într-un terminal">
+                                                                <longdesc>La activare, comanda asociată acestui tip de URL va fi pornită în terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programul asociat adreselor „trash”">
+                                                                <longdesc>Comanda asociată URL-urilor „trash” la activare.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Specifică dacă programul ales va fi asociat URL-urilor „trash”">
+                                                                <longdesc>La activare, comanda specificată în cheia „command” va fi asociată adreselor „trash”.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Dacă acest profil să fie folosit sau nu">
+                                                                        <longdesc>Dacă acest profil să fie sau nu folosit şi afişat.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Extensia de fişier implicită pentru acest profil">
+                                                                        <longdesc>O extensie de fişier ce va fi folosită la stocarea fişierelor codate cu acest profil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Pipeline-ul parţial GStreamer folosit">
+                                                                        <longdesc>Un pipeline parţial GStreamer ce va fi folosit pentru acest profil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="O descriere pentru profilul audio">
+                                                                        <longdesc>O descriere pentru profil, conţinând mai multe informaţii şi descriind când să fie folosit acest profil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Un nume scurt pentru profilul audio">
+                                                                        <longdesc>Un nume scurt pentru profilul audio, ce va fi folosit în selecţii şi va identifica în mod unic profilul.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Dacă acest profil să fie folosit sau nu">
+                                                                                <longdesc>Dacă acest profil să fie sau nu folosit şi afişat.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Extensia de fişier implicită pentru acest profil">
+                                                                                <longdesc>O extensie de fişier ce va fi folosită la stocarea fişierelor codate cu acest profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Pipeline-ul parţial GStreamer folosit">
+                                                                                <longdesc>Un pipeline parţial GStreamer ce va fi folosit pentru acest profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="O descriere pentru profilul audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Un nume scurt pentru profilul audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Extensia de fişier implicită pentru acest profil">
+                                                                                <longdesc>O extensie de fişier ce va fi folosită la stocarea fişierelor codate cu acest profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Pipeline-ul parţial GStreamer folosit">
+                                                                                <longdesc>Un pipeline parţial GStreamer ce va fi folosit pentru acest profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="O descriere pentru profilul audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Un nume scurt pentru profilul audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Extensia de fişier implicită pentru acest profil">
+                                                                                <longdesc>O extensie de fişier ce va fi folosită la stocarea fişierelor codate cu acest profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Pipeline-ul parţial GStreamer folosit">
+                                                                                <longdesc>Un pipeline parţial GStreamer ce va fi folosit pentru acest profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="O descriere pentru profilul audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Un nume scurt pentru profilul audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Extensia de fişier implicită pentru acest profil">
+                                                                                <longdesc>O extensie de fişier ce va fi folosită la stocarea fişierelor codate cu acest profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Pipeline-ul parţial GStreamer folosit">
+                                                                                <longdesc>Un pipeline parţial GStreamer ce va fi folosit pentru acest profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="O descriere pentru profilul audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Un nume scurt pentru profilul audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Extensia de fişier implicită pentru acest profil">
+                                                                                <longdesc>O extensie de fişier ce va fi folosită la stocarea fişierelor codate cu acest profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Pipeline-ul parţial GStreamer folosit">
+                                                                                <longdesc>Un pipeline parţial GStreamer ce va fi folosit pentru acest profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="O descriere pentru profilul audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Un nume scurt pentru profilul audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Extensia de fişier implicită pentru acest profil">
+                                                                                <longdesc>O extensie de fişier ce va fi folosită la stocarea fişierelor codate cu acest profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Pipeline-ul parţial GStreamer folosit">
+                                                                                <longdesc>Un pipeline parţial GStreamer ce va fi folosit pentru acest profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="O descriere pentru profilul audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Un nume scurt pentru profilul audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Listă a profilelor">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="URL pentru configurări proxy automate">
+                                                <longdesc>URL cu setări automate de proxy.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="Port proxy SOCKS">
+                                                <longdesc>Portul serverului proxy definit în „/system/proxy/socks_host”.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="Nume proxy SOCKS">
+                                                <longdesc>Numele serverului proxy SOCKS.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="Port proxy FTP">
+                                                <longdesc>Portul serverului proxy definit în „/system/proxy/ftp_host”</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="Nume proxy FTP">
+                                                <longdesc>Numele serverului proxy FTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Port proxy HTTPS">
+                                                <longdesc>Portului serverului proxy definit în „/system/proxy/secure_host”.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Nume proxy HTTPS">
+                                                <longdesc>Numele serverului proxy HTTPS.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Mod configurare proxy">
+                                                <longdesc>Selectaţi modul de configurare proxy. Valorile suportate sunt „none”, „manual” şi „auto”.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Adrese fără proxy">
+                                                <longdesc>Această cheie conţine o listă a adreselor la care se preferă conectarea directă, nu prin proxy. Aceste adrese pot fi nume de servere, domenii (cu caractere „wildcard”, de ex. *.foo.com), adrese IP (atât IPv4, cât şi IPv6) şi adrese de reţea cu mască (de ex. 192.168.0.0/16).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="Parolă proxy HTTP">
+                                                <longdesc>Parolă necesară la autentificarea la serverul proxy HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="Nume utilizator proxy HTTP">
+                                                <longdesc>Nume utilizator necesar autentificării la serverul proxy HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Autentificare la conectarea prin proxy">
+                                                <longdesc>La activare, conectarea la serverul proxy necesită autentificare. Combinaţia nume_utilizator/parolă e definită de „/system/http_proxy/authentication_user” şi „/system/http_proxy/authentication_password”.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="Port proxy HTTP">
+                                                <longdesc>Portul serverului proxy definit în „/system/http_proxy/host”.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="Nume proxy HTTP">
+                                                <longdesc>Numele serverului proxy HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="Utilizează proxy HTTP">
+                                                <longdesc>Activează setările proxy la accesarea adreselor HTTP în Internet.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Domenii în plus de verificat pentru servicii DNS-SD">
+                                                <longdesc>Listă separată prin virgule de domenii DNS-SD ce ar trebui să fie vizibile în locaţia „network:///”.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Felul de afişare a serviciului local dns-sd">
+                                                <longdesc>Valori posibile: „merged”, „separate” şi „disabled”.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="Grup SMB">
+                                                <longdesc>Grupul sau domeniul Windows din care face parte utilizatorul. Pentru a intra în vigoare setările unui nou workgroup, utilizatorul s-ar putea să trebuiască să se deautentifice şi apoi să se autentifice din nou.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

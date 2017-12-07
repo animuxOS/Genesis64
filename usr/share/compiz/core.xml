@@ -1,0 +1,2374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+    <core>
+	<short>General Options</short>
+	<short xml:lang="sv">Allmänna alternativ</short>
+	<long>General compiz options</long>
+	<display>
+	    <option type="list" name="active_plugins">
+		<short>Active Plugins</short>
+		<short xml:lang="ca">Connectors actius</short>
+		<short xml:lang="cs">Aktivní moduly</short>
+		<short xml:lang="da">Aktive plugins</short>
+		<short xml:lang="de">Aktive Plugins</short>
+		<short xml:lang="es">Complementos activos</short>
+		<short xml:lang="fi">Käytössä olevat liitännäiset</short>
+		<short xml:lang="fr">Plug-ins actifs</short>
+		<short xml:lang="hu">Aktív bővítmények</short>
+		<short xml:lang="it">Plug-in attivi</short>
+		<short xml:lang="ja">アクティブプラグイン</short>
+		<short xml:lang="pl">Włączone wtyczki</short>
+		<short xml:lang="pt">Plug-ins Ativos</short>
+		<short xml:lang="pt_BR">Plug-ins Ativos</short>
+		<short xml:lang="ru">Активные модули</short>
+		<short xml:lang="sv">Aktiva insticksmoduler</short>
+		<short xml:lang="zh_CN">活动插件</short>
+		<short xml:lang="zh_TW">主動式外掛程式</short>
+		<long>List of currently active plugins</long>
+		<long xml:lang="ca">Llista dels connectors actius actualment</long>
+		<long xml:lang="cs">Seznam právě aktivních modulů</long>
+		<long xml:lang="da">Liste over aktive plugins</long>
+		<long xml:lang="de">Liste der aktiven Plugins</long>
+		<long xml:lang="es">Lista de complementos activos actualmente</long>
+		<long xml:lang="fi">Lista aktiivisista liitännäisistä</long>
+		<long xml:lang="fr">Liste des plug-ins actuellement actifs</long>
+		<long xml:lang="hu">Az aktuális bővítmények listája</long>
+		<long xml:lang="it">Elenco di plug-in correntemente attivi</long>
+		<long xml:lang="ja">現在アクティブなプラグインのリスト</long>
+		<long xml:lang="pl">Lista aktualnie włączonych wtyczek</long>
+		<long xml:lang="pt">Lista de plug-ins atualmente ativos</long>
+		<long xml:lang="pt_BR">Lista de plug-ins atualmente ativos</long>
+		<long xml:lang="ru">Список текущих активных модулей</long>
+		<long xml:lang="sv">Lista över för närvarande aktiva insticksmoduler</long>
+		<long xml:lang="zh_CN">当前活动的插件列表</long>
+		<long xml:lang="zh_TW">最新主動式外掛程式清單</long>
+		<type>string</type>
+	    </option>
+	    <option type="int" name="texture_filter">
+		<short>Texture Filter</short>
+		<short xml:lang="ca">Filtre de textura</short>
+		<short xml:lang="cs">Filtr textur</short>
+		<short xml:lang="da">Teksturfilter</short>
+		<short xml:lang="de">Strukturfilter</short>
+		<short xml:lang="es">Filtro de textura</short>
+		<short xml:lang="fi">Tekstuurisuodin</short>
+		<short xml:lang="fr">Filtre de texture</short>
+		<short xml:lang="hu">Textúraszűrő</short>
+		<short xml:lang="it">Filtro texture</short>
+		<short xml:lang="ja">テクスチャフィルタ</short>
+		<short xml:lang="pl">Filtr tekstury</short>
+		<short xml:lang="pt">Filtro de Textura</short>
+		<short xml:lang="pt_BR">Filtro de Textura</short>
+		<short xml:lang="ru">Фильтр текстур</short>
+		<short xml:lang="sv">Texturfilter</short>
+		<short xml:lang="zh_CN">纹理过滤器</short>
+		<short xml:lang="zh_TW">材質過濾器</short>
+		<long>Texture filtering</long>
+		<long xml:lang="cs">Filtrování textur</long>
+		<long xml:lang="de">Texturfilter</long>
+		<long xml:lang="es">Filtro de texturas</long>
+		<long xml:lang="fi">Tekstuurisuodatus</long>
+		<long xml:lang="fr">Filtrage de texture</long>
+		<long xml:lang="it">Filtro trama</long>
+		<long xml:lang="ja">テクスチャフィルタ</long>
+		<long xml:lang="pt_BR">Filtragem da textura</long>
+		<long xml:lang="sv">Texturfiltrering</long>
+		<long xml:lang="zh_CN">纹理过滤</long>
+		<long xml:lang="zh_TW">材質篩選</long>
+		<default>1</default>
+		<min>0</min>
+		<max>2</max>
+		<desc>
+		    <value>0</value>
+		    <name>Fast</name>
+		</desc>
+		<desc>
+		    <value>1</value>
+		    <name>Good</name>
+		</desc>
+		<desc>
+		    <value>2</value>
+		    <name>Best</name>
+		</desc>
+	    </option>
+	    <option type="bool" name="click_to_focus">
+		<short>Click To Focus</short>
+		<short xml:lang="ca">Feu clic per a passar el focus</short>
+		<short xml:lang="cs">Kliknutí k zaměření</short>
+		<short xml:lang="da">Klik for at fokusere</short>
+		<short xml:lang="de">Fokuswechsel durch Klicken</short>
+		<short xml:lang="es">Clic para enfocar</short>
+		<short xml:lang="fi">Kohdista hiiren painikkeella</short>
+		<short xml:lang="fr">Cliquer pour obtenir le focus</short>
+		<short xml:lang="hu">Kattintson a fókuszáláshoz</short>
+		<short xml:lang="it">Fare clic per attivare</short>
+		<short xml:lang="ja">クリックしてフォーカス</short>
+		<short xml:lang="pl">Kliknij by wybrać</short>
+		<short xml:lang="pt">Clique para Posicionar o Foco</short>
+		<short xml:lang="pt_BR">Clique para Posicionar o Foco</short>
+		<short xml:lang="ru">Щелкните для передачи фокуса</short>
+		<short xml:lang="sv">Klicka för fokus</short>
+		<short xml:lang="zh_CN">单击设置焦点</short>
+		<short xml:lang="zh_TW">按一下以定焦</short>
+		<long>Click on window moves input focus to it</long>
+		<long xml:lang="ca">En fer clic a la finestra, aquesta rep el focus d'entrada</long>
+		<long xml:lang="cs">Kliknutím na okno přesunout zaměření na okno</long>
+		<long xml:lang="da">Fokus flyttes til vinduet, når der klikkes på det.</long>
+		<long xml:lang="de">Fenster durch Anklicken fokussieren</long>
+		<long xml:lang="es">Al hacer clic en la ventana se mueve el foco de entrada a ella</long>
+		<long xml:lang="fi">Ikkunan napsautus kohdistaa ikkunaan</long>
+		<long xml:lang="fr">Si vous cliquez sur la fenêtre, vous déplacez le focus dessus</long>
+		<long xml:lang="hu">Az ablakra kattintással az ablakra irányítja a fókuszt</long>
+		<long xml:lang="it">Fare clic sulla finestra per attivarla</long>
+		<long xml:lang="ja">ウィンドウをクリックすると、入力フォーカスがそのウィンドウに移動します</long>
+		<long xml:lang="pl">Klinkięcie okna ogniskuje na nim wprowadzanie</long>
+		<long xml:lang="pt">O clique na janela transfere o foco para ela</long>
+		<long xml:lang="pt_BR">O clique na janela transfere o foco para ela</long>
+		<long xml:lang="ru">Щелкните окно, чтобы передать ему фокус ввода</long>
+		<long xml:lang="sv">Klicka på fönstret flyttar inmatningsfokus till det</long>
+		<long xml:lang="zh_CN">单击窗口将输入焦点移至它</long>
+		<long xml:lang="zh_TW">在視窗上按一下便可將輸入焦點移動到該視窗</long>
+		<default>true</default>
+	    </option>
+	    <option type="bool" name="autoraise">
+		<short>Auto-Raise</short>
+		<short xml:lang="ca">Elevació automàtica</short>
+		<short xml:lang="cs">Automaticky do popředí</short>
+		<short xml:lang="da">Automatisk hævning</short>
+		<short xml:lang="de">Automatisch in den Vordergrund</short>
+		<short xml:lang="es">Elevación automática</short>
+		<short xml:lang="fi">Automaattinosto</short>
+		<short xml:lang="fr">Remontée automatique</short>
+		<short xml:lang="hu">Automatikus megnyitás</short>
+		<short xml:lang="it">Aumento automatico</short>
+		<short xml:lang="ja">自動調整</short>
+		<short xml:lang="pl">Automatyczne wysuwanie okien</short>
+		<short xml:lang="pt">Elevação Automática</short>
+		<short xml:lang="pt_BR">Elevação Automática</short>
+		<short xml:lang="ru">Автоматический вызов</short>
+		<short xml:lang="sv">Automatisk höjning</short>
+		<short xml:lang="zh_CN">自动升起</short>
+		<short xml:lang="zh_TW">自動發出</short>
+		<long>Raise selected windows after interval</long>
+		<long xml:lang="ca">Eleva les finestres seleccionades un cop transcorregut l'interval</long>
+		<long xml:lang="cs">Dát vybraná okna do popředí po uplynutí intervalu</long>
+		<long xml:lang="da">Hæv de valgte vinduer efter interval</long>
+		<long xml:lang="de">Ausgewählte Fenster nach Zeitintervall in Vordergrund verschieben</long>
+		<long xml:lang="es">Alza las ventanas seleccionadas tras el intervalo</long>
+		<long xml:lang="fi">Nosta valittu ikkuna tietyn ajan jälkeen</long>
+		<long xml:lang="fr">Remonter les fenêtres sélectionnées après l'intervalle</long>
+		<long xml:lang="hu">A kijelölt ablak megnyitása ennyi idő után</long>
+		<long xml:lang="it">Aumenta finestre selezionate dopo l'intervallo</long>
+		<long xml:lang="ja">時間間隔後に選択したウィンドウを上げる</long>
+		<long xml:lang="pl">Podnieś wskazane okno po interwale</long>
+		<long xml:lang="pt">Elevar janelas selecionadas após intervalo</long>
+		<long xml:lang="pt_BR">Elevar janelas selecionadas após intervalo</long>
+		<long xml:lang="ru">Вызов выбранных окон по истечении интервала времени</long>
+		<long xml:lang="sv">Höj markerade fönster efter intervall</long>
+		<long xml:lang="zh_CN">在以下间隔后上升选中窗口</long>
+		<long xml:lang="zh_TW">在時間間隔後提高選定視窗</long>
+		<default>true</default>
+	    </option>
+	    <option type="int" name="autoraise_delay">
+		<short>Auto-Raise Delay</short>
+		<short xml:lang="ca">Retard de l'elevació automàtica</short>
+		<short xml:lang="cs">Prodleva automatického přesunu do popředí</short>
+		<short xml:lang="da">Forsinkelse ved automatisk hævning</short>
+		<short xml:lang="de">Verzögerung für Automatisch in den Vordergrund</short>
+		<short xml:lang="es">Retraso de elevación automática</short>
+		<short xml:lang="fi">Automaattinoston viive</short>
+		<short xml:lang="fr">Délai de remontée automatique</short>
+		<short xml:lang="hu">Automatikus megnyitás késleltetése</short>
+		<short xml:lang="it">Ritardo aumento automatico</short>
+		<short xml:lang="ja">自動調整の待ち時間</short>
+		<short xml:lang="pl">Opóźnienie automatycznego wysuwania okien</short>
+		<short xml:lang="pt">Atraso na Elevação Automática</short>
+		<short xml:lang="pt_BR">Atraso na Elevação Automática</short>
+		<short xml:lang="ru">Задержка автоматического вызова</short>
+		<short xml:lang="sv">Fördröjning för automatisk höjning</short>
+		<short xml:lang="zh_CN">自动升起延迟</short>
+		<short xml:lang="zh_TW">自動發出延遲</short>
+		<long>Interval before raising selected windows</long>
+		<default>1000</default>
+		<min>0</min>
+		<max>10000</max>
+	    </option>
+	    <option type="action" name="close_window">
+		<short>Close Window</short>
+		<short xml:lang="ca">Tanca la finestra</short>
+		<short xml:lang="cs">Zavřít okno</short>
+		<short xml:lang="da">Luk vindue</short>
+		<short xml:lang="de">Fenster schließen</short>
+		<short xml:lang="es">Cerrar ventana</short>
+		<short xml:lang="fi">Sulje ikkuna</short>
+		<short xml:lang="fr">Fermer la fenêtre</short>
+		<short xml:lang="hu">Ablak bezárása</short>
+		<short xml:lang="it">Chiudi finestra</short>
+		<short xml:lang="ja">ウィンドウを閉じる</short>
+		<short xml:lang="pl">Zamknij okno</short>
+		<short xml:lang="pt">Fechar Janela</short>
+		<short xml:lang="pt_BR">Fechar Janela</short>
+		<short xml:lang="ru">Закрыть окно</short>
+		<short xml:lang="sv">Stäng fönster</short>
+		<short xml:lang="zh_CN">关闭窗口</short>
+		<short xml:lang="zh_TW">關閉視窗</short>
+		<long>Close active window</long>
+		<long xml:lang="ca">Tanca la finestra activa</long>
+		<long xml:lang="cs">Zavřít aktivní okno</long>
+		<long xml:lang="da">Luk det aktive vindue</long>
+		<long xml:lang="de">Aktives Fenster verschieben</long>
+		<long xml:lang="es">Cierra la ventana activa</long>
+		<long xml:lang="fi">Sulje aktiivinen ikkuna</long>
+		<long xml:lang="fr">Fermer la fenêtre active</long>
+		<long xml:lang="hu">Aktív ablak bezárása</long>
+		<long xml:lang="it">Chiudi finestra attiva</long>
+		<long xml:lang="ja">アクティブなウィンドウを閉じる</long>
+		<long xml:lang="pl">Zamknij aktywne okno</long>
+		<long xml:lang="pt">Fechar a janela ativa</long>
+		<long xml:lang="pt_BR">Fechar a janela ativa</long>
+		<long xml:lang="ru">Закрытие активного окна</long>
+		<long xml:lang="sv">Stäng aktivt fönster</long>
+		<long xml:lang="zh_CN">关闭活动窗口</long>
+		<long xml:lang="zh_TW">關閉作用中視窗</long>
+		<allowed key="true" edge="true" button="true"/>
+		<default>
+		    <key>&lt;Alt&gt;F4</key>
+		</default>
+	    </option>
+	    <option type="action" name="main_menu">
+		<short>Show Main Menu</short>
+		<short xml:lang="ca">Mostra el menú principal</short>
+		<short xml:lang="cs">Zobrazit hlavní nabídku</short>
+		<short xml:lang="da">Vis hovedmenu</short>
+		<short xml:lang="de">Hauptmenü anzeigen</short>
+		<short xml:lang="es">Mostrar menú principal</short>
+		<short xml:lang="fi">Näytä päävalikko</short>
+		<short xml:lang="fr">Afficher le menu principal</short>
+		<short xml:lang="hu">Főmenü megjelenítése</short>
+		<short xml:lang="it">Mostra menu principale</short>
+		<short xml:lang="ja">メインメニューの表示</short>
+		<short xml:lang="pl">Wyświetl menu główne</short>
+		<short xml:lang="pt">Mostrar Menu Principal</short>
+		<short xml:lang="pt_BR">Mostrar Menu Principal</short>
+		<short xml:lang="ru">Отобразить главное меню</short>
+		<short xml:lang="sv">Visa huvudmeny</short>
+		<short xml:lang="zh_CN">显示主菜单</short>
+		<short xml:lang="zh_TW">顯示主功能表</short>
+		<long>Show the main menu</long>
+		<long xml:lang="ca">Mostra el menú principal</long>
+		<long xml:lang="cs">Zobrazit hlavní nabídku</long>
+		<long xml:lang="da">Vis hovedmenuen</long>
+		<long xml:lang="de">Hauptmenü anzeigen</long>
+		<long xml:lang="es">Muestra el menú principal</long>
+		<long xml:lang="fi">Näytä päävalikko</long>
+		<long xml:lang="fr">Afficher le menu principal</long>
+		<long xml:lang="hu">Főmenü megjelenítése</long>
+		<long xml:lang="it">Mostra menu principale</long>
+		<long xml:lang="ja">メインメニューの表示</long>
+		<long xml:lang="pl">Wyświetl menu główne</long>
+		<long xml:lang="pt">Mostrar o menu principal</long>
+		<long xml:lang="pt_BR">Mostrar o menu principal</long>
+		<long xml:lang="ru">Отображение главного меню</long>
+		<long xml:lang="sv">Visa huvudmenyn</long>
+		<long xml:lang="zh_CN">显示主菜单</long>
+		<long xml:lang="zh_TW">顯示主功能表</long>
+		<allowed key="true" edge="true" button="true"/>
+		<default>
+		    <key>&lt;Alt&gt;F1</key>
+		</default>
+	    </option>
+	    <option type="action" name="run">
+		<short>Run Dialog</short>
+		<short xml:lang="ca">Diàleg d'execució</short>
+		<short xml:lang="cs">Spustit dialog</short>
+		<short xml:lang="da">Dialogboksen Kør</short>
+		<short xml:lang="de">Dialogfeld Ausführen</short>
+		<short xml:lang="es">Ejecutar diálogo</short>
+		<short xml:lang="fi">Suorita komento -valintaikkuna</short>
+		<short xml:lang="fr">Boîte de dialogue d'exécution</short>
+		<short xml:lang="hu">Párbeszéd futtatása</short>
+		<short xml:lang="it">Finestra di dialogo Esegui</short>
+		<short xml:lang="ja">ランダイアログ</short>
+		<short xml:lang="pl">Dialog Uruchom</short>
+		<short xml:lang="pt">Caixa de Diálogo Executar</short>
+		<short xml:lang="pt_BR">Caixa de Diálogo Executar</short>
+		<short xml:lang="ru">Диалоговое окно запуска</short>
+		<short xml:lang="sv">Kördialog</short>
+		<short xml:lang="zh_CN">运行对话框</short>
+		<short xml:lang="zh_TW">執行對話方塊</short>
+		<long>Show Run Application dialog</long>
+		<long xml:lang="ca">Mostra el diàleg d'execució de l'aplicació</long>
+		<long xml:lang="cs">Zobrazit dialog spouštění aplikace</long>
+		<long xml:lang="da">Vis dialogboksen til kørsel af program</long>
+		<long xml:lang="de">Dialogfeld 'Anwendung ausführen' anzeigen</long>
+		<long xml:lang="es">Mostrar el cuadro de diálogo de ejecución de aplicación</long>
+		<long xml:lang="fi">Näytä Suorita komento -valintaikkuna</long>
+		<long xml:lang="fr">Afficher la boîte de dialogue d'exécution de l'application</long>
+		<long xml:lang="hu">"Alkalmazás futtatása" párbeszédablak megjelenítése</long>
+		<long xml:lang="it">Mostra finestra di dialogo Esegui applicazione</long>
+		<long xml:lang="ja">ランアプリケーションダイアログの表示</long>
+		<long xml:lang="pl">Wyświetl okno dialogowe "Uruchom program"</long>
+		<long xml:lang="pt">Mostrar caixa de diálogo Executar Aplicativo</long>
+		<long xml:lang="pt_BR">Mostrar caixa de diálogo Executar Aplicativo</long>
+		<long xml:lang="ru">Отображение диалогового окна запуска приложения</long>
+		<long xml:lang="sv">Visa dialogen Kör program</long>
+		<long xml:lang="zh_CN">显示运行应用程序对话框</long>
+		<long xml:lang="zh_TW">顯示執行應用程式對話方塊</long>
+		<allowed key="true" edge="true" button="true"/>
+		<default>
+		    <key>&lt;Alt&gt;F2</key>
+		</default>
+	    </option>
+	    <option type="string" name="command0">
+		<short>Command line 0</short>
+		<short xml:lang="sv">Kommandorad 0</short>
+		<long>Command line to be executed in shell when run_command0 is invoked</long>
+		<default/>
+	    </option>
+	    <option type="string" name="command1">
+		<short>Command line 1</short>
+		<short xml:lang="cs">Příkazová řádka 1</short>
+		<short xml:lang="de">Kommandozeile 1</short>
+		<short xml:lang="es">Línea de comandos 1</short>
+		<short xml:lang="fi">Komentorivi 1</short>
+		<short xml:lang="fr">Ligne de commande 1</short>
+		<short xml:lang="it">Riga di comando 1</short>
+		<short xml:lang="ja">コマンドライン1</short>
+		<short xml:lang="pt">Linha de comando 1</short>
+		<short xml:lang="pt_BR">Linha de comando 1</short>
+		<short xml:lang="sv">Kommandorad 1</short>
+		<short xml:lang="zh_CN">命令行 1</short>
+		<short xml:lang="zh_TW">指令行 1</short>
+		<long>Command line to be executed in shell when run_command1 is invoked</long>
+		<long xml:lang="cs">Příkaz, který se vykoná, pokud je v shellu volán run_command1</long>
+		<long xml:lang="de">Die Kommandozeile, die bei Ausführung von run_command1 in der Shell ausgeführt wird</long>
+		<long xml:lang="es">Línea de comandos que se ejecutar en el shell cuando se invoque run_command1</long>
+		<long xml:lang="fi">Suoritettava komentorivi, kun run_command1 suoritetaan.</long>
+		<long xml:lang="fr">Ligne de commande à exécuter dans le shell lorsque run_command1 est appelé</long>
+		<long xml:lang="it">Riga di comando da eseguire nella shell quando viene invocato run_command1</long>
+		<long xml:lang="ja">run_command1の呼び出し時にシェルで実行されるコマンドライン</long>
+		<long xml:lang="pt">Linha de comando a ser executada no shell quando run_command1 for acionado</long>
+		<long xml:lang="pt_BR">Linha de comando a ser executada no shell quando run_command1 for acionado</long>
+		<long xml:lang="sv">Kommandorad som ska köras i ett skal när run_command1 anropas</long>
+		<long xml:lang="zh_CN">调用 run_command1 时，shell 中要执行的命令行</long>
+		<long xml:lang="zh_TW">啟用 run_command1 時要在外圍程序中執行的指令行</long>
+		<default/>
+	    </option>
+	    <option type="string" name="command2">
+		<short>Command line 2</short>
+		<short xml:lang="cs">Příkazová řádka 2</short>
+		<short xml:lang="de">Kommandozeile 2</short>
+		<short xml:lang="es">Línea de comandos 2</short>
+		<short xml:lang="fi">Komentorivi 2</short>
+		<short xml:lang="fr">Ligne de commande 2</short>
+		<short xml:lang="it">Riga di comando 2</short>
+		<short xml:lang="ja">コマンドライン2</short>
+		<short xml:lang="pt">Linha de comando 2</short>
+		<short xml:lang="pt_BR">Linha de comando 2</short>
+		<short xml:lang="sv">Kommandorad 2</short>
+		<short xml:lang="zh_CN">命令行 2</short>
+		<short xml:lang="zh_TW">指令行 2</short>
+		<long>Command line to be executed in shell when run_command2 is invoked</long>
+		<long xml:lang="cs">Příkaz, který se vykoná, pokud je v shellu volán run_command2</long>
+		<long xml:lang="de">Die Kommandozeile, die bei Ausführung von run_command2 in der Shell ausgeführt wird</long>
+		<long xml:lang="es">Línea de comandos que se ejecutar en el shell cuando se invoque run_command2</long>
+		<long xml:lang="fi">Suoritettava komentorivi, kun run_command2 suoritetaan.</long>
+		<long xml:lang="fr">Ligne de commande à exécuter dans le shell lorsque run_command2 est appelé</long>
+		<long xml:lang="it">Riga di comando da eseguire nella shell quando viene invocato run_command2</long>
+		<long xml:lang="ja">run_command2の呼び出し時にシェルで実行されるコマンドライン</long>
+		<long xml:lang="pt">Linha de comando a ser executada no shell quando run_command2 for acionado</long>
+		<long xml:lang="pt_BR">Linha de comando a ser executada no shell quando run_command2 for acionado</long>
+		<long xml:lang="sv">Kommandorad som ska köras i ett skal när run_command2 anropas</long>
+		<long xml:lang="zh_CN">调用 run_command2 时，shell 中要执行的命令行</long>
+		<long xml:lang="zh_TW">啟用 run_command2 時要在外圍程序中執行的指令行</long>
+		<default/>
+	    </option>
+	    <option type="string" name="command3">
+		<short>Command line 3</short>
+		<short xml:lang="cs">Příkazový řádek 3</short>
+		<short xml:lang="de">Kommandozeile 3</short>
+		<short xml:lang="es">Línea de comandos 3</short>
+		<short xml:lang="fi">Komentorivi 3</short>
+		<short xml:lang="fr">Ligne de commande 3</short>
+		<short xml:lang="it">Riga di comando 3</short>
+		<short xml:lang="ja">コマンドライン3</short>
+		<short xml:lang="pt">Linha de comando 3</short>
+		<short xml:lang="pt_BR">Linha de comando 3</short>
+		<short xml:lang="sv">Kommandorad 3</short>
+		<short xml:lang="zh_CN">命令行 3</short>
+		<short xml:lang="zh_TW">指令行 3</short>
+		<long>Command line to be executed in shell when run_command3 is invoked</long>
+		<long xml:lang="cs">Příkaz, který se vykoná, pokud je v shellu volán run_command3</long>
+		<long xml:lang="de">Die Kommandozeile, die bei Ausführung von run_command3 in der Shell ausgeführt wird</long>
+		<long xml:lang="es">Línea de comandos que se ejecutar en el shell cuando se invoque run_command3</long>
+		<long xml:lang="fi">Suoritettava komentorivi, kun run_command3 suoritetaan.</long>
+		<long xml:lang="fr">Ligne de commande à exécuter dans le shell lorsque run_command3 est appelé</long>
+		<long xml:lang="it">Riga di comando da eseguire nella shell quando viene invocato run_command3</long>
+		<long xml:lang="ja">run_command3の呼び出し時にシェルで実行されるコマンドライン</long>
+		<long xml:lang="pt">Linha de comando a ser executada no shell quando run_command3 for acionado</long>
+		<long xml:lang="pt_BR">Linha de comando a ser executada no shell quando run_command3 for acionado</long>
+		<long xml:lang="sv">Kommandorad som ska köras i ett skal när run_command3 anropas</long>
+		<long xml:lang="zh_CN">调用 run_command3 时，shell 中要执行的命令行</long>
+		<long xml:lang="zh_TW">啟用 run_command3 時要在外圍程序中執行的指令行</long>
+		<default/>
+	    </option>
+	    <option type="string" name="command4">
+		<short>Command line 4</short>
+		<short xml:lang="cs">Příkazová řádka 3</short>
+		<short xml:lang="de">Kommandozeile 4</short>
+		<short xml:lang="es">Línea de comandos 4</short>
+		<short xml:lang="fi">Komentorivi 4</short>
+		<short xml:lang="fr">Ligne de commande 4</short>
+		<short xml:lang="it">Riga di comando 4</short>
+		<short xml:lang="ja">コマンドライン4</short>
+		<short xml:lang="pt">Linha de comando 4</short>
+		<short xml:lang="pt_BR">Linha de comando 4</short>
+		<short xml:lang="sv">Kommandorad 4</short>
+		<short xml:lang="zh_CN">命令行 4</short>
+		<short xml:lang="zh_TW">指令行 4</short>
+		<long>Command line to be executed in shell when run_command4 is invoked</long>
+		<long xml:lang="cs">Příkaz, který se vykoná, pokud je v shellu volán run_command4</long>
+		<long xml:lang="de">Die Kommandozeile, die bei Ausführung von run_command4 in der Shell ausgeführt wird</long>
+		<long xml:lang="es">Línea de comandos que se ejecutar en el shell cuando se invoque run_command4</long>
+		<long xml:lang="fi">Suoritettava komentorivi, kun run_command4 suoritetaan.</long>
+		<long xml:lang="fr">Ligne de commande à exécuter dans le shell lorsque run_command4 est appelé</long>
+		<long xml:lang="it">Riga di comando da eseguire nella shell quando viene invocato run_command4</long>
+		<long xml:lang="ja">run_command4の呼び出し時にシェルで実行されるコマンドライン</long>
+		<long xml:lang="pt">Linha de comando a ser executada no shell quando run_command4 for acionado</long>
+		<long xml:lang="pt_BR">Linha de comando a ser executada no shell quando run_command4 for acionado</long>
+		<long xml:lang="sv">Kommandorad som ska köras i ett skal när run_command4 anropas</long>
+		<long xml:lang="zh_CN">调用 run_command4 时，shell 中要执行的命令行</long>
+		<long xml:lang="zh_TW">啟用 run_command4 時要在外圍程序中執行的指令行</long>
+		<default/>
+	    </option>
+	    <option type="string" name="command5">
+		<short>Command line 5</short>
+		<short xml:lang="cs">Příkazová řádka 5</short>
+		<short xml:lang="de">Kommandozeile 5</short>
+		<short xml:lang="es">Línea de comandos 5</short>
+		<short xml:lang="fi">Komentorivi 5</short>
+		<short xml:lang="fr">Ligne de commande 5</short>
+		<short xml:lang="it">Riga di comando 5</short>
+		<short xml:lang="ja">コマンドライン5</short>
+		<short xml:lang="pt">Linha de comando 5</short>
+		<short xml:lang="pt_BR">Linha de comando 5</short>
+		<short xml:lang="sv">Kommandorad 5</short>
+		<short xml:lang="zh_CN">命令行 5</short>
+		<short xml:lang="zh_TW">指令行 5</short>
+		<long>Command line to be executed in shell when run_command5 is invoked</long>
+		<long xml:lang="cs">Příkaz, který se vykoná, pokud je v shellu volán run_command5</long>
+		<long xml:lang="de">Die Kommandozeile, die bei Ausführung von run_command5 in der Shell ausgeführt wird</long>
+		<long xml:lang="es">Línea de comandos que se ejecutar en el shell cuando se invoque run_command5</long>
+		<long xml:lang="fi">Suoritettava komentorivi, kun run_command5 suoritetaan.</long>
+		<long xml:lang="fr">Ligne de commande à exécuter dans le shell lorsque run_command5 est appelé</long>
+		<long xml:lang="it">Riga di comando da eseguire nella shell quando viene invocato run_command5</long>
+		<long xml:lang="ja">run_command5の呼び出し時にシェルで実行されるコマンドライン</long>
+		<long xml:lang="pt">Linha de comando a ser executada no shell quando run_command5 for acionado</long>
+		<long xml:lang="pt_BR">Linha de comando a ser executada no shell quando run_command5 for acionado</long>
+		<long xml:lang="sv">Kommandorad som ska köras i ett skal när run_command5 anropas</long>
+		<long xml:lang="zh_CN">调用 run_command5 时，shell 中要执行的命令行</long>
+		<long xml:lang="zh_TW">啟用 run_command5 時要在外圍程序中執行的指令行</long>
+		<default/>
+	    </option>
+	    <option type="string" name="command6">
+		<short>Command line 6</short>
+		<short xml:lang="cs">Příkazová řádka 6</short>
+		<short xml:lang="de">Kommandozeile 6</short>
+		<short xml:lang="es">Línea de comandos 6</short>
+		<short xml:lang="fi">Komentorivi 6</short>
+		<short xml:lang="fr">Ligne de commande 6</short>
+		<short xml:lang="it">Riga di comando 6</short>
+		<short xml:lang="ja">コマンドライン6</short>
+		<short xml:lang="pt">Linha de comando 6</short>
+		<short xml:lang="pt_BR">Linha de comando 6</short>
+		<short xml:lang="sv">Kommandorad 6</short>
+		<short xml:lang="zh_CN">命令行 6</short>
+		<short xml:lang="zh_TW">指令行 6</short>
+		<long>Command line to be executed in shell when run_command6 is invoked</long>
+		<long xml:lang="cs">Příkaz, který se vykoná, pokud je v shellu volán run_command6</long>
+		<long xml:lang="de">Die Kommandozeile, die bei Ausführung von run_command6 in der Shell ausgeführt wird</long>
+		<long xml:lang="es">Línea de comandos que se ejecutar en el shell cuando se invoque run_command6</long>
+		<long xml:lang="fi">Suoritettava komentorivi, kun run_command6 suoritetaan.</long>
+		<long xml:lang="fr">Ligne de commande à exécuter dans le shell lorsque run_command6 est appelé</long>
+		<long xml:lang="it">Riga di comando da eseguire nella shell quando viene invocato run_command6</long>
+		<long xml:lang="ja">run_command6の呼び出し時にシェルで実行されるコマンドライン</long>
+		<long xml:lang="pt">Linha de comando a ser executada no shell quando run_command6 for acionado</long>
+		<long xml:lang="pt_BR">Linha de comando a ser executada no shell quando run_command6 for acionado</long>
+		<long xml:lang="sv">Kommandorad som ska köras i ett skal när run_command6 anropas</long>
+		<long xml:lang="zh_CN">调用 run_command6 时，shell 中要执行的命令行</long>
+		<long xml:lang="zh_TW">啟用 run_command6 時要在外圍程序中執行的指令行</long>
+		<default/>
+	    </option>
+	    <option type="string" name="command7">
+		<short>Command line 7</short>
+		<short xml:lang="cs">Příkazová řádka 7</short>
+		<short xml:lang="de">Kommandozeile 7</short>
+		<short xml:lang="es">Línea de comandos 7</short>
+		<short xml:lang="fi">Komentorivi 7</short>
+		<short xml:lang="fr">Ligne de commande 7</short>
+		<short xml:lang="it">Riga di comando 7</short>
+		<short xml:lang="ja">コマンドライン7</short>
+		<short xml:lang="pt">Linha de comando 7</short>
+		<short xml:lang="pt_BR">Linha de comando 7</short>
+		<short xml:lang="sv">Kommandorad 7</short>
+		<short xml:lang="zh_CN">命令行 7</short>
+		<short xml:lang="zh_TW">指令行 7</short>
+		<long>Command line to be executed in shell when run_command7 is invoked</long>
+		<long xml:lang="cs">Příkaz, který se vykoná, pokud je v shellu volán run_command7</long>
+		<long xml:lang="de">Die Kommandozeile, die bei Ausführung von run_command7 in der Shell ausgeführt wird</long>
+		<long xml:lang="es">Línea de comandos que se ejecutar en el shell cuando se invoque run_command7</long>
+		<long xml:lang="fi">Suoritettava komentorivi, kun run_command7 suoritetaan.</long>
+		<long xml:lang="fr">Ligne de commande à exécuter dans le shell lorsque run_command7 est appelé</long>
+		<long xml:lang="it">Riga di comando da eseguire nella shell quando viene invocato run_command7</long>
+		<long xml:lang="ja">run_command7の呼び出し時にシェルで実行されるコマンドライン</long>
+		<long xml:lang="pt">Linha de comando a ser executada no shell quando run_command7 for acionado</long>
+		<long xml:lang="pt_BR">Linha de comando a ser executada no shell quando run_command7 for acionado</long>
+		<long xml:lang="sv">Kommandorad som ska köras i ett skal när run_command7 anropas</long>
+		<long xml:lang="zh_CN">调用 run_command7 时，shell 中要执行的命令行</long>
+		<long xml:lang="zh_TW">啟用 run_command7 時要在外圍程序中執行的指令行</long>
+		<default/>
+	    </option>
+	    <option type="string" name="command8">
+		<short>Command line 8</short>
+		<short xml:lang="cs">Příkazová řádka 8</short>
+		<short xml:lang="de">Kommandozeile 8</short>
+		<short xml:lang="es">Línea de comandos 8</short>
+		<short xml:lang="fi">Komentorivi 8</short>
+		<short xml:lang="fr">Ligne de commande 8</short>
+		<short xml:lang="it">Riga di comando 8</short>
+		<short xml:lang="ja">コマンドライン8</short>
+		<short xml:lang="pt">Linha de comando 8</short>
+		<short xml:lang="pt_BR">Linha de comando 8</short>
+		<short xml:lang="sv">Kommandorad 8</short>
+		<short xml:lang="zh_CN">命令行 8</short>
+		<short xml:lang="zh_TW">指令行 8</short>
+		<long>Command line to be executed in shell when run_command8 is invoked</long>
+		<long xml:lang="cs">Příkaz, který se vykoná, pokud je v shellu volán run_command8</long>
+		<long xml:lang="de">Die Kommandozeile, die bei Ausführung von run_command8 in der Shell ausgeführt wird</long>
+		<long xml:lang="es">Línea de comandos que se ejecutar en el shell cuando se invoque run_command8</long>
+		<long xml:lang="fi">Suoritettava komentorivi, kun run_command8 suoritetaan.</long>
+		<long xml:lang="fr">Ligne de commande à exécuter dans le shell lorsque run_command8 est appelé</long>
+		<long xml:lang="it">Riga di comando da eseguire nella shell quando viene invocato run_command8</long>
+		<long xml:lang="ja">run_command8の呼び出し時にシェルで実行されるコマンドライン</long>
+		<long xml:lang="pt">Linha de comando a ser executada no shell quando run_command8 for acionado</long>
+		<long xml:lang="pt_BR">Linha de comando a ser executada no shell quando run_command8 for acionado</long>
+		<long xml:lang="sv">Kommandorad som ska köras i ett skal när run_command8 anropas</long>
+		<long xml:lang="zh_CN">调用 run_command8 时，shell 中要执行的命令行</long>
+		<long xml:lang="zh_TW">啟用 run_command8 時要在外圍程序中執行的指令行</long>
+		<default/>
+	    </option>
+	    <option type="string" name="command9">
+		<short>Command line 9</short>
+		<short xml:lang="cs">Příkazová řádka 9</short>
+		<short xml:lang="de">Kommandozeile 9</short>
+		<short xml:lang="es">Línea de comandos 9</short>
+		<short xml:lang="fi">Komentorivi 9</short>
+		<short xml:lang="fr">Ligne de commande 9</short>
+		<short xml:lang="it">Riga di comando 9</short>
+		<short xml:lang="ja">コマンドライン9</short>
+		<short xml:lang="pt">Linha de comando 9</short>
+		<short xml:lang="pt_BR">Linha de comando 9</short>
+		<short xml:lang="sv">Kommandorad 9</short>
+		<short xml:lang="zh_CN">命令行 9</short>
+		<short xml:lang="zh_TW">指令行 9</short>
+		<long>Command line to be executed in shell when run_command9 is invoked</long>
+		<long xml:lang="cs">Příkaz, který se vykoná, pokud je v shellu volán run_command9</long>
+		<long xml:lang="de">Die Kommandozeile, die bei Ausführung von run_command9 in der Shell ausgeführt wird</long>
+		<long xml:lang="es">Línea de comandos que se ejecutar en el shell cuando se invoque run_command9</long>
+		<long xml:lang="fi">Suoritettava komentorivi, kun run_command9 suoritetaan.</long>
+		<long xml:lang="fr">Ligne de commande à exécuter dans le shell lorsque run_command9 est appelé</long>
+		<long xml:lang="it">Riga di comando da eseguire nella shell quando viene invocato run_command9</long>
+		<long xml:lang="ja">run_command9の呼び出し時にシェルで実行されるコマンドライン</long>
+		<long xml:lang="pt">Linha de comando a ser executada no shell quando run_command9 for acionado</long>
+		<long xml:lang="pt_BR">Linha de comando a ser executada no shell quando run_command9 for acionado</long>
+		<long xml:lang="sv">Kommandorad som ska köras i ett skal när run_command9 anropas</long>
+		<long xml:lang="zh_CN">调用 run_command9 时，shell 中要执行的命令行</long>
+		<long xml:lang="zh_TW">啟用 run_command9 時要在外圍程序中執行的指令行</long>
+		<default/>
+	    </option>
+	    <option type="string" name="command10">
+		<short>Command line 10</short>
+		<short xml:lang="cs">Příkazová řádka 10</short>
+		<short xml:lang="de">Kommandozeile 10</short>
+		<short xml:lang="es">Línea de comandos 10</short>
+		<short xml:lang="fi">Komentorivi 10</short>
+		<short xml:lang="fr">Ligne de commande 10</short>
+		<short xml:lang="it">Riga di comando 10</short>
+		<short xml:lang="ja">コマンドライン10</short>
+		<short xml:lang="pt">Linha de comando 10</short>
+		<short xml:lang="pt_BR">Linha de comando 10</short>
+		<short xml:lang="sv">Kommandorad 10</short>
+		<short xml:lang="zh_CN">命令行 10</short>
+		<short xml:lang="zh_TW">指令行 10</short>
+		<long>Command line to be executed in shell when run_command10 is invoked</long>
+		<long xml:lang="cs">Příkaz, který se vykoná, pokud je v shellu volán run_command10</long>
+		<long xml:lang="de">Die Kommandozeile, die bei Ausführung von run_command10 in der Shell ausgeführt wird</long>
+		<long xml:lang="es">Línea de comandos que se ejecutar en el shell cuando se invoque run_command10</long>
+		<long xml:lang="fi">Suoritettava komentorivi, kun run_command10 suoritetaan.</long>
+		<long xml:lang="fr">Ligne de commande à exécuter dans le shell lorsque run_command10 est appelé</long>
+		<long xml:lang="it">Riga di comando da eseguire nella shell quando viene invocato run_command10</long>
+		<long xml:lang="ja">run_command10の呼び出し時にシェルで実行されるコマンドライン</long>
+		<long xml:lang="pt">Linha de comando a ser executada no shell quando run_command10 for acionado</long>
+		<long xml:lang="pt_BR">Linha de comando a ser executada no shell quando run_command10 for acionado</long>
+		<long xml:lang="sv">Kommandorad som ska köras i ett skal när run_command10 anropas</long>
+		<long xml:lang="zh_CN">调用 run_command10 时，shell 中要执行的命令行</long>
+		<long xml:lang="zh_TW">啟用 run_command10 時要在外圍程序中執行的指令行</long>
+		<default/>
+	    </option>
+	    <option type="string" name="command11">
+		<short>Command line 11</short>
+		<short xml:lang="cs">Příkazová řádka 11</short>
+		<short xml:lang="de">Kommandozeile 11</short>
+		<short xml:lang="es">Línea de comandos 11</short>
+		<short xml:lang="fi">Komentorivi 11</short>
+		<short xml:lang="fr">Ligne de commande 11</short>
+		<short xml:lang="it">Riga di comando 11</short>
+		<short xml:lang="ja">コマンドライン11</short>
+		<short xml:lang="pt">Linha de comando 11</short>
+		<short xml:lang="pt_BR">Linha de comando 11</short>
+		<short xml:lang="sv">Kommandorad 11</short>
+		<short xml:lang="zh_CN">命令行 11</short>
+		<short xml:lang="zh_TW">指令行 11</short>
+		<long>Command line to be executed in shell when run_command11 is invoked</long>
+		<long xml:lang="cs">Příkaz, který se vykoná, pokud je v shellu volán run_command11</long>
+		<long xml:lang="de">Die Kommandozeile, die bei Ausführung von run_command11 in der Shell ausgeführt wird</long>
+		<long xml:lang="es">Línea de comandos que se ejecutar en el shell cuando se invoque run_command11</long>
+		<long xml:lang="fi">Suoritettava komentorivi, kun run_command11 suoritetaan.</long>
+		<long xml:lang="fr">Ligne de commande à exécuter dans le shell lorsque run_command11 est appelé</long>
+		<long xml:lang="it">Riga di comando da eseguire nella shell quando viene invocato run_comman11</long>
+		<long xml:lang="ja">run_command11の呼び出し時にシェルで実行されるコマンドライン</long>
+		<long xml:lang="pt">Linha de comando a ser executada no shell quando run_command11 for acionado</long>
+		<long xml:lang="pt_BR">Linha de comando a ser executada no shell quando run_command11 for acionado</long>
+		<long xml:lang="sv">Kommandorad som ska köras i ett skal när run_command11 anropas</long>
+		<long xml:lang="zh_CN">调用 run_command11 时，shell 中要执行的命令行</long>
+		<long xml:lang="zh_TW">啟用 run_command11 時要在外圍程序中執行的指令行</long>
+		<default/>
+	    </option>
+	    <option type="action" name="run_command0">
+		<short>Run command 0</short>
+		<short xml:lang="sv">Kör kommando 0</short>
+		<long>A keybinding that when invoked, will run the shell command identified by command0</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="run_command1">
+		<short>Run command 1</short>
+		<short xml:lang="cs">Spustit příkaz 1</short>
+		<short xml:lang="de">Befehl 1 ausführen</short>
+		<short xml:lang="es">Ejecutar comando 1</short>
+		<short xml:lang="fi">Suorita komento 1</short>
+		<short xml:lang="fr">Exécuter la commande 1</short>
+		<short xml:lang="it">Esegui comando 1</short>
+		<short xml:lang="ja">ランコマンド1</short>
+		<short xml:lang="pt">Executar comando 1</short>
+		<short xml:lang="pt_BR">Executar comando 1</short>
+		<short xml:lang="sv">Kör kommando 1</short>
+		<short xml:lang="zh_CN">运行命令 1</short>
+		<short xml:lang="zh_TW">執行指令 1</short>
+		<long>A keybinding that when invoked, will run the shell command identified by command1</long>
+		<long xml:lang="cs">Klávesové zkratky, které spustí příkaz určený command1</long>
+		<long xml:lang="de">Eine Tastenbelegung, die den durch Befehl 1 festgelegten Shell-Befehl ausführt</long>
+		<long xml:lang="es">Combinación de teclas que al utilizarse ejecutará el comando de shell identificado por command1</long>
+		<long xml:lang="fi">Tunnisteen command1 mukaisen komennon suorittava näppäinyhdistelmä</long>
+		<long xml:lang="fr">Raccourci qui, lorsqu'il est appelé, exécute la commande du shell identifiée par command1</long>
+		<long xml:lang="it">Un'associazione di tasti che, quando invocata, esegue il comando della shell identificato da command1</long>
+		<long xml:lang="ja">呼び出し時にcommand1により識別されたシェルコマンドを実行するキーバインド</long>
+		<long xml:lang="pt">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando1</long>
+		<long xml:lang="pt_BR">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando1</long>
+		<long xml:lang="sv">En tangentgenväg som när anropas kommer att köra skalkommandot identifierat som kommando1</long>
+		<long xml:lang="zh_CN">键绑定在调用时，将运行 command1 确定的 shell 命令</long>
+		<long xml:lang="zh_TW">啟用時將執行經 command1 識別之外圍程序指令的按鍵組合</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="run_command2">
+		<short>Run command 2</short>
+		<short xml:lang="cs">Spustit příkaz 2</short>
+		<short xml:lang="de">Befehl 12 ausführen</short>
+		<short xml:lang="es">Ejecutar comando 2</short>
+		<short xml:lang="fi">Suorita komento 2</short>
+		<short xml:lang="fr">Exécuter la commande 2</short>
+		<short xml:lang="it">Esegui comando 12</short>
+		<short xml:lang="ja">ランコマンド2</short>
+		<short xml:lang="pt">Executar comando 2</short>
+		<short xml:lang="pt_BR">Executar comando 2</short>
+		<short xml:lang="sv">Kör kommando 2</short>
+		<short xml:lang="zh_CN">运行命令 2</short>
+		<short xml:lang="zh_TW">執行指令 2</short>
+		<long>A keybinding that when invoked, will run the shell command identified by command2</long>
+		<long xml:lang="cs">Klávesové zkratky, které spustí příkaz určený command2</long>
+		<long xml:lang="de">Eine Tastenbelegung, die den durch Befehl 2 festgelegten Shell-Befehl ausführt</long>
+		<long xml:lang="es">Combinación de teclas que al utilizarse ejecutará el comando de shell identificado por command2</long>
+		<long xml:lang="fi">Tunnisteen command2 mukaisen komennon suorittava näppäinyhdistelmä</long>
+		<long xml:lang="fr">Raccourci qui, lorsqu'il est appelé, exécute la commande du shell identifiée par command2</long>
+		<long xml:lang="it">Un'associazione di tasti che, quando invocata, esegue il comando della shell identificato da command2</long>
+		<long xml:lang="ja">呼び出し時にcommand2により識別されたシェルコマンドを実行するキーバインド</long>
+		<long xml:lang="pt">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando2</long>
+		<long xml:lang="pt_BR">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando2</long>
+		<long xml:lang="sv">En tangentgenväg som när anropas kommer att köra skalkommandot identifierat som kommando2</long>
+		<long xml:lang="zh_CN">键绑定在调用时，将运行 command2 确定的 shell 命令</long>
+		<long xml:lang="zh_TW">啟用時將執行經 command2 識別之外圍程序指令的按鍵組合</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="run_command3">
+		<short>Run command 3</short>
+		<short xml:lang="cs">Spustit příkaz 3</short>
+		<short xml:lang="de">Befehl 3 ausführen</short>
+		<short xml:lang="es">Ejecutar comando 3</short>
+		<short xml:lang="fi">Suorita komento 3</short>
+		<short xml:lang="fr">Exécuter la commande 3</short>
+		<short xml:lang="it">Esegui comando 3</short>
+		<short xml:lang="ja">ランコマンド3</short>
+		<short xml:lang="pt">Executar comando 3</short>
+		<short xml:lang="pt_BR">Executar comando 3</short>
+		<short xml:lang="sv">Kör kommando 3</short>
+		<short xml:lang="zh_CN">运行命令 3</short>
+		<short xml:lang="zh_TW">執行指令 3</short>
+		<long>A keybinding that when invoked, will run the shell command identified by command3</long>
+		<long xml:lang="cs">Klávesové zkratky, které spustí příkaz určený command3</long>
+		<long xml:lang="de">Eine Tastenbelegung, die den durch Befehl 3 festgelegten Shell-Befehl ausführt</long>
+		<long xml:lang="es">Combinación de teclas que al utilizarse ejecutará el comando de shell identificado por command3</long>
+		<long xml:lang="fi">Tunnisteen command3 mukaisen komennon suorittava näppäinyhdistelmä</long>
+		<long xml:lang="fr">Raccourci qui, lorsqu'il est appelé, exécute la commande du shell identifiée par command3</long>
+		<long xml:lang="it">Un'associazione di tasti che, quando invocata, esegue il comando della shell identificato da command3</long>
+		<long xml:lang="ja">呼び出し時にcommand3により識別されたシェルコマンドを実行するキーバインド</long>
+		<long xml:lang="pt">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando3</long>
+		<long xml:lang="pt_BR">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando3</long>
+		<long xml:lang="sv">En tangentgenväg som när anropas kommer att köra skalkommandot identifierat som kommando3</long>
+		<long xml:lang="zh_CN">键绑定在调用时，将运行 command3 确定的 shell 命令</long>
+		<long xml:lang="zh_TW">啟用時將執行經 command3 識別之外圍程序指令的按鍵組合</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="run_command4">
+		<short>Run command 4</short>
+		<short xml:lang="cs">Spustit příkaz 4</short>
+		<short xml:lang="de">Befehl 4 ausführen</short>
+		<short xml:lang="es">Ejecutar comando 4</short>
+		<short xml:lang="fi">Suorita komento 4</short>
+		<short xml:lang="fr">Exécuter la commande 4</short>
+		<short xml:lang="it">Esegui comando 4</short>
+		<short xml:lang="ja">ランコマンド4</short>
+		<short xml:lang="pt">Executar comando 4</short>
+		<short xml:lang="pt_BR">Executar comando 4</short>
+		<short xml:lang="sv">Kör kommando 4</short>
+		<short xml:lang="zh_CN">运行命令 4</short>
+		<short xml:lang="zh_TW">執行指令 4</short>
+		<long>A keybinding that when invoked, will run the shell command identified by command4</long>
+		<long xml:lang="cs">Klávesové zkratky, které spustí příkaz určený command4</long>
+		<long xml:lang="de">Eine Tastenbelegung, die den durch Befehl 4 festgelegten Shell-Befehl ausführt</long>
+		<long xml:lang="es">Combinación de teclas que al utilizarse ejecutará el comando de shell identificado por command4</long>
+		<long xml:lang="fi">Tunnisteen command4 mukaisen komennon suorittava näppäinyhdistelmä</long>
+		<long xml:lang="fr">Raccourci qui, lorsqu'il est appelé, exécute la commande du shell identifiée par command4</long>
+		<long xml:lang="it">Un'associazione di tasti che, quando invocata, esegue il comando della shell identificato da command4</long>
+		<long xml:lang="ja">呼び出し時にcommand4により識別されたシェルコマンドを実行するキーバインド</long>
+		<long xml:lang="pt">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando4</long>
+		<long xml:lang="pt_BR">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando4</long>
+		<long xml:lang="sv">En tangentgenväg som när anropas kommer att köra skalkommandot identifierat som kommando4</long>
+		<long xml:lang="zh_CN">键绑定在调用时，将运行 command4 确定的 shell 命令</long>
+		<long xml:lang="zh_TW">啟用時將執行經 command4 識別之外圍程序指令的按鍵組合</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="run_command5">
+		<short>Run command 5</short>
+		<short xml:lang="cs">Spustit příkaz 5</short>
+		<short xml:lang="de">Befehl 5 ausführen</short>
+		<short xml:lang="es">Ejecutar comando 5</short>
+		<short xml:lang="fi">Suorita komento 5</short>
+		<short xml:lang="fr">Exécuter la commande 5</short>
+		<short xml:lang="it">Esegui comando 5</short>
+		<short xml:lang="ja">ランコマンド5</short>
+		<short xml:lang="pt">Executar comando 5</short>
+		<short xml:lang="pt_BR">Executar comando 5</short>
+		<short xml:lang="sv">Kör kommando 5</short>
+		<short xml:lang="zh_CN">运行命令 5</short>
+		<short xml:lang="zh_TW">執行指令 5</short>
+		<long>A keybinding that when invoked, will run the shell command identified by command5</long>
+		<long xml:lang="cs">Klávesové zkratky, které spustí příkaz určený command5</long>
+		<long xml:lang="de">Eine Tastenbelegung, die den durch Befehl 5 festgelegten Shell-Befehl ausführt</long>
+		<long xml:lang="es">Combinación de teclas que al utilizarse ejecutará el comando de shell identificado por command5</long>
+		<long xml:lang="fi">Tunnisteen command5 mukaisen komennon suorittava näppäinyhdistelmä</long>
+		<long xml:lang="fr">Raccourci qui, lorsqu'il est appelé, exécute la commande du shell identifiée par command5</long>
+		<long xml:lang="it">Un'associazione di tasti che, quando invocata, esegue il comando della shell identificato da command5</long>
+		<long xml:lang="ja">呼び出し時にcommand5により識別されたシェルコマンドを実行するキーバインド</long>
+		<long xml:lang="pt">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando5</long>
+		<long xml:lang="pt_BR">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando5</long>
+		<long xml:lang="sv">En tangentgenväg som när anropas kommer att köra skalkommandot identifierat som kommando5</long>
+		<long xml:lang="zh_CN">键绑定在调用时，将运行 command5 确定的 shell 命令</long>
+		<long xml:lang="zh_TW">啟用時將執行經 command5 識別之外圍程序指令的按鍵組合</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="run_command6">
+		<short>Run command 6</short>
+		<short xml:lang="cs">Spustit příkaz 6</short>
+		<short xml:lang="de">Befehl 6 ausführen</short>
+		<short xml:lang="es">Ejecutar comando 6</short>
+		<short xml:lang="fi">Suorita komento 6</short>
+		<short xml:lang="fr">Exécuter la commande 6</short>
+		<short xml:lang="it">Esegui comando 6</short>
+		<short xml:lang="ja">ランコマンド6</short>
+		<short xml:lang="pt">Executar comando 6</short>
+		<short xml:lang="pt_BR">Executar comando 6</short>
+		<short xml:lang="sv">Kör kommando 6</short>
+		<short xml:lang="zh_CN">运行命令 6</short>
+		<short xml:lang="zh_TW">執行指令 6</short>
+		<long>A keybinding that when invoked, will run the shell command identified by command6</long>
+		<long xml:lang="cs">Klávesové zkratky, které spustí příkaz určený command6</long>
+		<long xml:lang="de">Eine Tastenbelegung, die den durch Befehl 6 festgelegten Shell-Befehl ausführt</long>
+		<long xml:lang="es">Combinación de teclas que al utilizarse ejecutará el comando de shell identificado por command6</long>
+		<long xml:lang="fi">Tunnisteen command6 mukaisen komennon suorittava näppäinyhdistelmä</long>
+		<long xml:lang="fr">Raccourci qui, lorsqu'il est appelé, exécute la commande du shell identifiée par command6</long>
+		<long xml:lang="it">Un'associazione di tasti che, quando invocata, esegue il comando della shell identificato da command6</long>
+		<long xml:lang="ja">呼び出し時にcommand6により識別されたシェルコマンドを実行するキーバインド</long>
+		<long xml:lang="pt">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando6</long>
+		<long xml:lang="pt_BR">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando6</long>
+		<long xml:lang="sv">En tangentgenväg som när anropas kommer att köra skalkommandot identifierat som kommando6</long>
+		<long xml:lang="zh_CN">键绑定在调用时，将运行 command6 确定的 shell 命令</long>
+		<long xml:lang="zh_TW">啟用時將執行經 command6 識別之外圍程序指令的按鍵組合</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="run_command7">
+		<short>Run command 7</short>
+		<short xml:lang="cs">Spustit příkaz 7</short>
+		<short xml:lang="de">Befehl 7 ausführen</short>
+		<short xml:lang="es">Ejecutar comando 7</short>
+		<short xml:lang="fi">Suorita komento 7</short>
+		<short xml:lang="fr">Exécuter la commande 7</short>
+		<short xml:lang="it">Esegui comando 7</short>
+		<short xml:lang="ja">ランコマンド7</short>
+		<short xml:lang="pt">Executar comando 7</short>
+		<short xml:lang="pt_BR">Executar comando 7</short>
+		<short xml:lang="sv">Kör kommando 7</short>
+		<short xml:lang="zh_CN">运行命令 7</short>
+		<short xml:lang="zh_TW">執行指令 7</short>
+		<long>A keybinding that when invoked, will run the shell command identified by command7</long>
+		<long xml:lang="cs">Klávesové zkratky, které spustí příkaz určený command7</long>
+		<long xml:lang="de">Eine Tastenbelegung, die den durch Befehl 7 festgelegten Shell-Befehl ausführt</long>
+		<long xml:lang="es">Combinación de teclas que al utilizarse ejecutará el comando de shell identificado por command7</long>
+		<long xml:lang="fi">Tunnisteen command7 mukaisen komennon suorittava näppäinyhdistelmä</long>
+		<long xml:lang="fr">Raccourci qui, lorsqu'il est appelé, exécute la commande du shell identifiée par command7</long>
+		<long xml:lang="it">Un'associazione di tasti che, quando invocata, esegue il comando della shell identificato da command7</long>
+		<long xml:lang="ja">呼び出し時にcommand7により識別されたシェルコマンドを実行するキーバインド</long>
+		<long xml:lang="pt">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando7</long>
+		<long xml:lang="pt_BR">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando7</long>
+		<long xml:lang="sv">En tangentgenväg som när anropas kommer att köra skalkommandot identifierat som kommando7</long>
+		<long xml:lang="zh_CN">键绑定在调用时，将运行 command7 确定的 shell 命令</long>
+		<long xml:lang="zh_TW">啟用時將執行經 command7 識別之外圍程序指令的按鍵組合</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="run_command8">
+		<short>Run command 8</short>
+		<short xml:lang="cs">Spustit příkaz 8</short>
+		<short xml:lang="de">Befehl 8 ausführen</short>
+		<short xml:lang="es">Ejecutar comando 8</short>
+		<short xml:lang="fi">Suorita komento 8</short>
+		<short xml:lang="fr">Exécuter la commande 8</short>
+		<short xml:lang="it">Esegui comando 8</short>
+		<short xml:lang="ja">ランコマンド8</short>
+		<short xml:lang="pt">Executar comando 8</short>
+		<short xml:lang="pt_BR">Executar comando 8</short>
+		<short xml:lang="sv">Kör kommando 8</short>
+		<short xml:lang="zh_CN">运行命令 8</short>
+		<short xml:lang="zh_TW">執行指令 8</short>
+		<long>A keybinding that when invoked, will run the shell command identified by command8</long>
+		<long xml:lang="cs">Klávesové zkratky, které spustí příkaz určený command8</long>
+		<long xml:lang="de">Eine Tastenbelegung, die den durch Befehl 8 festgelegten Shell-Befehl ausführt</long>
+		<long xml:lang="es">Combinación de teclas que al utilizarse ejecutará el comando de shell identificado por command8</long>
+		<long xml:lang="fi">Tunnisteen command8 mukaisen komennon suorittava näppäinyhdistelmä</long>
+		<long xml:lang="fr">Raccourci qui, lorsqu'il est appelé, exécute la commande du shell identifiée par command8</long>
+		<long xml:lang="it">Un'associazione di tasti che, quando invocata, esegue il comando della shell identificato da command8</long>
+		<long xml:lang="ja">呼び出し時にcommand8により識別されたシェルコマンドを実行するキーバインド</long>
+		<long xml:lang="pt">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando8</long>
+		<long xml:lang="pt_BR">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando8</long>
+		<long xml:lang="sv">En tangentgenväg som när anropas kommer att köra skalkommandot identifierat som kommando8</long>
+		<long xml:lang="zh_CN">键绑定在调用时，将运行 command8 确定的 shell 命令</long>
+		<long xml:lang="zh_TW">啟用時將執行經 command8 識別之外圍程序指令的按鍵組合</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="run_command9">
+		<short>Run command 9</short>
+		<short xml:lang="cs">Spustit příkaz 9</short>
+		<short xml:lang="de">Befehl 9 ausführen</short>
+		<short xml:lang="es">Ejecutar comando 9</short>
+		<short xml:lang="fi">Suorita komento 9</short>
+		<short xml:lang="fr">Exécuter la commande 9</short>
+		<short xml:lang="it">Esegui comando 9</short>
+		<short xml:lang="ja">ランコマンド9</short>
+		<short xml:lang="pt">Executar comando 9</short>
+		<short xml:lang="pt_BR">Executar comando 9</short>
+		<short xml:lang="sv">Kör kommando 9</short>
+		<short xml:lang="zh_CN">运行命令 9</short>
+		<short xml:lang="zh_TW">執行指令 9</short>
+		<long>A keybinding that when invoked, will run the shell command identified by command9</long>
+		<long xml:lang="cs">Klávesové zkratky, které spustí příkaz určený command9</long>
+		<long xml:lang="de">Eine Tastenbelegung, die den durch Befehl 9 festgelegten Shell-Befehl ausführt</long>
+		<long xml:lang="es">Combinación de teclas que al utilizarse ejecutará el comando de shell identificado por command9</long>
+		<long xml:lang="fi">Tunnisteen command9 mukaisen komennon suorittava näppäinyhdistelmä</long>
+		<long xml:lang="fr">Raccourci qui, lorsqu'il est appelé, exécute la commande du shell identifiée par command9</long>
+		<long xml:lang="it">Un'associazione di tasti che, quando invocata, esegue il comando della shell identificato da command9</long>
+		<long xml:lang="ja">呼びし時にcommand9により識別されたシェルコマンドを実行するキーバインド</long>
+		<long xml:lang="pt">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando9</long>
+		<long xml:lang="pt_BR">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando9</long>
+		<long xml:lang="sv">En tangentgenväg som när anropas kommer att köra skalkommandot identifierat som kommando9</long>
+		<long xml:lang="zh_CN">键绑定在调用时，将运行 command9 确定的 shell 命令</long>
+		<long xml:lang="zh_TW">啟用時將執行經 command9 識別之外圍程序指令的按鍵組合</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="run_command10">
+		<short>Run command 10</short>
+		<short xml:lang="cs">Spustit příkaz 10</short>
+		<short xml:lang="de">Befehl 10 ausführen</short>
+		<short xml:lang="es">Ejecutar comando 10</short>
+		<short xml:lang="fi">Suorita komento 10</short>
+		<short xml:lang="fr">Exécuter la commande 10</short>
+		<short xml:lang="it">Esegui comando 10</short>
+		<short xml:lang="ja">ランコマンド10</short>
+		<short xml:lang="pt">Executar comando 10</short>
+		<short xml:lang="pt_BR">Executar comando 10</short>
+		<short xml:lang="sv">Kör kommando 10</short>
+		<short xml:lang="zh_CN">运行命令 10</short>
+		<short xml:lang="zh_TW">執行指令 10</short>
+		<long>A keybinding that when invoked, will run the shell command identified by command10</long>
+		<long xml:lang="cs">Klávesové zkratky, které spustí příkaz určený command10</long>
+		<long xml:lang="de">Eine Tastenbelegung, die den durch Befehl 10 festgelegten Shell-Befehl ausführt</long>
+		<long xml:lang="es">Combinación de teclas que al utilizarse ejecutará el comando de shell identificado por command10</long>
+		<long xml:lang="fi">Tunnisteen command10 mukaisen komennon suorittava näppäinyhdistelmä</long>
+		<long xml:lang="fr">Raccourci qui, lorsqu'il est appelé, exécute la commande du shell identifiée par command10</long>
+		<long xml:lang="it">Un'associazione di tasti che, quando invocata, esegue il comando della shell identificato da command10</long>
+		<long xml:lang="ja">呼び出し時にcommand10により識別されたシェルコマンドを実行するキーバインド</long>
+		<long xml:lang="pt">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando10</long>
+		<long xml:lang="pt_BR">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando10</long>
+		<long xml:lang="sv">En tangentgenväg som när anropas kommer att köra skalkommandot identifierat som kommando10</long>
+		<long xml:lang="zh_CN">键绑定在调用时，将运行 command10 确定的 shell 命令</long>
+		<long xml:lang="zh_TW">啟用時將執行經 command10 識別之外圍程序指令的按鍵組合</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="run_command11">
+		<short>Run command 11</short>
+		<short xml:lang="cs">Spustit příkaz 11</short>
+		<short xml:lang="de">Befehl 11 ausführen</short>
+		<short xml:lang="es">Ejecutar comando 11</short>
+		<short xml:lang="fi">Suorita komento 11</short>
+		<short xml:lang="fr">Exécuter la commande 11</short>
+		<short xml:lang="it">Esegui comando 11</short>
+		<short xml:lang="ja">ランコマンド11</short>
+		<short xml:lang="pt">Executar comando 11</short>
+		<short xml:lang="pt_BR">Executar comando 11</short>
+		<short xml:lang="sv">Kör kommando 11</short>
+		<short xml:lang="zh_CN">运行命令 11</short>
+		<short xml:lang="zh_TW">執行指令 11</short>
+		<long>A keybinding that when invoked, will run the shell command identified by command11</long>
+		<long xml:lang="cs">Klávesové zkratky, které spustí příkaz určený command11</long>
+		<long xml:lang="de">Eine Tastenbelegung, die den durch Befehl 11 festgelegten Shell-Befehl ausführt</long>
+		<long xml:lang="es">Combinación de teclas que al utilizarse ejecutará el comando de shell identificado por command11</long>
+		<long xml:lang="fi">Tunnisteen command11 mukaisen komennon suorittava näppäinyhdistelmä</long>
+		<long xml:lang="fr">Raccourci qui, lorsqu'il est appelé, exécute la commande du shell identifiée par command11</long>
+		<long xml:lang="it">Un'associazione di tasti che, quando invocata, esegue il comando della shell identificato da command11</long>
+		<long xml:lang="ja">呼び出し時にcommand11により識別されたシェルコマンドを実行するキーバインド</long>
+		<long xml:lang="pt">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando11</long>
+		<long xml:lang="pt_BR">Um atalho de teclado que, quando acionado, executa o comando shell identificado pelo comando11</long>
+		<long xml:lang="sv">En tangentgenväg som när anropas kommer att köra skalkommandot identifierat som kommando11</long>
+		<long xml:lang="zh_CN">键绑定在调用时，将运行 command11 确定的 shell 命令</long>
+		<long xml:lang="zh_TW">啟用時將執行經 command11 識別之外圍程序指令的按鍵組合</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="slow_animations">
+		<short>Slow Animations</short>
+		<short xml:lang="ca">Animacions lentes</short>
+		<short xml:lang="cs">Pomalé animace</short>
+		<short xml:lang="da">Langsomme animationer</short>
+		<short xml:lang="de">Langsame Animationen</short>
+		<short xml:lang="es">Ralentizar animaciones</short>
+		<short xml:lang="fi">Hitaat animaatiot</short>
+		<short xml:lang="fr">Ralentir les animations</short>
+		<short xml:lang="hu">Lassú animációk</short>
+		<short xml:lang="it">Animazioni lente</short>
+		<short xml:lang="ja">アニメーションのスロー再生</short>
+		<short xml:lang="pl">Powolne animacje</short>
+		<short xml:lang="pt">Animações Lentas</short>
+		<short xml:lang="pt_BR">Animações Lentas</short>
+		<short xml:lang="ru">Замедлить анимацию</short>
+		<short xml:lang="sv">Långsamma animeringar</short>
+		<short xml:lang="zh_CN">慢速动画</short>
+		<short xml:lang="zh_TW">減慢動畫速度</short>
+		<long>Toggle use of slow animations</long>
+		<long xml:lang="ca">Commuta l'ús d'animacions lentes</long>
+		<long xml:lang="cs">Přepnout použití pomalých animací</long>
+		<long xml:lang="da">Slå brugen af langsomme animationer til/fra</long>
+		<long xml:lang="de">Verwenden langsamer Animationen ein/aus</long>
+		<long xml:lang="es">Activa o desactiva el uso de animaciones lentas</long>
+		<long xml:lang="fi">Ota käyttöön hitaat animaatiot</long>
+		<long xml:lang="fr">Basculer l'utilisation d'animations lentes</long>
+		<long xml:lang="hu">"Lassú animációk" effektus kapcsoló</long>
+		<long xml:lang="it">Alterna uso di animazioni lente</long>
+		<long xml:lang="ja">スロー再生アニメーション使用の切り替え</long>
+		<long xml:lang="pl">Wyłącz powolne animacje</long>
+		<long xml:lang="pt">Alternar uso de animações lentas</long>
+		<long xml:lang="pt_BR">Alternar uso de animações lentas</long>
+		<long xml:lang="ru">Переключатель для использования медленной анимации</long>
+		<long xml:lang="sv">Växla användning av långsamma animeringar</long>
+		<long xml:lang="zh_CN">转换慢速动画的使用</long>
+		<long xml:lang="zh_TW">切換使用減慢動畫速度</long>
+		<allowed key="true" button="true"/>
+		<default>
+		    <key>&lt;Shift&gt;F10</key>
+		</default>
+	    </option>
+	    <option type="action" name="raise_window">
+		<short>Raise Window</short>
+		<short xml:lang="ca">Eleva la finestra</short>
+		<short xml:lang="cs">Přenést okno do popředí</short>
+		<short xml:lang="da">Hæv vindue</short>
+		<short xml:lang="de">Fenster nach vorn verlagern</short>
+		<short xml:lang="es">Elevar ventana</short>
+		<short xml:lang="fi">Nosta ikkunaa</short>
+		<short xml:lang="fr">Remonter la fenêtre</short>
+		<short xml:lang="hu">Ablak előtérbe hozása</short>
+		<short xml:lang="it">Visualizza finestra</short>
+		<short xml:lang="ja">ウィンドウを手前に表示</short>
+		<short xml:lang="pl">Podnieś okno</short>
+		<short xml:lang="pt_BR">Elevar Janela</short>
+		<short xml:lang="ru">Вызвать окно</short>
+		<short xml:lang="sv">Höj fönster</short>
+		<short xml:lang="zh_CN">上升窗口</short>
+		<short xml:lang="zh_TW">提高視窗</short>
+		<long>Raise window above other windows</long>
+		<long xml:lang="ca">Eleva la finestra per damunt de les altres</long>
+		<long xml:lang="cs">Přesunout okno nad ostatní okna</long>
+		<long xml:lang="da">Hæv vinduet over de andre vinduer</long>
+		<long xml:lang="de">Fenster vor andere Fenster verlagern</long>
+		<long xml:lang="es">Elevar la ventana sobre las demás</long>
+		<long xml:lang="fi">Nosta ikkuna muiden ikkunoiden yläpuolelle</long>
+		<long xml:lang="fr">Remonter la fenêtre au-dessus des autres</long>
+		<long xml:lang="hu">Ablak másik ablakok fölé hozása</long>
+		<long xml:lang="it">Visualizza la finestra sulle altre finestre</long>
+		<long xml:lang="ja">ウィンドウを他のウィンドウの手前に表示する</long>
+		<long xml:lang="pl">Podnosi okno ponad pozostałe</long>
+		<long xml:lang="pt_BR">Elevar janela acima das outras</long>
+		<long xml:lang="ru">Вызов и размещение окна поверх других окон</long>
+		<long xml:lang="zh_CN">将窗口升到其它窗口以上</long>
+		<long xml:lang="zh_TW">將視窗提高到比其他視窗高</long>
+		<allowed key="true" button="true"/>
+		<default>
+		    <button>&lt;Control&gt;Button6</button>
+		</default>
+	    </option>
+	    <option type="action" name="lower_window">
+		<short>Lower Window</short>
+		<short xml:lang="ca">Abaixa la finestra</short>
+		<short xml:lang="cs">Dát okno do pozadí</short>
+		<short xml:lang="da">Sænk vindue</short>
+		<short xml:lang="de">Fenster nach unten verschieben</short>
+		<short xml:lang="es">Bajar ventana</short>
+		<short xml:lang="fi">Laske ikkuna</short>
+		<short xml:lang="fr">Abaisser la fenêtre</short>
+		<short xml:lang="hu">Alacsonyabb ablak</short>
+		<short xml:lang="it">Abbassa finestra</short>
+		<short xml:lang="ja">ウィンドウを下げる</short>
+		<short xml:lang="pl">Obniż okno</short>
+		<short xml:lang="pt">Janela Mais Baixa</short>
+		<short xml:lang="pt_BR">Janela Mais Baixa</short>
+		<short xml:lang="ru">Переместить окно на задний план</short>
+		<short xml:lang="sv">Sänk fönster</short>
+		<short xml:lang="zh_CN">降低窗口</short>
+		<short xml:lang="zh_TW">降低視窗高度</short>
+		<long>Lower window beneath other windows</long>
+		<long xml:lang="ca">Abaixa la finestra per sota de les altres</long>
+		<long xml:lang="cs">Přesunout okno do pozadí</long>
+		<long xml:lang="da">Placer vinduet under de andre vinduer</long>
+		<long xml:lang="de">Fenster unter andere Fenster verschieben</long>
+		<long xml:lang="es">Colocar la ventana por debajo de otras</long>
+		<long xml:lang="fi">Laske ikkuna taka-alalle</long>
+		<long xml:lang="fr">Abaisser la fenêtre sous d'autres fenêtres</long>
+		<long xml:lang="hu">Alacsonyabb ablak egy másik ablak alatt</long>
+		<long xml:lang="it">Abbassa finestra sotto alle altre finestre</long>
+		<long xml:lang="ja">他のウィンドウの下にウィンドウを下げる</long>
+		<long xml:lang="pl">Przenieś okno pod pozostałe</long>
+		<long xml:lang="pt">Janela mais baixa sob as demais janelas</long>
+		<long xml:lang="pt_BR">Janela mais baixa sob as demais janelas</long>
+		<long xml:lang="ru">Расположение окна позади других окон</long>
+		<long xml:lang="sv">Sänk fönstret under andra fönster</long>
+		<long xml:lang="zh_CN">将窗口降到其它窗口以下</long>
+		<long xml:lang="zh_TW">將視窗降低到其他視窗之下</long>
+		<allowed key="true" edge="true" button="true"/>
+		<default>
+		    <button>&lt;Alt&gt;Button6</button>
+		</default>
+	    </option>
+	    <option type="action" name="unmaximize_window">
+		<short>Unmaximize Window</short>
+		<short xml:lang="ca">Desmaximitza la finestra</short>
+		<short xml:lang="cs">Zrušit maximalizaci okna</short>
+		<short xml:lang="da">Gendan vindue</short>
+		<short xml:lang="de">Maximierung von Fenstern aufheben</short>
+		<short xml:lang="es">Desmaximizar ventana</short>
+		<short xml:lang="fi">Palauta ikkuna</short>
+		<short xml:lang="fr">Agrandir la fenêtre</short>
+		<short xml:lang="hu">Ablak visszaállítása</short>
+		<short xml:lang="it">Annulla ripristino finestra</short>
+		<short xml:lang="ja">ウィンドウの最大化解除</short>
+		<short xml:lang="pl">Cofnij maksymalizację okna</short>
+		<short xml:lang="pt">Desmaximizar Janela</short>
+		<short xml:lang="pt_BR">Desmaximizar Janela</short>
+		<short xml:lang="ru">Отменить полное развертывание окна</short>
+		<short xml:lang="sv">Avmaximera fönster</short>
+		<short xml:lang="zh_CN">取消窗口最大化</short>
+		<short xml:lang="zh_TW">視窗解除最大化</short>
+		<long>Unmaximize active window</long>
+		<long xml:lang="ca">Desmaximitza la finestra activa</long>
+		<long xml:lang="cs">Zrušit maximalizaci aktivního okna</long>
+		<long xml:lang="da">Ophæv maksimeringen af det aktive vindue</long>
+		<long xml:lang="de">Maximierung des aktiven Fensters aufheben</long>
+		<long xml:lang="es">Desmaximiza la ventana activa</long>
+		<long xml:lang="fi">Palauta aktiivinen ikkuna</long>
+		<long xml:lang="fr">Agrandir la fenêtre active</long>
+		<long xml:lang="hu">Aktív ablak visszaállítása</long>
+		<long xml:lang="it">Annulla ripristino finestra attiva</long>
+		<long xml:lang="ja">アクティブウィンドウの最大化解除</long>
+		<long xml:lang="pl">Cofnij maksymalizację aktywnego okna</long>
+		<long xml:lang="pt">Desmaximizar janela ativa</long>
+		<long xml:lang="pt_BR">Desmaximizar janela ativa</long>
+		<long xml:lang="ru">Отмена полного развертывания активного окна</long>
+		<long xml:lang="sv">Avmaximera aktivt fönster</long>
+		<long xml:lang="zh_CN">取消最大化活动窗口</long>
+		<long xml:lang="zh_TW">作用中視窗解除最大化</long>
+		<allowed key="true" edge="true" button="true"/>
+		<default>
+		    <key>&lt;Alt&gt;F5</key>
+		</default>
+	    </option>
+	    <option type="action" name="minimize_window">
+		<short>Minimize Window</short>
+		<short xml:lang="ca">Minimitza la finestra</short>
+		<short xml:lang="cs">Minimalizovat okno</short>
+		<short xml:lang="da">Minimer vindue</short>
+		<short xml:lang="de">Fenster minimieren</short>
+		<short xml:lang="es">Minimizar ventana</short>
+		<short xml:lang="fi">Pienennä ikkuna</short>
+		<short xml:lang="fr">Minimiser la fenêtre</short>
+		<short xml:lang="hu">Ablak minimalizálása</short>
+		<short xml:lang="it">Riduci finestra a icona</short>
+		<short xml:lang="ja">ウィンドウを最小化する</short>
+		<short xml:lang="pl">Zminimalizuj okno</short>
+		<short xml:lang="pt">Minimizar Janela</short>
+		<short xml:lang="pt_BR">Minimizar Janela</short>
+		<short xml:lang="ru">Свернуть окно</short>
+		<short xml:lang="sv">Minimera fönster</short>
+		<short xml:lang="zh_CN">最小化窗口</short>
+		<short xml:lang="zh_TW">最小化視窗</short>
+		<long>Minimize active window</long>
+		<long xml:lang="ca">Minimitza la finestra activa</long>
+		<long xml:lang="cs">Minimalizovat aktivní okno</long>
+		<long xml:lang="da">Minimer det aktive vindue</long>
+		<long xml:lang="de">Aktives Fenster minimieren</long>
+		<long xml:lang="es">Minimiza la ventana activa</long>
+		<long xml:lang="fi">Pienennä aktiivinen ikkuna</long>
+		<long xml:lang="fr">Minimiser la fenêtre active</long>
+		<long xml:lang="hu">Aktív ablak minimalizálása</long>
+		<long xml:lang="it">Riduci a icona finestra attiva</long>
+		<long xml:lang="ja">アクティブなウィンドウを最小化する</long>
+		<long xml:lang="pl">Minimalizuj aktywne okno</long>
+		<long xml:lang="pt">Minimizar janela ativa</long>
+		<long xml:lang="pt_BR">Minimizar janela ativa</long>
+		<long xml:lang="ru">Свертывание активного окна</long>
+		<long xml:lang="sv">Minimera aktivt fönster</long>
+		<long xml:lang="zh_CN">最小化活动窗口</long>
+		<long xml:lang="zh_TW">最小化作用中視窗</long>
+		<allowed key="true" edge="true" button="true"/>
+		<default>
+		    <key>&lt;Alt&gt;F9</key>
+		</default>
+	    </option>
+	    <option type="action" name="maximize_window">
+		<short>Maximize Window</short>
+		<short xml:lang="ca">Maximitza la finestra</short>
+		<short xml:lang="cs">Maximalizovat okno</short>
+		<short xml:lang="da">Maksimer vindue</short>
+		<short xml:lang="de">Fenster maximieren</short>
+		<short xml:lang="es">Maximizar ventana</short>
+		<short xml:lang="fi">Suurenna ikkuna</short>
+		<short xml:lang="fr">Optimiser la fenêtre</short>
+		<short xml:lang="hu">Ablak maximalizálása</short>
+		<short xml:lang="it">Ripristina finestra</short>
+		<short xml:lang="ja">ウィンドウを最大化する</short>
+		<short xml:lang="pl">Maksymalizuj okno</short>
+		<short xml:lang="pt">Maximizar Janela</short>
+		<short xml:lang="pt_BR">Maximizar Janela</short>
+		<short xml:lang="ru">Развернуть окно</short>
+		<short xml:lang="sv">Maximera fönster</short>
+		<short xml:lang="zh_CN">最大化窗口</short>
+		<short xml:lang="zh_TW">最大化視窗</short>
+		<long>Maximize active window</long>
+		<long xml:lang="ca">Maximitza la finestra activa</long>
+		<long xml:lang="cs">Maximalizovat aktivní okno</long>
+		<long xml:lang="da">Maksimer det aktive vindue</long>
+		<long xml:lang="de">Aktives Fenster maximieren</long>
+		<long xml:lang="es">Maximiza la ventana activa</long>
+		<long xml:lang="fi">Suurenna aktiivinen ikkuna</long>
+		<long xml:lang="fr">Optimiser la fenêtre active</long>
+		<long xml:lang="hu">Aktív ablak maximalizálása</long>
+		<long xml:lang="it">Ripristina finestra attiva</long>
+		<long xml:lang="ja">アクティブなウィンドウを最大化する</long>
+		<long xml:lang="pl">Maksymalizuj aktywne okno</long>
+		<long xml:lang="pt">Maximizar janela ativa</long>
+		<long xml:lang="pt_BR">Maximizar janela ativa</long>
+		<long xml:lang="ru">Развертывание активного окна</long>
+		<long xml:lang="sv">Maximera aktivt fönster</long>
+		<long xml:lang="zh_CN">最大化活动窗口</long>
+		<long xml:lang="zh_TW">最大化作用中視窗</long>
+		<allowed key="true" edge="true" button="true"/>
+		<default>
+		    <key>&lt;Alt&gt;F10</key>
+		</default>
+	    </option>
+	    <option type="action" name="maximize_window_horizontally">
+		<short>Maximize Window Horizontally</short>
+		<short xml:lang="ca">Maximitza la finestra horitzontalment</short>
+		<short xml:lang="cs">Maximalizovat okno horizontálně</short>
+		<short xml:lang="da">Maksimer vindue vandret</short>
+		<short xml:lang="de">Fenster horizontal maximieren</short>
+		<short xml:lang="es">Maximizar ventana horizontalmente</short>
+		<short xml:lang="fi">Suurenna ikkunaa vaakatasossa</short>
+		<short xml:lang="fr">Optimiser la fenêtre horizontalement</short>
+		<short xml:lang="hu">Ablak maximalizálása vízszintesen</short>
+		<short xml:lang="it">Ingrandisci finestra in orizzontale</short>
+		<short xml:lang="ja">水平方向にウィンドウを最大化する</short>
+		<short xml:lang="pl">Maksymalizuj okno w poziomie</short>
+		<short xml:lang="pt">Maximizar Janela Horizontalmente</short>
+		<short xml:lang="pt_BR">Maximizar Janela Horizontalmente</short>
+		<short xml:lang="ru">Развернуть окно горизонтально</short>
+		<short xml:lang="sv">Maximera fönster horisontellt</short>
+		<short xml:lang="zh_CN">水平方向最大化窗口</short>
+		<short xml:lang="zh_TW">將視窗水平最大化</short>
+		<long>Maximize active window horizontally</long>
+		<long xml:lang="ca">Maximitza la finestra activa horitzontalment</long>
+		<long xml:lang="cs">Maximalizovat aktivní okno horizontálně</long>
+		<long xml:lang="da">Maksimer det aktive vindue i bredden</long>
+		<long xml:lang="de">Aktives Fenster horizontal maximieren</long>
+		<long xml:lang="es">Maximiza la ventana activa horizontalmente</long>
+		<long xml:lang="fi">Suurenna aktiivista ikkunaa vaakatasossa</long>
+		<long xml:lang="fr">Optimiser la fenêtre active horizontalement</long>
+		<long xml:lang="hu">Aktív ablak maximalizálása vízszintesen</long>
+		<long xml:lang="it">Ingrandisci finestra attiva in orizzontale</long>
+		<long xml:lang="ja">アクティブなウィンドウを水平方向に最大化する</long>
+		<long xml:lang="pl">Maksymalizuj aktywne okno w poziomie</long>
+		<long xml:lang="pt">Maximizar janela ativa horizontalmente</long>
+		<long xml:lang="pt_BR">Maximizar janela ativa horizontalmente</long>
+		<long xml:lang="ru">Развертывание активного окна горизонтально</long>
+		<long xml:lang="sv">Maximera aktivt fönster horisontellt</long>
+		<long xml:lang="zh_CN">水平方向最大化活动窗口</long>
+		<long xml:lang="zh_TW">將作用中視窗水平最大化</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="maximize_window_vertically">
+		<short>Maximize Window Vertically</short>
+		<short xml:lang="ca">Maximitza la finestra verticalment</short>
+		<short xml:lang="cs">Maximalizovat okno vertikálně</short>
+		<short xml:lang="da">Maksimer vindue lodret</short>
+		<short xml:lang="de">Fenster vertikal maximieren</short>
+		<short xml:lang="es">Maximizar ventana verticalmente</short>
+		<short xml:lang="fi">Suurenna ikkunaa pystytasossa</short>
+		<short xml:lang="fr">Optimiser la fenêtre verticalement</short>
+		<short xml:lang="hu">Ablak maximalizálása függőlegesen</short>
+		<short xml:lang="it">Ingrandisci finestra in verticale</short>
+		<short xml:lang="ja">垂直方向にウィンドウを最大化する</short>
+		<short xml:lang="pl">Maksymalizuj okno w pionie</short>
+		<short xml:lang="pt">Maximizar Janela Verticalmente</short>
+		<short xml:lang="pt_BR">Maximizar Janela Verticalmente</short>
+		<short xml:lang="ru">Развернуть окно вертикально</short>
+		<short xml:lang="sv">Maximera fönster vertikalt</short>
+		<short xml:lang="zh_CN">垂直方向最大化窗口</short>
+		<short xml:lang="zh_TW">將視窗垂直最大化</short>
+		<long>Maximize active window vertically</long>
+		<long xml:lang="ca">Maximitza la finestra activa verticalment</long>
+		<long xml:lang="cs">Maximalizovat aktivní okno vertikálně</long>
+		<long xml:lang="da">Maksimer det aktive vindue i højden</long>
+		<long xml:lang="de">Aktives Fenster vertikal maximieren</long>
+		<long xml:lang="es">Maximiza la ventana activa verticalmente</long>
+		<long xml:lang="fi">Suurenna aktiivista ikkunaa pystytasossa</long>
+		<long xml:lang="fr">Optimiser la fenêtre active verticalement</long>
+		<long xml:lang="hu">Aktív ablak maximalizálása függőlegesen</long>
+		<long xml:lang="it">Ingrandisci finestra attiva in verticale</long>
+		<long xml:lang="ja">アクティブなウィンドウを垂直方向に最大化する</long>
+		<long xml:lang="pl">Maksymalizuj aktywne okno w pionie</long>
+		<long xml:lang="pt">Maximizar janela ativa verticalmente</long>
+		<long xml:lang="pt_BR">Maximizar janela ativa verticalmente</long>
+		<long xml:lang="ru">Развертывание активного окна вертикально</long>
+		<long xml:lang="sv">Maximera aktivt fönster vertikalt</long>
+		<long xml:lang="zh_CN">垂直方向最大化活动窗口</long>
+		<long xml:lang="zh_TW">將作用中視窗垂直最大化</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="opacity_increase">
+		<short>Increase Opacity</short>
+		<short xml:lang="ca">Augmenta l'opacitat</short>
+		<short xml:lang="cs">Zvýšit krytí</short>
+		<short xml:lang="da">Forøg uigennemsigtighed</short>
+		<short xml:lang="de">Durchlässigkeit erhöhen</short>
+		<short xml:lang="es">Aumentar opacidad</short>
+		<short xml:lang="fi">Vähennä läpikuultavuutta</short>
+		<short xml:lang="fr">Augmenter l'opacité</short>
+		<short xml:lang="hu">Átlátszatlanság növelése</short>
+		<short xml:lang="it">Aumenta opacità</short>
+		<short xml:lang="ja">不透明度を高める</short>
+		<short xml:lang="pl">Zwiększ nieprzezroczystość</short>
+		<short xml:lang="pt">Aumentar Opacidade</short>
+		<short xml:lang="pt_BR">Aumentar Opacidade</short>
+		<short xml:lang="ru">Уменьшить прозрачность</short>
+		<short xml:lang="sv">Öka opakhet</short>
+		<short xml:lang="zh_CN">增加不透明度</short>
+		<short xml:lang="zh_TW">提高不透明度</short>
+		<long>Increase window opacity</long>
+		<long xml:lang="ca">Augmenta l'opacitat de la finestra</long>
+		<long xml:lang="cs">Zvýšit krytí okna</long>
+		<long xml:lang="da">Forøg vinduets uigennemsigtighed</long>
+		<long xml:lang="de">Fensterdurchlässigkeit erhöhen</long>
+		<long xml:lang="es">Aumenta la opacidad de la ventana</long>
+		<long xml:lang="fi">Vähennä ikkunan läpikuultavuutta</long>
+		<long xml:lang="fr">Augmenter l'opacité de la fenêtre</long>
+		<long xml:lang="hu">Ablak átlátszatlanság növelése</long>
+		<long xml:lang="it">Aumenta opacità finestra</long>
+		<long xml:lang="ja">ウィンドウの不透明度を高める</long>
+		<long xml:lang="pl">Zwiększ nieprzezroczystość okna</long>
+		<long xml:lang="pt">Aumentar opacidade da janela</long>
+		<long xml:lang="pt_BR">Aumentar opacidade da janela</long>
+		<long xml:lang="ru">Уменьшение прозрачности окна</long>
+		<long xml:lang="sv">Öka fönsteropakhet</long>
+		<long xml:lang="zh_CN">增加窗口不透明度</long>
+		<long xml:lang="zh_TW">提高視窗不透明度</long>
+		<allowed key="true" edge="true" button="true"/>
+		<default>
+		    <button>&lt;Alt&gt;Button4</button>
+		</default>
+	    </option>
+	    <option type="action" name="opacity_decrease">
+		<short>Decrease Opacity</short>
+		<short xml:lang="ca">Redueix l'opacitat</short>
+		<short xml:lang="cs">Snížit krytí</short>
+		<short xml:lang="da">Formindsk uigennemsigtighed</short>
+		<short xml:lang="de">Durchlässigkeit verringern</short>
+		<short xml:lang="es">Disminuir opacidad</short>
+		<short xml:lang="fi">Lisää läpikuultavuutta</short>
+		<short xml:lang="fr">Réduire l'opacité</short>
+		<short xml:lang="hu">Átlátszatlanság csökkentése</short>
+		<short xml:lang="it">Riduci opacità</short>
+		<short xml:lang="ja">不透明度を下げる</short>
+		<short xml:lang="pl">Zmniejsz nieprzezroczystość</short>
+		<short xml:lang="pt">Reduzir Opacidade</short>
+		<short xml:lang="pt_BR">Reduzir Opacidade</short>
+		<short xml:lang="ru">Увеличить прозрачность</short>
+		<short xml:lang="sv">Minska opakhet</short>
+		<short xml:lang="zh_CN">降低不透明度</short>
+		<short xml:lang="zh_TW">降低不透明度</short>
+		<long>Decrease window opacity</long>
+		<long xml:lang="ca">Redueix l'opacitat de la finestra</long>
+		<long xml:lang="cs">Snížit krytí oken</long>
+		<long xml:lang="da">Formindsk vinduets uigennemsigtighed</long>
+		<long xml:lang="de">Fensterdurchlässigkeit verringern</long>
+		<long xml:lang="es">Disminuye la opacidad de la ventana</long>
+		<long xml:lang="fi">Lisää ikkunan läpikuultavuutta</long>
+		<long xml:lang="fr">Réduire l'opacité de la fenêtre</long>
+		<long xml:lang="hu">Ablak átlátszatlanságának csökkentése</long>
+		<long xml:lang="it">Riduci opacità finestra</long>
+		<long xml:lang="ja">ウィンドウの不透明度を下げる</long>
+		<long xml:lang="pl">Zmniejsz nieprzezroczystość okna</long>
+		<long xml:lang="pt">Reduzir opacidade da janela</long>
+		<long xml:lang="pt_BR">Reduzir opacidade da janela</long>
+		<long xml:lang="ru">Увеличение прозрачности окна</long>
+		<long xml:lang="sv">Minska fönstret opakhet</long>
+		<long xml:lang="zh_CN">降低窗口不透明度</long>
+		<long xml:lang="zh_TW">降低視窗不透明度</long>
+		<allowed key="true" edge="true" button="true"/>
+		<default>
+		    <button>&lt;Alt&gt;Button5</button>
+		</default>
+	    </option>
+	    <option type="string" name="command_screenshot">
+		<short>Screenshot command line</short>
+		<short xml:lang="ca">Línia d'ordres de captura de pantalla</short>
+		<short xml:lang="da">Kommandolinje til skærmbillede</short>
+		<short xml:lang="de">Kommandozeile für Bildschirmfoto</short>
+		<short xml:lang="es">Línea de comandos de captura de pantalla</short>
+		<short xml:lang="fi">Kuvakaappauksen komento</short>
+		<short xml:lang="fr">Ligne de commande de capture d'écran</short>
+		<short xml:lang="hu">Képernyőkép parancssor</short>
+		<short xml:lang="it">Riga di comando istantanea</short>
+		<short xml:lang="ja">スクリーンショットコマンドライン</short>
+		<short xml:lang="pl">Polecenie zrzutu ekranu</short>
+		<short xml:lang="pt">Capturar tela da linha de comando</short>
+		<short xml:lang="pt_BR">Capturar tela da linha de comando</short>
+		<short xml:lang="ru">Командная строка снимка экрана</short>
+		<short xml:lang="sv">Kommandorad för skärmbild</short>
+		<short xml:lang="zh_CN">屏幕快照命令行</short>
+		<short xml:lang="zh_TW">螢幕擷取指令行</short>
+		<long>Screenshot command line</long>
+		<long xml:lang="ca">Línia d'ordres de captura de pantalla</long>
+		<long xml:lang="da">Kommandolinje til skærmbillede</long>
+		<long xml:lang="de">Kommandozeile für Bildschirmfoto</long>
+		<long xml:lang="es">Línea de comandos de captura de pantalla</long>
+		<long xml:lang="fi">Kuvakaappauksen komento</long>
+		<long xml:lang="fr">Ligne de commande de capture d'écran</long>
+		<long xml:lang="hu">Képernyőkép parancssor</long>
+		<long xml:lang="it">Riga di comando istantanea</long>
+		<long xml:lang="ja">スクリーンショットコマンドライン</long>
+		<long xml:lang="pl">Polecenie zrzutu ekranu</long>
+		<long xml:lang="pt">Capturar tela da linha de comando</long>
+		<long xml:lang="pt_BR">Capturar tela da linha de comando</long>
+		<long xml:lang="ru">Командная строка снимка экрана</long>
+		<long xml:lang="sv">Kommandorad för skärmbild</long>
+		<long xml:lang="zh_CN">屏幕快照命令行</long>
+		<long xml:lang="zh_TW">螢幕擷取指令行</long>
+		<default>gnome-screenshot</default>
+	    </option>
+	    <option type="action" name="run_command_screenshot">
+		<short>Take a screenshot</short>
+		<short xml:lang="ca">Fes una captura de pantalla</short>
+		<short xml:lang="cs">Pořídit snímek obrazovky</short>
+		<short xml:lang="da">Tag et skærmbillede</short>
+		<short xml:lang="de">Bildschirmfoto aufnehmen</short>
+		<short xml:lang="es">Capturar la pantalla</short>
+		<short xml:lang="fi">Ota kuvankaappaus</short>
+		<short xml:lang="fr">Faire une capture d'écran</short>
+		<short xml:lang="hu">Képernyőkép készítése</short>
+		<short xml:lang="it">Crea istantanea</short>
+		<short xml:lang="ja">スクリーンショットを撮る</short>
+		<short xml:lang="pl">Pobierz zrzut ekranu</short>
+		<short xml:lang="pt">Efetuar uma captura de tela</short>
+		<short xml:lang="pt_BR">Efetuar uma captura de tela</short>
+		<short xml:lang="ru">Сделать снимок экрана</short>
+		<short xml:lang="sv">Ta en skärmbild</short>
+		<short xml:lang="zh_CN">拍摄屏幕快照</short>
+		<short xml:lang="zh_TW">擷取螢幕畫面</short>
+		<long>Take a screenshot</long>
+		<long xml:lang="ca">Fes una captura de pantalla</long>
+		<long xml:lang="cs">Pořídit snímek obrazovky</long>
+		<long xml:lang="da">Tag et skærmbillede</long>
+		<long xml:lang="de">Bildschirmfoto aufnehmen</long>
+		<long xml:lang="es">Capturar la pantalla</long>
+		<long xml:lang="fi">Ota kuvankaappaus</long>
+		<long xml:lang="fr">Faire une capture d'écran</long>
+		<long xml:lang="hu">Képernyőkép készítése</long>
+		<long xml:lang="it">Crea istantanea</long>
+		<long xml:lang="ja">スクリーンショットを撮る</long>
+		<long xml:lang="pl">Pobierz zrzut ekranu</long>
+		<long xml:lang="pt">Efetuar uma captura de tela</long>
+		<long xml:lang="pt_BR">Efetuar uma captura de tela</long>
+		<long xml:lang="ru">Сделать снимок экрана</long>
+		<long xml:lang="sv">Ta en skärmbild</long>
+		<long xml:lang="zh_CN">拍摄屏幕快照</long>
+		<long xml:lang="zh_TW">擷取螢幕畫面</long>
+		<allowed key="true" button="true"/>
+		<default>
+		    <key>Print</key>
+		</default>
+	    </option>
+	    <option type="string" name="command_window_screenshot">
+		<short>Window screenshot command line</short>
+		<short xml:lang="ca">Línia d'ordres de captura de pantalla de finestra</short>
+		<short xml:lang="da">Kommandolinje til vindueskærmbillede</short>
+		<short xml:lang="de">Kommandozeile für Fenster-Bildschirmfoto </short>
+		<short xml:lang="es">Línea de comandos de captura de ventana</short>
+		<short xml:lang="fi">Ikkunan kuvakaappauksen komento</short>
+		<short xml:lang="fr">Ligne de commande de capture de fenêtre</short>
+		<short xml:lang="hu">Ablak képernyőkép parancssor</short>
+		<short xml:lang="it">Riga di comando istantanea finestre</short>
+		<short xml:lang="ja">ウィンドウスクリーンショットのコマンドライン</short>
+		<short xml:lang="pl">Polecenie zrzutu okna</short>
+		<short xml:lang="pt">Linha de comando para captura de tela de janelas</short>
+		<short xml:lang="pt_BR">Linha de comando para captura de tela de janelas</short>
+		<short xml:lang="ru">Командная строка снимка окна</short>
+		<short xml:lang="sv">Kommandorad för fönsterskärmbild</short>
+		<short xml:lang="zh_CN">窗口屏幕快照命令行</short>
+		<short xml:lang="zh_TW">視窗螢幕擷取指令行</short>
+		<long>Window screenshot command line</long>
+		<long xml:lang="ca">Línia d'ordres de captura de pantalla de finestra</long>
+		<long xml:lang="da">Kommandolinje til vindueskærmbillede</long>
+		<long xml:lang="de">Kommandozeile für Fenster-Bildschirmfoto </long>
+		<long xml:lang="es">Línea de comandos de captura de ventana</long>
+		<long xml:lang="fi">Ikkunan kuvakaappauksen komento</long>
+		<long xml:lang="fr">Ligne de commande de capture de fenêtre</long>
+		<long xml:lang="hu">Ablak képernyőkép parancssor</long>
+		<long xml:lang="it">Riga di comando istantanea finestre</long>
+		<long xml:lang="ja">ウィンドウスクリーンショットのコマンドライン</long>
+		<long xml:lang="pl">Polecenie zrzutu okna</long>
+		<long xml:lang="pt">Linha de comando para captura de tela de janelas</long>
+		<long xml:lang="pt_BR">Linha de comando para captura de tela de janelas</long>
+		<long xml:lang="ru">Командная строка снимка окна</long>
+		<long xml:lang="sv">Kommandorad för fönsterskärmbild</long>
+		<long xml:lang="zh_CN">窗口屏幕快照命令行</long>
+		<long xml:lang="zh_TW">視窗螢幕擷取指令行</long>
+		<default>gnome-screenshot --window</default>
+	    </option>
+	    <option type="action" name="run_command_window_screenshot">
+		<short>Take a screenshot of a window</short>
+		<short xml:lang="ca">Fes una captura de pantalla d'una finestra</short>
+		<short xml:lang="cs">Pořídit snímek okna</short>
+		<short xml:lang="da">Tag et skærmbillede af et vindue</short>
+		<short xml:lang="de">Bildschirmfoto von Fenster aufnehmen</short>
+		<short xml:lang="es">Toma una captura de pantalla de una ventana</short>
+		<short xml:lang="fi">Ota kuvankaappaus ikkunasta</short>
+		<short xml:lang="fr">Faire une capture d'écran d'une fenêtre</short>
+		<short xml:lang="hu">Képernyőkép készítése az ablakról</short>
+		<short xml:lang="it">Crea istantanea di una finestra</short>
+		<short xml:lang="ja">ウィンドウのスクリーンショットを撮る</short>
+		<short xml:lang="pl">Pobierz zrzut okna</short>
+		<short xml:lang="pt">Efetuar captura de tela de uma janela</short>
+		<short xml:lang="pt_BR">Efetuar captura de tela de uma janela</short>
+		<short xml:lang="ru">Сделать снимок окна</short>
+		<short xml:lang="sv">Ta en skärmbild av ett fönster</short>
+		<short xml:lang="zh_CN">拍摄窗口的屏幕快照</short>
+		<short xml:lang="zh_TW">擷取視窗螢幕畫面</short>
+		<long>Take a screenshot of a window</long>
+		<long xml:lang="ca">Fes una captura de pantalla d'una finestra</long>
+		<long xml:lang="cs">Pořídit snímek okna</long>
+		<long xml:lang="da">Tag et skærmbillede af et vindue</long>
+		<long xml:lang="de">Bildschirmfoto von Fenster aufnehmen</long>
+		<long xml:lang="es">Toma una captura de pantalla de una ventana</long>
+		<long xml:lang="fi">Ota kuvankaappaus ikkunasta</long>
+		<long xml:lang="fr">Faire une capture d'écran d'une fenêtre</long>
+		<long xml:lang="hu">Képernyőkép készítése az ablakról</long>
+		<long xml:lang="it">Crea istantanea di una finestra</long>
+		<long xml:lang="ja">ウィンドウのスクリーンショットを撮る</long>
+		<long xml:lang="pl">Pobierz zrzut okna</long>
+		<long xml:lang="pt">Efetuar captura de tela de uma janela</long>
+		<long xml:lang="pt_BR">Efetuar captura de tela de uma janela</long>
+		<long xml:lang="ru">Сделать снимок окна</long>
+		<long xml:lang="sv">Ta en skärmbild av ett fönster</long>
+		<long xml:lang="zh_CN">拍摄窗口的屏幕快照</long>
+		<long xml:lang="zh_TW">擷取視窗螢幕畫面</long>
+		<allowed key="true" button="true"/>
+		<default>
+		    <key>&lt;Alt&gt;Print</key>
+		</default>
+	    </option>
+	    <option type="action" name="window_menu">
+		<short>Window Menu</short>
+		<short xml:lang="ca">Menú de la finestra</short>
+		<short xml:lang="cs">Nabídka okna</short>
+		<short xml:lang="da">Vinduesmenu</short>
+		<short xml:lang="de">Menü Fenster</short>
+		<short xml:lang="es">Menú de ventanas</short>
+		<short xml:lang="fi">Ikkunavalikko</short>
+		<short xml:lang="fr">Menu de la fenêtre</short>
+		<short xml:lang="hu">Ablak menü</short>
+		<short xml:lang="it">Menu finestra </short>
+		<short xml:lang="ja">ウィンドウメニュー</short>
+		<short xml:lang="pl">Menu okna</short>
+		<short xml:lang="pt">Menu da Janela</short>
+		<short xml:lang="pt_BR">Menu da Janela</short>
+		<short xml:lang="ru">Меню окна</short>
+		<short xml:lang="sv">Fönstermeny</short>
+		<short xml:lang="zh_CN">窗口菜单</short>
+		<short xml:lang="zh_TW">視窗功能表</short>
+		<long>Open window menu</long>
+		<long xml:lang="ca">Obre el menú de la finestra</long>
+		<long xml:lang="cs">Otevřít nabídku okna</long>
+		<long xml:lang="da">Åbn vinduesmenuen</long>
+		<long xml:lang="de">Fenstermenü öffnen</long>
+		<long xml:lang="es">Abre el menú de la ventana</long>
+		<long xml:lang="fi">Avaa ikkunavalikko</long>
+		<long xml:lang="fr">Ouvrir le menu de la fenêtre</long>
+		<long xml:lang="hu">Ablak menü megnyitása</long>
+		<long xml:lang="it">Apri menu finestra</long>
+		<long xml:lang="ja">ウィンドウメニューを開く</long>
+		<long xml:lang="pl">Otwórz menu okna</long>
+		<long xml:lang="pt">Abrir menu de janelas</long>
+		<long xml:lang="pt_BR">Abrir menu de janelas</long>
+		<long xml:lang="ru">Открыть меню окна</long>
+		<long xml:lang="sv">Öppna fönstermeny</long>
+		<long xml:lang="zh_CN">打开窗口菜单</long>
+		<long xml:lang="zh_TW">開啟視窗功能表</long>
+		<allowed key="true" button="true"/>
+		<default>
+		    <key>&lt;Alt&gt;space</key>
+		    <button>&lt;Alt&gt;Button3</button>
+		</default>
+	    </option>
+	    <option type="action" name="show_desktop">
+		<short>Hide all windows and focus desktop</short>
+		<short xml:lang="ca">Oculta totes les finestres i passa el focus a l'escriptori</short>
+		<short xml:lang="cs">Skrýt všechna okna a zaměřit na plochu</short>
+		<short xml:lang="da">Skjul alle vinduer, og flyt fokus til skrivebord</short>
+		<short xml:lang="de">Alle Fenster ausblenden und Desktop fokussieren</short>
+		<short xml:lang="es">Ocultar todas las ventanas y enfocar el escritorio</short>
+		<short xml:lang="fi">Piilota kaikki ikkunat ja kohdista työpöytään</short>
+		<short xml:lang="fr">Masquer toutes les fenêtres et focus du bureau</short>
+		<short xml:lang="hu">Összes ablak elrejtése és fókuszálás a munkaasztalra</short>
+		<short xml:lang="it">Nascondi tutte le finestre e attiva desktop</short>
+		<short xml:lang="ja">すべてのウィンドウを非表示にし、デスクトップをフォーカス</short>
+		<short xml:lang="pl">Schowaj wszystkie okna i wybierz pulpit</short>
+		<short xml:lang="pt">Ocultar todas as janelas e enfocar área de trabalho</short>
+		<short xml:lang="pt_BR">Ocultar todas as janelas e enfocar área de trabalho</short>
+		<short xml:lang="ru">Скрыть все окна и передать фокус рабочему столу</short>
+		<short xml:lang="sv">Dölj alla fönster och fokusera på skrivbord</short>
+		<short xml:lang="zh_CN">隐藏所有窗口和焦点桌面</short>
+		<short xml:lang="zh_TW">隱藏全部視窗並定焦桌面</short>
+		<long>Hide all windows and focus desktop</long>
+		<long xml:lang="ca">Oculta totes les finestres i passa el focus a l'escriptori</long>
+		<long xml:lang="cs">Skrýt všechna okna a zaměřit na plochu</long>
+		<long xml:lang="da">Skjul alle vinduer, og flyt fokus til skrivebord</long>
+		<long xml:lang="de">Alle Fenster ausblenden und Desktop fokussieren</long>
+		<long xml:lang="es">Ocultar todas las ventanas y enfocar el escritorio</long>
+		<long xml:lang="fi">Piilota kaikki ikkunat ja kohdista työpöytään</long>
+		<long xml:lang="fr">Masquer toutes les fenêtres et focus du bureau</long>
+		<long xml:lang="hu">Összes ablak elrejtése és fókuszálás a munkaasztalra</long>
+		<long xml:lang="it">Nascondi tutte le finestre e attiva desktop</long>
+		<long xml:lang="ja">すべてのウィンドウを非表示にし、デスクトップをフォーカス</long>
+		<long xml:lang="pl">Schowaj wszystkie okna i wybierz pulpit</long>
+		<long xml:lang="pt">Ocultar todas as janelas e enfocar área de trabalho</long>
+		<long xml:lang="pt_BR">Ocultar todas as janelas e enfocar área de trabalho</long>
+		<long xml:lang="ru">Скрыть все окна и передать фокус рабочему столу</long>
+		<long xml:lang="sv">Dölj alla fönster och fokusera på skrivbord</long>
+		<long xml:lang="zh_CN">隐藏所有窗口和焦点桌面</long>
+		<long xml:lang="zh_TW">隱藏全部視窗並定焦桌面</long>
+		<allowed key="true" edge="true" button="true"/>
+		<default>
+		    <key>&lt;Control&gt;&lt;Alt&gt;d</key>
+		</default>
+	    </option>
+	    <option type="bool" name="raise_on_click">
+		<short>Raise On Click</short>
+		<short xml:lang="ca">Eleva en fer clic</short>
+		<short xml:lang="cs">Dát do popředí při kliknutí</short>
+		<short xml:lang="da">Hæv ved klik</short>
+		<short xml:lang="de">Durch Klicken in den Vordergrund</short>
+		<short xml:lang="es">Alzar al hacer clic</short>
+		<short xml:lang="fi">Nosta napsautuksesta</short>
+		<short xml:lang="fr">Remonter au clic</short>
+		<short xml:lang="hu">Kattintás esetén megnyitás</short>
+		<short xml:lang="it">Aumenta al clic</short>
+		<short xml:lang="ja">クリックして上げる</short>
+		<short xml:lang="pl">Podnieś przy kliknięciu</short>
+		<short xml:lang="pt">Elevar com um Clique</short>
+		<short xml:lang="pt_BR">Elevar com um Clique</short>
+		<short xml:lang="ru">Вызвать щелчком</short>
+		<short xml:lang="sv">Höj vid klick</short>
+		<short xml:lang="zh_CN">单击时上升</short>
+		<short xml:lang="zh_TW">按一下時提高</short>
+		<long>Raise windows when clicked</long>
+		<long xml:lang="ca">Eleva les finestres en fer clic</long>
+		<long xml:lang="cs">Dát okna do popředí při kliknutí</long>
+		<long xml:lang="da">Hæv vinduerne, når der klikkes</long>
+		<long xml:lang="de">Fenster durch Anklicken in Vordergrund verschieben</long>
+		<long xml:lang="es">Alza las ventanas al hacer clic en ellas</long>
+		<long xml:lang="fi">Nosta ikkuna napsautuksesta</long>
+		<long xml:lang="fr">Remonter les fenêtres lorsque vous cliquez dessus</long>
+		<long xml:lang="hu">Ablakok megnyitása kattintás esetén</long>
+		<long xml:lang="it">Aumenta le finestre al clic</long>
+		<long xml:lang="ja">クリック時にウィンドウを上げる</long>
+		<long xml:lang="pl">Podnieś okna po kliknięciu</long>
+		<long xml:lang="pt">Elevar janelas quando clicadas</long>
+		<long xml:lang="pt_BR">Elevar janelas quando clicadas</long>
+		<long xml:lang="ru">Вызов окон щелчком</long>
+		<long xml:lang="sv">Höj fönster när de klickas på</long>
+		<long xml:lang="zh_CN">单击时上升窗口</long>
+		<long xml:lang="zh_TW">在按一下時提高視窗高度</long>
+		<default>true</default>
+	    </option>
+	    <option type="bool" name="audible_bell">
+		<short>Audible Bell</short>
+		<short xml:lang="ca">Avís sonor</short>
+		<short xml:lang="cs">Akustický zvonek</short>
+		<short xml:lang="da">Hørbar klokke</short>
+		<short xml:lang="de">Akustische Glocke</short>
+		<short xml:lang="es">Timbre audible</short>
+		<short xml:lang="fi">Kuuluva äänimerkki</short>
+		<short xml:lang="fr">Cloche audible</short>
+		<short xml:lang="hu">Hallható csengő</short>
+		<short xml:lang="it">Segnale acustico udibile</short>
+		<short xml:lang="ja">可聴ベル</short>
+		<short xml:lang="pl">Dzwonek systemowy</short>
+		<short xml:lang="pt">Campainha Audível</short>
+		<short xml:lang="pt_BR">Campainha Audível</short>
+		<short xml:lang="ru">Слышимый сигнал</short>
+		<short xml:lang="sv">Ljudklocka</short>
+		<short xml:lang="zh_CN">可听见的铃声</short>
+		<short xml:lang="zh_TW">聲訊鈴聲</short>
+		<long>Audible system beep</long>
+		<long xml:lang="ca">Avís sonor del sistema</long>
+		<long xml:lang="cs">Slyšitelné systémové pípnutí</long>
+		<long xml:lang="da">Hørbar systemtone</long>
+		<long xml:lang="de">Akustischer System-Warnton</long>
+		<long xml:lang="es">Pitido del sistema audible</long>
+		<long xml:lang="fi">Kuuluva järjestelmän huomautus</long>
+		<long xml:lang="fr">Signal sonore du système audible</long>
+		<long xml:lang="hu">Hallható rendszercsengő</long>
+		<long xml:lang="it">Beep di sistema udibile</long>
+		<long xml:lang="ja">可聴システムビープ音</long>
+		<long xml:lang="pl">Dzwonek systemowy</long>
+		<long xml:lang="pt">Bip do sistema audível</long>
+		<long xml:lang="pt_BR">Bip do sistema audível</long>
+		<long xml:lang="ru">Слышимый системный звуковой сигнал</long>
+		<long xml:lang="sv">Systemljudklocka</long>
+		<long xml:lang="zh_CN">可听见的系统嘟嘟声</long>
+		<long xml:lang="zh_TW">系統發出嗶聲時啟用聲訊</long>
+		<default>true</default>
+	    </option>
+	    <option type="action" name="toggle_window_maximized">
+		<short>Toggle Window Maximized</short>
+		<short xml:lang="ca">Commuta la finestra maximitzada</short>
+		<short xml:lang="cs">Přepnout maximalizaci okna</short>
+		<short xml:lang="da">Slå maksimering af vindue til/fra</short>
+		<short xml:lang="de">Fenster maximieren ein/aus</short>
+		<short xml:lang="es">Activar o desactivar ventana maximizada</short>
+		<short xml:lang="fi">Ota käyttöön maksimoidut ikkunat</short>
+		<short xml:lang="fr">Basculer la fenêtre agrandie</short>
+		<short xml:lang="hu">Ablak maximális méret átkapcsolása</short>
+		<short xml:lang="it">Alterna finestra ingrandita</short>
+		<short xml:lang="ja">最大化されたウィンドウを切り替え</short>
+		<short xml:lang="pl">Przełącz maksymalizację okna</short>
+		<short xml:lang="pt">Alternar Janela Maximizada</short>
+		<short xml:lang="pt_BR">Alternar Janela Maximizada</short>
+		<short xml:lang="ru">Развертывать окно</short>
+		<short xml:lang="sv">Växla fönstermaximering</short>
+		<short xml:lang="zh_CN">切换最大化的窗口</short>
+		<short xml:lang="zh_TW">將視窗切換到最大</short>
+		<long>Toggle active window maximized</long>
+		<long xml:lang="ca">Commuta la finestra activa maximitzada</long>
+		<long xml:lang="cs">Přepnout maximalizaci aktivního okna</long>
+		<long xml:lang="da">Slå maksimering af det aktive vindue til/fra</long>
+		<long xml:lang="de">Aktives Fenster maximieren ein/aus</long>
+		<long xml:lang="es">Activa o desactiva la ventana activa maximizada</long>
+		<long xml:lang="fi">Ota käyttöön aktiiviset maksimoidut ikkunat</long>
+		<long xml:lang="fr">Basculer la fenêtre active agrandie</long>
+		<long xml:lang="hu">Aktív ablak maximális méret átkapcsolása</long>
+		<long xml:lang="it">Alterna finestra attiva ingrandita</long>
+		<long xml:lang="ja">最大化されたアクティブウィンドウを切り替え</long>
+		<long xml:lang="pl">Przełącza maksymalizację aktywnego okna</long>
+		<long xml:lang="pt">Alternar janela ativa maximizada</long>
+		<long xml:lang="pt_BR">Alternar janela ativa maximizada</long>
+		<long xml:lang="ru">Развертывание активного окна</long>
+		<long xml:lang="sv">Växla maximering av aktivt fönster</long>
+		<long xml:lang="zh_CN">将活动窗口切换到最大化</long>
+		<long xml:lang="zh_TW">將使用中視窗切換到最大</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="toggle_window_maximized_horizontally">
+		<short>Toggle Window Maximized Horizontally</short>
+		<short xml:lang="ca">Commuta la finestra maximitzada horitzontalment</short>
+		<short xml:lang="cs">Přepnout okno maximalizované horizontálně</short>
+		<short xml:lang="da">Slå vandret maksimering af vindue til/fra</short>
+		<short xml:lang="de">Fenster horizontal maximieren ein/aus</short>
+		<short xml:lang="es">Activar o desactivar ventana maximizada horizontalmente</short>
+		<short xml:lang="fi">Ota käyttöön vaakatasossa maksimoidut ikkunat</short>
+		<short xml:lang="fr">Basculer la fenêtre agrandie horizontalement</short>
+		<short xml:lang="hu">Ablak vízszintes maximális méret átkapcsolása</short>
+		<short xml:lang="it">Alterna finestra ingrandita in orizzontale</short>
+		<short xml:lang="ja">水平方向に最大化されたウィンドウを切り替え</short>
+		<short xml:lang="pl">Przełącz maksymalizację poziomą okna</short>
+		<short xml:lang="pt">Alternar Janela Maximizada Horizontalmente</short>
+		<short xml:lang="pt_BR">Alternar Janela Maximizada Horizontalmente</short>
+		<short xml:lang="ru">Развертывать окно по горизонтали</short>
+		<short xml:lang="sv">Växla fönstermaximering horisontellt</short>
+		<short xml:lang="zh_CN">将窗口水平方向切换到最大化</short>
+		<short xml:lang="zh_TW">將視窗水平切換到最大</short>
+		<long>Toggle active window maximized horizontally</long>
+		<long xml:lang="ca">Commuta la finestra activa maximitzada horitzontalment</long>
+		<long xml:lang="cs">Přepnout horizontální maximalizaci aktivního okna</long>
+		<long xml:lang="da">Slå den vandrette maksimering af det aktive vindue til/fra</long>
+		<long xml:lang="de">Aktives Fenster horizontal maximieren ein/aus</long>
+		<long xml:lang="es">Activa o desactiva la ventana activa maximizada horizontalmente</long>
+		<long xml:lang="fi">Ota käyttöön aktiiviset vaakatasossa maksimoidut ikkunat</long>
+		<long xml:lang="fr">Basculer la fenêtre active agrandie horizontalement</long>
+		<long xml:lang="hu">Aktív ablak vízszintes maximális méret átkapcsolása</long>
+		<long xml:lang="it">Alterna finestra attiva ingrandita in orizzontale</long>
+		<long xml:lang="ja">水平方向に最大化されたアクティブウィンドウを切り替え</long>
+		<long xml:lang="pl">Przełącz maksymalizację poziomą aktywnego okna</long>
+		<long xml:lang="pt">Alternar janela ativa maximizada horizontalmente</long>
+		<long xml:lang="pt_BR">Alternar janela ativa maximizada horizontalmente</long>
+		<long xml:lang="ru">Развертывание активного окна по горизонтали</long>
+		<long xml:lang="sv">Växla horisontell maximering av aktivt fönster</long>
+		<long xml:lang="zh_CN">将活动窗口水平方向切换到最大化</long>
+		<long xml:lang="zh_TW">將使用中視窗水平切換到最大</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="action" name="toggle_window_maximized_vertically">
+		<short>Toggle Window Maximized Vertically</short>
+		<short xml:lang="ca">Commuta la finestra maximitzada verticalment</short>
+		<short xml:lang="cs">Přepnout okno maximalizované vertikálně</short>
+		<short xml:lang="da">Slå lodret maksimering af vindue til/fra</short>
+		<short xml:lang="de">Fenster vertikal maximieren ein/aus</short>
+		<short xml:lang="es">Activar o desactivar ventana maximizada verticalmente</short>
+		<short xml:lang="fi">Ota käyttöön pystytasossa maksimoidut ikkunat</short>
+		<short xml:lang="fr">Basculer la fenêtre agrandie verticalement</short>
+		<short xml:lang="hu">Ablak függőleges maximális méret átkapcsolása</short>
+		<short xml:lang="it">Alterna finestra ingrandita in verticale</short>
+		<short xml:lang="ja">垂直方向に最大化されたウィンドウを切り替え</short>
+		<short xml:lang="pl">Przełącz maksymalizację pionową okna</short>
+		<short xml:lang="pt">Alternar Janela Maximizada Verticalmente</short>
+		<short xml:lang="pt_BR">Alternar Janela Maximizada Verticalmente</short>
+		<short xml:lang="ru">Развертывать окно по вертикали</short>
+		<short xml:lang="sv">Växla fönstermaximering vertikalt</short>
+		<short xml:lang="zh_CN">将窗口垂直方向切换到最大化</short>
+		<short xml:lang="zh_TW">將視窗垂直切換到最大</short>
+		<long>Toggle active window maximized vertically</long>
+		<long xml:lang="ca">Commuta la finestra activa maximitzada verticalment</long>
+		<long xml:lang="cs">Přepnout vertikální maximalizaci aktivního okna</long>
+		<long xml:lang="da">Slå lodret maksimering af det aktive vindue til/fra</long>
+		<long xml:lang="de">Aktives Fenster vertikal maximieren ein/aus</long>
+		<long xml:lang="es">Activa o desactiva la ventana activa maximizada verticalmente</long>
+		<long xml:lang="fi">Ota käyttöön aktiiviset pystytasossa maksimoidut ikkunat</long>
+		<long xml:lang="fr">Basculer la fenêtre active agrandie verticalement</long>
+		<long xml:lang="hu">Aktív ablak függőleges maximális méret átkapcsolása</long>
+		<long xml:lang="it">Alterna finestra attiva ingrandita in verticale</long>
+		<long xml:lang="ja">垂直方向に最大化されたアクティブウィンドウを切り替え</long>
+		<long xml:lang="pl">Przełącz maksymalizację poziomą aktywnego okna</long>
+		<long xml:lang="pt">Alternar janela ativa maximizada verticalmente</long>
+		<long xml:lang="pt_BR">Alternar janela ativa maximizada verticalmente</long>
+		<long xml:lang="ru">Развертывание активного окна по вертикали</long>
+		<long xml:lang="sv">Växla vertikal maximering av aktivt fönster</long>
+		<long xml:lang="zh_CN">将活动窗口垂直方向切换到最大化</long>
+		<long xml:lang="zh_TW">將使用中視窗垂直切換到最大</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="bool" name="hide_skip_taskbar_windows">
+		<short>Hide Skip Taskbar Windows</short>
+		<short xml:lang="ca">Oculta les finestres ignorades de la barra de tasques</short>
+		<short xml:lang="cs">Skrýt okna nepřítomná v liště úloh</short>
+		<short xml:lang="da">Skjul vinduer, der ikke er på opgavelinjen</short>
+		<short xml:lang="de">Programmleistenfenster ausblenden</short>
+		<short xml:lang="es">Ocultar ventanas omitidas de barra de tareas</short>
+		<short xml:lang="fi">Piilota tehtäväpalkin ohitetut ikkunat</short>
+		<short xml:lang="fr">Masquer les fenêtres de la barre des tâches Ignorer</short>
+		<short xml:lang="hu">Kihagyott tálcaablakok elrejtése</short>
+		<short xml:lang="it">Nascondi finestre della barra delle applicazioni di tralasciamento</short>
+		<short xml:lang="ja">スキップタスクバーウィンドウを非表示にする</short>
+		<short xml:lang="pl">Ukryj okna spoza paska zadań</short>
+		<short xml:lang="pt">Ocultar Janelas Ignorar Barra de Tarefas</short>
+		<short xml:lang="pt_BR">Ocultar Janelas Ignorar Barra de Tarefas</short>
+		<short xml:lang="ru">Скрыть все, кроме окон панели задач</short>
+		<short xml:lang="sv">Dölj fönster inte i verktygsrad</short>
+		<short xml:lang="zh_CN">隐藏跳过任务栏窗口</short>
+		<short xml:lang="zh_TW">隱藏跳過工作列視窗</short>
+		<long>Hide windows not in taskbar when entering show desktop mode</long>
+		<long xml:lang="ca">Oculta les finestres que no es troben a la barra de tasques en accedir al mode d'escriptori de visualització</long>
+		<long xml:lang="cs">Skrýt okna nepřítomná v liště úloh při vstupu do režimu zobrazení plochy</long>
+		<long xml:lang="da">Skjul vinduer, der ikke er på opgavelinjen, når skrivebordet vises</long>
+		<long xml:lang="de">Fenster ausblenden, die sich bei Wechsel in Modus "Desktop anzeigen" nicht in Programmleiste befanden</long>
+		<long xml:lang="es">Oculta las ventanas que no se encuentran en la barra de tareas al entrar en el modo de muestra de escritorio</long>
+		<long xml:lang="fi">Piilota ikkunat, jotka eivät ole tehtäväpalkissa työpöydän näyttötilaan siirryttäessä</long>
+		<long xml:lang="fr">Masquer les fenêtres qui ne se trouvent pas dans la barre des tâches lorsque vous passez en mode d'affichage du bureau</long>
+		<long xml:lang="hu">Az asztal megjelenítése módba kapcsoláskor a tálcán nem lévő ablakok elrejtése</long>
+		<long xml:lang="it">Nascondi finestre non nella barra delle applicazioni durante l'attivazione della modalità di visualizzazione desktop</long>
+		<long xml:lang="ja">デスクトップ表示モード移行時にタスクバーにないウィンドウを非表示にする</long>
+		<long xml:lang="pl">Ukrywa okna spoza paska zadań w trybie pokazywania pulpitu</long>
+		<long xml:lang="pt">Ocultar as janelas que não estão na barra de tarefas ao entrar no modo mostrar área de trabalho</long>
+		<long xml:lang="pt_BR">Ocultar as janelas que não estão na barra de tarefas ao entrar no modo mostrar área de trabalho</long>
+		<long xml:lang="ru">При переходе в режим отображения рабочего стола окна, отсутствующие на панели задач, не отображаются</long>
+		<long xml:lang="sv">Dölj fönster som inte är i verktygsraden vid visa skrivbordsläget</long>
+		<long xml:lang="zh_CN">隐藏进入显示桌面方式时不在任务栏中的窗口</long>
+		<long xml:lang="zh_TW">進入顯示桌面模式時隱藏未在工作列的視窗</long>
+		<default>true</default>
+	    </option>
+	    <option type="action" name="toggle_window_shaded">
+		<short>Toggle Window Shaded</short>
+		<short xml:lang="ca">Commuta la finestra ombrejada</short>
+		<short xml:lang="cs">Přepnout stínování okna</short>
+		<short xml:lang="da">Slå medtoning af vindue til/fra</short>
+		<short xml:lang="de">Fenster schattieren ein/aus</short>
+		<short xml:lang="es">Activar o desactivar ventana con sombra</short>
+		<short xml:lang="fi">Ota käyttöön varjostettu ikkuna</short>
+		<short xml:lang="fr">Basculer la fenêtre ombrée</short>
+		<short xml:lang="hu">Ablakárnyékolás átkapcsolása</short>
+		<short xml:lang="it">Alterna finestra ombreggiata</short>
+		<short xml:lang="ja">シェードされたウィンドウを切り替え</short>
+		<short xml:lang="pl">Przełącz przyciemnianie okna</short>
+		<short xml:lang="pt">Alternar Janela Sombreada</short>
+		<short xml:lang="pt_BR">Alternar Janela Sombreada</short>
+		<short xml:lang="ru">Переключить свертывание окна в полоску</short>
+		<short xml:lang="sv">Växla fönsterskuggning</short>
+		<short xml:lang="zh_CN">将窗口切换到遮蔽</short>
+		<short xml:lang="zh_TW">將視窗切換到遮蔽</short>
+		<long>Toggle active window shaded</long>
+		<long xml:lang="ca">Commuta la finestra activa ombrejada</long>
+		<long xml:lang="cs">Přepnout stínování aktivního okna</long>
+		<long xml:lang="da">Slå nedtoning af det aktive vindue til/fra</long>
+		<long xml:lang="de">Aktives Fenster schattieren ein/aus</long>
+		<long xml:lang="es">Activa o desactiva la ventana activa con sombra</long>
+		<long xml:lang="fi">Ota käyttöön aktiivinen varjostettu ikkuna</long>
+		<long xml:lang="fr">Basculer la fenêtre active ombrée</long>
+		<long xml:lang="hu">Aktív ablak árnyékolás átkapcsolása</long>
+		<long xml:lang="it">Alterna finestra attiva ombreggiata</long>
+		<long xml:lang="ja">シェードされたアクティブウィンドウを切り替え</long>
+		<long xml:lang="pl">Przełącza przyciemnianie aktywnego okna</long>
+		<long xml:lang="pt">Alternar janela ativa sombreada</long>
+		<long xml:lang="pt_BR">Alternar janela ativa sombreada</long>
+		<long xml:lang="ru">Переключение свертывания активного окна в полоску</long>
+		<long xml:lang="sv">Växla skuggning av aktivt fönster</long>
+		<long xml:lang="zh_CN">将活动窗口切换到遮蔽</long>
+		<long xml:lang="zh_TW">將使用中視窗切換到遮蔽</long>
+		<allowed key="true" edge="true" button="true"/>
+		<default>
+		    <key>&lt;Control&gt;&lt;Alt&gt;s</key>
+		</default>
+	    </option>
+	    <option type="bool" name="ignore_hints_when_maximized">
+		<short>Ignore Hints When Maximized</short>
+		<short xml:lang="ca">Ignora els suggeriments quan està maximitzada</short>
+		<short xml:lang="cs">Při maximalizaci ignorovat tipy</short>
+		<short xml:lang="da">Ignorer vink, når maksimeret</short>
+		<short xml:lang="de">Bei maximierter Anzeige Tipps ignorieren</short>
+		<short xml:lang="es">Ignorar sugerencias al maximizar</short>
+		<short xml:lang="fi">Ohita vihjeet suurennettaessa</short>
+		<short xml:lang="fr">Ignorer les conseils lorsque la fenêtre est agrandie</short>
+		<short xml:lang="hu">Maximális méretben tanácsok figyelmen kívül hagyása</short>
+		<short xml:lang="it">Ignora suggerimenti quando ingrandita</short>
+		<short xml:lang="ja">最大化時にヒントを無視</short>
+		<short xml:lang="pl">Ignoruj podpowiedzi dla zmaksymalizowanych okien</short>
+		<short xml:lang="pt_BR">Ignorar Dicas Quando Maximizado</short>
+		<short xml:lang="ru">Игнорировать подсказки в развернутом состоянии</short>
+		<short xml:lang="zh_CN">最大化时忽略提示</short>
+		<short xml:lang="zh_TW">最大化時忽略提示</short>
+		<long>Ignore size increment and aspect hints when window is maximized</long>
+		<long xml:lang="ca">Ignora els suggeriments d'increment de mida i aspecte quan la finestra es troba maximitzada</long>
+		<long xml:lang="cs">Při maximalizaci ignorovat tipy k přírůstku velikosti a poměru</long>
+		<long xml:lang="da">Ignorer vink om størrelsesforøgning og -aspekter, når vinduet er maksimeret</long>
+		<long xml:lang="de">Bei maximierter Anzeige Größensteigerung und Aspekttipps ignorieren</long>
+		<long xml:lang="es">Ignorar sugerencias de aumento de tamaño y aspecto cuando la ventana esté maximizada</long>
+		<long xml:lang="fi">Ohita kokolisäys- ja kuvasuhdevihjeet ikkunaa suurennettaessa</long>
+		<long xml:lang="fr">Ignorer l'incrément de taille et les conseils d'aspect lorsque la fenêtre est agrandie</long>
+		<long xml:lang="hu">Méretnövelési és méretezési tanácsok figyelmen kívül hagyása ha az ablak maximális méretű</long>
+		<long xml:lang="it">Ignora suggerimenti su aspetto e incremento dimensioni quando la finestra è ingrandita</long>
+		<long xml:lang="ja">ウィンドウの最大化時には、サイズ増分とアスペクトのヒントを無視する</long>
+		<long xml:lang="pl">Ignorowanie podpowiedzi zwiększenia rozmiaru i proporcji gdy okno jest zmaksymalizowane</long>
+		<long xml:lang="pt_BR">Ignorar dicas de aspecto e de incremento de tamanho quando a janela for maximizada</long>
+		<long xml:lang="ru">Игнорирование подсказок увеличения размеров и соотношения сторон для развернутого окна</long>
+		<long xml:lang="sv">Ignorera storleksinkrement och aspekthintning när fönster maximeras</long>
+		<long xml:lang="zh_CN">最大化窗口时忽略大小递增和屏幕比例提示</long>
+		<long xml:lang="zh_TW">視窗最大化時忽略大小增量與畫面提示</long>
+		<default>true</default>
+	    </option>
+	    <option type="string" name="command_terminal">
+		<short>Terminal command line</short>
+		<short xml:lang="hu">Terminál parancssor</short>
+		<short xml:lang="pl">Polecenie terminala</short>
+		<short xml:lang="sv">Kommandorad för terminal</short>
+		<long>Terminal command line</long>
+		<long xml:lang="hu">Terminál parancssor</long>
+		<long xml:lang="pl">Polecenie terminala</long>
+		<long xml:lang="sv">Kommandorad för terminal</long>
+		<default/>
+	    </option>
+	    <option type="action" name="run_command_terminal">
+		<short>Open a terminal</short>
+		<short xml:lang="hu">Terminál megnyitása</short>
+		<short xml:lang="pl">Otwiera terminal</short>
+		<short xml:lang="sv">Öppna en terminal</short>
+		<long>Open a terminal</long>
+		<long xml:lang="hu">Terminál megnyitása</long>
+		<long xml:lang="pl">Otwiera terminal</long>
+		<long xml:lang="sv">Öppna en terminal</long>
+		<allowed key="true" edge="true" button="true"/>
+	    </option>
+	    <option type="int" name="ping_delay">
+		<short>Ping Delay</short>
+		<short xml:lang="hu">Ping késleltetése</short>
+		<short xml:lang="pl">Opóźnienie ping</short>
+		<short xml:lang="sv">Fördröjning för ping</short>
+		<long>Interval between ping messages</long>
+		<long xml:lang="sv">Intervall mellan ping-meddelanden</long>
+		<default>5000</default>
+		<min>1000</min>
+		<max>30000</max>
+	    </option>
+	</display>
+	<screen>
+	    <option type="bool" name="detect_refresh_rate">
+		<short>Detect Refresh Rate</short>
+		<short xml:lang="ca">Detecta la freqüència d'actualització</short>
+		<short xml:lang="cs">Zjistit obnovovací frekvenci</short>
+		<short xml:lang="da">Registrer opdateringshastighed</short>
+		<short xml:lang="de">Aktualisierungsrate erkennen</short>
+		<short xml:lang="es">Detectar frecuencia de actualización</short>
+		<short xml:lang="fi">Tunnista päivitystaajuus</short>
+		<short xml:lang="fr">Détecter la fréquence de rafraîchissement</short>
+		<short xml:lang="hu">Frissítési frekvencia felismerése</short>
+		<short xml:lang="it">Rileva frequenza di aggiornamento</short>
+		<short xml:lang="ja">更新レートの検出</short>
+		<short xml:lang="pl">Wykryj częstotliwość odświeżania</short>
+		<short xml:lang="pt">Detectar Taxa de Atualização</short>
+		<short xml:lang="pt_BR">Detectar Taxa de Atualização</short>
+		<short xml:lang="ru">Определить частоту обновления</short>
+		<short xml:lang="sv">Detektera uppdateringsfrekvens</short>
+		<short xml:lang="zh_CN">检测刷新率</short>
+		<short xml:lang="zh_TW">偵測重新整理速率</short>
+		<long>Automatic detection of refresh rate</long>
+		<long xml:lang="ca">Detecció automàtica de la freqüència d'actualització</long>
+		<long xml:lang="cs">Automatická detekce obnovovací frekvence</long>
+		<long xml:lang="da">Automatisk registrering af opdateringshastighed</long>
+		<long xml:lang="de">Automatische Erkennung der Aktualisierungsrate</long>
+		<long xml:lang="es">Detección automática de la frecuencia de actualización</long>
+		<long xml:lang="fi">Virkistystaajuuden automaattinen tunnistus</long>
+		<long xml:lang="fr">Détection automatique de la fréquence de rafraîchissement</long>
+		<long xml:lang="hu">Frissítési frekvencia automatikus érzékelése</long>
+		<long xml:lang="it">Rilevamento automatico della frequenza di aggiornamento</long>
+		<long xml:lang="ja">更新レートの自動検出</long>
+		<long xml:lang="pl">Automatyczne wykrywanie częstotliwości odświeżania</long>
+		<long xml:lang="pt">Detecção automática da taxa de atualização</long>
+		<long xml:lang="pt_BR">Detecção automática da taxa de atualização</long>
+		<long xml:lang="ru">Автоматическое определение частоты обновления</long>
+		<long xml:lang="sv">Automatisk identifiering av uppdateringsfrekvens</long>
+		<long xml:lang="zh_CN">自动检测刷新率</long>
+		<long xml:lang="zh_TW">自動偵測重新整理速率</long>
+		<default>true</default>
+	    </option>
+	    <option type="bool" name="lighting">
+		<short>Lighting</short>
+		<short xml:lang="ca">Il·luminació</short>
+		<short xml:lang="cs">Světlo</short>
+		<short xml:lang="da">Belysning</short>
+		<short xml:lang="de">Beleuchtung</short>
+		<short xml:lang="es">Iluminación</short>
+		<short xml:lang="fi">Valaistus</short>
+		<short xml:lang="fr">Éclairage</short>
+		<short xml:lang="hu">Világosítás</short>
+		<short xml:lang="it">Illuminazione</short>
+		<short xml:lang="ja">照明</short>
+		<short xml:lang="pl">Błyskawica</short>
+		<short xml:lang="pt">Iluminação</short>
+		<short xml:lang="pt_BR">Iluminação</short>
+		<short xml:lang="ru">Освещение</short>
+		<short xml:lang="sv">Ljussättning</short>
+		<short xml:lang="zh_CN">加亮</short>
+		<short xml:lang="zh_TW">光源</short>
+		<long>Use diffuse light when screen is transformed</long>
+		<long xml:lang="ca">Utilitza llum de difusió en transformar la pantalla</long>
+		<long xml:lang="cs">Použít rozptýlené světlo při transformaci okna</long>
+		<long xml:lang="da">Brug spredt lys, når skærmbilledet omdannes</long>
+		<long xml:lang="de">Beim Umwandeln des Bildschirms diffuses Licht verwenden</long>
+		<long xml:lang="es">Usa luz indirecta cuando se transforma la pantalla</long>
+		<long xml:lang="fi">Käytä hajavaloa ruudun muuttuessa</long>
+		<long xml:lang="fr">Utiliser la lumière diffuse lorsque l'écran est transformé</long>
+		<long xml:lang="hu">Szórt fény használata képernyő-transzformációnál</long>
+		<long xml:lang="it">Usa luce diffusa alla trasformazione della schermata</long>
+		<long xml:lang="ja">画面の変換時に散光を使用</long>
+		<long xml:lang="pl">Używaj rozproszonego światła podczas przekształceń ekranu</long>
+		<long xml:lang="pt">Usar luz difusa quando a tela for transformada</long>
+		<long xml:lang="pt_BR">Usar luz difusa quando a tela for transformada</long>
+		<long xml:lang="ru">Использование рассеянного света при преобразовании экрана</long>
+		<long xml:lang="sv">Använd diffus belysning när skärmen transformeras</long>
+		<long xml:lang="zh_CN">转换屏幕时使用漫射灯</long>
+		<long xml:lang="zh_TW">在螢幕轉換時使用擴散光</long>
+		<default>true</default>
+	    </option>
+	    <option type="int" name="refresh_rate">
+		<short>Refresh Rate</short>
+		<short xml:lang="ca">Freqüència d'actualització</short>
+		<short xml:lang="cs">Obnovovací frekvence</short>
+		<short xml:lang="da">Opdateringshastighed</short>
+		<short xml:lang="de">Aktualisierungsrate</short>
+		<short xml:lang="es">Frecuencia de actualización</short>
+		<short xml:lang="fi">Virkistystaajuus</short>
+		<short xml:lang="fr">Fréquence de rafraîchissement</short>
+		<short xml:lang="hu">Frissítési frekvencia</short>
+		<short xml:lang="it">Frequenza di aggiornamento</short>
+		<short xml:lang="ja">更新レート</short>
+		<short xml:lang="pl">Częstotliwość odświeżania</short>
+		<short xml:lang="pt">Taxa de Atualização</short>
+		<short xml:lang="pt_BR">Taxa de Atualização</short>
+		<short xml:lang="ru">Частота обновления</short>
+		<short xml:lang="sv">Uppdateringsfrekvens</short>
+		<short xml:lang="zh_CN">刷新率</short>
+		<short xml:lang="zh_TW">重新整理速率</short>
+		<long>The rate at which the screen is redrawn (times/second)</long>
+		<default>50</default>
+		<min>1</min>
+		<max>200</max>
+	    </option>
+	    <option type="int" name="hsize">
+		<short>Horizontal Virtual Size</short>
+		<short xml:lang="ca">Mida virtual horitzontal</short>
+		<short xml:lang="cs">Vodorovná virtuální velikost</short>
+		<short xml:lang="da">Vandret virtuel størrelse</short>
+		<short xml:lang="de">Horizontale virtuelle Größe</short>
+		<short xml:lang="es">Tamaño horizontal virtual</short>
+		<short xml:lang="fi">Virtuaalinen vaakatasokoko</short>
+		<short xml:lang="fr">Taille virtuelle horizontale</short>
+		<short xml:lang="hu">Vízszintes virtuális méret</short>
+		<short xml:lang="it">Dimensioni virtuali orizzontali</short>
+		<short xml:lang="ja">水平仮想サイズ</short>
+		<short xml:lang="pl">Poziomy rozmiar wirtualny</short>
+		<short xml:lang="pt_BR">Tamanho Virtual Horizontal</short>
+		<short xml:lang="ru">Виртуальный размер по горизонтали</short>
+		<short xml:lang="sv">Virtuell horisontell storlek</short>
+		<short xml:lang="zh_CN">水平虚拟大小</short>
+		<short xml:lang="zh_TW">水平虛擬大小</short>
+		<long>Screen size multiplier for horizontal virtual size</long>
+		<default>4</default>
+		<min>1</min>
+		<max>32</max>
+	    </option>
+	    <option type="int" name="vsize">
+		<short>Vertical Virtual Size</short>
+		<short xml:lang="ca">Mida virtual vertical</short>
+		<short xml:lang="cs">Svislá virtuální velikost</short>
+		<short xml:lang="da">Lodret virtuel størrelse</short>
+		<short xml:lang="de">Vertikale virtuelle Größe</short>
+		<short xml:lang="es">Tamaño vertical virtual</short>
+		<short xml:lang="fi">Virtuaalinen pystytasokoko</short>
+		<short xml:lang="fr">Taille virtuelle verticale</short>
+		<short xml:lang="hu">Függőleges virtuális méret</short>
+		<short xml:lang="it">Dimensioni virtuali verticali</short>
+		<short xml:lang="ja">垂直仮想サイズ</short>
+		<short xml:lang="pl">Pionowy rozmiar wirtualny</short>
+		<short xml:lang="pt_BR">Tamanho Virtual Vertical</short>
+		<short xml:lang="ru">Виртуальный размер по вертикали</short>
+		<short xml:lang="sv">Vertikal virtuell storlek</short>
+		<short xml:lang="zh_CN">垂直虚拟大小</short>
+		<short xml:lang="zh_TW">垂直虛擬大小</short>
+		<long>Screen size multiplier for vertical virtual size</long>
+		<default>1</default>
+		<min>1</min>
+		<max>32</max>
+	    </option>
+	    <option type="int" name="opacity_step">
+		<short>Opacity Step</short>
+		<short xml:lang="ca">Etapa d'opacitat</short>
+		<short xml:lang="cs">Krok krytí</short>
+		<short xml:lang="da">Uigennemsigtighedstrin</short>
+		<short xml:lang="de">Durchlässigkeits-Schritt</short>
+		<short xml:lang="es">Paso de opacidad</short>
+		<short xml:lang="fi">Peittävyyden askel</short>
+		<short xml:lang="fr">Incrément d'opacité</short>
+		<short xml:lang="hu">Átlátszatlanság mértéke</short>
+		<short xml:lang="it">Passo opacità</short>
+		<short xml:lang="ja">不透明度ステップ</short>
+		<short xml:lang="pl">Krok nieprzezroczystości</short>
+		<short xml:lang="pt">Etapa de Opacidade</short>
+		<short xml:lang="pt_BR">Etapa de Opacidade</short>
+		<short xml:lang="ru">Шаг прозрачности</short>
+		<short xml:lang="sv">Intervall för opakhet</short>
+		<short xml:lang="zh_CN">不透明度级别</short>
+		<short xml:lang="zh_TW">不透明度間隔</short>
+		<long>Opacity change step</long>
+		<default>10</default>
+		<min>1</min>
+		<max>50</max>
+	    </option>
+	    <option type="bool" name="unredirect_fullscreen_windows">
+		<short>Unredirect Fullscreen Windows</short>
+		<short xml:lang="ca">No redirigeixis les finestres a pantalla completa</short>
+		<short xml:lang="da">Omdiriger ikke fuldskærmsvinduer</short>
+		<short xml:lang="de">Umleitung von Vollbildfenstern aufheben</short>
+		<short xml:lang="es">Anular redirección de ventanas a pantalla completa</short>
+		<short xml:lang="fi">Kokoruutuikkunoita ei uudelleenohjata</short>
+		<short xml:lang="fr">Ne pas rediriger les fenêtres plein écran</short>
+		<short xml:lang="hu">Teljes méretű ablakok visszairányítása</short>
+		<short xml:lang="it">Annulla reindirizzamento finestre a schermo intero</short>
+		<short xml:lang="ja">全画面ウィンドウのリダイレクト解除</short>
+		<short xml:lang="pl">Cofnij przekierowanie okien pełnoekranowych</short>
+		<short xml:lang="pt">Anular redirecionamento de janelas de tela inteira</short>
+		<short xml:lang="pt_BR">Anular redirecionamento de janelas de tela inteira</short>
+		<short xml:lang="ru">Отменить перенаправление окон в полноэкранном режиме</short>
+		<short xml:lang="sv">Omdirigera tillbaka helskärmsfönster</short>
+		<short xml:lang="zh_CN">取消重定向全屏窗口</short>
+		<short xml:lang="zh_TW">全螢幕視窗解除重新導向</short>
+		<long>Allow drawing of fullscreen windows to not be redirected to offscreen pixmaps</long>
+		<long xml:lang="ca">Permet que la representació de finestres a pantalla completa no es redirigeixi cap a mapes de píxels fora de la pantalla</long>
+		<long xml:lang="cs">Povolit vykreslování celoobrazovkových oken bez přesměrování do mimoobrazovkových pixmap</long>
+		<long xml:lang="da">Tillad trækning af fuldskærmsvinduer, uden at der omdirrigeres til pixmaps uden for skærmbilledet</long>
+		<long xml:lang="de">Aufbau von Vollbildfenstern ohne Umleitung zu Offscreen-Pixmaps erlauben</long>
+		<long xml:lang="es">Permitir que al dibujar ventanas a pantalla completa no se redireccionen a pixmaps de fuera de pantalla</long>
+		<long xml:lang="fi">Kokoruutuikkunoita ei uudelleenohjata piilotetuille pikselikartoille</long>
+		<long xml:lang="fr">Empêcher la redirection vers des pixmaps hors de l'écran lors de l'affichage des fenêtres plein écran</long>
+		<long xml:lang="hu">A teljes méretű ablakok nem irányíthatók át képen kívüli pixeltérképekre</long>
+		<long xml:lang="it">Consenti disegno finestre a schermo intero per non essere reindirizzati a pixmap fuori schermo</long>
+		<long xml:lang="ja">スクリーン外のピックスマップにリダイレクトしないように全画面ウィンドウの描画を許可する</long>
+		<long xml:lang="pl">Zezwól na to, by rysowanie okien pełnoekranowych nie było przekierowywane do map obrazu poza ekranem</long>
+		<long xml:lang="pt">Permitir que o desenho das janelas em tela inteira não seja redirecionado para pixmaps fora da tela</long>
+		<long xml:lang="pt_BR">Permitir que o desenho das janelas em tela inteira não seja redirecionado para pixmaps fora da tela</long>
+		<long xml:lang="ru">Позволяет рисовать окна в полноэкранном режиме без перенаправления в области растрового отображения за пределами экрана</long>
+		<long xml:lang="sv">Tillåt att inte utritning av helskärmsfönster omdirigeras till bilder utanför skärmen</long>
+		<long xml:lang="zh_CN">允许全屏窗口的绘制不重定向到屏幕外的象素映射</long>
+		<long xml:lang="zh_TW">使全螢幕的描繪動作不會重新導向到幕後 Pixmap</long>
+		<default>false</default>
+	    </option>
+	    <option type="string" name="default_icon">
+		<short>Default Icon</short>
+		<short xml:lang="ca">Icona per defecte</short>
+		<short xml:lang="cs">Výchozí ikona</short>
+		<short xml:lang="da">Standardikon</short>
+		<short xml:lang="de">Standardsymbol</short>
+		<short xml:lang="es">Icono por defecto</short>
+		<short xml:lang="fi">Oletuskuvake</short>
+		<short xml:lang="fr">Icône par défaut</short>
+		<short xml:lang="hu">Alapértelmezett ikon</short>
+		<short xml:lang="it">Icona di default</short>
+		<short xml:lang="ja">デフォルトのアイコン</short>
+		<short xml:lang="pl">Domyślna ikona</short>
+		<short xml:lang="pt">Ícone Padrão</short>
+		<short xml:lang="pt_BR">Ícone Padrão</short>
+		<short xml:lang="ru">Значок по умолчанию</short>
+		<short xml:lang="sv">Standardikon</short>
+		<short xml:lang="zh_CN">默认图标</short>
+		<short xml:lang="zh_TW">預設圖示</short>
+		<long>Default window icon image</long>
+		<long xml:lang="ca">Imatge d'icona de finestra per defecte</long>
+		<long xml:lang="cs">Výchozí ikona okna</long>
+		<long xml:lang="da">Standardbillede til vinduesikon</long>
+		<long xml:lang="de">Standardfenstersymbol</long>
+		<long xml:lang="es">Imagen del icono de ventana por defecto</long>
+		<long xml:lang="fi">Oletuskuva ikkunakuvakkeelle</long>
+		<long xml:lang="fr">Image de l'icône de la fenêtre par défaut</long>
+		<long xml:lang="hu">Alapértelmezett ikon képe</long>
+		<long xml:lang="it">Immagine icona finestra di default</long>
+		<long xml:lang="ja">デフォルトのウィンドウアイコンイメージ</long>
+		<long xml:lang="pl">Obraz domyślnej ikony okna</long>
+		<long xml:lang="pt">Imagem do ícone padrão da janela</long>
+		<long xml:lang="pt_BR">Imagem do ícone padrão da janela</long>
+		<long xml:lang="ru">Изображение значка окна по умолчанию</long>
+		<long xml:lang="sv">Standardikonbild för fönster</long>
+		<long xml:lang="zh_CN">默认窗口图标图像</long>
+		<long xml:lang="zh_TW">預設的視窗圖示影像</long>
+		<default>icon</default>
+	    </option>
+	    <option type="bool" name="sync_to_vblank">
+		<short>Sync To VBlank</short>
+		<short xml:lang="ca">Sincronitza amb enfosquiment vertical</short>
+		<short xml:lang="cs">Synchronizovat při VBlank </short>
+		<short xml:lang="da">Synkroniser med lodret slukning</short>
+		<short xml:lang="de">Mit VBlank synchronisieren</short>
+		<short xml:lang="es">Sincronizar con borrado vertical</short>
+		<short xml:lang="fi">Synkronoi VBlankiin</short>
+		<short xml:lang="fr">Sync vers VBlank</short>
+		<short xml:lang="hu">Szinkronizálás VBlank-ra</short>
+		<short xml:lang="it">Sincronizza con VBlank</short>
+		<short xml:lang="ja">垂直ブランクに同期化</short>
+		<short xml:lang="pl">Synchronizuj z VBlank</short>
+		<short xml:lang="pt_BR">Sincronização para o VBlank</short>
+		<short xml:lang="ru">Синхронизировать с VBlank</short>
+		<short xml:lang="sv">Synkronisera till VBlank</short>
+		<short xml:lang="zh_CN">与 Vblank 同步</short>
+		<short xml:lang="zh_TW">同步化到 VBlank</short>
+		<long>Only perform screen updates during vertical blanking period</long>
+		<long xml:lang="ca">Només actualitza la pantalla durant els períodes d'enfosquiment vertical</long>
+		<long xml:lang="cs">Provádět aktualizace obrazovky pouze během intervalu vertikálního zatemnění</long>
+		<long xml:lang="da">Udfør kun skærmopdatering i den lodrette slukkeperiode</long>
+		<long xml:lang="de">Bildschirmaktualisierungen nur während Deaktivierung der vertikalen Anzeige durchführen</long>
+		<long xml:lang="es">Sólo se llevan a cabo actualizaciones de la pantalla durante el período de borrado vertical</long>
+		<long xml:lang="fi">Suorita vain näyttöpäivitykset pystytasossa tehtävän tyhjäyksen aikana</long>
+		<long xml:lang="fr">N'effectuer les mises à jour de l'écran que lors de la période de vidage vertical</long>
+		<long xml:lang="hu">A képernyő-frissítések végrehajtása csak a függőleges törlési periódusban</long>
+		<long xml:lang="it">Esegui aggiornamenti schermata solo durante periodo di lampeggiamento verticale</long>
+		<long xml:lang="ja">垂直ブランキング期間にのみ画面を更新する</long>
+		<long xml:lang="pl">Odświeżaj ekran tylko podczas okresu poziomego wygaszania</long>
+		<long xml:lang="pt_BR">Somente executar atualizações da tela durante o período de limpeza vertical</long>
+		<long xml:lang="ru">Обновления экрана выполняются только во время гашения обратного хода луча кадровой развертки</long>
+		<long xml:lang="zh_CN">垂直清屏期间仅执行屏幕更新</long>
+		<long xml:lang="zh_TW">只在垂直空白期間執行螢幕更新</long>
+		<default>true</default>
+	    </option>
+	    <option type="int" name="number_of_desktops">
+		<short>Number of Desktops</short>
+		<short xml:lang="ca">Nombre d'escriptoris</short>
+		<short xml:lang="cs">Počet ploch</short>
+		<short xml:lang="da">Antal skriveborde</short>
+		<short xml:lang="de">Anzahl der Desktops</short>
+		<short xml:lang="es">Número de escritorios</short>
+		<short xml:lang="fi">Työpöytien määrä</short>
+		<short xml:lang="fr">Nombre de bureaux</short>
+		<short xml:lang="hu">Munkaasztalok száma</short>
+		<short xml:lang="it">Numero di desktop</short>
+		<short xml:lang="ja">デスクトップ数</short>
+		<short xml:lang="pl">Ilość pulpitów</short>
+		<short xml:lang="pt_BR">Número de Áreas de Trabalho</short>
+		<short xml:lang="ru">Число рабочих столов</short>
+		<short xml:lang="sv">Antal skrivbord</short>
+		<short xml:lang="zh_CN">桌面数</short>
+		<short xml:lang="zh_TW">桌面數</short>
+		<long>Number of virtual desktops</long>
+		<long xml:lang="sv">Antal virtuella skrivbord</long>
+		<default>1</default>
+		<min>1</min>
+		<max>36</max>
+	    </option>
+	    <option type="bool" name="detect_outputs">
+		<short>Detect Outputs</short>
+		<short xml:lang="ca">Detecta les sortides</short>
+		<short xml:lang="cs">Detekovat výstupy</short>
+		<short xml:lang="da">Registrer udgange</short>
+		<short xml:lang="de">Ausgaben erkennen</short>
+		<short xml:lang="es">Detectar salidas</short>
+		<short xml:lang="fi">Tunnista ulostulot</short>
+		<short xml:lang="fr">Détection des sorties</short>
+		<short xml:lang="hu">Kimenetek észlelése</short>
+		<short xml:lang="it">Rileva output</short>
+		<short xml:lang="ja">出力検出</short>
+		<short xml:lang="pl">Wykryj wyjścia</short>
+		<short xml:lang="pt_BR">Detectar Saídas</short>
+		<short xml:lang="ru">Определить устройства вывода</short>
+		<short xml:lang="zh_CN">检测输出</short>
+		<short xml:lang="zh_TW">偵測輸出</short>
+		<long>Automatic detection of output devices</long>
+		<long xml:lang="ca">Detecció automàtica dels dispositius de sortida</long>
+		<long xml:lang="cs">Automatická detekce výstupních zařízení</long>
+		<long xml:lang="da">Automatisk registrering af udgangsenheder</long>
+		<long xml:lang="de">Automatische Erkennung von Ausgabegeräten</long>
+		<long xml:lang="es">Detección automática de dispositivos de salida</long>
+		<long xml:lang="fi">Ulostulolaitteiden automaattinen tunnistus</long>
+		<long xml:lang="fr">Détection automatiques des périphériques de sortie</long>
+		<long xml:lang="hu">Kimeneti eszközök automatikus érzékelése</long>
+		<long xml:lang="it">Rilevamento automatico dispositivi di output</long>
+		<long xml:lang="ja">出力デバイスの自動検出</long>
+		<long xml:lang="pl">Automatyczne wykrywanie urządzeń wyjściowych</long>
+		<long xml:lang="pt_BR">Detecção automática de dispositivos de saída</long>
+		<long xml:lang="ru">Автоматическое определение устройств вывода</long>
+		<long xml:lang="zh_CN">自动检测输出设备</long>
+		<long xml:lang="zh_TW">自動偵測輸出設備</long>
+		<default>true</default>
+	    </option>
+	    <option type="list" name="outputs">
+		<short>Outputs</short>
+		<short xml:lang="ca">Sortides</short>
+		<short xml:lang="cs">Výstupy</short>
+		<short xml:lang="da">Udgange</short>
+		<short xml:lang="de">Ausgaben</short>
+		<short xml:lang="es">Salidas</short>
+		<short xml:lang="fi">Ulostulot</short>
+		<short xml:lang="fr">Produit</short>
+		<short xml:lang="hu">Kimenetek</short>
+		<short xml:lang="it">Output</short>
+		<short xml:lang="ja">出力</short>
+		<short xml:lang="pl">Wyjścia</short>
+		<short xml:lang="pt_BR">Saídas</short>
+		<short xml:lang="ru">Устройства вывода</short>
+		<short xml:lang="sv">Utmatningar</short>
+		<short xml:lang="zh_CN">输出</short>
+		<short xml:lang="zh_TW">輸出</short>
+		<long>List of strings describing output devices</long>
+		<long xml:lang="ca">Llista de cadenes que descriuen els dispositius de sortida</long>
+		<long xml:lang="cs">Seznam řetězců, které popisují výstupní zařízení</long>
+		<long xml:lang="da">Liste over strenge, der beskriver udgangsenheder</long>
+		<long xml:lang="de">Liste mit Zeichenketten zur Erläuterung von Ausgabegeräten</long>
+		<long xml:lang="es">Lista de cadenas que describen los dispositivos de salida</long>
+		<long xml:lang="fi">Ulostulolaitteita kuvaavien merkkijonojen luettelo</long>
+		<long xml:lang="fr">Liste des chaînes décrivant les périphériques de sortie</long>
+		<long xml:lang="hu">Kimeneti eszközöket leíró karakterláncok listája</long>
+		<long xml:lang="it">Elenco di stringhe che descrivono i dispositivi di output</long>
+		<long xml:lang="ja">出力デバイスを表す文字列リスト</long>
+		<long xml:lang="pl">Lista opisów urządzeń wyjściowych</long>
+		<long xml:lang="pt_BR">Lista de strings que descrevem os dispositivos de saída</long>
+		<long xml:lang="ru">Список строк, описывающих устройства вывода</long>
+		<long xml:lang="sv">Lista över strängar som beskriver utmatningsenheter</long>
+		<long xml:lang="zh_CN">描述输出设备的字符串列表</long>
+		<long xml:lang="zh_TW">描述輸出設備的字串清單</long>
+		<type>string</type>
+		<default>
+		    <value>640x480+0+0</value>
+		</default>
+	    </option>
+	    <option type="match" name="focus_prevention_match">
+		<short>Focus Prevention Windows</short>
+		<long>Focus prevention windows</long>
+		<default>any</default>
+	    </option>
+	    <option type="list" name="opacity_matches">
+		<short>Opacity windows</short>
+		<long>Windows that should be translucent by default</long>
+		<type>match</type>
+	    </option>
+	    <option type="list" name="opacity_values">
+		<short>Opacity window values</short>
+		<long>Opacity values for windows that should be translucent by default</long>
+		<type>int</type>
+	    </option>
+	</screen>
+    </core>
+</compiz>

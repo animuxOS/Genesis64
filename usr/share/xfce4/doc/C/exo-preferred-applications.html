@@ -1,0 +1,114 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Xfce 4 Preferred Applications</title><link rel="stylesheet" href="../xfce.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.70.1"><link rel="start" href="#exo-preferred-applications" title="Xfce 4 Preferred Applications"><link rel="next" href="#intro" title="Introduction"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="article" lang="en"><div class="titlepage"><div><div><h1 class="title"><a name="exo-preferred-applications"></a>Xfce 4 Preferred Applications</h1></div><div><div class="authorgroup"><div class="author"><h3 class="author"><span class="firstname">Benedikt</span> <span class="surname">Meurer</span></h3><div class="affiliation"><div class="address"><p><code class="email">&lt;<a href="mailto:benny@xfce.org">benny@xfce.org</a>&gt;</code></p></div></div></div></div></div><div><span xmlns="http://www.w3.org/TR/xhtml1/transitional" class="releaseinfo">
+      This manual describes version 0.3.4 of the <span xmlns="" class="emphasis"><em>Xfce Preferred
+      Applications</em></span> framework and its components.
+    <br></br></span></div><div><p class="copyright">Copyright © 2004, 2005, 2006 Benedikt Meurer</p></div><div><div class="legalnotice"><a name="legalnotice"></a><p>
+        Permission is granted to copy, distribute and/or modify this document
+        under the terms of the GNU Free Documentation License, Version 1.1 or
+        any later version published by the Free Software Foundation; with no
+        Invariant Sections, with no Front-Cover Texts, and with no Back-Cover
+        Texts. The complete license text is available from the <a href="http://www.gnu.org/" target="_top">Free Software Foundation</a>.
+      </p></div></div><div><p class="pubdate">April 2006</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="sect1"><a href="#intro">Introduction</a></span></dt><dt><span class="sect1"><a href="#configuration">Configuration</a></span></dt><dd><dl><dt><span class="sect2"><a href="#configuration-internet">Internet applications</a></span></dt><dt><span class="sect2"><a href="#configuration-utilities">Other applications</a></span></dt></dl></dd><dt><span class="sect1"><a href="#exo-open">exo-open</a></span></dt><dt><span class="sect1"><a href="#copyright">About</a></span></dt></dl></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="intro"></a>Introduction</h2></div></div></div><p>
+      Throughout the 4.x series of the Xfce Desktop Environment, there
+      was no easy way for users to set their preferred applications, i.e.
+      the Web Browser that should be used to open hyperlinks. The
+      <span class="emphasis"><em>Xfce Preferred Applications</em></span> framework was
+      added in Xfce 4.3 to overcome this limitation and provide users
+      with an easy way to select their preferred web browser, mail reader
+      and terminal emulator.
+    </p></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="configuration"></a>Configuration</h2></div></div></div><p>
+      You can access the configuration dialog by clicking on the
+      <span><strong class="guibutton">Preferred Applications</strong></span> button in the
+      <a href="xfce-mcs-manager.html#manager-dialog" target="_top">Xfce
+      Settings Manager</a>. The configuration dialog is split
+      into two pages, which are described in the following sections.
+    </p><div class="sect2" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="configuration-internet"></a>Internet applications</h3></div></div></div><p>
+        The first page of the configuration dialog allows you to select
+        your preferred Web Browser and Mail Reader. The selected Web
+        Browser will be used to open hyperlinks that you click on and
+        to display the documentation, whereas the Mail Reader will be
+        used to compose mails.
+      </p><div class="figure"><a name="configuration-internet-figure"></a><p class="title"><b>Figure 1. Internet applications</b></p><div class="figure-contents"><div class="screenshot"><div class="mediaobject"><img src="images/exo-preferred-applications-internet.png" alt="Select internet applications"></div></div></div></div><br class="figure-break"><p>
+        To select a different Web Browser than the current default one,
+        click on the button in the <span><strong class="guilabel">Default Web Browser</strong></span>
+        section and a list of web browsers that were detected on your
+        system will appear, as shown in <a href="#configuration-webbrowser-menu" title="Figure 2. Select Web Browser">Figure 2, &#8220;Select Web Browser&#8221;</a>.
+      </p><div class="figure"><a name="configuration-webbrowser-menu"></a><p class="title"><b>Figure 2. Select Web Browser</b></p><div class="figure-contents"><div class="screenshot"><div class="mediaobject"><img src="images/exo-preferred-applications-webbrowser-menu.png" alt="Select Web Browser"></div></div></div></div><br class="figure-break"><p>
+        If the Web Browser you are looking for is not automatically
+        detected by the system, you can select
+        <span><strong class="guimenu"><span><strong class="guimenuitem">Other...</strong></span></strong></span> from the
+        drop down menu and a dialog will appear asking you to enter the
+        command for the custom Web Browser, as shown in <a href="#configuration-webbrowser-custom" title="Figure 3. Specify a custom Web Browser">Figure 3, &#8220;Specify a custom Web Browser&#8221;</a>.
+      </p><div class="figure"><a name="configuration-webbrowser-custom"></a><p class="title"><b>Figure 3. Specify a custom Web Browser</b></p><div class="figure-contents"><div class="screenshot"><div class="mediaobject"><img src="images/exo-preferred-applications-webbrowser-custom.png" alt="Specify a custom Web Browser"></div></div></div></div><br class="figure-break"><p>
+        The special marker <code class="literal">%s</code> in the command will be
+        substituted with the URL when you click on a hyperlink. When
+        running just the preferred Web Browser without any URL, i.e.
+        using <span><strong class="command">exo-open --launch WebBrowser</strong></span>, only the
+        binary of the specified command will be used and the parameters
+        will be stripped off. In the example above, with <span><strong class="command">mywebbrowser
+        "%s"</strong></span> as custom Web Browser, the command
+        <span><strong class="command">mywebbrowser</strong></span> will be used to open the Web
+        Browser without an URL.
+      </p></div><div class="sect2" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="configuration-utilities"></a>Other applications</h3></div></div></div><p>
+        The first page of the configuration dialog allows you to select
+        your preferred terminal emulator. The preferred terminal emulator
+        will be used throughout the Xfce Desktop Environment to launch
+        applications that need to be run in a CLI (command line
+        interface) environment.
+      </p><div class="figure"><a name="configuration-utilities-figure"></a><p class="title"><b>Figure 4. Other applications</b></p><div class="figure-contents"><div class="screenshot"><div class="mediaobject"><img src="images/exo-preferred-applications-utilities.png" alt="Select other applications"></div></div></div></div><br class="figure-break"><p>
+        For custom terminal commands, the special marker <code class="literal">%s</code>
+        will be substituted with the application to run in the terminal.
+        Otherwise the same rules apply as described in <a href="#configuration-internet" title="Internet applications">the section called &#8220;Internet applications&#8221;</a>.
+      </p></div></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="exo-open"></a>exo-open</h2></div></div></div><p>
+      A simple command line frontend to the <span class="emphasis"><em>Xfce Preferred
+      Applications</em></span> framework is included, named
+      <strong class="application"><code>exo-open</code></strong>. Users and developers can use
+      this utility to launch the preferred application for a certain
+      category or open URLs with the default URL handler.
+    </p><p>
+      <strong class="application"><code>exo-open</code></strong> supports two operation modes.
+      The first will simply launch the preferred application for a
+      certain category, optionally passing a parameter (the exact meaning
+      of the term <span class="emphasis"><em>parameter</em></span> depends on the category).
+      For example, to launch the command <span><strong class="command">mutt</strong></span> in the
+      preferred Terminal Emulator, you would use 
+    </p><pre class="screen">exo-open --launch TerminalEmulator mutt</pre><p>
+      while to just open the preferred Web Browser, the following
+      command would be used:
+    </p><pre class="screen">exo-open --launch WebBrowser</pre><p>
+      The second mode supported by <strong class="application"><code>exo-open</code></strong> opens
+      all parameters passed to it with the default URL handlers. Here URLs
+      mean either fully qualified URLs (i.e.
+      <code class="literal">http://www.xfce.org/</code> or
+      <code class="literal">mailto:xfce4-dev@xfce.org</code>) or local paths (i.e.
+      <code class="literal">/home/dude/myfile.txt</code>). For example to open
+      <code class="literal">/home/dude/file1.mp3</code> and
+      <code class="literal">/home/dude/file2.txt</code> in the default
+      applications, you would use the following command:
+    </p><pre class="screen">exo-open /home/dude/file1.mp3 /home/dude/file2.txt</pre><p>
+      To start composing a mail to the <a href="http://foo-projects.org/mailman/listinfo/xfce4-dev" target="_top">xfce4-dev</a>
+      mailing list, you can do:
+    </p><pre class="screen">exo-open mailto:xfce4-dev@xfce.org</pre></div><div class="sect1" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="copyright"></a>About</h2></div></div></div><p>
+      The <span class="emphasis"><em>Xfce Preferred Applications</em></span> framework and its
+      components was written by Benedikt Meurer (<code class="email">&lt;<a href="mailto:benny@xfce.org">benny@xfce.org</a>&gt;</code>)
+      for the Xfce Desktop Environment. For more information, please visit
+      the <a href="http://www.xfce.org" target="_top">Xfce website</a>.
+    </p><p>
+      To report a bug or make a suggestion regarding the software or this
+      manual, use the <a href="http://bugzilla.xfce.org/" target="_top">Xfce
+      Bug Tracking System</a> (Product: <code class="literal">libexo</code>,
+      Component: <code class="literal">helpers</code>).
+    </p><p>
+      If you have questions about the use or installation of this package,
+      please ask on the <a href="http://foo-projects.org/mailman/listinfo/xfce" target="_top">xfce</a> mailing
+      list. Development discussion takes place on the <a href="http://foo-projects.org/mailman/listinfo/xfce4-dev" target="_top">xfce4-dev</a>
+      mailing list.
+    </p><p>
+      This software is distributed under the terms of the GNU General Public
+      License as published by the Free Software Foundation; either version 2
+      of the License, or (at your option) any later version.
+    </p><p>
+      You should have received a copy of the GNU General Public License 
+      along with this program; if not, write to the Free Software 
+      Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, 
+      USA.
+    </p></div></div></body></html>

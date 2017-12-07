@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<toc>
+<tocsect1 linkid="preface">이 설명서의 용어 및 관례
+</tocsect1>
+<tocsect1 linkid="overview">개요
+<tocsect2 linkid="introduction">
+        Introduction
+      
+</tocsect2>
+<tocsect2 linkid="stability">
+        Interface Stability
+      
+</tocsect2>
+<tocsect2 linkid="daemonov">The GDM Daemon
+</tocsect2>
+<tocsect2 linkid="displaytypes">Different Display Types
+</tocsect2>
+<tocsect2 linkid="xdmcp">XDMCP
+</tocsect2>
+<tocsect2 linkid="secureremote">
+        Securing Remote Connection Through SSH
+      
+</tocsect2>
+<tocsect2 linkid="gtkgreeter">The GTK+ Greeter
+</tocsect2>
+<tocsect2 linkid="themedgreeter">The Themed Greeter
+</tocsect2>
+<tocsect2 linkid="facebrowser">The GDM Face Browser
+</tocsect2>
+<tocsect2 linkid="logging">Logging
+</tocsect2>
+<tocsect2 linkid="fileaccess">Accessing Files
+</tocsect2>
+<tocsect2 linkid="performance">GDM Performance
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="security">보안
+<tocsect2 linkid="PAM">PAM
+</tocsect2>
+<tocsect2 linkid="utmpwtmp">
+        utmp/wtmp
+      
+</tocsect2>
+<tocsect2 linkid="gdmuser">The GDM User
+</tocsect2>
+<tocsect2 linkid="xauth">X Server Authentication Scheme
+</tocsect2>
+<tocsect2 linkid="firewall">Firewall Security
+</tocsect2>
+<tocsect2 linkid="nfssecurity">GDM Security With NFS
+</tocsect2>
+<tocsect2 linkid="xdmcpsecurity">XDMCP Security
+</tocsect2>
+<tocsect2 linkid="xdmcpaccess">XDMCP Access Control
+</tocsect2>
+<tocsect2 linkid="rbac">RBAC (Role Based Access Control)
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="consolekit">ConsoleKit 지원
+</tocsect1>
+<tocsect1 linkid="gdmsetupusage">gdmsetup으로 GDM 설정하기
+<tocsect2 linkid="gdmsetuplocaltab">Local Tab
+</tocsect2>
+<tocsect2 linkid="gdmsetupremotetab">Remote Tab
+</tocsect2>
+<tocsect2 linkid="gdmsetupaccessibilitytab">Accessibility Tab
+</tocsect2>
+<tocsect2 linkid="gdmsetupsecuritytab">Security Tab
+</tocsect2>
+<tocsect2 linkid="gdmsetupuserstab">Users Tab
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="configuration">설정
+<tocsect2 linkid="scriptdirs">The Script Directories
+</tocsect2>
+<tocsect2 linkid="configfile">The Configuration Files - GDM System Defaults Configuration File
+             and GDM Custom Configuraiton File
+<tocsect3 linkid="daemonsection">Daemon Configuration
+</tocsect3>
+<tocsect3 linkid="securitysection">보안 옵션
+</tocsect3>
+<tocsect3 linkid="xdmcpsection">XDCMP Support
+</tocsect3>
+<tocsect3 linkid="commonguioptions">Common GUI Configuration Options
+</tocsect3>
+<tocsect3 linkid="greetersection">Greeter Configuration
+</tocsect3>
+<tocsect3 linkid="choosersection">XDCMP Chooser Options
+</tocsect3>
+<tocsect3 linkid="debugsection">Debug Configuration
+</tocsect3>
+<tocsect3 linkid="customcmdsection">Custom Commands
+</tocsect3>
+<tocsect3 linkid="xserverdefs">X Server Definitions
+</tocsect3>
+<tocsect3 linkid="attacheddisplayconfig">Attached DISPLAY Configuration
+</tocsect3>
+</tocsect2>
+<tocsect2 linkid="userconfig">Per User Configuration
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="controlling">Controlling GDM
+<tocsect2 linkid="commands">Commands
+</tocsect2>
+<tocsect2 linkid="fifoprot">The FIFO protocol
+</tocsect2>
+<tocsect2 linkid="socketprot">Socket Protocol
+<tocsect3 linkid="adddynamic">ADD_DYNAMIC_DISPLAY
+</tocsect3>
+<tocsect3 linkid="allservers">ALL_SERVERS
+</tocsect3>
+<tocsect3 linkid="attachedservers">ATTACHED_SERVERS
+</tocsect3>
+<tocsect3 linkid="authlocal">AUTH_LOCAL
+</tocsect3>
+<tocsect3 linkid="close">CLOSE
+</tocsect3>
+<tocsect3 linkid="flexixnest">FLEXI_XNEST
+</tocsect3>
+<tocsect3 linkid="flexixnestuser">FLEXI_XNEST_USER
+</tocsect3>
+<tocsect3 linkid="flexixserver">FLEXI_XSERVER
+</tocsect3>
+<tocsect3 linkid="flexixserveruser">FLEXI_XSERVER_USER
+</tocsect3>
+<tocsect3 linkid="getconfig">GET_CONFIG
+</tocsect3>
+<tocsect3 linkid="getconfigfile">GET_CONFIG_FILE
+</tocsect3>
+<tocsect3 linkid="getcustomconfigfile">GET_CUSTOM_CONFIG_FILE
+</tocsect3>
+<tocsect3 linkid="getserverdetails">GET_SERVER_DETAILS
+</tocsect3>
+<tocsect3 linkid="getserverlist">GET_SERVER_LIST
+</tocsect3>
+<tocsect3 linkid="greeterpids">GREETERPIDS
+</tocsect3>
+<tocsect3 linkid="querylogoutaction">QUERY_LOGOUT_ACTION
+</tocsect3>
+<tocsect3 linkid="querycustomcmdlabels">QUERY_CUSTOM_CMD_LABELS
+</tocsect3>
+<tocsect3 linkid="querycustomcmdnorestartstatus">QUERY_CUSTOM_CMD_NO_RESTART_STATUS
+</tocsect3>
+<tocsect3 linkid="queryvt">QUERY_VT
+</tocsect3>
+<tocsect3 linkid="releasedynamic">RELEASE_DYNAMIC_DISPLAYS
+</tocsect3>
+<tocsect3 linkid="removedynamic">REMOVE_DYNAMIC_DISPLAY
+</tocsect3>
+<tocsect3 linkid="serverbusy">SERVER_BUSY
+</tocsect3>
+<tocsect3 linkid="setlogoutaction">SET_LOGOUT_ACTION
+</tocsect3>
+<tocsect3 linkid="setsafelogoutaction">SET_SAFE_LOGOUT_ACTION
+</tocsect3>
+<tocsect3 linkid="setvt">SET_VT
+</tocsect3>
+<tocsect3 linkid="updateconfig">UPDATE_CONFIG
+</tocsect3>
+<tocsect3 linkid="queryversion">VERSION
+</tocsect3>
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="binaries">GDM 명령어
+<tocsect2 linkid="bindir_binaries">GDM User Commands
+<tocsect3 linkid="gdmxnestchoosercommandline">gdmXnestchooser and
+               gdmXnest Command Line Options
+</tocsect3>
+<tocsect3 linkid="gdmflexichoosercommandline">gdmflexichooser Command Line Options
+</tocsect3>
+<tocsect3 linkid="gdmdynamiccommandline">gdmdynamic Command Line Options
+</tocsect3>
+<tocsect3 linkid="gdmphotosetupcommandline">gdmphotosetup Command Line Options
+</tocsect3>
+<tocsect3 linkid="gdmthemetestercommandline">gdmthemetester Command Line Options
+</tocsect3>
+</tocsect2>
+<tocsect2 linkid="sbindir_binaries">GDM Root User Commands
+<tocsect3 linkid="gdmcommandline">gdm and gdm-binary
+               Command Line Options
+</tocsect3>
+<tocsect3 linkid="gdmsetupcommandline">gdmsetup Command Line Options
+</tocsect3>
+<tocsect3 linkid="gdmrestartcommandline">gdm-restart Command Line Options
+</tocsect3>
+<tocsect3 linkid="gdmsaferestartcommandline">gdm-safe-restart Command Line Options
+</tocsect3>
+<tocsect3 linkid="gdmstopcommandline">gdm-stop Command Line Options
+</tocsect3>
+</tocsect2>
+<tocsect2 linkid="libexecdir_binaries">GDM Internal Commands
+<tocsect3 linkid="gdmgreeterlogincommandline">gdmchooser and gdmlogin
+               Command Line Options
+</tocsect3>
+<tocsect3 linkid="gdmchoosercommandline">gdmchooser Command Line Options
+</tocsect3>
+<tocsect3 linkid="gdm-ssh-session">gdm-ssh-session
+</tocsect3>
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="thememanual">테마 환영 프로그램
+<tocsect2 linkid="themeover">Theme Overview
+</tocsect2>
+<tocsect2 linkid="descofthemeformat">테마 XML 형식의 자세한 설명
+<tocsect3 linkid="greetertag">greeter tag
+</tocsect3>
+<tocsect3 linkid="boxnodes">Box Nodes
+</tocsect3>
+<tocsect3 linkid="fixednodes">Fixed Nodes
+</tocsect3>
+<tocsect3 linkid="itemnodes">Item Nodes
+</tocsect3>
+<tocsect3 linkid="positionnodes">Position Node
+</tocsect3>
+<tocsect3 linkid="shownodes">Show Node
+</tocsect3>
+<tocsect3 linkid="noractprenodes">Normal/Active/Prelight Nodes
+</tocsect3>
+<tocsect3 linkid="listcoloronodes">Face Browser Icon/Label Color Nodes
+</tocsect3>
+<tocsect3 linkid="textnodes">Text Node
+</tocsect3>
+<tocsect3 linkid="stocklabels">Stock node
+</tocsect3>
+<tocsect3 linkid="customwidgetry">Custom Widgetry
+</tocsect3>
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="accessibility">접근성 기능
+<tocsect2 linkid="accessibilityconfig">Accessibility Configuration
+<tocsect3 linkid="accessibilitytheming">Accessibile Theming
+</tocsect3>
+<tocsect3 linkid="accessibilityatprograms">AT Program Support
+</tocsect3>
+<tocsect3 linkid="accessibilitytroubleshooting">AT Troubleshooting
+</tocsect3>
+<tocsect3 linkid="accessibilitysound">Accessibility Login Sound Configuration
+</tocsect3>
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="solaris">솔라리스 전용 기능
+<tocsect2 linkid="solarisusing">솔라리스에서 GDM 사용하기
+</tocsect2>
+<tocsect2 linkid="solarisconfiguration">솔라리스 설정
+</tocsect2>
+<tocsect2 linkid="solarislogindevperm">솔라리스 /etc/logindevperm
+</tocsect2>
+<tocsect2 linkid="solarisautomaticlogin">솔라리스 자동 로그인
+</tocsect2>
+<tocsect2 linkid="solarisrbac">Solaris RBAC support for Shutdown, Reboot, and Suspend
+</tocsect2>
+<tocsect2 linkid="solarisother">기타 솔라리스 기능
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="exampleconf">설정 예
+<tocsect2 linkid="customcommand">Defining Custom Commands
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="troubleshooting">문제 해결
+<tocsect2 linkid="wontstart">GDM Will Not Start
+</tocsect2>
+<tocsect2 linkid="notaccessfile">GDM Will Not Access User Settings
+</tocsect2>
+</tocsect1>
+<tocsect1 linkid="license">License
+</tocsect1>
+</toc>

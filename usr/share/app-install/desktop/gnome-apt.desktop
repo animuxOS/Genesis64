@@ -1,0 +1,14 @@
+[Desktop Entry]
+X-AppInstall-Package=gnome-apt
+X-AppInstall-Popcon=185
+X-AppInstall-Section=main
+
+Encoding=UTF-8
+Name=Gnome Apt Software Manager
+Comment=Manage the installed software packages on your Debian system
+Exec=gksu -m 'GNOME Apt needs superuser priviledges to manage software.' -t 'Enter root password' -u root /usr/bin/gnome-apt
+Icon=gnome-apt.png
+Terminal=false
+MultipleArgs=false
+Type=Application
+Categories=Application;System;

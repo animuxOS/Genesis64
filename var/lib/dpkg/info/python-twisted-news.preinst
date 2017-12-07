@@ -1,0 +1,32 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_pycentral
+if which pycentral >/dev/null 2>&1 && pycentral --help 2>/dev/null | grep -q '^ *version'; then
+	pycentral pkgprepare python-twisted-news <<PYEOF
+[python-package]
+format = 1
+python-version = all
+[pycentral]
+version = 0.6.7
+[files]
+/usr/share/pyshared/twisted=d
+/usr/share/pyshared/twisted/plugins=d
+/usr/share/pyshared/twisted/plugins/twisted_news.py=f
+/usr/share/pyshared/twisted/news=d
+/usr/share/pyshared/twisted/news/test=d
+/usr/share/pyshared/twisted/news/test/test_news.py=f
+/usr/share/pyshared/twisted/news/test/test_nntp.py=f
+/usr/share/pyshared/twisted/news/test/__init__.py=f
+/usr/share/pyshared/twisted/news/news.py=f
+/usr/share/pyshared/twisted/news/__init__.py=f
+/usr/share/pyshared/twisted/news/nntp.py=f
+/usr/share/pyshared/twisted/news/tap.py=f
+/usr/share/pyshared/twisted/news/database.py=f
+/usr/share/pyshared/twisted/news/_version.py=f
+/usr/share/pyshared/Twisted_News-8.1.0.egg-info=f
+PYEOF
+else
+	mkdir -p /var/lib/pycentral
+	echo python-twisted-news >> /var/lib/pycentral/delayed-pkgs
+fi
+# End automatically added section

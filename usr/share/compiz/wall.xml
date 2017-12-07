@@ -1,0 +1,1865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+	<plugin useBcop="true" name="wall">
+		<short>Desktop Wall</short>
+		<short xml:lang="ca">Paret de l'escriptori</short>
+		<short xml:lang="de">Desktop-Tafel</short>
+		<short xml:lang="el">Τοίχος Επιφάνειας Εργασίας</short>
+		<short xml:lang="en_GB">Desktop Wall</short>
+		<short xml:lang="fi">Työpöytäseinä</short>
+		<short xml:lang="fr">Bureaux sur un Plan (version améliorée)</short>
+		<short xml:lang="gl">Mural das Áreas de Traballo</short>
+		<short xml:lang="gu">ડેસ્કટોપ દિવાલ</short>
+		<short xml:lang="hi">डेस्कटॉप दीवाल</short>
+		<short xml:lang="it">Muraglia di desktop</short>
+		<short xml:lang="ja">デスクトップの壁</short>
+		<short xml:lang="nb">Skrivebordsvegg</short>
+		<short xml:lang="nl">Bureaublad Muur</short>
+		<short xml:lang="pl">Ściana pulpitu</short>
+		<short xml:lang="pt">Muro das Áreas de Trabalho</short>
+		<short xml:lang="pt_BR">Muro das Áreas de Trabalho</short>
+		<short xml:lang="sv">Skrivbordsvägg</short>
+		<short xml:lang="tr">Masaüstü Duvarı</short>
+		<long>Desktop Wall Plugin</long>
+		<long xml:lang="ca">Connector de paret de l'escriptori</long>
+		<long xml:lang="de">Erlaubt eine tafelartige Anordnung der Arbeitsflächen.</long>
+		<long xml:lang="el">Πρόσθετο Τοίχου Επιφάνειας Εργασίας</long>
+		<long xml:lang="en_GB">Desktop Wall Plugin</long>
+		<long xml:lang="fi">Työpöytäseinäliitännäinen</long>
+		<long xml:lang="fr">Bureaux sur un Plan (version améliorée de l'extension d'origine de Compiz, qui porte le même nom)</long>
+		<long xml:lang="gl">Plugin que crea un mural dás areas de traballo</long>
+		<long xml:lang="gu">ડેસ્કટોપ દિવાલ પ્લગઈન</long>
+		<long xml:lang="hi">डेस्कटॉप दीवाल प्लगिन</long>
+		<long xml:lang="it">Plug-in «Muraglia di desktop»</long>
+		<long xml:lang="ja">デスクトップの壁のプラグイン</long>
+		<long xml:lang="nb">Skrivebordsvegg-tillegg</long>
+		<long xml:lang="nl">Bureaublad Muur Plugin</long>
+		<long xml:lang="pl">Wtyczka ściany pulpitu</long>
+		<long xml:lang="pt">Plugin Muro das Áreas de Trabalho</long>
+		<long xml:lang="pt_BR">Plugin Muro das Áreas de Trabalho </long>
+		<long xml:lang="sv">Insticksmodul för skrivbordsvägg</long>
+		<long xml:lang="tr">Masaüstü Duvarı Eklentisi</long>
+		<category>Desktop</category>
+		<feature>largedesktop</feature>
+		<deps>
+			<relation type="after">
+				<plugin>decoration</plugin>
+			</relation>
+			<relation type="before">
+				<plugin>wobbly</plugin>
+				<plugin>fade</plugin>
+			</relation>
+		</deps>
+		<display>
+			<group>
+				<short>Viewport Switch Preview</short>
+				<short xml:lang="de">Umschalt-Vorschau</short>
+				<short xml:lang="el">Αλλαγή Προεπισκόπισης Εικονικής Επιφάνειας Εργασίας</short>
+				<short xml:lang="en_GB">Viewport Switch Preview</short>
+				<short xml:lang="es">Cambiar preliminar viewport</short>
+				<short xml:lang="fr">Prévisualisation de changement de bureau</short>
+				<short xml:lang="gl">Antevisión da cambio deescritorio</short>
+				<short xml:lang="gu">દૃશ્યપોર્ટ પૂર્વદર્શન બદલો</short>
+				<short xml:lang="hi">व्यूपोर्ट स्विच पूर्वावलोकन</short>
+				<short xml:lang="it">Anteprima cambio area di lavoro</short>
+				<short xml:lang="ja">ビューポート切り替えプレビュー</short>
+				<short xml:lang="nb">Forhåndsvisning av bytting av arbeidsområde</short>
+				<short xml:lang="nl">Viewport wissel preview</short>
+				<short xml:lang="pt">Antevisão da Mudança de Viewport</short>
+				<short xml:lang="pt_BR">Previsão da mudança da janela de visualização</short>
+				<short xml:lang="sv">Förhandsvisning för växling av arbetsyta</short>
+				<short xml:lang="tr">Masaüstü Seçimi Önizlemesi</short>
+				<option type="bool" name="show_switcher">
+					<short>Show Viewport Switcher Preview</short>
+					<short xml:lang="de">Vorschaufenster beim Umschalten anzeigen</short>
+					<short xml:lang="el">Εμφάνιση Επιλογέα Προεπισκοπίσεων Εικονικών Επιφανειών Εργασίας</short>
+					<short xml:lang="en_GB">Show Viewport Switcher Preview</short>
+					<short xml:lang="fr">Montrer des prévisualisations temps réel des bureaux dans la fenêtre du sélecteur</short>
+					<short xml:lang="gl">Mostrar a vista previa da cambio deescritorio</short>
+					<short xml:lang="gu">દૃશ્યપોર્ટ બદલનાર પૂર્વદર્શન બતાવો</short>
+					<short xml:lang="hi">व्यूपोर्ट स्विचर पूर्वावलोकन दिखाएँ</short>
+					<short xml:lang="it">Mostrare anteprima selezionatore aree di lavoro</short>
+					<short xml:lang="ja">ビューポート切り替えプレビューを表示</short>
+					<short xml:lang="nb">Vis forhåndsvisning av arbeidsområde</short>
+					<short xml:lang="nl">Toon viewport wisselaar preview</short>
+					<short xml:lang="pt">Mostrar a antevisão da Mudança de Viewport</short>
+					<short xml:lang="pt_BR">Mostrar a previsão mudança da janela de visualização</short>
+					<short xml:lang="sv">Visa förhandsvisning av arbetsytväxlare</short>
+					<long>Show switcher window while switching viewports</long>
+					<long xml:lang="de">Zeigt ein Vorschaufenster beim Umschalten von Arbeitsflächen an.</long>
+					<long xml:lang="el">Εμφάνιση παραθύρου αλλαγής καθώς αλλάζουν οι εικονικές επιφάνειες εργασίας</long>
+					<long xml:lang="en_GB">Show switcher window while switching viewports</long>
+					<long xml:lang="fr">Montrer la fenêtre du sélecteur pendant le changement de bureau</long>
+					<long xml:lang="gl">Mostrar fiestra do switcher durante o cambio de escritorio</long>
+					<long xml:lang="gu">જ્યારે દૃશ્યપોર્ટ બદલી રહ્યા હોય ત્યારે બદલનાર વિન્ડો બતાવો</long>
+					<long xml:lang="hi">स्विचर विंडो में व्यूपोर्ट स्विचिंग के दौरान दिखाएँ</long>
+					<long xml:lang="it">Mostra la finestra del selettore mentre si cambia area di lavoro</long>
+					<long xml:lang="ja">ビューポートの切り替え中にスイッチャー・ウィンドウを表示</long>
+					<long xml:lang="nb">Vis byttevindu mens arbeidsområde byttes</long>
+					<long xml:lang="nl">Toon wissel venster tĳdens het wisselen van viewports</long>
+					<long xml:lang="pt">Mostrar janela do switcher durante mudança de viewport</long>
+					<long xml:lang="pt_BR">Mostrar janela do alternador durante mudança da janela de visualização</long>
+					<long xml:lang="sv">Visa växlingsfönster under växling av arbetsytor</long>
+					<default>true</default>
+				</option>
+				<option type="bool" name="miniscreen">
+					<short>Show Live Viewport Previews</short>
+					<short xml:lang="de">Live-Arbeitsflächenvorschau anzeigen</short>
+					<short xml:lang="el">Εμφάνιση Ζωντανών Προεπισκοπίσεων Εικονικών Επιφανειών Εργασίας</short>
+					<short xml:lang="en_GB">Show Live Viewport Previews</short>
+					<short xml:lang="fr">Montrer des prévisualisations temps réel des bureaux</short>
+					<short xml:lang="gl">Mostrar Antevisións ao Vivo dos Vieports</short>
+					<short xml:lang="gu">જીવંત દૃશ્યપોર્ટ પૂર્વદર્શનો બતાવો</short>
+					<short xml:lang="hi">जीवंत व्यूपोर्ट पूर्वावलोकन दिखाएँ</short>
+					<short xml:lang="it">Mostrare anteprima in tempo reale delle aree di lavoro</short>
+					<short xml:lang="ja">ビューポート実画面プレビューを表示</short>
+					<short xml:lang="nb">Vis levende forhåndsvisning av arbeidsområde</short>
+					<short xml:lang="nl">Toon live viewport previews</short>
+					<short xml:lang="pt">Mostrar Antevisões ao Vivo dos Vieports</short>
+					<short xml:lang="pt_BR">Mostrar previsões das janelas de visualização em tempo real</short>
+					<short xml:lang="sv">Visa förhandsvisningar av arbetsyta i realtid</short>
+					<long>Show live viewport previews in switcher window</long>
+					<long xml:lang="de">Zeigt eine Echtzeitvorschau von allen Arbeitsflächen beim Umschalten an.</long>
+					<long xml:lang="el">Εμφάνιση ζωντανών προεπισκοπίσεων εικονικών επιφανειών εργασίας στο παράθυρο αλλαγής</long>
+					<long xml:lang="en_GB">Show live viewport previews in switcher window</long>
+					<long xml:lang="fr">Montrer des prévisualisations temps réel dans la fenêtre du sélecteur</long>
+					<long xml:lang="gl">Mostrar vistas previas ao vivo (sempre actualizadas) dos escritorios nunha fiestra do switcher</long>
+					<long xml:lang="gu">બદલનાર વિન્ડોમાં જીવંત દૃશ્યપોર્ટ પૂર્વદર્શનો બતાવો</long>
+					<long xml:lang="hi">स्विचर विंडो में जीवंत व्यूपोर्ट पूर्वावलोकन दिखाएँ</long>
+					<long xml:lang="it">Mostra anteprime reali nella finestra del selettore</long>
+					<long xml:lang="ja">ビューポート実画面プレビューをスイッチャー・ウィンドウに表示</long>
+					<long xml:lang="nb">Vis levende forhåndsvisning av arbeidsområde i byttevindu</long>
+					<long xml:lang="nl">Toon live viewport previews in wissel venster</long>
+					<long xml:lang="pt">Mostrar antevisões em tempo real dos viewports numa janela do switcher</long>
+					<long xml:lang="pt_BR">Mostrar previsões ao vivo (sempre atualizadas) das janelas de visualização em uma janela do alternador</long>
+					<long xml:lang="sv">Visa förhandsvisning av arbetsyta i realtid i växlingsfönster</long>
+					<default>false</default>
+				</option>
+				<option type="float" name="preview_timeout">
+					<short>Switch Target Preview Visibility Time</short>
+					<short xml:lang="de">Anzeigedauer für Vorschaufenster</short>
+					<short xml:lang="el">Αλλαγή του Χρόνου που θα είναι Ορατή η Προεπισκόπιση του Στόχου</short>
+					<short xml:lang="en_GB">Switch Target Preview Visibility Time</short>
+					<short xml:lang="fr">Changer le temps de visibilité de la prévisualisation de la cible</short>
+					<short xml:lang="gl">Trocar Tempo de Visibilidade da Antevisión do Alvo</short>
+					<short xml:lang="gu">લક્ષ્ય પૂર્વદર્શન દૃશ્યતા સમય બદલો</short>
+					<short xml:lang="hi">लक्ष्य पूर्वावलोकन दृश्यता समय स्विच करें</short>
+					<short xml:lang="it">Tempo visibilità anteprima selettore aree di lavoro</short>
+					<short xml:lang="ja">切り替え先プレビューの表示時間</short>
+					<short xml:lang="nb">Visningstid for forhåndsvisning av byttemål</short>
+					<short xml:lang="nl">Switch doel preview zichtbaarheidstijd</short>
+					<short xml:lang="pt">Mudar Tempo de Visibilidade da Antevisão do Alvo</short>
+					<short xml:lang="pt_BR">Mudar tempo de visibilidade da previsão do alvo</short>
+					<short xml:lang="sv">Visningstid för förhandsvisning av växlarmål</short>
+					<long>Duration (in s) the switch target preview should remain visible after switching ends.</long>
+					<long xml:lang="de">Dauer der Anzeige des Arbeitsflächenvorschaufensters nach Ende der Umschalt-Animation in Sekunden.</long>
+					<long xml:lang="el">Διάρκεια (σε s) κατα την οποία η προεπισκόπιση της αλλαγής στόχου θα παραμείνει ορατή μετά το τέλος της αλλαγής.</long>
+					<long xml:lang="en_GB">Duration (in s) the switch target preview should remain visible after switching ends.</long>
+					<long xml:lang="fr">Durée en secondes pendant laquelle la prévisualisation du bureau cible reste visible, après la fin du changement.</long>
+					<long xml:lang="gl">Duración (en s) que a vista previa do alvo do switch deberá permanecer visíbel despois terminar o modo de switch.</long>
+					<long xml:lang="gu">અંત બદલ્યા પછી લક્ષ્ય પૂર્વદર્શન બદલવાનું દૃશ્યમાન રહેવું જોઈએ તે માટેનો ગાળો (સેકન્ડમાં)</long>
+					<long xml:lang="hi">अवधि जिसमें स्विच लक्ष्य पूर्वावलोकन को स्विचिंग अंत के बाद दृश्य रहना चाहिए.</long>
+					<long xml:lang="it">Durata (in secondi) durante il quale l'anteprima della finestra deve restare visibile dopo che la selezione è terminata.</long>
+					<long xml:lang="ja">切り替え後も切り替え先プレビューを表示しておく継続時間(秒)</long>
+					<long xml:lang="nb">Varighet (i sek) forhåndsvisningen av byttemålet skal fortsette å være synlig etter bytting er ferdig.</long>
+					<long xml:lang="nl">Duur (in s) de wissel dat de doelpreview zichtbaar moet blĳven nadat het wisselen wordt beëindigt.</long>
+					<long xml:lang="pt">Duração (em s) que a antevisão do alvo do switch deverá permanecer visível após terminar o modo de switch.</long>
+					<long xml:lang="pt_BR">Duração (em s) que a previsão deverá permanecer visível após terminar o modo de troca.</long>
+					<long xml:lang="sv">Varaktighet (i s) på förhandsvisning som växlingsmål ska vara synligt efter växlingen slutat</long>
+					<default>0.4</default>
+					<min>0.0</min>
+					<max>2.0</max>
+					<precision>0.05</precision>
+				</option>
+				<option type="int" name="preview_scale">
+					<short>Preview Scale</short>
+					<short xml:lang="it">Anteprima Scala finestre</short>
+					<short xml:lang="ja">プレビューの拡縮率</short>
+					<short xml:lang="pt">Prever Escalamento</short>
+					<long>Size of the preview in %</long>
+					<long xml:lang="it">Dimensione anteprima in %</long>
+					<long xml:lang="ja">プレビューの % 単位のサイズ</long>
+					<long xml:lang="pt">Tamanho da antevisão em %s</long>
+					<default>100</default>
+					<min>0</min>
+					<max>200</max>
+				</option>
+				<option type="int" name="edge_radius">
+					<short>Edge Radius</short>
+					<short xml:lang="ca">Radi de la vora</short>
+					<short xml:lang="el">Ακτίνα Ορίου</short>
+					<short xml:lang="en_GB">Edge Radius</short>
+					<short xml:lang="fr">Rayon du Bord</short>
+					<short xml:lang="gl">Radio do borde</short>
+					<short xml:lang="gu">બાજુ ત્રિજ્યા</short>
+					<short xml:lang="hi">किनारा त्रिज्या</short>
+					<short xml:lang="it">Raggio del bordo</short>
+					<short xml:lang="ja">四隅の丸み</short>
+					<short xml:lang="nb">Kantradius</short>
+					<short xml:lang="nl">Rand radius</short>
+					<short xml:lang="pt">Raio da borda</short>
+					<short xml:lang="pt_BR">Raio da borda</short>
+					<short xml:lang="sv">Kantradie</short>
+					<long>Radius of the rounded edge</long>
+					<long xml:lang="ca">Radi de la vora arrodonida</long>
+					<long xml:lang="de">Radius der abgerundeten Ecken</long>
+					<long xml:lang="el">Ακτίνα της στρογγυλεμένης άκρης</long>
+					<long xml:lang="en_GB">Radius of the rounded edge</long>
+					<long xml:lang="fr">Le rayon des bords arrondis</long>
+					<long xml:lang="gl">Radio das marxes redondeadas</long>
+					<long xml:lang="gu">ગોળીય બાજુની ત્રિજ્યા</long>
+					<long xml:lang="hi">गोलाकार किनारे की त्रिज्या</long>
+					<long xml:lang="it">Raggio degli angoli arrotondati</long>
+					<long xml:lang="ja">枠の四隅の丸み</long>
+					<long xml:lang="nb">Radius for den avrundede kanten</long>
+					<long xml:lang="nl">Radius van de afgeronde hoek</long>
+					<long xml:lang="pl">Promień zaokrąglonej krawędzi</long>
+					<long xml:lang="pt">Raio das margens arredondadas</long>
+					<long xml:lang="pt_BR">Raio das margens arredondadas</long>
+					<long xml:lang="sv">Radie på den rundade kantens</long>
+					<default>5</default>
+					<min>0</min>
+					<max>20</max>
+				</option>
+				<option type="int" name="border_width">
+					<short>Border Width</short>
+					<short xml:lang="ca">Amplada de la vora</short>
+					<short xml:lang="de">Rahmenbreite</short>
+					<short xml:lang="el">Οριοθέτηση Πλάτους</short>
+					<short xml:lang="en_GB">Border Width</short>
+					<short xml:lang="es">Ancho del borde</short>
+					<short xml:lang="fi">Reunan leveys</short>
+					<short xml:lang="fr">Largeur de la bordure</short>
+					<short xml:lang="gl">Ancho da marxe</short>
+					<short xml:lang="gu">કિનારી પહોળાઈ</short>
+					<short xml:lang="hi">किनारा चौड़ाई</short>
+					<short xml:lang="it">Larghezza bordo</short>
+					<short xml:lang="ja">枠の幅</short>
+					<short xml:lang="nb">Kantbredde</short>
+					<short xml:lang="nl">Rand dikte</short>
+					<short xml:lang="pl">Grubość obramowania</short>
+					<short xml:lang="pt">Largura da margem</short>
+					<short xml:lang="pt_BR">Largura da margem</short>
+					<short xml:lang="sv">Bredd på kant</short>
+					<short xml:lang="tr">Kenarlık Genişliği</short>
+					<short xml:lang="zh_CN">边框宽度</short>
+					<long>Width of the border between the previews</long>
+					<long xml:lang="it">Larghezza del bordo tra le anteprime</long>
+					<long xml:lang="ja">プレビュー同士間の境界の幅</long>
+					<long xml:lang="pt">Largura da borda entre as antevisões</long>
+					<default>10</default>
+					<min>0</min>
+					<max>30</max>
+				</option>
+				<option type="color" name="outline_color">
+					<short>Outline Color</short>
+					<short xml:lang="de">Rahmenfarbe</short>
+					<short xml:lang="el">Χρώμα Περιγράμματος</short>
+					<short xml:lang="en_GB">Outline Colour</short>
+					<short xml:lang="fr">Couleur du bord extérieur</short>
+					<short xml:lang="gl">Cor de Delineación</short>
+					<short xml:lang="gu">બાહ્ય કિનારી રંગ</short>
+					<short xml:lang="hi">खाका रंग</short>
+					<short xml:lang="it">Colore bordo esterno</short>
+					<short xml:lang="ja">輪郭の色</short>
+					<short xml:lang="nb">Omrissfarge</short>
+					<short xml:lang="nl">Omtrek kleur</short>
+					<short xml:lang="pl">Kolor obrysu</short>
+					<short xml:lang="pt">Cor de Delineação</short>
+					<short xml:lang="pt_BR">Cor de Delineação</short>
+					<short xml:lang="sv">Konturfärg</short>
+					<short xml:lang="tr">Dış Kenarlık Rengi</short>
+					<long>Outline color of the switcher window.</long>
+					<long xml:lang="el">Χρώμα περιγράμματος του επιλογέα παραθύρου</long>
+					<long xml:lang="en_GB">Outline colour of the switcher window.</long>
+					<long xml:lang="es">Color de la linea externa de la ventana del conmutador</long>
+					<long xml:lang="fr">Couleur du bord extérieur de la fenêtre du sélecteur.</long>
+					<long xml:lang="gl">Cor do contorno da fiestra de mudanza.</long>
+					<long xml:lang="gu">બદલનાર વિન્ડોના રંગની બાહ્ય કિનારી.</long>
+					<long xml:lang="hi">स्विचर विंडो का खाका रंग.</long>
+					<long xml:lang="it">Colore del bordo esterno del selettore.</long>
+					<long xml:lang="ja">スイッチャー・ウィンドウの輪郭の色</long>
+					<long xml:lang="nb">Farge for omrisset av byttevinduet.</long>
+					<long xml:lang="nl">Omtrek kleur van het wissel venster.</long>
+					<long xml:lang="pt">Cor de delineação da janela de mudança.</long>
+					<long xml:lang="pt_BR">Cor de delineação da janela do alternador.</long>
+					<long xml:lang="sv">Konturfärg för växlingsfönster</long>
+					<default>
+						<red>0x3333</red>
+						<green>0x3333</green>
+						<blue>0x3333</blue>
+						<alpha>0xd998</alpha>
+						</default>
+				</option>
+				<subgroup>
+					<short>Background Gradient</short>
+					<short xml:lang="ca">Gradient de fons</short>
+					<short xml:lang="el">Διαβάθμιση Φόντου</short>
+					<short xml:lang="en_GB">Background Gradient</short>
+					<short xml:lang="fi">Taustakuvan väriliuku</short>
+					<short xml:lang="fr">Gradient d'arrière-plan</short>
+					<short xml:lang="gl">Degradado do fondo</short>
+					<short xml:lang="gu">પાશ્વભાગ ઢાળ</short>
+					<short xml:lang="hi">पृष्ठभूमि ढ़ाल</short>
+					<short xml:lang="it">Gradiente di sfondo</short>
+					<short xml:lang="ja">背景グラデーション</short>
+					<short xml:lang="nb">Bakgrunnens fargeovergang</short>
+					<short xml:lang="nl">Achtergrond gradatie</short>
+					<short xml:lang="pl">Gradient tła</short>
+					<short xml:lang="pt">Fundo em Gradiente</short>
+					<short xml:lang="pt_BR">Fundo em Gradiente</short>
+					<short xml:lang="sv">Bakgrundsgradient</short>
+					<short xml:lang="tr">Masaüstü Karışımı</short>
+					
+					<option type="color" name="background_gradient_base_color">
+						<short>Base Color</short>
+						<short xml:lang="ca">Color de base</short>
+						<short xml:lang="el">Βασικό Χρώμα</short>
+						<short xml:lang="en_GB">Base Colour</short>
+						<short xml:lang="fi">Perusväri</short>
+						<short xml:lang="fr">Couleur de Base</short>
+						<short xml:lang="gl">Cor Base</short>
+						<short xml:lang="gu">આધાર રંગ</short>
+						<short xml:lang="hi">आधार रंग</short>
+						<short xml:lang="it">Colore base</short>
+						<short xml:lang="ja">基本色</short>
+						<short xml:lang="nb">Basisfarge</short>
+						<short xml:lang="nl">Basis kleur</short>
+						<short xml:lang="pt">Cor Base</short>
+						<short xml:lang="pt_BR">Cor Base</short>
+						<short xml:lang="sv">Grundfärg</short>
+						<short xml:lang="tr">Zemin Rengi</short>
+						<long>First color for the background gradient of the switcher window.</long>
+						<long xml:lang="el">Πρώτο χρώμα για την διαβάθμιση φόντου του επιλογέα παραθύρου.</long>
+						<long xml:lang="en_GB">First colour for the background gradient of the switcher window.</long>
+						<long xml:lang="fr">Première couleur pour le gradient d'arrière-plan de la fenêtre du sélecteur.</long>
+						<long xml:lang="gl">Primeira cor para o gradiente de fondo da fiestra do switcher.</long>
+						<long xml:lang="gu">બદલનાર વિન્ડોના પાશ્વભાગ ઢાળ માટેનો પ્રથમ રંગ.</long>
+						<long xml:lang="hi">स्विचर विंडो के पृष्ठभूमि रंग के लिए पहला रंग.</long>
+						<long xml:lang="it">Primo colore per il gradiente di sfondo del selettore finestre.</long>
+						<long xml:lang="ja">スイッチャー・ウィンドウの背景グラデーションの1番目の色</long>
+						<long xml:lang="nb">Første farge for bakgrunnsovergangen til byttevinduet.</long>
+						<long xml:lang="nl">Eerste kleur voor de achtergrond gradatie van het wisselvenster.</long>
+						<long xml:lang="pt">Primeira cor para o gradiente de fundo da janela do switcher.</long>
+						<long xml:lang="pt_BR">Primeira cor para o gradiente de fundo da janela do alternator.</long>
+						<long xml:lang="sv">Första färgen för bakgrundsgradienten för växlarfönstret.</long>
+						<default>
+							<red>0xcccc</red>
+							<green>0xcccc</green>
+							<blue>0xe665</blue>
+							<alpha>0xd998</alpha>
+						</default>
+					</option>
+					<option type="color" name="background_gradient_highlight_color">
+						<short>Highlight Color</short>
+						<short xml:lang="ca">Color de realçat</short>
+						<short xml:lang="de">Hervorhebungsfarbe</short>
+						<short xml:lang="el">Χρώμα Τονισμού</short>
+						<short xml:lang="en_GB">Highlight Colour</short>
+						<short xml:lang="fi">Korostuksen väri</short>
+						<short xml:lang="fr">Couleur de surbrillance</short>
+						<short xml:lang="gl">Cor Realce</short>
+						<short xml:lang="gu">પ્રકાશિત રંગ</short>
+						<short xml:lang="hi">रंग उभारें</short>
+						<short xml:lang="it">Colore evidenziazione</short>
+						<short xml:lang="ja">強調表示色</short>
+						<short xml:lang="nb">Farge for fremheving</short>
+						<short xml:lang="nl">Oplicht kleur</short>
+						<short xml:lang="pl">Kolor podświetlenia</short>
+						<short xml:lang="pt">Cor Realce</short>
+						<short xml:lang="pt_BR">Cor de realce</short>
+						<short xml:lang="sv">Framhävningsfärg</short>
+						<short xml:lang="tr">Vurgulama Rengi</short>
+						<long>Second color for the background gradient of the switcher window.</long>
+						<long xml:lang="el">Δεύτερο χρώμα για την διαβάθμιση φόντου του επιλογέα παραθύρου.</long>
+						<long xml:lang="en_GB">Second colour for the background gradient of the switcher window.</long>
+						<long xml:lang="es">Segundo color para el fondo de gradiente de la ventana de conmutador</long>
+						<long xml:lang="fr">Seconde couleur pour le gradient d'arrière-plan de la fenêtre du sélecteur.</long>
+						<long xml:lang="gl">Primeira cor para o gradiente de fondo da fiestra do switcher.</long>
+						<long xml:lang="gu">બદલનાર વિન્ડોના પાશ્વભાગ ઢાળ માટેનો બીજો રંગ.</long>
+						<long xml:lang="hi">स्विचर विंडो के पृष्ठभूमि ढ़ाल के लिए दूसरा रंग.</long>
+						<long xml:lang="it">Secondo colore per il gradiente di sfondo del selettore finestre.</long>
+						<long xml:lang="ja">スイッチャー・ウィンドウの背景グラデーションの2番目の色</long>
+						<long xml:lang="nb">Andre farge for fargeovergangen i bakgrunnen av byttevinduet.</long>
+						<long xml:lang="nl">Tweede klekur voor de achtergrond gradatie van het wisselvenster.</long>
+						<long xml:lang="pt">Primeira cor para o gradiente de fundo da janela do switcher.</long>
+						<long xml:lang="pt_BR">Primeira cor para o gradiente de fundo da janela do alternador.</long>
+						<long xml:lang="sv">Andra färgen för bakgrundsgradient i växlingsfönster.</long>
+						<default>
+							<red>0xf332</red>
+							<green>0xf332</green>
+							<blue>0xffff</blue>
+							<alpha>0xd998</alpha>
+						</default>
+					</option>
+					<option type="color" name="background_gradient_shadow_color">
+						<short>Shadow Color</short>
+						<short xml:lang="ca">Color de l'ombra</short>
+						<short xml:lang="de">Schattenfarbe</short>
+						<short xml:lang="el">Χρώμα Σκιάς</short>
+						<short xml:lang="en_GB">Shadow Colour</short>
+						<short xml:lang="fi">Varjon väri</short>
+						<short xml:lang="fr">Couleur de l'ombre</short>
+						<short xml:lang="gl">Cor da sombra</short>
+						<short xml:lang="gu">પડછાયા રંગ</short>
+						<short xml:lang="hi">छाया रंग</short>
+						<short xml:lang="it">Colore ombra</short>
+						<short xml:lang="ja">影の色</short>
+						<short xml:lang="nb">Skyggefarge</short>
+						<short xml:lang="nl">Schaduw kleur</short>
+						<short xml:lang="pl">Kolor cienia</short>
+						<short xml:lang="pt">Cor da sombra</short>
+						<short xml:lang="pt_BR">Cor da sombra</short>
+						<short xml:lang="sv">Skuggfärg</short>
+						<short xml:lang="tr">Gölge Rengi</short>
+						<long>Third color for the background gradient of the switcher window.</long>
+						<long xml:lang="el">Τρίτο χρώμα για την διαβάθμιση φόντου του επιλογέα παραθύρου.</long>
+						<long xml:lang="en_GB">Third colour for the background gradient of the switcher window.</long>
+						<long xml:lang="es">Tercer color para el fondo de gradiente de la ventana de conmutador</long>
+						<long xml:lang="fr">Troisième couleur pour le gradient d'arrière plan de la fenêtre du sélecteur.</long>
+						<long xml:lang="gl">Terceira cor para o gradiente de fondo da fiestra do switcher.</long>
+						<long xml:lang="gu">બદલનાર વિન્ડોના પાશ્વભાગ ઢાળ માટેનો ત્રીજો રંગ.</long>
+						<long xml:lang="hi">स्विचर विंडो के पृष्ठभूमि ढ़ाल के लिए तीसरा रंग.</long>
+						<long xml:lang="it">Terzo colore per il gradiente di sfondo del selettore finestre.</long>
+						<long xml:lang="ja">スイッチャー・ウィンドウの背景グラデーションの3番目の色</long>
+						<long xml:lang="nb">Tredje farge for fargeovergangen i bakgrunnen i byttevinduet.</long>
+						<long xml:lang="nl">Derde kleur van de achtergrond gradatie van het wissel venster.</long>
+						<long xml:lang="pt">Terceira cor para o gradiente de fundo da janela do switcher.</long>
+						<long xml:lang="pt_BR">Terceira cor para o gradiente de fundo da janela do alternador.</long>
+						<long xml:lang="sv">Tredje färgen för bakgrundsgradient i växlingsfönster.</long>
+						<default>
+							<red>0xf332</red>
+							<green>0xf332</green>
+							<blue>0xffff</blue>
+							<alpha>0xd998</alpha>
+						</default>
+					</option>
+				</subgroup>
+				<subgroup>
+					<short>Thumb Gradient</short>
+					<short xml:lang="el">Διαβάθμιση Μικρογραφίας</short>
+					<short xml:lang="en_GB">Thumb Gradient</short>
+					<short xml:lang="fr">Gradient de la miniature</short>
+					<short xml:lang="gl">Degradado da Miniatura</short>
+					<short xml:lang="gu">થમ્બ ઢાળ</short>
+					<short xml:lang="hi">थंब झुकाव</short>
+					<short xml:lang="it">Gradiente anteprima</short>
+					<short xml:lang="ja">サムネイルのグラデーション</short>
+					<short xml:lang="nb">Fargeovergang for miniatyrer</short>
+					<short xml:lang="nl">Thumbnail gradatie</short>
+					<short xml:lang="pl">Gradient miniaturki</short>
+					<short xml:lang="pt">Gradiente da Miniatura</short>
+					<short xml:lang="pt_BR">Gradiente da miniatura</short>
+					<short xml:lang="sv">Miniatyrgradient</short>
+
+					<option type="color" name="thumb_gradient_base_color">
+						<short>Base Color</short>
+						<short xml:lang="ca">Color de base</short>
+						<short xml:lang="el">Βασικό Χρώμα</short>
+						<short xml:lang="en_GB">Base Colour</short>
+						<short xml:lang="fi">Perusväri</short>
+						<short xml:lang="fr">Couleur de Base</short>
+						<short xml:lang="gl">Cor Base</short>
+						<short xml:lang="gu">આધાર રંગ</short>
+						<short xml:lang="hi">आधार रंग</short>
+						<short xml:lang="it">Colore base</short>
+						<short xml:lang="ja">基本色</short>
+						<short xml:lang="nb">Basisfarge</short>
+						<short xml:lang="nl">Basis kleur</short>
+						<short xml:lang="pt">Cor Base</short>
+						<short xml:lang="pt_BR">Cor Base</short>
+						<short xml:lang="sv">Grundfärg</short>
+						<short xml:lang="tr">Zemin Rengi</short>
+						<long>First color for the thumb gradient of the switcher window.</long>
+						<long xml:lang="el">Πρώτο χρώμα για την διαβάθμιση μικρογραφιών του επιλογέα παραθύρου.</long>
+						<long xml:lang="en_GB">First colour for the thumb gradient of the switcher window.</long>
+						<long xml:lang="fr">Première couleur pour le gradient de miniature de la fenêtre du sélecteur.</long>
+						<long xml:lang="gl">Primeira cor para o gradiente da miniatura da fiestra do switcher.</long>
+						<long xml:lang="gu">બદલનાર વિન્ડોના થમ્બ ઢાળ માટેનો પ્રથમ રંગ.</long>
+						<long xml:lang="hi">स्विचर विंडो के थंब ढ़ाल के लिए पहला रंग.</long>
+						<long xml:lang="it">Primo colore per il gradiente dell'anteprima del selettore finestre.</long>
+						<long xml:lang="ja">スイッチャー・ウィンドウのサムネイルのグラデーションの1番目の色</long>
+						<long xml:lang="nb">Første farge for miniatyrovergangen til bytevinduet.</long>
+						<long xml:lang="nl">Eerste kleur voor de thumbnail gradatie van het wissel venster.</long>
+						<long xml:lang="pt">Primeira cor para o gradiente da miniatura da janela do switcher.</long>
+						<long xml:lang="pt_BR">Primeira cor para o gradiente da miniatura da janela do alternador.</long>
+						<long xml:lang="sv">Första färgen för miniatyrgradienten i växlarfönstret.</long>
+						<default>
+							<red>0x3333</red>
+							<green>0x3333</green>
+							<blue>0x3333</blue>
+							<alpha>0x5999</alpha>
+						</default>
+					</option>
+					<option type="color" name="thumb_gradient_highlight_color">
+						<short>Highlight Color</short>
+						<short xml:lang="ca">Color de realçat</short>
+						<short xml:lang="de">Hervorhebungsfarbe</short>
+						<short xml:lang="el">Χρώμα Τονισμού</short>
+						<short xml:lang="en_GB">Highlight Colour</short>
+						<short xml:lang="fi">Korostuksen väri</short>
+						<short xml:lang="fr">Couleur de surbrillance</short>
+						<short xml:lang="gl">Cor Realce</short>
+						<short xml:lang="gu">પ્રકાશિત રંગ</short>
+						<short xml:lang="hi">रंग उभारें</short>
+						<short xml:lang="it">Colore evidenziazione</short>
+						<short xml:lang="ja">強調表示色</short>
+						<short xml:lang="nb">Farge for fremheving</short>
+						<short xml:lang="nl">Oplicht kleur</short>
+						<short xml:lang="pl">Kolor podświetlenia</short>
+						<short xml:lang="pt">Cor Realce</short>
+						<short xml:lang="pt_BR">Cor de realce</short>
+						<short xml:lang="sv">Framhävningsfärg</short>
+						<short xml:lang="tr">Vurgulama Rengi</short>
+						<long>Second color for the thumb gradient of the switcher window.</long>
+						<long xml:lang="el">Δεύτερο χρώμα για την διαβάθμιση μικρογραφιών του επιλογέα παραθύρου.</long>
+						<long xml:lang="en_GB">Second colour for the thumb gradient of the switcher window.</long>
+						<long xml:lang="es">Segundo color para el pulgar de gradiente de la ventana de conmutador</long>
+						<long xml:lang="fr">Seconde couleur pour le gradient des miniatures de la fenêtre du sélecteur.</long>
+						<long xml:lang="gl">Segunda cor para o gradiente da miniatura da fiestra do switcher.</long>
+						<long xml:lang="gu">બદલનાર વિન્ડોના થમ્બ ઢાળ માટેનો બીજો રંગ.</long>
+						<long xml:lang="hi">स्विचर विंडो के थंब ढ़ाल के लिए दूसरा रंग.</long>
+						<long xml:lang="it">Secondo colore per il gradiente dell'anteprima del selettore finestre.</long>
+						<long xml:lang="ja">スイッチャー・ウィンドウのサムネイルのグラデーションの2番目の色</long>
+						<long xml:lang="nb">Andre farge for fargeovergangen i miniatyren i byttevinduet.</long>
+						<long xml:lang="nl">Tweede kleur voor de thumbnail gradatie van het wissel venster.</long>
+						<long xml:lang="pt">Segunda cor para o gradiente da miniatura da janela do switcher.</long>
+						<long xml:lang="pt_BR">Segunda cor para o gradiente da miniatura da janela do alternador.</long>
+						<long xml:lang="sv">Andra färgen för miniatyrgradient i växlingsfönster.</long>
+						<default>
+							<red>0x3fff</red>
+							<green>0x3fff</green>
+							<blue>0x3fff</blue>
+							<alpha>0x3fff</alpha>
+						</default>
+					</option>
+				</subgroup>
+				<subgroup>
+					<short>Highlight Gradient</short>
+					<short xml:lang="el">Τονισμος Διαβάθμισης</short>
+					<short xml:lang="en_GB">Highlight Gradient</short>
+					<short xml:lang="fr">Gradient de surbrillance</short>
+					<short xml:lang="gl">Degradado do realzo</short>
+					<short xml:lang="gu">પ્રકાશન ઢાળ</short>
+					<short xml:lang="hi">ढ़ाल उभारें</short>
+					<short xml:lang="it">Gradiente di evidenziazione</short>
+					<short xml:lang="ja">強調表示のグラデーション</short>
+					<short xml:lang="nb">Fargeovergang for fremheving</short>
+					<short xml:lang="nl">Oplicht gradatie</short>
+					<short xml:lang="pl">Podświetl gradient</short>
+					<short xml:lang="pt">Realçar Gradiente</short>
+					<short xml:lang="pt_BR">Realçar Gradiente</short>
+					<short xml:lang="sv">Framhävning gradient</short>
+
+					<option type="color" name="thumb_highlight_gradient_base_color">
+						<short>Base Color</short>
+						<short xml:lang="ca">Color de base</short>
+						<short xml:lang="el">Βασικό Χρώμα</short>
+						<short xml:lang="en_GB">Base Colour</short>
+						<short xml:lang="fi">Perusväri</short>
+						<short xml:lang="fr">Couleur de Base</short>
+						<short xml:lang="gl">Cor Base</short>
+						<short xml:lang="gu">આધાર રંગ</short>
+						<short xml:lang="hi">आधार रंग</short>
+						<short xml:lang="it">Colore base</short>
+						<short xml:lang="ja">基本色</short>
+						<short xml:lang="nb">Basisfarge</short>
+						<short xml:lang="nl">Basis kleur</short>
+						<short xml:lang="pt">Cor Base</short>
+						<short xml:lang="pt_BR">Cor Base</short>
+						<short xml:lang="sv">Grundfärg</short>
+						<short xml:lang="tr">Zemin Rengi</short>
+						<long>First color for the thumb highlight gradient of the switcher window.</long>
+						<long xml:lang="el">Πρώτο χρώμα για την διαβάθμιση τονισμού μικρογραφιών του επιλογέα παραθύρου.</long>
+						<long xml:lang="en_GB">First colour for the thumb highlight gradient of the switcher window.</long>
+						<long xml:lang="fr">Première couleur pour le gradient de surbrillance de la fenêtre du sélecteur.</long>
+						<long xml:lang="gl">Primeira cor para o realce da miniatura da fiestra do switcher.</long>
+						<long xml:lang="gu">બદલનાર વિન્ડોના થમ્બ પ્રકાશિત ઢાળ માટેનો પ્રથમ રંગ.</long>
+						<long xml:lang="hi">स्विचर विंडो के थंब उभार ढ़ाल के लिए पहला रंग.</long>
+						<long xml:lang="it">Primo colore per l'evidenziazione dell'anteprima del selettore finestre.</long>
+						<long xml:lang="ja">スイッチャー・ウィンドウのサムネイルの強調表示グラデーションの1番目の色</long>
+						<long xml:lang="nb">Første farge for fargeovergangen for miniatyrfremhevingen til byttevinduet.</long>
+						<long xml:lang="nl">Eerste kleur van de thumbnail gradatie van het wisselvenster.</long>
+						<long xml:lang="pt">Primeira cor para o realce da miniatura da janela do switcher.</long>
+						<long xml:lang="pt_BR">Primeira cor para o realce da miniatura da janela do altenador.</long>
+						<long xml:lang="sv">Första färgen för framhävningsgradient på miniatyr i växlarfönstret.</long>
+						<default>
+							<red>0xffff</red>
+							<green>0xffff</green>
+							<blue>0xffff</blue>
+							<alpha>0xf332</alpha>
+						</default>
+					</option>
+					<option type="color" name="thumb_highlight_gradient_shadow_color">
+						<short>Shadow Color</short>
+						<short xml:lang="ca">Color de l'ombra</short>
+						<short xml:lang="de">Schattenfarbe</short>
+						<short xml:lang="el">Χρώμα Σκιάς</short>
+						<short xml:lang="en_GB">Shadow Colour</short>
+						<short xml:lang="fi">Varjon väri</short>
+						<short xml:lang="fr">Couleur de l'ombre</short>
+						<short xml:lang="gl">Cor da sombra</short>
+						<short xml:lang="gu">પડછાયા રંગ</short>
+						<short xml:lang="hi">छाया रंग</short>
+						<short xml:lang="it">Colore ombra</short>
+						<short xml:lang="ja">影の色</short>
+						<short xml:lang="nb">Skyggefarge</short>
+						<short xml:lang="nl">Schaduw kleur</short>
+						<short xml:lang="pl">Kolor cienia</short>
+						<short xml:lang="pt">Cor da sombra</short>
+						<short xml:lang="pt_BR">Cor da sombra</short>
+						<short xml:lang="sv">Skuggfärg</short>
+						<short xml:lang="tr">Gölge Rengi</short>
+						<long>Second color for the thumb highlight gradient of the switcher window.</long>
+						<long xml:lang="el">Δεύτερο χρώμα τονισμού για την διαβάθμιση μικρογραφιών του επιλογέα παραθύρου.</long>
+						<long xml:lang="en_GB">Second colour for the thumb highlight gradient of the switcher window.</long>
+						<long xml:lang="fr">Seconde couleur pour le gradient de surbrillance des miniatures de la fenêtre du sélecteur.</long>
+						<long xml:lang="gl">Segunda cor para o realce da miniatura da fiestra do switcher.</long>
+						<long xml:lang="gu">બદલનાર વિન્ડોના થમ્બ પ્રકાશન ઢાળ માટેનો બીજો રંગ.</long>
+						<long xml:lang="hi">स्विचर विंडो के थंब उभार ढ़ाल के लिए दूसरा रंग.</long>
+						<long xml:lang="it">Secondo colore per il gradiente di evidenziazione dell'anteprima del selettore finestre.</long>
+						<long xml:lang="ja">スイッチャー・ウィンドウのサムネイルのハイライトグラデーションの2番目の色</long>
+						<long xml:lang="nb">Andre farge for fargeovergangen i fremhevningen av miniatyren i byttevinduet.</long>
+						<long xml:lang="nl">Tweede kleur voor de thumbnail oplicht gradatie van het wisselvenster.</long>
+						<long xml:lang="pt">Segunda cor para o realce da miniatura da janela do switcher.</long>
+						<long xml:lang="pt_BR">Segunda cor para o realce da miniatura da janela do alternador.</long>
+						<long xml:lang="sv">Andra färgen för framhävningsgradienten på miniatyr i växlingsfönster.</long>
+						<default>
+							<red>0xdfff</red>
+							<green>0xdfff</green>
+							<blue>0xdfff</blue>
+							<alpha>0xa665</alpha>
+						</default>
+					</option>
+				</subgroup>
+				<subgroup>
+					<short>Arrow Colors</short>
+					<short xml:lang="ca">Colors de la fletxa</short>
+					<short xml:lang="el">Χρώματα Βέλους</short>
+					<short xml:lang="en_GB">Arrow Colours</short>
+					<short xml:lang="fi">Nuolen värit</short>
+					<short xml:lang="fr">Couleurs de flèche</short>
+					<short xml:lang="gl">Cores das frechas</short>
+					<short xml:lang="gu">તીર રંગો</short>
+					<short xml:lang="hi">तीर रंग</short>
+					<short xml:lang="it">Colori freccia</short>
+					<short xml:lang="ja">矢印の色</short>
+					<short xml:lang="nb">Pilfarger</short>
+					<short xml:lang="nl">Pĳl kleuren</short>
+					<short xml:lang="pl">Kolory strzałek</short>
+					<short xml:lang="pt">Cores das setas</short>
+					<short xml:lang="pt_BR">Cores das setas</short>
+					<short xml:lang="sv">Färg på pil</short>
+					<short xml:lang="tr">Ok Renkleri</short>
+
+					<option type="color" name="arrow_base_color">
+						<short>Base Color</short>
+						<short xml:lang="ca">Color de base</short>
+						<short xml:lang="el">Βασικό Χρώμα</short>
+						<short xml:lang="en_GB">Base Colour</short>
+						<short xml:lang="fi">Perusväri</short>
+						<short xml:lang="fr">Couleur de Base</short>
+						<short xml:lang="gl">Cor Base</short>
+						<short xml:lang="gu">આધાર રંગ</short>
+						<short xml:lang="hi">आधार रंग</short>
+						<short xml:lang="it">Colore base</short>
+						<short xml:lang="ja">基本色</short>
+						<short xml:lang="nb">Basisfarge</short>
+						<short xml:lang="nl">Basis kleur</short>
+						<short xml:lang="pt">Cor Base</short>
+						<short xml:lang="pt_BR">Cor Base</short>
+						<short xml:lang="sv">Grundfärg</short>
+						<short xml:lang="tr">Zemin Rengi</short>
+						<long>First color of the arrow of the switcher window.</long>
+						<long xml:lang="el">Πρώτο χρώμα του βέλους του επιλογέα παραθύρου</long>
+						<long xml:lang="en_GB">First colour of the arrow of the switcher window.</long>
+						<long xml:lang="fr">Première couleur de la flèche de la fenêtre du sélecteur.</long>
+						<long xml:lang="gl">Primeira cor da seta da fiestra do switcher.</long>
+						<long xml:lang="gu">બદલનાર વિન્ડોના તીરનો પ્રથમ રંગ.</long>
+						<long xml:lang="hi">स्विचर विंडो के तीर का पहला रंग.</long>
+						<long xml:lang="it">Primo colore per la freccia del selettore finestre.</long>
+						<long xml:lang="ja">スイッチャー・ウィンドウの矢印の1番目の色</long>
+						<long xml:lang="nb">Første farge til pilen i byttevinduet.</long>
+						<long xml:lang="nl">Eerste kleur van de pĳl van het wissel venster.</long>
+						<long xml:lang="pt">Primeira cor da seta da janela do switcher.</long>
+						<long xml:lang="pt_BR">Primeira cor da seta da janela do altenador.</long>
+						<long xml:lang="sv">Första färgen för pilen på växlarfönstret.</long>
+						<default>
+							<red>0xe665</red>
+							<green>0xe665</green>
+							<blue>0xe665</blue>
+							<alpha>0xd998</alpha>
+						</default>
+					</option>
+					<option type="color" name="arrow_shadow_color">
+						<short>Shadow Color</short>
+						<short xml:lang="ca">Color de l'ombra</short>
+						<short xml:lang="de">Schattenfarbe</short>
+						<short xml:lang="el">Χρώμα Σκιάς</short>
+						<short xml:lang="en_GB">Shadow Colour</short>
+						<short xml:lang="fi">Varjon väri</short>
+						<short xml:lang="fr">Couleur de l'ombre</short>
+						<short xml:lang="gl">Cor da sombra</short>
+						<short xml:lang="gu">પડછાયા રંગ</short>
+						<short xml:lang="hi">छाया रंग</short>
+						<short xml:lang="it">Colore ombra</short>
+						<short xml:lang="ja">影の色</short>
+						<short xml:lang="nb">Skyggefarge</short>
+						<short xml:lang="nl">Schaduw kleur</short>
+						<short xml:lang="pl">Kolor cienia</short>
+						<short xml:lang="pt">Cor da sombra</short>
+						<short xml:lang="pt_BR">Cor da sombra</short>
+						<short xml:lang="sv">Skuggfärg</short>
+						<short xml:lang="tr">Gölge Rengi</short>
+						<long>Second color of the arrow of the switcher window.</long>
+						<long xml:lang="el">Δεύτερο χρώμα του βέλους του επιλογέα παραθύρου.</long>
+						<long xml:lang="en_GB">Second colour of the arrow of the switcher window.</long>
+						<long xml:lang="es">Segundo color de la flecha de la ventana del conmutador</long>
+						<long xml:lang="fr">Seconde couleur de la flèche de la fenêtre du sélecteur.</long>
+						<long xml:lang="gl">Segunda color of the arrow of the switcher window.</long>
+						<long xml:lang="gu">બદલનાર વિન્ડોના તીરનો બીજો રંગ.</long>
+						<long xml:lang="hi">स्विचर विंडो के तीर का दूसरा रंग.</long>
+						<long xml:lang="it">Secondo colore della freccia del selettore finestre.</long>
+						<long xml:lang="ja">スイッチャー・ウィンドウの矢印の2番目の背景色</long>
+						<long xml:lang="nb">Andre farge for pilen i byttevinduet.</long>
+						<long xml:lang="nl">Tweede kleur van de pĳl van het wisselvenster.</long>
+						<long xml:lang="pt">Segunda color of the arrow of the switcher window.</long>
+						<long xml:lang="pt_BR">Segunda cor da seta da janela do alternador.</long>
+						<long xml:lang="sv">Andra färgen för pilen i växlarfönstret</long>
+						<default>
+							<red>0xdc28</red>
+							<green>0xdc28</green>
+							<blue>0xdc28</blue>
+							<alpha>0xd998</alpha>
+						</default>
+					</option>
+				</subgroup>
+			</group>
+			<group>
+				<short>Viewport Switching</short>
+				<short xml:lang="de">Arbeitsflächenumschaltung</short>
+				<short xml:lang="el">Αλλαγή Εικονικής Επιφάνειας Εργασίας</short>
+				<short xml:lang="en_GB">Viewport Switching</short>
+				<short xml:lang="es">Cambiando Viewport</short>
+				<short xml:lang="fi">Työtilan vaihtaminen</short>
+				<short xml:lang="fr">Changement de bureau</short>
+				<short xml:lang="gl">Trocar deescritorio</short>
+				<short xml:lang="gu">દૃશ્યપોર્ટ બદલવાનું</short>
+				<short xml:lang="hi">व्यूपोर्ट स्विचिंग</short>
+				<short xml:lang="it">Selezione area di lavoro</short>
+				<short xml:lang="ja">ビューポート切り替え</short>
+				<short xml:lang="nb">Bytting av arbeidsområde</short>
+				<short xml:lang="nl">Viewport wisselen</short>
+				<short xml:lang="pt">Mudar de Viewport</short>
+				<short xml:lang="pt_BR">Mudar de janela de visualização</short>
+				<short xml:lang="sv">Växling av arbetsyta</short>
+				<short xml:lang="tr">Masaüstü Seçimi</short>
+				<option type="bool" name="allow_wraparound">
+					<short>Allow Wrap-Around</short>
+					<short xml:lang="el">Επιτρέπει το Τύλιγμα-Γύρω Απο</short>
+					<short xml:lang="en_GB">Allow Wrap-Around</short>
+					<short xml:lang="fr">Bureaux sur un Tore</short>
+					<short xml:lang="gl">Permitir retornar ao inicio</short>
+					<short xml:lang="gu">ફરતે-લપેટવાની પરવાનગી આપો</short>
+					<short xml:lang="hi">लपेटने की अनुमति दें</short>
+					<short xml:lang="it">Consentire movimento libero</short>
+					<short xml:lang="ja">循環を許可</short>
+					<short xml:lang="nb">Tillat brett-rundt</short>
+					<short xml:lang="nl">Omwikkelen toestaan</short>
+					<short xml:lang="pt">Permitir retornar ao ínicio</short>
+					<short xml:lang="pt_BR">Permitir retornar ao ínicio</short>
+					<short xml:lang="sv">Tillåt insvepning</short>
+					<long>Allow wrap-around when moving the wall up/down/left/right</long>
+					<long xml:lang="el">Επιτρέπει το τύλιγμα-γύρω απο όταν μετακινείται ο τοίχος πάνω/κάτω/αριστερά/δεξια</long>
+					<long xml:lang="en_GB">Allow wrap-around when moving the wall up/down/left/right</long>
+					<long xml:lang="fr">Connecter les bureaux des extrémités du Plan entre eux</long>
+					<long xml:lang="gl">Permitir retornar ao lado oposto cando move o muro cara arriba/baixo/esquerda/dereita</long>
+					<long xml:lang="gu">જ્યારે દિવાલને ઉપર/નીચે/ડાબે/જમણે ખસેડી રહ્યા હોય ત્યારે ફરતે-લપેટવાની પરવાનગી આપો</long>
+					<long xml:lang="hi">दीवाल नीचे/बायाँ/दायाँ खिसकाने के दौरान लपेटने की स्वीकृति दें</long>
+					<long xml:lang="it">Consente il movimento libero quando si muove la muraglia in su/giù/sinistra/destra</long>
+					<long xml:lang="ja">壁の上下左右移動の際の循環移動を許可</long>
+					<long xml:lang="nb">Tillatt brett-rundt når veggen beveges opp/ned/venstre/høyre</long>
+					<long xml:lang="nl">Omwikkelen toestaan wanneer de muur beweegt naar boven/beneden/links/rechts</long>
+					<long xml:lang="pt">Permitir retornar ao lado oposto quando move o muro para cima/baixo/esquerda/direita</long>
+					<long xml:lang="pt_BR">Permitir retornar ao lado oposto quando move o muro para cima/baixo/esquerda/direita</long>
+					<long xml:lang="sv">Tillåt insvepning vid flyttning av väggen upp/ner/vänster/höger</long>
+					<default>false</default>
+				</option>
+				<option type="float" name="slide_duration">
+					<short>Wall Sliding Duration</short>
+					<short xml:lang="de">Animationsdauer</short>
+					<short xml:lang="el">Διάρκεια Γλυστρίματος Τοίχου</short>
+					<short xml:lang="en_GB">Wall Sliding Duration</short>
+					<short xml:lang="fr">Durée de glissement du chemin</short>
+					<short xml:lang="gl">Duración do deslizamento do muro</short>
+					<short xml:lang="gu">દિવાલ સરકાવવાનો ગાળો</short>
+					<short xml:lang="hi">दीवाल स्लाइडिंग अवधि</short>
+					<short xml:lang="it">Durata scorrimento muraglia</short>
+					<short xml:lang="ja">壁のスライドの持続時間</short>
+					<short xml:lang="nb">Varighet for glidende vegg</short>
+					<short xml:lang="nl">Duur van muur schuiven</short>
+					<short xml:lang="pt">Duração do Deslizamento do Muro</short>
+					<short xml:lang="pt_BR">Duração do Deslizamento do Muro</short>
+					<short xml:lang="sv">Varaktighet för glidande vägg</short>
+					<long>Duration (in s) for wall sliding viewport switching animation</long>
+					<long xml:lang="de">Dauer der Animation für die Arbeitsflächenumschaltung in Sekunden</long>
+					<long xml:lang="el">Διάρκεια (σε s) της γραφικής απεικόνισης γλυστρίματος τοίχου για αλλαγή επιφάνειας εργασίας</long>
+					<long xml:lang="en_GB">Duration (in s) for wall sliding viewport switching animation</long>
+					<long xml:lang="fr">Durée (en s) de l'animation de glissement du plan des bureaux</long>
+					<long xml:lang="gl">Duración (en ms) da animación de deslice cando se troca de escritorio no Muro</long>
+					<long xml:lang="gu">દિવાલ સરકાવવાનું દૃશ્યપોર્ટ બદલવાનું એનીમેશન માટે લાગતો ગાળો (સેકન્ડમાં)</long>
+					<long xml:lang="hi">दीवाल स्लाइडिंग व्यूपोर्ट स्विचिंग एनीमेशन के लिए अवधि</long>
+					<long xml:lang="it">Durata (in secondi) dell'animazione </long>
+					<long xml:lang="ja">ビューポート切り替えアニメーションで壁がスライドする持続時間(秒)</long>
+					<long xml:lang="nb">Varighet (i sek) for animasjon for glidende arbeidsområde-bytting</long>
+					<long xml:lang="nl">Duur (in s) voor muur schuif viewport wisseling animatie</long>
+					<long xml:lang="pt">Duração (em ms) da animação de deslize quando se muda de viewport em modo Muro</long>
+					<long xml:lang="pt_BR">Duração (em ms) da animação de deslize quando se muda de janela de visualização em Muro</long>
+					<long xml:lang="sv">Varaktighet (i s) för byte av arbetsyta med glidande väggbyte-animation</long>
+					<default>0.3</default>
+					<min>0.0</min>
+					<max>5.0</max>
+					<precision>0.05</precision>
+				</option>
+			</group>
+			<group>
+				<short>Bindings</short>
+				<short xml:lang="ar">الأغلفة</short>
+				<short xml:lang="bn">সীমাবদ্ধতা</short>
+				<short xml:lang="ca">Vinculacions</short>
+				<short xml:lang="de">Tastenkombinationen</short>
+				<short xml:lang="el">Συνδυασμοί</short>
+				<short xml:lang="en_GB">Bindings</short>
+				<short xml:lang="es">Combinación de Teclas</short>
+				<short xml:lang="fi">Näppäinyhdistelmät</short>
+				<short xml:lang="fr">Raccourcis</short>
+				<short xml:lang="gl">Atallos</short>
+				<short xml:lang="gu">બાઈન્ડીંગો</short>
+				<short xml:lang="hi">बाइंडिंग</short>
+				<short xml:lang="it">Scorciatoie</short>
+				<short xml:lang="ja">割り当て</short>
+				<short xml:lang="nb">Hurtigtast</short>
+				<short xml:lang="nl">Bindingen</short>
+				<short xml:lang="pl">Skróty klawiszowe</short>
+				<short xml:lang="pt">Atalhos</short>
+				<short xml:lang="pt_BR">Atalhos</short>
+				<short xml:lang="ru">Горячие клавиши</short>
+				<short xml:lang="sv">Bindningar</short>
+				<short xml:lang="tr">Bağlayıcılar</short>
+				<short xml:lang="zh_CN">按键组合</short>
+				<subgroup>
+					<short>Move within wall</short>
+					<short xml:lang="ca">Mou en la paret</short>
+					<short xml:lang="el">Μετακίνηση μέσα στον τοίχο</short>
+					<short xml:lang="en_GB">Move within wall</short>
+					<short xml:lang="es">Mover dentro de la ventana</short>
+					<short xml:lang="fr">Se déplacer sur le Plan</short>
+					<short xml:lang="gl">Mover dentro do muro</short>
+					<short xml:lang="gu">દિવાલમાં સાથે ખસો</short>
+					<short xml:lang="hi">दीवाल के अंदर खिसकाएं</short>
+					<short xml:lang="it">Muovi all'interno della muraglia</short>
+					<short xml:lang="ja">壁内を移動</short>
+					<short xml:lang="nb">Flytt innenfor veggen</short>
+					<short xml:lang="nl">Verplaats binnen de muur</short>
+					<short xml:lang="pt">Mover dentro do Muro</short>
+					<short xml:lang="pt_BR">Mover dentro do Muro</short>
+					<short xml:lang="sv">Flytta inuti väggen</short>
+					<option type="key" name="left_key">
+						<short>Move Left</short>
+						<short xml:lang="ca">Mou esquerra</short>
+						<short xml:lang="de">Nach links</short>
+						<short xml:lang="el">Μετακίνηση Αριστερά</short>
+						<short xml:lang="en_GB">Move Left</short>
+						<short xml:lang="fi">Siirry vasemmalle</short>
+						<short xml:lang="fr">Bureau de Gauche</short>
+						<short xml:lang="gl">Mover á esquerda</short>
+						<short xml:lang="gu">ડાબે ખસેડો</short>
+						<short xml:lang="hi">बायीं ओर खिसकाइये</short>
+						<short xml:lang="it">Muovi a sinistra</short>
+						<short xml:lang="ja">左へ移動</short>
+						<short xml:lang="nb">Flytt venstre</short>
+						<short xml:lang="nl">Verplaats naar links</short>
+						<short xml:lang="pl">W lewo</short>
+						<short xml:lang="pt">Mover Esquerda</short>
+						<short xml:lang="pt_BR">Mover para Esquerda</short>
+						<short xml:lang="sv">Flytta vänster</short>
+						<short xml:lang="tr">Sola Taşı</short>
+						<long>Move along the wall to the left</long>
+						<long xml:lang="ca">Mou al llarg de la paret cap a l'esquerra</long>
+						<long xml:lang="de">In der Tafel nach links bewegen</long>
+						<long xml:lang="el">Μετακίνηση στα αριστερά κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move along the wall to the left</long>
+						<long xml:lang="fr">Se déplacer vers la gauche sur le Plan</long>
+						<long xml:lang="gl">Mover fiestra ao longo do muro cara a esquerda</long>
+						<long xml:lang="gu">દિવાલ સાથે ડાબે ખસો</long>
+						<long xml:lang="hi">दीवाल के साथ नीचे बायीं ओर खिसकाएं</long>
+						<long xml:lang="it">Muove verso la sinistra della muraglia</long>
+						<long xml:lang="ja">壁に沿って左に移動</long>
+						<long xml:lang="nb">Flytt langs veggen til venstre</long>
+						<long xml:lang="nl">Verplaats langs de muur naar links</long>
+						<long xml:lang="pt">Mover janela ao longo do muro para a esquerda</long>
+						<long xml:lang="pt_BR">Mover janela ao longo do muro para a esquerda</long>
+						<long xml:lang="sv">Flytta längs med väggen till vänster</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;Left</default>
+					</option>
+					<option type="button" name="left_button">
+						<short>Move Left</short>
+						<short xml:lang="ca">Mou esquerra</short>
+						<short xml:lang="de">Nach links</short>
+						<short xml:lang="el">Μετακίνηση Αριστερά</short>
+						<short xml:lang="en_GB">Move Left</short>
+						<short xml:lang="fi">Siirry vasemmalle</short>
+						<short xml:lang="fr">Bureau de Gauche</short>
+						<short xml:lang="gl">Mover á esquerda</short>
+						<short xml:lang="gu">ડાબે ખસેડો</short>
+						<short xml:lang="hi">बायीं ओर खिसकाइये</short>
+						<short xml:lang="it">Muovi a sinistra</short>
+						<short xml:lang="ja">左へ移動</short>
+						<short xml:lang="nb">Flytt venstre</short>
+						<short xml:lang="nl">Verplaats naar links</short>
+						<short xml:lang="pl">W lewo</short>
+						<short xml:lang="pt">Mover Esquerda</short>
+						<short xml:lang="pt_BR">Mover para Esquerda</short>
+						<short xml:lang="sv">Flytta vänster</short>
+						<short xml:lang="tr">Sola Taşı</short>
+						<long>Move along the wall to the left</long>
+						<long xml:lang="ca">Mou al llarg de la paret cap a l'esquerra</long>
+						<long xml:lang="de">In der Tafel nach links bewegen</long>
+						<long xml:lang="el">Μετακίνηση στα αριστερά κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move along the wall to the left</long>
+						<long xml:lang="fr">Se déplacer vers la gauche sur le Plan</long>
+						<long xml:lang="gl">Mover fiestra ao longo do muro cara a esquerda</long>
+						<long xml:lang="gu">દિવાલ સાથે ડાબે ખસો</long>
+						<long xml:lang="hi">दीवाल के साथ नीचे बायीं ओर खिसकाएं</long>
+						<long xml:lang="it">Muove verso la sinistra della muraglia</long>
+						<long xml:lang="ja">壁に沿って左に移動</long>
+						<long xml:lang="nb">Flytt langs veggen til venstre</long>
+						<long xml:lang="nl">Verplaats langs de muur naar links</long>
+						<long xml:lang="pt">Mover janela ao longo do muro para a esquerda</long>
+						<long xml:lang="pt_BR">Mover janela ao longo do muro para a esquerda</long>
+						<long xml:lang="sv">Flytta längs med väggen till vänster</long>
+					</option>
+					<option type="key" name="right_key">
+						<short>Move Right</short>
+						<short xml:lang="ca">Mou dreta</short>
+						<short xml:lang="de">Nach rechts</short>
+						<short xml:lang="el">Μετακίνηση Δεξιά</short>
+						<short xml:lang="en_GB">Move Right</short>
+						<short xml:lang="fi">Siirry oikealle</short>
+						<short xml:lang="fr">Bureau de Droite</short>
+						<short xml:lang="gl">Mover á dereita</short>
+						<short xml:lang="gu">જમણે ખસેડો</short>
+						<short xml:lang="hi">दाहिनी ओर खिसकाइये</short>
+						<short xml:lang="it">Muovi a destra</short>
+						<short xml:lang="ja">右へ移動</short>
+						<short xml:lang="nb">Flytt høyre</short>
+						<short xml:lang="nl">Verplaats naar rechts</short>
+						<short xml:lang="pl">W prawo</short>
+						<short xml:lang="pt">Mover Direita</short>
+						<short xml:lang="pt_BR">Mover para Direita</short>
+						<short xml:lang="sv">Flytta höger</short>
+						<short xml:lang="tr">Sağa taşı</short>
+						<long>Move along the wall to the right</long>
+						<long xml:lang="ca">Mou al llarg de la paret cap a la dreta</long>
+						<long xml:lang="de">In der Tafel nach rechts bewegen</long>
+						<long xml:lang="el">Μετακίνηση στα δεξιά κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move along the wall to the right</long>
+						<long xml:lang="fr">Se déplacer vers la droite sur le Plan</long>
+						<long xml:lang="gl">Mover fiestra ao longo do muro cara a dereita</long>
+						<long xml:lang="gu">દિવાલ સાથે ડાબે ખસો</long>
+						<long xml:lang="hi">दीवाल के साथ नीचे दाहिनी ओर खिसकाएं</long>
+						<long xml:lang="it">Muove verso la destra della muraglia</long>
+						<long xml:lang="ja">壁に沿って右に移動</long>
+						<long xml:lang="nb">Flytt langs veggen til høyre</long>
+						<long xml:lang="nl">Verplaats langs de muur naar rechts</long>
+						<long xml:lang="pt">Mover janela ao longo do muro para a direita</long>
+						<long xml:lang="pt_BR">Mover janela ao longo do muro para a direita</long>
+						<long xml:lang="sv">Flytta längs med väggen till höger</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;Right</default>
+					</option>
+					<option type="button" name="right_button">
+						<short>Move Right</short>
+						<short xml:lang="ca">Mou dreta</short>
+						<short xml:lang="de">Nach rechts</short>
+						<short xml:lang="el">Μετακίνηση Δεξιά</short>
+						<short xml:lang="en_GB">Move Right</short>
+						<short xml:lang="fi">Siirry oikealle</short>
+						<short xml:lang="fr">Bureau de Droite</short>
+						<short xml:lang="gl">Mover á dereita</short>
+						<short xml:lang="gu">જમણે ખસેડો</short>
+						<short xml:lang="hi">दाहिनी ओर खिसकाइये</short>
+						<short xml:lang="it">Muovi a destra</short>
+						<short xml:lang="ja">右へ移動</short>
+						<short xml:lang="nb">Flytt høyre</short>
+						<short xml:lang="nl">Verplaats naar rechts</short>
+						<short xml:lang="pl">W prawo</short>
+						<short xml:lang="pt">Mover Direita</short>
+						<short xml:lang="pt_BR">Mover para Direita</short>
+						<short xml:lang="sv">Flytta höger</short>
+						<short xml:lang="tr">Sağa taşı</short>
+						<long>Move along the wall to the right</long>
+						<long xml:lang="ca">Mou al llarg de la paret cap a la dreta</long>
+						<long xml:lang="de">In der Tafel nach rechts bewegen</long>
+						<long xml:lang="el">Μετακίνηση στα δεξιά κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move along the wall to the right</long>
+						<long xml:lang="fr">Se déplacer vers la droite sur le Plan</long>
+						<long xml:lang="gl">Mover fiestra ao longo do muro cara a dereita</long>
+						<long xml:lang="gu">દિવાલ સાથે ડાબે ખસો</long>
+						<long xml:lang="hi">दीवाल के साथ नीचे दाहिनी ओर खिसकाएं</long>
+						<long xml:lang="it">Muove verso la destra della muraglia</long>
+						<long xml:lang="ja">壁に沿って右に移動</long>
+						<long xml:lang="nb">Flytt langs veggen til høyre</long>
+						<long xml:lang="nl">Verplaats langs de muur naar rechts</long>
+						<long xml:lang="pt">Mover janela ao longo do muro para a direita</long>
+						<long xml:lang="pt_BR">Mover janela ao longo do muro para a direita</long>
+						<long xml:lang="sv">Flytta längs med väggen till höger</long>
+					</option>
+					<option type="key" name="up_key">
+						<short>Move Up</short>
+						<short xml:lang="ca">Mou amunt</short>
+						<short xml:lang="de">Nach oben</short>
+						<short xml:lang="el">Μετακίνηση Πάνω</short>
+						<short xml:lang="en_GB">Move Up</short>
+						<short xml:lang="fi">Siirrä ylös</short>
+						<short xml:lang="fr">Bureau Supérieur</short>
+						<short xml:lang="gl">Mover arriba</short>
+						<short xml:lang="gu">ઉપર ખસેડો</short>
+						<short xml:lang="hi">ऊपर जायें</short>
+						<short xml:lang="it">Muovi in su</short>
+						<short xml:lang="ja">上へ移動</short>
+						<short xml:lang="nb">Flytt opp</short>
+						<short xml:lang="nl">Verplaats omhoog</short>
+						<short xml:lang="pl">W górę</short>
+						<short xml:lang="pt">Mover Cima</short>
+						<short xml:lang="pt_BR">Mover para Cima</short>
+						<short xml:lang="sv">Flytta upp</short>
+						<short xml:lang="tr">Yukarı taşı</short>
+						<long>Move along the wall up</long>
+						<long xml:lang="ca">Mou al llarg de la paret cap amunt</long>
+						<long xml:lang="de">In der Tafel nach oben bewegen</long>
+						<long xml:lang="el">Μετακίνηση πάνω κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move along the wall up</long>
+						<long xml:lang="fr">Se déplacer vers le haut sur le Plan</long>
+						<long xml:lang="gl">Mover ao longo do muro cara arriba</long>
+						<long xml:lang="gu">દિવાલ સાથે ઉપર ખસો</long>
+						<long xml:lang="hi">दीवाल के साथ ऊपर खिसकाएं</long>
+						<long xml:lang="it">Muove verso l'alto della muraglia</long>
+						<long xml:lang="ja">壁に沿って上に移動</long>
+						<long xml:lang="nb">Flytt langs veggen oppover</long>
+						<long xml:lang="nl">Verplaats langs de muur omhoog</long>
+						<long xml:lang="pt">Mover ao longo do Muro para cima</long>
+						<long xml:lang="pt_BR">Mover ao longo do Muro para cima</long>
+						<long xml:lang="sv">Flytta upp längs med väggen</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;Up</default>
+					</option>
+					<option type="button" name="up_button">
+						<short>Move Up</short>
+						<short xml:lang="ca">Mou amunt</short>
+						<short xml:lang="de">Nach oben</short>
+						<short xml:lang="el">Μετακίνηση Πάνω</short>
+						<short xml:lang="en_GB">Move Up</short>
+						<short xml:lang="fi">Siirrä ylös</short>
+						<short xml:lang="fr">Bureau Supérieur</short>
+						<short xml:lang="gl">Mover arriba</short>
+						<short xml:lang="gu">ઉપર ખસેડો</short>
+						<short xml:lang="hi">ऊपर जायें</short>
+						<short xml:lang="it">Muovi in su</short>
+						<short xml:lang="ja">上へ移動</short>
+						<short xml:lang="nb">Flytt opp</short>
+						<short xml:lang="nl">Verplaats omhoog</short>
+						<short xml:lang="pl">W górę</short>
+						<short xml:lang="pt">Mover Cima</short>
+						<short xml:lang="pt_BR">Mover para Cima</short>
+						<short xml:lang="sv">Flytta upp</short>
+						<short xml:lang="tr">Yukarı taşı</short>
+						<long>Move along the wall up</long>
+						<long xml:lang="ca">Mou al llarg de la paret cap amunt</long>
+						<long xml:lang="de">In der Tafel nach oben bewegen</long>
+						<long xml:lang="el">Μετακίνηση πάνω κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move along the wall up</long>
+						<long xml:lang="fr">Se déplacer vers le haut sur le Plan</long>
+						<long xml:lang="gl">Mover ao longo do muro cara arriba</long>
+						<long xml:lang="gu">દિવાલ સાથે ઉપર ખસો</long>
+						<long xml:lang="hi">दीवाल के साथ ऊपर खिसकाएं</long>
+						<long xml:lang="it">Muove verso l'alto della muraglia</long>
+						<long xml:lang="ja">壁に沿って上に移動</long>
+						<long xml:lang="nb">Flytt langs veggen oppover</long>
+						<long xml:lang="nl">Verplaats langs de muur omhoog</long>
+						<long xml:lang="pt">Mover ao longo do Muro para cima</long>
+						<long xml:lang="pt_BR">Mover ao longo do Muro para cima</long>
+						<long xml:lang="sv">Flytta upp längs med väggen</long>
+					</option>
+					<option type="key" name="down_key">
+						<short>Move Down</short>
+						<short xml:lang="ca">Mou avall</short>
+						<short xml:lang="de">Nach unten</short>
+						<short xml:lang="el">Μετακίνηση Κάτω</short>
+						<short xml:lang="en_GB">Move Down</short>
+						<short xml:lang="fi">Siirrä alas</short>
+						<short xml:lang="fr">Bureau Inférieur</short>
+						<short xml:lang="gl">Mover abaixo</short>
+						<short xml:lang="gu">નીચે ખસેડો</short>
+						<short xml:lang="hi">नीचे जायें</short>
+						<short xml:lang="it">Muovi giù</short>
+						<short xml:lang="ja">下へ移動</short>
+						<short xml:lang="nb">Flytt ned</short>
+						<short xml:lang="nl">Verplaats omlaag</short>
+						<short xml:lang="pl">W dół</short>
+						<short xml:lang="pt">Mover Baixo</short>
+						<short xml:lang="pt_BR">Mover para Baixo</short>
+						<short xml:lang="sv">Flytta ner</short>
+						<short xml:lang="tr">Aşağı Taşı</short>
+						<long>Move along the wall down</long>
+						<long xml:lang="ca">Mou al llarg de la paret cap avall</long>
+						<long xml:lang="de">In der Tafel nach unten bewegen</long>
+						<long xml:lang="el">Μετακίνηση κάτω κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move along the wall down</long>
+						<long xml:lang="fr">Se déplacer vers le bas sur le Plan</long>
+						<long xml:lang="gl">Mover ao longo do muro cara abaixo</long>
+						<long xml:lang="gu">દિવાલ સાથે નીચે ખસો</long>
+						<long xml:lang="hi">दीवाल के साथ नीचे खिसकाएं</long>
+						<long xml:lang="it">Muove verso il basso della muraglia</long>
+						<long xml:lang="ja">壁に沿って下に移動</long>
+						<long xml:lang="nb">Flytt langs veggen nedover</long>
+						<long xml:lang="nl">Verplaats langs de muur omlaag</long>
+						<long xml:lang="pt">Mover ao longo do Muro para baixo</long>
+						<long xml:lang="pt_BR">Mover ao longo do Muro para baixo</long>
+						<long xml:lang="sv">Flytta ner längs med väggen</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;Down</default>
+					</option>
+					<option type="button" name="down_button">
+						<short>Move Down</short>
+						<short xml:lang="ca">Mou avall</short>
+						<short xml:lang="de">Nach unten</short>
+						<short xml:lang="el">Μετακίνηση Κάτω</short>
+						<short xml:lang="en_GB">Move Down</short>
+						<short xml:lang="fi">Siirrä alas</short>
+						<short xml:lang="fr">Bureau Inférieur</short>
+						<short xml:lang="gl">Mover abaixo</short>
+						<short xml:lang="gu">નીચે ખસેડો</short>
+						<short xml:lang="hi">नीचे जायें</short>
+						<short xml:lang="it">Muovi giù</short>
+						<short xml:lang="ja">下へ移動</short>
+						<short xml:lang="nb">Flytt ned</short>
+						<short xml:lang="nl">Verplaats omlaag</short>
+						<short xml:lang="pl">W dół</short>
+						<short xml:lang="pt">Mover Baixo</short>
+						<short xml:lang="pt_BR">Mover para Baixo</short>
+						<short xml:lang="sv">Flytta ner</short>
+						<short xml:lang="tr">Aşağı Taşı</short>
+						<long>Move along the wall down</long>
+						<long xml:lang="ca">Mou al llarg de la paret cap avall</long>
+						<long xml:lang="de">In der Tafel nach unten bewegen</long>
+						<long xml:lang="el">Μετακίνηση κάτω κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move along the wall down</long>
+						<long xml:lang="fr">Se déplacer vers le bas sur le Plan</long>
+						<long xml:lang="gl">Mover ao longo do muro cara abaixo</long>
+						<long xml:lang="gu">દિવાલ સાથે નીચે ખસો</long>
+						<long xml:lang="hi">दीवाल के साथ नीचे खिसकाएं</long>
+						<long xml:lang="it">Muove verso il basso della muraglia</long>
+						<long xml:lang="ja">壁に沿って下に移動</long>
+						<long xml:lang="nb">Flytt langs veggen nedover</long>
+						<long xml:lang="nl">Verplaats langs de muur omlaag</long>
+						<long xml:lang="pt">Mover ao longo do Muro para baixo</long>
+						<long xml:lang="pt_BR">Mover ao longo do Muro para baixo</long>
+						<long xml:lang="sv">Flytta ner längs med väggen</long>
+					</option>
+					<option type="key" name="next_key">
+						<short>Move Next</short>
+						<short xml:lang="ca">Mou següent</short>
+						<short xml:lang="de">Nächste</short>
+						<short xml:lang="el">Μετακίνηση Επόμενου</short>
+						<short xml:lang="en_GB">Move Next</short>
+						<short xml:lang="fr">Bureau Suivant</short>
+						<short xml:lang="gl">Mover ó seguinte</short>
+						<short xml:lang="gu">આગળ ખસેડો</short>
+						<short xml:lang="hi">अगला हटाएं</short>
+						<short xml:lang="it">Muovi alla successiva</short>
+						<short xml:lang="ja">次へ移動</short>
+						<short xml:lang="nb">Flytt neste</short>
+						<short xml:lang="nl">Verplaats naar volgende</short>
+						<short xml:lang="pt">Mover Seguinte</short>
+						<short xml:lang="pt_BR">Mover para Próxima</short>
+						<short xml:lang="sv">Flytta nästa</short>
+						<short xml:lang="tr">Sonrakine Taşı</short>
+						<long>Move along the wall to the next viewport</long>
+						<long xml:lang="ca">Mou al llarg de la paret a la següent vista</long>
+						<long xml:lang="de">In der Tafel zur nächsten Arbeitsfläche bewegen</long>
+						<long xml:lang="el">Μετακίνηση στην επόμενη εικονική επιφάνεια εργασίας κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move along the wall to the next viewport</long>
+						<long xml:lang="fr">Se déplacer vers le bureau suivant sur le Plan</long>
+						<long xml:lang="gl">Mover ao longo do muro para o escritorio seguinte</long>
+						<long xml:lang="gu">દિવાલ સાથે આગળના દૃશ્યપોર્ટ પર ખસો</long>
+						<long xml:lang="hi">दीवाल के साथ अगले व्यूपोर्ट में खिसकाएं</long>
+						<long xml:lang="it">Muove verso la prossima area di lavoro nella muraglia</long>
+						<long xml:lang="ja">壁に沿って次のビューポートに移動</long>
+						<long xml:lang="nb">Flytt langs veggen til neste arbeidsområde</long>
+						<long xml:lang="nl">Verplaats langs de muur naar de volgende viewport</long>
+						<long xml:lang="pt">Mover ao longo do muro para o viewport seguinte</long>
+						<long xml:lang="pt_BR">Mover ao longo do muro para a janela de visualização seguinte</long>
+						<long xml:lang="sv">Flytta längs med väggen till nästa arbetsyta</long>
+					</option>
+					<option type="button" name="next_button">
+						<short>Move Next</short>
+						<short xml:lang="ca">Mou següent</short>
+						<short xml:lang="de">Nächste</short>
+						<short xml:lang="el">Μετακίνηση Επόμενου</short>
+						<short xml:lang="en_GB">Move Next</short>
+						<short xml:lang="fr">Bureau Suivant</short>
+						<short xml:lang="gl">Mover ó seguinte</short>
+						<short xml:lang="gu">આગળ ખસેડો</short>
+						<short xml:lang="hi">अगला हटाएं</short>
+						<short xml:lang="it">Muovi alla successiva</short>
+						<short xml:lang="ja">次へ移動</short>
+						<short xml:lang="nb">Flytt neste</short>
+						<short xml:lang="nl">Verplaats naar volgende</short>
+						<short xml:lang="pt">Mover Seguinte</short>
+						<short xml:lang="pt_BR">Mover para Próxima</short>
+						<short xml:lang="sv">Flytta nästa</short>
+						<short xml:lang="tr">Sonrakine Taşı</short>
+						<long>Move along the wall to the next viewport</long>
+						<long xml:lang="ca">Mou al llarg de la paret a la següent vista</long>
+						<long xml:lang="de">In der Tafel zur nächsten Arbeitsfläche bewegen</long>
+						<long xml:lang="el">Μετακίνηση στην επόμενη εικονική επιφάνεια εργασίας κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move along the wall to the next viewport</long>
+						<long xml:lang="fr">Se déplacer vers le bureau suivant sur le Plan</long>
+						<long xml:lang="gl">Mover ao longo do muro para o escritorio seguinte</long>
+						<long xml:lang="gu">દિવાલ સાથે આગળના દૃશ્યપોર્ટ પર ખસો</long>
+						<long xml:lang="hi">दीवाल के साथ अगले व्यूपोर्ट में खिसकाएं</long>
+						<long xml:lang="it">Muove verso la prossima area di lavoro nella muraglia</long>
+						<long xml:lang="ja">壁に沿って次のビューポートに移動</long>
+						<long xml:lang="nb">Flytt langs veggen til neste arbeidsområde</long>
+						<long xml:lang="nl">Verplaats langs de muur naar de volgende viewport</long>
+						<long xml:lang="pt">Mover ao longo do muro para o viewport seguinte</long>
+						<long xml:lang="pt_BR">Mover ao longo do muro para a janela de visualização seguinte</long>
+						<long xml:lang="sv">Flytta längs med väggen till nästa arbetsyta</long>
+					</option>
+					<option type="key" name="prev_key">
+						<short>Move Prev</short>
+						<short xml:lang="ca">Mou anterior</short>
+						<short xml:lang="de">Vorherige</short>
+						<short xml:lang="el">Μετακίνηση Προηγούμενου</short>
+						<short xml:lang="en_GB">Move Prev</short>
+						<short xml:lang="fr">Bureau Précédent</short>
+						<short xml:lang="gl">Mover ó anterior</short>
+						<short xml:lang="gu">પાછળ ખસેડો</short>
+						<short xml:lang="hi">पिछला हटाएं</short>
+						<short xml:lang="it">Muovi alla precedente</short>
+						<short xml:lang="ja">前へ移動</short>
+						<short xml:lang="nb">Flytt forrige</short>
+						<short xml:lang="nl">Verplaats naar vorige</short>
+						<short xml:lang="pt">Mover Anterior</short>
+						<short xml:lang="pt_BR">Mover para Anterior</short>
+						<short xml:lang="sv">Flytta föreg</short>
+						<short xml:lang="tr">Öncekine Taşı</short>
+						<long>Move along the wall to the previous viewport</long>
+						<long xml:lang="ca">Mou al llarg de la paret a la vista prèvia</long>
+						<long xml:lang="de">In der Tafel zur vorhergehenden Arbeitsfläche bewegen</long>
+						<long xml:lang="el">Μετακίνηση στην προηγούμενη εικονική επιφάνεια εργασίας κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move along the wall to the previous viewport</long>
+						<long xml:lang="fr">Se déplacer vers le bureau précédent sur le Plan</long>
+						<long xml:lang="gl">Mover ao longo do muro para o escritorio anterior</long>
+						<long xml:lang="gu">દિવાલ સાથે પાછળના દૃશ્યપોર્ટ પર ખસો</long>
+						<long xml:lang="hi">दीवाल के साथ पिछले व्यूपोर्ट में खिसकाएं</long>
+						<long xml:lang="it">Muove verso la precedente area di lavoro nella muraglia</long>
+						<long xml:lang="ja">壁に沿って前のビューポートに移動</long>
+						<long xml:lang="nb">Flytt langs veggen til forrige arbeidsområde</long>
+						<long xml:lang="nl">Verplaats langs de muur naar de vorige viewport</long>
+						<long xml:lang="pt">Mover ao longo do muro para o viewport anterior</long>
+						<long xml:lang="pt_BR">Mover ao longo do muro para a janela de visualização anterior</long>
+						<long xml:lang="sv">Flytta längs med väggen till föregående arbetsyta</long>
+					</option>
+					<option type="button" name="prev_button">
+						<short>Move Prev</short>
+						<short xml:lang="ca">Mou anterior</short>
+						<short xml:lang="de">Vorherige</short>
+						<short xml:lang="el">Μετακίνηση Προηγούμενου</short>
+						<short xml:lang="en_GB">Move Prev</short>
+						<short xml:lang="fr">Bureau Précédent</short>
+						<short xml:lang="gl">Mover ó anterior</short>
+						<short xml:lang="gu">પાછળ ખસેડો</short>
+						<short xml:lang="hi">पिछला हटाएं</short>
+						<short xml:lang="it">Muovi alla precedente</short>
+						<short xml:lang="ja">前へ移動</short>
+						<short xml:lang="nb">Flytt forrige</short>
+						<short xml:lang="nl">Verplaats naar vorige</short>
+						<short xml:lang="pt">Mover Anterior</short>
+						<short xml:lang="pt_BR">Mover para Anterior</short>
+						<short xml:lang="sv">Flytta föreg</short>
+						<short xml:lang="tr">Öncekine Taşı</short>
+						<long>Move along the wall to the previous viewport</long>
+						<long xml:lang="ca">Mou al llarg de la paret a la vista prèvia</long>
+						<long xml:lang="de">In der Tafel zur vorhergehenden Arbeitsfläche bewegen</long>
+						<long xml:lang="el">Μετακίνηση στην προηγούμενη εικονική επιφάνεια εργασίας κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move along the wall to the previous viewport</long>
+						<long xml:lang="fr">Se déplacer vers le bureau précédent sur le Plan</long>
+						<long xml:lang="gl">Mover ao longo do muro para o escritorio anterior</long>
+						<long xml:lang="gu">દિવાલ સાથે પાછળના દૃશ્યપોર્ટ પર ખસો</long>
+						<long xml:lang="hi">दीवाल के साथ पिछले व्यूपोर्ट में खिसकाएं</long>
+						<long xml:lang="it">Muove verso la precedente area di lavoro nella muraglia</long>
+						<long xml:lang="ja">壁に沿って前のビューポートに移動</long>
+						<long xml:lang="nb">Flytt langs veggen til forrige arbeidsområde</long>
+						<long xml:lang="nl">Verplaats langs de muur naar de vorige viewport</long>
+						<long xml:lang="pt">Mover ao longo do muro para o viewport anterior</long>
+						<long xml:lang="pt_BR">Mover ao longo do muro para a janela de visualização anterior</long>
+						<long xml:lang="sv">Flytta längs med väggen till föregående arbetsyta</long>
+					</option>
+				</subgroup>
+				<subgroup>
+					<short>Move with window within wall</short>
+					<short xml:lang="el">Μετακίνηση με παράθυρο μέσα στον τοίχο</short>
+					<short xml:lang="en_GB">Move with window within wall</short>
+					<short xml:lang="fr">Se déplacer sur le Plan avec la fenêtre</short>
+					<short xml:lang="gl">Mover coa fiestra dentro do muro</short>
+					<short xml:lang="gu">વિન્ડોને દિવાલ સાથે ખસો</short>
+					<short xml:lang="hi">दीवाल के अंदर विंडो के साथ खिसकाएं</short>
+					<short xml:lang="it">Muove, con la finestra, all'interno della muraglia</short>
+					<short xml:lang="ja">壁内をウィンドウと一緒に移動</short>
+					<short xml:lang="nb">Flytt med vindu innenfor veggen</short>
+					<short xml:lang="nl">Verplaats met venster binnen de muur</short>
+					<short xml:lang="pt">Mover com janela dentro do Muro</short>
+					<short xml:lang="pt_BR">Mover janela dentro do Muro</short>
+					<short xml:lang="sv">Flytta med fönster inuti väggen</short>
+					<option type="key" name="left_window_key">
+						<short>Move Left With Window</short>
+						<short xml:lang="ca">Mou esquerra amb la finestra</short>
+						<short xml:lang="de">Mit Fenster nach links bewegen</short>
+						<short xml:lang="el">Μετακίνηση Αριστερά Με Παράθυρο</short>
+						<short xml:lang="en_GB">Move Left With Window</short>
+						<short xml:lang="fr">Aller à gauche avec la fenêtre</short>
+						<short xml:lang="gl">Mover para a Esquerda coa fiestra</short>
+						<short xml:lang="gu">વિન્ડો સાથે ડાબે ખસો</short>
+						<short xml:lang="hi">विंडो के साथ बायां खिसकाएं</short>
+						<short xml:lang="it">Muovi verso sinistra con la finestra</short>
+						<short xml:lang="ja">左に移動（ウィンドウと一緒に）</short>
+						<short xml:lang="nb">Flytt venstre med vindu</short>
+						<short xml:lang="nl">Verplaats naar links met venster</short>
+						<short xml:lang="pl">Idź w lewo z oknem</short>
+						<short xml:lang="pt">Mover para a Esquerda com Janela</short>
+						<short xml:lang="pt_BR">Mover para a Esquerda com a janela</short>
+						<short xml:lang="sv">Flytta vänster med fönstret</short>
+						<long>Move with window along the wall to the left</long>
+						<long xml:lang="de">In der Tafel mit Fenster nach links bewegen</long>
+						<long xml:lang="el">Μετακίνηση με παράθυρο στα αριστερά κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move with window along the wall to the left</long>
+						<long xml:lang="fr">Se déplacer vers la gauche sur le Plan, avec la fenêtre</long>
+						<long xml:lang="gl">Mover fiestra ao longo do muro cara a esquerda</long>
+						<long xml:lang="gu">વિન્ડોને દિવાલ સાથે ડાબે ખસો</long>
+						<long xml:lang="hi">दीवाल सहित विंडो के साथ नीचे बायें खिसकाएं</long>
+						<long xml:lang="it">Muove, con la finestra, verso la sinistra della muraglia</long>
+						<long xml:lang="ja">壁に沿って左に移動（ウィンドウと一緒に）</long>
+						<long xml:lang="nb">Flytt med vindu langs veggen til venstre</long>
+						<long xml:lang="nl">Verplaats met venster langs de muur naar links</long>
+						<long xml:lang="pt">Mover janela ao longo do muro para a esquerda</long>
+						<long xml:lang="pt_BR">Mover janela ao longo do muro para a esquerda</long>
+						<long xml:lang="sv">Flytta med fönster längs med väggen till vänster</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;&lt;Shift&gt;Left</default>
+					</option>
+					<option type="key" name="right_window_key">
+						<short>Move Right With Window</short>
+						<short xml:lang="ca">Mou dreta amb la finestra</short>
+						<short xml:lang="de">Mit Fenster nach rechts bewegen</short>
+						<short xml:lang="el">Μετακίνηση Δεξιά Με Παράθυρο</short>
+						<short xml:lang="en_GB">Move Right With Window</short>
+						<short xml:lang="fr">Aller à droite avec la fenêtre</short>
+						<short xml:lang="gl">Mover para a Dereita coa fiestra</short>
+						<short xml:lang="gu">વિન્ડો સાથે જમણે ખસોો</short>
+						<short xml:lang="hi">विंडो के साथ दाहिना खिसकाएं</short>
+						<short xml:lang="it">Muovi verso destra con la finestra</short>
+						<short xml:lang="ja">右に移動（ウィンドウと一緒に）</short>
+						<short xml:lang="nb">Flytt høyre med vindu</short>
+						<short xml:lang="nl">Verplaats naar rechts met venster</short>
+						<short xml:lang="pl">Idź w prawo z oknem</short>
+						<short xml:lang="pt">Mover para a Direita com Janela</short>
+						<short xml:lang="pt_BR">Mover para a Direita com a janela</short>
+						<short xml:lang="sv">Flytta höger med fönstret</short>
+						<long>Move with window along the wall to the right</long>
+						<long xml:lang="de">In der Tafel mit Fenster nach rechts bewegen</long>
+						<long xml:lang="el">Μετακίνηση με παράθυρο στα δεξιά κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move with window along the wall to the right</long>
+						<long xml:lang="fr">Se déplacer vers la droite sur le Plan, avec la fenêtre</long>
+						<long xml:lang="gl">Mover fiestra ao longo do muro cara a dereita</long>
+						<long xml:lang="gu">વિન્ડોને દિવાલ સાથે જમણે ખસો</long>
+						<long xml:lang="hi">दीवाल सहित विंडो के साथ नीचे दाहिने खिसकाएं</long>
+						<long xml:lang="it">Muove, con la finestra, verso la destra della muraglia</long>
+						<long xml:lang="ja">壁に沿って右に移動（ウィンドウと一緒に）</long>
+						<long xml:lang="nb">Flytt med vindu langs veggen til høyre</long>
+						<long xml:lang="nl">Verplaats met venster langs de muur naar rechts</long>
+						<long xml:lang="pt">Mover janela ao longo do muro para a direita</long>
+						<long xml:lang="pt_BR">Mover janela ao longo do muro para a direita</long>
+						<long xml:lang="sv">Flytta med fönster längs med väggen till höger</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;&lt;Shift&gt;Right</default>
+					</option>
+					<option type="key" name="up_window_key">
+						<short>Move Up With Window</short>
+						<short xml:lang="ca">Mou amunt amb la finestra</short>
+						<short xml:lang="de">Mit Fenster nach oben bewegen</short>
+						<short xml:lang="el">Μετακίνηση Πάνω Με Παράθυρο</short>
+						<short xml:lang="en_GB">Move Up With Window</short>
+						<short xml:lang="fr">Aller en haut avec la fenêtre</short>
+						<short xml:lang="gl">Mover para arriba coa fiestra</short>
+						<short xml:lang="gu">વિન્ડો સાથે ઉપર ખસો</short>
+						<short xml:lang="hi">विंडो के साथ ऊपर खिसकाएं</short>
+						<short xml:lang="it">Muovi in alto con la finestra</short>
+						<short xml:lang="ja">上に移動（ウィンドウと一緒に）</short>
+						<short xml:lang="nb">Flytt opp med vindu</short>
+						<short xml:lang="nl">Verplaats omhoog met venster</short>
+						<short xml:lang="pl">Idź w górę z oknem</short>
+						<short xml:lang="pt">Mover para Cima com Janela</short>
+						<short xml:lang="pt_BR">Mover para Cima com a janela</short>
+						<short xml:lang="sv">Flytta upp med fönstret</short>
+						<long>Move with window along the wall up</long>
+						<long xml:lang="de">In der Tafel mit Fenster nach oben bewegen</long>
+						<long xml:lang="el">Μετακίνηση με παράθυρο πάνω κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move with window along the wall up</long>
+						<long xml:lang="fr">Se déplacer vers le haut sur le Plan, avec la fenêtre</long>
+						<long xml:lang="gl">Mover coa fiestra ao longo do muro cara arriba</long>
+						<long xml:lang="gu">વિન્ડોને દિવાલ સાથે જમણે ખસો</long>
+						<long xml:lang="hi">दीवाल सहित विंडो के साथ ऊपर खिसकाएं</long>
+						<long xml:lang="it">Muove, con la finestra, verso l'alto della muraglia</long>
+						<long xml:lang="ja">壁に沿って上に移動（ウィンドウと一緒に）</long>
+						<long xml:lang="nb">Flytt med vindu langs veggen oppover</long>
+						<long xml:lang="nl">Verplaats met venster langs de muur omhoog</long>
+						<long xml:lang="pt">Mover com janela ao longo do Muro para cima</long>
+						<long xml:lang="pt_BR">Mover janela ao longo do Muro para cima</long>
+						<long xml:lang="sv">Flytta med fönster längs med väggen uppåt</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;&lt;Shift&gt;Up</default>
+					</option>
+					<option type="key" name="down_window_key">
+						<short>Move Down With Window</short>
+						<short xml:lang="ca">Mou avall amb la finestra</short>
+						<short xml:lang="de">Mit Fenster nach unten bewegen</short>
+						<short xml:lang="el">Μετακίνηση Κάτω Με Παράθυρο</short>
+						<short xml:lang="en_GB">Move Down With Window</short>
+						<short xml:lang="fr">Aller en bas avec la fenêtre</short>
+						<short xml:lang="gl">Mover abaixo coa fiestra</short>
+						<short xml:lang="gu">વિન્ડો સાથે નીચે ખસો</short>
+						<short xml:lang="hi">विंडो के साथ नीचे खिसकाएं</short>
+						<short xml:lang="it">Muovi in basso con la finestra</short>
+						<short xml:lang="ja">下に移動（ウィンドウと一緒に）</short>
+						<short xml:lang="nb">Flytt ned med vindu</short>
+						<short xml:lang="nl">Verplaats omlaag met venster</short>
+						<short xml:lang="pl">Idź w dół z oknem</short>
+						<short xml:lang="pt">Mover para Baixo com Janela</short>
+						<short xml:lang="pt_BR">Mover para Baixo com a janela</short>
+						<short xml:lang="sv">Flytta ner med fönstret</short>
+						<long>Move with window along the wall down</long>
+						<long xml:lang="de">In der Tafel mit Fenster nach unten bewegen</long>
+						<long xml:lang="el">Μετακίνηση με παράθυρο κάτω κατα μήκος του τοίχου</long>
+						<long xml:lang="en_GB">Move with window along the wall down</long>
+						<long xml:lang="fr">Se déplacer vers le bas sur le Plan, avec la fenêtre</long>
+						<long xml:lang="gl">Mover coa fiestra ao longo do muro cara abaixo</long>
+						<long xml:lang="gu">વિન્ડોને દિવાલ સાથે નીચે ખસો</long>
+						<long xml:lang="hi">दीवाल सहित विंडो के साथ नीचे खिसकाएं</long>
+						<long xml:lang="it">Muove, con la finestra, verso il basso della muraglia</long>
+						<long xml:lang="ja">壁に沿って下に移動（ウィンドウと一緒に）</long>
+						<long xml:lang="nb">Flytt med vindu langs veggen nedover</long>
+						<long xml:lang="nl">Verplaats met venster langs de muur omlaag</long>
+						<long xml:lang="pt">Mover com janela ao longo do Muro para baixo</long>
+						<long xml:lang="pt_BR">Mover janela ao longo do Muro para baixo</long>
+						<long xml:lang="sv">Flytta med fönster längs med väggen nedåt</long>
+						<default>&lt;Control&gt;&lt;Alt&gt;&lt;Shift&gt;Down</default>
+					</option>
+				</subgroup>
+				<subgroup>
+					<short>Edge flipping</short>
+					<short xml:lang="ca">Inversió de la vora</short>
+					<short xml:lang="el">Γύρισμα άκρης</short>
+					<short xml:lang="en_GB">Edge flipping</short>
+					<short xml:lang="fr">Changement de bureau intuitif en approchant les bords</short>
+					<short xml:lang="gl">Trocar na borda</short>
+					<short xml:lang="gu">બાજુ પલટાવવાનું</short>
+					<short xml:lang="hi">किनारा झटकना</short>
+					<short xml:lang="it">Scorrimento bordo</short>
+					<short xml:lang="ja">エッジめくり</short>
+					<short xml:lang="nb">Bytting ved kanten</short>
+					<short xml:lang="nl">Rand kantelen</short>
+					<short xml:lang="pt">Mudar na borda</short>
+					<short xml:lang="pt_BR">Mudar na borda</short>
+					<short xml:lang="sv">Kantvändning</short>
+					<option type="edge" name="flip_left_edge">
+						<short>Flip Left</short>
+						<short xml:lang="ca">Invertir esquerra</short>
+						<short xml:lang="de">Nach links umschalten</short>
+						<short xml:lang="el">Γύρισμα Αριστερά</short>
+						<short xml:lang="en_GB">Flip Left</short>
+						<short xml:lang="fr">Glisser à Gauche</short>
+						<short xml:lang="gl">Trocar para a Esquerda</short>
+						<short xml:lang="gu">ડાબે પલટાવો</short>
+						<short xml:lang="hi">बायाँ झटकें</short>
+						<short xml:lang="it">Scorri a sinistra</short>
+						<short xml:lang="ja">左にめくる</short>
+						<short xml:lang="nb">Bytt venstre</short>
+						<short xml:lang="nl">Kantel naar links</short>
+						<short xml:lang="pl">Przerzuć w lewo</short>
+						<short xml:lang="pt">Mudar para a Esquerda</short>
+						<short xml:lang="pt_BR">Mudar para a Esquerda</short>
+						<short xml:lang="sv">Vänd vänster</short>
+						<short xml:lang="tr">Sola Çevir</short>
+						<long>Flip left</long>
+						<long xml:lang="ca">Invertir esquerra</long>
+						<long xml:lang="de">Nach links umschalten</long>
+						<long xml:lang="el">Γύρισμα αριστερά</long>
+						<long xml:lang="en_GB">Flip left</long>
+						<long xml:lang="fr">Glisser à gauche</long>
+						<long xml:lang="gl">Trocar cara a esquerda</long>
+						<long xml:lang="gu">ડાબે પલટાવો</long>
+						<long xml:lang="hi">बायाँ झटकें</long>
+						<long xml:lang="it">Scorre a sinistra</long>
+						<long xml:lang="ja">左にめくる</long>
+						<long xml:lang="nb">Bytt venstre</long>
+						<long xml:lang="nl">Kantel naar links</long>
+						<long xml:lang="pl">Przerzuć w lewo</long>
+						<long xml:lang="pt">Mudar para a esquerda</long>
+						<long xml:lang="pt_BR">Mudar para a esquerda</long>
+						<long xml:lang="sv">Vänd vänster</long>
+						<long xml:lang="tr">Sola çevir</long>
+						<nodelay>true</nodelay>
+						<default>
+							<edge name="Left"/>
+						</default>
+					</option>
+					<option type="edge" name="flip_right_edge">
+						<short>Flip Right</short>
+						<short xml:lang="ca">Invertir dreta</short>
+						<short xml:lang="de">Nach rechts umschalten</short>
+						<short xml:lang="el">Γύρισμα Δεξιά</short>
+						<short xml:lang="en_GB">Flip Right</short>
+						<short xml:lang="fr">Glisser à Droite</short>
+						<short xml:lang="gl">Trocar para a Dereita</short>
+						<short xml:lang="gu">જમણે પલટાવો</short>
+						<short xml:lang="hi">दाहिना झटकें</short>
+						<short xml:lang="it">Scorri a destra</short>
+						<short xml:lang="ja">右にめくる</short>
+						<short xml:lang="nb">Bytt høyre</short>
+						<short xml:lang="nl">Kantel naar rechts</short>
+						<short xml:lang="pl">Przerzuć w prawo</short>
+						<short xml:lang="pt">Mudar para a Direita</short>
+						<short xml:lang="pt_BR">Mudar para a Direita</short>
+						<short xml:lang="sv">Vänd höger</short>
+						<short xml:lang="tr">Sağa Çevir</short>
+						<long>Flip right</long>
+						<long xml:lang="ca">Invertir dreta</long>
+						<long xml:lang="de">Nach rechts umschalten</long>
+						<long xml:lang="el">Γύρισμα δεξιά</long>
+						<long xml:lang="en_GB">Flip right</long>
+						<long xml:lang="fr">Glisser à droite</long>
+						<long xml:lang="gl">Trocar cara a dereita</long>
+						<long xml:lang="gu">જમણે પલટાવો</long>
+						<long xml:lang="hi">दायाँ झटकें</long>
+						<long xml:lang="it">Scorre a destra</long>
+						<long xml:lang="ja">右にめくる</long>
+						<long xml:lang="nb">Bytt høyre</long>
+						<long xml:lang="nl">Kantel naar rechts</long>
+						<long xml:lang="pl">Przerzuć w prawo</long>
+						<long xml:lang="pt">Mudar para a direita</long>
+						<long xml:lang="pt_BR">Mudar para a direita</long>
+						<long xml:lang="sv">Vänd höger</long>
+						<long xml:lang="tr">Sağa çevir</long>
+						<nodelay>true</nodelay>
+						<default>
+							<edge name="Right"/>
+						</default>
+					</option>
+					<option type="edge" name="flip_up_edge">
+						<short>Flip Up</short>
+						<short xml:lang="ca">Invertir amunt</short>
+						<short xml:lang="de">Nach oben umschalten</short>
+						<short xml:lang="el">Γύρισμα Πάνω</short>
+						<short xml:lang="en_GB">Flip Up</short>
+						<short xml:lang="fr">Glisser en Haut</short>
+						<short xml:lang="gl">Trocar para arriba</short>
+						<short xml:lang="gu">ઉપર પલટાવો</short>
+						<short xml:lang="hi">ऊपर झटकें</short>
+						<short xml:lang="it">Scorri in alto</short>
+						<short xml:lang="ja">上にめくる</short>
+						<short xml:lang="nb">Bytt opp</short>
+						<short xml:lang="nl">Kantel omhoog</short>
+						<short xml:lang="pt">Mudar para Cima</short>
+						<short xml:lang="pt_BR">Mudar para Cima</short>
+						<short xml:lang="sv">Vänd upp</short>
+						<short xml:lang="tr">Yukarı Çevir</short>
+						<long>Flip up</long>
+						<long xml:lang="ca">Invertir amunt</long>
+						<long xml:lang="de">Nach oben umschalten</long>
+						<long xml:lang="el">Γύρισμα πάνω</long>
+						<long xml:lang="en_GB">Flip up</long>
+						<long xml:lang="fr">Glisser en haut</long>
+						<long xml:lang="gl">Trocar cara arriba</long>
+						<long xml:lang="gu">ઉપર પલટાવો</long>
+						<long xml:lang="hi">ऊपर झटकें</long>
+						<long xml:lang="it">Scorre in alto</long>
+						<long xml:lang="ja">上にめくる</long>
+						<long xml:lang="nb">Bytt opp</long>
+						<long xml:lang="nl">Kantel omhoog</long>
+						<long xml:lang="pt">Mudar para cima</long>
+						<long xml:lang="pt_BR">Mudar para cima</long>
+						<long xml:lang="sv">Vänd upp</long>
+						<long xml:lang="tr">Yukarı çevir</long>
+						<nodelay>true</nodelay>
+						<default>
+							<edge name="Top"/>
+						</default>
+					</option>
+					<option type="edge" name="flip_down_edge">
+						<short>Flip Down</short>
+						<short xml:lang="ca">Invertir avall</short>
+						<short xml:lang="de">Nach unten umschalten</short>
+						<short xml:lang="el">Γύρισμα Κάτω</short>
+						<short xml:lang="en_GB">Flip Down</short>
+						<short xml:lang="fr">Glisser en Bas</short>
+						<short xml:lang="gl">Trocar para Baixo</short>
+						<short xml:lang="gu">નીચે પલટાવો</short>
+						<short xml:lang="hi">नीचे झटकें</short>
+						<short xml:lang="it">Scorri in basso</short>
+						<short xml:lang="ja">下にめくる</short>
+						<short xml:lang="nb">Bytt ned</short>
+						<short xml:lang="nl">Kantel omlaag</short>
+						<short xml:lang="pt">Mudar para Baixo</short>
+						<short xml:lang="pt_BR">Mudar para Baixo</short>
+						<short xml:lang="sv">Vänd nedåt</short>
+						<short xml:lang="tr">Aşağı Çevir</short>
+						<long>Flip down</long>
+						<long xml:lang="ca">Invertir avall</long>
+						<long xml:lang="de">Nach unten umschalten</long>
+						<long xml:lang="el">Γύρισμα κάτω</long>
+						<long xml:lang="en_GB">Flip down</long>
+						<long xml:lang="fr">Glisser en bas</long>
+						<long xml:lang="gl">Trocar cara abaixo</long>
+						<long xml:lang="gu">નીચે પલટાવો</long>
+						<long xml:lang="hi">नीचे झटकें</long>
+						<long xml:lang="it">Scorre in basso</long>
+						<long xml:lang="ja">下にめくる</long>
+						<long xml:lang="nb">Bytt ned</long>
+						<long xml:lang="nl">Kantel omlaag</long>
+						<long xml:lang="pt">Mudar para baixo</long>
+						<long xml:lang="pt_BR">Mudar para baixo</long>
+						<long xml:lang="sv">Vänd ner</long>
+						<long xml:lang="tr">Aşağı çevir</long>
+						<nodelay>true</nodelay>
+						<default>
+							<edge name="Bottom"/>
+						</default>
+					</option>
+				</subgroup>
+			</group>
+		</display>
+		<screen>
+			<group>
+				<short>Viewport Switching</short>
+				<short xml:lang="de">Arbeitsflächenumschaltung</short>
+				<short xml:lang="el">Αλλαγή Εικονικής Επιφάνειας Εργασίας</short>
+				<short xml:lang="en_GB">Viewport Switching</short>
+				<short xml:lang="es">Cambiando Viewport</short>
+				<short xml:lang="fi">Työtilan vaihtaminen</short>
+				<short xml:lang="fr">Changement de bureau</short>
+				<short xml:lang="gl">Trocar deescritorio</short>
+				<short xml:lang="gu">દૃશ્યપોર્ટ બદલવાનું</short>
+				<short xml:lang="hi">व्यूपोर्ट स्विचिंग</short>
+				<short xml:lang="it">Selezione area di lavoro</short>
+				<short xml:lang="ja">ビューポート切り替え</short>
+				<short xml:lang="nb">Bytting av arbeidsområde</short>
+				<short xml:lang="nl">Viewport wisselen</short>
+				<short xml:lang="pt">Mudar de Viewport</short>
+				<short xml:lang="pt_BR">Mudar de janela de visualização</short>
+				<short xml:lang="sv">Växling av arbetsyta</short>
+				<short xml:lang="tr">Masaüstü Seçimi</short>
+				<option type="int" name="mmmode">
+					<short>Multimonitor behavior</short>
+					<short xml:lang="ca">Comportament multimonitor</short>
+					<short xml:lang="de">Verhalten bei mehreren Monitoren</short>
+					<short xml:lang="el">Συμπεριφορά πολλαπλών οθονών</short>
+					<short xml:lang="en_GB">Multi-monitor behavior</short>
+					<short xml:lang="es">Comportamiento multimonitor</short>
+					<short xml:lang="fr">Comportement Multimoniteur</short>
+					<short xml:lang="gl">Comportamento con múltiplos monitores</short>
+					<short xml:lang="gu">વિવિધમોનીટર વર્તણૂક</short>
+					<short xml:lang="hi">बहुल मॉनिटर आचरण</short>
+					<short xml:lang="it">Comportamento multi-monitor</short>
+					<short xml:lang="ja">マルチモニタでの動作</short>
+					<short xml:lang="nb">Oppførsel for flere skjermer</short>
+					<short xml:lang="nl">Multi-monitor gedrag</short>
+					<short xml:lang="pt">Comportamento com múltiplos monitores</short>
+					<short xml:lang="pt_BR">Comportamento com múltiplos monitores</short>
+					<short xml:lang="sv">Flerskärmsbeteende</short>
+					<long>How should a multimonitor configuration be handled</long>
+					<long xml:lang="ca">Com s'ha de manegar una configuració multimonitor</long>
+					<long xml:lang="el">Πως θα πρέπει μια ρύθμιση πολλαπλών οθονών να χειριστεί</long>
+					<long xml:lang="en_GB">How should a multi-monitor configuration be handled</long>
+					<long xml:lang="fr">Manière dont doit être supportée la configuration multi-moniteur</long>
+					<long xml:lang="gl">Como debe ser xerida unha configuración con múltiplos monitores</long>
+					<long xml:lang="gu">વિવિધમોનીટર રૂપરેખાંકન કેવી રીતે નિયંત્રિત થવું જોઈએ</long>
+					<long xml:lang="hi">कैसे एक मल्टीमॉनिटर विन्यास को नियंत्रित किया जाना चाहिए</long>
+					<long xml:lang="it">Come gestire una configurazione multi-monitor</long>
+					<long xml:lang="ja">マルチモニタ環境での処理方法</long>
+					<long xml:lang="nb">Hvordan skal et flerskjermsoppsett håndteres?</long>
+					<long xml:lang="nl">Hoe moet worden omgegaan met een multi-monitor configuratie</long>
+					<long xml:lang="pt">Como deve ser gerida uma configuração com múltiplos monitores</long>
+					<long xml:lang="pt_BR">Como deve ser gerenciada uma configuração com múltiplos monitores</long>
+					<long xml:lang="sv">Hur en konfiguration med flera skärmar ska hanteras</long>
+					<default>0</default>
+					<min>0</min>
+					<max>1</max>
+					<desc>
+						<value>0</value>
+						<name>Switch all</name>
+						<name xml:lang="de">Über alle Monitore verschieben</name>
+						<name xml:lang="el">Αλλαγή όλων</name>
+						<name xml:lang="en_GB">Switch all</name>
+						<name xml:lang="es">Cambiar todos</name>
+						<name xml:lang="fr">Changer tous</name>
+						<name xml:lang="gl">Trocar todos</name>
+						<name xml:lang="gu">બધું બદલો</name>
+						<name xml:lang="hi">सभी स्विच करें</name>
+						<name xml:lang="it">Cambia tutte</name>
+						<name xml:lang="ja">すべてを対象に切り替え</name>
+						<name xml:lang="nb">Bytt alle</name>
+						<name xml:lang="nl">Wissel allen</name>
+						<name xml:lang="pt">Mudar todos</name>
+						<name xml:lang="pt_BR">Mudar todos</name>
+						<name xml:lang="sv">Växla alla</name>
+					</desc>
+					<desc>
+						<value>1</value>
+						<name>Switch separately</name>
+						<name xml:lang="de">Monitore separat verschieben</name>
+						<name xml:lang="el">Αλλαγή ξεχωριστά</name>
+						<name xml:lang="en_GB">Switch separately</name>
+						<name xml:lang="es">Cambiar por separado</name>
+						<name xml:lang="fr">Changer séparément</name>
+						<name xml:lang="gl">Trocar separadamente</name>
+						<name xml:lang="gu">અલગથી બદલો</name>
+						<name xml:lang="hi">अलग से स्विच करें</name>
+						<name xml:lang="it">Cambia separatamente</name>
+						<name xml:lang="ja">個別に切り替え</name>
+						<name xml:lang="nb">Bytt ett for ett</name>
+						<name xml:lang="nl">Wissel apart</name>
+						<name xml:lang="pt">Mudar separadamente</name>
+						<name xml:lang="pt_BR">Mudar separadamente</name>
+						<name xml:lang="sv">Växla separat</name>
+					</desc>
+				</option>
+			</group>
+			<group>
+				<short>Edge Flipping</short>
+				<short xml:lang="ca">Inversió de la vora</short>
+				<short xml:lang="de">Umschaltung an Desktoprand</short>
+				<short xml:lang="el">Ακριανό Γύρισμα</short>
+				<short xml:lang="en_GB">Edge Flipping</short>
+				<short xml:lang="fr">Changement de Bureau aux Bords</short>
+				<short xml:lang="gl">Trocar no Borde</short>
+				<short xml:lang="gu">બાજુ પલટાવવાનું</short>
+				<short xml:lang="hi">किनारा झटकना</short>
+				<short xml:lang="it">Scorrimento bordo</short>
+				<short xml:lang="ja">エッジめくり</short>
+				<short xml:lang="nb">Kantbytting</short>
+				<short xml:lang="nl">Rand kantelen</short>
+				<short xml:lang="pt">Mudar na Borda</short>
+				<short xml:lang="pt_BR">Mudar na Borda</short>
+				<short xml:lang="sv">Kantvändning</short>
+				<option type="bool" name="edgeflip_pointer">
+					<short>Edge Flip Pointer</short>
+					<short xml:lang="de">An Rand wechseln (Mausbewegung)</short>
+					<short xml:lang="el">Ακριανό Γύρισμα Δείκτη Ποντικιού</short>
+					<short xml:lang="en_GB">Edge Flip Pointer</short>
+					<short xml:lang="fi">Käännä seuraavaan työpöytään siirtäessä osoitinta reunaan</short>
+					<short xml:lang="fr">Changement en Pointant au Bord</short>
+					<short xml:lang="gl">Trocar co punteiro no borde</short>
+					<short xml:lang="gu">બાજુ પલટાવ નિર્દેશક</short>
+					<short xml:lang="hi">किनारा झटका सूचक</short>
+					<short xml:lang="it">Scorrere il bordo con il puntatore</short>
+					<short xml:lang="ja">エッジへのポインタ移動でめくる</short>
+					<short xml:lang="nb">Kantbytt peker</short>
+					<short xml:lang="nl">Rand kantel aanwijzer</short>
+					<short xml:lang="pt">Mudar na Borda com Ponteiro</short>
+					<short xml:lang="pt_BR">Mudar na Borda com ponteiro</short>
+					<short xml:lang="sv">Kantvändningspekare</short>
+					<long>Flip viewport when moving the pointer to a screen edge</long>
+					<long xml:lang="de">Arbeitsfläche beim Bewegen des Mauszeigers an eine Bildschirmkante umschalten</long>
+					<long xml:lang="el">Γύρισμα εικονικής επιφάνειας εργασίας όταν μετακινείται ο δείκτης του ποντικιού σε μια άκρη της οθόνης</long>
+					<long xml:lang="en_GB">Flip viewport when moving the pointer to a screen edge</long>
+					<long xml:lang="fr">Changer de bureau en déplaçant le pointeur vers un bord de l'écran</long>
+					<long xml:lang="gl">Troca cara o escritorio seguinte ao mover o punteiro para unha borda do pantalla</long>
+					<long xml:lang="gu">જ્યારે નિર્દેશકને સ્ક્રીન બાજુ પર ખસેડી રહ્યા હોય ત્યારે દૃશ્યપોર્ટ પલટાવો</long>
+					<long xml:lang="hi">व्यूपोर्ट झटकें जब स्क्रीन किनारे में एक संकेतक खिसका रहा है</long>
+					<long xml:lang="it">Scorre l'area di lavoro quando si sposta il puntatore del mouse su un bordo dello schermo</long>
+					<long xml:lang="ja">ポインタが画面の端にきたときビューポートをめくる</long>
+					<long xml:lang="nb">Bytt arbeidsområde når musepekeren dras til en skjermkant</long>
+					<long xml:lang="nl">Kantel viewport als de muisaanwĳzer naar de schermrand wordt verplaatst</long>
+					<long xml:lang="pt">Mudar para o viewport seguinte ao mover o ponteiro para uma borda do ecrã</long>
+					<long xml:lang="pt_BR">Mudar para a janela de visualização seguinte ao mover o ponteiro do mouse para uma borda da tela</long>
+					<long xml:lang="sv">Vänd arbetsyta när man drar muspekaren till skärmkanten</long>
+					<default>false</default>
+				</option>
+				<option type="bool" name="edgeflip_move">
+					<short>Edge Flip Move</short>
+					<short xml:lang="de">An Rand wechseln (Verschieben von Fenstern)</short>
+					<short xml:lang="el">Ακριανό Γύρισμα Μεταφοράς</short>
+					<short xml:lang="en_GB">Edge Flip Move</short>
+					<short xml:lang="fi">Käännä seuraavaan työpöytään siirtäessä ikkunaa reunaan</short>
+					<short xml:lang="fr">Changement en Déplacant une Fenêtre au Bord</short>
+					<short xml:lang="gl">Trocar no borde mentres se arrastra</short>
+					<short xml:lang="gu">બાજુ પલટાવ ખસેડો</short>
+					<short xml:lang="hi">किनारा झटका हटाएं</short>
+					<short xml:lang="it">Scorrere il bordo allo spostamento</short>
+					<short xml:lang="ja">エッジへの移動でめくる</short>
+					<short xml:lang="nb">Kantbytt flytt</short>
+					<short xml:lang="nl">Rand kantel verplaatsen</short>
+					<short xml:lang="pt">Mudar na Borda com Arrastamento</short>
+					<short xml:lang="pt_BR">Mudar na borda ao arrastar</short>
+					<short xml:lang="sv">Kantvändningsrörelse</short>
+					<long>Flip viewport when moving a window to a screen edge</long>
+					<long xml:lang="de">Arbeitsfläche beim Bewegen eines Fensters an eine Bildschirmkante umschalten</long>
+					<long xml:lang="el">Γύρισμα εικονικής επιφάνειας εργασίας όταν μετακινείται ένα παράθυρο σε μια άκρη της οθόνης</long>
+					<long xml:lang="en_GB">Flip viewport when moving a window to a screen edge</long>
+					<long xml:lang="fr">Changer de bureau en déplaçant une fenêtre vers un bord de l'écran</long>
+					<long xml:lang="gl">Troca cara o escritorio seguinte ao mover unha fiestra para unha borda do pantalla</long>
+					<long xml:lang="gu">જ્યારે વિન્ડો સ્ક્રીન બાજુ પર ખસેડી રહ્યા હોય ત્યારે દૃશ્યપોર્ટ પલટાવો</long>
+					<long xml:lang="hi">व्यूपोर्ट झटकें जब स्क्रीन किनारे में एक विंडो खिसका रहा है</long>
+					<long xml:lang="it">Scorre l'area di lavoro quando si sposta una finestra su un bordo dello schermo</long>
+					<long xml:lang="ja">ウィンドウが画面の端にきたときビューポートをめくる</long>
+					<long xml:lang="nb">Bytt arbeidsområde når et vindu dras til en skjermkant</long>
+					<long xml:lang="nl">Kantel viewport als een venster naar de schermrand wordt verplaatst</long>
+					<long xml:lang="pt">Mudar para o viewport seguinte ao mover uma janela para uma borda do ecrã</long>
+					<long xml:lang="pt_BR">Mudar para a janela de visualização seguinte ao mover um objeto para uma borda da tela</long>
+					<long xml:lang="sv">Vänd arbetsyta när man drar ett fönster till skärmkanten</long>
+					<default>true</default>
+				</option>
+				<option type="bool" name="edgeflip_dnd">
+					<short>Edge Flip DnD</short>
+					<short xml:lang="de">An Rand wechseln (Ziehen und Ablegen)</short>
+					<short xml:lang="el">Ακριανό Γύρισμα DnD</short>
+					<short xml:lang="en_GB">Edge Flip DnD</short>
+					<short xml:lang="fi">Käännä seuraavaan työpöytään siirtäessä objektia reunaan</short>
+					<short xml:lang="fr">Changement en Glissant-Déposant au Bord</short>
+					<short xml:lang="gl">Trocar no borde arrastrando e soltando</short>
+					<short xml:lang="gu">બાજુ પલટાવ DnD</short>
+					<short xml:lang="hi">किनारा झटका DnD</short>
+					<short xml:lang="it">Scorrere il bordo al trascinamento</short>
+					<short xml:lang="ja">エッジへのドラッグ＆ドロップでめくる</short>
+					<short xml:lang="nb">Kantbytt dra-og-slipp</short>
+					<short xml:lang="nl">Rand kantel verslepen</short>
+					<short xml:lang="pt">Mudar na Borda Arrastando e Largando</short>
+					<short xml:lang="pt_BR">Mudar na borda arrastando e soltando</short>
+					<short xml:lang="sv">Kantvändning drag och släpp</short>
+					<long>Flip viewport when dragging an object to a screen edge</long>
+					<long xml:lang="de">Arbeitsfläche beim Ziehen eines Objektes an eine Bildschirmkante umschalten</long>
+					<long xml:lang="el">Γύρισμα εικονικής επιφάνειας εργασίας όταν τραβιέται ένα αντικείμενο σε μια άκρη της οθόνης</long>
+					<long xml:lang="en_GB">Flip viewport when dragging an object to a screen edge</long>
+					<long xml:lang="fr">Changer de bureau en glissant un objet vers un bord de l'écran</long>
+					<long xml:lang="gl">Troca cara o escritorio seguinte ao mover un obxecto para unha borda do pantalla</long>
+					<long xml:lang="gu">જ્યારે ઓબ્જેક્ટને સ્ક્રીન બાજુ પર ખેંચી રહ્યા હોય ત્યારે દૃશ્યપોર્ટ પલટાવો</long>
+					<long xml:lang="hi">व्यूपोर्ट झटकें जब स्क्रीन किनारे में एक वस्तु खींच रहा है</long>
+					<long xml:lang="it">Scorre l'area di lavoro quando si trascina un oggetto su un bordo dello schermo</long>
+					<long xml:lang="ja">オブジェクトを画面の端にドラッグしたときビューポートをめくる</long>
+					<long xml:lang="nb">Bytt arbeidsområde når et objekt dras til en skjermkant</long>
+					<long xml:lang="nl">Kantel viewport als een object naar de scherm rand wordt versleept wordt</long>
+					<long xml:lang="pt">Mudar para o viewport seguinte ao mover um objecto para uma borda do ecrã</long>
+					<long xml:lang="pt_BR">Mudar para a janela de visualização seguinte ao mover um objeto para uma borda da tela</long>
+					<long xml:lang="sv">Vänd arbetsyta när man drar ett objekt nära skärmkanten</long>
+					<default>false</default>
+				</option>
+			</group>
+		</screen>
+	</plugin>
+</compiz>

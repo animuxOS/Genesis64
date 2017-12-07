@@ -1,0 +1,964 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="Zda je komponenta PKCS#11 pro gnome-keyring aktivní.">
+                                                        <longdesc>Tato volba aktivuje komponentu PKCS#11 v démonovi gnome-keyring. Změna se projeví pouze během spouštění gnome-keyring-daemon (např. když se uživatel přihlásí). Toto nastavení může být potlačeno, pokud jsou démonu předány jisté parametry příkazové řádky.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="Zda je agent SSH pro gnome-keyring aktivní.">
+                                                        <longdesc>Tato volba aktivuje SSH agenta v démonovi gnome-keyring. Změna se projeví pouze během spouštění gnome-keyring-daemon (např. když se uživatel přihlásí). Toto nastavení může být potlačeno, pokud jsou démonu předány jisté parametry příkazové řádky.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Šířka okna">
+                                                        <longdesc>Šířka zobrazovaného okna</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Výška okna">
+                                                        <longdesc>Výška zobrazovaného okna</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gksu">
+                                <entry name="save-keyring">
+                                        <local_schema short_desc="Klíčenka, ve které se budou uchovávat hesla">
+                                                <longdesc>Jméno klíčenky, kterou má gksu použít. Obvyklé hodnoty jsou „session&quot;, což uloží heslo po dobu sezení a „default&quot;, což uloží heslo bez časového omezení.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="save-to-keyring">
+                                        <local_schema short_desc="Uložit hesla do klíčenky gnome-keyring">
+                                                <longdesc>gksu může ukládat zadaná hesla do gnome-keyring, takže nebudete dotazováni při každém použití gksu.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display-no-pass-info">
+                                        <local_schema short_desc="Pokud není potřeba heslo, upozorní na to hláškou">
+                                                <longdesc>Tato volba určuje, zda se zobrazí informační dialog v případě, kdy se může program spustit bez nutnosti zadání hesla.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="prompt">
+                                        <local_schema short_desc="Dotáže se na zachycení">
+                                                <longdesc>Povolením této volby zajistíte, aby se gksu před zadáním hesla zeptal uživatele, zda chce zachytit obrazovku. Toto však funguje pouze v případě, že je vypnuta volba force-grab.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="sudo-mode">
+                                        <local_schema short_desc="Režim sudo">
+                                                <longdesc>Zda má být sudo výchozím backendem. Tento backend je jinak dostupný 
+přepínačem -S, nebo spuštěním „gksudo&quot; místo „gksu&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="force-grab">
+                                        <local_schema short_desc="Vynutí zachycení klávesnice a myši">
+                                                <longdesc>Zachytí klávesnici a myš i v případě, že byl na příkazové řádce použit parametr -g.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="disable-grab">
+                                        <local_schema short_desc="Zakáže zachytávání klávesnice a myši">
+                                                <longdesc>Zda se má vypnout zachytávání klávesnice a myši. Tímto umožníte jiným X aplikacím, aby naslouchaly událostem vstupu z klávesnice a tím pádem ztrácíte ochranu před zlovolnými aplikacemi, které by mohly v systému běžet.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Příkazy, které spustit klávesovými zkratkami">
+                                                        <longdesc>Klíče /apps/metacity/global_keybindings/run_command_N definují klávesové zkratky, které odpovídají těmto příkazům. Stisknutí klávesové zkratky pro run_command_N spustí command_N.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Příkaz zachycení obrázku okna">
+                                                        <longdesc>Klíč /apps/metacity/global_keybindings/run_command_window_screenshot definuje klávesovou zkratku, která způsobí spuštění příkazu určeného tímto nastavením.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Příkaz zachycení obrazovky">
+                                                        <longdesc>Klíč /apps/metacity/global_keybindings/run_command_screenshot definuje klávesovou zkratku, která způsobí spuštění příkazu určeného tímto nastavením.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Spustit definovaný příkaz">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Spustit terminál">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Zachytit obrázek okna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Zachytit obrazovku">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Zobrazit dialog spuštění aplikace umístěný na panelu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Zobrazit nabídku panelu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Přepnout na plochu pod aktuální plochou">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Přepnout na plochu nad aktuální plochou">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Přepnout na plochu napravo">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Přepnout na plochu nalevo">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Přepnout na plochu 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Přepnout na plochu 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Přepnout na plochu 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Přepnout na plochu 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Přepnout na plochu 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Přepnout na plochu 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Přepnout na plochu 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Přepnout na plochu 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Přepnout na plochu 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Přepnout na plochu 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Přepnout na plochu 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Přepnout na plochu 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Skrýt všechna okna a aktivovat pracovní plochu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Okamžitě přepínat zpět mezi panely a pracovní plochou">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Přepínat mezi panely a pracovní plochou okamžitě">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Okamžitě přepínat zpět mezi okny">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Přepínat mezi okny okamžitě">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Přepínat zpět mezi okny aplikace s pomocným oknem">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Přepínat mezi okny aplikace s pomocným oknem">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Okamžitě přepínat zpět mezi okny aplikace">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Přepínat mezi okny aplikace okamžitě">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Přepínat zpět mezi panely a pracovní plochou s pomocným oknem">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Přepínat mezi panely a pracovní plochou s pomocným oknem">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Přepínat zpět mezi okny s pomocným oknem">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Přepínat mezi okny s pomocným oknem">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Přesunout okno na západní stranu obrazovky">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Přesunout okno na východní stranu obrazovky">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Přesunout okno na jižní stranu obrazovky">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Přesunout okno na severní stranu obrazovky">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Přesunout okno do jihovýchodního rohu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Přesunout okno do jihozápadního rohu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Přesunout okno do severovýchodního rohu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Přesunout okno do severozápadního rohu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Maximalizovat okno vodorovně">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Maximalizovat okno svisle">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Snížit okno pod jiná okna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Zvýšit okno nad jiná okna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Zvýšit okno, pokud je zakryté, jinak je snížit">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Posunout okno o plochu dolů">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Posunout okno o plochu nahoru">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Posunout okno o plochu doprava">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Posunout okno o plochu doleva">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Přesunout okno na plochu 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Přesunout okno na plochu 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Přesunout okno na plochu 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Přesunout okno na plochu 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Přesunout okno na plochu 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Přesunout okno na plochu 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Přesunout okno na plochu 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Přesunout okno na plochu 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Přesunout okno na plochu 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Přesunout okno na plochu 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Přesunout okno na plochu 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Přesunout okno na plochu 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Přepnout okno na všech plochách">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Změnit velikost okna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Přesunout okno">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Minimalizovat okno">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Zavřít okno">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Přepnout stav svinutí">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Zrušit maximalizaci okna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Maximalizovat okno">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Přepnout stav maximalizace">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Přepnout stav vždy navrchu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Přepnout režim na celou obrazovku">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Aktivovat nabídku okna">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Název plochy">
+                                                        <longdesc>Název pracovní plochy.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Zakázat &quot;pseudovlastnosti&quot;, které jsou potřeba pro staré nebo chybné aplikace">
+                                                        <longdesc>Některé aplikace nerespektují specifikace způsobem, který má za následek chybné vlastnosti správce oken. Tato volba umístí Metacity do zcela korektního režimu, což uživateli poskytne konzistentnější uživatelské rozhraní, pokud tedy není zapotřebí spouštět jakékoliv chybně se chovající aplikace.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Neimplementováno) Navigace pracuje s aplikacemi, nikoliv s okny">
+                                                        <longdesc>Je-li &quot;true&quot;, pracuje Metacity s aplikacemi namísto oken. Toto pojetí je trochu abstraktní, ale obecně systém založený na aplikacích připomíná více Mac a méně Windows. V případě aktivace okna v režimu založeném na aplikacích jsou zvýšena všechna okna aplikace. V režimu založeném na aplikacích také nejsou oknům v jiných aplikacích předávána aktivující kliknutí. Režim založený na aplikacích je ovšem momentálně povětšinou neimplementován.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Je-li &quot;true&quot;, dávat přednost menšímu používání prostředků před použitelností">
+                                                        <longdesc>Je-li &quot;true&quot;, bude Metacity dávat uživateli méně zpětné vazby používáním drátových rámů, nepoužíváním animací nebo jinými způsoby. Pro mnoho uživatelů to znamená výrazné snížení použitelnosti, ale také možnost, že staré aplikace budou nadále pracovat. I pro terminálové servery se může jednat o přístupný kompromis. Funkce drátových rámů je ale zakázána, pokud je povoleno zpřístupnění.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="Správce skládání">
+                                                        <longdesc>Určuje, jestli je Metacity správcem skládání.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Typ vizuálního zvonku">
+                                                        <longdesc>Sděluje Metacity, jak implementovat vizuální znamení o zazvonění systémového zvonku nebo jiného aplikačního znamení zvonku. Momentálně existují dvě platné hodnoty, &quot;fullscreen&quot;, která způsobí černo-bílé bliknutí celé obrazovky, a &quot;frame_flash&quot;, která způsobí blikání záhlaví aplikace posílající signál zvonku. Není-li aplikace, která poslala signál zvonku, známá (což je obvykle případ výchozího systémové zvukového znamení), bliká záhlaví aktuálního okna.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Systémový zvonek je slyšet">
+                                                        <longdesc>Určuje, jestli mohou aplikace nebo systém generovat slyšitelné zvukové znamení; ve spojení s &quot;vizuálním zvonkem&quot; může být použito k povolení tichého zvukového znamení.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Povolit vizuální zvonek">
+                                                        <longdesc>Zapíná vizuální znamení v okamžiku, kdy aplikace nebo systém vyvolá &quot;zvonek&quot; nebo zvukové znamení (pípnutí); užitečné pro osoby s poškozeným sluchem a k použití v hlučném prostředí.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Počet ploch">
+                                                        <longdesc>Počet ploch. Musí být více než nula a má pevné maximum (aby nebylo možno vyřadit prostředí z provozu žádostí o příliš mnoho ploch).</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Písmo nadpisu oken">
+                                                        <longdesc>Řetězec popisu písma popisující písmo záhlaví oken. Velikost z popisu bude použita jen pokud je volba titlebar_font_size nastavena na &quot;0&quot;. Tato volba je dále zakázána, je-li volba titlebar_uses_desktop_font nastavena na &quot;true&quot;.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Použít v nadpisech oken standardní systémové písmo">
+                                                        <longdesc>Je-li &quot;true&quot;, ignorovat volbu titlebar_font a použít standardní písmo aplikací u nadpisů oken.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Aktuální motiv">
+                                                        <longdesc>Motiv určuje vzhled okrajů okna, záhlaví okna atd.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Zpoždění v milisekundách u volby automatického zvýšení">
+                                                        <longdesc>Zpoždění před zvýšením okna, je-li auto_raise nastaveno na &quot;true&quot;. Zpoždění je uvedeno v tisícinách sekundy.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Automaticky zvýší aktivní okno">
+                                                        <longdesc>Je-li &quot;true&quot; a režim aktivace je buď &quot;sloppy&quot; nebo &quot;mouse&quot;, pak bude aktivní okno automaticky po zpoždění zvýšeno (zpoždění je určeno v klíči auto_raise_delay). Netýká se klikání na okno za účelem aktivace, ani přechodu na okno během akce táhnutí a puštění.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="Akce při kliknutí pravým tlačítkem na záhlaví okna">
+                                                        <longdesc>Tato volba určuje důsledek kliknutí pravým tlačítkem myši na záhlaví okna. Momentálně platnými volbami jsou &quot;toggle_shade&quot;, která okno svine/rozvine, &quot;toggle_maximize&quot;, která okno maximalizuje nebo zruší maximalizaci, &quot;minimize&quot;, která okno minimalizuje, a &quot;none&quot;, která nezpůsobí nic.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="Akce při kliknutí prostředním tlačítkem na záhlaví okna">
+                                                        <longdesc>Tato volba určuje důsledek kliknutí prostředním tlačítkem myši na záhlaví okna. Momentálně platnými volbami jsou &quot;toggle_shade&quot;, která okno svine/rozvine, &quot;toggle_maximize&quot;, která okno maximalizuje nebo zruší maximalizaci, &quot;minimize&quot;, která okno minimalizuje, a &quot;none&quot;, která nezpůsobí nic.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Akce při dvojitém kliknutí na záhlaví okna">
+                                                        <longdesc>Tato volba určuje důsledek dvojitého kliknutí na záhlaví okna. Momentálně platnými volbami jsou &quot;toggle_shade&quot;, která okno svine/rozvine, &quot;toggle_maximize&quot;, která okno maximalizuje nebo zruší maximalizaci, &quot;minimize&quot;, která okno minimalizuje, a &quot;none&quot;, která nezpůsobí nic.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Jestli má zvyšování být vedlejší efekt jiných interakcí s uživatelem">
+                                                        <longdesc>Mnohé akce (např. klikání v klientské oblasti, přesun nebo změna velikosti okna) standardně zvýší okno jako postranní efekt. Nastavením této volby na &quot;false&quot;, což lze jen doporučit, dojde k oddělení zvyšování od ostatních uživatelských akcí a požadavky od aplikací na zvýšení oken budou ignorovány. Viz &lt;http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6&gt;.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Určuje způsob, jakým se nová okno stanou aktivními">
+                                                        <longdesc>Tato volba poskytuje dodatečnou kontrolu nad tím, jakým způsobem se nově vytvořená okna stanou aktivními. Má dvě možné hodnoty, &quot;smart&quot; použije běžný uživatelův režim aktivace, &quot;strict&quot; má za následek neaktivnost oken spouštěných z terminálu.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Režim aktivace oken">
+                                                        <longdesc>Režim aktivace oken ukazuje, jak jsou okna aktivována. Má tři možné hodnoty; &quot;click&quot; znamená, že okna jsou aktivována kliknutím, &quot;sloppy&quot; znamená, že okna jsou aktivována, když se do nich přesune myš, a &quot;mouse&quot; znamená, že okna jsou aktivována, když se do nich přesune myš, a deaktivována, když je opustí.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Uspořádání tlačítek na záhlaví okna">
+                                                        <longdesc>Uspořádání tlačítek na záhlaví okna. Hodnota by měla být řetězcem, např. &quot;menu:minimize,maximize,close&quot;; dvojtečka odděluje levý a pravý roh okna, názvy tlačítek jsou odděleny čárkami. Opakování tlačítka není dovoleno. Neznámé názvy tlačítek jsou v tichosti ignorovány, aby mohla být v budoucích verzích metacity přidána tlačítka bez vlivu na starší verze.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Modifikátor, který použít pro modifikované akce kliknutí na okno">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Implicitní aplikace prohlížeče komponent">
+                                                                <longdesc>Aplikace, kterou chcete používat k zobrazování souborů, které k zobrazení vyžadují komponentu. Parametr %s bude nahrazen URI souboru, parametr %c bude nahrazen IID komponenty.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Argument exec pro implicitní terminál">
+                                                                <longdesc>Argument exec, který používat pro implicitní aplikaci terminálu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Implicitní aplikace terminálu">
+                                                                <longdesc>Implicitní aplikace terminálu, kterou používat pro aplikace, které vyžadují terminál.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Spustit příkaz v terminálu">
+                                                                <longdesc>&quot;True&quot;, pokud by měl být program používaný pro obsluhu tohoto typu URL spouštěn v terminálu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Obsluha pro URL &quot;h323&quot;">
+                                                                <longdesc>Příkaz používaný pro obsluhu URL &quot;h323&quot;, je-li povolen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Jestli má určený příkaz obsluhovat URL &quot;h323&quot;">
+                                                                <longdesc>&quot;True&quot;, pokud má příkaz určený v klíči &quot;command&quot; obsluhovat URL &quot;h323&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Spustit příkaz v terminálu">
+                                                                <longdesc>&quot;True&quot;, pokud by měl být program používaný pro obsluhu tohoto typu URL spouštěn v terminálu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Obsluha pro URL &quot;callto&quot;">
+                                                                <longdesc>Příkaz používaný pro obsluhu URL &quot;callto&quot;, je-li povolen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Jestli má určený příkaz obsluhovat URL &quot;callto&quot;">
+                                                                <longdesc>&quot;True&quot;, pokud má příkaz určený v klíči &quot;command&quot; obsluhovat URL &quot;callto&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Spustit příkaz v terminálu">
+                                                                <longdesc>&quot;True&quot;, pokud by měl být program používaný pro obsluhu tohoto typu URL spouštěn v terminálu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Obsluha pro URL &quot;mailto&quot;">
+                                                                <longdesc>Příkaz používaný pro obsluhu URL &quot;mailto&quot;, je-li povolen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Jestli má určený příkaz obsluhovat URL &quot;mailto&quot;">
+                                                                <longdesc>&quot;True&quot;, pokud má příkaz určený v klíči &quot;command&quot; obsluhovat URL &quot;mailto&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Spustit příkaz v terminálu">
+                                                                <longdesc>&quot;True&quot;, pokud by měl být program používaný pro obsluhu tohoto typu URL spouštěn v terminálu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Obsluha pro URL &quot;https&quot;">
+                                                                <longdesc>Příkaz používaný pro obsluhu URL &quot;https&quot;, je-li povolen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Jestli má určený příkaz obsluhovat URL &quot;https&quot;">
+                                                                <longdesc>&quot;True&quot;, pokud má příkaz určený v klíči &quot;command&quot; obsluhovat URL &quot;https&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Spustit příkaz v terminálu">
+                                                                <longdesc>&quot;True&quot;, pokud by měl být program používaný pro obsluhu tohoto typu URL spouštěn v terminálu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Spustit příkaz v terminálu">
+                                                                <longdesc>&quot;True&quot;, pokud by měl být program používaný pro obsluhu tohoto typu URL spouštěn v terminálu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Obsluha pro URL &quot;http&quot;">
+                                                                <longdesc>Příkaz používaný pro obsluhu URL &quot;http&quot;, je-li povolen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Jestli má určený příkaz obsluhovat URL &quot;http&quot;">
+                                                                <longdesc>&quot;True&quot;, pokud má příkaz určený v klíči &quot;command&quot; obsluhovat URL &quot;http&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Spustit příkaz v terminálu">
+                                                                <longdesc>&quot;True&quot;, pokud by měl být program používaný pro obsluhu tohoto typu URL spouštěn v terminálu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Obsluha pro URL &quot;man&quot;">
+                                                                <longdesc>Příkaz používaný pro obsluhu URL &quot;man&quot;, je-li povolen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Jestli má určený příkaz obsluhovat URL &quot;man&quot;">
+                                                                <longdesc>&quot;True&quot;, pokud má příkaz určený v klíči &quot;command&quot; obsluhovat URL &quot;man&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Spustit příkaz v terminálu">
+                                                                <longdesc>&quot;True&quot;, pokud by měl být program používaný pro obsluhu tohoto typu URL spouštěn v terminálu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Obsluha pro URL &quot;info&quot;">
+                                                                <longdesc>Příkaz používaný pro obsluhu URL &quot;info&quot;, je-li povolen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Jestli má určený příkaz obsluhovat URL &quot;info&quot;">
+                                                                <longdesc>&quot;True&quot;, pokud má příkaz určený v klíči &quot;command&quot; obsluhovat URL &quot;info&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Spustit příkaz v terminálu">
+                                                                <longdesc>&quot;True&quot;, pokud by měl být program používaný pro obsluhu tohoto typu URL spouštěn v terminálu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Obsluha pro URL &quot;ghelp&quot;">
+                                                                <longdesc>Příkaz používaný pro obsluhu URL &quot;ghelp&quot;, je-li povolen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Jestli má určený příkaz obsluhovat URL &quot;ghelp&quot;">
+                                                                <longdesc>&quot;True&quot;, pokud má příkaz určený v klíči &quot;command&quot; obsluhovat URL &quot;ghelp&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Spustit příkaz v terminálu">
+                                                                <longdesc>&quot;True&quot;, pokud by měl být program používaný pro obsluhu tohoto typu URL spouštěn v terminálu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Obsluha pro URL &quot;trash&quot;">
+                                                                <longdesc>Příkaz používaný pro obsluhu URL &quot;trash&quot;, je-li povolen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Jestli má určený příkaz obsluhovat URL &quot;trash&quot;">
+                                                                <longdesc>&quot;True&quot;, pokud má příkaz určený v klíči &quot;command&quot; obsluhovat URL &quot;trash&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Jestli bude nebo nebude tento profil použit">
+                                                                        <longdesc>Jestli používat a zobrazovat tento profil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Výchozí přípona souboru pro tento profil">
+                                                                        <longdesc>Přípona názvu souboru, kterou používat k ukládání souborů kódovaných s tímto profilem.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Používaná částečná roura systému GStreamer">
+                                                                        <longdesc>Částečná roura systému GStreamer, kterou používat pro tento profil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="Popis profilu zvuku">
+                                                                        <longdesc>Popis profilu obsahující více informací a popisující, kdy používat tento profil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Krátký název profilu zvuku">
+                                                                        <longdesc>Krátký název profilu zvuku používaný ve výběrech a jedinečně identifikující profil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Jestli bude nebo nebude tento profil použit">
+                                                                                <longdesc>Jestli používat a zobrazovat tento profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Výchozí přípona souboru pro tento profil">
+                                                                                <longdesc>Přípona názvu souboru, kterou používat k ukládání souborů kódovaných s tímto profilem.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Používaná částečná roura systému GStreamer">
+                                                                                <longdesc>Částečná roura systému GStreamer, kterou používat pro tento profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Popis profilu zvuku">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Krátký název profilu zvuku">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Výchozí přípona souboru pro tento profil">
+                                                                                <longdesc>Přípona názvu souboru, kterou používat k ukládání souborů kódovaných s tímto profilem.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Používaná částečná roura systému GStreamer">
+                                                                                <longdesc>Částečná roura systému GStreamer, kterou používat pro tento profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Popis profilu zvuku">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Krátký název profilu zvuku">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Výchozí přípona souboru pro tento profil">
+                                                                                <longdesc>Přípona názvu souboru, kterou používat k ukládání souborů kódovaných s tímto profilem.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Používaná částečná roura systému GStreamer">
+                                                                                <longdesc>Částečná roura systému GStreamer, kterou používat pro tento profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Popis profilu zvuku">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Krátký název profilu zvuku">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Výchozí přípona souboru pro tento profil">
+                                                                                <longdesc>Přípona názvu souboru, kterou používat k ukládání souborů kódovaných s tímto profilem.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Používaná částečná roura systému GStreamer">
+                                                                                <longdesc>Částečná roura systému GStreamer, kterou používat pro tento profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Popis profilu zvuku">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Krátký název profilu zvuku">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Výchozí přípona souboru pro tento profil">
+                                                                                <longdesc>Přípona názvu souboru, kterou používat k ukládání souborů kódovaných s tímto profilem.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Používaná částečná roura systému GStreamer">
+                                                                                <longdesc>Částečná roura systému GStreamer, kterou používat pro tento profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Popis profilu zvuku">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Krátký název profilu zvuku">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Výchozí přípona souboru pro tento profil">
+                                                                                <longdesc>Přípona názvu souboru, kterou používat k ukládání souborů kódovaných s tímto profilem.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Používaná částečná roura systému GStreamer">
+                                                                                <longdesc>Částečná roura systému GStreamer, kterou používat pro tento profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Popis profilu zvuku">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Krátký název profilu zvuku">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Seznam profilů">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="URL automatického nastavení proxy">
+                                                <longdesc>URL, které poskytuje hodnoty nastavení proxy.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="Port proxy SOCKS">
+                                                <longdesc>Port na počítači definovaném v &quot;/system/proxy/socks_host&quot;, který používat pro proxy.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="Název počítače proxy SOCKS">
+                                                <longdesc>Název počítače, který používat jako proxy socks.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="Port proxy FTP">
+                                                <longdesc>Port na počítači definovaném v &quot;/system/proxy/ftp_host&quot;, který používat pro proxy.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="Název počítače proxy FTP">
+                                                <longdesc>Název počítače, který používat jako proxy FTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Port proxy zabezpečeného HTTP">
+                                                <longdesc>Port na počítači definovaném v &quot;/system/proxy/secure_host&quot;, který používat pro proxy.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Název počítače proxy zabezpečeného HTTP">
+                                                <longdesc>Název počítače, který používat jako proxy zabezpečeného HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Režim nastavení proxy">
+                                                <longdesc>Vyberte režim nastavení proxy. Podporované hodnoty jsou &quot;none&quot;, &quot;manual&quot;, &quot;auto&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Počítače bez proxy">
+                                                <longdesc>Tento klíč obsahuje seznam počítačů, které jsou připojeny přímo, ne přes proxy (pokud je aktivní). Hodnoty mohou být názvy počítačů, domény (pomocí počátečního zástupného znaku, např. *.foo.com), adresy IP počítačů (IPv4 i IPv6) a adresy sítí s maskou sítě (přibližně jako 192.168.0.0/24).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="Heslo proxy HTTP">
+                                                <longdesc>Heslo, které předat jako autentizaci při používání HTTP proxy.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="Jméno uživatele proxy HTTP">
+                                                <longdesc>Jméno uživatele, které předávat jako autentizaci při používání proxy HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Autentizovat připojení k serveru proxy">
+                                                <longdesc>Je-li &quot;true&quot;, vyžadují připojení k serveru proxy autentizaci. Kombinace jméno uživatele/heslo je definována v &quot;/system/http_proxy/authentication_user&quot; a &quot;/system/http_proxy/authentication_password&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="Port proxy HTTP">
+                                                <longdesc>Port na počítači definovaném v &quot;/system/http_proxy/host&quot;, který používat pro proxy.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="Název počítače proxy HTTP">
+                                                <longdesc>Název počítače, který používat jako proxy HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="Používat proxy HTTP">
+                                                <longdesc>Povolí nastavení proxy při přístupu k HTTP přes Internet.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Další domény, ve kterých se mají hledat služby DNS-SD">
+                                                <longdesc>Čárkami oddělený seznam domén DNS-SD, které by měly být viditelné v umístění &quot;network:///&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Jak zobrazit místní službu DNS-SD">
+                                                <longdesc>Možné hodnoty jsou &quot;merged&quot;, &quot;separate&quot; a &quot;disabled&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="Pracovní skupina SMB">
+                                                <longdesc>Pracovní skupina nebo doména Windows, jejímž členem je uživatel. Aby se úplně projevila nová pracovní skupina, uživatel se možná bude muset odhlásit a znovu přihlásit.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- -->
+
+<deviceinfo version="0.2">
+  <device>
+
+    <!-- These are raw scancodes produced by the atkbd driver -->
+    <match key="@input.originating_device:info.linux.driver" string="atkbd">
+
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="Acer">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Aspire">
+          <!-- Laptops without extra Euro and Dollar keys, pre mid-2004 & pre 'folio' design -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="1510">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P2" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "P1" programmable button -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <!-- Laptops without extra Euro and Dollar keys -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="1350;1360;1520">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
+            <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e057:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e058:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
+            <append key="input.keymap.data" type="strlist">e072:f22</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <!-- Laptops with extra Euro and Dollar keys -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="3020;3030;3040;3610;3620;4720;5020;5030;5040;7110;9410;9300;9420">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
+            <append key="input.keymap.data" type="strlist">e033:euro</append> <!-- Euro symbol -->
+            <append key="input.keymap.data" type="strlist">e034:dollar</append> <!-- Dollar symbol -->
+            <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e057:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e058:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
+            <append key="input.keymap.data" type="strlist">e072:f22</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <!-- Laptops with extra Euro and Dollar keys, and Fn+Right (Brightness Up) needs mapping (type 1) -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="1410;1640;1680;1690;3050;3680;5050;5570;5580;5600">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
+            <append key="input.keymap.data" type="strlist">e033:euro</append> <!-- Euro symbol -->
+            <append key="input.keymap.data" type="strlist">e034:dollar</append> <!-- Dollar symbol -->
+            <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e057:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e058:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e06e:brightnessup</append> <!-- Fn+Right Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e06f:brightnessdown</append> <!-- Fn+Left Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
+            <append key="input.keymap.data" type="strlist">e072:f23</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <!-- Laptops with extra Euro and Dollar keys, and Fn+Right (Brightness Up) needs mapping (type 2) -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="3100;3690;5100;5610;5630;5650;5680;9110">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
+            <append key="input.keymap.data" type="strlist">e033:euro</append> <!-- Euro symbol -->
+            <append key="input.keymap.data" type="strlist">e034:dollar</append> <!-- Dollar symbol -->
+            <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e057:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e058:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e059:brightnessup</append> <!-- Fn+Right Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e06f:brightnessdown</append> <!-- Fn+Left Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
+            <append key="input.keymap.data" type="strlist">e072:f23</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Extensa">
+          <!-- Laptops with extra Euro and Dollar keys -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="4010">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
+            <append key="input.keymap.data" type="strlist">e033:euro</append> <!-- Euro symbol -->
+            <append key="input.keymap.data" type="strlist">e034:dollar</append> <!-- Dollar symbol -->
+            <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e057:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e058:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
+            <append key="input.keymap.data" type="strlist">e072:f22</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <!-- Laptops with extra Euro and Dollar keys, and Fn+Right (Brightness Up) needs mapping (type 1) -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="4100">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
+            <append key="input.keymap.data" type="strlist">e033:euro</append> <!-- Euro symbol -->
+            <append key="input.keymap.data" type="strlist">e034:dollar</append> <!-- Dollar symbol -->
+            <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e057:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e058:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e06e:brightnessup</append> <!-- Fn+Right Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e06f:brightnessdown</append> <!-- Fn+Left Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
+            <append key="input.keymap.data" type="strlist">e072:f23</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="5210;5220;5610;5620;5720">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
+            <append key="input.keymap.data" type="strlist">e033:euro</append> <!-- Euro symbol -->
+            <append key="input.keymap.data" type="strlist">e034:dollar</append> <!-- Dollar symbol -->
+            <append key="input.keymap.data" type="strlist">e054:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e06e:lock</append> <!--  Windows Lock function --> 
+            <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
+            <append key="input.keymap.data" type="strlist">e072:f23</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
+            <append key="input.keymap.data" type="strlist">e075:presentation</append> <!-- Minimise all Windows -->
+            <append key="input.keymap.data" type="strlist">e078:fn</append> <!-- Fn key -->
+            <append key="input.keymap.data" type="strlist">e079:sync</append> <!-- Launch NTI shadow -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Ferrari">
+          <!-- Laptops with extra Euro and Dollar keys -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="1000;4000">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
+            <append key="input.keymap.data" type="strlist">e033:euro</append> <!-- Euro symbol -->
+            <append key="input.keymap.data" type="strlist">e034:dollar</append> <!-- Dollar symbol -->
+            <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e057:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e058:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
+            <append key="input.keymap.data" type="strlist">e072:f22</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <!-- Laptops with extra Euro and Dollar keys, and Fn+Right (Brightness Up) needs mapping (type 1) -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="5000">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
+            <append key="input.keymap.data" type="strlist">e033:euro</append> <!-- Euro symbol -->
+            <append key="input.keymap.data" type="strlist">e034:dollar</append> <!-- Dollar symbol -->
+            <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e057:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e058:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e06e:brightnessup</append> <!-- Fn+Right Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e06f:brightnessdown</append> <!-- Fn+Left Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
+            <append key="input.keymap.data" type="strlist">e072:f23</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="TravelMate">
+          <!-- TravelMate C300 -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="C300">
+            <append key="input.keymap.data" type="strlist">0x67:f22</append> <!-- FIXME: rotate screen --> 
+            <append key="input.keymap.data" type="strlist">0x68:up</append> 
+            <append key="input.keymap.data" type="strlist">0x69:down</append> 
+            <append key="input.keymap.data" type="strlist">0x6b:fn</append> 
+            <append key="input.keymap.data" type="strlist">0x6c:f23</append> <!-- FIXME: lock tablet device/buttons-->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <!-- Laptops without extra Euro and Dollar keys -->
+	  <!-- TM6292 really does identify as 6292 instead of 6290 -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="3000;6292">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
+            <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e057:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e058:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e06e:brightnessup</append> <!-- Fn+Right Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e06f:brightnessdown</append> <!-- Fn+Left Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
+            <append key="input.keymap.data" type="strlist">e072:f23</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <!-- Laptops with extra Euro and Dollar keys, and Fn+Right (Brightness Up) needs mapping (type 1) -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="2300;2400;2480;3200;3210;3220;3260;4000;4500;8100">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
+            <append key="input.keymap.data" type="strlist">e033:euro</append> <!-- Euro symbol -->
+            <append key="input.keymap.data" type="strlist">e034:dollar</append> <!-- Dollar symbol -->
+            <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e057:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e058:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e06e:brightnessup</append> <!-- Fn+Right Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e06f:brightnessdown</append> <!-- Fn+Left Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
+            <append key="input.keymap.data" type="strlist">e072:f23</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <!-- Laptops with extra Euro and Dollar keys, and Fn+Right (Brightness Up) needs mapping (type 2) -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="4650">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
+            <append key="input.keymap.data" type="strlist">e033:euro</append> <!-- Euro symbol -->
+            <append key="input.keymap.data" type="strlist">e034:dollar</append> <!-- Dollar symbol -->
+            <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e057:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e058:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e059:brightnessup</append> <!-- Fn+Right Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e06f:brightnessdown</append> <!-- Fn+Left Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
+            <append key="input.keymap.data" type="strlist">e072:f23</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <!-- Laptops with extra Euro and Dollar keys, and Fn+Left (Brightness Down) needs mapping -->
+	  <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="5110;5610;5620">
+            <append key="input.keymap.data" type="strlist">e025:help</append> <!-- Fn+F1 Hotkey help -->
+            <append key="input.keymap.data" type="strlist">e026:setup</append> <!-- Fn+F2 Acer eSettings -->
+            <append key="input.keymap.data" type="strlist">e027:battery</append> <!-- Fn+F3 Power Management -->
+            <append key="input.keymap.data" type="strlist">e029:switchvideomode</append> <!-- Fn+F5 Display toggle -->
+            <append key="input.keymap.data" type="strlist">e033:euro</append> <!-- Euro symbol -->
+            <append key="input.keymap.data" type="strlist">e034:dollar</append> <!-- Dollar symbol -->
+            <append key="input.keymap.data" type="strlist">e055:wlan</append> <!-- Wireless (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e056:wlan</append> <!-- Wireless (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e057:bluetooth</append> <!-- Bluetooth (toggle) on-to-off -->
+            <append key="input.keymap.data" type="strlist">e058:bluetooth</append> <!-- Bluetooth (toggle) off-to-on -->
+            <append key="input.keymap.data" type="strlist">e059:brightnessdown</append> <!-- Fn+Left Brightness down -->
+            <append key="input.keymap.data" type="strlist">e06f:brightnessup</append> <!-- Fn+Left Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e071:f22</append> <!-- Fn+F7 Touchpad toggle (off-to-on) -->
+            <append key="input.keymap.data" type="strlist">e072:f22</append> <!-- Fn+F7 Touchpad toggle (on-to-off) -->
+            <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P" programmable button -->
+            <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "e" Acer eManager button -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+        </match>
+      </match>
+    </match>
+  </device>
+</deviceinfo>

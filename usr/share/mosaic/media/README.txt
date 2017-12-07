@@ -1,0 +1,1 @@
+This folder contains screenshots and finished renders of example projects.

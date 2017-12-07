@@ -1,0 +1,59 @@
+#!/bin/sh
+
+#set -e
+
+# initramfs-tools header
+
+PREREQ=""
+
+prereqs()
+{
+	echo "${PREREQ}"
+}
+
+case "${1}" in
+	prereqs)
+		prereqs
+		exit 0
+		;;
+esac
+
+# live-initramfs header
+
+if [ -n "${NOXAUTOCONFIG}" ]
+then
+	exit 0
+fi
+
+if [ ! -x /root/usr/bin/X ]
+then
+	exit 0
+fi
+
+. /scripts/live-functions
+
+log_begin_msg "Configuring X video driver"
+
+# live-initramfs script
+
+. /live.vars
+
+if [ -n "$XDRIVER" ]
+then
+	mount -o bind /sys /root/sys
+	mount -o bind /proc /root/proc
+	mount -o bind /dev /root/dev
+
+chroot /root debconf-communicate -fnoninteractive live-initramfs > /dev/null << EOF
+set xserver-xorg/autodetect_video_card false
+set xserver-xorg/config/device/driver ${XDRIVER}
+EOF
+
+	chroot /root dexconf
+
+	umount /root/sys
+	umount /root/proc
+	umount /root/dev
+fi
+
+log_end_msg

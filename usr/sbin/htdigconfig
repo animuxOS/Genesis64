@@ -1,0 +1,20 @@
+#!/bin/sh -e
+
+echo -n "Creating endings database for ht://Dig search engine..."
+
+# Only create the endings database if it doesn't already exist.
+# This database is static, so even if pages change, this database will not
+# need to be rebuilt.
+
+if [ ! -f /var/lib/htdig/word2root.db ]
+then
+    htfuzzy $verbose endings
+fi
+
+if [ ! -f /var/lib/htdig/synonyms.db ]
+then
+    htfuzzy $verbose synonyms
+fi
+
+echo "done."
+

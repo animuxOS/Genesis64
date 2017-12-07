@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+	<plugin useBcop="true" name="loginout">
+		<short>Login/Logout</short>
+		<short xml:lang="en_GB">Login/Logout</short>
+		<short xml:lang="fi">Kirjautuminen/uloskirjautuminen</short>
+		<short xml:lang="fr">Identification/Déconnection</short>
+		<short xml:lang="gl">Acceder/Saír Sesión</short>
+		<short xml:lang="it">Accesso/Uscita</short>
+		<short xml:lang="ja">ログイン/ログアウト</short>
+		<short xml:lang="nb">Inn-/utlogging</short>
+		<short xml:lang="pt">Iniciar Sessão/Terminar Sessão</short>
+		<long>Login/Logout effect</long>
+		<long xml:lang="en_GB">Login/Logout effect</long>
+		<long xml:lang="fi">Kirjautumis/uloskirjautumistehoste</long>
+		<long xml:lang="fr">Effet à l'Identification/la Déconnection</long>
+		<long xml:lang="gl">Efecto ó Iniciar/Saír sesión</long>
+		<long xml:lang="it">Effetto all'accesso/uscita</long>
+		<long xml:lang="ja">ログイン/ログアウト時の効果</long>
+		<long xml:lang="nb">Inn-/utloggingseffekt</long>
+		<long xml:lang="pt">Efeitos Iniciar Sessão/Terminar Sessão </long>
+		<category>Effects</category>
+		<deps>
+			<requirement>
+				<plugin>regex</plugin>
+			</requirement>
+			<relation type="after">
+				<plugin>decoration</plugin>
+			</relation>
+		</deps>
+		<screen>
+			<group>
+				<short>Login</short>
+				<short xml:lang="en_GB">Login</short>
+				<short xml:lang="fi">Kirjautuminen</short>
+				<short xml:lang="fr">Identifiant</short>
+				<short xml:lang="gl">Identificación</short>
+				<short xml:lang="it">Accesso</short>
+				<short xml:lang="ja">ログイン</short>
+				<short xml:lang="nb">Innlogging</short>
+				<short xml:lang="pt">Iniciar sessão</short>
+				<option type="match" name="in_match">
+					<short>Login Window match</short>
+					<short xml:lang="en_GB">Login Window match</short>
+					<short xml:lang="fr">Correspondance de la fenêtre Identifiant</short>
+					<short xml:lang="it">Corrispondenza finestra di accesso</short>
+					<short xml:lang="ja">ログイン・ウィンドウのマッチ条件</short>
+					<short xml:lang="nb">Samsvar for innloggingsvindu</short>
+					<short xml:lang="pt">Tipos janelas de ínicio de sessão</short>
+					<long>Login Window Match</long>
+					<long xml:lang="en_GB">Login Window Match</long>
+					<long xml:lang="fr">Correspondance de la fenêtre Identifiant</long>
+					<long xml:lang="it">Corrispondenza finestra di accesso</long>
+					<long xml:lang="ja">効果対象ウィンドウ</long>
+					<long xml:lang="nb">Samsvar for innloggingsvindu</long>
+					<long xml:lang="pt">Tipos Janelas Iniciar Sessão</long>
+					<default>(iclass=^ksplash)</default>
+				</option>
+				<option type="float" name="in_time">
+					<short>Fade In/Out Time</short>
+					<short xml:lang="en_GB">Fade In/Out Time</short>
+					<short xml:lang="fr">Durée du fondu</short>
+					<short xml:lang="gl">Tempo de Aparición/Desaparición</short>
+					<short xml:lang="it">Durata dissolvenza</short>
+					<short xml:lang="ja">フェードイン/アウト持続時間</short>
+					<short xml:lang="nb">Varighet for ton inn/ut</short>
+					<short xml:lang="pt">Tempo de Desvanecimento</short>
+					<long>Fade In/Out Time.</long>
+					<long xml:lang="de">Ein-/Ausblendzeit</long>
+					<long xml:lang="el">Χρόνος Ξεθωριάσματος Μέσα/Έξω.</long>
+					<long xml:lang="en_GB">Fade In/Out Time.</long>
+					<long xml:lang="fr">Durée du fondu</long>
+					<long xml:lang="gl">Tempo de Desvanecemento.</long>
+					<long xml:lang="gu">ધૂંધ અંદર/બહાર સમય.</long>
+					<long xml:lang="hi">इन/आउट समय फीका करें.</long>
+					<long xml:lang="it">Durata della dissolvenza.</long>
+					<long xml:lang="ja">フェードイン/アウトの時間</long>
+					<long xml:lang="nb">Varighet for Ton inn-/ut.</long>
+					<long xml:lang="nl">Fade in/uit tijd.</long>
+					<long xml:lang="pl">Czas pojawiania i zanikania</long>
+					<long xml:lang="pt">Tempo de Desvanecimento.</long>
+					<long xml:lang="pt_BR">Tempo de Desvanecimento.</long>
+					<long xml:lang="sv">Tona in/ut tid</long>
+					<long xml:lang="tr">Büyütme/Küçültme Süresi.</long>
+					<long xml:lang="zh_CN">淡入淡出时长</long>
+					<default>1.0</default>
+					<min>0.0</min>
+					<max>100.0</max>
+					<precision>0.1</precision>
+				</option>
+				<option type="float" name="in_saturation">
+					<short>Saturation</short>
+					<short xml:lang="ar">قوة الألوان</short>
+					<short xml:lang="bn">সম্পৃক্তি</short>
+					<short xml:lang="ca">Saturació</short>
+					<short xml:lang="de">Sättigung</short>
+					<short xml:lang="el">Κορεσμός</short>
+					<short xml:lang="en_GB">Saturation</short>
+					<short xml:lang="es">Saturación</short>
+					<short xml:lang="eu">Saturazioa</short>
+					<short xml:lang="fi">Kylläisyys</short>
+					<short xml:lang="fr">Saturation</short>
+					<short xml:lang="gl">Contrastes</short>
+					<short xml:lang="gu">સંતુલન</short>
+					<short xml:lang="hi">संतृप्ति</short>
+					<short xml:lang="it">Saturazione</short>
+					<short xml:lang="ja">彩度</short>
+					<short xml:lang="nb">Metning</short>
+					<short xml:lang="nl">Verzadiging</short>
+					<short xml:lang="pl">Nasycenie</short>
+					<short xml:lang="pt">Contraste</short>
+					<short xml:lang="pt_BR">Saturação</short>
+					<short xml:lang="ru">Насыщенность</short>
+					<short xml:lang="sv">Mättnad</short>
+					<short xml:lang="tr">Doygunluk</short>
+					<short xml:lang="zh_CN">饱和度</short>
+					<long>Background/Window saturation.</long>
+					<long xml:lang="en_GB">Background/Window saturation.</long>
+					<long xml:lang="fr">Saturation de l'arrière-plan/de l'écran.</long>
+					<long xml:lang="gl">Saturación do Fondo/Fiestra</long>
+					<long xml:lang="it">Saturazione dello sfondo/finestra.</long>
+					<long xml:lang="ja">背景/ウィンドウの彩度</long>
+					<long xml:lang="nb">Metning for bakgrunn/vindu</long>
+					<long xml:lang="pt">Contraste fundo/janela.</long>
+					<long xml:lang="sv">Färgmättnad på bakgrund/fönster</long>
+					<default>0.0</default>
+					<min>0.0</min>
+					<max>100.0</max>
+					<precision>0.1</precision>
+				</option>
+				<option type="float" name="in_brightness">
+					<short>Brightness</short>
+					<short xml:lang="ar">النصوع</short>
+					<short xml:lang="bn">উজ্জ্বলতা</short>
+					<short xml:lang="ca">Brillantor</short>
+					<short xml:lang="de">Helligkeit</short>
+					<short xml:lang="el">Φωτεινότητα</short>
+					<short xml:lang="en_GB">Brightness</short>
+					<short xml:lang="es">Brillo</short>
+					<short xml:lang="eu">Disdira</short>
+					<short xml:lang="fi">Kirkkaus</short>
+					<short xml:lang="fr">Luminosité</short>
+					<short xml:lang="gl">Brillo</short>
+					<short xml:lang="gu">તેજસ્વીતા</short>
+					<short xml:lang="hi">चमकीलापन</short>
+					<short xml:lang="it">Luminosità</short>
+					<short xml:lang="ja">明度</short>
+					<short xml:lang="nb">Skarphet</short>
+					<short xml:lang="nl">Helderheid</short>
+					<short xml:lang="pl">Jasnosć</short>
+					<short xml:lang="pt">Brilho</short>
+					<short xml:lang="pt_BR">Brilho</short>
+					<short xml:lang="ru">Яркость</short>
+					<short xml:lang="sv">Ljusstyrka</short>
+					<short xml:lang="tr">Parlaklık</short>
+					<short xml:lang="zh_CN">亮度</short>
+					<long>Background/Window brightness.</long>
+					<long xml:lang="en_GB">Background/Window brightness.</long>
+					<long xml:lang="fr">Luminosité de l'arrière-plan/de l'écran.</long>
+					<long xml:lang="gl">Brillo do Fondo/Fiestra.</long>
+					<long xml:lang="it">Luminosità dello sfondo/finestra.</long>
+					<long xml:lang="ja">背景/ウィンドウの明度</long>
+					<long xml:lang="nb">Skarphet for bakgrunn/vindu</long>
+					<long xml:lang="pt">Luminosidade fundo/janela.</long>
+					<long xml:lang="sv">Ljusstyrka på bakgrund/fönster</long>
+					<default>100.0</default>
+					<min>0.0</min>
+					<max>100.0</max>
+					<precision>0.1</precision>
+				</option>
+				<option type="float" name="in_opacity">
+					<short>Opacity</short>
+					<short xml:lang="ar">اللاشفافية</short>
+					<short xml:lang="bn">অস্বচ্ছতা</short>
+					<short xml:lang="ca">Opacitat</short>
+					<short xml:lang="de">Sichtbarkeit</short>
+					<short xml:lang="el">Αδιαφάνεια</short>
+					<short xml:lang="en_GB">Opacity</short>
+					<short xml:lang="es">Transparencia</short>
+					<short xml:lang="eu">Opakutasun</short>
+					<short xml:lang="fi">Läpinäkyvyys</short>
+					<short xml:lang="fr">Opacité</short>
+					<short xml:lang="gl">Opacidade</short>
+					<short xml:lang="gu">અપારદર્શકતા</short>
+					<short xml:lang="hi">अपारदर्शिता</short>
+					<short xml:lang="it">Opacità</short>
+					<short xml:lang="ja">不透明度</short>
+					<short xml:lang="nb">Dekkevne</short>
+					<short xml:lang="nl">Ondoorzichtigheid</short>
+					<short xml:lang="pl">Nieprzezroczystość</short>
+					<short xml:lang="pt">Opacidade</short>
+					<short xml:lang="pt_BR">Opacidade</short>
+					<short xml:lang="ru">Непрозрачность</short>
+					<short xml:lang="sv">Opacitet</short>
+					<short xml:lang="tr">Matlık</short>
+					<short xml:lang="zh_CN">不透明度</short>
+					<long>Window opacity.</long>
+					<long xml:lang="en_GB">Window opacity.</long>
+					<long xml:lang="fr">Opacité de la fenêtre.</long>
+					<long xml:lang="gl">Opacidade da fiestra.</long>
+					<long xml:lang="it">Opacità finestra.</long>
+					<long xml:lang="ja">ウィンドウの不透明度</long>
+					<long xml:lang="nb">Dekkevne for vindu.</long>
+					<long xml:lang="pt">Opacidade da janela.</long>
+					<default>100.0</default>
+					<min>0.0</min>
+					<max>100.0</max>
+					<precision>0.1</precision>
+				</option>
+			</group>
+			<group>
+				<short>Logout</short>
+				<short xml:lang="en_GB">Logout</short>
+				<short xml:lang="fi">Uloskirjautuminen</short>
+				<short xml:lang="fr">Déconnection</short>
+				<short xml:lang="gl">Saír da sesión</short>
+				<short xml:lang="it">Uscita</short>
+				<short xml:lang="ja">ログアウト</short>
+				<short xml:lang="nb">Utlogging</short>
+				<short xml:lang="pt">Terminar sessão</short>
+				<option type="match" name="out_match">
+					<short>Logout Window match</short>
+					<short xml:lang="en_GB">Logout Window match</short>
+					<short xml:lang="fr">Correspondance de la fenêtre Déconnection</short>
+					<short xml:lang="it">Corrispondenza finestra uscita</short>
+					<short xml:lang="ja">ログアウト・ウィンドウのマッチ条件</short>
+					<short xml:lang="nb">Samsvar for utloggingsvindu</short>
+					<short xml:lang="pt">Tipos janelas de término de sessão</short>
+					<long>Logout Window Match</long>
+					<long xml:lang="en_GB">Logout Window Match</long>
+					<long xml:lang="fr">Correspondance de la fenêtre Déconnection</long>
+					<long xml:lang="it">Corrispondenza finestra uscita</long>
+					<long xml:lang="ja">効果対象ウィンドウ</long>
+					<long xml:lang="nb">Samsvar for utloggingsvindu</long>
+					<long xml:lang="pt">Tipos Janelas Terminar Sessão</long>
+					<default>(class=Ksmserver &amp; (role=logoutdialog | role=logouteffect)) | (class=Libssui-tool &amp; type=Dialog)</default>
+				</option>
+				<option type="float" name="out_time">
+					<short>Fade In/Out Time</short>
+					<short xml:lang="en_GB">Fade In/Out Time</short>
+					<short xml:lang="fr">Durée du fondu</short>
+					<short xml:lang="gl">Tempo de Aparición/Desaparición</short>
+					<short xml:lang="it">Durata dissolvenza</short>
+					<short xml:lang="ja">フェードイン/アウト持続時間</short>
+					<short xml:lang="nb">Varighet for ton inn/ut</short>
+					<short xml:lang="pt">Tempo de Desvanecimento</short>
+					<long>Fade In/Out Time.</long>
+					<long xml:lang="de">Ein-/Ausblendzeit</long>
+					<long xml:lang="el">Χρόνος Ξεθωριάσματος Μέσα/Έξω.</long>
+					<long xml:lang="en_GB">Fade In/Out Time.</long>
+					<long xml:lang="fr">Durée du fondu</long>
+					<long xml:lang="gl">Tempo de Desvanecemento.</long>
+					<long xml:lang="gu">ધૂંધ અંદર/બહાર સમય.</long>
+					<long xml:lang="hi">इन/आउट समय फीका करें.</long>
+					<long xml:lang="it">Durata della dissolvenza.</long>
+					<long xml:lang="ja">フェードイン/アウトの時間</long>
+					<long xml:lang="nb">Varighet for Ton inn-/ut.</long>
+					<long xml:lang="nl">Fade in/uit tijd.</long>
+					<long xml:lang="pl">Czas pojawiania i zanikania</long>
+					<long xml:lang="pt">Tempo de Desvanecimento.</long>
+					<long xml:lang="pt_BR">Tempo de Desvanecimento.</long>
+					<long xml:lang="sv">Tona in/ut tid</long>
+					<long xml:lang="tr">Büyütme/Küçültme Süresi.</long>
+					<long xml:lang="zh_CN">淡入淡出时长</long>
+					<default>1.0</default>
+					<min>0.0</min>
+					<max>100.0</max>
+					<precision>0.1</precision>
+				</option>
+				<option type="float" name="out_saturation">
+					<short>Saturation</short>
+					<short xml:lang="ar">قوة الألوان</short>
+					<short xml:lang="bn">সম্পৃক্তি</short>
+					<short xml:lang="ca">Saturació</short>
+					<short xml:lang="de">Sättigung</short>
+					<short xml:lang="el">Κορεσμός</short>
+					<short xml:lang="en_GB">Saturation</short>
+					<short xml:lang="es">Saturación</short>
+					<short xml:lang="eu">Saturazioa</short>
+					<short xml:lang="fi">Kylläisyys</short>
+					<short xml:lang="fr">Saturation</short>
+					<short xml:lang="gl">Contrastes</short>
+					<short xml:lang="gu">સંતુલન</short>
+					<short xml:lang="hi">संतृप्ति</short>
+					<short xml:lang="it">Saturazione</short>
+					<short xml:lang="ja">彩度</short>
+					<short xml:lang="nb">Metning</short>
+					<short xml:lang="nl">Verzadiging</short>
+					<short xml:lang="pl">Nasycenie</short>
+					<short xml:lang="pt">Contraste</short>
+					<short xml:lang="pt_BR">Saturação</short>
+					<short xml:lang="ru">Насыщенность</short>
+					<short xml:lang="sv">Mättnad</short>
+					<short xml:lang="tr">Doygunluk</short>
+					<short xml:lang="zh_CN">饱和度</short>
+					<long>Background/Window saturation.</long>
+					<long xml:lang="en_GB">Background/Window saturation.</long>
+					<long xml:lang="fr">Saturation de l'arrière-plan/de l'écran.</long>
+					<long xml:lang="gl">Saturación do Fondo/Fiestra</long>
+					<long xml:lang="it">Saturazione dello sfondo/finestra.</long>
+					<long xml:lang="ja">背景/ウィンドウの彩度</long>
+					<long xml:lang="nb">Metning for bakgrunn/vindu</long>
+					<long xml:lang="pt">Contraste fundo/janela.</long>
+					<long xml:lang="sv">Färgmättnad på bakgrund/fönster</long>
+					<default>0.0</default>
+					<min>0.0</min>
+					<max>100.0</max>
+					<precision>0.1</precision>
+				</option>
+				<option type="float" name="out_brightness">
+					<short>Brightness</short>
+					<short xml:lang="ar">النصوع</short>
+					<short xml:lang="bn">উজ্জ্বলতা</short>
+					<short xml:lang="ca">Brillantor</short>
+					<short xml:lang="de">Helligkeit</short>
+					<short xml:lang="el">Φωτεινότητα</short>
+					<short xml:lang="en_GB">Brightness</short>
+					<short xml:lang="es">Brillo</short>
+					<short xml:lang="eu">Disdira</short>
+					<short xml:lang="fi">Kirkkaus</short>
+					<short xml:lang="fr">Luminosité</short>
+					<short xml:lang="gl">Brillo</short>
+					<short xml:lang="gu">તેજસ્વીતા</short>
+					<short xml:lang="hi">चमकीलापन</short>
+					<short xml:lang="it">Luminosità</short>
+					<short xml:lang="ja">明度</short>
+					<short xml:lang="nb">Skarphet</short>
+					<short xml:lang="nl">Helderheid</short>
+					<short xml:lang="pl">Jasnosć</short>
+					<short xml:lang="pt">Brilho</short>
+					<short xml:lang="pt_BR">Brilho</short>
+					<short xml:lang="ru">Яркость</short>
+					<short xml:lang="sv">Ljusstyrka</short>
+					<short xml:lang="tr">Parlaklık</short>
+					<short xml:lang="zh_CN">亮度</short>
+					<long>Background/Window brightness.</long>
+					<long xml:lang="en_GB">Background/Window brightness.</long>
+					<long xml:lang="fr">Luminosité de l'arrière-plan/de l'écran.</long>
+					<long xml:lang="gl">Brillo do Fondo/Fiestra.</long>
+					<long xml:lang="it">Luminosità dello sfondo/finestra.</long>
+					<long xml:lang="ja">背景/ウィンドウの明度</long>
+					<long xml:lang="nb">Skarphet for bakgrunn/vindu</long>
+					<long xml:lang="pt">Luminosidade fundo/janela.</long>
+					<long xml:lang="sv">Ljusstyrka på bakgrund/fönster</long>
+					<default>100.0</default>
+					<min>0.0</min>
+					<max>100.0</max>
+					<precision>0.1</precision>
+				</option>
+				<option type="float" name="out_opacity">
+					<short>Opacity</short>
+					<short xml:lang="ar">اللاشفافية</short>
+					<short xml:lang="bn">অস্বচ্ছতা</short>
+					<short xml:lang="ca">Opacitat</short>
+					<short xml:lang="de">Sichtbarkeit</short>
+					<short xml:lang="el">Αδιαφάνεια</short>
+					<short xml:lang="en_GB">Opacity</short>
+					<short xml:lang="es">Transparencia</short>
+					<short xml:lang="eu">Opakutasun</short>
+					<short xml:lang="fi">Läpinäkyvyys</short>
+					<short xml:lang="fr">Opacité</short>
+					<short xml:lang="gl">Opacidade</short>
+					<short xml:lang="gu">અપારદર્શકતા</short>
+					<short xml:lang="hi">अपारदर्शिता</short>
+					<short xml:lang="it">Opacità</short>
+					<short xml:lang="ja">不透明度</short>
+					<short xml:lang="nb">Dekkevne</short>
+					<short xml:lang="nl">Ondoorzichtigheid</short>
+					<short xml:lang="pl">Nieprzezroczystość</short>
+					<short xml:lang="pt">Opacidade</short>
+					<short xml:lang="pt_BR">Opacidade</short>
+					<short xml:lang="ru">Непрозрачность</short>
+					<short xml:lang="sv">Opacitet</short>
+					<short xml:lang="tr">Matlık</short>
+					<short xml:lang="zh_CN">不透明度</short>
+					<long>Window opacity.</long>
+					<long xml:lang="en_GB">Window opacity.</long>
+					<long xml:lang="fr">Opacité de la fenêtre.</long>
+					<long xml:lang="gl">Opacidade da fiestra.</long>
+					<long xml:lang="it">Opacità finestra.</long>
+					<long xml:lang="ja">ウィンドウの不透明度</long>
+					<long xml:lang="nb">Dekkevne for vindu.</long>
+					<long xml:lang="pt">Opacidade da janela.</long>
+					<default>100.0</default>
+					<min>0.0</min>
+					<max>100.0</max>
+					<precision>0.1</precision>
+				</option>
+			</group>
+		</screen>
+	</plugin>
+</compiz>

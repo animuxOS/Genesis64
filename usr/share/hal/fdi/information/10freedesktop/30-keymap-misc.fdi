@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- -->
+
+<deviceinfo version="0.2">
+  <device>
+
+    <!-- These are raw scancodes produced by the atkbd driver -->
+    <match key="@input.originating_device:info.linux.driver" string="atkbd">
+
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" contains="BenQ">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="Joybook R22">
+          <append key="input.keymap.data" type="strlist">6e:wlan</append> <!-- Fn + F1 wireless network radio on and off. -->
+          <!-- <append key="input.keymap.data" type="strlist">6d:brightnessdown</append> (Fn + F6 brightness down.) -->
+          <!-- <append key="input.keymap.data" type="strlist">6d:brightnessup</append> (Fn + F7 brightness. up) -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
+
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="FUJITSU">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="AMILO Pro V3205">
+	  <append key="input.keymap.data" type="strlist">e074:f21</append> <!-- FIXME: silent-mode decrease CPU/GPU clock -->
+          <append key="input.keymap.data" type="strlist">e077:switchvideomode</append> <!-- Fn+F3 switch screen -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
+
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="MEDION">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="FID2060">
+          <append key="input.keymap.data" type="strlist">6b:channeldown</append> <!-- Thottle Down -->
+          <append key="input.keymap.data" type="strlist">6d:channelup</append> <!-- Thottle Up -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
+
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="MICRO-STAR">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="INFINITY">
+          <append key="input.keymap.data" type="strlist">e020:mute</append> <!-- Fn-F9   Sound On/Off -->
+          <append key="input.keymap.data" type="strlist">e02e:volumedown</append> <!-- Fn-F7   Volume down -->
+          <append key="input.keymap.data" type="strlist">e030:volumeup</append> <!-- Fn-F8   Volume up -->
+          <append key="input.keymap.data" type="strlist">e032:www</append> <!-- e button -->
+          <append key="input.keymap.data" type="strlist">e05f:sleep</append> <!-- Fn-F12  Sleep -->
+          <append key="input.keymap.data" type="strlist">e062:bluetooth</append> <!-- satellite dish2 -->
+          <append key="input.keymap.data" type="strlist">e064:f22</append> <!-- Fn-F3   Touchpad disable -->
+          <append key="input.keymap.data" type="strlist">e06c:email</append> <!-- envelope button -->
+          <append key="input.keymap.data" type="strlist">e076:wlan</append> <!-- satellite dish1 -->
+          <append key="input.keymap.data" type="strlist">e077:brightnessdown</append> <!-- Fn-F4   Brightness down -->
+          <append key="input.keymap.data" type="strlist">e078:brightnessup</append> <!-- Fn-F5   Brightness up -->
+          <append key="input.keymap.data" type="strlist">e079:search</append> <!-- Search -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
+      
+      <match key="/org/freedesktop/Hal/devices/computer:system.chassis.manufacturer" prefix="MICRO-STAR">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" string="0131">
+          <append key="input.keymap.data" type="strlist">e020:mute</append> <!-- Fn-F9   Sound On/Off -->
+          <append key="input.keymap.data" type="strlist">e02e:volumedown</append> <!-- Fn-F7   Volume down -->
+          <append key="input.keymap.data" type="strlist">e030:volumeup</append> <!-- Fn-F8   Volume up -->
+          <append key="input.keymap.data" type="strlist">e032:www</append> <!-- www button -->
+          <append key="input.keymap.data" type="strlist">e05f:sleep</append> <!-- Fn-F12  Sleep -->
+          <append key="input.keymap.data" type="strlist">e062:bluetooth</append> <!-- satellite dish: bluetooth -->
+          <append key="input.keymap.data" type="strlist">e06c:email</append> <!-- envelope button -->
+          <append key="input.keymap.data" type="strlist">e076:wlan</append> <!-- satellite dish: wlan -->
+          <append key="input.keymap.data" type="strlist">e071:unknown</append> <!-- plug -->
+          <append key="input.keymap.data" type="strlist">e072:unknown</append> <!-- unplug -->
+          <append key="input.keymap.data" type="strlist">e077:brightnessdown</append> <!-- Fn-F5   Brightness down -->
+          <append key="input.keymap.data" type="strlist">e078:brightnessup</append> <!-- Fn-F4   Brightness up -->
+          <append key="input.keymap.data" type="strlist">e079:search</append> <!-- search button -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
+
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="MEDIONNB">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="A555">
+          <append key="input.keymap.data" type="strlist">63:www</append> <!-- N button -->
+          <append key="input.keymap.data" type="strlist">66:prog1</append> <!-- link 1 button -->
+          <append key="input.keymap.data" type="strlist">67:email</append> <!-- envelope button -->
+          <append key="input.keymap.data" type="strlist">69:prog2</append> <!-- link 2 button -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
+	
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="INVENTEC">
+	<match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="SYMPHONY 6.0/7.0">
+	  <append key="input.keymap.data" type="strlist">e073:prog2</append> <!-- "P2" programmable button -->
+	  <append key="input.keymap.data" type="strlist">e074:prog1</append> <!-- "P1" programmable button -->
+	  <append key="info.capabilities" type="strlist">input.keymap</append>
+	</match>
+      </match>
+      
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="MAXDATA">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Pro 7000">
+	  <append key="input.keymap.data" type="strlist">97:prog2</append> <!-- "P2" programmable button -->
+	  <append key="input.keymap.data" type="strlist">9f:prog1</append> <!-- "P1" programmable button -->
+	  <append key="input.keymap.data" type="strlist">a0:mute</append> <!-- Fn-F5   Sound On/Off -->
+	  <append key="input.keymap.data" type="strlist">82:www</append> <!-- www button -->
+	  <append key="input.keymap.data" type="strlist">ec:email</append> <!-- envelope button -->
+            <append key="input.keymap.data" type="strlist">ae:volumedown</append> <!-- Fn-Down   Volume down -->
+            <append key="input.keymap.data" type="strlist">b0:volumeup</append> <!-- Fn-Up   Volume up -->
+	  <append key="input.keymap.data" type="strlist">df:suspend</append> <!-- Fn+F2 hibernate -->
+            <append key="input.keymap.data" type="strlist">f5:help</append> <!-- Help button -->
+	  <append key="info.capabilities" type="strlist">input.keymap</append>
+	</match>
+      </match>
+
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="SAMSUNG">
+        <!-- Samsung P55-Pro -->
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="SP55S">
+          <append key="input.keymap.data" type="strlist">e003:battery</append> <!-- Fn+F2 battery icon -->
+          <!-- Fn+F3  euro (generates a sequence of different keypressed events in syslog) -->
+          <append key="input.keymap.data" type="strlist">e002:displaytoggle</append> <!-- Fn+F4 CRT/LCD -->
+          <append key="input.keymap.data" type="strlist">e004:prog1</append> <!-- Fn+F5 backlight on/off -->
+          <append key="input.keymap.data" type="strlist">e031:prog2</append> <!-- Fn+F7 run Samsung Magic Doctor (keypressed event is generated twice) -->
+          <append key="input.keymap.data" type="strlist">e033:prog3</append> <!-- Fn+F8 switch power mode (battery/dynamic/performance) -->
+          <append key="input.keymap.data" type="strlist">e006:wlan</append> <!-- Fn+F9 Turn On/Off Wireless -->
+          <append key="input.keymap.data" type="strlist">e077:f22</append> <!-- Fn+F10 Touchpad on -->
+          <append key="input.keymap.data" type="strlist">e079:f22</append> <!-- Fn+F10 Touchpad off -->
+          <append key="input.keymap.data" type="strlist">e008:brightnessup</append> <!-- Fn-Up Brightness up -->
+          <append key="input.keymap.data" type="strlist">e009:brightnessdown</append> <!-- Fn-Down Brightness down -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="SQ45S70S">
+          <append key="input.keymap.data" type="strlist">e003:battery</append> <!-- Fn+F2 battery icon -->
+	  <!-- Fn+F3 euro; generates these scancodes according to showkeys(1): 0x38 0x52 0xd2 0x4f 0xcf 0x50 0xd0 0x48 0xc8 0xb8 -->
+          <append key="input.keymap.data" type="strlist">e002:displaytoggle</append> <!-- Fn+F4 CRT/LCD; -->
+          <append key="input.keymap.data" type="strlist">e004:prog1</append> <!-- Fn+F5 backlight on/off -->
+          <append key="input.keymap.data" type="strlist">e031:prog2</append> <!-- Fn+F7 run Samsung Magic Doctor (keypress event is generated twice) -->
+          <append key="input.keymap.data" type="strlist">e033:prog3</append> <!-- Fn+F8 switch power mode (battery/dynamic/performance) -->
+          <append key="input.keymap.data" type="strlist">e006:wlan</append> <!-- Fn+F9 Turn On/Off Wireless -->
+          <append key="input.keymap.data" type="strlist">e077:f22</append> <!-- Fn+F10 Touchpad on -->
+          <append key="input.keymap.data" type="strlist">e079:f22</append> <!-- Fn+F10 Touchpad off -->
+          <append key="input.keymap.data" type="strlist">e008:brightnessup</append> <!-- Fn+Up Brightness up -->
+          <append key="input.keymap.data" type="strlist">e009:brightnessdown</append> <!-- Fn+Down Brightness down -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
+
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" string="TOSHIBA">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="SATELLITE A100">
+          <append key="input.keymap.data" type="strlist">e024:stop</append> 
+          <append key="input.keymap.data" type="strlist">e032:www</append> 
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
+
+    </match>
+
+  </device>
+</deviceinfo>
+

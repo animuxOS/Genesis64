@@ -1,0 +1,129 @@
+
+=head1 NAME
+
+Tk::TextUndo - perl/tk text widget with bindings to undo changes.
+
+=for pm Tk/TextUndo.pm
+
+=for category Derived Widgets
+
+=head1 SYNOPSIS
+
+S<    >B<use Tk::TextUndo;>
+
+S<    >I<$testundo> = I<$parent>-E<gt>B<TextUndo>(?I<-option>=E<gt>I<value>, ...?);
+
+=head1 DESCRIPTION
+
+This IS-A text widget with an unlimited 'undo' history but without
+a re'undo' capability.
+
+=head2 Bindings
+
+The C<TextUndo> widget has the same bindings as the L<Text|Tk::Text> widget.
+In addition there are the following bindings:
+
+=over 4
+
+=item Event <L4> <<Undo>>
+
+undo the last change.  Pressing <L4> several times undo
+step by step the changes made to the text widget.
+
+=back
+
+=head2 Extended Methods
+
+The C<TextUndo> widget is derived from and has the same methods
+as C<Text> widget.
+In addition, the extended text widget methods as documented
+in I<"Mastering Perl/Tk"> are included in this pod (with
+permission from the author, B<Steve Lidie>).
+
+=over 4
+
+=item I<$textundo>-E<gt>B<ConfirmDiscard>
+
+Displays a messageBox that says "Save Edits?". Returns 0 if yes or cancel,
+1 if no.
+
+=item I<$textundo>-E<gt>B<ConfirmEmptyDocument>
+
+Displays a messageBox that says "Save Edits?". The widget is cleared
+if the reply is no.
+
+=item I<$textundo>-E<gt>B<ConfirmExit>
+
+Destroys the widget if you answer yes.
+
+=item I<$textundo>-E<gt>B<CreateFileSelect>
+
+Creates a popup file browser to select a filename.
+
+=item I<$textundo>-E<gt>B<deleteStringAtStartOfSelectedLines(I<?string?>)>
+
+Deletes I<string> from the start of every selected line.
+
+=item I<$textundo>-E<gt>B<EmptyDocument>
+
+Deletes all text and undo/redo information; undefs the filename.
+
+=item I<$textundo>-E<gt>B<FileName(I<?pathName?>)>
+
+Optionally updates the current filename to I<pathName>. Returns the 
+current filename.
+
+=item I<$textundo>-E<gt>B<IncludeFile>
+
+Similar to Load, except it does not call EmptyDocument first.
+
+=item I<$textundo>-E<gt>B<insertStringAtStartOfSelectedLines(I<?string?>)>
+
+Inserts I<string> at the start of every selected line.
+
+=item I<$textundo>-E<gt>B<Load(I<pathName>)>
+
+Loads the contents of I<pathName> into the widget. Load()
+delete the previous contents of the widget as well as it's
+undo history.
+
+=item I<$textundo>-E<gt>B<numberChanges>
+
+Returns the number of current undo operations.
+
+=item I<$textundo>-E<gt>B<redo>
+
+Redoes the previous operation.
+
+=item I<$textundo>-E<gt>B<ResetUndo>
+
+Deletes all undo and redo information.
+
+=item I<$textundo>-E<gt>B<Save(I<?pathName?>)>
+
+Saves the contents of the widget to a file. If
+I<pathName> is not specified, the filename from the last Load
+call is used.  If no file was previously loaded an error message
+pops up. The default filename of the last Load call
+is not overwriten by I<pathName>.
+
+=item I<$textundo>-E<gt>B<SizeRedo>
+
+Returns the number of current redo operations.
+
+=item I<$textundo>-E<gt>B<undo>
+
+Undoes the previous operation.
+
+=back
+
+=head1 KEYS
+
+widget, text, undo
+
+=head1 SEE ALSO
+
+L<Tk::Text>, L<Tk::ROText>
+
+=cut
+

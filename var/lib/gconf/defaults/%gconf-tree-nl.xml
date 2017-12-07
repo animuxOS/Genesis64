@@ -1,0 +1,962 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="Of de PKCS#11-component van gnome-keyring ingeschakeld is.">
+                                                        <longdesc>Deze optie schakelt de PKCS#11-component van gnome-keyring daemon in. Dit heeft alleen effect als gnome-keyring-daemon start, bijvoorbeeld als de gebruiker zich aanmeldt. Deze instelling kan worden overschreven door parameters op de opdrachtregel mee te geven aan de daemon.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="Of de SSH-agent van gnome-keyring ingeschakeld is.">
+                                                        <longdesc>Deze optie schakelt de SSH-agent van gnome-keyring daemon in. Dit heeft alleen effect als gnome-keyring-daemon start, bijvoorbeeld als de gebruiker zich aanmeldt. Deze instelling kan worden overschreven door parameters op de opdrachtregel mee te geven aan de daemon.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Breedte van het venster">
+                                                        <longdesc>Breedte van  het weer te geven venster</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Hoogte van het venster">
+                                                        <longdesc>Hoogte van het weer te geven venster</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gksu">
+                                <entry name="save-keyring">
+                                        <local_schema short_desc="Sleutelbos waarin de wachtwoorden zullen worden opgeslagen">
+                                        </local_schema>
+                                </entry>
+                                <entry name="save-to-keyring">
+                                        <local_schema short_desc="Wachtwoord opslaan in de gnome-sleutelbos">
+                                                <longdesc>gksu kan het wachtwoord opslaan in de gnome-sleutelbos zodat het niet telkens opnieuw gevraagd wordt</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display-no-pass-info">
+                                        <local_schema short_desc="Informatief bericht weergeven als er geen wachtwoord vereist is">
+                                                <longdesc>Hiermee bepaalt u of een melding wordt weergegeven die de gebruiker informeert dat het programma uitgevoerd wordt zonder dat er om een wachtwoord gervraagd wordt.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="prompt">
+                                        <local_schema short_desc="Vragen om bevestiging van blokkering">
+                                                <longdesc>Hiermee bepaalt u dat gksu de gebruiker vraagt of het scherm geblokkeerd dient te worden voordat het wachtwoord ingevoerd wordt. Merk op dat dit alleen werkt wanneer de optie force-grab uitgeschakeld is.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="sudo-mode">
+                                        <local_schema short_desc="Sudo-modus">
+                                                <longdesc>Hiermee wordt bepaald of sudo de standaard methode is. Deze methode wordt normaal gesproken ingesteld met het -S-argument of door &apos;gksudo&apos; te starten in plaats van &apos;gksu&apos;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="force-grab">
+                                        <local_schema short_desc="Blokkering van toetsenbord en muis forceren">
+                                                <longdesc>Toetsenbord en muis blokkeren zelfs wanneer het argument -g opgegegeven is.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="disable-grab">
+                                        <local_schema short_desc="Blokkering van toetsenbord en muis uitzetten">
+                                                <longdesc>Hiermee wordt bepaald of het blokkeren van toetsenbord en muis uitgeschakeld dient te worden. Op die manier is het mogelijk dat andere X-toepassingen de toetsenbord-invoer onderscheppen; het is dan onmogelijk om bescherming te bieden tegen schadelijke programma&apos;s. </longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Opdrachten die worden uitgevoerd bij toetsbindingen">
+                                                        <longdesc>De sleutels: /apps/metacity/global_keybindings/run_command_N definiëren toetskoppelingen die corresponderen met deze opdrachten. Het intoetsen van de toetskoppeling voor run_command_N zal de opdracht command_N uitvoeren.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="De opdracht voor venster-schermafdruk">
+                                                        <longdesc>De sleutel /apps/metacity/global_keybindings/run_command_window_screenshot definieert een toetskoppeling waardoor de opdracht in deze instelling wordt uitgevoerd.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="De opdracht voor schermafdruk">
+                                                        <longdesc>De sleutel: /apps/metacity/global_keybindings/run_command_screenshot definieert een toetskoppeling waardoor de opdracht in deze instelling wordt uitgevoerd.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Voorgedefineerde opdracht uitvoeren">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Een terminal opstarten">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Een schermafdruk van een venster maken">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Een schermafdruk maken">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Het paneeldialoogvenster toepassing uitvoeren tonen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Het paneelmenu tonen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Schakelen naar werkblad onder huidige">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Schakelen naar werkblad boven huidige">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Schakelen naar werkblad aan de rechterkant">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Schakelen naar werkblad aan de linkerkant">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Schakelen naar werkblad 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Schakelen naar werkblad 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Schakelen naar werkblad 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Schakelen naar werkblad 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Schakelen naar werkblad 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Schakelen naar werkblad 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Schakelen naar werkblad 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Schakelen naar werkblad 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Schakelen naar werkblad 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Schakelen naar werkblad 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Schakelen naar werkblad 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Schakelen naar werkblad 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Alle vensters verbergen en het bureaublad de aandacht geven">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Achterwaarts bewegen tussen panelen en het bureaublad">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Direct bewegen tussen panelen en het bureaublad">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Achterwaarts bewegen tussen vensters">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Bewegen tussen vensters">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Achterwaarts bewegen tussen vensters en het bureaublad met een popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Bewegen tussen vensters van een toepassing met een popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Direct achterwaarts bewegen tussen vensters">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Direct bewegen tussen vensters van een toepassing">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Achterwaarts bewegen tussen vensters en het bureaublad middels een popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Bewegen tussen panelen en het bureaublad met een popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Achterwaarts de aandacht verplaatsen tussen vensters met een popup-venster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Bewegen tussen vensters met een popup">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Venster verplaatsen naar westkant van het scherm">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Venster verplaatsen naar oostkant van het scherm">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Venster verplaatsen naar zuidkant van het scherm">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Venster verplaatsen naar noordkant van het scherm">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Venster verplaatsen naar zuidoost-hoek">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Venster verplaatsen naar zuidwest-hoek">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Venster verplaatsen naar noordoost-hoek">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Venster verplaatsen naar noordwest-hoek">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Een venster horizontaal maximaliseren">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Een venster vertikaal maximaliseren">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Venster verlagen onder andere vensters">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Venster verhogen boven andere vensters">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Bedekt venster verhogen, anders verlagen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Venster één werkblad naar beneden verplaatsen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Venster één werkblad naar boven verplaatsen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Venster één werkblad naar rechts verplaatsen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Venster één werkblad naar links verplaatsen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Venster verplaatsen naar werkblad 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Venster verplaatsen naar werkblad 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Venster verplaatsen naar werkblad 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Venster verplaatsen naar werkblad 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Venster verplaatsen naar werkblad 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Venster verplaatsen naar werkblad 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Venster verplaatsen naar werkblad 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Venster verplaatsen naar werkblad 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Venster verplaatsen naar werkblad 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Venster verplaatsen naar werkblad 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Venster verplaatsen naar werkblad 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Venster verplaatsen naar werkblad 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Venster op alle werkbladen omschakelen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Venstergrootte veranderen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Venster verplaatsen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Venster minimaliseren">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Venster sluiten">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Opgerold-staat omschakelen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Vensterformaat herstellen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Venster maximaliseren">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Maximalisatiestaat omschakelen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="‘Altijd boven’-staat omschakelen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Volledig scherm-modus omschakelen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Venstermenu activeren">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Werkbladnaam">
+                                                        <longdesc>De naam van een werkblad.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Misfeatures uitzetten die vereist zijn voor oude of gebroken toepassingen">
+                                                        <longdesc>Sommige toepassingen houden geen rekening met specificaties die als resultaat hebben dat de vensterbeheerder niet met deze toepassingen om kan gaan. Deze optie zorgt ervoor dat Metacity in een streng correctie modus  werkt, die ervoor zorgt dat er een consistentere gebruiksomgeving ontstaat. Deze optie heeft echter alleen resultaat als er geen applicaties worden gedraaid die zich niet aan de specificaties houden.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Niet geïmlementeerd) Navigatie werkt in termen van toepassingen, niet vensters">
+                                                        <longdesc>Indien waar, werkt Metacity in termen van toepassingen in plaats van vensters. Het concept is ietwat abstract, maar een toepassing-gebaseerde opstelling lijkt meer op een Macintosch dan op Windows. Als u een venster aandacht geeft in toepassing-gebaseerde modus, zullen alle vensters van de toepassing verhoogd worden. Tevens geldt dat aandachts-klikken niet worden doorgegeven naar vensters in andere toepassingen. De toepassing-gebaseerde modus is echter voor een groot deel nog niet geïmplementeerd.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Indien waar, bruikbaarheid inwisselen voor efficiënt bronnengebruik">
+                                                        <longdesc>Indien waar, geeft metacity de gebruiker minder directe terugkoppeling door raamwerken te gebruiken en animaties te minimaliseren. Dit is een behoorlijke vermindering van bruikbaarheid, maar kan ervoor zorgen dat oudere toepassingen blijven werken. Ook kan dit een voordeel zijn als er met terminal servers gewerkt wordt. Echter, de raamwerk functie is gedeactiveerd indien toegankelijkheid geactiveerd is.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="&apos;Compositing manager&apos;">
+                                                        <longdesc>Bepaalt of Metacity een &apos;compositing manager&apos; is</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Visuele bel type">
+                                                        <longdesc>Vertelt Metacity hoe de de visuele indicatie dat de systeembel of een andere toepassings-bel is afgegaan, moet worden geimplementeerd. Momenteel zijn er twee geldige waardes, ‘fullscreen’, wat een zwart-witte flits over hele beelscherm geeft, of ‘frame_flash’ waarbij de titelbalk opflitst van de toepassing die het belsignaal gaf. Als de toepassing die het belletje gaf onbekend is (wat meestal het geval is bij de standaard ‘systeem-piep’), zal de titelbalk van het huidige scherm dat de focus heeft opflitsen.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Systeembel is hoorbaar">
+                                                        <longdesc>Bepaalt of toepassingen of het systeem hoorbare &apos;piepjes&apos; kan genereren; kan samen met &apos;visuele bel&apos; gebruikt worden om geluidloze &apos;piepjes&apos; mogelijk te maken.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Visuele bel gebruiken">
+                                                        <longdesc>Geeft een zichtbare indicatie wanneer een toepassing of het systeem een &apos;bel&apos; of &apos;piep&apos; geeft; handig voor slechthorenden of voor gebruik in omgevingen met veel lawaai.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Aantal werkbladen">
+                                                        <longdesc>Aantal werkbladen. Moet groter zijn dan nul, en heeft een vast maximum om te voorkomen dat u per ongeluk uw werkomgeving vernietigt, door te vragen om te veel werkbladen.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Venstertitellettertype">
+                                                        <longdesc>Een lettertypebeschrijving voor het lettertype van de venstertitels. De grootte uit de beschrijving zal echter alleen worden gebruikt als titlebar_font_size op 0 is gezet. Tevens is deze optie uitgezet als titlebar_uses_desktop_font op &apos;waar&apos; (true) staat.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Standaard systeemlettertype gebruiken in venstertitels">
+                                                        <longdesc>Indien waar, de titlebar_font-optie negeren, en het standaard toepassings-font gebruiken voor venstertitels.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Huidig thema">
+                                                        <longdesc>Het thema bepaalt het uiterlijk van vensterranden, titelbalk, enzovoort.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Vertraging in milliseconden voor de optie: automatisch verhogen">
+                                                        <longdesc>De wachttijd alvorens een venster te verhogen als auto_raise op &apos;true&apos; staat. De wachttijd is gegeven in duizendsten van seconden.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Verhoogt automatisch het aandachtsvenster">
+                                                        <longdesc>Indien waar, en de aandachtsmodus is ofwel ‘sloppy’ of ‘mouse’, dan zal het venster met aandacht na een bepaalde tijd, die ingesteld kan worden met de auto_raise_delay sleutel. Dit heeft geen invloed bij het aanklikken van een venster om het te verhogen, en heeft ook geen invloed bij het slepen en loslaten van items op het venster.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="Actie bij titelbalk-klik met rechter muisknop">
+                                                        <longdesc>Deze optie bepaalt het effect van klikken op de titelbalk met de rechter muisknop. Geldige waardes zijn &apos;toggle_shade&apos;, welke het venster zal oprollen/afrollen, &apos;toggle_maximize&apos; welke het venster zal maximaliseren/herstellen, &apos;minimize&apos; welke het venster zal minimaliseren, en &apos;none&apos; welke niets zal doen.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="Actie bij titelbalk-klik met middelste muisknop">
+                                                        <longdesc>Deze optie bepaalt het effect van klikken op de titelbalk met de middelste muisknop. Geldige waardes zijn &apos;toggle_shade&apos;, welke het venster zal oprollen/afrollen, &apos;toggle_maximize&apos; welke het venster zal maximaliseren/herstellen, &apos;minimize&apos; welke het venster zal minimaliseren, en &apos;none&apos; welke niets zal doen.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Actie bij titelbalk-dubbelklik">
+                                                        <longdesc>Deze optie bepaalt het effect van dubbelklikken op de titelbalk. Geldige waardes zijn &apos;toggle_shade&apos;, welke het venster zal oprollen/afrollen, &apos;toggle_maximize&apos; welke het venster zal maximaliseren/herstellen, &apos;minimize&apos; welke het venster zal minimaliseren, en &apos;none&apos; welke niets zal doen.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Of het naar voren brengen een bijeffect is van andere gebruikersinteracties">
+                                                        <longdesc>Veel acties (bijvoorbeeld klikken in het client-gebied, verplaatsen of de grootte van het venster aanpassen) hebben als bijwerking dat het venster naar voren wordt gebracht. Zet deze optie op onwaar (false) om het naar voren brengen los te laten staan van andere gebruikersinteracties. Dit wordt ten zeerste afgeraden. Toepassingsverzoeken voor het op de voorgrond plaatsen van vensters worden hierdoor genegeerd. Zie http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Beheren hoe nieuwe vensters aandacht krijgen">
+                                                        <longdesc>Deze optie geeft aanvullende beheermogelijkheden over de methode waarmee nieuwe vensters aandacht krijgen. Er zijn twee mogelijke waarden: ‘smart’ zorgt ervoor dat de normale methode wordt gebruikt; ‘strict’ zorgt ervoor dat vensters die vanuit een terminalvenster gestart worden geen aandacht krijgen.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Vensteraandacht-modus">
+                                                        <longdesc>De vesteraandachtmodus geeft de wijze van vensteractivatie aan. Er zijn drie mogelijke waarden; ‘click’ betekent dat vensters moeten worden aangeklikt om ze aandacht te geven, ‘sloppy’ betekent dat vensters aandacht krijgen wanneer de muispijl het venster binnenkomt, en ‘mouse’ betekent dat vensters aandacht krijgen wanneer de muispijl het venster binnenkomt en aandacht verliezen wanneer de muispijl het venster verlaat.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Schikking van de knoppen op de titelbalk">
+                                                        <longdesc>Schikking van de knoppen op de titelbalk. De waarde moet een tekenreeks zijn zoals: ‘menu:minimize,maximize,close’; de punt-komma scheidt de linkerhoek van het venster met de rechterhoek, de knop-namen zijn gescheiden door komma&apos;s. Dubbele knoppen zijn niet toegestaan. Onbekende knop-namen worden genegeerd zodat in toekomstige versies van metacity, knoppen kunnen worden toegevoegd zonder oudere versies te breken.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Controletoets voor aangepaste venster-klik acties">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Standaard componentweergave-programma">
+                                                                <longdesc>Te gebruiken programma voor weergave van bestanden die een component vereisen. De parameter %s zal vervangen worden door de URI van het bestand en de parameter %c zal vervangen worden de de IID van de component.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Opstartargumenten voor standaard terminal">
+                                                                <longdesc>Te gebruiken exec-argument voor het standaard terminalprogramma.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Standaard terminalprogramma">
+                                                                <longdesc>Het standaard terminalprogramma voor toepassingen die een terminal nodig hebben.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Opdracht in terminalvenster starten">
+                                                                <longdesc>Waar indien de opdracht om dit type URL af te handelen in een terminalvenster gestart dient te worden.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Het programma dat &quot;h323&quot; URL&apos;s afhandelt">
+                                                                <longdesc>De opdracht voor het afhandelen van &quot;h323&quot;-URL&apos;s, indien ingeschakeld</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Of de aangegeven opdracht &quot;h323&quot;-URL&apos;s dient af te handelen.">
+                                                                <longdesc>Waar indien de opdracht aangegeven in de sleutel: &quot;command&quot;, &quot;h323&quot;-URL&apos;s dient af te handelen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Opdracht in terminalvenster starten">
+                                                                <longdesc>Waar indien de opdracht om dit type URL af te handelen in een terminalvenster gestart dient te worden.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Het programma dat &quot;callto&quot; URL&apos;s afhandelt">
+                                                                <longdesc>De opdracht voor het afhandelen van &quot;callto&quot;-URL&apos;s, indien ingeschakeld</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Of de aangegeven opdracht &quot;callto&quot;-URL&apos;s dient af te handelen.">
+                                                                <longdesc>Waar indine de opdracht aangegeven in de sleutel: &quot;command&quot;, &quot;callto&quot;-URL&apos;s dient af te handelen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Opdracht in terminalvenster starten">
+                                                                <longdesc>Waar indien de opdracht om dit type URL af te handelen in een terminalvenster gestart dient te worden.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Het programma dat &quot;mailto&quot; URL&apos;s afhandelt">
+                                                                <longdesc>De opdracht voor het afhandelen van &quot;mailto&quot;-URL&apos;s, indien ingeschakeld</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Of de aangegeven opdracht &quot;mailto&quot;-URL&apos;s dient af te handelen.">
+                                                                <longdesc>Waar indien de opdracht aangegeven in de sleutel: &quot;command&quot;, &quot;mailto&quot;-URL&apos;s dient af te handelen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Opdracht in terminalvenster starten">
+                                                                <longdesc>Waar indien de opdracht om dit type URL af te handelen in een terminalvenster gestart dient te worden.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Het programma dat &quot;https&quot; URL&apos;s afhandelt">
+                                                                <longdesc>De opdracht voor het afhandelen van &quot;https&quot;-URL&apos;s, indien ingeschakeld</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Of de aangegeven opdracht &quot;https&quot;-URL&apos;s dient af te handelen.">
+                                                                <longdesc>Waar indien de opdracht aangegeven in de sleutel: &quot;command&quot;, &quot;https&quot;-URL&apos;s dient af te handelen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Opdracht in terminalvenster starten">
+                                                                <longdesc>Waar indien de opdracht om dit type URL af te handelen in een terminalvenster gestart dient te worden.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Opdracht in terminalvenster starten">
+                                                                <longdesc>Waar indien de opdracht om dit type URL af te handelen in een terminalvenster gestart dient te worden.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Het programma dat &quot;http&quot; URL&apos;s afhandelt">
+                                                                <longdesc>De opdracht voor het afhandelen van &quot;http&quot;-URL&apos;s, indien ingeschakeld</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Of de aangegeven opdracht &quot;http&quot;-URL&apos;s dient af te handelen.">
+                                                                <longdesc>Waar indien de opdracht aangegeven in de sleutel: &quot;command&quot; &quot;http&quot;-URL&apos;s dient af te handelen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Opdracht in terminalvenster starten">
+                                                                <longdesc>Waar indien de opdracht om dit type URL af te handelen in een terminalvenster gestart dient te worden.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Het programma dat &quot;man&quot; URL&apos;s afhandelt">
+                                                                <longdesc>De opdracht voor het afhandelen van &quot;man&quot;-URL&apos;s, indien ingeschakeld</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Of de aangegeven opdracht &quot;man&quot;-URL&apos;s dient af te handelen.">
+                                                                <longdesc>Waar indien de opdracht aangegeven in de sleutel: &quot;command&quot;, &quot;man&quot;-URL&apos;s dient af te handelen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Opdracht in terminalvenster starten">
+                                                                <longdesc>Waar indien de opdracht om dit type URL af te handelen in een terminalvenster gestart dient te worden.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Het programma dat &quot;info&quot; URL&apos;s afhandelt">
+                                                                <longdesc>De opdracht voor het afhandelen van &quot;info&quot;-URL&apos;s, indien ingeschakeld</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Of de aangegeven opdracht &quot;info&quot;-URL&apos;s dient af te handelen.">
+                                                                <longdesc>Waar indien de opdracht aangegeven in de sleutel: &quot;command&quot;, &quot;info&quot;-URL&apos;s dient af te handelen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Opdracht in terminalvenster starten">
+                                                                <longdesc>Waar indien de opdracht om dit type URL af te handelen in een terminalvenster gestart dient te worden.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Het programma dat &quot;ghelp&quot; URL&apos;s afhandelt">
+                                                                <longdesc>De opdracht voor het afhandelen van &quot;ghelp&quot;-URL&apos;s, indien ingeschakeld</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Of de aangegeven opdracht &quot;ghelp&quot;-URL&apos;s dient af te handelen.">
+                                                                <longdesc>Waar indien de opdracht aangegeven in de sleutel: &quot;command&quot;, &quot;ghelp&quot;-URL&apos;s dient af te handelen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Opdracht in terminalvenster starten">
+                                                                <longdesc>Waar indien de opdracht om dit type URL af te handelen in een terminalvenster gestart dient te worden.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Het programma dat &quot;trash&quot; URL&apos;s afhandelt">
+                                                                <longdesc>De opdracht voor het afhandelen van &quot;trash&quot;-URL&apos;s, indien ingeschakeld</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Of de aangegeven opdracht &quot;trash&quot;-URL&apos;s dient af te handelen.">
+                                                                <longdesc>Waar indien de opdracht aangegeven in de sleutel: &quot;command&quot;, &quot;trash&quot;-URL&apos;s dient af te handelen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Of dit profiel gebruikt moet worden">
+                                                                        <longdesc>Of dit profiel gebruikt en weergegeven moet worden</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Het standaard bestandsachtervoegsel voor dit profiel">
+                                                                        <longdesc>Een bestandsnaamachtervoegsel die gebruikt moet worden bij het opslaan vanbestanden die met dit profiel gecodeerd zijn.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="De gebruikte gedeeltelijke GStreamer-pijplijn">
+                                                                        <longdesc>Een gedeeltelijke GStreamer-pijplijn om voor dit profiel te gebruiken.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="Een omschrijving van het audioprofiel">
+                                                                        <longdesc>Een omschrijving van het profiel, met daarin meer informatie en een beschrijving over wanneer dit profiel te gebruiken is.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Een korte naam voor het audioprofiel">
+                                                                        <longdesc>Een korte naam voor het audioprofiel, te gebruiken in selecties en uniek voor dit profiel.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Of dit profiel gebruikt moet worden">
+                                                                                <longdesc>Of dit profiel gebruikt en weergegeven moet worden</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Het standaard bestandsachtervoegsel voor dit profiel">
+                                                                                <longdesc>Een bestandsnaamachtervoegsel die gebruikt moet worden bij het opslaan vanbestanden die met dit profiel gecodeerd zijn.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="De gebruikte gedeeltelijke GStreamer-pijplijn">
+                                                                                <longdesc>Een gedeeltelijke GStreamer-pijplijn om voor dit profiel te gebruiken.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Een omschrijving van het audioprofiel">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Een korte naam voor het audioprofiel">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Het standaard bestandsachtervoegsel voor dit profiel">
+                                                                                <longdesc>Een bestandsnaamachtervoegsel die gebruikt moet worden bij het opslaan vanbestanden die met dit profiel gecodeerd zijn.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="De gebruikte gedeeltelijke GStreamer-pijplijn">
+                                                                                <longdesc>Een gedeeltelijke GStreamer-pijplijn om voor dit profiel te gebruiken.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Een omschrijving van het audioprofiel">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Een korte naam voor het audioprofiel">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Het standaard bestandsachtervoegsel voor dit profiel">
+                                                                                <longdesc>Een bestandsnaamachtervoegsel die gebruikt moet worden bij het opslaan vanbestanden die met dit profiel gecodeerd zijn.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="De gebruikte gedeeltelijke GStreamer-pijplijn">
+                                                                                <longdesc>Een gedeeltelijke GStreamer-pijplijn om voor dit profiel te gebruiken.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Een omschrijving van het audioprofiel">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Een korte naam voor het audioprofiel">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Het standaard bestandsachtervoegsel voor dit profiel">
+                                                                                <longdesc>Een bestandsnaamachtervoegsel die gebruikt moet worden bij het opslaan vanbestanden die met dit profiel gecodeerd zijn.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="De gebruikte gedeeltelijke GStreamer-pijplijn">
+                                                                                <longdesc>Een gedeeltelijke GStreamer-pijplijn om voor dit profiel te gebruiken.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Een omschrijving van het audioprofiel">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Een korte naam voor het audioprofiel">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Het standaard bestandsachtervoegsel voor dit profiel">
+                                                                                <longdesc>Een bestandsnaamachtervoegsel die gebruikt moet worden bij het opslaan vanbestanden die met dit profiel gecodeerd zijn.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="De gebruikte gedeeltelijke GStreamer-pijplijn">
+                                                                                <longdesc>Een gedeeltelijke GStreamer-pijplijn om voor dit profiel te gebruiken.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Een omschrijving van het audioprofiel">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Een korte naam voor het audioprofiel">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Het standaard bestandsachtervoegsel voor dit profiel">
+                                                                                <longdesc>Een bestandsnaamachtervoegsel die gebruikt moet worden bij het opslaan vanbestanden die met dit profiel gecodeerd zijn.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="De gebruikte gedeeltelijke GStreamer-pijplijn">
+                                                                                <longdesc>Een gedeeltelijke GStreamer-pijplijn om voor dit profiel te gebruiken.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Een omschrijving van het audioprofiel">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Een korte naam voor het audioprofiel">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Lijst met profielen">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="URL voor automatische proxy-configuratie">
+                                                <longdesc>URL die de waardes geeft voor proxyconfiguratie.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="SOCKS-proxy poortnummer">
+                                                <longdesc>De poort op de machine die u als proxy gebruikt en gedefinieerd door &quot;/system/proxy/socks_host&quot;</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="SOCKS-proxy hostnaam">
+                                                <longdesc>De machinenaam waar de socks-proxy op draait.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="FTP-proxy poortnummer">
+                                                <longdesc>De poort op de machine die u als proxy gebruikt en gedefinieerd door &quot;/system/proxy/ftp_host&quot;</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="FTP-proxy hostnaam">
+                                                <longdesc>De machinenaam waar de FTP-proxy op draait.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Beveiligde HTTP-proxy poortnummer">
+                                                <longdesc>De poort op de machine die u als proxy gebruikt en gedefinieerd door &quot;/system/proxy/secure_host&quot;</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Beveiligde HTTP-proxy hostnaam">
+                                                <longdesc>De machinenaam waar de beveiligde HTTP-proxy op draait.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Proxy configuratiemodus">
+                                                <longdesc>Kies de proxy configuratiemodus. Mogelijke waarden zijn &quot;none&quot; (geen), &quot;manual&quot; (handmatig) en &quot;auto&quot; (automatisch).</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Non-proxy hosts">
+                                                <longdesc>Deze sleutel bevat een lijst van computers die direct benaderd dienen te worden in plaats van via de proxy. De waardes kunnen computernamen zijn, of domeinen (met jokertekens zoals: *.bla.com), IP-adressen (zowel IPv4 als IPv6) of netwerkadressen met netmasker zoals 192.168.0.0/24.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="HTTP-proxy wachtwoord">
+                                                <longdesc>Te gebruiken wachtwoord bij gebruik van de HTTP proxy.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="HTTP-proxy gebruikersnaam">
+                                                <longdesc>Te gebruiken naam voor identificatie bij HTTP-proxy.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Aanmeldingscontrole gebruiken bij proxyserver-verbindingen">
+                                                <longdesc>Indien waar, wordt voor een verbinding met de proxyserver aanmeldingscontrole vereist. De combinatie van gebruikersnaam en wachtwoord komt voort uit &quot;/system/http_proxy/authentication_user&quot; en &quot;/system/http_proxy/authentication_password&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="HTTP-proxy poortnummer">
+                                                <longdesc>Het poortnummer op de machine die u als proxy gebruikt en gedefineerd door &quot;/system/http_proxy/host&quot; </longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="HTTP-proxy hostnaam">
+                                                <longdesc>De machinenaam waar de HTTP-proxy op draait.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="HTTP-proxy gebruiken">
+                                                <longdesc>Proxy-instellingen gebruiken bij HTTP-verbindingen over het internet.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Extra domeinen waarin naar DNS-SD services wordt gezocht">
+                                                <longdesc>Een door komma&apos;s gescheiden lijst met DNS-SD domeinen die zichtbaar behoren te zijn in de locatie &quot;netwerk:///&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Hoe een lokale DNS-SD service wordt weergegeven">
+                                                <longdesc>Mogelijke waarden zijn &quot;merged&quot;, &quot;separate&quot; en &quot;disabled&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="SMB-werkgroep">
+                                                <longdesc>De werkgroep of het domein van het Windows-netwerk waar de gebruiker deel van is. Om de nieuwe werkgroep volledig effectief te laten zijn moet u mogelijkerwijs een keer uitloggen en opnieuw aanmelden.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

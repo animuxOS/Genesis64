@@ -1,0 +1,4 @@
+#!/bin/sh
+
+set -e
+[ "$1" = "remove" ] && depmod -a $(uname -r)

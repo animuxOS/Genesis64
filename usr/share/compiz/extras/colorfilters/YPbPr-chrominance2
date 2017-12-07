@@ -1,0 +1,28 @@
+!!ARBfp1.0
+TEMP output, tmp, rst;
+TEX output, fragment.texcoord[0], texture[0], RECT;
+
+MOV rst, 0.5;
+
+MOV tmp, output;
+MUL tmp, tmp, {0.701, -0.587, -0.114, 0};
+ADD rst.r, rst.r, tmp.r;
+ADD rst.r, rst.r, tmp.g;
+ADD rst.r, rst.r, tmp.b;
+
+MOV tmp, output;
+MUL tmp, tmp, {-0.299, 0.413, -0.114, 0};
+ADD rst.g, rst.g, tmp.r;
+ADD rst.g, rst.g, tmp.g;
+ADD rst.g, rst.g, tmp.b;
+
+MOV tmp, output;
+MUL tmp, tmp, {-0.299, -0.587, 0.886, 0};
+ADD rst.b, rst.b, tmp.r;
+ADD rst.b, rst.b, tmp.g;
+ADD rst.b, rst.b, tmp.b;
+
+MOV output.rgb, rst;
+
+MOV result.color, output;
+END

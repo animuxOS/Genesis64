@@ -1,0 +1,962 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="Om PKCS#11-komponenten i gnome-keyring er aktiveret.">
+                                                        <longdesc>Dette aktiverer PKCS#11-komponenten i gnome-keyring-dæmonen. Dette træder kun i kraft når gnome-keyring-daemon startes (f.eks. når brugeren logger ind). Denne indstilling bliver måske overskrevet når visse kommandolinje-tilvalg gives til dæmonen.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="Om ssh-agenten i gnome-keyring er aktiveret.">
+                                                        <longdesc>&quot;Dette aktiverer ssh-agenten i gnome-keyring-dæmonen. Dette træder kun i kraft når gnome-keyring-daemon startes (f.eks. når brugeren logger ind). Denne indstilling bliver måske overskrevet når visse kommandolinje-tilvalg gives til dæmonen.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Vinduets bredde">
+                                                        <longdesc>Bredden af vinduet der skal vises</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Vinduets højde">
+                                                        <longdesc>Højden af vinduet der skal vises</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gksu">
+                                <entry name="save-keyring">
+                                        <local_schema short_desc="Nøglering som adgangskoder vil blive gemt i">
+                                                <longdesc>Navnet på nøgleringen skal bruge. Normale værdier er &quot;session&quot;, som gemmer adgangskoden i sessionen, og &quot;standard&quot; som gemmer adgangskoden uden timeout.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="save-to-keyring">
+                                        <local_schema short_desc="Gem adgangskode til gnome-keyring">
+                                                <longdesc>gksu kan gemme adgangskoden du skriver til gnome-keyring så du ikke behøver at blive spurgte hver gang</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display-no-pass-info">
+                                        <local_schema short_desc="Vis informationsbesked når ingen adgangskode kræves">
+                                                <longdesc>Denne indstilling bestemmer om en besked-dialog skal vises der oplyser brugeren om at programmet der køres ikke kræver nogen adgangskode.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="prompt">
+                                        <local_schema short_desc="Spørg om der skal låses">
+                                                <longdesc>Denne indstilling vil lade gksu spørge brugeren om han vil have skærmen låst før indtastning af adgangskoden. Bemærk at dette kun har en virkning hvis force-grab er slået fra.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="sudo-mode">
+                                        <local_schema short_desc="Sudo-tilstand">
+                                                <longdesc>Om sudo skal være standard backend-metoden. Denne metode kan ellers opnås ved at anvende -S tilvalget, eller ved at køre &apos;gksudo&apos; i stedet for &apos;gksu&apos;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="force-grab">
+                                        <local_schema short_desc="Tving keyboard og muse lås">
+                                                <longdesc>Lås keyboard og mus selvom -g er blevet angivet som argument på kommandolinjen.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="disable-grab">
+                                        <local_schema short_desc="Deaktiér keyboard og muse lås">
+                                                <longdesc>Om keyboard og mus låsning skal være slået fra. Dette vil gøre det muligt for andre X-programmet at lytte til keyboard handlinger, som kan gøre at andre ondsindede programmer kan lytte til adgangskoden.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Kommando der skal køres ved tastegenvej">
+                                                        <longdesc>Nøglerne /apps/metacity/global_keybindings/run_command_N definerer tastebindinger der svarer til disse kommandoer. Ved tryk på tastebindingen for run_command_N udføres command_N.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Kommando for vinduesskærmbillede">
+                                                        <longdesc>Nøglen /apps/metacity/global_keybindings/run_command_screenshot_window definerer en tastebinding der forårsager at kommandoen for denne indstilling bliver udført.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Kommando for skærmbillede">
+                                                        <longdesc>Nøglen /apps/metacity/global_keybindings/run_command_screenshot definerer en tastebinding der forårsager at kommandoen for denne indstilling bliver udført.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Kør en defineret kommando">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Start en terminal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Gem skærmbillede for et vindue">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Gem skærmbillede">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Vis panelets &quot;Kør program&quot;-vindue">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Vis panelmenuen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Skift til arbejdsområdet under dette">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Skift til arbejdsområdet over dette">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Skift til arbejdsområdet til højre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Skift til arbejdsområdet til venstre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Skift til arbejdsområde 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Skift til arbejdsområde 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Skift til arbejdsområde 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Skift til arbejdsområde 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Skift til arbejdsområde 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Skift til arbejdsområde 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Skift til arbejdsområde 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Skift til arbejdsområde 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Skift til arbejdsområde 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Skift til arbejdsområde 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Skift til arbejdsområde 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Skift til arbejdsområde 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Skjul alle vinduer og fokusér skrivebordet">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Gå baglæns gennem paneler og skrivebordet omgående">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Skift mellem paneler og skrivebordet omgående">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Gå baglæns gennem vinduer omgående">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Gå gennem vinduer omgående">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Gå baglæns gennem et programs vinduer vha. navigationsvindue">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Gå gennem et programs vinduer vha. navigationsvindue">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Gå baglæns gennem et programs vinduer omgående">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Gå gennem et programs vinduer omgående">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Gå baglæns gennem paneler og skrivebordet vha. nagivationsvindue">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Skift mellem paneler og skrivebordet vha. navigationsvindue">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Flyt fokus tilbage gennem vinduer vha. navigationsvindue">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Gå gennem vinduer vha. navigationsvindue">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Flyt vindue til skærmens vestlige side">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Flyt vindue til skærmens østlige side">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Flyt vindue til skærmens sydlige side">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Flyt vindue til skærmens nordlige side">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Flyt vindue til det sydøstlige hjørne">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Flyt vindue til det sydvestlige hjørne">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Flyt vindue til det nordøstlige hjørne">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Flyt vindue til det nordvestlige hjørne">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Maksimér et vindue vandret">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Maksimér et vindue lodret">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Sænk vindue under andre vinduer">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Hæv vindue over andre vinduer">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Hæv vindue hvis dækket, ellers sænk det">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Flyt vindue et arbejdsområde ned">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Flyt vindue et arbejdsområde op">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Flyt vindue et arbejdsområde til højre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Flyt vindue et arbejdsområde til venstre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Flyt vindue til arbejdsområde 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Flyt vindue til arbejdsområde 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Flyt vindue til arbejdsområde 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Flyt vindue til arbejdsområde 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Flyt vindue til arbejdsområde 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Flyt vindue til arbejdsområde 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Flyt vindue til arbejdsområde 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Flyt vindue til arbejdsområde 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Flyt vindue til arbejdsområde 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Flyt vindue til arbejdsområde 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Flyt vindue til arbejdsområde 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Flyt vindue til arbejdsområde 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Skift vindue på alle arbejdsområder">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Ændre størrelsen på vindue">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Flyt vindue">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Minimér vindue">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Luk vindue">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Skift oprullethed">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Gendan vindue">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Maksimér vindue">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Skift maksimeringstilstand">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Skift altid øverst-tilstand">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Skift fuldskærmstilstand">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Aktivér vinduesmenu">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Arbejdsområdets navn">
+                                                        <longdesc>Arbejdsområdets navn.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Deaktiver uheldige faciliteter der kræves af ældre eller ødelagte programmer">
+                                                        <longdesc>Visse programmer ignorerer specifikationer således at vindueshåndteringen kan bringes til fejlagtig opførsel. Denne indstilling sætter Metacity i en strengt korrekt tilstand, hvilket giver en mere konsistent brugergrænseflade, såfremt man ikke behøver nogen uartige programmer.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Ikke implementeret) Navigatering virker med programmer ikke vinduer">
+                                                        <longdesc>Hvis sand, så arbejder Metacity med programmer i stedet for vinduer. Konceptet er en smule abstrakt, men generelt er en programbaseret opsætning mere i retning af Mac og mindre som Windows. Når et vindue fokuseres i den programbaserede tilstand, vil alle vinduer i programmet blive hævet. Desuden bliver fokusklik ikke sendt videre til vinduer i andre programmer. I øvrigt er programbaseret tilstand i øjeblikket for størstedelens vedkommende ikke implementeret.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Hvis sand, så formindsk brugbarhed af hensyn til resurseforbrug">
+                                                        <longdesc>Hvis sand, vil Metacity give brugeren mindre tilbagemelding ved at bruge rammelinjer, undgå animeringer og andet. Dette er en betydelig formindskelse af brugbarheden for mange brugere, men kan sætte gamle programmer i stand til at fungere, samt kan være et brugbart kompromis for terminalservere. Rammelinje-faciliteten er dog deaktiveret når tilgængelighed er slået til.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="Kompositionshåndtering">
+                                                        <longdesc>Bestemmer om Metacity håndterer komposition.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Visuel bip-type">
+                                                        <longdesc>Angiver hvordan den visuelle indikering af at bip hør lydt skal vises. I øjeblikket er der to gyldige værdier, &quot;fullscreen&quot;, som forårsager at hele skærmen skifter mellem sort og hvid, og &quot;frame_flash&quot; som forårsager at titellinjen for vinduet blinker. Hvis programmet som sendte bippet ikke er kendt (som det som regel er for standardsystembippet), vil titellinjen for det aktuelt fokuserede vindue blinke.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Systembip er hørbart">
+                                                        <longdesc>Bestemmer om programmer eller systemet kan generere hørbare bip; kan bruges sammen med visuelt bip til at opnå lydløse systembip.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Aktivér visuelt bip">
+                                                        <longdesc>Aktiverer visuel tilkendegivelse idet et program eller systemet udsender et bip; nyttigt for svagthørende eller til brug i støjende omgivelser.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Antal arbejdsområder">
+                                                        <longdesc>Antal arbejdsområder. Skal være større end nul og har et fast maksimum for at forhindre at skrivebordet gøres ubrugeligt ved et uheld ved at antallet sættes for stort.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Skrifttype til vinduestitel">
+                                                        <longdesc>En skrifttypebeskrivelsesstreng der beskriver skrifttypen for vinduestitellinjer. Størrelsen fra beskrivelsen vil dog kun blive brugt hvis indstillingen &quot;titlebar_font_size&quot; er sat til 0. Desuden er denne indstilling deaktiveret hvis indstillingen &quot;titlebar_uses_desktop_font&quot; er sat til &quot;true&quot;.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Benyt standardskrifttypen i vinduestitler">
+                                                        <longdesc>Hvis sand, ignorér indstillingen titlebar_font og brug standardskrifttypen for programmer til vinduestitler.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Aktuelt tema">
+                                                        <longdesc>Temaet bestemmer udseendet af vindueskanter, titellinjer osv.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Ventetid i millisekunder for autohævningsindstillingen">
+                                                        <longdesc>Ventetiden før et vindue hæves hvis auto_raise er sat til sand. Tiden angives i tusinddele af et sekund.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Hæv automatisk det fokuserede vindue">
+                                                        <longdesc>Hvis sat til &quot;true&quot;, og fokustilstanden er enten &quot;sloppy&quot; eller &quot;mouse&quot;, så vil det fokuserede vindue automatisk hæves efter en ventetid specificeret af nøglen &quot;auto_raise_delay&quot;. Dette er ikke relateret til at klikke på et vindue for at hæve det, ej heller at komme ind i et vindue under træk-og-slip.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="Handling ved højreklik på titellinjen">
+                                                        <longdesc>Angiver hvad der sker når der højreklikkes på titellinjen. Nuværende gyldige muligheder er &quot;toggle_shade&quot; som ruller vinduet op/ned, &quot;toggle_maximize&quot; som skifter mellem maksimeret/normal tilstand for vinduet, &quot;minimize&quot; som vil minimere vinduet og &quot;none&quot; som ingenting gør.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="Handling ved midterklik på titellinjen">
+                                                        <longdesc>Angiver hvad der sker når der midterklikkes på titellinjen. Nuværende gyldige muligheder er &quot;toggle_shade&quot; som ruller vinduet op/ned, &quot;toggle_maximize&quot; som skifter mellem maksimeret/normal tilstand for vinduet, &quot;minimize&quot; som vil minimere vinduet og &quot;none&quot; som ingenting gør.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Handling ved dobbeltklik på titellinjen">
+                                                        <longdesc>Angiver hvad der sker når der dobbeltklikkes på titellinjen. Nuværende gyldige muligheder er &quot;toggle_shade&quot; som ruller vinduet op/ned, &quot;toggle_maximize&quot; som skifter mellem maksimeret/normal tilstand for vinduet, &quot;minimize&quot; som vil minimere vinduet og &quot;none&quot; som ingenting gør.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Om hævning skal være en bivirkning af andre brugerhændelser">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Indstil måden hvorpå nye vinduer tildeles fokus">
+                                                        <longdesc>Denne indstilling giver yderligere kontrol over måden hvorpå nyoprettede vinduer bringes i fokus. Den har to mulige værdier; &quot;smart&quot; anvender brugerens normale fokusindstillinger, og &quot;strict&quot; resulterer i at vinduer der startes fra en terminal ikke gives fokus.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Vinduesfokuseringstilstand">
+                                                        <longdesc>Vinduesfokuseringstilstanden fortæller hvordan vinduer aktiveres. Der er tre mulige værdier: &quot;click&quot; betyder at vinduer skal klikkes på for at fokusere dem, &quot;sloppy&quot; betyder at vinduer fokuseres når musen føres ind i vinduet og &quot;mouse&quot; betyder at vinduer fokuseres når musen føres ind i vinduet og mister fokus igen når musen forlader vinduet.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Arrangeringen af knapper på titellinjen">
+                                                        <longdesc>Arrangeringen af knapper på titellinjen. Værdien skal være en tekststreng, såsom &quot;menu:minimize,maximize,close&quot;; kolonnet adskiller venstre hjørne fra højre hjørne, og knapnavnene er kommaadskilte. Hver knap kan kun optræde én gang. Ukendte knapnavne ignoreres sådan at yderligere knapper kan tilføjes i senere versioner af Metacity uden at ødelægge ældre versioner.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Modifikationstast til brug for modificerede vinduesklikhandlinger">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Forvalgt komponentfremviser">
+                                                                <longdesc>Det program der skal bruges til at vise filer der kræver en komponent for at vise dem. Parameteren %s vil blive erstattet af filens adresser, parameteren %c vil blive erstattet med komponentens IID.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Kørselsparameter for forvalgt terminal">
+                                                                <longdesc>Kørselsparameter der skal bruges til det forvalgte terminalprogram.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Forvalgt terminalprogram">
+                                                                <longdesc>Det forvalgte terminalprogram til programmer der kræver en terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kør kommandoen i en terminal">
+                                                                <longdesc>Sand hvis kommandoen til at håndtere denne adresse skal køres i en terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Håndtering af &quot;h323&quot;-adresser">
+                                                                <longdesc>Kommandoen der bruges til at håndtere &quot;h323&quot;-adresser, hvis aktiveret.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Om den specificerede kommando skal håndtere &quot;h323&quot;-adresser">
+                                                                <longdesc>Sand hvis kommandoen angivet i &quot;command&quot;-nøglen håndterer &quot;h323&quot;-adresser.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kør kommandoen i en terminal">
+                                                                <longdesc>Sand hvis kommandoen til at håndtere denne adresse skal køres i en terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Håndtering af &quot;callto&quot;-adresser">
+                                                                <longdesc>Kommandoen der bruges til at håndtere &quot;callto&quot;-adresser, hvis aktiveret.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Om den specificerede kommando skal håndtere &quot;callto&quot;-adresser">
+                                                                <longdesc>Sand hvis kommandoen angivet i &quot;command&quot;-nøglen håndterer &quot;callto&quot;-adresser.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kør kommandoen i en terminal">
+                                                                <longdesc>Sand hvis kommandoen til at håndtere denne adresse skal køres i en terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Håndtering af &quot;mailto&quot;-adresser">
+                                                                <longdesc>Kommandoen der bruges til at håndtere &quot;mailto&quot;-adresser, hvis aktiveret.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Om den specificerede kommando skal håndtere &quot;mailto&quot;-adresser">
+                                                                <longdesc>Sand hvis kommandoen angivet i &quot;command&quot;-nøglen håndterer &quot;mailto&quot;-adresser.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kør kommandoen i en terminal">
+                                                                <longdesc>Sand hvis kommandoen til at håndtere denne adresse skal køres i en terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Håndtering af &quot;https&quot;-adresser">
+                                                                <longdesc>Kommandoen der bruges til at håndtere &quot;https&quot;-adresser, hvis aktiveret.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Om den specificerede kommando skal håndtere &quot;https&quot;-adresser">
+                                                                <longdesc>Sand hvis kommandoen angivet i &quot;command&quot;-nøglen håndterer &quot;https&quot;-adresser.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kør kommandoen i en terminal">
+                                                                <longdesc>Sand hvis kommandoen til at håndtere denne adresse skal køres i en terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kør kommandoen i en terminal">
+                                                                <longdesc>Sand hvis kommandoen til at håndtere denne adresse skal køres i en terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Håndtering af &quot;http&quot;-adresser">
+                                                                <longdesc>Kommandoen der bruges til at håndtere &quot;http&quot;-adresser, hvis aktiveret.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Om den specificerede kommando skal håndtere &quot;http&quot;-adresser">
+                                                                <longdesc>Sand hvis kommandoen angivet i &quot;command&quot;-nøglen håndterer &quot;http&quot;-adresser.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kør kommandoen i en terminal">
+                                                                <longdesc>Sand hvis kommandoen til at håndtere denne adresse skal køres i en terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Håndtering af &quot;man&quot;-adresser">
+                                                                <longdesc>Kommandoen der bruges til at håndtere &quot;man&quot;-adresser, hvis aktiveret.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Om den specificerede kommando skal håndtere &quot;man&quot;-adresser">
+                                                                <longdesc>Sand hvis kommandoen angivet i &quot;command&quot;-nøglen håndterer &quot;man&quot;-adresser.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kør kommandoen i en terminal">
+                                                                <longdesc>Sand hvis kommandoen til at håndtere denne adresse skal køres i en terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Håndtering af &quot;info&quot;-adresser">
+                                                                <longdesc>Kommandoen der bruges til at håndtere &quot;info&quot;-adresser, hvis aktiveret.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Om det specificerde program skal håndtere &quot;info&quot;-adresser">
+                                                                <longdesc>Sand hvis kommandoen angivet i &quot;command&quot;-nøglen håndterer &quot;info&quot;-adresser.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kør kommandoen i en terminal">
+                                                                <longdesc>Sand hvis kommandoen til at håndtere denne adresse skal køres i en terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Håndtering af &quot;ghelp&quot;-adresser">
+                                                                <longdesc>Kommandoen der bruges til at håndtere &quot;ghelp&quot;-adresser, hvis aktiveret.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Om den specificerede kommando skal håndtere &quot;ghelp&quot;-adresser">
+                                                                <longdesc>Sand hvis kommandoen angivet i &quot;command&quot;-nøglen håndterer &quot;ghelp&quot;-adresser.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kør kommandoen i en terminal">
+                                                                <longdesc>Sand hvis kommandoen til at håndtere denne adresse skal køres i en terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Håndtering af &quot;trash&quot;-adresser">
+                                                                <longdesc>Kommandoen der bruges til at håndtere &quot;trash&quot;-adresser, hvis aktiveret.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Om den specificerede kommando skal håndtere &quot;trash&quot;-adresser">
+                                                                <longdesc>Sand hvis kommandoen angivet i &quot;command&quot;-nøglen håndterer &quot;trash&quot;-adresser.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Om profilen skal bruges">
+                                                                        <longdesc>Om profilen skal vises.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Den forvalgte filendelse for denne profil">
+                                                                        <longdesc>En filnavnsendelse som skal bruges når filer kodet med denne profil gemmes.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Delvis GStreamer-datakanal">
+                                                                        <longdesc>En delvis GStreamer-datakanal som skal bruges til denne profil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="En beskrivelse til lydprofilen">
+                                                                        <longdesc>En beskrivelse af profilen med yderligere oplysninger og information om hvornår profilen skal benyttes.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Et kort navn til lydprofilen">
+                                                                        <longdesc>Et kort navn til lydprofilen til at identificere den.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Om profilen skal bruges">
+                                                                                <longdesc>Om profilen skal vises.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Den forvalgte filendelse for denne profil">
+                                                                                <longdesc>En filnavnsendelse som skal bruges når filer kodet med denne profil gemmes.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Delvis GStreamer-datakanal">
+                                                                                <longdesc>En delvis GStreamer-datakanal som skal bruges til denne profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="En beskrivelse til lydprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Et kort navn til lydprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Den forvalgte filendelse for denne profil">
+                                                                                <longdesc>En filnavnsendelse som skal bruges når filer kodet med denne profil gemmes.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Delvis GStreamer-datakanal">
+                                                                                <longdesc>En delvis GStreamer-datakanal som skal bruges til denne profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="En beskrivelse til lydprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Et kort navn til lydprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Den forvalgte filendelse for denne profil">
+                                                                                <longdesc>En filnavnsendelse som skal bruges når filer kodet med denne profil gemmes.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Delvis GStreamer-datakanal">
+                                                                                <longdesc>En delvis GStreamer-datakanal som skal bruges til denne profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="En beskrivelse til lydprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Et kort navn til lydprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Den forvalgte filendelse for denne profil">
+                                                                                <longdesc>En filnavnsendelse som skal bruges når filer kodet med denne profil gemmes.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Delvis GStreamer-datakanal">
+                                                                                <longdesc>En delvis GStreamer-datakanal som skal bruges til denne profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="En beskrivelse til lydprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Et kort navn til lydprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Den forvalgte filendelse for denne profil">
+                                                                                <longdesc>En filnavnsendelse som skal bruges når filer kodet med denne profil gemmes.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Delvis GStreamer-datakanal">
+                                                                                <longdesc>En delvis GStreamer-datakanal som skal bruges til denne profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="En beskrivelse til lydprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Et kort navn til lydprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Den forvalgte filendelse for denne profil">
+                                                                                <longdesc>En filnavnsendelse som skal bruges når filer kodet med denne profil gemmes.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Delvis GStreamer-datakanal">
+                                                                                <longdesc>En delvis GStreamer-datakanal som skal bruges til denne profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="En beskrivelse til lydprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Et kort navn til lydprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Liste af profiler">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="Automatisk mellemværtskonfigurationsadresse">
+                                                <longdesc>Adresse som tilbyder konfigurationsværdier for mellemvært.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="SOCKS-mellemværtsport">
+                                                <longdesc>Porten på den maskine defineret af &quot;/system/proxy/socks_host&quot; som trafikken skal gå gennem.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="SOCKS-mellemværtsnavn">
+                                                <longdesc>Maskinnavn som SOCKS-trafik skal gå gennem.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="FTP-mellemværtsport">
+                                                <longdesc>Porten på den maskine defineret af &quot;/system/proxy/ftp_host&quot; som trafikken skal gå gennem.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="FTP-mellemværtsnavn">
+                                                <longdesc>Maskinnavn som FTP-trafik skal gå gennem.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Sikker HTTP-mellemværtsport">
+                                                <longdesc>Porten på den maskine defineret af &quot;/system/proxy/secure_host&quot; som trafikken skal gå gennem.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Sikker HTTP-mellemværtsnavn">
+                                                <longdesc>Maskinnavn som sikker HTTP-trafik skal gå gennem.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Mellemværtstilstand">
+                                                <longdesc>Vælg mellemværtkonfigurationen. Mulige værdier er &quot;none&quot;, &quot;manual&quot;, &quot;auto&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Værter uden mellemvært">
+                                                <longdesc>Denne nøgle indeholder en liste af værter som der skal tilsluttes til direkte i stedet for gennem mellemværten (hvis den er aktiv). Værdierne kan være værtsnavne, domæner (med et indledende jokertegn som f.eks. *.foo.dk), IP-værtsadresser (både IPv4 og IPv6) og netværksadresser med et netmaske (som f.eks. 192.168.0.0/24).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="HTTP-mellemværtsadgangskode">
+                                                <longdesc>Adgangskode der skal gives som brugergodkendelse for HTTP-mellemvært.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="HTTP-mellemværtsbrugernavn">
+                                                <longdesc>Brugernavn der skal videregives til brugergodkendelse til HTTP-mellemvært.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Brugergodkendelse ved mellemværtstilslutninger">
+                                                <longdesc>Hvis sand, kræver tilslutningerne til mellemværten brugergodkendelse. Brugernavn-/adgangskodekombinationen er defineret i &quot;/system/http_proxy/authentication_user&quot; og &quot;/system/http_proxy/authentication_password&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="HTTP-mellemværtsport">
+                                                <longdesc>Porten på den maskine defineret af &quot;/system/http_proxy/host&quot; som trafikken skal gå gennem.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="HTTP-mellemværtsnavn">
+                                                <longdesc>Maskinnavn som HTTP-trafik skal gå gennem.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="Benyt HTTP-mellemvært">
+                                                <longdesc>Aktivér mellemværtsindstillingerne ved HTTP over internettet.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Ekstra domæner til at kigge efter DNS-SD-tjenester i">
+                                                <longdesc>Komma-adskilt liste af DNS-SD-domæner som skal være synlige i &quot;network:///&quot;-stedet.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Hvordan en lokal DNS-SD-tjeneste skal vises">
+                                                <longdesc>Mulige værdier er &quot;merged&quot;, &quot;separate&quot; og &quot;disabled&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="SMB-arbejdsgruppe">
+                                                <longdesc>Windows netværks-arbejdsgruppen eller domænet som brugeren er en del af. For at en ny arbejdsgruppe er komplet aktiveret skal brugeren muligvis logge ud og logge ind igen.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

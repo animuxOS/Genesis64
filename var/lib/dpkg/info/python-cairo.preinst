@@ -1,0 +1,23 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_pycentral
+if which pycentral >/dev/null 2>&1 && pycentral --help 2>/dev/null | grep -q '^ *version'; then
+	pycentral pkgprepare python-cairo <<PYEOF
+[python-package]
+format = 1
+python-version = 2.4, 2.5
+[pycentral]
+version = 0.6.7
+[files]
+/usr/share/pyshared/cairo=d
+/usr/share/pyshared/cairo/__init__.py=f
+/usr/lib/python2.4/site-packages/cairo=d
+/usr/lib/python2.4/site-packages/cairo/_cairo.so=f
+/usr/lib/python2.5/site-packages/cairo=d
+/usr/lib/python2.5/site-packages/cairo/_cairo.so=f
+PYEOF
+else
+	mkdir -p /var/lib/pycentral
+	echo python-cairo >> /var/lib/pycentral/delayed-pkgs
+fi
+# End automatically added section

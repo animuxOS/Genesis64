@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+if [ -d /usr/share/scrollkeeper/doc/scrollkeeper_manual ]; then
+    rm -rf /usr/share/scrollkeeper/doc/scrollkeeper_manual
+fi
+
+if [ -d /usr/share/scrollkeeper/Templates/pt_BR ]; then
+    rm -rf /usr/share/scrollkeeper/Templates/pt_BR
+fi
+
+
+

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+action="$1"
+
+if [ "$action" = "purge" ]; then
+    rm -rf /var/lib/scrollkeeper
+    rm -f /var/log/scrollkeeper.log
+    rm -f /usr/share/scrollkeeper/configured
+fi
+
+# Automatically added by dh_installxmlcatalogs
+if [ "$1" = "purge" ]; then
+	rm -f /etc/xml/scrollkeeper.xml /etc/xml/scrollkeeper.xml.old
+fi
+# End automatically added section
+

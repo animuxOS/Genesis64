@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>PrinterListWindow</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.73.2">
+<link rel="start" href="index.html" title="libxfprint Reference Manual">
+<link rel="up" href="ch01.html" title="API Reference">
+<link rel="prev" href="PrintingSystem.html" title="PrintingSystem">
+<link rel="next" href="PrinterQueueWindow.html" title="PrinterQueueWindow">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="ch01.html" title="API Reference">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="PrintingSystem.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libxfprint Reference Manual</th>
+<td><a accesskey="n" href="PrinterQueueWindow.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2604838" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2590418" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2593153" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2593214" class="shortcut">Implemented Interfaces</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="PrinterListWindow"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2604838"></a><span class="refentrytitle">PrinterListWindow</span>
+</h2>
+<p>PrinterListWindow</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;libxfprint/libxfprint.h&gt;
+
+
+                    <a class="link" href="PrinterListWindow.html#PrinterListWindow-struct">PrinterListWindow</a>;
+enum                <a class="link" href="PrinterListWindow.html#PrinterListWindowColumn">PrinterListWindowColumn</a>;
+<a
+href="/usr/share/gtk-doc/html/gtk/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="PrinterListWindow.html#printer-list-window-new">printer_list_window_new</a>             (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps);
+<a
+href="/usr/share/gtk-doc/html/gtk/GtkUIManager.html"
+>GtkUIManager</a>*       <a class="link" href="PrinterListWindow.html#printer-list-window-get-ui-manager">printer_list_window_get_ui_manager</a>  (<a class="link" href="PrinterListWindow.html" title="PrinterListWindow">PrinterListWindow</a> *win);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*              <a class="link" href="PrinterListWindow.html#printer-list-window-get-selected-printer">printer_list_window_get_selected_printer</a>
+                                                        (<a class="link" href="PrinterListWindow.html" title="PrinterListWindow">PrinterListWindow</a> *win);
+void                <a class="link" href="PrinterListWindow.html#printer-list-window-hide-column">printer_list_window_hide_column</a>     (<a class="link" href="PrinterListWindow.html" title="PrinterListWindow">PrinterListWindow</a> *win,
+                                                         <a class="link" href="PrinterListWindow.html#PrinterListWindowColumn">PrinterListWindowColumn</a> column);
+
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2593153"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  <a
+href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="/usr/share/gtk-doc/html/gtk/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="/usr/share/gtk-doc/html/gtk/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="/usr/share/gtk-doc/html/gtk/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="/usr/share/gtk-doc/html/gtk/GtkBin.html"
+>GtkBin</a>
+                                 +----<a
+href="/usr/share/gtk-doc/html/gtk/GtkWindow.html"
+>GtkWindow</a>
+                                       +----PrinterListWindow
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2593214"></a><h2>Implemented Interfaces</h2>
+<p>
+PrinterListWindow implements
+ AtkImplementorIface and  <a
+href="/usr/share/gtk-doc/html/gtk/gtk-gtkbuildable.html#GtkBuildable"
+>GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2590418"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2590434"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2590445"></a><h3>
+<a name="PrinterListWindow-struct"></a>PrinterListWindow</h3>
+<a class="indexterm" name="id2590456"></a><pre class="programlisting">typedef struct _PrinterListWindow PrinterListWindow;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2590473"></a><h3>
+<a name="PrinterListWindowColumn"></a>enum PrinterListWindowColumn</h3>
+<a class="indexterm" name="id2590484"></a><pre class="programlisting">typedef enum
+{
+  PRINTER_LIST_WINDOW_ALIAS_COLUMN,
+  PRINTER_LIST_WINDOW_STATE_COLUMN,
+} PrinterListWindowColumn;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2590501"></a><h3>
+<a name="printer-list-window-new"></a>printer_list_window_new ()</h3>
+<a class="indexterm" name="id2590512"></a><pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/gtk/GtkWidget.html"
+>GtkWidget</a>*          printer_list_window_new             (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ps</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2588392"></a><h3>
+<a name="printer-list-window-get-ui-manager"></a>printer_list_window_get_ui_manager ()</h3>
+<a class="indexterm" name="id2588403"></a><pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/gtk/GtkUIManager.html"
+>GtkUIManager</a>*       printer_list_window_get_ui_manager  (<a class="link" href="PrinterListWindow.html" title="PrinterListWindow">PrinterListWindow</a> *win);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2588460"></a><h3>
+<a name="printer-list-window-get-selected-printer"></a>printer_list_window_get_selected_printer ()</h3>
+<a class="indexterm" name="id2588473"></a><pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a>*              printer_list_window_get_selected_printer
+                                                        (<a class="link" href="PrinterListWindow.html" title="PrinterListWindow">PrinterListWindow</a> *win);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2588531"></a><h3>
+<a name="printer-list-window-hide-column"></a>printer_list_window_hide_column ()</h3>
+<a class="indexterm" name="id2588544"></a><pre class="programlisting">void                printer_list_window_hide_column     (<a class="link" href="PrinterListWindow.html" title="PrinterListWindow">PrinterListWindow</a> *win,
+                                                         <a class="link" href="PrinterListWindow.html#PrinterListWindowColumn">PrinterListWindowColumn</a> column);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>column</code></em>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

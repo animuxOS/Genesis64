@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>GdlComboButton</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="GDL Reference Manual">
+<link rel="up" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+<link rel="prev" href="GdlDockPlaceholder.html" title="GdlDockPlaceholder">
+<link rel="next" href="GdlDockPaned.html" title="GdlDockPaned">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GdlDockPlaceholder.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="gdl-main.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GDL Reference Manual</th>
+<td><a accesskey="n" href="GdlDockPaned.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2585600" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2606839" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2608664" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2608723" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id2606814" class="shortcut">Signals</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="GdlComboButton"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2585600"></a><span class="refentrytitle">GdlComboButton</span>
+</h2>
+<p>GdlComboButton</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+                    <a href="GdlComboButton.html#GdlComboButtonPrivate">GdlComboButtonPrivate</a>;
+                    <a href="GdlComboButton.html#GdlComboButton-struct">GdlComboButton</a>;
+GtkWidget*          <a href="GdlComboButton.html#gdl-combo-button-new">gdl_combo_button_new</a>                (void);
+void                <a href="GdlComboButton.html#gdl-combo-button-set-icon">gdl_combo_button_set_icon</a>           (<a href="GdlComboButton.html" title="GdlComboButton">GdlComboButton</a> *combo_button,
+                                                         GdkPixbuf *pixbuf);
+void                <a href="GdlComboButton.html#gdl-combo-button-set-label">gdl_combo_button_set_label</a>          (<a href="GdlComboButton.html" title="GdlComboButton">GdlComboButton</a> *combo_button,
+                                                         const gchar *label);
+void                <a href="GdlComboButton.html#gdl-combo-button-set-menu">gdl_combo_button_set_menu</a>           (<a href="GdlComboButton.html" title="GdlComboButton">GdlComboButton</a> *combo_button,
+                                                         GtkMenu *menu);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608664"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----GtkObject
+               +----GtkWidget
+                     +----GtkContainer
+                           +----GtkBox
+                                 +----GtkHBox
+                                       +----GdlComboButton
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608723"></a><h2>Implemented Interfaces</h2>
+<p>
+GdlComboButton implements
+ GtkBuildable and  AtkImplementorIface.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2606814"></a><h2>Signals</h2>
+<pre class="synopsis">
+
+  "<a href="GdlComboButton.html#GdlComboButton-activate-default">activate-default</a>"                               : Run First
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2606839"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2606854"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2606865"></a><h3>
+<a name="GdlComboButtonPrivate"></a>GdlComboButtonPrivate</h3>
+<a class="indexterm" name="id2606876"></a><pre class="programlisting">typedef struct _GdlComboButtonPrivate GdlComboButtonPrivate;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2606893"></a><h3>
+<a name="GdlComboButton-struct"></a>GdlComboButton</h3>
+<a class="indexterm" name="id2606904"></a><pre class="programlisting">typedef struct _GdlComboButton GdlComboButton;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2606921"></a><h3>
+<a name="gdl-combo-button-new"></a>gdl_combo_button_new ()</h3>
+<a class="indexterm" name="id2606932"></a><pre class="programlisting">GtkWidget*          gdl_combo_button_new                (void);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2602421"></a><h3>
+<a name="gdl-combo-button-set-icon"></a>gdl_combo_button_set_icon ()</h3>
+<a class="indexterm" name="id2602432"></a><pre class="programlisting">void                gdl_combo_button_set_icon           (<a href="GdlComboButton.html" title="GdlComboButton">GdlComboButton</a> *combo_button,
+                                                         GdkPixbuf *pixbuf);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>combo_button</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>pixbuf</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2602500"></a><h3>
+<a name="gdl-combo-button-set-label"></a>gdl_combo_button_set_label ()</h3>
+<a class="indexterm" name="id2602511"></a><pre class="programlisting">void                gdl_combo_button_set_label          (<a href="GdlComboButton.html" title="GdlComboButton">GdlComboButton</a> *combo_button,
+                                                         const gchar *label);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>combo_button</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>label</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2606981"></a><h3>
+<a name="gdl-combo-button-set-menu"></a>gdl_combo_button_set_menu ()</h3>
+<a class="indexterm" name="id2606992"></a><pre class="programlisting">void                gdl_combo_button_set_menu           (<a href="GdlComboButton.html" title="GdlComboButton">GdlComboButton</a> *combo_button,
+                                                         GtkMenu *menu);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>combo_button</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>menu</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2607061"></a><h2>Signal Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2607072"></a><h3>
+<a name="GdlComboButton-activate-default"></a>The "activate-default" signal</h3>
+<a class="indexterm" name="id2607079"></a><pre class="programlisting">void                user_function                      (<a href="GdlComboButton.html" title="GdlComboButton">GdlComboButton</a> *gdlcombobutton,
+                                                        gpointer        user_data)           : Run First</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>gdlcombobutton</code></em>&#160;:</span></td>
+<td>the object which received the signal.
+
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

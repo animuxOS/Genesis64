@@ -1,0 +1,846 @@
+#!/bin/bash
+# Compiz wrapper, born as loader in Ubuntu Packages
+#
+# Based on:
+#  Compiz Manager
+#  Copyright (c) 2007 Kristian Lyngstøl <kristian@bohemians.org>
+#
+# Addons by Treviño (3v1n0) <trevi55@gmail.com>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+#
+#
+# Much of this code is based on Beryl code, also licensed under the GPL.
+# This script will detect what options we need to pass to compiz to get it
+# started, and start a default plugin and possibly window decorator.
+
+## TODO
+# Compare scripts with old beryl loader
+# Fix bug loading this script on a gnome session [Fixed? Not for all! :/]
+# Fix xfwc4 and others (maybe killall before - reporting needed!)
+# in start_decorators (maybe) if $DECORATOR doesn't exist, use the first
+#  available between the $STD_COMPDECORATORS decorators...
+
+
+## Default Options - Setting these you can override wrapper defaults
+
+# Set to yes to enable verbose (-v) by default.
+VERBOSE="no"
+
+# Default Compiz arguments. Others are added to this, and the configuration can
+# override ALL arguments. You can pass compiz args also by command line
+ARGS="--ignore-desktop-hints" # --replace
+
+
+# Ditto for enviromental variables.
+ENV=""
+
+# Default plugins.
+# Set it to empty to make the script use the best plugins for your environment
+PLUGINS=""
+
+# All the configuration plugins available, the first found in that order will be
+# selected if not called by commandline or if not set using the CONFIGPLUGIN variable
+CONFIGPLUGINS="ccp gconf ini"
+
+# Default configuration plugin. Should probably be one of $CONFIGPLUGINS.
+# This parameter will override any user command line argument
+CONFIGPLUGIN=""
+
+# Default plugins to enable on first CompizConfig init
+# Unneeded if you have a good libccs global.xml file
+DEFAULTCCSPLUGINS="decoration move resize cube rotate minimize zoom fade wobbly dbus png switcher scale place"
+
+# Defines the decorator and arguments.
+# Set it to empty to make the script use the best decorator for your environment
+DECORATOR=""
+DECORATORARGS=""
+
+# Delay in seconds before we bring up the decorator(s)
+# This avoids starting the decorator before the WM is up,
+# even if it shouldn't be a problem.
+DELAY="1.5"
+
+# Set to "no" to pipe all decorator error messages to /dev/null
+DECOERRORS="no"
+
+# Internal, used to process options.
+TASK="normal"
+
+# No indirect by default
+INDIRECT=1
+
+# Set compiz default library directory
+COMPIZPLUGINDIR="/usr/lib/compiz/"
+
+# Set compiz executable
+COMPIZ="/usr/bin/compiz.real"
+
+# Set your default Fallback win manager (if the wrapper can't set one for you!)
+FALLBACK_WINMANAGER=""
+
+# Set to yes to enable logging (-l) by default.
+LOG="no"
+
+# Define the file in wich log all the events (if enabled)
+LOGFILE="/tmp/compiz.log"
+
+# Echos the arguments if verbose
+function verbose
+{
+	if [ "x$VERBOSE" = "xyes" ]; then
+		echo -ne "$*"
+	fi
+	if [ "x$LOG" = "xyes" ]; then
+		touch "$LOGFILE"
+		if ! (echo "$*" | grep -qw "present\|sleeping\|Screen"); then
+			echo -ne "[$(date +"%H:%M:%S")] " >> "$LOGFILE"
+		fi
+		echo -ne "$*" >> "$LOGFILE"
+	fi
+}
+
+# Integrate the lists of plugins and args without creating duplications
+function add_argument
+{
+	value="$1"
+	if ! (echo "$ARGS" | grep -qw -- "$value"); then
+		ARGS="$ARGS $value"
+		case $value in
+			--replace) REPLACEWM="yes" ;;
+			--use-copy) USECOPY="yes" ;;
+			--force-fglrx) FORCEFGLRX="yes" ;;
+		esac
+		return 0
+	fi
+	return 1
+}
+
+### System checks
+# These are used for checking what hardware and software we're dealing with,
+# so we can decide what options to pass to compiz, if it's even possible to
+# start compiz.
+
+# Check wether the composite extension is present
+function check_composite
+{
+	verbose "Checking for Composite extension: "
+	if xdpyinfo -queryExtensions | grep -q Composite ; then
+		verbose "present. \n";
+		return 0;
+	else
+		verbose "not present. \n";
+		return 1;
+	fi
+}
+
+function check_xdamage
+{
+	verbose "Checking for XDamage extension: "
+	if xdpyinfo -queryExtensions | grep -q DAMAGE ; then
+		verbose "present. \n";
+		return 0;
+	else
+		verbose "not present. \n";
+		return 1;
+	fi
+}
+
+# Check for existence if NV-GLX
+function check_nvidia
+{
+	verbose "Checking for nVidia: "
+	if xdpyinfo | grep -q NV-GLX ; then
+		verbose "present. \n"
+		return 0;
+	else
+		verbose "not present. \n"
+		return 1;
+	fi
+}
+
+# Check for existence of Intel Mesa DRI
+function check_intel
+{
+	verbose "Checking for Intel: "
+	if glxinfo 2> /dev/null | grep -q "Mesa DRI Intel(R)"; then
+		verbose "present. \n"
+		return 0;
+	else
+		verbose "not present. \n"
+		return 1;
+	fi
+}
+
+# Detects if Xgl is running
+function check_xgl
+{
+	verbose "Checking for Xgl: "
+	if xvinfo | grep -q Xgl ; then
+		verbose "present. \n"
+		return 0;
+	else
+		verbose "not present. \n"
+		return 1;
+	fi
+}
+
+# Check for presence of FBConfig
+function check_fbconfig
+{
+	verbose "Checking for FBConfig: "
+	if glxinfo 2> /dev/null | grep -q GLX_SGIX_fbconfig ; then
+		verbose "present. \n"
+		return 0;
+	else
+		verbose "not present. \n"
+		return 1;
+	fi
+}
+
+# Check for TFP
+function check_tfp
+{
+	verbose "Checking for texture_from_pixmap: "
+	if [ `glxinfo 2>/dev/null | grep GLX_EXT_texture_from_pixmap -c` -gt 2 ] ; then
+		verbose "present. \n"
+		return 0;
+	else
+		verbose "not present. \n"
+		if [ "$INDIRECT" -eq 0 ]; then
+			unset LIBGL_ALWAYS_INDIRECT
+			INDIRECT=1
+			return 1;
+		else
+			verbose "Trying again with indirect rendering:\n";
+			INDIRECT=0
+			export LIBGL_ALWAYS_INDIRECT=1
+			check_tfp;
+			return $?
+		fi
+	fi
+}
+
+# Check for non power of two texture support
+function check_npot_texture
+{
+	verbose "Checking for non power of two support: "
+	if glxinfo 2> /dev/null | egrep -q '(GL_ARB_texture_non_power_of_two|GL_NV_texture_rectangle|GL_EXT_texture_rectangle|GL_ARB_texture_rectangle)' ; then
+		verbose "present. \n";
+		return 0;
+	else
+		verbose "Not present. \n"
+		return 1;
+	fi
+
+}
+
+function check_xsync
+{
+	verbose "Checking for XSync extension: ";
+	if xdpyinfo -queryExtensions | grep -q SYNC ; then
+		verbose "present. \n";
+		return 0;
+	else
+		verbose "not present. \n" ;
+	fi
+}
+
+function check_bad_driver
+{
+	verbose "Checking for Unsupported sessions: ";
+	xorg_log=$(xset q|grep "Log file"|awk '{print $3}')
+	if [ -n "$xorg_log" ] && egrep -q "/usr/lib/xorg/modules/drivers/+(nv|vga|vesa)_drv\.so" "$xorg_log"; then
+		verbose "present. \n"
+		return 0
+	else
+		verbose "not present. \n" ;
+		return 1
+	fi
+}
+
+function check_texture_copy
+{
+	verbose "Checking for copy texture support: "
+	if glxinfo 2> /dev/null | grep -qw 'GL_EXT_bgra' && 
+	   glxinfo 2> /dev/null | grep -qw 'GL_EXT_texture_edge_clamp\|GL_SGIS_texture_edge_clamp'; then
+		verbose "present. \n";
+		return 0;
+	else
+		verbose "Not present. \n"
+		return 1;
+	fi
+
+}
+
+# Counts how many screens we have, and the base value for DISPLAY=
+# so we can easily start one decorator per screen
+function check_multiscreen
+{
+	SCREENS=$(xdpyinfo | grep "screen #" | wc -l)
+	verbose "Detected $SCREENS screen(s)\n";
+	if [ "$SCREENS" == "1" ]; then return 0; fi;
+	verbose "Multiscreen enviromental detection: \n"
+	DISPLAYBASE=$(xdpyinfo | grep name\ of\ display | sed 's/.* display: *//' | sed 's/\..*//')
+	verbose "\tDetected $DISPLAYBASE as the base of the DISPLAY variable\n";
+	SCREENNUMBERS=$(xdpyinfo | grep "screen #" | sed -r 's/screen #(.):/\1/')
+	for a in $SCREENNUMBERS ; do
+		MULTIDISPLAY[$a]=${DISPLAYBASE}.$a
+		verbose "\tMULTIDISPLAY[$a] set to: ${MULTIDISPLAY[$a]}\n";
+	done
+}
+
+function possible_check
+{
+	if [ "$1" = "1" ]; then
+		echo "Fatal: Failed test: $2";
+		return 1;
+	fi
+	return 0;
+}
+
+# Returns true if we think it's actually possible to start compiz
+function check_possible
+{
+	POSSIBLE="1"
+	if [ "$XGL" = "0" ]; then POSSIBLE=0; return 0; fi
+	if ( [ "x$USECOPY" = "xyes" ] || [ "x$FORCEFGLRX" = "xyes" ] ); then
+		if ! possible_check "$TEXTURECOPY" "copy texture not available"; then return 1; fi
+	else
+		if ! possible_check "$TFP" "texture_from_pixmap support"; then return 1; fi
+	fi
+	if ! possible_check "$NPOT" "non-power-of-two texture support"; then return 1; fi
+	if ! possible_check "$FBCONFIG" "FBConfig"; then return 1; fi
+	if ! possible_check "$COMPOSITE" "Composite extension"; then return 1; fi
+	if ! possible_check "$XDAMAGE" "XDamage extension"; then return 1; fi
+	if ! possible_check "$XSYNC" "XSync extension"; then return 1; fi
+	POSSIBLE="0";
+	return 0;
+}
+
+
+### Work functions
+
+# Builds a new-line seperated string of enviromental variables we might want
+function build_env
+{
+	if [ $NVIDIA -eq 0 ]; then
+		ENV="__GL_YIELD=NOTHING"
+	fi
+	if [ $INDIRECT -eq 0 ]; then
+		ENV="$ENV LIBGL_ALWAYS_INDIRECT=1"
+	fi
+	if [ $INTEL -eq 0 ]; then
+		ENV="$ENV INTEL_BATCH=1"
+	fi
+	if [ $XGL -eq 0 ]; then
+		if [ -f /usr/lib/nvidia/libGL.so.1.2.xlibmesa ]; then
+			ENV="$ENV LD_PRELOAD=/usr/lib/nvidia/libGL.so.1.2.xlibmesa"
+			verbose "Enabling Xgl with nVidia drivers...\n"
+		fi
+		if [ -f /usr/lib/fglrx/libGL.so.1.2.xlibmesa ]; then
+			ENV="$ENV LD_PRELOAD=/usr/lib/fglrx/libGL.so.1.2.xlibmesa"
+			verbose "Enabling Xgl with fglrx ATi drivers...\n"
+		fi
+	fi
+	case "$DE" in
+		KDE)
+			ENV="$ENV KDEWM=$0";;
+		GNOME)
+			ENV="$ENV WINDOW_MANAGER=$0";;
+	esac
+}
+
+# Builds the argument list
+function build_args
+{
+	if [ "$USECOPY" != "yes" ]; then
+		if [ $NVIDIA = 0 ] && [ $XGL != 0 ] && [ $INDIRECT != 0 ]; then
+			add_argument "--loose-binding"
+		elif [ $INDIRECT = 0 ]; then
+			add_argument "--indirect-rendering"
+		fi
+	fi
+}
+
+# Prints usage
+function usage
+{
+	if [ -n "$1" ]; then
+		echo -e "The $1 option needs an argument!\n"
+	fi
+	echo "Usage: $0 [-r <env|args>] [-v]  [-h] [-d] [-w] [-c <decorator> ]"
+	echo -e "       [ options ] [ plugins ]"
+	echo -e "-r\t outputs recommended values for either enviromental variables"
+	echo -e "  \t  or arguments."
+	echo -e "-v\t Verbose: Output the result of each individual test"
+	echo -e "-l\t Log: Enable logging of all the verbose events in $LOGFILE"
+	echo -e "-h\t Display this message"
+	echo -e "-d\t Dry run: Do everything, but don't start."
+	echo -e "-w\t Only start default window decorator(s). One per screen."
+	echo -e "-c\t Restart using the passed window decorator(s). One per screen."
+	echo -e "options\t Pass to compiz any option given by --help."
+	echo -e "plugins\t Enable any compiz plugin, generally you can set (overriding default)"
+	echo -e "       \t  one of the configuration plugins [${CONFIGPLUGINS// /, }]"
+	if [ -n "$1" ]; then
+		exit 1
+	else
+		exit 0
+	fi
+}
+
+# Parses options
+function parse_options
+{
+	while [ "$#" -gt "0" ]; do
+		case "$1" in
+			-h) usage ;;
+
+			-r)
+				TASK="RECOMMEND"
+				if [ "$2" == "env" ]; then
+					REC="env"
+				elif [ "$2" == "args" ]; then
+					REC="args"
+				elif [ "$2" == "both" ]; then
+					REC="both"
+				else
+					usage $1
+				fi
+				shift ;;
+
+			-v) VERBOSE="yes" ;;
+
+			-l)
+				LOG="yes"
+				if (touch "$LOGFILE") 2> /dev/null; then
+					STDOUTPUT="$LOGFILE"
+					ERROUTPUT="$LOGFILE"
+					verbose "Enabled logging in $LOGFILE\n"
+				else
+					echo "I can't log in $LOGFILE"
+				fi ;;
+
+			-d) DRY="yes" ;;
+
+			-w) TASK="WINDOWDECORATOR" ;;
+
+			-c)
+				if [ -n "$2" ]; then
+					DECORATOR="$2"
+					DECORATORARGS="--replace"
+					shift
+				else
+					usage $1
+				fi ;;
+
+			*) if [ $TASK != "WINDOWDECORATOR" ]; then
+				case "$1" in
+					--help|--version)
+						$COMPIZ $1
+						exit 0 ;;
+					--sm-client-id)
+						if [ -n "$2" ]; then
+							SESSION_FLAG="yes"
+							add_argument "$1"
+							if [ $? = 0 ]; then
+								add_argument "$2"
+								verbose "Adding compiz option $1 $2 to command line\n"
+							fi
+							shift
+						else
+							usage $1
+						fi ;;
+					--*)
+						add_argument "$1"
+						if [ $? = 0 ]; then
+							verbose "Adding compiz option $1 to command line\n"
+						fi ;;
+
+					*)
+						if ! (echo "$PLUGINS" | grep -qw -- "$1") &&
+						   ! (echo "$CONFIGPLUGINS" | grep -qw -- "$1") &&
+						   [ -f "$COMPIZPLUGINDIR/lib${1}.so" ]; then
+							PLUGINS="$PLUGINS $1"
+							verbose "Adding compiz plugin $1 to command line\n"
+						elif (echo "$CONFIGPLUGINS" | grep -qw -- "$1") &&
+						     [ -z $CONFIGPLUGIN ]; then
+							CONFIGPLUGIN="$1"
+							verbose "Adding compiz config plugin $1 to command line\n"
+						fi ;;
+				esac
+			fi ;;
+		esac
+		shift
+	done
+
+	if [ "x$SESSION_FLAG" != "xyes" ]; then
+		add_argument "--sm-disable"
+	fi
+
+}
+
+####
+# Execute checks, if necesarry.
+function check_everything
+{
+	if ! check_bad_driver; then
+
+		check_nvidia
+		NVIDIA=$?
+
+		check_xgl
+		XGL=$?
+
+		check_fbconfig
+		FBCONFIG=$?
+
+		check_tfp
+		TFP=$?
+
+		check_texture_copy
+		TEXTURECOPY=$?
+
+		check_intel
+		INTEL=$?
+
+		check_npot_texture
+		NPOT=$?
+
+		check_composite
+		COMPOSITE=$?
+
+		check_xdamage
+		XDAMAGE=$?
+
+		check_xsync
+		XSYNC=$?
+
+		check_multiscreen
+	else
+		echo "Fatal: Compiz can't be ran using VESA or VGA divers."
+		exit 1;
+	fi
+}
+
+###
+# Check if a directory exists; creates it if it doesn't, returns false if the
+# path isn't a directory.
+function require_dir
+{
+	if ! [ -a "$1" ]; then
+		verbose "Creating directory $1\n";
+		mkdir $1;
+	fi
+	if [ ! -d $1 ]; then
+		echo "Warning: $1 exists but isn't a directory.";
+		return 1;
+	fi
+	return 0;
+}
+
+###
+# Let's get this show started!
+function start_compiz
+{
+	if [ -n "$ENV" ]; then
+		verbose "Exporting: $ENV \n"
+		export $ENV
+	fi
+	if [ "x$REPLACEWM" != "xyes" ] && [ "x$DRY" != "xyes" ]; then
+		if [ -n "$COMPIZRUNNING" ]; then
+			echo "Compiz is already running, you should use the --replace option to override it"
+			exit 0
+		elif [ -n "$WMRUNNING" ]; then
+			echo "There is already the $RUNNING_WIN_MANAGER win manager running, you should use the --replace option to override it"
+			exit 0
+		fi
+	fi
+	if  ! (run_command $COMPIZ $ARGS $PLUGINS); then
+		if  [ -n "$FALLBACK_WINMANAGER" ]; then
+			if run_command $FALLBACK_WINMANAGER; then
+				exit 0;
+			else
+				echo "Fatal: Can't run $FALLBACK_WINMANAGER"
+				exit 1;
+			fi
+		else
+			echo "No fallback winmanager found/set"
+		fi
+	fi
+}
+
+####
+# Starts one decorator per screen
+function start_decorators
+{
+	if ( [ -z "$DECORATOR" ] && [ -z "$RUNNING_COMPDECORATOR" ] ); then
+	case "$DE" in
+		KDE)
+			DECORATOR="kde-window-decorator"
+			DECORATORARGS="--replace"
+		;;
+		GNOME)
+			DECORATOR="gtk-window-decorator"
+			DECORATORARGS="--replace"
+		;;
+		*)
+			DECORATOR="gtk-window-decorator" #emerald?
+			DECORATORARGS="--replace"
+		;;
+	esac
+	fi
+
+	# WORKAROUND -_-
+	for process in /proc/[0-9]*/cmdline; do
+		if grep -wq "gnome-wm" "$process" 2> /dev/null; then
+			pid=$(expr "$process" : "/proc/\([0-9]\+\)/cmdline")
+			if [ -n "$pid" ]; then
+				kill -9 "$pid" 2> /dev/null
+			fi
+		fi
+	done
+	
+	if [ -z "$(which $DECORATOR)" ]; then return 1; fi
+	if [ "$DECOERRORS" = "no" ]; then
+		OLDERROUTPUT="$ERROUTPUT"
+		ERROUTPUT="/dev/null"
+	fi
+	if [ "$SCREENS" == "1" ]; then
+		verbose "Starting delayed $DECORATOR in the background: "
+		verbose "sleeping $DELAY...\n"
+		if [ "x$DRY" = "xyes" ]; then return 0; fi
+		(sleep $DELAY &&
+		 run_command $DECORATOR $DECORATORARGS) &
+	else
+		verbose "Starting delayed $DECORATOR for all screens: \n"
+		OLDDISPLAY="$DISPLAY"
+		for a in $SCREENNUMBERS; do
+			verbose "\t Screen $a: "
+			verbose "sleeping $DELAY...\n"
+			if [ "x$DRY" != "xyes" ]; then
+				(sleep $DELAY && \
+				 export DISPLAY=${MULTIDISPLAY[$a]} && \
+				 run_command $DECORATOR $DECORATORARGS) &
+			fi
+		done
+		export DISPLAY="$OLDDISPLAY"
+	fi
+	if [ "$DECOERRORS" = "no" ]; then
+		ERROUTPUT="$OLDERROUTPUT"
+	fi
+}
+
+function check_desktopmanager
+{
+	if (pidof "startkde" &> /dev/null) ||
+	   (pidof "ksplash" &> /dev/null) ||
+	   (pidof "start_kdeinit" &> /dev/null) ||
+	   (kcheckrunning 2> /dev/null); then
+		DE="KDE"
+		DEFAULTDECORATOR="kwin"
+		DEFAULTDECORATORARGS="--replace"
+	elif (pidof "gnome-session" &> /dev/null) ||
+	     (pidof "gnome-settings-daemon" &> /dev/null) ||
+	     (pidof "gnome-panel" &> /dev/null); then
+		DE="GNOME"
+		DEFAULTDECORATOR="metacity"
+		DEFAULTDECORATORARGS="--replace"
+	elif pidof "xfce4-session" &> /dev/null; then
+		DE="Xfce"
+		DEFAULTDECORATOR="xfwm4"
+		DEFAULTDECORATORARGS=""
+	elif pidof "WindowMaker" &> /dev/null; then
+		DE="WindowMaker"
+		DEFAULTDECORATOR="wmaker"
+		DEFAULTDECORATORARGS=""
+	elif pidof "enlightenment_sys" &> /dev/null; then
+		DE="enlightenment"
+		DEFAULTDECORATOR="enlightenment"
+		DEFAULTDECORATORARGS=""
+	elif pidof "fbrun" &> /dev/null; then
+		DE="fluxbox"
+		DEFAULTDECORATOR="fluxbox"
+		DEFAULTDECORATORARGS=""
+	fi
+
+	if  [ -n "$DE" ]; then
+		verbose "Found $DE desktop environment running...\n"
+	fi
+}
+
+function check_winmanager
+{
+	STD_WMs="beryl compiz compiz.real metacity kwin xfwm4 wmaker fluxbox blackbox openbox icewm enlightenment"
+
+	for wm in $STD_WMs; do
+		if pidof $wm &> /dev/null; then
+			RUNNING_WIN_MANAGER="$wm"
+			break;
+		fi
+	done
+
+	if ! (xdpyinfo | grep -q "^focus:[ ]\+PointerRoot$"); then
+		WMRUNNING="true"
+	fi
+
+	STD_COMPDECORATORS="gtk-window-decorator kde-window-decorator emerald yawd"
+
+	for deco in $STD_COMPDECORATORS; do
+		if pidof $deco &> /dev/null; then
+			RUNNING_COMPDECORATOR="$deco"
+			break;
+		fi
+	done
+	
+	if [ -n "$RUNNING_WIN_MANAGER" ]; then
+		verbose "Found running windows manager: $RUNNING_WIN_MANAGER\n"
+	fi
+
+	if [ -n "$DE" ] && [ -z "$FALLBACK_WINMANAGER" ]; then
+		FALLBACK_WINMANAGER="$DEFAULTDECORATOR $DEFAULTDECORATORARG"
+	fi
+
+	if (echo $RUNNING_WIN_MANAGER | grep -qw "$(basename $COMPIZ)"); then #compiz\|compiz\.real
+		COMPIZRUNNING="true"
+		verbose "Compiz is already running in this environment\n"
+	else
+		unset COMPIZRUNNING
+		if [ -n "$RUNNING_WIN_MANAGER" ] && [ -z "$FALLBACK_WINMANAGER" ]; then
+			FALLBACK_WINMANAGER="$RUNNING_WIN_MANAGER" # --replace ?
+		fi
+	fi
+	if  [ -n "$FALLBACK_WINMANAGER" ]; then
+		verbose "Setting fallback windows manager to $FALLBACK_WINMANAGER\n"
+	fi
+}
+
+function set_config_plugin
+{
+	if ( [ -n "$CONFIGPLUGIN" ] && [ -f "$COMPIZPLUGINDIR/lib${CONFIGPLUGIN}.so" ] ); then
+		verbose "Loading the $CONFIGPLUGIN settings interface\n"
+	else
+		for plugin in $CONFIGPLUGINS; do
+			if [ -f "$COMPIZPLUGINDIR/lib${plugin}.so" ]; then
+				CONFIGPLUGIN="$plugin"
+				verbose "Loading the $plugin settings interface\n"
+				break;
+			fi
+		done
+	fi
+	if [ "$CONFIGPLUGIN" = "gconf" ]; then
+		PLUGINS=${PLUGINS//glib/}
+		CONFIGPLUGIN="glib gconf"
+	fi
+# 	if [ "$CONFIGPLUGIN" = "ccp" ]; then
+# 		# Set default compizconfig configuration; disabled by default
+# 		set_default_ccs
+# 	fi
+	PLUGINS="$CONFIGPLUGIN $PLUGINS"
+}
+
+function set_default_ccs
+{
+	# Not needed if is set a proper global.xml file in libcompizconfig
+	CCSDEFCONFIG="~/.compizconfig/Default.ini"
+	
+	if [ ! -f "$CCSDEFCONFIG" ]; then
+		mkdir -p $CCSDEFCONFIG
+		touch "$CCSDEFCONFIG"
+	fi
+
+	if ! (grep -q "as_____plugin_enabled" $CCSDEFCONFIG); then
+		for plugin in $DEFAULTCCSPLUGINS; do
+			echo "[$plugin]" > $CCSDEFCONFIG
+			echo "as_____plugin_enabled = true" > $CCSDEFCONFIG
+			echo "" > $CCSDEFCONFIG
+		done
+	fi
+}
+
+function run_command
+{
+	verbose Executing: "$*" "\n"
+	if [ "x$DRY" = "xyes" ]; then return 0; fi
+	if [ -n "$STDOUTPUT" ] && [ -n "$ERROUTPUT" ]; then
+		$* 1>> $STDOUTPUT 2>> $ERROUTPUT
+	elif [ -n "$STDOUTPUT" ] && [ -z "$ERROUTPUT" ]; then
+		$* 1>> $STDOUTPUT
+	elif [ -z "$STDOUTPUT" ] && [ -n "$ERROUTPUT" ]; then
+		$* 2>> $ERROUTPUT
+	else
+		$*
+	fi
+	return $?
+}
+
+####################
+# Execution begins here.
+# First get options, check for configuration
+# Check everything if necesarry, build the enviroment and arguments
+# and eventually select a task.
+
+parse_options "$@"
+
+if [ -z "$NOCHECKS" ]; then check_everything; fi
+
+###
+# This is the master-test, it has to be done last.
+if [ -z "$POSSIBLE" ]; then check_possible
+else verbose "Skipping \"possible\" test, using stored value.\n"; fi
+
+# No need to continue if we've determined it's not possible to start anyway
+if [ $POSSIBLE != "0" ]; then
+	echo "Checks indicate that it's impossible to start compiz on your system."
+	exit 1;
+else
+	verbose "Checks indicate compiz should work on your system\n"
+fi
+
+####
+# Builds the enviromental variables list and argument list based
+# on the result of the checks
+check_desktopmanager
+check_winmanager
+
+case "$TASK" in
+	RECOMMEND)
+		if [ "x$REC"  = "xenv" ]; then
+			build_env
+			echo -e $ENV;
+		elif [ "x$REC" = "xargs" ]; then
+			build_args
+			echo -e $ARGS
+		elif [ "x$REC" = "xboth" ]; then
+			build_args
+			build_env
+			set_config_plugin
+			echo -e $ARGS $PLUGINS
+			echo -e $ENV
+		fi
+		if [ $POSSIBLE != "0" ]; then return 1; fi
+		;;
+	WINDOWDECORATOR)
+		start_decorators
+		;;
+	*)
+		build_args
+		build_env
+		set_config_plugin
+		start_decorators
+		start_compiz
+	;;
+esac

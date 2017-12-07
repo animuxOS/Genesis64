@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+	<plugin useBcop="true" name="atlantis">
+		<short>Cube Atlantis</short>
+		<short xml:lang="el">Κύβος Ατλαντίς</short>
+		<short xml:lang="en_GB">Cube Atlantis</short>
+		<short xml:lang="eu">Atlantis kuboa</short>
+		<short xml:lang="fr">Cube Atlantis</short>
+		<short xml:lang="gl">Atlántida no Cubo</short>
+		<short xml:lang="it">Cubo Atlantide</short>
+		<short xml:lang="ja">キューブ・アトランティス</short>
+		<short xml:lang="nb">Atlantiskube</short>
+		<short xml:lang="nl">Kubus Atlantis</short>
+		<short xml:lang="pt">Cubo Atlantis</short>
+		<short xml:lang="sv">Kub Atlantis</short>
+		<long>Render some fish inside of the transparent cube</long>
+		<long xml:lang="el">Απεικόνιση μερικών ψαριών μέσα στον διάφανο κύβο</long>
+		<long xml:lang="en_GB">Render some fish inside of the transparent cube</long>
+		<long xml:lang="eu">Errendatu arrain batzuk kubo garden barnean.</long>
+		<long xml:lang="fr">Afficher des poissons à l'intérieur du cube transparent</long>
+		<long xml:lang="gl">Mostrar algúns peixes dentro do cubo transparente</long>
+		<long xml:lang="it">Rappresenta dei pesci all'interno del cubo trasparente</long>
+		<long xml:lang="ja">透明なキューブ内に魚を描画</long>
+		<long xml:lang="nb">Gjengir noen fisk på innsiden av den gjennomsiktige kuben</long>
+		<long xml:lang="nl">Teken een paar vissen binnenin de transparante kubus</long>
+		<long xml:lang="pl">Wyświetla niektóre ryby wewnątrz przezroczystej kostki.</long>
+		<long xml:lang="pt">Mostrar peixes dentro do cubo transparente</long>
+		<long xml:lang="sv">Renderera fiskar inuti den genomskinliga kuben</long>
+		<long xml:lang="zh_CN">在透明立方体中渲染一些鱼</long>
+		<category>Effects</category>
+		<deps>
+		<relation type="after">
+			<plugin>cube</plugin>
+		</relation>
+		<requirement>
+			<plugin>cube</plugin>
+		</requirement>
+		</deps>
+		<screen>
+			<group>
+				<short>Water / Ground</short>
+				<option type="bool" name="show_water">
+					<short>Render water</short>
+					<long>Render water inside the cube.</long>
+					<default>true</default>
+				</option>
+				<option type="bool" name="show_water_wire">
+					<short>Render water wireframe</short>
+					<long>Render water wireframe inside the cube.</long>
+					<default>false</default>
+				</option>
+				<option type="bool" name="show_ground">
+					<short>Render ground</short>
+					<long>Render ground inside the cube.</long>
+					<default>true</default>
+				</option>
+				<option type="float" name="water_height">
+					<short>Water surface height</short>
+					<long>Height of water surface in the cube.</long>
+					<default>0.85</default>
+					<min>0.2</min>
+					<max>1</max>
+					<precision>0.01</precision>
+				</option>
+				<option type="color" name="water_color">
+					<short>Water opacity</short>
+					<long>Opacity of water in the cube.</long>
+					<default>
+						<red>0x0800</red>
+						<green>0x0800</green>
+						<blue>0x3000</blue>
+						<alpha>0xf00</alpha>
+					</default>
+				</option>
+				<option type="int" name="grid_quality">
+					<short>Water/Ground grid smoothnes</short>
+					<long>Number of subdivisions that create a finer grid.</long>
+					<default>3</default>
+					<min>1</min>
+					<max>10</max>
+				</option>
+
+				<subgroup>
+					<short>Waves</short>
+					<option type="bool" name="render_waves">
+						<short>Render waves</short>
+						<long>Render water waves inside the cube.</long>
+						<default>true</default>
+					</option>
+					<option type="float" name="wave_amplitude">
+						<short>Wave amplitude</short>
+						<long>Amplitude of water waves.</long>
+						<default>0.05</default>
+						<min>0</min>
+						<max>0.5</max>
+						<precision>0.01</precision>
+					</option>
+					<option type="float" name="wave_frequency">
+						<short>Wave frequency</short>
+						<long>Frequency of water waves.</long>
+						<default>20</default>
+						<min>0</min>
+						<max>100</max>
+						<precision>0.1</precision>
+					</option>
+					<option type="float" name="wave_speed">
+						<short>Wave speed</short>
+						<long>Speed of water waves.</long>
+						<default>1</default>
+						<min>0</min>
+						<max>10</max>
+						<precision>0.01</precision>
+					</option>
+					<option type="float" name="small_wave_amplitude">
+						<short>Small wave amplitude</short>
+						<long>Amplitude of small water waves on the bigger ones.</long>
+						<default>0.02</default>
+						<min>0</min>
+						<max>0.5</max>
+						<precision>0.01</precision>
+					</option>
+					<option type="float" name="small_wave_frequency">
+						<short>Small wave frequency</short>
+						<long>Frequency of small water waves on the bigger ones.</long>
+						<default>40</default>
+						<min>0</min>
+						<max>100</max>
+						<precision>0.1</precision>
+					</option>
+					<option type="float" name="small_wave_speed">
+						<short>Wave Speed</short>
+						<long>Speed of small water waves.</long>
+						<default>1</default>
+						<min>0</min>
+						<max>10</max>
+						<precision>0.01</precision>
+					</option>
+				</subgroup>
+				
+			</group>
+			<option type="int" name="num_fish">
+				<short>Number of fish</short>
+				<short xml:lang="el">Αριθμός ψαριών</short>
+				<short xml:lang="en_GB">Number of fish</short>
+				<short xml:lang="eu">Arrain kopurua</short>
+				<short xml:lang="fr">Nombre de poissons</short>
+				<short xml:lang="gl">Número de peixes</short>
+				<short xml:lang="it">Numero di pesci</short>
+				<short xml:lang="ja">魚の数</short>
+				<short xml:lang="nb">Antall fisk</short>
+				<short xml:lang="nl">Aantal vissen</short>
+				<short xml:lang="pl">Ilość ryb</short>
+				<short xml:lang="pt">Número de peixes</short>
+				<short xml:lang="sv">Antal fiskar</short>
+				<short xml:lang="zh_CN">鱼的数量</short>
+				<long>Number of fish inside the cube</long>
+				<long xml:lang="el">Αριθμός ψαριών μέσα στον κύβο</long>
+				<long xml:lang="en_GB">Number of fish inside the cube</long>
+				<long xml:lang="eu">Arrain kopurua kuboan</long>
+				<long xml:lang="fr">Nombre de poissons dans le cube</long>
+				<long xml:lang="gl">Numero de peixes dentro do cubo</long>
+				<long xml:lang="it">Numero di pesci all'interno del cubo</long>
+				<long xml:lang="ja">キューブ内の魚の数</long>
+				<long xml:lang="nb">Antall fisk inne i kuben</long>
+				<long xml:lang="nl">Aantal vissen binnenin de kubus</long>
+				<long xml:lang="pl">Ilość ryb wewnątrz kostki.</long>
+				<long xml:lang="pt">Número de peixes dentro do cubo</long>
+				<long xml:lang="sv">Antal fiskar inuti kuben</long>
+				<long xml:lang="zh_CN">立方体内鱼的数量</long>
+				<default>20</default>
+				<min>5</min>
+				<max>100</max>
+			</option>
+			<option type="bool" name="colors">
+				<short>Colors</short>
+				<short xml:lang="ca">Colors</short>
+				<short xml:lang="de">Farben</short>
+				<short xml:lang="el">Χρώματα</short>
+				<short xml:lang="en_GB">Colours</short>
+				<short xml:lang="es">Colores</short>
+				<short xml:lang="eu">Koloreak</short>
+				<short xml:lang="fi">Värit</short>
+				<short xml:lang="fr">Couleurs</short>
+				<short xml:lang="gl">Cores</short>
+				<short xml:lang="gu">રંગો</short>
+				<short xml:lang="hi">रंग</short>
+				<short xml:lang="it">Colori</short>
+				<short xml:lang="ja">色</short>
+				<short xml:lang="nb">Farger</short>
+				<short xml:lang="nl">Kleuren</short>
+				<short xml:lang="pl">Kolory</short>
+				<short xml:lang="pt">Cores</short>
+				<short xml:lang="pt_BR">Cores</short>
+				<short xml:lang="sv">Färger</short>
+				<short xml:lang="tr">Renkler</short>
+				<short xml:lang="zh_CN">颜色</short>
+				<long>Enable colors</long>
+				<long xml:lang="el">Ενεργοποίηση χρωμάτων</long>
+				<long xml:lang="en_GB">Enable colours</long>
+				<long xml:lang="eu">Gaitu koloreak</long>
+				<long xml:lang="fr">Activer les couleurs</long>
+				<long xml:lang="gl">Habilitar cores</long>
+				<long xml:lang="it">Attiva colori</long>
+				<long xml:lang="ja">色付けを有効化</long>
+				<long xml:lang="nb">Bruk farger</long>
+				<long xml:lang="nl">Kleuren inschakelen</long>
+				<long xml:lang="pl">Włącz kolory</long>
+				<long xml:lang="pt">Activar cores</long>
+				<long xml:lang="sv">Aktivera färger</long>
+				<default>true</default>
+			</option>
+			<option type="int" name="fish_size">
+				<short>Fish size</short>
+				<short xml:lang="el">Μέγεθος ψαριών</short>
+				<short xml:lang="en_GB">Fish size</short>
+				<short xml:lang="eu">Arrain tamaina</short>
+				<short xml:lang="fr">Taille des poissons</short>
+				<short xml:lang="gl">Tamaño peixe</short>
+				<short xml:lang="it">Dimensione pesce</short>
+				<short xml:lang="ja">魚の大きさ</short>
+				<short xml:lang="nb">Fiskstørrelse</short>
+				<short xml:lang="nl">Vis grootte</short>
+				<short xml:lang="pl">Rozmiar ryb</short>
+				<short xml:lang="pt">Tamanho dos peixes</short>
+				<short xml:lang="sv">Fiskstorlek</short>
+				<short xml:lang="zh_CN">鱼的大小</short>
+				<long>Fish size</long>
+				<long xml:lang="el">Μέγεθος ψαριών</long>
+				<long xml:lang="en_GB">Fish size</long>
+				<long xml:lang="eu">Arrain tamaina</long>
+				<long xml:lang="fr">Taille des poissons</long>
+				<long xml:lang="gl">Tamaño peixe</long>
+				<long xml:lang="it">Dimensione pesce</long>
+				<long xml:lang="ja">魚の大きさ</long>
+				<long xml:lang="nb">Fiskstørrelse</long>
+				<long xml:lang="nl">Vis grootte</long>
+				<long xml:lang="pl">Rozmiar ryb</long>
+				<long xml:lang="pt">Tamanho dos peixes</long>
+				<long xml:lang="sv">Fiskstorlek</long>
+				<long xml:lang="zh_CN">鱼的大小</long>
+				<default>1500</default>
+				<min>100</min>
+				<max>10000</max>
+			</option>
+			<option type="int" name="shark_size">
+				<short>Shark size</short>
+				<short xml:lang="el">Μέγεθος καρχαριών</short>
+				<short xml:lang="en_GB">Shark size</short>
+				<short xml:lang="eu">Marrazoaren tamaina</short>
+				<short xml:lang="fr">Taille des requins</short>
+				<short xml:lang="gl">Tamaño quenlla</short>
+				<short xml:lang="it">Dimensione squalo</short>
+				<short xml:lang="ja">サメの大きさ</short>
+				<short xml:lang="nb">Haistørrelse</short>
+				<short xml:lang="nl">Haai grootte</short>
+				<short xml:lang="pl">Rozmiar rekinów</short>
+				<short xml:lang="pt">Tamanho do tubarão</short>
+				<short xml:lang="sv">Hajstorlek</short>
+				<short xml:lang="zh_CN">鲨鱼的体形</short>
+				<long>Shark size</long>
+				<long xml:lang="el">Μέγεθος καρχαριών</long>
+				<long xml:lang="en_GB">Shark size</long>
+				<long xml:lang="eu">Marrazoaren tamaina</long>
+				<long xml:lang="fr">Taille des requins</long>
+				<long xml:lang="gl">Tamaño quenlla</long>
+				<long xml:lang="it">Dimensione squalo</long>
+				<long xml:lang="ja">サメの大きさ</long>
+				<long xml:lang="nb">Haistørrelse</long>
+				<long xml:lang="nl">Haai grootte</long>
+				<long xml:lang="pl">Rozmiar rekinów</long>
+				<long xml:lang="pt">Tamanho do tubarão</long>
+				<long xml:lang="sv">Hajstorlek</long>
+				<long xml:lang="zh_CN">鲨鱼的体形</long>
+				<default>5000</default>
+				<min>100</min>
+				<max>10000</max>
+			</option>
+			<option type="int" name="dolphin_size">
+				<short>Dolphin size</short>
+				<short xml:lang="el">Μέγεθος δελφινιών</short>
+				<short xml:lang="en_GB">Dolphin size</short>
+				<short xml:lang="eu">Izurde tamaina</short>
+				<short xml:lang="fr">Taille des dauphins</short>
+				<short xml:lang="gl">Tamaño delfín</short>
+				<short xml:lang="it">Dimensione delfino</short>
+				<short xml:lang="ja">イルカの大きさ</short>
+				<short xml:lang="nb">Delfinstørrelse</short>
+				<short xml:lang="nl">Dolfĳn grootte</short>
+				<short xml:lang="pl">Rozmiar delfinów</short>
+				<short xml:lang="pt">Tamanho do golfinho</short>
+				<short xml:lang="sv">Delfinstorlek</short>
+				<long>Dolphin size.</long>
+				<long xml:lang="el">Μέγεθος δελφινιών.</long>
+				<long xml:lang="en_GB">Dolphin size.</long>
+				<long xml:lang="eu">Izurde tamaina.</long>
+				<long xml:lang="fr">Taille des dauphins.</long>
+				<long xml:lang="gl">Tamañaño Delfín.</long>
+				<long xml:lang="it">Dimensione delfino.</long>
+				<long xml:lang="ja">イルカの大きさ</long>
+				<long xml:lang="nb">Delfinstørrelse.</long>
+				<long xml:lang="nl">Dolfĳn grootte.</long>
+				<long xml:lang="pl">Ustawia rozmiar delfinów.</long>
+				<long xml:lang="pt">Tamanho do golfinho.</long>
+				<long xml:lang="sv">Delfinstorlek.</long>
+				<default>5000</default>
+				<min>100</min>
+				<max>10000</max>
+			</option>
+			<option type="int" name="whale_size">
+				<short>Whale size</short>
+				<short xml:lang="el">Μέγεθος φαλαινών</short>
+				<short xml:lang="en_GB">Whale size</short>
+				<short xml:lang="eu">Balearen tamaina</short>
+				<short xml:lang="fr">Taille des baleines</short>
+				<short xml:lang="gl">Tamaño Valea</short>
+				<short xml:lang="it">Dimensione balena</short>
+				<short xml:lang="ja">クジラの大きさ</short>
+				<short xml:lang="nb">Hvalstørrelse</short>
+				<short xml:lang="nl">Walvisgrootte</short>
+				<short xml:lang="pl">Rozmiar wielorybów</short>
+				<short xml:lang="pt">Tamanho da baleia</short>
+				<short xml:lang="sv">Valstorlek</short>
+				<short xml:lang="zh_CN">鲸鱼的体形</short>
+				<long>Whale size.</long>
+				<long xml:lang="el">Μέγεθος φαλαινών.</long>
+				<long xml:lang="en_GB">Whale size.</long>
+				<long xml:lang="eu">Balearen tamaina.</long>
+				<long xml:lang="fr">Taille des baleines.</long>
+				<long xml:lang="gl">Tamaño balea.</long>
+				<long xml:lang="it">Dimensione balena.</long>
+				<long xml:lang="ja">クジラの大きさ</long>
+				<long xml:lang="nb">Hvalstørrelse.</long>
+				<long xml:lang="nl">Walvis grootte.</long>
+				<long xml:lang="pl">Rozmiar wielorybów.</long>
+				<long xml:lang="pt">Tamanho da baleia.</long>
+				<long xml:lang="sv">Storlek på valar</long>
+				<long xml:lang="zh_CN">鲸鱼的体形。</long>
+				<default>8000</default>
+				<min>100</min>
+				<max>10000</max>
+			</option>
+		</screen>
+	</plugin>
+</compiz>

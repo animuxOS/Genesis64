@@ -1,0 +1,775 @@
+#!/bin/sh
+
+# Copyright (c) 2005-2007, Sven Berkvens-Matthijsse
+# 
+# All rights reserved.
+# 
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 
+# * Redistributions of source code must retain the above copyright
+#   notice, this list of conditions and the following disclaimer.
+# 
+# * Redistributions in binary form must reproduce the above copyright
+#   notice, this list of conditions and the following disclaimer in the
+#   documentation and/or other materials provided with the distribution.
+# 
+# * Neither the name of deKattenFabriek nor the names of its
+#   contributors may be used to endorse or promote products derived from
+#   this software without specific prior written permission.
+# 
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Botch on errors
+set -e
+
+###############################################################################
+# Load the library routines
+###############################################################################
+
+prefix="/usr"
+exec_prefix="${prefix}"
+datadir="${prefix}/share"
+bindir="${exec_prefix}/bin"
+
+. "${datadir}/videotrans/library.sh"
+
+###############################################################################
+# Function to display the program's usage
+###############################################################################
+
+usage()
+{
+	cat << EOF >&2
+
+Usage: ${0##*/} [-r resolution] [-d display] [-f method]
+		[-a aspect] [-A src_aspect] [-m mode] [-c codec] [-q quality]
+		[-Q bitrate] [-o output_dir] [-M] [-b] [-O options]
+		movie [movie ...]
+
+-r resolution	Specify the DVD resolution. Possibilities are:
+		PAL:  720x576, 704x576, 352x576, 352x288
+		NTSC: 720x480, 704x480, 352x480, 352x240
+		You may specify 'auto' (default) for automatic selection.
+
+-d display	Specify how the video is to be fitted into the available
+		screen size, either 'letterbox' (default), which loses no
+		information, or 'panscan', which fills the entire screen but
+		possibly chops off edges of the video image.
+
+-f method	Specify how to change the movie to adjust its framerate if
+		necessary. You may specify either 'auto', 'video' or 'audio'.
+		'video' will duplicate or drop frames to adjust the framerate
+		(which will make the movie jerky in some situations), 'audio'
+		will adjust the pitch of the audio track so that it runs
+		synchronized with the movie.  'auto' will make the decision
+		for you.
+
+-a aspect	Either 16:9 or 4:3 (how to encode the video). Or you may
+		specify 'auto' (default) for automatic selection.
+
+-A src_aspect	Specify the aspect ratio of the source if it is not encoded
+		correctly in the source. The format is X:Y, for example 4:3 or
+		41:18. Or you may specify 'auto' (default) for automatic
+		detection from the source.
+
+-m mode		Either pal, ntsc or auto (default).
+
+-c codec	The audio codec, either 'mp2', 'ac3' or 'auto' (default).
+		Currently, the 'auto' setting always chooses 'ac3'.
+
+-q quality	Select either 'low', 'normal', 'high' or a bitrate in kilobits
+		per seconds. This is the MAXIMUM bitrate that the video encoder
+		will use.
+
+-Q bitrate	Controls the bitrate for the audio output. Normally, this
+		is automatically determined from the parameters of the output
+		audio format and the number of channel, but you can override
+		the automatically selected bitrate using this option. Specify
+		the number of kilobits per second that the audio should use.
+		You may combine this option with the -c option to force a
+		certain audio encoding. The default is 'auto', which means
+		autodetection.
+
+-o output_dir	Write the .m2v and .mp2/.ac3 files into an alternative
+		directory instead of the same directory in which the source(s)
+		reside.
+
+-M		Multiplex the output audio and video together (if you do not
+		specify this, an .m2v and .m2a file will be generated for each
+		input movie)
+
+-b		This tells mplayer that any AVI headers that are encountered
+		are broken and that they should be ignored when determining
+		the audio-video sync delay. This activates mplayer's -nobps
+		option.
+
+-O options	You may specify specific options to pass to mplayer. Be sure
+		to quote the options appropriately: the options should be
+		supplied surround by quotes, and the options should be entered
+		as they would have been on a normal mplayer command line.
+
+EOF
+	if [ "$1" != "" ]
+	then
+		echo "ERROR: $1"
+		echo "" >&2
+	fi
+	exit 1
+}
+
+###############################################################################
+# Temporary file name
+###############################################################################
+
+TEMP="/tmp/.movie-to-dvd.$$"
+trap "rm -fr ${TEMP}* 2>/dev/null || :" EXIT
+
+###############################################################################
+# Process the options
+###############################################################################
+
+source_aspect="auto"
+wanted_aspect="auto"
+resolution="auto"
+resolution_x="0"
+resolution_y="0"
+mode="auto"
+audio_mode="auto"
+audio_bitrate_override="auto"
+force_audio_codec="auto"
+mplex="no"
+quality="normal"
+display="letterbox"
+output_dir=""
+broken_avi="no"
+mplayer_options=""
+while getopts "d:r:f:a:A:m:c:q:Q:no:MbO:" option
+do
+	case "${option}"
+	in
+		r)
+			if [ "${OPTARG}" = "720x576" -o "${OPTARG}" = "704x576" \
+				-o "${OPTARG}" = "352x576" -o "${OPTARG}" = "352x288" \
+				-o "${OPTARG}" = "720x480" -o "${OPTARG}" = "704x480" \
+				-o "${OPTARG}" = "352x480" -o "${OPTARG}" = "352x240" ]
+			then
+				resolution="${OPTARG}"
+				resolution_x="${resolution%x*}"
+				resolution_y="${resolution#*x}"
+			else
+				usage "Unknown resolution <${OPTARG}> specified for -r"
+			fi
+			;;
+		d)
+			if [ "${OPTARG}" = "panscan" -o "${OPTARG}" = "letterbox" ]
+			then
+				display="${OPTARG}"
+			else
+				usage "Unknown display type <${OPTARG}> specified for -d"
+			fi
+			;;
+		f)
+			if [ "${OPTARG}" = "auto" -o "${OPTARG}" = "video" -o "${OPTARG}" = "audio" ]
+			then
+				audio_mode="${OPTARG}"
+			else
+				usage "Unknown method <${OPTARG}> specified for -f"
+			fi
+			;;
+		a)
+			if [ "${OPTARG}" = "4:3" -o "${OPTARG}" = "16:9" \
+				-o "${OPTARG}" = "auto" ]
+			then
+				wanted_aspect="${OPTARG}"
+			else
+				usage "Unknown aspect mode <${OPTARG}> specified for -a"
+			fi
+			;;
+		A)
+			case "${OPTARG}"
+			in
+				auto)
+					source_aspect="auto"
+					;;
+				*[!:0-9]* | *:*:* | :* | *: | :)
+					usage "Illegal aspect <${OPTARG}> specified for -A"
+					;;
+				*)
+					source_aspect="${OPTARG}"
+					source_aspect_x="${source_aspect%:*}"
+					source_aspect_y="${source_aspect#*:}"
+					;;
+			esac
+			;;
+		m)
+			if [ "${OPTARG}" = "pal" -o "${OPTARG}" = "ntsc" \
+				-o "${OPTARG}" = "auto" ]
+			then
+				mode="${OPTARG}"
+			else
+				usage "Unknown video standard <${OPTARG}> specified for -m"
+			fi
+			;;
+		c)
+			if [ "${OPTARG}" = "mp2" -o "${OPTARG}" = "ac3" -o "${OPTARG}" = "auto" ]
+			then
+				force_audio_codec="${OPTARG}"
+			else
+				usage "Unknown audio codec <${OPTARG}> specified for -c"
+			fi
+			;;
+		q)
+			case "${OPTARG}"
+			in
+				low | normal | high)
+					quality="${OPTARG}"
+					;;
+				*[!0-9]*)
+					usage "Unknown quality <${OPTARG}> specified for -q"
+					;;
+				*)
+					quality="${OPTARG}"
+					;;
+			esac
+			;;
+		Q)
+			case "${OPTARG}"
+			in
+				auto)
+					audio_bitrate_override="${OPTARG}"
+					;;
+				*[!0-9]*)
+					usage "Unknown bitrate <${OPTARG}> specified for -Q"
+					;;
+				*)
+					audio_bitrate_override="${OPTARG}"
+					;;
+			esac
+			;;
+		o)
+			output_dir="${OPTARG}"
+			;;
+		M)
+			mplex="yes"
+			;;
+		b)
+			broken_avi="yes"
+			;;
+		O)
+			mplayer_options="${mplayer_options} ${OPTARG}"
+			;;
+		*)
+			usage
+			;;
+	esac
+done
+
+if [ "${broken_avi}" = "yes" ]
+then
+	mplayer_options="-nobps ${mplayer_options}"
+fi
+
+###############################################################################
+# Check the video settings
+###############################################################################
+
+case "${resolution}"
+in
+	*x576 | *x288)
+		if [ "${mode}" = "ntsc" ]
+		then
+			usage "Resolution <${resolution}> is incompatible with video mode <${mode}>"
+		fi
+		mode="pal"
+		;;
+
+	*x480 | *x240)
+		if [ "${mode}" = "pal" ]
+		then
+			usage "Resolution <${resolution}> is incompatible with video mode <${mode}>"
+		fi
+		mode="ntsc"
+		;;
+
+	auto)
+		if [ "${mode}" = "auto" ]
+		then
+			usage "If you do not specify a resolution, you must specify a video mode with -m"
+		fi
+		;;
+esac
+
+###############################################################################
+# Check the output directory if one was specified
+###############################################################################
+
+if [ "${output_dir}" != "" ]
+then
+	if [ -e "${output_dir}" ]
+	then
+		if [ ! -d "${output_dir}/." ]
+		then
+			message "ERROR: <${output_dir}> is not a directory!"
+			exit 1
+		fi
+	else
+		if ! mkdir -p -- "${output_dir}" 2> "${TEMP}.err"
+		then
+			message "ERROR: Could not create directory <${output_dir}>:"
+			cat "${TEMP}.err" >&2
+			exit 1
+		fi
+	fi
+fi
+
+###############################################################################
+# Get rid of all the parameters
+###############################################################################
+
+shift "`expr ${OPTIND} - 1`"
+
+###############################################################################
+# At least one movie file?
+###############################################################################
+
+[ "$#" -gt 0 ] || usage
+
+###############################################################################
+# Check the input filenames
+###############################################################################
+
+if ! check_filenames "$@"
+then
+	exit 1
+fi
+
+###############################################################################
+# Process each input file
+###############################################################################
+
+for input
+do
+	# Calculate the base of the output files
+
+	if [ "${output_dir}" = "" ]
+	then
+		output="${input%.*}"
+	else
+		output="${output_dir}/${input##*/}"
+		output="${output%.*}"
+	fi
+
+	# Get the properties of the source file
+
+	if ! mplayer_identify "${input}"
+	then
+		continue
+	fi
+
+	# Did we get the properties from the file?
+
+	if [ "${x}" = "" -o "${y}" = "" ]
+	then
+		message "ERROR: Cannot find video size for <${input}>"
+		continue
+	fi
+
+	# Calculate the source aspect ratio parameters
+
+	if [ "${source_aspect}" = "auto" ]
+	then
+		case "${s_aspect}"
+		in
+			0 | 0.0 | 0.00 | 0.000 | 0.0000)
+				s_aspect=""
+				;;
+			*)
+				s_aspect="-sax ${s_aspect} -say 1.0"
+				;;
+		esac
+	else
+		s_aspect="-sax ${source_aspect_x} -say ${source_aspect_y}"
+	fi
+
+	# Calculate the destination aspect ratio parameters
+
+	if [ "${wanted_aspect}" = "4:3" ]
+	then
+		d_aspect="-dax 4 -day 3"
+	elif [ "${wanted_aspect}" = "16:9" ]
+	then
+		d_aspect="-dax 16 -day 9"
+	else # if [ "${wanted_aspect}" = "auto" ]
+		d_aspect="-choosedvd ${mode}"
+	fi
+
+	if [ "${resolution}" = "auto" ]
+	then
+		if [ "${d_aspect}" = "-choosedvd ${mode}" ]
+		then
+			d_size=""
+		else
+			d_size="-choosedvd ${mode}"
+		fi
+	else
+		d_size="-dx ${resolution_x} -dy ${resolution_y}"
+	fi
+
+	eval "`${bindir}/movie-zoomcalc -sx ${x} -sy ${y} ${s_aspect} -${display} ${d_size} ${d_aspect}`"
+
+	# We now have $DX, $DY, $CX, $CY, $ZX and $ZY, $DAX and $DAY
+
+	if [ "${DAX}" = "16" -a "${DAY}" = "9" ]
+	then
+		a_option="3"
+	elif [ "${DAX}" = "4" -a "${DAY}" = "3" ]
+	then
+		a_option="2"
+	elif [ "${wanted_aspect}" = "16:9" ]
+	then
+		a_option="3"
+	elif [ "${wanted_aspect}" = "4:3" ]
+	then
+		a_option="2"
+	else
+		message "ERROR: Cannot figure out MPEG code for destination aspect mode (which is <${DAX}:${DAY}>, should be either <4:3> or <16:9>)"
+		exit 1
+	fi
+
+	# Calculate factors for fps
+
+	case "${fps}"
+	in
+		*.0)
+			fps_num="${fps%.0}"
+			fps_den="1"
+			;;
+		*.00)
+			fps_num="${fps%.00}"
+			fps_den="1"
+			;;
+		*.000)
+			fps_num="${fps%.000}"
+			fps_den="1"
+			;;
+		23.9*)
+			fps_num="24000"
+			fps_den="1001"
+			;;
+		25.0*)
+			fps_num="25"
+			fps_den="1"
+			;;
+		29.9*)
+			fps_num="30000"
+			fps_den="1001"
+			;;
+		30.025)
+			fps_num="30025"
+			fps_den="1000"
+			;;
+		59.9*)
+			fps_num="60000"
+			fps_den="1001"
+			;;
+		*.?)
+			fps_num="${fps%.*}${fps#*.}"
+			fps_den="10"
+			;;
+		*.??)
+			fps_num="${fps%.*}${fps#*.}"
+			fps_den="100"
+			;;
+		*.???)
+			fps_num="${fps%.*}${fps#*.}"
+			fps_den="1000"
+			;;
+		*)
+			fps_num="${fps}"
+			fps_den="1"
+			;;
+	esac
+
+	# Get video parameters
+
+	if [ "${mode}" = "pal" ]
+	then
+		rate="25:1"
+		rate1000="25000"
+		rate_F="3"
+		n_option="p"
+	else
+		rate="30000:1001"
+		rate1000="29970"
+		rate_F="4"
+		n_option="n"
+	fi
+
+	# Determine how to change the movie to correct the fps
+
+	if [ "${audio_mode}" = "auto" ]
+	then
+		if [ "${fps_num}" = "24000" -a "${fps_den}" = "1001" -a "${mode}" = "pal" ]
+		then
+			# The movie is NTSC pulldown 23.976 frames per second and we're going
+			# to 25 frames per second. Inserting duplicate frames every ~24 frames
+			# looks ugly, so we'll adjust the pitch of the sound (it's only about
+			# 4.25% pitch increase, nobody will notice).
+
+			yuvfps_cmd="cat"
+			message "Source video is 23.976 fps, destination is 25 fps. The video will be played ~4.25% faster (not noticable) to avoid frame duplication."
+
+			audio_params 1.0427083333333333333 "${force_audio_codec}"
+
+		elif [ "${fps_num}" = "24000" -a "${fps_den}" = "1001" -a "${mode}" = "ntsc" ]
+		then
+			# The movie is NTSC pulldown 23.976 frames per second and we're going
+			# to 30 frames per second. In this case, the frame rate change will not
+			# affect the length of the video because of an extra flag to mpeg2enc so
+			# do not do anything to affect the audio.
+
+			yuvfps_cmd="cat"
+			message "Source video is 23.976 fps, destination is 30 fps. The video will be converted using NTSC pullup, so the audio will not have to be stretched or shortened."
+
+			audio_params "" "${force_audio_codec}"
+		else
+			# The frame rate will have to be adjusted. Do nothing to the audio.
+
+			if [ "${rate}" = "${fps_num}:${fps_den}" ]
+			then
+				message "Frame rate is already at ${rate}, so the video can be used as-is. It is not necessary to stretch or shorten the audio."
+				yuvfps_cmd="cat"
+			else
+				message "Converting the video from ${fps_num}:${fps_den} to ${rate}. It is not necessary to stretch or shorten the audio."
+				yuvfps_cmd="yuvfps -r ${rate} -v 0"
+			fi
+
+			audio_params "" "${force_audio_codec}"
+		fi
+	elif [ "${audio_mode}" = "audio" ]
+	then
+		# The movie is X frames per second and we're going to Y frames per second.
+		# We'll adjust the pitch of the sound.
+
+		yuvfps_cmd="cat"
+		fps_factor="`echo scale=3\; \( ${fps_den} \* ${rate1000} \) / \( ${fps_num} \* 1000 \) \* 100 | bc`"
+		message "Source video is ${fps} fps, destination is ${rate1000%???}.${rate1000#??} fps. The audio will be played at ${fps_factor}% to avoid frame duplication or removal."
+
+		fps_factor="`echo scale=15\; \( ${fps_den} \* ${rate1000} \) / \( ${fps_num} \* 1000 \) | bc`"
+
+		audio_params "${fps_factor}" "${force_audio_codec}"
+	elif [ "${audio_mode}" = "video" ]
+	then
+		# The frame rate will have to be adjusted. Do nothing to the audio.
+
+		message "Source video is ${fps} fps, destination is ${rate1000%???}.${rate1000#??} fps. Converting the frame rate using yuvfps."
+		yuvfps_cmd="yuvfps -r ${rate} -v 0"
+		audio_params "" "${force_audio_codec}"
+	else
+		message "INTERNAL ERROR: audio_mode = ${audio_mode}"
+		exit 1
+	fi
+
+	# Tell the user what we'll do
+
+	if [ "${mplex}" = "yes" ]
+	then
+		message "Converting <${input}> to <${output}.vob>"
+	else # if [ "${mplex}" = "no" ]
+		message "Converting <${input}> to <${output}.m2v> and <${output}.${audio_ext}>"
+	fi
+	echo "--> Source size:        ${x}x${y}
+    Source crop area:   ${CX}x${CY}
+    Destination size:   ${ZX}x${ZY}
+    Final screen size:  ${DX}x${DY}
+    Destination aspect: ${DAX}:${DAY}
+" >&2
+
+	# Determine video filter options
+
+	vf=""
+
+	if [ "${CX}" != "${x}" -o "${CY}" != "${y}" ]
+	then
+		vf="${vf}crop=${CX}:${CY},"
+	fi
+
+	vf="${vf}scale=${ZX}:${ZY},"
+
+	if [ "${ZX}" != "${DX}" -o "${ZY}" != "${DY}" ]
+	then
+		vf="${vf}expand=${DX}:${DY},"
+	fi
+
+	# Set up the named pipes
+
+	rm -f -- "${TEMP}.yuv"
+	mkfifo -m 660 -- "${TEMP}.yuv"
+	rm -f -- "${TEMP}.wav"
+	mkfifo -m 660 -- "${TEMP}.wav"
+
+	# Start mplayer to decode the audio and video
+
+	eval ${bindir}/movie-progress mplayer -slave -identify -noframedrop \
+		-nojoystick -nolirc -vo yuv4mpeg:file="${TEMP}.yuv" ${audio_options} \
+		-osdlevel 0 -zoom -vf \"\${vf}\"harddup "${mplayer_options}" -- \
+		"${input_escape}" \< /dev/null \&
+	mplayer_pid="$!"
+
+	# Start mpeg2enc to encode the video
+
+	if [ "${quality}" = "normal" ]
+	then
+		b_option="6000"
+	elif [ "${quality}" = "low" ]
+	then
+		b_option="3500"
+	elif [ "${quality}" = "high" ]
+	then
+		b_option="8000"
+	else
+		b_option="${quality}"
+	fi
+
+	if [ "${b_option}" -le 3500 ]
+	then
+		q_option="10"
+	elif [ "${b_option}" -le 4000 ]
+	then
+		q_option="9"
+	elif [ "${b_option}" -le 5000 ]
+	then
+		q_option="8"
+	elif [ "${b_option}" -le 6000 ]
+	then
+		q_option="7"
+	elif [ "${b_option}" -le 6500 ]
+	then
+		q_option="6"
+	elif [ "${b_option}" -le 7000 ]
+	then
+		q_option="5"
+	else
+		q_option="4"
+	fi
+
+	g_option="6"
+	G_option="15"
+	if [ "${mode}" = "ntsc" ]
+	then
+		g_option="9"
+		G_option="18"
+	fi
+
+	p_option=""
+	if [ "${fps_num}" = "24000" -a "${fps_den}" = "1001" -a \
+		"${mode}" = "ntsc" -a "${audio_mode}" = "auto" ]
+	then
+		p_option="-p"
+	fi
+
+	{
+		# Don't start "cat" if we don't need to
+
+		if [ "${yuvfps_cmd}" = "cat" ]
+		then
+			< "${TEMP}.yuv" \
+			mpeg2enc -v 0 -f 8 -K kvcd -b "${b_option}" -V 1000 -s -n "${n_option}" \
+				-a "${a_option}" -q "${q_option}" -g "${g_option}" -G "${G_option}" \
+				-P -4 2 -2 1 -F "${rate_F}" -H -D 10 ${p_option} -o "${output}.m2v"
+		else
+			< "${TEMP}.yuv" $yuvfps_cmd |
+			mpeg2enc -v 0 -f 8 -K kvcd -b "${b_option}" -V 1000 -s -n "${n_option}" \
+				-a "${a_option}" -q "${q_option}" -g "${g_option}" -G "${G_option}" \
+				-P -4 2 -2 1 -F "${rate_F}" -H -D 10 ${p_option} -o "${output}.m2v"
+		fi
+	} > "${TEMP}.video" 2>&1 &
+	video_enc_pid="$!"
+
+	# Start mp2enc or ffmpeg to encode the audio
+
+	{
+		< "${TEMP}.wav" $audio_filter_cmd | eval ${audio_encode}
+	} > "${TEMP}.audio" 2>&1 &
+	audio_enc_pid="$!"
+
+	# Check whether each program exited as expected
+
+	if ! wait "${mplayer_pid}"
+	then
+		echo "" >&2
+		echo "" >&2
+		echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" >&2
+		echo "!!! Mplayer did not complete its task. It could be, however, !!!" >&2
+		echo "!!! that this is not mplayer's fault but one of the other    !!!" >&2
+		echo "!!! programs' used while converting the movie. See the other !!!" >&2
+		echo "!!! programs' output below. Mplayer's output is above.       !!!" >&2
+		echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" >&2
+		echo "" >&2
+		echo "" >&2
+		echo "Output of the video encoding:" >&2
+		cat "${TEMP}.video" >&2
+		echo "" >&2
+		echo "" >&2
+		echo "Output of the audio encoding:" >&2
+		echo "Command: < \"${TEMP}.wav\" $audio_filter_cmd | eval ${audio_encode}" >&2
+		cat "${TEMP}.audio" >&2
+		echo "" >&2
+		echo "" >&2
+		exit 1
+	fi
+
+	if ! wait "${video_enc_pid}"
+	then
+		echo "Video encoding failed! Error output follows:" >&2
+		cat "${TEMP}.video" >&2
+		exit 1
+	fi
+
+	if ! wait "${audio_enc_pid}"
+	then
+		echo "Audio encoding failed! Error output follows:" >&2
+		cat "${TEMP}.audio" >&2
+		exit 1
+	fi
+
+	# Multiplex the audio and video together if that was requested
+
+	if [ "${mplex}" = "yes" ]
+	then
+		message "Multiplexing audio and video using mplex"
+		if ! mplex -f 8 -v 0 -V -h -o "${output}.vob" \
+			"${output}.m2v" "${output}.${audio_ext}" > "${TEMP}" 2>&1
+		then
+			message "ERROR: mplex failed. Error output follows:"
+			cat "${TEMP}" >&2
+			exit 1
+		fi
+		rm -- "${output}.${audio_ext}" "${output}.m2v"
+	fi
+
+	# Delete temporary files
+
+	rm -f -- "${TEMP}.wav" "${TEMP}.yuv"
+
+	# Report that we're done
+
+	echo "" >&2
+	message "Done encoding <${input}>"
+done
+
+exit 0
+
+# vim:ts=2:sw=2

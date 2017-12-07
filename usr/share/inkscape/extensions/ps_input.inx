@@ -1,0 +1,15 @@
+<inkscape-extension>
+    <_name>Postscript Input</_name>
+    <id>org.inkscape.input.ps</id>
+    <dependency type="executable">pstoedit</dependency>
+    <input>
+        <extension>.ps</extension>
+        <mimetype>image/x-postscript</mimetype>
+        <_filetypename>Postscript (*.ps)</_filetypename>
+        <_filetypetooltip>Postscript</_filetypetooltip>
+        <output_extension>org.inkscape.output.ps</output_extension>
+    </input>
+    <script>
+        <command reldir="path">pstoedit -f plot-svg</command>
+    </script>
+</inkscape-extension>

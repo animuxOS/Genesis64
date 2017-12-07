@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+	<plugin useBcop="true" name="scalefilter">
+		<short>Scale Window Title Filter</short>
+		<short xml:lang="de">Scale-Fenstertitelfilter</short>
+		<short xml:lang="el">Φίλτρο Κλιμάκωσης Τίτλου Παραθύρου</short>
+		<short xml:lang="en_GB">Scale Window Title Filter</short>
+		<short xml:lang="fr">Filtrage du Titre des Fenêtres pour Échelle</short>
+		<short xml:lang="gl">Filtro de Título das fiestra en Scale</short>
+		<short xml:lang="gu">વિન્ડો શીર્ષક ગાળક ખેંચો</short>
+		<short xml:lang="hi">मापक विंडो शीर्षक फिल्टर</short>
+		<short xml:lang="it">Filtro sul titolo della finestra in «Scala finestre»</short>
+		<short xml:lang="ja">スケールウィンドウのタイトルフィルタ</short>
+		<short xml:lang="nb">Tittelfilter for vindusskalering</short>
+		<short xml:lang="nl">Schaal venster titel filter</short>
+		<short xml:lang="pl">Filtr tytułów okna podczas Skalowania</short>
+		<short xml:lang="pt">Filtro de Título das Janela em Scale</short>
+		<short xml:lang="pt_BR">Filtro de Título das Janela em modo de Dimensionamento</short>
+		<short xml:lang="sv">Titelfilter för skalningsfönster</short>
+		<long>Window title filter facility for the scale plugin</long>
+		<long xml:lang="de">Gibt dem Plugin 'Skalieren' die Möglichkeit, nach Fenstertitelnzu filtern.</long>
+		<long xml:lang="el">Διευκόλυνση φιλτραρίσματος τίτλου παραθύρου για το πρόσθετο κλιμάκωσης</long>
+		<long xml:lang="en_GB">Window title filter facility for the scale plugin</long>
+		<long xml:lang="fr">Fonction de filtrage du titre des fenêtres pour l'extension Échelle</long>
+		<long xml:lang="gl">Filtro para o plugin scale que permite mostrar só as fiestras que conteñan os caracteres dixitados</long>
+		<long xml:lang="gu">ખેંચો પ્લગઈન માટે વિન્ડો શીર્ષક ગાળણ સેવા</long>
+		<long xml:lang="hi">मापक प्लगिन के लिए विंडो शीर्षक फिल्टर सुविधा</long>
+		<long xml:lang="it">Sistema di filtraggio sul titolo delle finestre per il plug-in «Scala finestre»</long>
+		<long xml:lang="ja">スケールプラグイン用のウィンドウタイトルのフィルタ機能</long>
+		<long xml:lang="nb">Filter som filtrerer vindustittel for Skaler-tillegget</long>
+		<long xml:lang="nl">Venster titel filter faciliteit voor de schaal plugin</long>
+		<long xml:lang="pt">Filtro para o plugin scale que permite mostrar apenas as janelas que contenham os caracteres digitados</long>
+		<long xml:lang="pt_BR">Filtro para o plugin de Dimensionamento que permite mostrar apenas as janelas que contenham os caracteres digitados</long>
+		<long xml:lang="sv">Filtersfacilitet för fönstertitel i skalningsmodulen</long>
+		<category>Utility</category>
+		<deps>
+			<relation type="after">
+				<plugin>scale</plugin>
+				<plugin>text</plugin>
+			</relation>
+			<requirement>
+				<plugin>scale</plugin>
+				<plugin>regex</plugin>
+			</requirement>
+		</deps>
+		<screen>
+			<group>
+				<short>Behaviour</short>
+				<short xml:lang="ca">Comportament</short>
+				<short xml:lang="de">Verhalten</short>
+				<short xml:lang="el">Συμπεριφορά</short>
+				<short xml:lang="en_GB">Behaviour</short>
+				<short xml:lang="es">Comportamiento</short>
+				<short xml:lang="eu">Jokabidea</short>
+				<short xml:lang="fi">Toiminta</short>
+				<short xml:lang="fr">Comportement</short>
+				<short xml:lang="gl">Comportamento</short>
+				<short xml:lang="gu">વર્તણૂક</short>
+				<short xml:lang="hi">आचरण</short>
+				<short xml:lang="it">Comportamento</short>
+				<short xml:lang="ja">動作</short>
+				<short xml:lang="nb">Oppførsel</short>
+				<short xml:lang="nl">Gedrag</short>
+				<short xml:lang="pl">Zachowanie</short>
+				<short xml:lang="pt">Comportamento</short>
+				<short xml:lang="pt_BR">Comportamento</short>
+				<short xml:lang="sv">Beteende</short>
+				<short xml:lang="tr">Davranış</short>
+				<short xml:lang="zh_CN">行为</short>
+				<option type="int" name="timeout">
+					<short>Filter Type Timeout</short>
+					<short xml:lang="de">Timeout für Filtereingabe</short>
+					<short xml:lang="el">Χρονικό Οριο Είδους Φίλτρου</short>
+					<short xml:lang="en_GB">Filter Type Timeout</short>
+					<short xml:lang="fr">Délai Type de filtre</short>
+					<short xml:lang="gl">Tempo-Limite do Filtro</short>
+					<short xml:lang="gu">ગાળક પ્રકાર સમયસમાપ્તિ</short>
+					<short xml:lang="hi">फिल्टर प्रकार समय समाप्ति</short>
+					<short xml:lang="it">Timeout digitazione filtro</short>
+					<short xml:lang="ja">フィルタ入力タイムアウト</short>
+					<short xml:lang="nb">Tidsavbrudd for filtertype</short>
+					<short xml:lang="nl">Filter type timeout</short>
+					<short xml:lang="pt">Tempo-Limite do Filtro</short>
+					<short xml:lang="pt_BR">Tempo-Limite do Filtro</short>
+					<short xml:lang="sv">Tidsgräns för filtertyp</short>
+					<long>Time (in ms) after which the filter typing is automatically ended</long>
+					<long xml:lang="de">Zeitspanne (in ms), nach der die Filtereingabe automatisch beendet wird.</long>
+					<long xml:lang="el">Χρόνος (σε ms) μετά τον οποίο το φίλτρο γραψίματος αυτομάτως σταματά</long>
+					<long xml:lang="en_GB">Time (in ms) after which the filter typing is automatically ended</long>
+					<long xml:lang="fr">Délai (en ms) après lequel la chaîne est automatiquement filtrée</long>
+					<long xml:lang="gl">Tempo (en ms) despois o cal termina o filtro de fiestras</long>
+					<long xml:lang="gu">ગાળક લખવાનું આપોઆપ અંત થઈ જાય પછીનો સમય (મિલિસેકન્ડોમાં)</long>
+					<long xml:lang="hi">समय (ms में) जिसके बाद फिल्टर टाइपिंग को स्वतः अंत किया जाता है</long>
+					<long xml:lang="it">Tempo (in ms) dopo il quale la digitazione del filtro viene automaticamente terminata</long>
+					<long xml:lang="ja">フィルタ入力を自動的に終了させるまでの時間（ミリ秒）</long>
+					<long xml:lang="nb">Tid (i ms) før filterinnskriving automatisk avsluttes</long>
+					<long xml:lang="nl">Tĳd (in ms) waarna het filter typing automatisch wordt beëindigt</long>
+					<long xml:lang="pl">Czas (w milisekundach) po jakim wpisywanie filtra jest automatycznie kończone</long>
+					<long xml:lang="pt">Tempo (em ms) após o qual termina o filtro de janelas</long>
+					<long xml:lang="pt_BR">Tempo (em ms) o qual o filtro de janelas é automaticamente finalizado</long>
+					<long xml:lang="sv">Tid (i ms) efter vilket filterskrivning automatiskt slutar</long>
+					<min>0</min>
+					<max>10000</max>
+					<default>0</default>
+				</option>
+				<option type="bool" name="filter_case_insensitive">
+					<short>Filter Case Insensitive</short>
+					<short xml:lang="de">ohne Beachtung der Groß-/Kleinschreibung filtern</short>
+					<short xml:lang="el">Φίλτρο Ανεξαρτήτως Χαρακτήρων</short>
+					<short xml:lang="en_GB">Filter Case Insensitive</short>
+					<short xml:lang="fr">Insensible à la casse</short>
+					<short xml:lang="gl">Filtro Insensíbel a Maísculas</short>
+					<short xml:lang="gu">ગાળક કેસ પ્રત્યે અસંવેદનશીલતા</short>
+					<short xml:lang="hi">फिल्टर स्थिति के प्रति असंवेदनशील</short>
+					<short xml:lang="it">Non distinguere maiuscole/minuscole</short>
+					<short xml:lang="ja">大文字小文字を区別しないフィルタ</short>
+					<short xml:lang="nb">Filtrer uten å skille mellom store/små bokstaver</short>
+					<short xml:lang="nl">Filter Hoofdletter ongevoelig</short>
+					<short xml:lang="pl">Filtr nie zwraca uwagi na wielkość liter</short>
+					<short xml:lang="pt">Filtro Insensível a Maísculas</short>
+					<short xml:lang="pt_BR">Filtro insensível a caixa (maiúsculas/minúsculas)</short>
+					<short xml:lang="sv">Filtrera okänslighet för skiftläge</short>
+					<long>Use case insensitive string matching when filtering.</long>
+					<long xml:lang="el">Χρήση ταιρίασματος ανεξαρτήτως σειράς χαρακτήρων στο φιλτράρισμα.</long>
+					<long xml:lang="en_GB">Use case insensitive string matching when filtering.</long>
+					<long xml:lang="fr">Utiliser des chaînes insensibles à la casse pour le filtrage.</long>
+					<long xml:lang="gl">Ignorar maíusculas cando filtrar fiestras.</long>
+					<long xml:lang="gu">જ્યારે ગાળણ કરી રહ્યા હોય ત્યારે કેસ પ્રત્યે સંવેદનશીલ શબ્દમાળા જોડણી વાપરો.</long>
+					<long xml:lang="hi">फिल्टरिंग के दौरान स्थिति के प्रति असंवेदनशील स्ट्रिंग का प्रयोग करें</long>
+					<long xml:lang="it">Non fa differenza tra maiuscole e minuscole nel filtraggio.</long>
+					<long xml:lang="ja">フィルタを掛ける際に大文字小文字の区別をせずに照合</long>
+					<long xml:lang="nb">Ikke skill mellom store og små bokstaver ved filtrering.</long>
+					<long xml:lang="nl">Gebruik hoofdletter ongevoelige string matching als wordt gefilterd.</long>
+					<long xml:lang="pt">Ignorar maíusculas quando filtrar janelas.</long>
+					<long xml:lang="pt_BR">Ignorar maiúsculas quando filtrar janelas.</long>
+					<long xml:lang="sv">Använd okänslighet för skiftläge vid radmatchning.</long>
+					<default>false</default>
+				</option>
+				<option type="bool" name="filter_display">
+					<short>Show Filter Text</short>
+					<short xml:lang="de">Filter-Text anzeigen</short>
+					<short xml:lang="el">Εμφάνιση Φίλτρου Κειμένου</short>
+					<short xml:lang="en_GB">Show Filter Text</short>
+					<short xml:lang="fr">Afficher le Texte du Filtre</short>
+					<short xml:lang="gl">Mostra Texto Filtro</short>
+					<short xml:lang="gu">ગાળક લખાણ બતાવો</short>
+					<short xml:lang="hi">फिल्टर पाठ दिखाएँ</short>
+					<short xml:lang="it">Mostrare filtro del testo</short>
+					<short xml:lang="ja">フィルタテキストを表示</short>
+					<short xml:lang="nb">Vis filtertekst</short>
+					<short xml:lang="nl">Toon filter tekst</short>
+					<short xml:lang="pl">Pokazuj tekst filtra</short>
+					<short xml:lang="pt">Mostra Texto Filtro</short>
+					<short xml:lang="pt_BR">Exibe Texto de Filtro</short>
+					<short xml:lang="sv">Visa filtertext</short>
+					<short xml:lang="tr">Filtre Metnini Göster</short>
+					<long>Show filter text.</long>
+					<long xml:lang="de">Eingegebenen Filtertext anzeigen.</long>
+					<long xml:lang="el">Εμφάνιση φίλτρου κειμένου.</long>
+					<long xml:lang="en_GB">Show filter text.</long>
+					<long xml:lang="fr">Afficher le texte du filtre.</long>
+					<long xml:lang="gl">Mostrar texto de filtro</long>
+					<long xml:lang="gu">ગાળક લખાણ બતાવો.</long>
+					<long xml:lang="hi">फिल्टर पाठ दिखाएँ.</long>
+					<long xml:lang="it">Mostra il filtro del testo.</long>
+					<long xml:lang="ja">フィルタ入力テキストを表示</long>
+					<long xml:lang="nb">Vis filtertekst</long>
+					<long xml:lang="nl">Toon filter tekst.</long>
+					<long xml:lang="pl">Pokazuj filtr tekstowy</long>
+					<long xml:lang="pt">Mostrar texto de filtro.</long>
+					<long xml:lang="pt_BR">Exibir texto de filtro.</long>
+					<long xml:lang="sv">Visa filtertext</long>
+					<long xml:lang="tr">Filtre metnini göster.</long>
+					<default>true</default>
+				</option>
+			</group>
+			<group>
+				<short>Appearance</short>
+				<short xml:lang="ca">Aparença</short>
+				<short xml:lang="de">Aussehen</short>
+				<short xml:lang="el">Εμφάνιση</short>
+				<short xml:lang="en_GB">Appearance</short>
+				<short xml:lang="es">Apariencia</short>
+				<short xml:lang="eu">Itxura</short>
+				<short xml:lang="fi">Ulkoasu</short>
+				<short xml:lang="fr">Apparence</short>
+				<short xml:lang="gl">Aparencia</short>
+				<short xml:lang="gu">દેખાવ</short>
+				<short xml:lang="hi">प्रकटन</short>
+				<short xml:lang="it">Aspetto</short>
+				<short xml:lang="ja">外観</short>
+				<short xml:lang="nb">Utseende</short>
+				<short xml:lang="nl">Verschijning</short>
+				<short xml:lang="pl">Wygląd</short>
+				<short xml:lang="pt">Aparência</short>
+				<short xml:lang="pt_BR">Aparência</short>
+				<short xml:lang="sv">Utseende</short>
+				<short xml:lang="tr">Görünüm</short>
+				<short xml:lang="zh_CN">外观</short>
+				<option type="bool" name="font_bold">
+					<short>Bold Font</short>
+					<short xml:lang="ca">Text en negreta</short>
+					<short xml:lang="de">Fettdruck für Schrift verwenden</short>
+					<short xml:lang="el">Έντονη Γραμματοσειρά</short>
+					<short xml:lang="en_GB">Bold Font</short>
+					<short xml:lang="fi">Lihavoitu kirjasin</short>
+					<short xml:lang="fr">Police Grasse</short>
+					<short xml:lang="gl">Fonte a negrito</short>
+					<short xml:lang="gu">ઘાટો ફોન્ટ</short>
+					<short xml:lang="hi">मोटा फाँट</short>
+					<short xml:lang="it">Carattere grassetto</short>
+					<short xml:lang="ja">太字</short>
+					<short xml:lang="nb">Fet skrift</short>
+					<short xml:lang="nl">Vet lettertype</short>
+					<short xml:lang="pl">Pogrubiona czcionka</short>
+					<short xml:lang="pt">Fonte a negrito</short>
+					<short xml:lang="pt_BR">Fonte em negrito</short>
+					<short xml:lang="sv">Fet typsnitt</short>
+					<short xml:lang="tr">Kalın Yazı Tipi</short>
+					<long>Use bold font for window title display</long>
+					<long xml:lang="ca">Usa text en negreta per mostrar el títol de la finestra</long>
+					<long xml:lang="de">Verwende fette Schriftart für Fenstertielanzeige.</long>
+					<long xml:lang="el">Χρησιμοποίηση έντονης γραμματοσειράς για την εμφάνιση του τίτλου παραθύρου</long>
+					<long xml:lang="en_GB">Use bold font for window title display</long>
+					<long xml:lang="fi">Käytä lihavoitua fonttia ikkunan nimelle</long>
+					<long xml:lang="fr">Afficher le titre en gras</long>
+					<long xml:lang="gl">Mostrar títulos das fiestras a negrito</long>
+					<long xml:lang="gu">વિન્ડો શીર્ષક ડિસ્પ્લે માટે ઘાટા ફોન્ટ વાપરો</long>
+					<long xml:lang="hi">विंडो शीर्षक प्रदर्शन के लिए गहरा फाँट का प्रयोग करें</long>
+					<long xml:lang="it">Usa il carattere grassetto per mostrare il titolo della finestra</long>
+					<long xml:lang="ja">ウィンドウタイトル表示に太字を使用</long>
+					<long xml:lang="nb">Bruk fet skrift for visning av vindustittel</long>
+					<long xml:lang="nl">Gebruik vet lettertype voor tonen venster titel</long>
+					<long xml:lang="pl">Użyj pogrubionej czcionki w tytułach okien</long>
+					<long xml:lang="pt">Mostrar títulos das janelas a negrito</long>
+					<long xml:lang="pt_BR">Mostrar títulos das janelas em negrito</long>
+					<long xml:lang="sv">Använd fet typsnitt för fönstertitelvisning</long>
+					<default>true</default>
+				</option>
+				<option type="int" name="font_size">
+					<short>Font Size</short>
+					<short xml:lang="de">Textgröße</short>
+					<short xml:lang="el">Μέγεθος Γραμματοσειράς</short>
+					<short xml:lang="en_GB">Font Size</short>
+					<short xml:lang="es">Tamaño de la fuente</short>
+					<short xml:lang="fi">Kirjasimen koko</short>
+					<short xml:lang="fr">Taille de la police</short>
+					<short xml:lang="gl">Tamaño da fonte</short>
+					<short xml:lang="gu">ફોન્ટ માપ</short>
+					<short xml:lang="hi">फ़ॉन्ट आकार</short>
+					<short xml:lang="it">Dimensione carattere</short>
+					<short xml:lang="ja">フォントの大きさ</short>
+					<short xml:lang="nb">Skriftstørrelse</short>
+					<short xml:lang="nl">Letter grootte</short>
+					<short xml:lang="pl">Wielkość czcionki</short>
+					<short xml:lang="pt">Tamanho da fonte</short>
+					<short xml:lang="pt_BR">Tamanho da fonte</short>
+					<short xml:lang="sv">Typsnittsstorlek</short>
+					<short xml:lang="tr">Yazıtipi Boyutu</short>
+					<short xml:lang="zh_CN">字体大小</short>
+					<long>Font size for window title display</long>
+					<long xml:lang="ca">Mida de la lletra del títol de la finestra</long>
+					<long xml:lang="de">Größe des Fenstertitels</long>
+					<long xml:lang="el">Χρώμα γραμματοσειράς εμφάνισης του τίτλου παραθύρου</long>
+					<long xml:lang="en_GB">Font size for window title display</long>
+					<long xml:lang="fi">Ikkunan nimen fontti</long>
+					<long xml:lang="fr">Taille de police du titre de fenêtre</long>
+					<long xml:lang="gl">Tamaño da fonte do título da fiestra</long>
+					<long xml:lang="gu">વિન્ડો શીર્ષક ડિસ્પ્લે માટે ફોન્ટ માપ</long>
+					<long xml:lang="hi">विंडो शीर्षक प्रदर्शन के लिए फ़ॉन्ट आकार</long>
+					<long xml:lang="it">Dimensione del carattere per la visualizzazione del titolo della finestra</long>
+					<long xml:lang="ja">ウィンドウタイトル表示のフォントの大きさ</long>
+					<long xml:lang="nb">Skriftstørrelse for visning av vindustittel</long>
+					<long xml:lang="nl">Font grootte om de venster titel te tonen</long>
+					<long xml:lang="pl">Rozmiar czcionki dla tytułu okna</long>
+					<long xml:lang="pt">Tamanho da fonte do título da janela</long>
+					<long xml:lang="pt_BR">Tamanho da fonte do título da janela</long>
+					<long xml:lang="sv">Typsnittsstorlek för fönstertitelvisning</long>
+					<min>6</min>
+					<max>48</max>
+					<default>24</default>
+				</option>
+				<option type="int" name="border_size">
+					<short>Title Border Size</short>
+					<short xml:lang="ca">Mida de la vora del títol</short>
+					<short xml:lang="de">Titelrahmen-Größe</short>
+					<short xml:lang="el">Μέγεθος Ορίου Τίτλου</short>
+					<short xml:lang="en_GB">Title Border Size</short>
+					<short xml:lang="fi">Nimen kehyksen koko</short>
+					<short xml:lang="fr">Taille de bordure du titre</short>
+					<short xml:lang="gl">Tamaño da marxe do título</short>
+					<short xml:lang="gu">શીર્ષક કિનારી માપ</short>
+					<short xml:lang="hi">शीर्षक किनारा आकार</short>
+					<short xml:lang="it">Dimensione bordo titolo</short>
+					<short xml:lang="ja">タイトルの枠の大きさ</short>
+					<short xml:lang="nb">Kantstørrelse for kant</short>
+					<short xml:lang="nl">Titel rand grootte</short>
+					<short xml:lang="pl">Rozmiar ramki tytułu okna</short>
+					<short xml:lang="pt">Tamanho da margem do título</short>
+					<short xml:lang="pt_BR">Tamanho da margem do título</short>
+					<short xml:lang="sv">Bredd på titelkant</short>
+					<short xml:lang="tr">Başlık kenarlık Boyutu</short>
+					<long>Size of the border around the window title</long>
+					<long xml:lang="ca">Mida de la vora del títol de la finestra</long>
+					<long xml:lang="de">Größe des Rahmens um den Fenstertitel</long>
+					<long xml:lang="el">Μέγεθος του ορίου γύρω απ τον τίτλο παραθύρου</long>
+					<long xml:lang="en_GB">Size of the border around the window title</long>
+					<long xml:lang="fi">Ikkunan nimen kehyksen koko</long>
+					<long xml:lang="fr">Taille de la bordure autour du titre de la fenêtre</long>
+					<long xml:lang="gl">Tamaño da marxe á volta do título da fiestra</long>
+					<long xml:lang="gu">વિન્ડો શીર્ષકની ફરતેની કિનારીનું માપ</long>
+					<long xml:lang="hi">विंडो शीर्षक के गिर्द किनारा आकार</long>
+					<long xml:lang="it">Dimensione del bordo del titolo della finestra</long>
+					<long xml:lang="ja">ウィンドウタイトル周りの枠の大きさ</long>
+					<long xml:lang="nb">Størrelse på kanten rundt vindustittelen</long>
+					<long xml:lang="nl">Grootte van de rand rondom de venster titel</long>
+					<long xml:lang="pl">Rozmiar ramki wokół tytułu okna</long>
+					<long xml:lang="pt">Tamanho da margem à volta do título da janela</long>
+					<long xml:lang="pt_BR">Tamanho da margem a volta do título da janela</long>
+					<long xml:lang="sv">Storleken på kanten runt fönstertitel</long>
+					<min>1</min>
+					<max>20</max>
+					<default>5</default>
+				</option>
+				<option type="color" name="font_color">
+					<short>Font Color</short>
+					<short xml:lang="de">Textfarbe</short>
+					<short xml:lang="el">Χρώμα Γραμματοσειράς</short>
+					<short xml:lang="en_GB">Font Colour</short>
+					<short xml:lang="es">Color de la fuente</short>
+					<short xml:lang="fi">Kirjasimen väri</short>
+					<short xml:lang="fr">Couleur de la police</short>
+					<short xml:lang="gl">Cor da fonte</short>
+					<short xml:lang="gu">ફોન્ટ રંગ</short>
+					<short xml:lang="hi">फॉन्ट रंग</short>
+					<short xml:lang="it">Colore carattere</short>
+					<short xml:lang="ja">フォントの色</short>
+					<short xml:lang="nb">Skriftfarge</short>
+					<short xml:lang="nl">Letterkleur</short>
+					<short xml:lang="pl">Kolor czcionki</short>
+					<short xml:lang="pt">Cor da fonte</short>
+					<short xml:lang="pt_BR">Cor da fonte</short>
+					<short xml:lang="sv">Typsnittsfärg</short>
+					<short xml:lang="tr">Yazıtipi Rengi</short>
+					<short xml:lang="zh_CN">字体颜色</short>
+					<long>Font color of the window title</long>
+					<long xml:lang="ca">Color de la lletra del títol de la finestra</long>
+					<long xml:lang="de">Farbe des Fenstertitels</long>
+					<long xml:lang="el">Χρώμα γραμματοσειράς του τίτλου παραθύρου</long>
+					<long xml:lang="en_GB">Font colour of the window title</long>
+					<long xml:lang="fi">Ikkunan nimen fontin väri</long>
+					<long xml:lang="fr">Couleur de police du titre de fenêtre</long>
+					<long xml:lang="gl">Cor do título da fiestra</long>
+					<long xml:lang="gu">વિન્ડો શીર્ષકનો ફોન્ટ રંગ</long>
+					<long xml:lang="hi">विंडो शीर्षक का फ़ॉन्ट रंग</long>
+					<long xml:lang="it">Colore del carattere del titolo della finestra</long>
+					<long xml:lang="ja">ウィンドウタイトルのフォント色</long>
+					<long xml:lang="nb">Skriftfarge på vindustittelen</long>
+					<long xml:lang="nl">Font kleur van de venster titel</long>
+					<long xml:lang="pl">Kolor czcionki dla tytułu okna</long>
+					<long xml:lang="pt">Cor do título da janela</long>
+					<long xml:lang="pt_BR">Cor do título da janela</long>
+					<long xml:lang="sv">Typsnittsfärg för fönstertitel</long>
+					<default>
+						<red>0xffff</red>
+						<green>0xffff</green>
+						<blue>0xffff</blue>
+						<alpha>0xffff</alpha>
+					</default>
+				</option>
+				<option type="color" name="back_color">
+					<short>Background Color</short>
+					<short xml:lang="ca">Color de fons</short>
+					<short xml:lang="de">Hintergrundfarbe</short>
+					<short xml:lang="el">Χρώμα Φόντου</short>
+					<short xml:lang="en_GB">Background Colour</short>
+					<short xml:lang="fi">Taustan väri</short>
+					<short xml:lang="fr">Couleur de fond</short>
+					<short xml:lang="gl">Cor de fondo</short>
+					<short xml:lang="gu">પાશ્વ ભાગનો રંગ</short>
+					<short xml:lang="hi">पृष्ठभूमि रंग</short>
+					<short xml:lang="it">Colore di sfondo</short>
+					<short xml:lang="ja">背景色</short>
+					<short xml:lang="nb">Bakgrunnsfarge</short>
+					<short xml:lang="nl">Achtergrond kleur</short>
+					<short xml:lang="pl">Kolor tła</short>
+					<short xml:lang="pt">Cor de fundo</short>
+					<short xml:lang="pt_BR">Cor de fundo</short>
+					<short xml:lang="sv">Bakgrundsfärg</short>
+					<short xml:lang="tr">Arkaplan Rengi</short>
+					<long>Background color of the window title</long>
+					<long xml:lang="ca">Color de fons del títol de la finestra</long>
+					<long xml:lang="de">Hintergrundfarbe für Fenstertitel</long>
+					<long xml:lang="el">Χρώμα φόντου του τίτλου παραθύρου</long>
+					<long xml:lang="en_GB">Background colour of the window title</long>
+					<long xml:lang="fi">Ikkunan nimen taustaväri</long>
+					<long xml:lang="fr">Couleur d'arrière-plan du titre de la fenêtre</long>
+					<long xml:lang="gl">Cor de fondo do título da fiestra</long>
+					<long xml:lang="gu">વિન્ડો શીર્ષકના પાશ્વભાગનો રંગ</long>
+					<long xml:lang="hi">विंडो शीर्षक का पृष्ठभूमि रंग</long>
+					<long xml:lang="it">Colore di sfondo del titolo della finestra</long>
+					<long xml:lang="ja">ウィンドウタイトルの背景色</long>
+					<long xml:lang="nb">Bakgrunnsfarge på vindustittelen</long>
+					<long xml:lang="nl">Achtergrond kleur van de venster titel</long>
+					<long xml:lang="pl">Kolor tła dla tytułu okna</long>
+					<long xml:lang="pt">Cor de fundo do título da janela</long>
+					<long xml:lang="pt_BR">Cor de fundo do título da janela</long>
+					<long xml:lang="sv">Bakgrundsfärg för fönstertitel</long>
+					<default>
+						<red>0x0000</red>
+						<green>0x0000</green>
+						<blue>0x0000</blue>
+						<alpha>0x9999</alpha>
+					</default>
+				</option>
+			</group>
+		</screen>
+	</plugin>
+</compiz>

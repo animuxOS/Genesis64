@@ -1,0 +1,38 @@
+#!/bin/sh -e
+
+DEBREINSTALL="$(tempfile).$$"
+
+if [ "$1" = purge ] && [ -e /usr/share/debconf/confmodule ]; then
+    . /usr/share/debconf/confmodule
+    db_purge
+    rm -rf /var/cache/localepurge
+    rm -f /etc/locale.nopurge
+    if [ -x /usr/bin/ucf ]; then
+        /usr/bin/ucf --purge /etc/locale.nopurge
+    else
+        echo >&2 "/etc/locale.nopurge could not be purged because ucf was not found."
+    fi
+    rm -f /etc/locale.nopurge.md5sum
+
+echo
+echo "  To reinstall all the packages which localepurge has been taking care"
+echo "  of before, you can use the following command:"
+echo
+echo "    apt-get --reinstall install \$(dpkg -S LC_MESSAGES | cut -d: -f1 | tr ', ' '\n' | sort -u)"
+echo
+# create a ready made shell script for further usage:
+echo "apt-get -u --reinstall --fix-missing install \$(dpkg -S LC_MESSAGES | cut -d: -f1 | tr ', ' '\n' | sort -u)" > $DEBREINSTALL
+mv $DEBREINSTALL /var/tmp/reinstall_debs.sh
+
+echo "  For your further usage, the file \"/var/tmp/reinstall_debs.sh\""
+echo "  contains an enhanced version of the command line printed out above."
+echo
+fi
+
+# Automatically added by dh_installdebconf
+if [ "$1" = purge ] && [ -e /usr/share/debconf/confmodule ]; then
+	. /usr/share/debconf/confmodule
+	db_purge
+fi
+# End automatically added section
+

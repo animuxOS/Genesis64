@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "0.2">
+<!ENTITY manrevision "1.0">
+<!ENTITY date "April 2005">
+<!ENTITY app "<application>Evince Document Viewer</application>">
+<!ENTITY appname "Evince Document Viewer">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="pt_BR">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Manual do Visualizador de Documentos Evince</title>       
+    <abstract role="description">
+      <para>O Visualizador de Documentos Evince permite que você visualize documentos de vários formatos como, por exemplo, arquivos PDF (Portable Document Format) e PostScript</para>
+    </abstract>
+    <copyright>
+      <year>2005</year>
+      <holder>Nickolay V. Shmyrev</holder>
+    </copyright>
+    <copyright>
+      <year>2004</year>
+      <holder>Sun Microsystems</holder>
+    </copyright><copyright><year>2007</year><holder>Hugo Dória (hugodoria@gmail.com)</holder></copyright>
+
+<!-- translators: uncomment this:
+    <copyright>
+      <year>2002</year>
+      <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+    </copyright>
+-->
+
+    <publisher> 
+      <publishername>Projeto de Documentação GNOME</publishername> 
+    </publisher> 
+
+      <legalnotice id="legalnotice">
+	<para>Permissão é garantida para copiar, distribuir e/ou modificar este documento sob os termos da GNU Free Documentation License (GFDL), Versão 1.1 ou qualquer uma posterior publicada pela Free Software Foundation sem Invariant Sections, sem Front-Cover Texts, e sem Back-Cover Texts. Você pode encontrar uma cópia do GFDL neste link <ulink type="help" url="ghelp:fdl">link</ulink> ou no arquivo COPYING-DOCS distribuído com este manual.</para>
+         <para>Este manual é parte da coleção de manuais do GNOME distribuídos sob a GFDL. Se você quiser distribuir este manual separadamente da coleção, você pode fazê-lo adicionando uma cópia da licença ao manual, como descrito na seção 6 da licença.</para>
+
+	<para>Muitos dos nomes usados pelas companhias para distinguir seus produtos e serviços são reivindicados como marcas registradas. Onde esses nomes aparecerem em qualquer documento GNOME, e os membros do Projeto de Documentação GNOME estão cientes destas marcas registradas, então os nomes estão com letras maiúsculas ou a letra inicial em maiúsculo.</para>
+
+	<para>DOCUMENTO E VERSÕES MODIFICADAS DO DOCUMENTO SÃO FORNECIDAS PELOS TERMOS DA GNU FREE DOCUMENTATION LICENSE COM O CONHECIMENTO ADICIONAL DE QUE: <orderedlist>
+		<listitem>
+		  <para>O DOCUMENTO É FORNECIDO "NO ESTADO", SEM GARANTIA DE QUALQUER TIPO, TANTO EXPRESSA QUANTO IMPLÍCITA, INCLUINDO, SEM LIMITAÇÕES, GARANTIAS DE QUE O DOCUMENTO OU VERSÃO MODIFICADA DO MESMO É COMERCIALIZADO LIVRE DE DEFEITOS, PRÓPRIO PARA UM PROPÓSITO ESPECÍFICO OU QUE NÃO HÁ INFRAÇÕES. TODO RISCO DE QUALIDADE, PRECISÃO E PERFORMANCE DO DOCUMENTO OU VERSÃO MODIFICADA É COM VOCÊ. SE ALGUM DOCUMENTO OU VERSÃO MODIFICADA FOR PROVADO DEFEITUOSO EM QUALQUER ASPECTO, VOCÊ (NÃO O ESCRITOR INICIAL, AUTOR OU QUALQUER CONTRIBUIDOR) ASSUME O CUSTO DE QUALQUER SERVIÇO NECESSÁRIO, REPARO OU CORREÇÃO. ESTE AVISO DE GARANTIA CONSTITUI UMA PARTE ESSENCIAL DA LICENÇA. NENHUM USO DE QUALQUER DOCUMENTO OU VERSÃO MODIFICADA DO DOCUMENTO É AUTORIZADO EXCETO SOB ESTA CONDIÇÃO; E</para>
+		</listitem>
+		<listitem>
+		  <para>SOB NENHUMA CIRCUNSTÂNCIA E SOB NENHUMA TEORIA LEGAL, TANTO EM DANOS (INCLUINDO POR NEGLICÊNCIA), CONTRATO OU OUTROS, DEVE O AUTOR, ESCRITOR INICIAL OU CONTRIBUIDOR OU QUALQUER DISTRIBUIDOR DO DOCUMENTO, VERSÃO MODIFICADA OU QUALQUER FORNECEDOR DE QUALQUER DESSES GRUPOS, SER CONSIDERADO RESPONSÁVEL A QUALQUER PESSOA POR QUALQUER DANO DIRETO, INDIRETO, ESPECIAL, INCIDENTAL OU CONSEQÜENCIAL DE QUALQUER INDIVÍDUO, INCLUINDO, SEM LIMITAÇÕES, DANOS POR PERDA DE BOA VONTADE, PARADA DE TRABALHO, FALHA DE COMPUTADOR, MAL-FUNCIONAMENTO OU QUALQUER E TODOS OS OUTROS DANOS OU PERDAS RESULTANTES OU RELACIONADAS AO USO DO DOCUMENTO E VERSÕES MODIFICADAS, MESMO QUE ESSE GRUPO TENHA SIDO INFORMADO DA POSSIBILIDADE DE TAIS DANOS.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+    <!-- This file  contains link to license for the documentation (GNU FDL), and 
+         other legal stuff such as "NO WARRANTY" statement. Please do not change 
+	 any of this. -->
+
+    <authorgroup> 
+      <author>
+        <firstname>Sun</firstname>
+        <surname>Time de Documentação do GNOME</surname>
+        <affiliation><orgname>Sun Microsystems</orgname></affiliation>
+      </author>
+      <author role="maintainer"> 
+	<firstname>Nickolay V.</firstname> 
+	<surname>Shmyrev</surname> 
+	<affiliation> 
+  	  <orgname>Projeto de Documentação GNOME</orgname> 
+	  <address> <email>nshmyrev@yandex.ru</email> </address> 
+	</affiliation> 
+      </author> 
+
+<!-- This is appropriate place for other contributors: translators,
+     maintainers,  etc. Commented out by default.
+      <othercredit role="translator">
+	<firstname>Latin</firstname> 
+	<surname>Translator 1</surname> 
+	<affiliation> 
+          <orgname>Latin Translation Team</orgname> 
+  	  <address> <email>translator@gnome.org</email> </address> 
+        </affiliation>
+        <contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+
+    <revhistory>
+      <revision> 
+        <revnumber>Manual do Visualizador de Documentos Evince V1.0</revnumber> 
+	<date>2005-04-06</date>
+        <revdescription>
+          <para role="author">Nickolay V. Shmyrev</para>
+          <para role="publisher">Projeto de Documentação GNOME</para>
+        </revdescription>
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>Este manual é referente à versão 0.2 do Visualizador de Documentos Evince</releaseinfo> 
+    <legalnotice> 
+      <title>Retorno</title> 
+      <para>Para reportar um bug ou fazer uma sugestão a respeito do Visualizador de Documentos Evince ou deste manual, siga as instruções contidas na <ulink url="ghelp:gnome-feedback" type="help">Página de Retorno do GNOME</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm zone="index"> 
+    <primary>Visualizador de Documentos Evince</primary> 
+  </indexterm> 
+  <indexterm zone="index"> 
+    <primary>evince</primary> 
+  </indexterm>
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="evince-introduction"> 
+    <title>Introdução</title> 
+    <para>O <application>Visualizador de Documentos Evince</application> permite que você visualize documentos de vários formatos como, por exemplo, arquivos PDF (Portable Document Format) e PostScript. O <application>Visualizador de Documentos Evince</application> segue os padrões do GNOME e Freedesktop.org para prover a integração com o Ambiente Desktop.</para>
+  </sect1>
+
+<!-- =========== Getting Started ============================== -->
+
+  <sect1 id="evince-getting-started"> 
+    <title>Começando</title> 
+
+    <sect2 id="evince-start">
+    <title>Para Iniciar o Visualizador de Documentos Evince</title>
+    <para><application>O Visualizador de Documentos Evince</application> é iniciado quandovocê abre algum documento no formato PDF ou PostScript, por exemplo.</para>
+    <para>Outra maneira de iniciar o <application>Visualizador de Documentos Evince</application> é através da linha de comando. Para isso, execute o comando: <command>evince</command>.</para>
+    
+    </sect2>
+
+    <sect2 id="evince-when-start">
+    <title>Ao Iniciar o Visualizador de Documentos Evince</title>
+    <para>Quando você inicia o <application>Visualizador de Documentos Evince</application>a seguinte janela é mostrada:</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="mainwindow-fig"> 
+	<title>Janela do Visualizador de Documentos Evince</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject><imagedata fileref="figures/evince_start_window.png" format="PNG"/> 
+	    </imageobject>
+	    <textobject> 
+	      <phrase>Mostra a janela principal do Visualizador de Documentos Evince. Contém barra de título, de menu, de ferramentas e área de visualização. A barra de menu contém os menus Arquivo, Editar, Ver, Ir e Ajuda.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+
+    <para>A janela do <application>Visualizador de Documentos Evince</application> contém os seguintes elementos:</para>
+      <variablelist>
+	<varlistentry>
+  	  <term>Barra de Menu</term>
+ 	  <listitem>
+	    <para>Os menus da barra de menu contém todos os comandos que você precisa para trabalhar com documentos no <application>Visualizador de Documentos Evince</application>.</para>
+	  </listitem>
+ 	</varlistentry>
+	<varlistentry>
+	  <term>Barra de Ferramentas</term>
+	  <listitem>
+	    <para>A barra de ferramentas contém um subconjunto de comandos que você pode acessar a partir da barra de menu.</para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term>Área de visualização</term>
+	  <listitem>
+ 	    <para>A área de visualização mostra o conteúdo do documento.</para>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+
+      <para>No <application>Visualizador de Documentos Evince</application> você pode realizar tarefas de diversas formas. Por exemplo, você pode abrir um documento das seguintes maneiras: <informaltable frame="all"><tgroup cols="2" colsep="1" rowsep="1"><colspec colname="COLSPEC0" colwidth="50*"/><colspec colname="COLSPEC1" colwidth="50*"/><thead>
+                        <row valign="top">
+                          <entry colname="COLSPEC0">
+                            <para>Componente da Interface</para></entry>
+                          <entry colname="COLSPEC1" align="left"> 
+                            <para>Ação</para></entry>
+                        </row>
+                      </thead><tbody>
+                        <row valign="top">               
+                          <entry><para>Janela</para></entry>
+                          <entry>
+                            <itemizedlist>
+                              <listitem>
+                                <para>Arraste um arquivo para a janela do <application>Visualizador de Documentos Evince</application> a partir de uma outra aplicação, como um gerenciador de arquivos, por exemplo.</para>
+                              </listitem>
+                              <listitem>
+                                <para>Dê um duplo clique no arquivo no gerenciador de arquivos</para>
+                              </listitem>
+                            </itemizedlist>
+                          </entry>
+                        </row>
+                        <row valign="top">               
+                          <entry><para>Barra de Menu</para></entry>
+                          <entry><para>Selecione <menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Abrir</guimenuitem></menuchoice>.</para>
+</entry>
+                        </row>
+                        <row valign="top">               
+                          <entry><para>Teclas de atalho</para></entry>
+                          <entry><para>Pressione <keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo>.</para></entry>
+                        </row>
+                      </tbody></tgroup></informaltable></para>
+      <para>Este manual documenta as funcionalidades da barra de menu.</para>
+    </sect2>
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+  <sect1 id="evince-usage"> 
+    <title>Uso</title> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="evince-open-file"> 
+      <title>Para abrir um documento</title> 
+      <para>Para abrir um documento, execute os seguintes passos:</para>
+      <orderedlist>
+        <listitem>
+          <para>Selecione <menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Abrir</guimenuitem></menuchoice>.</para>
+        </listitem>
+        <listitem>
+          <para>Na caixa de diálogo <guilabel>Abrir Documento</guilabel>, selecione o arquivo que você deseja abrir.</para>
+        </listitem>
+        <listitem>
+          <para>Clique em <guibutton>Abrir</guibutton>. O <application>Visualizador de Documentos Evince</application> mostra o nome do documento no título da janela.</para>
+        </listitem>
+      </orderedlist>
+      <para>Para abrir um novo documento selecione novamente <menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Abrir</guimenuitem></menuchoice>. O <application>Visualizador de Documentos Evince</application> abre cada arquivo em uma nova janela.</para>
+      <para>Se você tentar abrir um documento no formato que o <application>Visualizador de Documentos Evince</application> não reconhece, uma mensagem de erro será mostrada.</para>
+    </sect2>
+
+    <sect2 id="evince-navigate-file">
+    <title>Para navegar por um documento</title>
+      <para>Você pode navegar por um arquivo da seguinte maneira:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Para visualizar a próxima página, selecione <menuchoice><guimenu>Ir</guimenu><guimenuitem>Próxima Página</guimenuitem></menuchoice>.</para>
+        </listitem>
+	<listitem>
+	  <para>Para visualizar a página anterior, selecione <menuchoice><guimenu>Ir</guimenu><guimenuitem>Página Anterior</guimenuitem></menuchoice>.</para>
+        </listitem>
+	<listitem>
+	  <para>Para visualizar a primeira página do documento, selecione <menuchoice><guimenu>Ir</guimenu><guimenuitem>Primeira Página</guimenuitem></menuchoice>.</para>
+        </listitem>
+	<listitem>
+	  <para>Para visualizar a última página do documento, selecione <menuchoice><guimenu>Ir</guimenu><guimenuitem>Última Página</guimenuitem></menuchoice>.</para>
+        </listitem>
+	<listitem>
+	  <para>Para visualizar uma página específica digite o número da página na caixa de texto localizada na barra de ferramentas e pressione <keycap>Enter</keycap>.</para>
+        </listitem>
+      </itemizedlist>
+    </sect2>
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="evince-scroll-page"> 
+      <title>Para rolar uma página</title> 
+      <para>Para visualizar o conteúdo da página que ainda não está sendo mostrado na área de visualização use os seguintes métodos:</para> 
+        <itemizedlist> 
+	  <listitem> 
+  	    <para>Use as setas ou a barra de espaço do teclado.</para> 
+  	  </listitem> 
+	  <listitem> 
+  	    <para>Arraste a área de visualização clicando com o botão do meio do mouse em algum lugar do documento e então movendo o mouse. Por exemplo, para rolar a página para baixo, arraste a área de visualização para cima na janela.</para> 
+	  </listitem> 
+	  <listitem> 
+	    <para>Use a barra de rolagem na janela.</para> 
+  	  </listitem> 
+      </itemizedlist> 
+    </sect2>
+
+    <!-- ================ Usage Subsection ================================ -->
+	 <sect2 id="evince-manipulate-zoom-factor"> 
+      <title>Para mudar o tamanho da página</title> 
+      <para>Você pode usar os seguintes métodos para redimensionar uma página na área de visualização do <application>Visualizador de Documentos Evince</application>:</para> 
+      <itemizedlist> 
+	<listitem> 
+	  <para>Para aumentar o tamanho da página, selecione <menuchoice><guimenu>Ver</guimenu><guimenuitem>Ampliar</guimenuitem></menuchoice>.</para> 
+	</listitem> 
+	<listitem> 
+	  <para>Para diminuir o tamanho da página, selecione <menuchoice><guimenu>Ver</guimenu><guimenuitem>Reduzir</guimenuitem></menuchoice>.</para> 
+	</listitem> 
+	<listitem> 
+	  <para>Para redimensionar a página para que ela tenha a mesma largura que a área de visualização do <application>Visualizador de Documentos Evince</application>, selecione <menuchoice><guimenu>Ver</guimenu><guimenuitem>Largura da Página</guimenuitem></menuchoice>.</para> 
+	</listitem> 
+	<listitem> 
+	  <para>Para redimensionar a página para que ela se ajuste a área de visualização do <application>Visualizador de Documentos Evince</application>, selecione <menuchoice><guimenu>Ver</guimenu><guimenuitem>Melhor Ajuste</guimenuitem></menuchoice>.</para> 
+	</listitem> 
+	<listitem> 
+	  <para>Para redimensionar a janela do <application>Visualizador de Documentos Evince</application> para que ela tenha a mesma largura e altura da tela, selecione <menuchoice><guimenu>Ver</guimenu><guimenuitem>Tela Cheia</guimenuitem></menuchoice>. Para voltar a janela para o seu tamanho original, clique em<guibutton>Sair da Tela Cheia</guibutton> button.</para> 
+	</listitem> 
+      </itemizedlist> 
+    </sect2> 
+
+    <sect2 id="evince-view-pages">
+      <title>Para visualizar páginas ou a estrutura do documento</title>
+      <para>Para visualizar os marcadores ou as páginas, execute os seguintes passos:</para>
+      <orderedlist>
+        <listitem>
+          <para>Selecione <menuchoice><guimenu>Ver</guimenu><guimenuitem>Barra Lateral</guimenuitem></menuchoice> ou pressione a tecla<keycap>F9</keycap>.</para>
+        </listitem>
+        <listitem>
+          <para>Use a lista no cabeçalho do painel lateral para selecionar se deseja visualizar a estrutura do documento ou as páginas no painel lateral.</para>
+        </listitem>
+        <listitem>
+          <para>Use as barras de rolagem do painel lateral para visualizar o item ou a página solicitada no painel lateral.</para>
+        </listitem>
+        <listitem>
+          <para>Clique em uma entrada para navegar até a localização solicitada no documento. Clique em uma página para navegar até ela no documento.</para>
+        </listitem>
+      </orderedlist>
+    </sect2> 
+
+    <sect2 id="evince-view-properties">
+      <title>Para visualizar as propriedades de um documento</title>
+      <para>Para visualizar as propriedades de um documento, selecione <menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Propriedades</guimenuitem></menuchoice>.</para>
+      <para>A caixa de diálogo <guilabel>Propriedades</guilabel> mostra todas as informações disponíveis</para>
+    </sect2>
+
+    <sect2 id="evince-print-file">
+      <title>Para imprimir um documento</title>
+      <para>Para imprimir um documento selecione <menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Imprimir</guimenuitem></menuchoice>.</para>
+      <note>
+        <para>Se você não pode selecionar a opção <guimenuitem>Imprimir</guimenuitem> no menu, então o autor do documento desabilitou esta opção. Para ativar a opção de imprimir você deve entrar com uma senha quando abrir o documento. Veja <xref linkend="evince-password"/> para mais informações sobre arquivos protegidos por senha.</para>
+      </note>
+      <para>A caixa de diálogo <guilabel>Imprimir</guilabel> possui as seguintes abas:</para>
+      <itemizedlist>
+        <listitem>
+          <para>
+            <link linkend="print-dialog-job">Trabalho</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <link linkend="print-dialog-printer">Impressora</link>
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <link linkend="print-dialog-paper">Papel</link>
+          </para>
+        </listitem>
+      </itemizedlist>
+
+      <sect3 id="print-dialog-job">
+      <title>Trabalho</title>
+	<variablelist>
+	  <varlistentry> <term><guilabel>Intervalo de páginas</guilabel> </term> 
+	    <listitem> 
+	      <para>Selecione uma das opções a seguir para determinar quantas páginas serão impressas:</para>
+	      <itemizedlist>
+		<listitem>
+		  <para><guilabel>Todas</guilabel></para>
+		  <para>Selecione esta opção para imprimir todas as páginas do documento.</para>
+		</listitem>
+		<listitem>
+		  <para><guilabel>Páginas a partir</guilabel></para>
+		  <para>Selecione esta opção para imprimir um intervalo de páginas no documento. Use as caixas de incremento/decremento para especificar a primeira e a última página do intervalo.</para>
+		</listitem>							
+	      </itemizedlist>
+	    </listitem>
+	  </varlistentry>
+        </variablelist>  
+      </sect3>
+		
+	<sect3 id="print-dialog-printer">
+	<title>Impressora</title>
+	<variablelist>
+	  <varlistentry> <term><guilabel>Impressora</guilabel> </term> 
+	    <listitem> 
+	      <para>Use esta lista para selecionar a impressora na qual deseja imprimir o documento.</para>
+              <note>
+              <para>A opção <guilabel>Criar um documento PDF</guilabel> não é suportada nesta versão do <application>Visualizador de Documentos Evince</application>.</para>
+              </note>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry> <term><guilabel>Configurações</guilabel> </term> 
+	    <listitem> 
+	      <para>Use esta lista para selecionar as configurações da impressora.</para>
+	      <para>Para configurar a impressora, clique em <guibutton>Configurar</guibutton>. Por exemplo, você pode ativar ou desativar a impressão duplex, se esta funcionalidade for suportada pela impressora.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry> <term><guilabel>Localização</guilabel> </term> 
+	    <listitem> 
+	      <para>Use esta lista para selecionar uma das seguintes opções de impressão:</para>
+	      <variablelist>
+	        <varlistentry>
+	          <term><guilabel>CUPS</guilabel></term>
+	          <listitem>
+	            <para>Imprimir o documento em uma impressora do CUPS.</para>
+	            <note>
+	              <para>Se a impressora selecionada é uma impressora do tipo CUPS, então <guilabel>CUPS</guilabel> será a única entrada na lista.</para>
+	            </note>
+	          </listitem>
+	        </varlistentry>
+	        <varlistentry>
+	          <term><guilabel>lpr</guilabel></term>
+	          <listitem>
+	            <para>Enviar o documento para uma impressora.</para>
+	          </listitem>
+	        </varlistentry>
+	        <varlistentry>
+	          <term><guilabel>Arquivo</guilabel></term>
+	          <listitem>
+	            <para>Imprimir o documento em um arquivo PostScript.</para>
+	            <para>Clique em <guibutton>Salvar como</guibutton> para visualizar uma caixa de diálogo onde você poderá especificar o nome e a localização do arquivo PostScript.</para>
+	          </listitem>
+	        </varlistentry>
+	        <varlistentry>
+	          <term><guilabel>Personalizado</guilabel></term>
+	          <listitem>
+	            <para>Usar o comando especificado para imprimir o documento.</para>
+	            <para>Digite o comando na caixa de texto. Inclua todos os argumentos da linha de comando.</para>
+	          </listitem>
+	        </varlistentry>
+	      </variablelist>
+            </listitem>
+	  </varlistentry>
+	  <varlistentry> <term><guilabel>Estado</guilabel> </term> 
+	    <listitem> 
+	      <para>Esta funcionalidade não é suportada nesta versão do <application>Visualizador de Documentos Evince</application>.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry> <term><guilabel>Tipo</guilabel> </term> 
+	    <listitem> 
+	      <para>Esta funcionalidade não é suportada nesta versão do <application>Visualizador de Documentos Evince</application>.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry> <term><guilabel>Comentário</guilabel> </term> 
+	    <listitem> 
+	      <para>Esta funcionalidade não é suportada nesta versão do <application>Visualizador de Documentos Evince</application>.</para>
+	    </listitem>
+	  </varlistentry>
+	</variablelist>
+	</sect3>
+		
+	<sect3 id="print-dialog-paper">
+	<title>Papel</title>
+	<variablelist>
+	  <varlistentry> <term><guilabel>Tamanho do papel</guilabel> </term> 
+	    <listitem> 
+	      <para>Use esta lista para selecionar o tamanho do papel no qual deseja imprimir o documento.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry> <term><guilabel>Largura</guilabel> </term> 
+	    <listitem> 
+	      <para>Use esta lista para especificar a largura do papel. Use a lista adjacente para mudar a unidade de medida.</para>
+	    </listitem>
+	  </varlistentry>
+	    <varlistentry> <term><guilabel>Altura</guilabel> </term> 
+	    <listitem> 
+	      <para>Use esta caixa para especificar a altura do papel.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry> <term><guilabel>Orientação do papel</guilabel> </term> 
+	    <listitem> 
+	      <para>Use esta lista para selecionar a orientação do papel na impressora.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry> <term><guilabel>Orientação da página</guilabel> </term> 
+	    <listitem> 
+	      <para>Use esta lista para selecionar a orientação da página.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry> <term><guilabel>Layout</guilabel> </term> 
+	    <listitem> 
+	      <para>Use esta lista para selecionar o layout da página. Uma pré-visualização de cada layout que você escolheu é mostrada na área <guilabel>Pré-visualização</guilabel>.</para>
+	    </listitem>
+	  </varlistentry>
+	  <varlistentry> <term><guilabel>Bandeja do papel</guilabel> </term> 
+	    <listitem> 
+	      <para>Use esta lista para selecionar a bandeja de papel.</para>
+	    </listitem>
+	  </varlistentry>
+	</variablelist>
+      </sect3>
+    </sect2>
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="evince-copy-file"> 
+      <title>Para copiar um documento</title> 
+      <para>Para copiar um arquivo, execute os seguintes passos:</para>
+      <orderedlist>
+        <listitem>
+          <para>Selecione <menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Salvar uma cópia</guimenuitem></menuchoice>.</para> 
+        </listitem>
+        <listitem>
+          <para>Digite um novo nome para o arquivo na caixa de texto <guilabel>Nome do arquivo</guilabel> na caixa de diálogo <guilabel>Salvar uma Cópia</guilabel>.</para> 
+          <para>Se necessário, especifique a localização do documento copiado. Por padrão, as cópias são salvas no seu diretório home.</para> 
+        </listitem>
+        <listitem>
+          <para>Clique em <guibutton>Salvar</guibutton>.</para> 
+        </listitem>
+      </orderedlist>
+    </sect2>
+
+    <!-- this id must be kept in sync with evince-persist-file.cc/evince-persist-stream.cc -->
+    <sect2 id="evince-password">
+      <title>Para funcionar com documentos protegidos por senha</title>
+      <para>Um autor pode usar os seguintes níveis de senha para proteger um documento:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Senha do usuário que permite que as outras pessoas apenas possam ler o documento.</para>
+        </listitem>        
+        <listitem>
+          <para>Senha mestra que permite que outras pessoas possam realizar tarefas adicionais como, por exemplo, imprimir o documento.</para>
+        </listitem>        
+      </itemizedlist>
+      <para>Quando você tenta abrir um documento que está protegido por senha, o <application>Visualizador de Documentos Evince</application> mostra uma caixa de segurança. Digite a senha de usuário ou a senha mestre na caixa de texto <guilabel>Entre com a senha do documento</guilabel> e então clique em <guibutton>Abrir documento</guibutton>.</para>
+    </sect2>
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="evince-close-file"> 
+      <title>Para fechar um documento</title> 
+      <para>Para fechar um documento, selecione <menuchoice><guimenu>Arquivo</guimenu><guimenuitem>Fechar</guimenuitem></menuchoice>.</para> 
+      <para>Se a janela for a última aberta do <application>Visualizador de Documentos Evince</application>, a aplicação fechará.</para> 
+    </sect2> 
+
+  </sect1>
+
+</article>

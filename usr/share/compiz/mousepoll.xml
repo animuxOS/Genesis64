@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+	<plugin name="mousepoll">
+		<short>Mouse position polling</short>
+		<short xml:lang="en_GB">Mouse position polling</short>
+		<short xml:lang="fi">Hiiren sijainnin tarkkailu</short>
+		<short xml:lang="fr">Scrutation de la position de la souris</short>
+		<short xml:lang="gl">Enquisa da posición do rato</short>
+		<short xml:lang="it">Recupero posizione del mouse</short>
+		<short xml:lang="ja">マウス位置問い合わせ</short>
+		<short xml:lang="nb">Prøving av museposisjon</short>
+		<short xml:lang="pt">Refrescamento da posição do rato</short>
+		<long>Updates the mouse pointer position from the xserver</long>
+		<long xml:lang="en_GB">Updates the mouse pointer position from the X server</long>
+		<long xml:lang="fi">Päivittää kohdistimen sijainnin x-palvelimelta</long>
+		<long xml:lang="fr">Mettre à jour la position du pointeur à partir du serveur X</long>
+		<long xml:lang="gl">Actualiza a posición do punteiro do rato dende o xserver</long>
+		<long xml:lang="it">Aggiorna la posizione del puntatore del mouse dallo xserver</long>
+		<long xml:lang="ja">マウスポインタ位置を X サーバから更新</long>
+		<long xml:lang="nb">Oppdaterer musepekerens posisjon fra xserver</long>
+		<long xml:lang="pt">Actualiza a posição do cursor do rato a partir do xserver</long>
+		<category>Utility</category>
+		<display>
+			<option type="int" read_only="true" name="abi"/>
+			<option type="int" read_only="true" name="index"/>
+			<group>
+				<short>Misc</short>
+				<short xml:lang="en_GB">Misc</short>
+				<short xml:lang="fi">Sekalaiset</short>
+				<short xml:lang="fr">Divers</short>
+				<short xml:lang="gl">Varios</short>
+				<short xml:lang="it">Varie</short>
+				<short xml:lang="ja">その他</short>
+				<short xml:lang="nb">Div</short>
+				<short xml:lang="pt">Misc</short>
+				<option type="int" name="mouse_poll_interval">
+					<short>Mouse Poll Interval</short>
+					<short xml:lang="ca">Interval de sondeig del ratolí</short>
+					<short xml:lang="el">Χρονικό Διάστημα Συμψηφισμού Ποντικιού</short>
+					<short xml:lang="en_GB">Mouse Poll Interval</short>
+					<short xml:lang="fi">Hiiren seurantatiheys</short>
+					<short xml:lang="fr">Intervalle de relevé de position de la souris</short>
+					<short xml:lang="gl">Refrescamento Punteiro Rato</short>
+					<short xml:lang="gu">માઉસ પોલ અંતરાલ</short>
+					<short xml:lang="hi">माउस पोल अंतराल</short>
+					<short xml:lang="it">Intervallo richieste mouse</short>
+					<short xml:lang="ja">マウス位置読み取り間隔</short>
+					<short xml:lang="nb">Intervall for museprøving</short>
+					<short xml:lang="nl">Muis opvraag interval</short>
+					<short xml:lang="pl">Odstęp między sygnałami badającymi położenie wskaźnika myszy</short>
+					<short xml:lang="pt">Refrescamento Ponteiro Rato</short>
+					<short xml:lang="pt_BR">Taxa de atualização do mouse</short>
+					<short xml:lang="sv">Mussökningsinstervall</short>
+					<long>How often to poll the mouse position, in miliseconds. Reduce this to reduce choppy behavior.</long>
+					<long xml:lang="el">Πόσο συχνά να συμψηφίζεται η θέση του ποντικιού, σε χιλιοστά δευτερολέπτου. Μειώστε το για να μειωθούν τα κοψίματα.</long>
+					<long xml:lang="en_GB">How often to poll the mouse position, in milliseconds. Reduce this to reduce choppy behavior.</long>
+					<long xml:lang="fi">Hiiren paikan tarkistusväli millisekunneissa. Pienennä tätä vähentääksesi pätkimistä.</long>
+					<long xml:lang="fr">Intervalle de relevé de la position de la souris, en millisecondes. Réduisez cette valeur pour réduire le comportement saccadé.</long>
+					<long xml:lang="gl">Cantas veces verificar a posición do rato, en milisegundos. Diminúa este valor para reducir comportamento " aos saltos" .</long>
+					<long xml:lang="gu">માઉસ સ્થાનને કેટલી વાર પોલ કરવો પડશે, મિલિસેકન્ડોમાં. ચોપી વર્તણૂક ઘટાડવા માટે આને ઘટાડો.</long>
+					<long xml:lang="hi">माउस स्थिति को कितनी बार पोल करना है मिली सेकेंड में. इस घटाएं चोपी व्यवहार को घटाने के लिए.</long>
+					<long xml:lang="it">Tempo in millisecondi ogni quanto chiedere lo posizione del mouse. Ridurre questo valore per evitare rallentamenti.</long>
+					<long xml:lang="ja">ミリ秒単位でのマウス位置読み取り間隔。ぎくしゃくした動きを抑制するにはこの値を減らしてください。</long>
+					<long xml:lang="nb">HVor ofte skal museposisjonen prøves, i millisekunder. Reduser dette for å minske hakkete oppførsel.</long>
+					<long xml:lang="nl">Hoe vaak de muis positie opvragen, in miliseconden. Verminder dit om schokkerige beweging te verminderen.</long>
+					<long xml:lang="pt">Quantas vezes verificar a posição do rato, em milisegundos. Diminua este valor para reduzir comportamento "aos saltos".</long>
+					<long xml:lang="pt_BR">Qual a frequência para a verificação da posição do mouse, em milisegundos. Reduzaisto para diminuir o comportamento quebrado.</long>
+					<long xml:lang="sv">Hur ofta man ska fråga efter muspostionen, i millisekunder. Minska detta för att minska hackigt beteende</long>
+					<default>10</default>
+					<min>1</min>
+					<max>500</max>
+				</option>
+			</group>
+		</display>
+	</plugin>
+</compiz>

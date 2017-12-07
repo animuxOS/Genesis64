@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+  <plugin useBcop="true" name="resizeinfo">
+    <short>Resize Info</short>
+    <short xml:lang="ca">Informació de redimensionar</short>
+    <short xml:lang="de">Fenster-Skalier-Informationen</short>
+    <short xml:lang="el">Πληροφορίες Μορφοποίησης</short>
+    <short xml:lang="en_GB">Resize Info</short>
+    <short xml:lang="fi">Koonmuutostiedot</short>
+    <short xml:lang="fr">Informations du Redimensionnement</short>
+    <short xml:lang="gl">Información do Redimensionamento</short>
+    <short xml:lang="gu">માપ બદલો જાણકારી</short>
+    <short xml:lang="hi">आकार बदलाव सूचना</short>
+    <short xml:lang="it">Informazioni sul ridimensionamento</short>
+    <short xml:lang="ja">サイズ変更情報</short>
+    <short xml:lang="nb">Info ved størrelsesendring</short>
+    <short xml:lang="nl">Info bĳ grootte wĳzigen</short>
+    <short xml:lang="pl">Pokazywanie rozmiaru okna</short>
+    <short xml:lang="pt">Informação do Redimensionamento</short>
+    <short xml:lang="pt_BR">Informação do Redimensionamento</short>
+    <short xml:lang="sv">Info vid storleksändring</short>
+    <short xml:lang="tr">Yeniden Boyutlandırma Bilgileri</short>
+    <long>Display info on resize similar to metacity</long>
+    <long xml:lang="de">Zeigt Informationen beim Skalieren von Fenstern an</long>
+    <long xml:lang="el">Εμφάνιση πληροφοριών στην μορφοποίηση παρόμοια του metacity</long>
+    <long xml:lang="en_GB">Display info on resize similar to metacity</long>
+    <long xml:lang="fr">Afficher des informations sur le redimensionnment comme Metacity</long>
+    <long xml:lang="gl">Mostrar información acerca do redimensionamento como metacity</long>
+    <long xml:lang="gu">મેટાસીટીને સરખું માપ બદલવા પર ડિસ્પ્લે જાણકારી</long>
+    <long xml:lang="hi">मेटासिटी के समान फिर आकार पर प्रदर्शन सूचना</long>
+    <long xml:lang="it">Mostra informazione al ridimensionamento, in maniera simile a quella di Metacity</long>
+    <long xml:lang="ja">Metacity に似たサイズ変更情報の表示</long>
+    <long xml:lang="nb">Vis info ved endre størrelse, lignende Metacity</long>
+    <long xml:lang="nl">Toon info bĳ grootte wĳzigen vergelĳkbaar met metacity</long>
+    <long xml:lang="pl">Pokazuj okno o rozmiarze okna podobny jak w metacity</long>
+    <long xml:lang="pt">Mostrar informação acerca do redimensionamento como metacity</long>
+    <long xml:lang="pt_BR">Mostrar informação sobre o redimensionamento como no metacity</long>
+    <long xml:lang="sv">Visa info liknade metacity under storleksändring</long>
+	<category>Utility</category>
+	<deps>
+		<relation type="after">
+			<plugin>resize</plugin>
+		</relation>
+	</deps>
+    <display>
+		<group>
+	<option type="int" name="fade_time">
+	  <short>Fade Time</short>
+	  <short xml:lang="de">Ein-/Ausblendzeit</short>
+	  <short xml:lang="el">Χρόνος Ξεθωριάσματος</short>
+	  <short xml:lang="en_GB">Fade Time</short>
+	  <short xml:lang="es">Tiempo de fundición</short>
+	  <short xml:lang="fi">Häivytysaika</short>
+	  <short xml:lang="fr">Temps de fondu</short>
+	  <short xml:lang="gl">Tempo de desvanecemento</short>
+	  <short xml:lang="gu">ધૂંધ સમય</short>
+	  <short xml:lang="hi">समय फीका करें</short>
+	  <short xml:lang="it">Durata dissolvenza</short>
+	  <short xml:lang="ja">フェード時間</short>
+	  <short xml:lang="nb">Uttoningstid</short>
+	  <short xml:lang="nl">Vervaag tijd</short>
+	  <short xml:lang="pl">Czas przenikania</short>
+	  <short xml:lang="pt">Tempo de desvanecimento</short>
+	  <short xml:lang="pt_BR">Tempo de desvanecimento</short>
+	  <short xml:lang="sv">Toningstid</short>
+	  <short xml:lang="tr">Belirme Süresi</short>
+	  <short xml:lang="zh_CN">淡入淡出时间</short>
+	  <long>Fade time (in ms) for popup window</long>
+	  <long xml:lang="de">Ein-/Ausblendzeit (in ms) für die Informationsanzeige</long>
+	  <long xml:lang="el">Χρόνος ξεθωριάσματος (σε ms) για το παράθυρο popup</long>
+	  <long xml:lang="en_GB">Fade time (in ms) for popup window</long>
+	  <long xml:lang="fr">Temps de fondu (en ms) pour l'indicateur</long>
+	  <long xml:lang="gl">Tempo de desvanecemento (en ms) para as fiestras popup</long>
+	  <long xml:lang="gu">પોપઅપ વિન્ડો માટે ધૂંધ સમય (મિલિસેકન્ડોમાં)</long>
+	  <long xml:lang="hi">पॉपअप विंडो के लिए फीका समय (मिलीसेकेंड में)</long>
+	  <long xml:lang="it">Tempo (in ms) della dissolvenza per le finestre pop-up</long>
+	  <long xml:lang="ja">ポップアップウィンドウのフェード時間（ミリ秒）</long>
+	  <long xml:lang="nb">Inn-/uttoningstid for oppsprettvindu</long>
+	  <long xml:lang="nl">Vervaag tĳd (in ms) voor popup venster</long>
+	  <long xml:lang="pl">Czas zanikania (w ms) dymka z rozmiarem</long>
+	  <long xml:lang="pt">Tempo de desvanecimento (em ms) para as janelas popup</long>
+	  <long xml:lang="pt_BR">Tempo de desvanecimento (em ms) para as janelas popup</long>
+	  <long xml:lang="sv">Toningstid (i ms) för popupfönster</long>
+	  <default>500</default>
+	  <min>10</min>
+	  <max>5000</max>
+	</option>
+	<option type="bool" name="always_show">
+	  <short>Show resize info for all windows.</short>
+	  <short xml:lang="ca">Mostra informació de mida per totes les finestres.</short>
+	  <short xml:lang="de">Zeige Informationen für alle Fenster</short>
+	  <short xml:lang="el">Δείχνει τις πληροφορίες μορφοποίησης για όλα τα παράθυρα.</short>
+	  <short xml:lang="en_GB">Show resize info for all windows.</short>
+	  <short xml:lang="fi">Näytä koonmuutostiedot</short>
+	  <short xml:lang="fr">Montrer les infos de redimensionnement pour toutes les fenêtres.</short>
+	  <short xml:lang="gl">Mostar información de redimensionamento para todas as fiestras.</short>
+	  <short xml:lang="gu">બધી વિન્ડો માટે માપ બદલવાની જાણકારી બતાવો.</short>
+	  <short xml:lang="hi">सभी विंडो के लिए आकार बदलाव सूचना दिखाएं.</short>
+	  <short xml:lang="it">Mostrare informazioni di ridimensionamento per tutte le finestre</short>
+	  <short xml:lang="ja">すべてのウィンドウのサイズ変更情報を表示</short>
+	  <short xml:lang="nb">Vis info for størrelsesendring for alle vinduer</short>
+	  <short xml:lang="nl">Toon grootte aanpassing info voor alle vensters.</short>
+	  <short xml:lang="pl">Pokaż informacje o rozmiarze dla wszystkich okien.</short>
+	  <short xml:lang="pt">Mostar informação de redimensionamento para todas as janelas.</short>
+	  <short xml:lang="pt_BR">Mostrar informação de redimensionamento para todas as janelas.</short>
+	  <short xml:lang="sv">Visa info för storleksändring på alla fönster.</short>
+	  <long>Show resize info for all windows as opposed to just windows with a resize increment of greater than 1.</long>
+	  <long xml:lang="ca">Mostra informació de mida per totes les finestres, enlloc de només per a finestres amb un increment de redimensió més gran que 1.</long>
+	  <long xml:lang="de">Zeige Informationen für alle Fenster an, nicht nur für Fenster mit einer Skalierschrittangabe (z.B. Terminals).</long>
+	  <long xml:lang="el">Δείχνει τις πληροφορίες μορφοποίησης για όλα τα παράθυρα σε αντίθεση με το απλα παράθυρα με αλλαγή διαστάσεων περισσότερο του 1.</long>
+	  <long xml:lang="en_GB">Show resize info for all windows as opposed to just windows with a resize increment of greater than 1.</long>
+	  <long xml:lang="fr">Montrer les infos de redimensionnement pour toutes les fenêtres (sinon, seulement pour les fenêtres avec un incrément de redimensionnement de 1).</long>
+	  <long xml:lang="gl">Mostrar información acerca do redimensionamento para todas as fiestras ao invés de só para fiestras cun incremento de dimensión maior que 1.</long>
+	  <long xml:lang="gu">બધી વિન્ડો માટે માપ બદલવાની જાણકારી બતાવો જેમ ખાલી વિન્ડો કે જેનો માપ બદલવાનો વધારો ૧ કરતાં વધુ હોય.</long>
+	  <long xml:lang="hi">सभी विंडो के लिए आकार बदलाव सूचना सिर्फ विंडो के विपरीत 1 से अधिक फिर आकार बढ़त के साथ.</long>
+	  <long xml:lang="it">Mostra informazioni sul ridimensionamento per tutte le finestre invece che solo per le finestre con un ridimensionamento maggiore di 1.</long>
+	  <long xml:lang="ja">リサイズの加算分が 1 より大きいウィンドウだけではなく、すべてのウィンドウのサイズ変更情報を表示</long>
+	  <long xml:lang="nb">Vis info for størrelsesendring for alle vinduer, i motsetning til vinduer med en økning på større enn 1.</long>
+	  <long xml:lang="nl">Toon grootte aanpassen info voor alle vensters in tegenstelling tot alleen de vensters met een grootte aanpassing van meer dan 1.</long>
+	  <long xml:lang="pl">Pokaż rozmiar wszystkich okien, a nie tylko tych, których rozmiar zmieniasz o więcej niż 1.</long>
+	  <long xml:lang="pt">Mostrar informação acerca do redimensionamento para todas as janelas ao invés de só para janelas com um incremento de dimensão maior que 1.</long>
+	  <long xml:lang="pt_BR">Mostrar informação sobre o redimensionamento para todas as janelas ao invés de só mostrar para janelas com um incremento de dimensão maior que 1.</long>
+	  <long xml:lang="sv">Visa info för storleksändring för alla fönster i motsats till endast fönster med en storleksändring större än 1.</long>
+	  <default>false</default>
+	</option>
+	<option type="color" name="text_color">
+	  <short>Text color.</short>
+	  <short xml:lang="ca">Color del text.</short>
+	  <short xml:lang="de">Textfarbe</short>
+	  <short xml:lang="el">Χρώμα Κειμένου.</short>
+	  <short xml:lang="en_GB">Text colour.</short>
+	  <short xml:lang="fi">Tekstin väri.</short>
+	  <short xml:lang="fr">Couleur du texte.</short>
+	  <short xml:lang="gl">Cor do texto.</short>
+	  <short xml:lang="gu">લખાણ રંગ.</short>
+	  <short xml:lang="hi">पाठ रंग.</short>
+	  <short xml:lang="it">Colore del testo</short>
+	  <short xml:lang="ja">テキストの色</short>
+	  <short xml:lang="nb">Tekstfarge.</short>
+	  <short xml:lang="nl">Tekst kleur.</short>
+	  <short xml:lang="pl">Kolor tekstu.</short>
+	  <short xml:lang="pt">Cor do texto.</short>
+	  <short xml:lang="pt_BR">Cor do texto.</short>
+	  <short xml:lang="sv">Textfärg</short>
+	  <short xml:lang="tr">Metin rengi.</short>
+	  <long>Color of text on resize popup.</long>
+	  <long xml:lang="de">Textfarbe</long>
+	  <long xml:lang="el">Χρώμα κειμένου στην μορφοποίηση popup.</long>
+	  <long xml:lang="en_GB">Colour of text on resize popup.</long>
+	  <long xml:lang="fr">Couleur du texte de l'indicateur de redimensionnement.</long>
+	  <long xml:lang="gl">Cor do texto no popup de redimensionamento.</long>
+	  <long xml:lang="gu">પોપઅપનું માપ બદલવા પર લખાણનો રંગ.</long>
+	  <long xml:lang="hi">पॉपअप को फिर आकार देने पर पाठ का रंग.</long>
+	  <long xml:lang="it">Colore del testo nella finestra del ridimensionamento.</long>
+	  <long xml:lang="ja">サイズ変更ポップアップのテキストの色</long>
+	  <long xml:lang="nb">Farge på tekst i størrelseendrings-oppsprett</long>
+	  <long xml:lang="nl">Kleur van de tekst bĳ grootte wĳzigen popup.</long>
+	  <long xml:lang="pl">Kolor teksu w dymku wyświetlającym rozmiar</long>
+	  <long xml:lang="pt">Cor do texto no popup de redimensionamento.</long>
+	  <long xml:lang="pt_BR">Cor do texto no popup de redimensionamento.</long>
+	  <long xml:lang="sv">Färg för texten på popup för storleksändring</long>
+	  <default>
+	    <red> 0x0000 </red>
+	    <blue> 0x0000 </blue>
+	    <green> 0x0000 </green>
+	    <alpha> 0xffff </alpha>
+	  </default>
+	</option>
+	<option type="color" name="gradient_1">
+	  <short>Gradient Color 1</short>
+	  <short xml:lang="ca">Color de degradat 1</short>
+	  <short xml:lang="de">Farbe 1 für Farbverlauf</short>
+	  <short xml:lang="el">Χρώμα 1 Διαβάθμισης</short>
+	  <short xml:lang="en_GB">Gradient Colour 1</short>
+	  <short xml:lang="fi">Väriliu'un väri 1</short>
+	  <short xml:lang="fr">Couleur de Gradient 1</short>
+	  <short xml:lang="gl">Cor Degradado 1</short>
+	  <short xml:lang="gu">ઢાળ રંગ ૧</short>
+	  <short xml:lang="hi">ढाल रंग 1</short>
+	  <short xml:lang="it">Gradiente colore 1</short>
+	  <short xml:lang="ja">グラデーション色 1</short>
+	  <short xml:lang="nb">Fargeovergang, farge 1</short>
+	  <short xml:lang="nl">Gradatie kleur 1</short>
+	  <short xml:lang="pl">Kolor gradientu %d</short>
+	  <short xml:lang="pt">Cor Gradiente 1</short>
+	  <short xml:lang="pt_BR">Cor Gradiente 1</short>
+	  <short xml:lang="sv">Gradientfärg 1</short>
+	  <short xml:lang="tr">Karışım Rengi 1</short>
+	  <long>Color 1 of the gradient background.</long>
+	  <long xml:lang="ca">Color 1 del degradat de fons.</long>
+	  <long xml:lang="de">Farbe 1 für den Hintergrundfarbverlauf</long>
+	  <long xml:lang="el">Χρώμα 1 του διαβαθμισμένου φόντου.</long>
+	  <long xml:lang="en_GB">First colour of the gradient background.</long>
+	  <long xml:lang="fi">Väri 1 liukuvärjätystä taustasta</long>
+	  <long xml:lang="fr">Couleur 1 du gradient d'arrière plan.</long>
+	  <long xml:lang="gl">Cor 1 do gradiente de fondo.</long>
+	  <long xml:lang="gu">ઢાળવાળા પાશ્વભાગનો રંગ ૧.</long>
+	  <long xml:lang="hi">ढ़ाल पृष्ठभूमि का रंग 1.</long>
+	  <long xml:lang="it">Colore 1 del gradiente di sfondo.</long>
+	  <long xml:lang="ja">グラデーション背景の色 1</long>
+	  <long xml:lang="nb">Farge 1 av fargeoverganen i bakgrunnen</long>
+	  <long xml:lang="nl">Kleur 1 van de gradatie achtergrond.</long>
+	  <long xml:lang="pl">Kolor %d dla gradientu w tle.</long>
+	  <long xml:lang="pt">Cor 1 do gradiente de fundo.</long>
+	  <long xml:lang="pt_BR">Cor 1 do gradiente de fundo.</long>
+	  <long xml:lang="sv">Färg 1 för gradient bakgrund</long>
+	  <default>
+	    <red> 0xcccc </red>
+	    <green> 0xcccc </green>
+	    <blue> 0xe665 </blue>
+	    <alpha> 0xcccc </alpha>
+	  </default>
+	</option>
+	<option type="color" name="gradient_2">
+	  <short>Gradient Color 2</short>
+	  <short xml:lang="ca">Color de degradat 2</short>
+	  <short xml:lang="de">Farbe 2 für Farbverlauf</short>
+	  <short xml:lang="el">Χρώμα 2 Διαβάθμισης</short>
+	  <short xml:lang="en_GB">Gradient Colour 2</short>
+	  <short xml:lang="fi">Väriliu'un väri 2</short>
+	  <short xml:lang="fr">Couleur de Gradient 2</short>
+	  <short xml:lang="gl">Cor Degradado 2</short>
+	  <short xml:lang="gu">ઢાળ રંગ ૨</short>
+	  <short xml:lang="hi">ढाल रंग 2</short>
+	  <short xml:lang="it">Gradiente colore 2</short>
+	  <short xml:lang="ja">グラデーション色 2</short>
+	  <short xml:lang="nb">Fargeovergang, farge 2</short>
+	  <short xml:lang="nl">Gradatie kleur 2</short>
+	  <short xml:lang="pl">Kolor gradientu %d</short>
+	  <short xml:lang="pt">Cor Gradiente 2</short>
+	  <short xml:lang="pt_BR">Cor Gradiente 2</short>
+	  <short xml:lang="sv">Gradientfärg 2</short>
+	  <short xml:lang="tr">Karışım Rengi 2</short>
+	  <long>Color 2 of the gradient background.</long>
+	  <long xml:lang="ca">Color 2 del degradat de fons.</long>
+	  <long xml:lang="de">Farbe 2 für den Hintergrundfarbverlauf</long>
+	  <long xml:lang="el">Χρώμα 2 του διαβαθμισμένου φόντου.</long>
+	  <long xml:lang="en_GB">Second colour of the gradient background.</long>
+	  <long xml:lang="fi">Väri 2 liukuvärjätystä taustasta</long>
+	  <long xml:lang="fr">Couleur 2 du gradient d'arrière plan.</long>
+	  <long xml:lang="gl">Cor 2 do gradiente de fondo.</long>
+	  <long xml:lang="gu">ઢાળવાળા પાશ્વભાગનો રંગ ૨.</long>
+	  <long xml:lang="hi">ढ़ाल पृष्ठभूमि का रंग 2.</long>
+	  <long xml:lang="it">Colore 2 del gradiente di sfondo.</long>
+	  <long xml:lang="ja">グラデーション背景の色 2</long>
+	  <long xml:lang="nb">Farge 2 av fargeoverganen i bakgrunnen</long>
+	  <long xml:lang="nl">Kleur 2 van de gradatie achtergrond.</long>
+	  <long xml:lang="pl">Kolor dalekiego tła.Kolor %d dla gradientu w tle.</long>
+	  <long xml:lang="pt">Cor 2 do gradiente de fundo.</long>
+	  <long xml:lang="pt_BR">Cor 2 do gradiente de fundo.</long>
+	  <long xml:lang="sv">Färg 2 för gradient bakgrund</long>
+	  <default>
+	    <red> 0xf332 </red>
+	    <green> 0xf332 </green>
+	    <blue> 0xf332 </blue>
+	    <alpha> 0xcccc </alpha>
+	  </default>
+	</option>
+	<option type="color" name="gradient_3">
+	  <short>Gradient Color 3</short>
+	  <short xml:lang="ca">Color de degradat 3</short>
+	  <short xml:lang="de">Farbe 3 für Farbverlauf</short>
+	  <short xml:lang="el">Χρώμα 3 Διαβάθμισης</short>
+	  <short xml:lang="en_GB">Gradient Colour 3</short>
+	  <short xml:lang="fi">Väriliu'un väri 3</short>
+	  <short xml:lang="fr">Couleur de Gradient 3</short>
+	  <short xml:lang="gl">Cor Degradado 3</short>
+	  <short xml:lang="gu">ઢાળ રંગ ૩</short>
+	  <short xml:lang="hi">ढाल रंग 3</short>
+	  <short xml:lang="it">Gradiente colore 3</short>
+	  <short xml:lang="ja">グラデーション色 3</short>
+	  <short xml:lang="nb">Fargeovergang, farge 3</short>
+	  <short xml:lang="nl">Gradatie kleur 3</short>
+	  <short xml:lang="pl">Kolor gradientu %d</short>
+	  <short xml:lang="pt">Cor Gradiente 3</short>
+	  <short xml:lang="pt_BR">Cor Gradiente 3</short>
+	  <short xml:lang="sv">Gradientfärg 3</short>
+	  <short xml:lang="tr">Karışım Rengi 3</short>
+	  <long>Color 3 of the gradient background.</long>
+	  <long xml:lang="ca">Color 3 del degradat de fons.</long>
+	  <long xml:lang="de">Farbe 3 für den Hintergrundfarbverlauf</long>
+	  <long xml:lang="el">Χρώμα 3 του διαβαθμισμένου φόντου.</long>
+	  <long xml:lang="en_GB">Third colour of the gradient background.</long>
+	  <long xml:lang="fi">Väri 3 liukuvärjätystä taustasta</long>
+	  <long xml:lang="fr">Couleur 3 du gradient d'arrière plan.</long>
+	  <long xml:lang="gl">Cor 3 do gradiente de fondo.</long>
+	  <long xml:lang="gu">ઢાળવાળા પાશ્વભાગનો રંગ ૩.</long>
+	  <long xml:lang="hi">ढ़ाल पृष्ठभूमि का रंग 3.</long>
+	  <long xml:lang="it">Colore 3 del gradiente di sfondo.</long>
+	  <long xml:lang="ja">グラデーション背景の色 3</long>
+	  <long xml:lang="nb">Farge 3 av fargeoverganen i bakgrunnen</long>
+	  <long xml:lang="nl">Kleur 3 van de gradatie achtergrond.</long>
+	  <long xml:lang="pl">Kolor %d dla gradientu w tle.</long>
+	  <long xml:lang="pt">Cor 3 do gradiente de fundo.</long>
+	  <long xml:lang="pt_BR">Cor 3 do gradiente de fundo.</long>
+	  <long xml:lang="sv">Färg 3 för gradient bakgrund</long>
+	  <default>
+	    <red> 0xd998 </red>
+	    <green> 0xd998 </green>
+	    <blue> 0xd998 </blue>
+	    <alpha> 0xcccc </alpha>
+	  </default>
+	</option>
+
+      </group>
+    </display>
+  </plugin>
+</compiz>

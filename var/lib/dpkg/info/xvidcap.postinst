@@ -1,0 +1,16 @@
+#! /bin/sh
+
+set -e
+
+# register docbook docs with scrollkeeper
+if [ "$1" = "configure" ]; then
+    scrollkeeper-update -q
+fi
+
+# Automatically added by dh_installmenu
+if [ "$1" = "configure" ] && [ -x "`which update-menus 2>/dev/null`" ]; then
+	update-menus
+fi
+# End automatically added section
+
+

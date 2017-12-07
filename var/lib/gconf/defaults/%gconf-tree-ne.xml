@@ -1,0 +1,831 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="सञ्झ्यालको चौडाइ">
+                                                        <longdesc>प्रदर्शित गर्नुपर्ने सञ्झ्यालको चौडाइ</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="सञ्झ्यालको उचाइ">
+                                                        <longdesc>प्रदर्शित गर्नुपर्ने सञ्झ्यालको उचाइ</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="किबाइन्डिङको प्रतिक्रिया चालु गर्न को लागी आदेशहरू">
+                                                        <longdesc>अनुरोधपत्र /मेटासिटि/ संसारिक कुन्जजोड/चालु आदेश एन कुन्जले कुन्जजोडलाई परिभाषित गर्दछ, जुन यी आदेशहरूसंग मिलदछ। आदेश एनलाई चालु गर्न कुन्जजोडलाई दवाव दिएर आदेश एन कार्यान्वयन हुन्छ।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="विन्डो स्क्रिनसट आदेश">
+                                                        <longdesc>अनुरोधपत्र /मेटासिटि/ संसारिक कुन्जजोड/चालु आदेश विन्डो स्क्रिनसट कुन्जले कुन्जजोडलाई परिभाषित गर्दछ, जसले गर्दा यो सेटिङले निश्चित गरिएको आदेश मागिन्छ।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="स्क्रिनसट आदेश">
+                                                        <longdesc>अनुरोधपत्र /मेटासिटि/ संसारिक कुन्जजोड/चालु आदेश स्क्रिनसट कुन्जले कुन्जजोडलाई परिभाषित गर्दछ, जसले गर्दा यो सेटिङले निश्चित गरिएको आदेश मागिन्छ।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="वर्णन आदेश सञ्चालन गर्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="टर्मिनल सञ्चालन गर्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="विन्डोको स्क्रिनसट लिनुहोला॒">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="स्क्रिनसट लिनुहोला॒">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="प्यालन चालु गर्ने अनुप्रयोग संवाद देखाउनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="प्यानल मेनु देखाउनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="यसको मुनि कार्यक्षेत्रमा रोक लगाउनुहोला।">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="यो भन्दा माथी कार्यक्षेत्रमा वटन दबाऊनुहोला।">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="दाहिने पट्टि कार्यक्षेत्रमा बटन दबाऊनुहोला।">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="देब्रे पट्टि कार्यक्षेत्रमा बटन दबाऊनुहोला।">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="कार्यक्षेत्र १२ बटन दबाऊनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="कार्यक्षेत्र ११ बटन दबाऊनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="कार्यक्षेत्र १० बटन दबाऊनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="कार्यक्षेत्र ९ बटन दबाऊनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="कार्यक्षेत्र ८ बटन दबाऊनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="कार्यक्षेत्र ७ बटन दबाऊनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="कार्यक्षेत्र ६ बटन दबाऊनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="कार्यक्षेत्र ५ बटन दबाऊनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="कार्यक्षेत्र ४ बटन दबाऊनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="कार्यक्षेत्र ३ बटन दबाऊनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="कार्यक्षेत्र २ बटन दबाऊनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="कार्यक्षेत्र १ बटन दबाऊनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="सबै विन्डो लुकाउनुहोला र डेक्सटपमा फोकस गर्नुहोला।">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="प्यानलहरू र डेक्सटपको बिचमा पछाडि पट्टि तुरून्त सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="प्यानलहरू र डेक्सटपको बिचमा तुरून्त सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="विन्डोको बिचमा पछाडि पट्टि तुरून्त सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="विन्डोहरूको बिचमा तुरून्त सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="पपअपसंगै प्यानलहरू र डेक्सटपको बिचमा पछाडि पट्टि सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="पपअपसंगै प्यानलहरू र डेक्सटपको बिचमा सार्नुहोला।">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="फोकसलाई पपअप प्रदर्शन प्रयोग गरेर विन्डोको बिचमा पछाडि पठाउनुहोला।">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="पपअपसंगै विन्डोहरूको बिचमा सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="तेर्सो तरिकाले विन्डो ठूलो बनाउनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="ठाडो तरिकाले विन्डो ठूलो बनाउनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="अर्को विन्डोको तल तल्लो विन्डो">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="अर्को विन्डोको माथी विन्डो उठाउनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="अमिल्दो विन्डोलाई माथी उठाउनुहोला, वा तल झार्नुहोला।">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="विन्डोलाई एक कार्यक्षेत्र तल सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="विन्डोलाई एक कार्यक्षेत्र माथी सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="विन्डोलाई एक कार्यक्षेत्र दायाँ पट्टि सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="विन्डोलाई एक कार्यक्षेत्र बायाँ पट्टि सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="विन्डोलाई कार्यक्षेत्र १२ मा सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="विन्डोलाई कार्यक्षेत्र ११ मा सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="विन्डोलाई कार्यक्षेत्र १० मा सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="विन्डोलाई कार्यक्षेत्र ९ मा सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="विन्डोलाई कार्यक्षेत्र ८ मा सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="विन्डोलाई कार्यक्षेत्र ७ मा सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="विन्डोलाई कार्यक्षेत्र ६ मा सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="विन्डोलाई कार्यक्षेत्र ५ मा सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="विन्डोलाई कार्यक्षेत्र ४ मा सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="विन्डोलाई कार्यक्षेत्र ३ मा सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="विन्डोलाई कार्यक्षेत्र २ मा सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="विन्डोलाई कार्यक्षेत्र १ मा सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="पाटो विन्डो सबै कार्यक्षेत्रहरूमा">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="विन्डोलाई पुन:आकार">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="विन्डो सार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="विन्डो सानो बनाऊनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="विन्डो बन्द गर्नुहोला।">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="पाटो छाँया अवस्थामा">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="ठुलो नभएको विन्डो">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="विन्डो ठूलो बनाउनुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="पाटो ठुलो अवस्थामा">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="पाटो जहिले पनि माथिल्लो अवस्थामा हुन्छ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="पाटो पुरै पर्दा शैलि">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="विन्डो मेनु सक्रिय बनाऊनुहोला।">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="कार्यक्षेत्रको नाम">
+                                                        <longdesc>कार्यक्षेत्रको नाम।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="पूरानो र टुक्रिएको अनुरोधपत्रलाई चाहिएको मिसफिचर्स लाई निष्क्रिय पार्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(पूर्ण नगरिएको) दिशा पत्ता लागाउनेले अनुरोधपत्रको विषयमा कार्य गर्छ विन्डोमा होईन">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="यदि सत्य भए, कम स्रोतहरू प्रयोगको लागी सम्झदारीसंग प्रयोग गर्ने क्षमता हुन्छ।">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="दृष्य घण्टि प्रकार">
+                                                        <longdesc>मेटासिटिलाई आसाधारण निर्देशक जुन प्रणाली घण्टी वा निर्देशकले बजाएको अरू अनुरोधपत्र घण्टीलाई कसरी पुरा गर्ने भनेर भन्दछ। हाल यहाँ दुईवटा मान्य मानहरू छन्। &quot;पुरापर्दा&quot;, जसले सेतो-कालो चमक पुरापर्दाको निम्ति गर्दछ र &quot;खाका चमक&quot;, जसले अनुरोधपत्रको शीर्षकबार जसले घण्टी चिन्हलाई चमकमा पठाउँछ। यदि अनुरोधपत्र, जसले घण्टी पठाउँछ, अज्ञात छ (जस्तै साधआरण पूर्वनिर्देशन &quot;प्रणाली बिप&quot; को केस) भने चालु तोकिएको विन्डोको शीर्षकबार खुल्दछ।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="प्रणाली घण्टि सुन्न सकिन्छ">
+                                                        <longdesc>निश्चित गर्नुकि अनुरोधपत्र वा प्रणालीले सुनिने बिप उत्पादन गर्न सक्छ, यो चुपचाप बिपलाई अनुमती दिन दृष्य घण्टि संग जोड्नमा प्रयोग गर्न पनि सकिन्छ।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="दृष्य घण्टि सक्षम पार्नुहोला।">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="असंख्य कार्यक्षेत्रहरू">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="विण्डो शीर्षक वर्ण">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="विन्डो शीर्षकहरूमा उच्चस्तरिय प्रणाली वर्ण प्रयोग गर्नुहोला">
+                                                        <longdesc>यदि ठिक भए, शीर्षकबार वर्ण विकल्पलाई वेवास्ता गर्नुहोला र विन्डो शीर्षकको लागी उच्चस्तरिय अनुरोधपत्र वर्ण प्रयोग गर्नुहोला।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="चालु बिषय">
+                                                        <longdesc>विषयले विन्डोको किनारा, शीर्षकबार र बाहिरि ढाँचालाई निधो गर्दछ।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="स्वत उठ्ने विकल्पको लागी मिलिसेकेन्ड ढिलाई">
+                                                        <longdesc>यदि सत्यको लागी स्वत उठ्ने मिलाईएको छ भने विन्डोलाई उठाउनु अघि भएको समयमा ढिलाई। ढिलाई हजारौ सेकेन्डमा दिईएको छ।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="तोकिएको विन्डो स्वत उठ्यो">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="शीर्षक बार दुईपटक क्लिकमा कार्य गर्नुहोला">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="विण्डो फोकस शैली">
+                                                        <longdesc>विन्डो फोकस बिधिले विन्डो कसरी संचालन गर्ने भनेर संकेत गर्दछ।यसमा तीन संभावित मोल हुन्छ, &quot;क्लिक&quot; भनेको यसलाई फोकस गर्न विन्डोमा क्लिक गर्नुपर्छ, &quot;स्लोपि&quot; भनेको जब माउस विन्डोमा जान्छ विन्डो फोकस हुन्छ र &quot;माउस&quot; भनेको विन्डोमा माउस जान्छ विन्डो फोकस हुन्छ र जब माउसले विन्डो छोड्छ तब फोकस हुंदैन।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="शिर्षकबारमा बटनहरूको तयारी">
+                                                        <longdesc>शिर्षकबारमा बटनहरूको तयारी। मान स्ट्रिङ हुनुपर्छ, जस्तै &quot;मेनु:सानो,ठूलो,बन्द&quot;; कोलनले दाँया कुनाबाट विन्डोको बाँया कुना छुट्याउछ र बटन नाम कमा छुट्याउनु हो। नक्कली बटनलाई अनुमती छैन। अज्ञात बटनको नामलाई चूपचापसंग वेवास्ता गरिन्छ, ताकि बटनलाई बिना पूरानो संस्करणलाई टुक्रायाई भविष्यमा मेटासिटि संस्करणमा जोड्न सकिन्छ।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="विन्डो क्लिक कार्य विकसित गर्नको लागी सुधारकको प्रयोग">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="पूर्वनिर्धारित अवयव दर्शक अनुप्रयोग">
+                                                                <longdesc>फाइल हेर्नका लागि प्रयोग गरिने अनुप्रयोगले ती फाइल हेर्नलाई केही तत्वको आवश्यकता महसुस गर्दछ । %s परामिति URIs फाइलमा प्रतिस्थापन गरिन्छन्, %c परामिति IID अवयवद्वारा प्रस्तिस्थापन गरिन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="पूर्वनिर्धारित टर्मिनलका लागि Exec तर्क">
+                                                                <longdesc>पूर्वनिर्धारित टर्मिनल अनुप्रयोगका लागि प्रयोग गरिने exec तर्क ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="पूर्वनिर्धारित टर्मिनल अनुप्रयोग">
+                                                                <longdesc>टर्मिनल आवश्यक पर्ने अनुप्रयोगका लागि प्रयोग गरिने पूर्वनिर्धारित टर्मिनल अनुप्रयोग ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="टर्मिनलमा आदेश चलाउनुहोस् ।">
+                                                                <longdesc>यदि आदेशलाई यस प्रकारको यूआरएल ह्यान्डल गर्न टर्मिनलमा चलाउनु पर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;h323&quot; URLs का लागि ह्यान्डलर">
+                                                                <longdesc>यदि सक्षम पारिएमा, &quot;h323&quot; URLs ह्यान्डल गर्न प्रयोग गरिने आदेश ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="निर्दिष्ट गरिएको आदेशले &quot;h323&quot; URLs ह्यान्डल गर्नुपर्दछ या पर्दैन">
+                                                                <longdesc>यदि &quot;command&quot; कुञ्जीमा निदिष्ट गरिएको आदेशले &quot;h323&quot; URLs ह्यान्डल गर्नुपर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="टर्मिनलमा आदेश चलाउनुहोस् ।">
+                                                                <longdesc>यदि आदेशलाई यस प्रकारको यूआरएल ह्यान्डल गर्न टर्मिनलमा चलाउनु पर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;callto&quot; URLs का लागि ह्यान्डलर">
+                                                                <longdesc>यदि सक्षम पारिएमा, &quot;callto&quot; URLs ह्यान्डल गर्न प्रयोग गरिने आदेश ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="निर्दिष्ट गरिएको आदेशले &quot;callto&quot; URLs ह्यान्डल गर्नुपर्दछ या पर्दैन">
+                                                                <longdesc>यदि &quot;command&quot; कुञ्जीमा निदिष्ट गरिएको आदेशले &quot;callto&quot; URLs ह्यान्डल गर्नुपर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="टर्मिनलमा आदेश चलाउनुहोस् ।">
+                                                                <longdesc>यदि आदेशलाई यस प्रकारको यूआरएल ह्यान्डल गर्न टर्मिनलमा चलाउनु पर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;mailto&quot; URLs का लागि ह्यान्डलर">
+                                                                <longdesc>यदि सक्षम पारिएमा, &quot;mailto&quot; URLs ह्यान्डल गर्न प्रयोग गरिने आदेश ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="निर्दिष्ट गरिएको आदेशले &quot;mailto&quot; URLs ह्यान्डल गर्नुपर्दछ या पर्दैन">
+                                                                <longdesc>यदि &quot;command&quot; कुञ्जीमा निदिष्ट गरिएको आदेशले &quot;mailto&quot; URLs ह्यान्डल गर्नुपर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="टर्मिनलमा आदेश चलाउनुहोस् ।">
+                                                                <longdesc>यदि आदेशलाई यस प्रकारको यूआरएल ह्यान्डल गर्न टर्मिनलमा चलाउनु पर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;https&quot; URLs का लागि ह्यान्डलर">
+                                                                <longdesc>यदि सक्षम पारिएमा, &quot;https&quot; URLs ह्यान्डल गर्न प्रयोग गरिने आदेश ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="निर्दिष्ट गरिएको आदेशले &quot;https&quot; URLs ह्यान्डल गर्नुपर्दछ या पर्दैन">
+                                                                <longdesc>यदि &quot;command&quot; कुञ्जीमा निदिष्ट गरिएको आदेशले &quot;https&quot; URLs ह्यान्डल गर्नुपर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="टर्मिनलमा आदेश चलाउनुहोस् ।">
+                                                                <longdesc>यदि आदेशलाई यस प्रकारको यूआरएल ह्यान्डल गर्न टर्मिनलमा चलाउनु पर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="टर्मिनलमा आदेश चलाउनुहोस् ।">
+                                                                <longdesc>यदि आदेशलाई यस प्रकारको यूआरएल ह्यान्डल गर्न टर्मिनलमा चलाउनु पर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;http&quot; URLs का लागि ह्यान्डलर">
+                                                                <longdesc>यदि सक्षम पारिएमा, &quot;http&quot; URLs ह्यान्डल गर्न प्रयोग गरिने आदेश ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="निर्दिष्ट गरिएको आदेशले &quot;http&quot; URLs ह्यान्डल गर्नुपर्दछ या पर्दैन">
+                                                                <longdesc>यदि &quot;command&quot; कुञ्जीमा निदिष्ट गरिएको आदेशले &quot;http&quot; URLs ह्यान्डल गर्नुपर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="टर्मिनलमा आदेश चलाउनुहोस् ।">
+                                                                <longdesc>यदि आदेशलाई यस प्रकारको यूआरएल ह्यान्डल गर्न टर्मिनलमा चलाउनु पर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;man&quot; URLs का लागि ह्यान्डलर">
+                                                                <longdesc>यदि सक्षम पारिएमा, &quot;man&quot; URLs ह्यान्डल गर्न प्रयोग गरिने आदेश ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="निर्दिष्ट गरिएको आदेशले &quot;man&quot; URLs ह्यान्डल गर्नुपर्दछ या पर्दैन">
+                                                                <longdesc>यदि &quot;command&quot; कुञ्जीमा निदिष्ट गरिएको आदेशले &quot;man&quot; URLs ह्यान्डल गर्नुपर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="टर्मिनलमा आदेश चलाउनुहोस् ।">
+                                                                <longdesc>यदि आदेशलाई यस प्रकारको यूआरएल ह्यान्डल गर्न टर्मिनलमा चलाउनु पर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;info&quot; URLs का लागि ह्यान्डलर">
+                                                                <longdesc>यदि सक्षम पारिएमा, &quot;info&quot; URLs ह्यान्डल गर्न प्रयोग गरिने आदेश ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="निर्दिष्ट गरिएको आदेशले &quot;info&quot; URLs ह्यान्डल गर्नुपर्दछ या पर्दैन">
+                                                                <longdesc>यदि &quot;command&quot; कुञ्जीमा निदिष्ट गरिएको आदेशले &quot;info&quot; URLs ह्यान्डल गर्नुपर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="टर्मिनलमा आदेश चलाउनुहोस् ।">
+                                                                <longdesc>यदि आदेशलाई यस प्रकारको यूआरएल ह्यान्डल गर्न टर्मिनलमा चलाउनु पर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ghelp&quot; URLs का लागि ह्यान्डलर">
+                                                                <longdesc>यदि सक्षम पारिएमा, &quot;ghelp&quot; URLs ह्यान्डल गर्न प्रयोग गरिने आदेश ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="निर्दिष्ट गरिएको आदेशले &quot;ghelp&quot; URLs ह्यान्डल गर्नुपर्दछ या पर्दैन">
+                                                                <longdesc>यदि &quot;command&quot; कुञ्जीमा निदिष्ट गरिएको आदेशले &quot;ghelp&quot; URLs ह्यान्डल गर्नुपर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="टर्मिनलमा आदेश चलाउनुहोस् ।">
+                                                                <longdesc>यदि आदेशलाई यस प्रकारको यूआरएल ह्यान्डल गर्न टर्मिनलमा चलाउनु पर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;trash&quot; URLs का लागि ह्यान्डलर">
+                                                                <longdesc>यदि सक्षम पारिएमा, &quot;trash&quot; URLs हान्डल गर्न प्रयोग गरिने आदेश ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="निर्दिष्ट गरिएको आदेशले &quot;trash&quot; URLs ह्यान्डल गर्नुपर्दछ या पर्दैन">
+                                                                <longdesc>यदि &quot;command&quot; कुञ्जीमा निदिष्ट गरिएको आदेशले &quot;trash&quot; URLs ह्यान्डल गर्नुपर्दछ भने ठीक हुन्छ ।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="यस प्रोफाइलको प्रयोग गरिन्छ या गरिदैँन">
+                                                                        <longdesc>यस प्रोफाइललाई प्रयोग र प्रदर्शन गर्ने या नगर्ने ।</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="यस प्रोफाइलका लागि पूर्वनिर्धारित फाइल विस्तार">
+                                                                        <longdesc>यस प्रोफाइलसँग सङ्केतन गरिएका फाइल भण्डारण गर्दा प्रयोग हुने एउटा फाइल नाम विस्तार ।</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="प्रयोग गरिने आंशिक जिस्ट्रिमर पाइपलाइन">
+                                                                        <longdesc>यस प्रोफाइलका लागि प्रयोग गरिने एउटा आंशिक जिस्ट्रिमर पाइपलाइन ।</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="अडियो प्रोफाइलका लागि विवरण">
+                                                                        <longdesc>बढी सूचना र प्रोफाइल कहिले प्रयोग गर्ने वर्णन समाविष्ट, प्रोफाइलको वर्णन ।</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="अडियो प्रोफाइलका लागि एउटा छोटो नाम">
+                                                                        <longdesc>प्रोफाइललाई अद्वितिय रूपमा पहिचान गर्न र चयनमा प्रयोग गरिने, अडियो प्रोफाइलका लागि छोटो नाम ।</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="यस प्रोफाइलको प्रयोग गरिन्छ या गरिदैँन">
+                                                                                <longdesc>यस प्रोफाइललाई प्रयोग र प्रदर्शन गर्ने या नगर्ने ।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="यस प्रोफाइलका लागि पूर्वनिर्धारित फाइल विस्तार">
+                                                                                <longdesc>यस प्रोफाइलसँग सङ्केतन गरिएका फाइल भण्डारण गर्दा प्रयोग हुने एउटा फाइल नाम विस्तार ।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="प्रयोग गरिने आंशिक जिस्ट्रिमर पाइपलाइन">
+                                                                                <longdesc>यस प्रोफाइलका लागि प्रयोग गरिने एउटा आंशिक जिस्ट्रिमर पाइपलाइन ।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="अडियो प्रोफाइलका लागि विवरण">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="अडियो प्रोफाइलका लागि एउटा छोटो नाम">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="यस प्रोफाइलका लागि पूर्वनिर्धारित फाइल विस्तार">
+                                                                                <longdesc>यस प्रोफाइलसँग सङ्केतन गरिएका फाइल भण्डारण गर्दा प्रयोग हुने एउटा फाइल नाम विस्तार ।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="प्रयोग गरिने आंशिक जिस्ट्रिमर पाइपलाइन">
+                                                                                <longdesc>यस प्रोफाइलका लागि प्रयोग गरिने एउटा आंशिक जिस्ट्रिमर पाइपलाइन ।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="अडियो प्रोफाइलका लागि विवरण">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="अडियो प्रोफाइलका लागि एउटा छोटो नाम">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="यस प्रोफाइलका लागि पूर्वनिर्धारित फाइल विस्तार">
+                                                                                <longdesc>यस प्रोफाइलसँग सङ्केतन गरिएका फाइल भण्डारण गर्दा प्रयोग हुने एउटा फाइल नाम विस्तार ।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="प्रयोग गरिने आंशिक जिस्ट्रिमर पाइपलाइन">
+                                                                                <longdesc>यस प्रोफाइलका लागि प्रयोग गरिने एउटा आंशिक जिस्ट्रिमर पाइपलाइन ।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="अडियो प्रोफाइलका लागि विवरण">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="अडियो प्रोफाइलका लागि एउटा छोटो नाम">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="यस प्रोफाइलका लागि पूर्वनिर्धारित फाइल विस्तार">
+                                                                                <longdesc>यस प्रोफाइलसँग सङ्केतन गरिएका फाइल भण्डारण गर्दा प्रयोग हुने एउटा फाइल नाम विस्तार ।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="प्रयोग गरिने आंशिक जिस्ट्रिमर पाइपलाइन">
+                                                                                <longdesc>यस प्रोफाइलका लागि प्रयोग गरिने एउटा आंशिक जिस्ट्रिमर पाइपलाइन ।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="अडियो प्रोफाइलका लागि विवरण">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="अडियो प्रोफाइलका लागि एउटा छोटो नाम">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="यस प्रोफाइलका लागि पूर्वनिर्धारित फाइल विस्तार">
+                                                                                <longdesc>यस प्रोफाइलसँग सङ्केतन गरिएका फाइल भण्डारण गर्दा प्रयोग हुने एउटा फाइल नाम विस्तार ।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="प्रयोग गरिने आंशिक जिस्ट्रिमर पाइपलाइन">
+                                                                                <longdesc>यस प्रोफाइलका लागि प्रयोग गरिने एउटा आंशिक जिस्ट्रिमर पाइपलाइन ।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="अडियो प्रोफाइलका लागि विवरण">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="अडियो प्रोफाइलका लागि एउटा छोटो नाम">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="यस प्रोफाइलका लागि पूर्वनिर्धारित फाइल विस्तार">
+                                                                                <longdesc>यस प्रोफाइलसँग सङ्केतन गरिएका फाइल भण्डारण गर्दा प्रयोग हुने एउटा फाइल नाम विस्तार ।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="प्रयोग गरिने आंशिक जिस्ट्रिमर पाइपलाइन">
+                                                                                <longdesc>यस प्रोफाइलका लागि प्रयोग गरिने एउटा आंशिक जिस्ट्रिमर पाइपलाइन ।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="अडियो प्रोफाइलका लागि विवरण">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="अडियो प्रोफाइलका लागि एउटा छोटो नाम">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="प्रोफाइलको सूची">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="स्वचालित प्रोक्सी कन्फिगरेसन यूआरएल">
+                                                <longdesc>प्रोक्सी कन्फिगरेसन मान प्रदान गर्ने यूआरएल ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="SOCKS प्रोक्सी पोर्ट">
+                                                <longdesc>तपाईँले प्रोक्सि गर्नुभएको &quot;/system/proxy/socks_host&quot; द्वारा परिभाषित मेसिनको पोर्ट ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="SOCKS प्रोक्सी होस्टनाम">
+                                                <longdesc>सक्सबाट प्रोक्सी गर्ने मेसिनको नाम ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="एफटीपी (FTP) प्रोक्सी पोर्ट">
+                                                <longdesc>तपाईँले प्रोक्सि गर्नुभएको &quot;/system/proxy/ftp_host&quot; द्वारा परिभाषित मेसिनको पोर्ट ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="एफटीपी (FTP) प्रोक्सी होस्टनाम">
+                                                <longdesc>एफटीपी (FTP)बाट प्रोक्सी गर्ने मेसिन नाम</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="एचटीटीपी (HTTP) प्रोक्सी पोर्ट सुरक्षित राख्नुहोस्">
+                                                <longdesc>तपाईँले प्रोक्सि गर्नुभएको &quot;/system/proxy/socks_host&quot; द्वारा परिभाषित मेसिनको पोर्ट ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="एचटीटीपी (HTTP) प्रोक्सी होस्टनाम सुरक्षित राख्नुहोस्">
+                                                <longdesc>एचटीटीपी (HTTP)बाट प्रोक्सी सुरक्षित गर्ने मेसिन नाम ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="प्रोक्सी कन्फिगरेसन मोड">
+                                                <longdesc>प्रोक्सी कन्फिगरेसन मोड चयन गर्नुहोस् । समर्थित मान &quot;कुनै पनि होइन&quot;, &quot;म्यानुअल&quot;, &quot;स्वचालित&quot; हुन् ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="प्रोक्सी-नभएका होस्ट">
+                                                <longdesc>यस कुञ्जीले प्रोक्सी मार्फत नभइ प्रत्यक्ष जडित होस्टको सूची समावेश गर्दछ (यदि यो सक्रिय भएमा) । यसका मानहरू, होस्टनाम, डोमेन ( *.foo.com जस्ता प्रारम्भिक वाइल्डकार्ड प्रयोग गर्ने), आई पी होस्ट ठेगाना (दुवै IPv4 र IPv6) तथा नेटमास्क भएका सञ्जाल ठेगानाहरू (१९२.१६८.०.०/२४ जस्ता केही वस्तु) हुन् ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="एचटीटीपी (HTTP) प्रोक्सी पासवर्ड">
+                                                <longdesc>एचटीटीपी (HTTP) प्रोक्सी गर्दा प्रमाणिकरणको रूपमा पास गरिने पासवर्ड ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="एचटीटीपी (HTTP) प्रोक्सी प्रयोगकर्ता नाम">
+                                                <longdesc>एचटीटीपी प्रोक्सी गर्दा, प्रमाणीकरणका रूपमा पास गरिने प्रयोगकर्ता नाम ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="प्रमाणीकरण प्रोक्सी सर्भर जडान">
+                                                <longdesc>यदि ठीक भएमा, त्यसपछि प्रोक्सी सर्भरसँग जडान गर्न प्रमाणिकरण चाहिन्छ ।&quot;/system/http_proxy/authentication_user&quot; र &quot;/system/http_proxy/authentication_password&quot; द्वारा प्रयोगकर्तानाम/पासवर्ड कम्बो परिभाषित गरिन्छ ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="एचटीटीपी (HTTP) प्रोक्सी पोर्ट">
+                                                <longdesc>तपाईँले प्रोक्सी गर्ने &quot;/system/http_proxy/host&quot; द्वारा परिभाषित मेसिनको पोर्ट ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="एचटीटीपी (HTTP) प्रोक्सी होस्टनाम">
+                                                <longdesc>एचटीटीपी (HTTP)बाट प्रोक्सी गर्ने मेसिन नाम ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="एचटीटीपी प्रोक्सी प्रयोग गर्नुहोस्">
+                                                <longdesc>इन्टरनेटमा एचटीटीपीले पहुँच प्राप्त गर्दा प्रोक्सी सेटिङ सक्षम पार्दछ ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="यस भित्र DNS-SD सेवा खोज्नका लागि अतिरिक्त डोमेन">
+                                                <longdesc>अल्पविरामले DNS-SD डोमेनको सूची विभाजन गर्दछ जुन &quot;network:///&quot; स्थानमा देखिने हुनुपर्दछ ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="स्थानीय DNS-SD सेवा कसरी प्रदर्शन गर्नुहुन्छ">
+                                                <longdesc>सम्भावित मान &quot;गाभिएका&quot;, &quot;विभाजन&quot; र &quot;अक्षम&quot; हुन् ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="एसएमबी (SMB) कार्यसमूह">
+                                                <longdesc>विण्डोज नेटवर्किङ कार्यसमूह वा डोमेन जुन प्रयोगकर्ता एउटा अंश हो । नयाँ कार्यसमूहका लागि पूरै प्रभाव पार्न प्रयोगकर्ताले लग आउट गरेर फेरि लगइन गर्नुपर्दछ ।</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

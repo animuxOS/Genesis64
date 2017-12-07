@@ -1,0 +1,37 @@
+#! /bin/sh
+
+PREREQ=""
+DESCRIPTION="Loading preseed file..."
+
+. /scripts/casper-functions
+
+prereqs ()
+{
+	echo "$PREREQ"
+}
+
+case $1 in
+# get pre-requisites
+prereqs)
+	prereqs
+	exit 0
+	;;
+esac
+
+log_begin_msg "$DESCRIPTION"
+
+if [ -f "/root/${LOCATION}" ]; then
+    chroot /root debconf-set-selections < "/root/${LOCATION}"
+fi
+
+if [ -n "${PRESEEDS}" ]; then
+    for preseed in ${PRESEEDS}; do
+    	question="${preseed%%=*}"
+		value="${preseed#*=}"
+		casper-preseed /root "${question}" "${value}"
+	done
+fi
+
+log_end_msg
+
+exit 0

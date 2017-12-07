@@ -1,0 +1,21 @@
+#!/bin/sh
+
+set -e
+
+# Automatically added by dh_installxmlcatalogs
+if [ "$1" = "configure" ]; then
+	update-xmlcatalog --add --type uri --id "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/" --package scrollkeeper --local /usr/share/xml/scrollkeeper/dtds/catalog.xml
+
+	update-xmlcatalog --add --type uri --id "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/" --package scrollkeeper --root
+
+fi
+# End automatically added section
+
+
+touch /usr/share/scrollkeeper/configured
+
+if [ "$1" = "configure" ]; then
+    printf "Rebuilding the database. This may take some time.\n"
+    scrollkeeper-rebuilddb -q
+fi
+

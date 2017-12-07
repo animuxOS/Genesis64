@@ -1,0 +1,26 @@
+#!/bin/sh -e
+
+#if [ "$1" = purge ]; then
+	# Remove /dev/dhahelper devices ?
+#	if [ -d /dev/dhahelper ]; then
+#		rm -rf /dev/dhahelper
+#	fi
+#fi
+
+if [ "$1" = "remove" ]; then
+	ldconfig
+
+  if [ -x update-desktop-database ]; then
+    update-desktop-database -q
+  fi
+fi
+
+# Automatically added by dh_installmenu
+if [ -x "`which update-menus 2>/dev/null`" ]; then update-menus ; fi
+# End automatically added section
+# Automatically added by dh_installmime
+if which update-mime >/dev/null 2>&1; then update-mime; fi
+# End automatically added section
+
+
+exit 0

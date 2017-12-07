@@ -1,0 +1,13 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+pyexecdir=${exec_prefix}/lib/python2.4/site-packages
+
+Name: compizconfig-python
+Description: Compiz configuration system bindings
+Version: 0.6.0.1
+
+Requires: libcompizconfig >= 0.6.0 glib-2.0 >= 2.6 
+Libs: -lcompizconfig -lXcomposite -lXdamage -lXrandr -lXinerama -lSM -lxslt -lstartup-notification-1 -lXfixes -lICE -lxml2 -lglib-2.0   -L${exec_prefix}/lib -lcompizconfig
+Cflags: -I/usr/include/compizconfig -I/usr/include/libxml2 -I/usr/include/startup-notification-1.0 -I/usr/include/compiz -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include   -I${prefix}/include/compizconfig

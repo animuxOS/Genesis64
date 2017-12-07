@@ -1,0 +1,16 @@
+#This calls the standard spotlight shader.
+#User entered parameter for "beamdistribution".
+#The linked lamps "SpotBl" slider controls "conedeltaangle".
+#The linked lamps "SpotSi" slider controls "coneangle".
+#The linked lamps "Point At" orientation controls "to".
+#The linked lamps "From" orientation controls "from".
+#The linked lamps "Lamp Color" button controls "light color".
+#The linked lamps "Energy" slider controls "intensity".
+LightSource "spotlight" <LightID_I>
+	"uniform float beamdistribution" [ 2 ]
+	"uniform float conedeltaangle" <LampSpotBl_M0.2_A0.0_F>
+	"uniform float coneangle" <LampSpotSi_M0.5_A0.0_F>
+	"uniform point to" <TO_P>
+	"uniform point from" <FROM_P>
+	"uniform color lightcolor" <LampLightColor_C>
+	"uniform float intensity" <LampEnergy_M30.0_A0.0_F>

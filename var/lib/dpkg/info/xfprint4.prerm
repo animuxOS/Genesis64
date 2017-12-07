@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+if [ "$1" = "remove" ]; then
+	# Get xfce-mcs-manager to reinit
+	kill -s USR1 `pidof xfce-mcs-manager` >/dev/null 2>&1 || true
+fi
+
+
+
+exit 0

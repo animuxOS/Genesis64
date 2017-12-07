@@ -1,0 +1,868 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Lebar Jendela">
+                                                        <longdesc>Lebar jendela yang ditampilkan</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Tinggi Jendela">
+                                                        <longdesc>Tinggi jendela yang ditampilkan</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Perintah yang akan dijalankan bila tombol kombinasi ditekan">
+                                                        <longdesc>Key /apps/metacity/global_keybindings/run_command_N menentukan kombinasi tombol untuk perintah ini. Dengan menekan kombinasi tombol tersebut maka perintah command_N akan dijalankan.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Perintah pengambilan gambar layar pada jendela">
+                                                        <longdesc>Key /apps/metacity/global_keybindings/run_command_window_screenshot menentukan kombinasi tombol untuk menjalankan perintah ini.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Perintah screenshot">
+                                                        <longdesc>Key /apps/metacity/global_keybindings/run_command_screenshot menentukan kombinasi tombol untuk menjalankan perintah ini</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Jalankan perintah tertentu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Jalankan terminal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Ambil gambar layar khusus jendela tertentu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Ambil gambar layar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Tampilkkan kotak dialog panel untuk menjalankan aplikasi">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Tampilkan menu panel">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Ganti ke area kerja yang lebih rendah">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Ganti ke area kerja yang lebih tinggi">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Ganti ke area kerja sebelah kanan">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Ganti ke area kerja sebelah kiri">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Ganti ke area kerja 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Ganti ke area kerja 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Ganti ke area kerja 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Ganti ke area kerja 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Ganti ke area kerja 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Ganti ke area kerja 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Ganti ke area kerja 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Ganti ke area kerja 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Ganti ke area kerja 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Ganti ke area kerja 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Ganti ke area kerja 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Ganti ke area kerja 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Sembunyikan semua jendela dan fokus ke desktop">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Pindahkan langsung ke belakang antara panel dan desktop">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Pindahkan langsung antara panel dan desktop">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Pindahkan langsung ke belakang antara jendela">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Pindahkan langsung antara jendela-jendela">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Pindahkan ke belakang antara jendela aplikasi dengan popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Pindahkan antara jendela aplikasi dengan popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Pindahkan langsung ke belakang antara jendela aplikasi segera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Pindahkan langsung antara jendela-jendela aplikasi segera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Pindahkan ke belakang antara  panel dan desktop dengan popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Pindahkan antara panel dan desktop dengan popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Pindahkan fokus ke belakang antara jendela dengan menampilkan popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Pindahkan antara jendela dengan popup">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Maksimalkan ukuran jendela secara horisontal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Maksimalkan ukuran jendela secara vertikal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Turunkan jendela di bawah jendela lain">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Naikan jendela ini di atas jendela-jendela lain">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Naikan jendela tertentu dan turunkan yang lain">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja bawah">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja atas">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja kanan">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja kiri">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Pindahkan jendela ke area kerja 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Togel jendela pada semua workspace">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Rubah ukuran jendela">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Pindahkan jendela">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Minimalkan ukuran jendela">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Tutup jendela">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Togel kondisi tergulung">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Kembalikan ukuran jendela kembali semula">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Maksimalkan ukuran jendela">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Togel kondisi maksimum">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Togel kondisi apakah jendela selalu ada di atas">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Rubah mode layar penuh">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Aktifkan menu jendela">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Nama area kerja">
+                                                        <longdesc>Nama workspace.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Nonaktifkan fitur yang diperlukan oleh aplikasi tua dan aplikasi jelek">
+                                                        <longdesc>Beberapa aplikasi tidak mengacuhkan spesifikasi yang dapat menyebabkan keselahan pengelola jendela. Pilihan ini menempatkan Metacity pada mode pembenaran yang tepat, yang akan memberikan antar muka pengguna yang lebih konsisten, sehingga tidak perlu menjalankan aplikasi yang berkelakuan tidak benar.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Belum jadi) Navigasi dilakukan berdasarkan aplikasi, bukan jendela">
+                                                        <longdesc>Bila bernilai true, Metacity akan menjalankan tugas berdasarkan aplikasi, bukan berdasarkan jendela. Konsepnya agak sedikit abstrak, tapi secara umum, konsepnya lebih mirip ke Mac ketimbang ke Windows. Saat Anda memberi fokus pada window pada modus aplikasi, semua jendela pada aplikasi akan dinaikkan. Juga, pada mode berdasarkan aplikasi, klik fokus tidak diberikan ke jendela pada aplikasi lain. Mode berdasarkan aplikasi, bagaimanapun, belum lagi diterapkan secara luar pada saat ini.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Pilih jika Anda mementingkan penggunaan memori yang lebih kecil dari pada daya guna">
+                                                        <longdesc>Jika benar, metacity akan memberikan kembalian pengguna yang lebih sedikit dengan menggunakan wireframes menghindari animasi, atau yang lain. Ini berarti akan kurang berdaya guna untuk kebanyakan pemakai, tetapi akan membolehkan aplikasi lama untuk tetap bekerja, dan mungkin juga berguna untuk server terminal. Bagaimanapun, fitur bingkai kawat akan dimatikan saat kemudahan akses dinyalakan.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Tipe Bel Visual">
+                                                        <longdesc>Menentukan cara Metacity menyajikan indikasi visual saat bel sistem atau aplikasi sedang dibunyikan. Ada dua cara yang digunakan, yaitu &quot;fullscreen&quot;yang akan menampilkan kilatan hitam putih di seluruh area layar, dan &quot;frame_flash&quot;yang akan menampikan kilatan pada kotak judul window aplikasi yang membunyikan bel.Jika tidak diketahui aplikasi mana yang membunyikan bel (biasanya karena inimerupakan bel sistem standar) maka kilatan akan ditampilkan pada kotak judul window yang sedang memiliki fokus saat ini.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Bel sistem dapat terdengar">
+                                                        <longdesc>Menentukan apakah aplikasi atau sistem dapat membuat bel yang dapat terdengar.Hal ini berlawanan dengan bel visual yang tidak mengeluarkan suara pada saat membunyikan bel.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Gunakan Bel Visual">
+                                                        <longdesc>Nyalakan indikasi visual saat aplikasi atau sistem mengeluarkan &apos;bell&apos; atau &apos;beep&apos;. Ini berguna bagi pengguna yang mengalami kurang pendengaran atau pada penggunaan di tempat-tempat yang berisik.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Jumlah area kerja">
+                                                        <longdesc>Jumlah ruang kerja. Harus bernilai lebih dari nol, dan memiliki batas maksimum untuk mencegah kerusakan pada desktop, misalnya karena minta membuat begitu banyak ruang kerja.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Jenis huruf yang dipakai pada judul jendela">
+                                                        <longdesc>Kalimat deskripsi font menjelaskan jenis huruf yang akan digunakan untuk judul jendela. Ukuran pada deskripsi akan digunakan hanya jika pilihan titlebar_font_size diset ke angka 0.Pilihan ini juga akan mati apabila pilihan titlebar_uses_desktop_font bernilai true.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Gunakan jenis huruf sistem standar pada judul jendela">
+                                                        <longdesc>Bila bernilai true, pilihan titlebar_font akan diabaikan dan gunakan jenis huruf yang digunakan aplikasi standar pada judul windownya.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Tema yang aktif">
+                                                        <longdesc>Tema menentukan kemunculan batas-batas pada window, judul, dan lain-lain </longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Jeda dalam milidetik untuk pilihan naikan jendela secara otomatis">
+                                                        <longdesc>Waktu jeda sebelum suatu window akan otomatis naik apabila auto_rise diaktifkan. Waktu jeda dinyatakan dalam seperseribu detik.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Naikan jendela yang berfokus secara otomatis">
+                                                        <longdesc>Bila bernilai true dan modus fokus bernilai &quot;sloppy&quot; atau &quot;mouse&quot; maka window yang berfokus akan dinaikkan secara otomatis setelah waktu jeda ditetapkan oleh key auto_rise_delay. Hal ini tidak berhubungan untuk mengklik pada jendela untuk memunculkannya, ataupun untuk memasukkan jendela ketika seret-dan-letakkan.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Aksi yang harus dilakukan saat judul jendela diklik ganda">
+                                                        <longdesc>Pilihan ini menentukan efek samping klik ganda pada judul window. Pilihan yang sah adalah &apos;toggle_shade&apos; yang akan menggulung/membuka window, dan &apos;toggle_maximize&apos; yang akan memaksimalkan dan mengecilkan window, dan &apos;none&apos; tidak akan melakukan apapun.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Apakah kemunculan akan menjadi efek-samping dari interaksi pengguna lain">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Kendalikan bagaimana jendela baru berfokus">
+                                                        <longdesc>Pilihan ini menyediakan kendali tambahan pada bagaimana jendela yang baru di buat berfokus. Dia memiliki dua nilai yang mungkin; &quot;pintar&quot; menerapkan mode fokus normal pengguna, dan &quot;strict&quot; menghasilkan jendela dimulai dari terminal tidak akan berfokus.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Mode fokus jendela">
+                                                        <longdesc>Modus fokus suatu window yang menentukan bagaimana cara mengaktifkan window tersebut. Ada tiga macam yaitu: &quot;klik&quot; berarti window harus diklik terlebih dahulu baru dinaikkan, &quot;sloppy&quot; berarti window akan menerima fokus saat mouse memasuki area window, dan &quot;mouse&quot; berarti window akan diberi fokus apabila mouse memasuki area window dan akan kembali kehilangan fokus saat mouse keluar dari area window.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Pengaturan tombol pada judul jendela">
+                                                        <longdesc>Pengaturan tombol pada judul menu. Nilai di sini harus berupa string, misalnya &quot;menu:minimize,maximize,close&quot;. Tanda titik dua memisahkan bagian kiri window dan bagian kanan window, dan nama tombol dipisahkan dengan tanda koma. Tombol boleh lebih dari satu kali dicantumkan. Nama tombol yang tidak dikenal akan diabaikan sehingga di kemudian hari tombol tersebut akan dapat ditambahkan bila memang diperlukan tanpa harus merusak konfigurasi Metacity yang ada sekarang.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Tombol yang digunakan untuk menjalankan suatu perintah apabila jendela diklik">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Penampil standar">
+                                                                <longdesc>Aplikasi yang digunakan untuk menampilkan isi file ini. Parameter %s akan disubstitusi dengan URI file ini, dan parameter %c akan digantikan dengan IID komponennya</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Parameter tambahan untuk terminal standar">
+                                                                <longdesc>Parameter yang akan disampaikan kepada aplikasi terminal itu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Aplikasi terminal standar">
+                                                                <longdesc>Aplikasi terminal standar yang akan digunakan bagi semua aplikasi yang membutuhkan terminal</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Jalankan program di dalam terminal">
+                                                                <longdesc>Pilih jika URL ini ingin dijalankan lewat sebuah terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Pengatur URL &quot;h323&quot;">
+                                                                <longdesc>Perintah untuk mengatur URL &quot;h232&quot; jika ada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Pilih jika perintah ini dapat mengatur URL &quot;h323&quot;">
+                                                                <longdesc>Pilih jika ingin memasang program pengatur URL &quot;h323&quot; pada bagian &quot;command&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Jalankan program di dalam terminal">
+                                                                <longdesc>Pilih jika URL ini ingin dijalankan lewat sebuah terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Pengatur URL &quot;callto&quot;">
+                                                                <longdesc>Perintah untuk mengatur URL &quot;callto&quot; jika ada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Pilih jika perintah ini dapat mengatur URL &quot;callto&quot;">
+                                                                <longdesc>Pilih jika ingin memasang program pengatur URL &quot;callto&quot; pada bagian &quot;command&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Jalankan program di dalam terminal">
+                                                                <longdesc>Pilih jika URL ini ingin dijalankan lewat sebuah terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Pengatur URL &quot;mailto&quot;">
+                                                                <longdesc>Perintah untuk mengatur URL &quot;mailto&quot; jika ada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Pilih jika perintah ini dapat mengatur URL &quot;mailto&quot;">
+                                                                <longdesc>Pilih jika ingin memasang program pengatur URL &quot;mailto&quot; pada bagian &quot;command&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Jalankan program di dalam terminal">
+                                                                <longdesc>Pilih jika URL ini ingin dijalankan lewat sebuah terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Pengatur URL &quot;https&quot;">
+                                                                <longdesc>Perintah untuk mengatur URL &quot;https&quot; jika ada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Pilih jika perintah ini dapat mengatur URL &quot;https&quot;">
+                                                                <longdesc>Pilih jika ingin memasang program pengatur URL &quot;https&quot; pada bagian &quot;command&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Jalankan program di dalam terminal">
+                                                                <longdesc>Pilih jika URL ini ingin dijalankan lewat sebuah terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Jalankan program di dalam terminal">
+                                                                <longdesc>Pilih jika URL ini ingin dijalankan lewat sebuah terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Pengatur URL &quot;http&quot;">
+                                                                <longdesc>Perintah untuk mengatur URL &quot;http&quot; jika ada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Pilih jika perintah ini dapat mengatur URL &quot;http&quot;">
+                                                                <longdesc>Pilih jika ingin memasang program pengatur URL &quot;ghelp&quot; pada bagian &quot;command&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Jalankan program di dalam terminal">
+                                                                <longdesc>Pilih jika URL ini ingin dijalankan lewat sebuah terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Pengatur URL &quot;man&quot;">
+                                                                <longdesc>Perintah untuk mengatur URL &quot;man&quot; jika ada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Pilih jika perintah ini dapat mengatur URL &quot;man&quot;">
+                                                                <longdesc>Pilih jika ingin memasang program pengatur URL &quot;man&quot; pada bagian &quot;command&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Jalankan program di dalam terminal">
+                                                                <longdesc>Pilih jika URL ini ingin dijalankan lewat sebuah terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Pengatur URL &quot;info&quot;">
+                                                                <longdesc>Perintah untuk mengatur URL &quot;info&quot; jika ada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Pilih jika perintah ini dapat mengatur URL &quot;info&quot;">
+                                                                <longdesc>Pilih jika ingin memasang program pengatur URL &quot;info&quot; pada bagian &quot;command&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Jalankan program di dalam terminal">
+                                                                <longdesc>Pilih jika URL ini ingin dijalankan lewat sebuah terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Pengatur URL &quot;ghelp&quot;">
+                                                                <longdesc>Perintah untuk mengatur URL &quot;ghelp&quot; jika ada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Pilih jika perintah ini dapat mengatur URL &quot;ghelp&quot;">
+                                                                <longdesc>Pilih jika ingin memasang program pengatur URL &quot;ghelp&quot; pada bagian &quot;command&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Jalankan program di dalam terminal">
+                                                                <longdesc>Pilih jika URL ini ingin dijalankan lewat sebuah terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Pengatur URL &quot;trash&quot;">
+                                                                <longdesc>Perintah untuk mengatur URL &quot;trash&quot; jika ada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Pilih jika perintah ini dapat mengatur URL &quot;trash&quot;">
+                                                                <longdesc>Pilih jika ingin memasang program pengatur URL &quot;trash&quot; pada bagian &quot;command&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Gunakan profil ini atau tidak">
+                                                                        <longdesc>Gunakan dan tampilkan profil ini atau tidak.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Nama berkas standar profil">
+                                                                        <longdesc>Ekstensi nama yang digunakan saat menyimpan berkas menggunakan profil ini.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Pipa GStreamer parsial yang digunakan">
+                                                                        <longdesc>Pipa GStreamer parsial yang digunakan pada profil ini.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="Keterangan profil audio">
+                                                                        <longdesc>Keterangan profil, berisi informasi tentang penggunaan profil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Nama singkat profil audio">
+                                                                        <longdesc>Nama singkat profil audio yang digunakan pada pilihan dan sekaligus berperan sebagai nama unik.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Gunakan profil ini atau tidak">
+                                                                                <longdesc>Gunakan dan tampilkan profil ini atau tidak.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Nama berkas standar profil">
+                                                                                <longdesc>Ekstensi nama yang digunakan saat menyimpan berkas menggunakan profil ini.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Pipa GStreamer parsial yang digunakan">
+                                                                                <longdesc>Pipa GStreamer parsial yang digunakan pada profil ini.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Keterangan profil audio">
+                                                                                <longdesc>Keterangan profil, berisi informasi tentang penggunaan profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Nama singkat profil audio">
+                                                                                <longdesc>Nama singkat profil audio yang digunakan pada pilihan dan sekaligus berperan sebagai nama unik.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Nama berkas standar profil">
+                                                                                <longdesc>Ekstensi nama yang digunakan saat menyimpan berkas menggunakan profil ini.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Pipa GStreamer parsial yang digunakan">
+                                                                                <longdesc>Pipa GStreamer parsial yang digunakan pada profil ini.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Keterangan profil audio">
+                                                                                <longdesc>Keterangan profil, berisi informasi tentang penggunaan profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Nama singkat profil audio">
+                                                                                <longdesc>Nama singkat profil audio yang digunakan pada pilihan dan sekaligus berperan sebagai nama unik.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Nama berkas standar profil">
+                                                                                <longdesc>Ekstensi nama yang digunakan saat menyimpan berkas menggunakan profil ini.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Pipa GStreamer parsial yang digunakan">
+                                                                                <longdesc>Pipa GStreamer parsial yang digunakan pada profil ini.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Keterangan profil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Nama singkat profil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Nama berkas standar profil">
+                                                                                <longdesc>Ekstensi nama yang digunakan saat menyimpan berkas menggunakan profil ini.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Pipa GStreamer parsial yang digunakan">
+                                                                                <longdesc>Pipa GStreamer parsial yang digunakan pada profil ini.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Keterangan profil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Nama singkat profil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Nama berkas standar profil">
+                                                                                <longdesc>Ekstensi nama yang digunakan saat menyimpan berkas menggunakan profil ini.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Pipa GStreamer parsial yang digunakan">
+                                                                                <longdesc>Pipa GStreamer parsial yang digunakan pada profil ini.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Keterangan profil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Nama singkat profil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Nama berkas standar profil">
+                                                                                <longdesc>Ekstensi nama yang digunakan saat menyimpan berkas menggunakan profil ini.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Pipa GStreamer parsial yang digunakan">
+                                                                                <longdesc>Pipa GStreamer parsial yang digunakan pada profil ini.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Keterangan profil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Nama singkat profil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Daftar profil">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="URL konfigurasi proksi otomatis">
+                                                <longdesc>URL yang memberikan konfigurasi proxy.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="Port proksi SOCKS">
+                                                <longdesc>Port proksi yang digunakan oleh komputer yang tercantum pada &quot;/system/proxy/socks_host&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="Nama komputer proxy SOCKS">
+                                                <longdesc>Nama komputer yang hendak menggunakan proksi socks</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="Port proksi FTP">
+                                                <longdesc>Port proksi yang digunakan oleh komputer yang tercantum pada &quot;/system/proxy/ftp_host&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="Nama komputer proksi FTP">
+                                                <longdesc>Nama komputer yang hendak menggunakan proksi FTP</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Port proksi HTTP Secure">
+                                                <longdesc>Port proksi yang digunakan oleh komputer yang tercantum pada &quot;/system/proxy/secure_host&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Nama komputer proksi HTTP Secure">
+                                                <longdesc>Nama komputer yang hendak menggunakan proksi HTTP secure</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Modus konfigurasi proksi">
+                                                <longdesc>Pilihlah modus konfigurasi yang digunakan. Pilih antara &quot;none&quot;, &quot;manual&quot;, atau &quot;auto&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Host non-proksi">
+                                                <longdesc>Ini berisi daftar komputer yang akan terhubung langsung ke tujuan tanpa melalui proksi. Silakan isi dengan nama komputer, nama domain (gunakan wildcard semisal *.foo.com), alamat IP (boleh IPv4 atau IPv6), atau alamat jaringan lengkap dengan netmask (misalnya 192.168.0.0/24).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="Kata sandi pada proksi HTTP">
+                                                <longdesc>Kata sandi yang digunakan untuk melakukan otentikasi proksi HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="Nama pemakai pada proksi HTTP">
+                                                <longdesc>Nama pemakai yang digunakan untuk otentikasi proksi HTTP</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Lakukan otentikasi pada koneksi server proksi">
+                                                <longdesc>Pilih jika ingin menggunakan otentikasi pada server proksi. Kolom nama pemakai dan kata sandinya silakan di set pada &quot;/system/http_proxy/authentication_user&quot; dan &quot;/system/http_proxy/authentication_password&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="Port proksi HTTP">
+                                                <longdesc>Port proksi yang digunakan oleh komputer yang tercantum pada &quot;/system/http_proxy/host&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="Nama komputer proksi HTTP">
+                                                <longdesc>Nama komputer yang hendak menggunakan proksi HTTP</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="Gunakan proksi HTTP">
+                                                <longdesc>Aktifkan proksi saat mengakses HTTP lewat Internet.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Ranah tambahan yang dicari layanan DNS SD">
+                                                <longdesc>Daftar ranah DNS SD (dibatasi koma) yang seharusnya nampak pada lokasi &quot;network:///&quot;</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Penampakan layanan DNS SD lokal">
+                                                <longdesc>Nilai yang mungkin: &quot;merged&quot;, &quot;separate&quot; dan &quot;disabled&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="Workgroup SMB">
+                                                <longdesc>Kelompok kerja jaringan Windows atau ranah tempat pengguna berada. Pengguna sebaiknya keluar dan masuk kembali ke jaringan agar dapat diterima pada kelompok kerja.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

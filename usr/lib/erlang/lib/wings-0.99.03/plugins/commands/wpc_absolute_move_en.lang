@@ -1,0 +1,35 @@
+%% -*- mode:erlang; erlang-indent-level: 2 -*-
+{wpc_absolute_move,
+ [
+  {draw,
+   [
+    {1,"Absolute Commands"},
+    {2,"Move"},
+    {3,"Move to exact position in absolute coordinates."},
+    {4,"Snap"},
+    {5,"Move to secondary selection."},
+    {6,"Move using center as reference."},
+    {7,"Move and display numeric entry."}
+   ]},
+  {draw_window1,
+   [
+    {1,"Absolute move options"},
+    {2,"Set position"},
+    {3,"Move object"},
+    {4,"Move objects"},
+    {5,"Duplicates"},
+    {6,"Align"},
+    {7,"Flatten"},
+    {8,"Reference point is"},
+    {9,"Lock"}
+   ]},
+  {mirror_error,
+   [
+    {1,"You cannot move vertices from mirror plane"}
+   ]},
+  {selection_ask,
+   [
+    {1,"Select reference point for snap operation"},
+    {2,"Select target point for snap operation"}
+   ]}
+ ]}.

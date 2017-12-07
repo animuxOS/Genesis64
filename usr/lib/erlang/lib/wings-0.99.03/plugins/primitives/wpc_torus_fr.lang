@@ -1,0 +1,77 @@
+%% -*- mode:erlang; erlang-indent-level: 2 -*-
+{wpc_torus,
+ [
+  {make_lutorus,
+   [
+    {1,"Creer un Tore irregulier"},
+    {2,"Resolution U"},
+    {3,"Resolution V"},
+    {4,"Rayon Majeur"},
+    {5,"Rayon Mineur"},
+    {6,"Morceau"},
+    {7,"Amplitude des Morceaux"}
+   ]},
+  {make_sptorus,
+   [
+    {1,"Creer un tore spirale"},
+    {2,"Resolution U"},
+    {3,"Resolution V"},
+    {4,"Rayon Majeur"},
+    {5,"Rayon Mineur"},
+    {6,"Boucle       "},
+    {7,"Rayon de la Boucle"}
+   ]},
+  {make_uvtorus,
+   [
+    {1,"Creer un Tore UV"},
+    {2,"Resolution U"},
+    {3,"Resolution V"},
+    {4,"Rayon Majeur"},
+    {5,"Rayon Mineur"}
+   ]},
+  {torus_menu,
+   [
+    {1,"Tore UV"},
+    {2,"Tore Irregulier"},
+    {3,"Tore Spirale"}
+   ]}
+ ]}.
+%% [wpc_torus,make_lutorus] is not used
+%% [wpc_torus,make_sptorus] is not used
+%% [wpc_torus,make_uvtorus] is not used
+
+%%
+%% The following strings have no translation.
+%%
+
+{wpc_torus,
+ [
+  {make_uv_torus,
+   [
+    {1,"UV Torus Options"},
+    {2,"U Resolution"},
+    {3,"V Resolution"},
+    {4,"Major Radius"},
+    {5,"Minor Radius"}
+   ]},
+  {make_sp_torus,
+   [
+    {1,"Spiral Torus Options"},
+    {2,"U Resolution"},
+    {3,"V Resolution"},
+    {4,"Major Radius"},
+    {5,"Minor Radius"},
+    {6,"Loops"},
+    {7,"Loop Radius "}
+   ]},
+  {make_lu_torus,
+   [
+    {1,"Lumpy Torus Options"},
+    {2,"U Resolution"},
+    {3,"V Resolution"},
+    {4,"Major Radius"},
+    {5,"Minor Radius"},
+    {6,"Lumps"},
+    {7,"Lump Amplitude"}
+   ]}
+ ]}.

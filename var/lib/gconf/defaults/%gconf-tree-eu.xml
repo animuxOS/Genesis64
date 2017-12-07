@@ -1,0 +1,963 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="&apos;Gnome-keyring&apos;-en PKCS#11 osagaia gaitu behar den ala ez.">
+                                                        <longdesc>Aukera honek PKCS#11 osagaia gaitzen du gnome-keyring daemonean. gnome-keyring-daemon abiaraztean soilik hartzen da eragina (adib. erabiltzaileak saioa hastean). Ezarpen hau gainidatzi egingo da komando-lerroko argumentu batzuk daemonari ematean.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="&apos;Gnome-keyring&apos;-en SSH agentea gaitu behar den ala ez.">
+                                                        <longdesc>Aukera honek SSH agentea gaitzen du gnome-keyring daemonean. gnome-keyring-daemon abiaraztean soilik hartzen da eragina (adib. erabiltzaileak saioa hastean). Ezarpen hau gainidatzi egingo da komando-lerroko argumentu batzuk daemonari ematean.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Leihoaren zabalera">
+                                                        <longdesc>Bistaratuko den leihoaren zabalera</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Leihoaren altuera">
+                                                        <longdesc>Bistaratuko den leihoaren altuera</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gksu">
+                                <entry name="save-keyring">
+                                        <local_schema short_desc="Gako-sorta (pasahitzak hor gordetzeko)">
+                                                <longdesc>Gksu-k erabiliko duen gako-sortaren izena. Balio erabilgarriak: &quot;session&quot; (saioa), pasahitza saioan gordetzeko; &quot;default&quot; (lehenetsia), pasahitza denbora-mugarik gabe gordetzeko.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="save-to-keyring">
+                                        <local_schema short_desc="Gorde pasahitza &apos;gnome-keyring&apos;-en">
+                                                <longdesc>&apos;gksu&apos;-k idazten duzun pasahitza &apos;gnome-keyring&apos;-en gorde dezake, aldi bakoitzean zuri ez galdetzeko.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display-no-pass-info">
+                                        <local_schema short_desc="Bistaratu informazioaren mezua pasahitzik behar ez denean">
+                                                <longdesc>Aukera honek mezuaren elkarrizketa-koadroa bistaratuko den ala ez zehazten du. Elkarrizketa-koadro horrek programa eskatu den pasahitza behar izan gabe eta arrazoi bategatik exekutatzen ari dela jakinarazten dio erabiltzaileari.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="prompt">
+                                        <local_schema short_desc="Blokeatzeko eskaera">
+                                                <longdesc>Auekra honekin &apos;gksu&apos;-k erabiltzaileari galdetuko dio ea pantaila blokeatzea nahi duen pasahitza sartzean. Jakin ezazu &apos;force-grab&apos; (derrigortu blokeoa) desgaituta badago soilik eragiten duela.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="sudo-mode">
+                                        <local_schema short_desc="&apos;Sudo&apos; modua">
+                                                <longdesc>&apos;sudo&apos; metodo lehenetsia izngo den ala ez adierazten du. Metodo hau atzitzeko &apos;-S&apos; aukera erabili edo &apos;gksudo&apos; exekutatu daiteke &apos;gksu&apos; ordez.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="force-grab">
+                                        <local_schema short_desc="Behartu teklatua eta sagua blokeatzea">
+                                                <longdesc>Blokeatu teklatua eta sagua, nahiz eta &apos;-g&apos; aukera eman komando-lerroan.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="disable-grab">
+                                        <local_schema short_desc="Desgaitu teklatua eta sagua blokeatzea">
+                                                <longdesc>Teklatua eta sagua blokeatzea desaktibatu behar den ala ez adierazten du. Beste X-eko aplikazioek teklatuaren sarrerako gertaerak entzutea eragin dezake, eta ondorioz exekutatzen egon daitezkeen aplikazio maltzurretatik ez babestea.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Komandoak laster-teklei erantzunez exekutatzeko">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_N gakoek definitzen dituzte komando horiei dagozkien laster-teklak. run_command_N komandoarentzat zehaztutako laster-teklak sakatzean N komandoa exekutatuko da.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Leihoaren pantaila-argazkiaren komandoa">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_window_screenshot gakoan definitutako laster-teklak sakatzean, ezarpen honek zehaztutako komandoari deituko dio.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Pantaila-argazkiaren komandoa">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_screenshot gakoan definitutako laster-teklak sakatzean, ezarpen honek zehaztutako komandoari deituko zaio.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Exekutatu definitutako komandoa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Exekutatu terminala">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Egin leiho baten pantaila-argazkia">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Egin pantaila-argazki bat">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Erakutsi panela exekutatzeko elkarrizketa-koadroa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Erakutsi panel-menua">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Aldatu honen azpiko laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Aldatu honen gaineko laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Aldatu eskuineko laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Aldatu ezkerreko laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Aldatu 12. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Aldatu 11. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Aldatu 10. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Aldatu 9. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Aldatu 8. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Aldatu 7. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Aldatu 6. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Aldatu 5. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Aldatu 4. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Aldatu 3. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Aldatu 2. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Aldatu 1. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Ezkutatu leiho guztiak eta eman fokua mahaigainari">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Atzerantz joan panelen eta mahaigainaren artean berehala">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Mugitu panelen eta mahaigainaren artean berehala">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Atzerantz joan leihoen artean berehala">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Mugitu leihoen artean berehala">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Atzerantz joan laster-leihoak dituen aplikazioaren leihoen artean">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Mugitu laster-leihoak dituen aplikazioaren leihoen artean">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Atzerantz joan aplikazio baten leihoen artean berehala">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Mugitu aplikazio baten leihoen artean berehala">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Atzerantz joan panelen eta mahaigainaren artean laster-leihoarekin">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Mugitu panelen eta mahaigainaren artean laster-leihoarekin">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Eraman fokua atzerantz laster-leihoak dituzten leihoen artean">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Mugitu leihoen artean laster-leihoarekin">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Eraman leihoa pantailaren ezkerreko aldera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Eraman leihoa pantailaren eskuineko aldera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Eraman leihoa pantailaren beheko aldera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Eraman leihoa pantailaren goiko aldera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Eraman leihoa eskuin-beheko ertzera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Eraman leihoa ezker-beheko ertzera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Eraman leihoa goi-eskuineko ertzera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Eraman leihoa goi-ezkerreko ertzera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Maximizatu leihoa horizontalki">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Maximizatu leihoa bertikalki">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Beheratu leihoa beste leihoen azpira">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Goratu leihoa beste leihoen gainera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Goratu ilundutako leihoa, bestela beheratu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Eraman leihoa laneko area bat behera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Eraman leihoa laneko area bat gora">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Eraman leihoa laneko area bat eskuinera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Eraman leihoa laneko area bat ezkerrera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Eraman leihoa 12. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Eraman leihoa 11. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Eraman leihoa 10. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Eraman leihoa 9. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Eraman leihoa 8. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Eraman leihoa 7. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Eraman leihoa 6. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Eraman leihoa 5. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Eraman leihoa 4. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Eraman leihoa 3. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Eraman leihoa 2. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Eraman leihoa 1. laneko areara">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Txandakatu leihoa laneko area guztietan egotea">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Aldatu leihoaren tamaina">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Lekuz aldatu leihoa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Ikonotu leihoa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Itxi leihoa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Txandakatu bildutako egoera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Desmaximizatu leihoa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Maximizatu leihoa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Txandakatu maximizatze-egoera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Txandakatu &quot;Beti gainean&quot; egoera">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Txandakatu pantaila osoaren modua">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Aktibatu leiho-menua">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Laneko arearen izena">
+                                                        <longdesc>Laneko area baten izena.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Desgaitu aplikazio zaharrek edo hautsitakoek eskatzen dituzten eginbide galduak">
+                                                        <longdesc>Aplikazio batzuk espezifikazioei jaramonik ez diete egiten, leiho-kudeatzailearen funtzionalitatea gutxituz. Aukera honek Metacity era zorrotzeko zuzeneko moduan du, erabiltzailearen interfazeari sendotasun gehiago emanez, eskainitakoak ez dauka gaizki portatzen diren aplikazioak exekutatu beharrik.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Ez dago inplementatuta) Nabigazioa aplikazioetan egiten da, ez leihoetan">
+                                                        <longdesc>Egiazkoa bada, Metacity-k aplikazioekin funtzionatzen du, leihoekin baino gehiago. Kontzeptua abstraktu samarra da, baina, oro har, aplikazioan oinarritutako konfigurazioak Mac-en itxura handiagoa du Windows-ena baino. Aplikazioan oinarritutako moduan leiho bati fokua ematen diozunean, aplikazio horretako leiho guztiak goratuko dira. Gainera, aplikazioan oinarritutako moduan, foku-klikak ez dira pasatzen beste aplikazio batzuetako leihoetara. Horretaz gain, aplikazioa oinarritutako modua ez dago ia batere inplementatuta oraingoz.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Egia bada, gutxiagotu erabilgarritasuna errekurtso gutxiago erabiltzeko">
+                                                        <longdesc>Egia bada, metacity-k erabiltzaileari informazio eta &quot;zuzeneko kudeaketa&quot; zentzu gutxiago eskainiko dio, wireframe-ak erabiliz, animazioak sahiestuz, e.a. Erabiltzaile askorentzako honek erabilgarritasuna gutxiagotzen du, baina heredatutako aplikazioak eta terminal-zerbitzariak funtzionatzea baimendu dezake, beste kasuetan ezinezkoa izango zatekeena. Hala ere, erabilgarritasuna aktibo dagoenean wireframe funtzionalitatea desgaitu egiten da.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="Konposatze-kudeatzailea">
+                                                        <longdesc>Metacity konposatzeko kudeatzaile bat al den zehazten du.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Soinu bisual mota">
+                                                        <longdesc>Sistemaren soinua edo beste aplikazio baten &apos;soinua&apos; jotzean, bisualki nola adierazi behar duen esaten dio Metacity-ri. Oraingoz bi balio daude aukeran, &quot;fullscreen&quot;, pantaila osoko zuri-beltzeko flash-a egiten duena; eta &quot;frame_flash&quot;, soinua jotzeko agindua eman duen aplikazioaren titulu-barra keinuka erakusten duena. Soinua zein aplikaziok jo duen jakiterik ez badago (hori gertatzen da normalean &quot;sistema-soinu&quot; lehenetsia denean), unean fokua duen leihoaren titulu-barra agertzen da keinuka.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Sistema-soinua entzungarri">
+                                                        <longdesc>Aplikazioak edo sistemak entzuteko moduko soinu-seinalerik egin behar duen erabakitzen du; &apos;soinu bisualekin&apos; konbina daiteke, isileko soinuak onartzeko.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Gaitu soinu bisuala">
+                                                        <longdesc>Adierazpen bisuala aktibatzen du aplikazio batek edo sistemak soinua bidaltzen duenean; erosoa da entzumen-arazoak dituztenentzat edo inguruan zarata handia dagoen egoeretako.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Laneko areen kopurua">
+                                                        <longdesc>Laneko areen kopurua. Zero baino handiagoa izan behar du, eta gehienezko kopuru finko bat izan behar du (laneko area gehiago eskatu eta nahi gabe mahaigaina ez hondatzeko).</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Leihoaren tituluaren letra-tipoa">
+                                                        <longdesc>Leihoen titulu-barrako letra-tipoa deskribatzeko katea. Hala ere, deskribapen honetako tamaina titlebar_font_size aukera 0an ezarrita badago bakarrik erabiliko da. Gainera, aukera hau desgaitu egingo da titlebar_uses_desktop_font aukeraren balioa egiazkoa bada.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Erabili sistemaren letra-tipo estandarra leiho-tituluetan">
+                                                        <longdesc>Egiazkoa bada, ez ikusi egin titlebar_font aukerari eta erabili aplikazioaren letra-tipo estandarra leihoen tituluan.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Uneko gaia">
+                                                        <longdesc>Gaiak erabakiko du leihoen ertzen, titulu-barren eta horrelakoen itxura.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Atzerapena automatikoki goratu aurretik (milisegundoak)">
+                                                        <longdesc>auto_raise ezarrita badago, zenbat denbora itxaron behar den leihoa goratu aurretik. Milisegundotan ematen da.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Automatikoki goratzen du fokua duen leihoa">
+                                                        <longdesc>Egia bada, eta fokuaren modua &quot;sloppy&quot; edo &quot;mouse&quot; bada, fokua duen leihoa automatikoki goratuko da &apos;auto_raise_key&apos; gakoan zehaztutako atzerapena igarotakoan. Honek ez dauka zerikusirik leiho baten klik egitearekin goratzeko, ezta leiho batean sartzearekin arrastatu eta jaregitean.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="Ekintza titulu-barran eskuineko botoiarekin klik egitean">
+                                                        <longdesc>Aukera honek erabakitzen du titulu-barran eskuineko botoiarekin klik egindakoan zer gertatuko den. Uneko aukerak hauek dira: &apos;toggle_shade&apos;, leihoari itzala jarri edo kentzen dio; &apos;toggle_maximize&apos; leihoa maximizatu edo leheneratzeko; &apos;minimize&apos; leihoa minimizatzeko; eta &apos;none&apos; ezer ez egiteko.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="Ekintza titulu-barran erdiko botoiarekin klik egitean">
+                                                        <longdesc>Aukera honek erabakitzen du titulu-barran erdiko botoiarekin klik egindakoan zer gertatuko den. Uneko aukerak hauek dira: &apos;toggle_shade&apos;, leihoari itzala jarri edo kentzen dio; &apos;toggle_maximize&apos; leihoa maximizatu edo leheneratzeko; &apos;minimize&apos; leihoa minimizatzeko; eta &apos;none&apos; ezer ez egiteko.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Titulu-barran klik bikoitza egitearen eragina">
+                                                        <longdesc>Aukera honek erabakitzen du titulu-barran klik bikoitza egindakoan zer gertatuko den. Uneko aukerak hauek dira: &apos;toggle_shade&apos;, leihoa bildu edo zabaltzeko; &apos;toggle_maximize&apos; leihoa maximizatu edo desmaximizatzeko; &apos;minimize&apos; leihoa minimizatzeko; eta &apos;none&apos; ezer ez egiteko.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Goratzean albo-ondoriorik izango duen aplikazioengain edo ez.">
+                                                        <longdesc>Ekintza askok (adib: bezeroaren arean klik egitea, leihoa lekuz edo tamainaz aldatzea) leihoa goratzen dute bigarren ondorio gisa. Ezarpen hau FALSE balioarekin jartzean, ez da batere gomendagarria, erabiltzailearen beste aplikazio batzuen goratzeko ekintza desgaituko da. Ikusi oharra: http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Kontrolatu leiho berriek fokua nola lortzea">
+                                                        <longdesc>Aukera honek leihoak sortu berriek nola lortzen duten fokuaren gaineko kontrol gehiago ematen du. Bi balio izan ditzake: &quot;smart&quot; erabiltzailearen foku-modu normala aplikatzen du, eta &quot;sctrict&quot; leihoa terminal batetik abiaratzen denean eta fokua lortzen ez duenekoa.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Leiho-fokuaren modua">
+                                                        <longdesc>Leihoei fokua emateko moduak adierazten du leihoak nola aktibatuko diren. Hiru aukera daude: &quot;click&quot; (leihoari fokua emateko, bertan klik egin behar da), &quot;sloppy&quot; (sagua leihoan sartzen denean leihoak fokua hartuko du), eta &quot;mouse&quot; (sagua leihoan sartzen denean leihoak fokua hartuko du, eta saguak leihotik alde egiten duenean, fokua galduko du).</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Titulu-barrako botoien antolamendua">
+                                                        <longdesc>Titulu-barrako botoien antolamendua. Balioak katea izan behar du, &quot;menu:minimize,maximize,close&quot; erakoa; bi puntuek leihoaren ezkerreko izkina eskuineko izkinatik bereizten dute, eta botoi-izenak komaz bereizita jartzen dira. Ez da onartzen bikoiztutako botoirik. Botoi-izen ezezagunei ez ikusi egiten zaie zuzenean, eta horrela botoiak gehitu ahal izango dira metacity-ren etorkizuneko bertsioetan bertsio zaharragoak hautsi gabe.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Aldatzailea leihoen klik-ekintza aldatuetan erabiltzeko">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Osagai lehenetsia, bistaratzaile aplikazioarena.">
+                                                                <longdesc>Fitxategiak bistaratzeko eta hauek ikusteko behar duen osagaia eskatzen duen aplikazioa. %s parametroa fitxategiaren URIagatik, eta %c parametroa IID osagaiatik ordeztuko dira.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Exec argumentua, terminal lehenetsirako">
+                                                                <longdesc>Exec argumentua terminal aplikazio lehenetsian erabiltzeko.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Terminal aplikazio lehenetsia">
+                                                                <longdesc>Terminal aplikazio lehenetsia, terminala eskatzen duten aplikazioetan erabiltzeko.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Exekutatu komandoa terminalean">
+                                                                <longdesc>Egia (true) URL hau kudeatzeko programa terminal batean exekutatu behar bada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;h323&quot; URLen kudeatzailea">
+                                                                <longdesc>&quot;h323&quot; URLak kudeatzeko komandoa, gaituta egonez gero.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Hemen zehaztutako komandoak &quot;h323&quot; URLak kudeatuko ditu.">
+                                                                <longdesc>Ezarri egi gisa (true) &quot;komandoa&quot; gakoan zehaztutako komandoak &quot;h323&quot; URLak kudeatuko baditu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Exekutatu komandoa terminalean">
+                                                                <longdesc>Egia (true) URL hau kudeatzeko programa terminal batean exekutatu behar bada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;callto&quot; URLen kudeatzailea">
+                                                                <longdesc>&quot;callto&quot; URLak kudeatzeko komandoa, gaituta egonez gero.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Hemen zehaztutako komandoak &quot;callto&quot; URLak kudeatuko ditu.">
+                                                                <longdesc>Ezarri egi gisa (true) &quot;komandoa&quot; gakoan zehaztutako komandoak &quot;callto&quot; URLak kudeatuko baditu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Exekutatu komandoa terminalean">
+                                                                <longdesc>Egia (true) URL hau kudeatzeko programa terminal batean exekutatu behar bada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;mailto&quot; URLen kudeatzailea">
+                                                                <longdesc>&quot;mailto&quot; URLak kudeatzeko komandoa, gaituta egonez gero.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Hemen zehaztutako komandoak &quot;mailto&quot; URLak kudeatuko ditu.">
+                                                                <longdesc>Ezarri egi gisa (true) &quot;komandoa&quot; gakoan zehaztutako komandoak &quot;mailto&quot; URLak kudeatuko baditu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Exekutatu komandoa terminalean">
+                                                                <longdesc>Egia (true) URL hau kudeatzeko programa terminal batean exekutatu behar bada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;https&quot; URLen kudeatzailea">
+                                                                <longdesc>&quot;https&quot; komandoa kudeatzeko komandoa, gaituta egonez gero.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Hemen zehaztutako komandoak &quot;https&quot; URLak kudeatuko ditu.">
+                                                                <longdesc>Ezarri egi gisa (true) &quot;komandoa&quot; gakoan zehaztutako komandoak &quot;https&quot; URLak kudeatuko baditu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Exekutatu komandoa terminalean">
+                                                                <longdesc>Egia (true) URL hau kudeatzeko programa terminal batean exekutatu behar bada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Exekutatu komandoa terminalean">
+                                                                <longdesc>Egia (true) URL hau kudeatzeko programa terminal batean exekutatu behar bada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;http&quot; URLen kudeatzailea">
+                                                                <longdesc>&quot;http&quot; URLak kudeatzeko komandoa, gaituta egonez gero.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Hemen zehaztutako komandoak &quot;http&quot; URLak kudeatuko ditu.">
+                                                                <longdesc>Ezarri egi gisa (true) &quot;komandoa&quot; gakoan zehaztutako komandoak &quot;http&quot; URLak kudeatuko baditu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Exekutatu komandoa terminalean">
+                                                                <longdesc>Egia (true) URL hau kudeatzeko programa terminal batean exekutatu behar bada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;man&quot; URLen kudeatzailea">
+                                                                <longdesc>&quot;man&quot; URLak kudeatzeko komandoa, gaituta egonez gero.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Hemen zehaztutako komandoak &quot;man&quot; URLak kudeatuko ditu.">
+                                                                <longdesc>Ezarri egi gisa (true) &quot;komandoa&quot; gakoan zehaztutako komandoak &quot;man&quot; URLak kudeatuko baditu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Exekutatu komandoa terminalean">
+                                                                <longdesc>Egia (true) URL hau kudeatzeko programa terminal batean exekutatu behar bada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;info&quot; URLen kudeatzailea">
+                                                                <longdesc>&quot;info&quot; URLak kudeatzeko komandoa, gaituta egonez gero.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Hemen zehaztutako komandoak &quot;info&quot; URLak kudeatuko ditu.">
+                                                                <longdesc>Ezarri egi gisa (true) &quot;komandoa&quot; gakoan zehaztutako komandoak &quot;info&quot; URLak kudeatuko baditu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Exekutatu komandoa terminalean">
+                                                                <longdesc>Egia (true) URL hau kudeatzeko programa terminal batean exekutatu behar bada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ghelp&quot; URLen kudeatzailea">
+                                                                <longdesc>&quot;ghelp&quot; URLak kudeatzeko komandoa, gaituta egonez gero.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Hemen zehaztutako komandoak &quot;ghelp&quot; URLak kudeatuko ditu.">
+                                                                <longdesc>Ezarri egi gisa (true) &quot;komandoa&quot; gakoan zehaztutako komandoak &quot;ghelp&quot; URLak kudeatuko baditu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Exekutatu komandoa terminalean">
+                                                                <longdesc>Egia (true) URL hau kudeatzeko programa terminal batean exekutatu behar bada.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;trash&quot; URLen kudeatzailea">
+                                                                <longdesc>&quot;trash&quot; komandoa kudeatzeko komandoa, gaituta egonez gero.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Hemen zehaztutako komandoak &quot;trash&quot; URLak kudeatuko ditu.">
+                                                                <longdesc>Ezarri egi gisa (true) &quot;komandoa&quot; gakoan zehaztutako komandoak &quot;trash&quot; URLak kudeatuko baditu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Profila hau erabiliko den edo ez">
+                                                                        <longdesc>Profila hau erabili eta bistaratuko den edo ez.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Profilaren fitxategi-luzapen lehenetsia">
+                                                                        <longdesc>Erabiliko den fitxategiaren luzapena profila honekin kodetutako fitxategiak gordetzean.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Erabilitako GStreamer kanalizazio partziala">
+                                                                        <longdesc>Profila honekin erabiliko den GStreamer-en kanalizazio partziala.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="Audio-profilaren azalpena">
+                                                                        <longdesc>Profilaren azalpena, profila hau noiz erabili eta beste xehetasunei buruzko informazioa du.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Audio-profilaren izen laburra">
+                                                                        <longdesc>Audio-profilaren izen laburra, hautapenetan erabiltzeko eta profila modu bakarrean identifikatzeko.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Profila hau erabiliko den edo ez">
+                                                                                <longdesc>Profila hau erabili eta bistaratuko den edo ez.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Profilaren fitxategi-luzapen lehenetsia">
+                                                                                <longdesc>Erabiliko den fitxategiaren luzapena profila honekin kodetutako fitxategiak gordetzean.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Erabilitako GStreamer kanalizazio partziala">
+                                                                                <longdesc>Profila honekin erabiliko den GStreamer-en kanalizazio partziala.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audio-profilaren azalpena">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Audio-profilaren izen laburra">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Profilaren fitxategi-luzapen lehenetsia">
+                                                                                <longdesc>Erabiliko den fitxategiaren luzapena profila honekin kodetutako fitxategiak gordetzean.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Erabilitako GStreamer kanalizazio partziala">
+                                                                                <longdesc>Profila honekin erabiliko den GStreamer-en kanalizazio partziala.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audio-profilaren azalpena">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Audio-profilaren izen laburra">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Profilaren fitxategi-luzapen lehenetsia">
+                                                                                <longdesc>Erabiliko den fitxategiaren luzapena profila honekin kodetutako fitxategiak gordetzean.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Erabilitako GStreamer kanalizazio partziala">
+                                                                                <longdesc>Profila honekin erabiliko den GStreamer-en kanalizazio partziala.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audio-profilaren azalpena">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Audio-profilaren izen laburra">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Profilaren fitxategi-luzapen lehenetsia">
+                                                                                <longdesc>Erabiliko den fitxategiaren luzapena profila honekin kodetutako fitxategiak gordetzean.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Erabilitako GStreamer kanalizazio partziala">
+                                                                                <longdesc>Profila honekin erabiliko den GStreamer-en kanalizazio partziala.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audio-profilaren azalpena">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Audio-profilaren izen laburra">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Profilaren fitxategi-luzapen lehenetsia">
+                                                                                <longdesc>Erabiliko den fitxategiaren luzapena profila honekin kodetutako fitxategiak gordetzean.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Erabilitako GStreamer kanalizazio partziala">
+                                                                                <longdesc>Profila honekin erabiliko den GStreamer-en kanalizazio partziala.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audio-profilaren azalpena">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Audio-profilaren izen laburra">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Profilaren fitxategi-luzapen lehenetsia">
+                                                                                <longdesc>Erabiliko den fitxategiaren luzapena profila honekin kodetutako fitxategiak gordetzean.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Erabilitako GStreamer kanalizazio partziala">
+                                                                                <longdesc>Profila honekin erabiliko den GStreamer-en kanalizazio partziala.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audio-profilaren azalpena">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Audio-profilaren izen laburra">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Profil-zerrenda">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="Proxy konfigurazio automatikoaren URLa">
+                                                <longdesc>URLa proxy-aren konfigurazioko balioak eskaintzeko.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="SOCKS proxy-aren ataka">
+                                                <longdesc>Ordenagailuaren ataka, &quot;/system/proxy/socks_host&quot;-ean definituta proxy-arena egiteko.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="SOCKS proxy ostalariaren izena">
+                                                <longdesc>Ordenagailuaren izena, proxy socks egiten duenarena.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="FTP proxy-aren ataka">
+                                                <longdesc>Ordenagailuaren ataka, &quot;/system/proxy/ftp_host&quot;-ean definituta proxy-arena egiteko.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="FTP proxy ostalariaren izena">
+                                                <longdesc>Ordenagailuaren izena, proxy FTPa egiten duenarena.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="HTTP Seguruaren proxy -aren ataka">
+                                                <longdesc>Ordenagailuaren ataka, &quot;/system/proxy/secure_host&quot;-ean definituta proxy-arena egiteko.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="HTTP Seguruaren proxy ostalariaren izena">
+                                                <longdesc>Ordenagailuaren izena, proxy HTTP segurua egiten duenarena.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Proxy-aren konfigurazio modua">
+                                                <longdesc>Hautatu proxy-aren konfigurazio modua. Onartutako balioak &quot;none&quot;, &quot;manual&quot;, &quot;auto&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Proxy-rik gabe konektatuko diren ostalariak">
+                                                <longdesc>Gako honek zuzenean konektatzen diren hostalarien zerrenda dauka, proxy-aren bitartez egin beharrean (nahiz eta abioan egon). Balioak hostalarien izenak, domeinuak (*.lelo.com bezalako hasierako komodina erabiliz), IP helbideak (bai IPv4 bai IPv6) eta sareko helbideak, sare-maskarekin, (192.168.0.0/24 bezalakoak).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="HTTP proxy-aren pasahitza">
+                                                <longdesc>Pasahitza, HTTP proxy-a erabiltzean autentifikatzeko.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="HTTP proxy-ko erabiltzaile-izena">
+                                                <longdesc>Erabiltzaile-izena HTTP proxy-a egiterakoan egiaztatzeko.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Autentifikatu proxy zerbitzariaren konexioak">
+                                                <longdesc>Egia bada, proxy zerbitzarira konektatzeko autentifikazioa eskatuko da. Erabiltzailea/pasahitza bikotea &quot;/system/http_proxy/authentication_user&quot;-ean eta &quot;/system/http_proxy/authentication_password&quot;-ean definitzen dira.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="HTTP proxy-aren ataka">
+                                                <longdesc>Ordenagailuaren ataka, &quot;/system/http_proxy/host&quot;-ean definituta proxy-arena egiteko.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="HTTP proxy ostalariaren izena">
+                                                <longdesc>Ordenagailuaren izena, proxy HTTPa egiten duenarena.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="Erabili HTTP proxy-a">
+                                                <longdesc>Proxy-aren konfigurazioa gaitzen du HTTP internet bidez sarbidetzean</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Domeinu gehigarriak DNS-SD zerbitzuetan bilatzeko">
+                                                <longdesc>Komaz bereiztutako DNS-SD domeinuen zerrenda, &quot;network:///&quot; helbidean ikusgai izango dena.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="DNS-SD zerbitzua bistaratzeko modua">
+                                                <longdesc>Balio erabilgarriak &quot;merged&quot;, &quot;separate&quot; eta &quot;disabled&quot; dira.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="SMB lan-taldea">
+                                                <longdesc>Erabiltzailea harpidetuta dagoen Windows sareko lan-taldea edo domeinua. Lan-talde berri batek erabateko eragina edukitzeko erabiltzaileak saioa amaitu eta berriro saioa hasi beharko du.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

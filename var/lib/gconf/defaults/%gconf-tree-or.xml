@@ -1,0 +1,845 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋର ଓସାର">
+                                                        <longdesc>ପ୍ରଦର୍ଶିତ କରାଯିବା ୱିଣ୍ଡୋର ଓସାର</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋର ଉଚ୍ଚତା">
+                                                        <longdesc>ପ୍ରଦର୍ଶିତ କରାଯିବା ୱିଣ୍ଡୋର ଉଚ୍ଚତା</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="ଚାବି ବନ୍ଧନ ସ୍ବରୂପେ ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ">
+                                                        <longdesc>/ପ୍ରୟୋଗ/ମେଟାସିଟି/ସାମଗ୍ରି_ଚାବିବନ୍ଧନୀ/ନିର୍ଦ୍ଦେଶ_N_ଚଳାନ୍ତୁ ଚାବିଗୁଡ଼ିକ ଏହି ନିର୍ଦ୍ଦେଶଗୁଡ଼ିକ ଚାବିବନ୍ଧନୀ ନିର୍ଦ୍ଦିଷ୍ଟ କରନ୍ତି. ନିର୍ଦ୍ଦେଶ_N_ଚଳାନ୍ତୁ ଚାବିବନ୍ଧନୀ ଦବାଇଲେ ନିର୍ଦ୍ଦେଶ_N ଚଳାଯିବ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋ ପରଦା ପ୍ରତିଛବି ନିର୍ଦ୍ଦେଶ">
+                                                        <longdesc>/ପ୍ରୟୋଗ/ମେଟାସିଟି/ସାମଗ୍ରି_ଚାବିବନ୍ଧନୀ/ୱିଣ୍ଡୋ_ପରଦାପ୍ରତିଛବି_ନିର୍ଦ୍ଦେଶ_ଚଳାନ୍ତୁ ଚାବି ଗୋଟିଏ ଚାବିବନ୍ଧନୀ ନିର୍ଦ୍ଦିଷ୍ଟ କରେ ଯେଉଁଟାକି ଏହି ବିନ୍ଯାସ ଦ୍ବାରା ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶକୁ ଆବାହନ କରେ,</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="ପରଦା ପ୍ରତିଛବି ନିର୍ଦ୍ଦେଶ">
+                                                        <longdesc>/ପ୍ରୟୋଗ/ମେଟାସିଟି/ସାମଗ୍ରି_ଚାବିବନ୍ଧନୀ/ପରଦାପ୍ରତିଛବି_ନିର୍ଦ୍ଦେଶ_ଚଳାନ୍ତୁ ଚାବି ଗୋଟିଏ ଚାବିବନ୍ଧନୀ ନିର୍ଦ୍ଦିଷ୍ଟ କରେ ଯେଉଁଟାକି ଏହି ବିନ୍ଯାସ ଦ୍ବାରା ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶକୁ ଆବାହନ କରେ,</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="ଗୋଟିଏ ନିର୍ଦ୍ଦଷ୍ଟ ନିର୍ଦ୍ଦେଶ ଚଳାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="ଟର୍ମିନାଲ ଚଳାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="ଗୋଟିଏ ୱିଣ୍ଡୋର ପରଦା ପ୍ରତିଛବି ନିଅନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="ପରଦା ପ୍ରତିଛବି ନିଅନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="ଫଳକ ପ୍ରୟୋଗ ଚାଳନ ସଂଳାପ ଦେଖାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="ଫଳକ ମେନୁ ଦେଖାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="ଏହାର ତଳେ ସ୍ଥିତ କାର୍ଯ୍ଯକ୍ଷେତ୍ରକୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="ଏହାର ଉପରେ ସ୍ଥିତ କାର୍ଯ୍ଯକ୍ଷେତ୍ରକୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="ଏହାର ଡାହାଣରେ ସ୍ଥିତ କାର୍ଯ୍ଯକ୍ଷେତ୍ରକୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="ଏହାର ବାମରେ ସ୍ଥିତ କାର୍ଯ୍ଯକ୍ଷେତ୍ରକୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୧୨କୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୧୧କୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୧୦କୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୯କୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୮କୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୭କୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୬କୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୫କୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୪କୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୩କୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୨କୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୧କୁ ଯାଆନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="ସବୁ ୱିଣ୍ଡୋଗୁଡ଼ିକୁ ଲୁଚାଇ ଡେସ୍କଟପକୁ କେନ୍ଦ୍ରିତ କରନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="ଫଳକ ଓ ଡେସ୍କଟପ୍ ମଧ୍ଯରେ ସଙ୍ଗେ ସଙ୍ଗେ ପଛୁଆ ଘୁଞ୍ଚନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="ଫଳକ ଓ ଡେସ୍କଟପ୍ ମଧ୍ଯରେ ସଙ୍ଗେ ସଙ୍ଗେ ଘୁଞ୍ଚନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋଗୁଡ଼ିକ ମଧ୍ଯରେ ସଙ୍ଗେ ସଙ୍ଗେ ପଛୁଆ ଘୁଞ୍ଚନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋଗୁଡ଼ିକ ମଧ୍ଯରେ ସଙ୍ଗେ ସଙ୍ଗେ ଘୁଞ୍ଚନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="ଫଳକ ଓ ପପ୍ଅପ୍ ସହିତ ଡେସ୍କଟପ୍ ମଧ୍ଯରେ ସଙ୍ଗେ ସଙ୍ଗେ ପଛୁଆ ଘୁଞ୍ଚନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="ଫଳକ ଓ ପପ୍ଅପ୍ ସହିତ ଡେସ୍କଟପ୍ ମଧ୍ଯରେ ସଙ୍ଗେ ସଙ୍ଗେ ଘୁଞ୍ଚନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="ପପ୍ଅପ୍ ସହିତ ୱିଣ୍ଡୋଗୁଡ଼ିକ ମଧ୍ଯରେ କେନ୍ଦ୍ରକୁ ପଛୁଆ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="ପପ୍ଅପ୍ ସହିତ ୱିଣ୍ଡୋଗୁଡ଼ିକ ମଧ୍ଯରେ ଘୁଞ୍ଚନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ ଭୂସମାନ୍ତର ଭାବରେ ଯଥାସମ୍ଭବ ବଢ଼ାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ ଭୂଲମ୍ବ ଭାବରେ ଯଥାସମ୍ଭବ ବଢ଼ାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ ଅଲଗା ୱିଣ୍ଡୋ ପଛକୁ ନିଅନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ ଅଲଗା ୱିଣ୍ଡୋଗୁଡ଼ିକର ସାମନାକୁ ଆଣନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋ ଲୁଚାହୋଇଥିଲେ ତାହାକୁ ସାମନାକୁ ଆଣନ୍ତୁ, ନଚେତ୍ ତାହାକୁ ପଛକୁ ନିଅନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ ଗୋଟିଏ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ତଳକୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ ଗୋଟିଏ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ଉପରକୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ ଗୋଟିଏ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ଡାହାଣକୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ ଗୋଟିଏ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ବାମକୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୧୨କୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୧୧କୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୧୦କୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୯କୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୮କୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୭କୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୬କୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୫କୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୪କୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୩କୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୨କୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ କାର୍ଯ୍ଯକ୍ଷେତ୍ର ୧କୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋ ସବୁ କାର୍ଯ୍ଯକ୍ଷେତ୍ରରେ ଥିବା ଅଦଳବଦଳ କରନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋର ଆକାର ବଦଳାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ ଘୁଞ୍ଚାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ ଯଥାସମ୍ଭବ ଛୋଟ କରନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋ ବନ୍ଦ କରନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="ଘୋଡାହୋଇଥିବା ଅବସ୍ଥା ଅଦଳବଦଳ କରନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ ବୃହତ୍ତମରୁ ଛୋଟ କରନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋକୁ ଯଥାସମ୍ଭବ ବଢ଼ାନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="ବୃହତ୍ତମ ଅବସ୍ଥା ଅଦଳବଦଳ କରନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="ସବୁବେଳେ ଉପରେ ଥିବା ଅବସ୍ଥା ଅଦଳବଦଳ କରନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="ପୂର୍ଣ୍ମପରଦା ଧାରା ଅଦଳବଦଳ କରନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋ ମେନୁ ସକ୍ରିୟଣ">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="କାର୍ଯ୍ଯକ୍ଷେତ୍ରର ନାମ">
+                                                        <longdesc>ଗୋଟିଏ କାର୍ଯ୍ଯକ୍ଷେତ୍ରର ନାମ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="ପୁରୁଣା ବା ଅବୈଧ ପ୍ରୟୋଗ ପାଇଁ ଆବଶ୍ଯକ ଦୁର୍ଗୁଣଗୁଡ଼ିକୁ ଅସମର୍ଥ କରନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(କାର୍ଯ୍ଯକାରୀ ନୁହେଁ) ପଥପ୍ରଦର୍ଶନ ପ୍ରୟୋଗ ହିସାବରେ କାମ କରେ, ୱିଣ୍ଡୋ ହିସାବରେ ନୁହେଁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="ଏହା ସତ ହେଲେ, ବ୍ଯବହାରଯୋଗ୍ଯତା କମାଇ ମଧ୍ଯ, କମ ସମ୍ବଳ ବ୍ଯବହାର କରନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="ମିଶ୍ରଣ ପରିଚାଳକ">
+                                                        <longdesc>ନିର୍ଦ୍ଧାରିତ କରେ ମେଟାସିଟି ଗୋଟିଏ ମିଶ୍ରଣ ପରିଚାଳକ ବା ନୁହେଁ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="ଚାକ୍ଷୁଷ ଘଣ୍ଟି ପ୍ରକାର">
+                                                        <longdesc>ମେଟାସିଟି ପାଇଁ ନିର୍ଦ୍ଦିଷ୍ଟ କରେ ତନ୍ତ୍ରର ଘଣ୍ଟି ବା ଅନ୍ଯ ପ୍ରୟୋଗର ଘଣ୍ଟି ବାଜିବା କିପରି ଚାକ୍ଷୁଷ ଭାବରେ ସୂଚିତ କରାଯିବ. ବର୍ତ୍ରମାନ ଦୁଇଟି ବୈଧ ମୂଲ୍ଯ ଅଛି, &quot;ପୂର୍ଣ୍ଣପରଦା&quot; ଯେଉଁଟାକି ପୂର୍ଣ୍ଣ ପରଦାଟିକୁ ଧଳାରୁ କଳା ଝଲସି ଦିଏ, ଓ &quot;ବନ୍ଧେଇ_ଝଲସା&quot; ଯେଉଁଟାକି ଘଣ୍ଟି ସଙ୍କେତ ପଠାଇ ଥିବା ପ୍ରୟୋଗର ଶୀର୍ଷକ ପଟିକୁ ଝଲସି ଦିଏ. ଘଣ୍ଟି ପଠାଇ ଥିବା ପ୍ରୟୋଗ ଅଜଣା ଥିଲେ (ଯେଉଁଟାକି ପୂର୍ବନିର୍ଦ୍ଧାରିତ &quot;ତନ୍ତ୍ର ବିପ୍&quot; ପାଇଁ ସାଧାରଣରେ ଘଟଣା), ସାମ୍ପ୍ରତିକ କେନ୍ଦ୍ରିତ ୱିଣ୍ଡୋର ଶୀର୍ଷକ ପଟିକୁ ଝଲସି ଦିଆଯାଏ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="ତନ୍ତ୍ର ଘଣ୍ଟିଟି ଶ୍ରାବ୍ଯ">
+                                                        <longdesc>ନିର୍ଦ୍ଧାରିତ କରେ ପ୍ରୟୋଗ ବା ତନ୍ତ୍ର ଶ୍ରାବ୍ଯ &apos;ବିପ&apos; ସୃଷ୍ଟି କରିପାରିବ କି; ଏହା ସହିତ &apos;ଚାକ୍ଷୁଷ ଘଣ୍ଟି&apos; ଚୟନକୁ ଯୋଡ଼ି ନିଃଶବ୍ଦ &apos;ବିପ&apos; ହ୍ଯବହାର କରା ଯାଇରାରିବ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="ଚାକ୍ଷୁଷ ଘଣ୍ଟିକୁ ସମର୍ଥ କରନ୍ତୁ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="କାର୍ଯ୍ଯକ୍ଷେତ୍ରର ସଂଖ୍ଯା">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋ ଶୀର୍ଷକ ଅକ୍ଷରରୂପ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋ ଶୀର୍ଷକରେ ତନ୍ତ୍ରର ସାଧାରଣ ଅକ୍ଷରରୂପ ବ୍ଯବହାର କରନ୍ତୁ">
+                                                        <longdesc>ଏହା ସତ ହେଲେ, ଶୀର୍ଷକପଟି_ଅକ୍ଷରରୂପ ପସନ୍ଦକୁ ଏଡ଼ାଇ, ୱିଣ୍ଡୋ ଶୀର୍ଷକ ପାଇଁ ସାଧାରଣ ପ୍ରୟୋଗ ଅକ୍ଷରରୂପ ବ୍ଯବହାର କରନ୍ତୁ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="ସାମ୍ପ୍ରତିକ ପ୍ରସଙ୍ଗ">
+                                                        <longdesc>ପ୍ରସଙ୍ଗଟି ୱିଣ୍ଡୋ ଧାର, ଶୀର୍ଷକପଟି, ଇତ୍ଯାଦିର ଚେହେରା ସ୍ଥିର କରେ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="ସ୍ବଂୟ ସାମନାକୁ ଆଣିବା ପାଇଁ ମିଲିସେକଣ୍ଡରେ ବିଳମ୍ବ">
+                                                        <longdesc>ଯଦି ସ୍ବଂୟ_ସାମନାକୁ_ଆଣିବା ସତ ହୋଇଥାଏ, ୱିଣ୍ଡୋକୁ ସାମନାକୁ ଆଣିବା ପୂର୍ବରୁ ମଧ୍ଯବର୍ତ୍ତୀ ସମୟ. ବିଳମ୍ବଟି ମିଲିସେକଣ୍ଡରେ ନିର୍ଦ୍ଧିଷ୍ଟ ହୋଇଥାଏ..</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="କେନ୍ଦ୍ରିତ ୱିଣ୍ଡୋକୁ ଆପେଆପେ ସାମନାକୁ ଆଣେ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="ଶୀର୍ଷକ ପଟିରେ ମାଉସ୍ କୁ ଯୁଗ୍ନ ଭାବରେ ଦବାଇଲେ କି କାମ ଚାଳନ ହେବ">
+                                                        <longdesc>ଏହି ଚୟନ ଶୀର୍ଷକପଟି ଉପରେ ଦୁଇଥର ଦବାଇବାର ପ୍ରଭାବ ନିର୍ଦ୍ଧିଷ୍ଟ କରେ. ସାମ୍ପ୍ରତିକ ବୈଧ ମୂଲ୍ଯଗୁଡ଼ିକ ହେଲା &apos;toggle_shade&apos; ଯେଉଁଟାକି ୱିଣ୍ଡୋକୁ ଘୋଢାଇବ ବା ପ୍ରକାଶିତ କରିବ, &apos;toggle_maximize&apos; ଯେଉଁଟାକି ୱିଣ୍ଡୋକୁ ବୃହତ୍ତମନ କରିବ ବା ବୃହତ୍ତମରୁ ଛୋଟ କରିବ, ଓ &apos;none&apos; ଯେଉଁଟାକି କିଛି କରିବ ନାହିଁ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="ସାମନାକୁ ଆଣିବା ଅନ୍ଯ ବ୍ଯବହାରକାରୀ ପାରସ୍ପରିକ କ୍ରିୟାର ଅବାଂଛିତ ପ୍ରତିକ୍ରିୟା ହେବା ଉଚିତ କି">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="ୱିଣ୍ଡୋ କେନ୍ଦ୍ରୀଭୂତ ଧାରା">
+                                                        <longdesc>ୱିଣ୍ଡୋ କେନ୍ଦ୍ରୀଭୂତ ଧାରା ନିର୍ଦ୍ଧିଷ୍ଟ କରେ ୱିଣ୍ଡୋଗୁଡ଼ିକ କିପରି ସକ୍ରିୟ କରାଯିବ. ଏହାର ତିନୋଟି ମୂଲ୍ଯ ସମ୍ଭବ; &quot;ଚାପ&quot; ମାନେ ୱିଣ୍ଡୋଗୁଡ଼ିକ କେନ୍ଦ୍ରିତ କରିବା ପାଇଁ ତାଙ୍କ ଦେହରେ ମାଉସ୍ ଦବାଇବାକୁ ପଡ଼ିବ, &quot;ଅଯତ୍ନକୃତ&quot; ମାନେ ମାଉସ୍ ୱିଣ୍ଡୋରେ ପ୍ରବେଶ କଲେ ୱିଣ୍ଡୋଟି କେନ୍ଦ୍ରିତ ହେବ, ଓ &quot;ମାଉସ&quot; ମାନେ ମାଉସ୍ ୱିଣ୍ଡୋରେ ପ୍ରବେଶ କଲେ ୱିଣ୍ଡୋଟି କେନ୍ଦ୍ରିତ ହେବ ଏବଂ ୱିଣ୍ଡୋରୁ ବାହାରିଲେ ୱିଣ୍ଡୋଟି ଅକେନ୍ଦ୍ରିତ ହେବ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="ଶୀର୍ଷକ ପଟିରେ ଚାବିର ସଜ୍ଜା">
+                                                        <longdesc>ଶୀର୍ଷକ ପଟିରେ ଚାବିଗୁଡ଼ିକର ସଜ୍ଜା. ଏହି ମୂଲ୍ଯ ଗୌଟିଏ ବାକ୍ଯକଣ୍ଡ ହେବା ଉଚିତ, ଉଦାହରଣ ସ୍ବରୂପ, &quot;ମେନୁ:କ୍ଷୁଦ୍ରତମ କରନ୍ତୁ,ବୃହତ୍ତମ କରନ୍ତୁ,ବନ୍ଦ କରନ୍ତୁ&quot;; ବିରାମ ଚିହ୍ନଟି ୱିଣ୍ଡୋର ବାମ ଓ ଡାହାଣ କଣକୁ ବିଭାଜନ କରେ, ଏବଂ ଚାବି ନାମଗୁଡ଼ିକ କମା ଦ୍ବାରା ବିଭାଜିତ. ଦ୍ବିଗୁଣିତ ଚାବି ନିଷେଧ. ଅଜଣା ଚାବି ନାମଗୁଡ଼ିକ ଚୁପଚାପ ଅଗ୍ରାହ୍ଯ କରାଯିବ, ଯାହା ଫଳେ ମେଟାସିଟିର ପୁରୁଣା ସଂସ୍କରଣଗୁଡ଼ିକୁ ପ୍ରଭାବିତ ନ କରି, ନୂଆ ସଂସ୍କରଣଗୁଡ଼ିକରେ ଚାବି ଯୋଡ଼ି ହୋଇପାରିବ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="ରୂପାନ୍ତରିତ ୱିଣ୍ଡୋର ମାଉସ୍ ଚାପ କାର୍ଯ୍ଯଗୁଡ଼ିକ ପାଇଁ ରୂପାନ୍ତରକ">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଯନ୍ତ୍ରାଶଂ ଦର୍ଶକ ପ୍ରୟୋଗ">
+                                                                <longdesc>ଯେଉଁ ଫାଇଲଗୁଡି଼କ ଦେଖିବା ପାଇଁ ଗୋଟିଏ ଯନ୍ତ୍ରାଂଶ ଆବଶ୍ଯକ, ସେମାନଙ୍କ ପାଇଁ କେଉଁ ପ୍ରୟୋଗ ବ୍ଯବହାର କରାଯିବ .ପ୍ରାଚଳ %s ଫାଇଲର ୟୁ.ଆର୍.ଆଇ. ଦ୍ବାରା ବଦଳ ହେବ, ପ୍ରାଚଳ %c ଯନ୍ତ୍ରାସଂର ଆଇ.ଆଇ.ଡି. ଦ୍ବାରା ବଦଳ ହେବ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଟର୍ମିନାଲ୍ ପାଇଁ  ନିଷ୍ପାଦନ ସ୍ବତନ୍ତ୍ରଚର">
+                                                                <longdesc>ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଟର୍ମିନାଲ୍ ପ୍ରୟୋଗ ପାଇଁ ନିଷ୍ପାଦନ ସ୍ବତନ୍ତ୍ରଚର</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଟର୍ମିନାଲ୍ ପ୍ରୟୋଗ">
+                                                                <longdesc>ଯେଉଁ ପ୍ରୟୋଗଗୁଡି଼କ ପାଇଁ  ଟର୍ମିନାଲ୍ ଆବଶ୍ଯକ ସେମାନଙ୍କ ପାଇଁ  ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଟର୍ମିନାଲ୍ ପ୍ରୟୋଗ</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="ନିର୍ଦ୍ଦେଶକୁ ଟର୍ମିନାଲରେ ଚଲାନ୍ତୁ">
+                                                                <longdesc>ସତ, ଯଦି ଏହି ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ ଟର୍ମିନାଲ୍ରେରେ ଚଳାଯିବା ଉଚିତ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ଏଚ323&quot; ୟୁ.ଆର.ଏଲ. ପାଇଁ ଚାଳକ">
+                                                                <longdesc>&quot;ଏଚ323&quot;  ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ, ଯଦି ସକ୍ରିୟ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ଏଚ୍323&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବା ଉଚିତ କି.">
+                                                                <longdesc>ସତ ହେଲେ, &quot;ନିର୍ଦ୍ଦେଶ&quot; ଚାବିରେ ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ଏଚ୍323&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="ନିର୍ଦ୍ଦେଶକୁ ଟର୍ମିନାଲରେ ଚଲାନ୍ତୁ">
+                                                                <longdesc>ସତ, ଯଦି ଏହି ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ ଟର୍ମିନାଲ୍ରେରେ ଚଳାଯିବା ଉଚିତ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ଡାକରା&quot; ୟୁ.ଆର.ଏଲ. ପାଇଁ ଚାଳକ">
+                                                                <longdesc>&quot;ଡାକରା&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ, ଯଦି ସକ୍ରିୟ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ଡାକରା&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବା ଉଚିତ କି.">
+                                                                <longdesc>ସତ ହେଲେ, &quot;ନିର୍ଦ୍ଦେଶ&quot; ଚାବିରେ ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ଡାକରା&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="ନିର୍ଦ୍ଦେଶକୁ ଟର୍ମିନାଲରେ ଚଲାନ୍ତୁ">
+                                                                <longdesc>ସତ, ଯଦି ଏହି ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ ଟର୍ମିନାଲ୍ରେରେ ଚଳାଯିବା ଉଚିତ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ପ୍ରପକ&quot; ୟୁ.ଆର.ଏଲ. ପାଇଁ ଚାଳକ">
+                                                                <longdesc>&quot;ପ୍ରପକ&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ, ଯଦି ସକ୍ରିୟ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ପ୍ରାପକ&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବା ଉଚିତ କି.">
+                                                                <longdesc>ସତ ହେଲେ, &quot;ନିର୍ଦ୍ଦେଶ&quot; ଚାବିରେ ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ଡାକରା&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="ନିର୍ଦ୍ଦେଶକୁ ଟର୍ମିନାଲରେ ଚଲାନ୍ତୁ">
+                                                                <longdesc>ସତ, ଯଦି ଏହି ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ ଟର୍ମିନାଲ୍ରେରେ ଚଳାଯିବା ଉଚିତ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ଏଚ.ଟି.ଟି.ପି.ଏସ.&quot; ୟୁ.ଆର.ଏଲ. ପାଇଁ ଚାଳକ">
+                                                                <longdesc>&quot;ଏଚ.ଟି.ଟି.ପି.ଏସ.&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ, ଯଦି ସକ୍ରିୟ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ଏଚ.ଟି.ଟି.ପି.ଏସ.&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବା ଉଚିତ କି.">
+                                                                <longdesc>ସତ ହେଲେ, &quot;ନିର୍ଦ୍ଦେଶ&quot; ଚାବିରେ ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ଏଚ.ଟି.ଟି.ପି.ଏସ.&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="ନିର୍ଦ୍ଦେଶକୁ ଟର୍ମିନାଲରେ ଚଲାନ୍ତୁ">
+                                                                <longdesc>ସତ, ଯଦି ଏହି ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ ଟର୍ମିନାଲ୍ରେରେ ଚଳାଯିବା ଉଚିତ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="ନିର୍ଦ୍ଦେଶକୁ ଟର୍ମିନାଲରେ ଚଲାନ୍ତୁ">
+                                                                <longdesc>ସତ, ଯଦି ଏହି ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ ଟର୍ମିନାଲ୍ରେରେ ଚଳାଯିବା ଉଚିତ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ଏଚ.ଟି.ଟି.ପି.&quot; ୟୁ.ଆର.ଏଲ. ପାଇଁ ଚାଳକ">
+                                                                <longdesc>&quot;ଏଚ.ଟି.ଟି.ପି.&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ, ଯଦି ସକ୍ରିୟ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ଏଚ.ଟି.ଟି.ପି.&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବା ଉଚିତ କି.">
+                                                                <longdesc>ସତ ହେଲେ, &quot;ନିର୍ଦ୍ଦେଶ&quot; ଚାବିରେ ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ଏଚ.ଟି.ଟି.ପି.&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="ନିର୍ଦ୍ଦେଶକୁ ଟର୍ମିନାଲରେ ଚଲାନ୍ତୁ">
+                                                                <longdesc>ସତ, ଯଦି ଏହି ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ ଟର୍ମିନାଲ୍ରେରେ ଚଳାଯିବା ଉଚିତ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ପ୍ରକରଣ&quot; ୟୁ.ଆର.ଏଲ. ପାଇଁ ଚାଳକ">
+                                                                <longdesc>&quot;ପ୍ରକରଣ&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ, ଯଦି ସକ୍ରିୟ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ପ୍ରକରଣ&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବା ଉଚିତ କି.">
+                                                                <longdesc>ସତ ହେଲେ, &quot;ନିର୍ଦ୍ଦେଶ&quot; ଚାବିରେ ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ପ୍ରକରଣ&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="ନିର୍ଦ୍ଦେଶକୁ ଟର୍ମିନାଲରେ ଚଲାନ୍ତୁ">
+                                                                <longdesc>ସତ, ଯଦି ଏହି ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ ଟର୍ମିନାଲ୍ରେରେ ଚଳାଯିବା ଉଚିତ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ସୂଚନା&quot; ୟୁ.ଆର.ଏଲ. ପାଇଁ ଚାଳକ">
+                                                                <longdesc>&quot;ସୂଚନା&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ, ଯଦି ସକ୍ରିୟ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ସୂଚନା&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବା ଉଚିତ କି.">
+                                                                <longdesc>ସତ ହେଲେ, &quot;ନିର୍ଦ୍ଦେଶ&quot; ଚାବିରେ ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ସୂଚନା&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="ନିର୍ଦ୍ଦେଶକୁ ଟର୍ମିନାଲରେ ଚଲାନ୍ତୁ">
+                                                                <longdesc>ସତ, ଯଦି ଏହି ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ ଟର୍ମିନାଲ୍ରେରେ ଚଳାଯିବା ଉଚିତ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ଜିହେଲ୍ପ&quot; ୟୁ.ଆର.ଏଲ. ପାଇଁ ଚାଳକ">
+                                                                <longdesc>&quot;ଜିହେଲ୍ପ&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ, ଯଦି ସକ୍ରିୟ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ଜିହେଲ୍ପ&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବା ଉଚିତ କି.">
+                                                                <longdesc>ସତ ହେଲେ, &quot;ନିର୍ଦ୍ଦେଶ&quot; ଚାବିରେ ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ଜିହେଲ୍ପ&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="ନିର୍ଦ୍ଦେଶକୁ ଟର୍ମିନାଲରେ ଚଲାନ୍ତୁ">
+                                                                <longdesc>ସତ, ଯଦି ଏହି ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ ଟର୍ମିନାଲ୍ରେରେ ଚଳାଯିବା ଉଚିତ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ବର୍ଜିତ&quot; ୟୁ.ଆର.ଏଲ. ପାଇଁ ଚାଳକ">
+                                                                <longdesc>&quot;ବର୍ଜିତ&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ନିର୍ଦ୍ଦେଶ, ଯଦି ସକ୍ରିୟ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ବର୍ଜିତ&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବା ଉଚିତ କି.">
+                                                                <longdesc>ସତ ହେଲେ, &quot;ନିର୍ଦ୍ଦେଶ&quot; ଚାବିରେ ଉଲ୍ଲେଖିତ ନିର୍ଦ୍ଦେଶ &quot;ବର୍ଜିତ&quot; ୟୁ.ଆର.ଏଲ. ଚଳାଇବା ପାଇଁ ବ୍ଯବହୃତ ହେବ.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="ଏହି ରୂପରେଖ ବ୍ଯବହାର କରାଯିବ କି ନାହିଁ">
+                                                                        <longdesc>ଏହି ରୂପରେଖ ବ୍ଯବହାର ତଥା ପ୍ରଦର୍ଶିତ କରାଯିବ କି ନାହିଁ.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="ଏହି ରୂପରେଖ ପାଇଁ ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଫାଇଲ ଅନୁଲଗ୍ନ">
+                                                                        <longdesc>ଏହି ରୂପରେଖ ଦ୍ବାରା ସଙ୍କେତ କରାଯାଇଥିବା ଫାଇଲଗୁଡ଼ିକୁ ସଞ୍ଚିତ କରିବାରେ ବ୍ଯବହାର କରାଯିବା ଫାଇଲ ନାମ ଅନୁଲଗ୍ନ.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="ବ୍ଯବହୃତ ଆଂଶିକ ଜିସ୍ଟ୍ରୀମର ପାଇପ୍ ଲାଇନ୍">
+                                                                        <longdesc>ଏହି ରୂପରେଖ ପାଇଁ ବ୍ଯବହାର କରାଯିବା ନିମନ୍ତେ ଜିସ୍ଟ୍ରୀମରର ଗୋଟିଏ ଆଂଶିକ ପାଇପ୍ ଲାଇନ୍</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ବର୍ଣ୍ଣନା">
+                                                                        <longdesc>ରୂପରେଖର ବର୍ଣ୍ଣନା, ଯେଉଁଟାକି ଅଧିକ ସୂଚନା ଯୋଗାଏ, ଓ କେତେବେଳେ ଏହି ରୂପରେଖର ଉପଯୋଗ କରାଯିବା ଉଚିତ ଜଣାଏ.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ସଂକ୍ଷିପ୍ତ ନାମ">
+                                                                        <longdesc>ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ସଂକ୍ଷିପ୍ତ ନାମ, ଯେଉଁଟାକି ଚୟନ କରିବାରେ ଓ ରୂପରେଖକୁ ଅନନ୍ଯ ପରିଚୟ ଦେବାରେ ବ୍ଯବହାର କରାଯିବ.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="ଏହି ରୂପରେଖ ବ୍ଯବହାର କରାଯିବ କି ନାହିଁ">
+                                                                                <longdesc>ଏହି ରୂପରେଖ ବ୍ଯବହାର ତଥା ପ୍ରଦର୍ଶିତ କରାଯିବ କି ନାହିଁ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="ଏହି ରୂପରେଖ ପାଇଁ ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଫାଇଲ ଅନୁଲଗ୍ନ">
+                                                                                <longdesc>ଏହି ରୂପରେଖ ଦ୍ବାରା ସଙ୍କେତ କରାଯାଇଥିବା ଫାଇଲଗୁଡ଼ିକୁ ସଞ୍ଚିତ କରିବାରେ ବ୍ଯବହାର କରାଯିବା ଫାଇଲ ନାମ ଅନୁଲଗ୍ନ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="ବ୍ଯବହୃତ ଆଂଶିକ ଜିସ୍ଟ୍ରୀମର ପାଇପ୍ ଲାଇନ୍">
+                                                                                <longdesc>ଏହି ରୂପରେଖ ପାଇଁ ବ୍ଯବହାର କରାଯିବା ନିମନ୍ତେ ଜିସ୍ଟ୍ରୀମରର ଗୋଟିଏ ଆଂଶିକ ପାଇପ୍ ଲାଇନ୍</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ବର୍ଣ୍ଣନା">
+                                                                                <longdesc>ରୂପରେଖର ବର୍ଣ୍ଣନା, ଯେଉଁଟାକି ଅଧିକ ସୂଚନା ଯୋଗାଏ, ଓ କେତେବେଳେ ଏହି ରୂପରେଖର ଉପଯୋଗ କରାଯିବା ଉଚିତ ଜଣାଏ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ସଂକ୍ଷିପ୍ତ ନାମ">
+                                                                                <longdesc>ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ସଂକ୍ଷିପ୍ତ ନାମ, ଯେଉଁଟାକି ଚୟନ କରିବାରେ ଓ ରୂପରେଖକୁ ଅନନ୍ଯ ପରିଚୟ ଦେବାରେ ବ୍ଯବହାର କରାଯିବ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="ଏହି ରୂପରେଖ ପାଇଁ ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଫାଇଲ ଅନୁଲଗ୍ନ">
+                                                                                <longdesc>ଏହି ରୂପରେଖ ଦ୍ବାରା ସଙ୍କେତ କରାଯାଇଥିବା ଫାଇଲଗୁଡ଼ିକୁ ସଞ୍ଚିତ କରିବାରେ ବ୍ଯବହାର କରାଯିବା ଫାଇଲ ନାମ ଅନୁଲଗ୍ନ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="ବ୍ଯବହୃତ ଆଂଶିକ ଜିସ୍ଟ୍ରୀମର ପାଇପ୍ ଲାଇନ୍">
+                                                                                <longdesc>ଏହି ରୂପରେଖ ପାଇଁ ବ୍ଯବହାର କରାଯିବା ନିମନ୍ତେ ଜିସ୍ଟ୍ରୀମରର ଗୋଟିଏ ଆଂଶିକ ପାଇପ୍ ଲାଇନ୍</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ବର୍ଣ୍ଣନା">
+                                                                                <longdesc>ରୂପରେଖର ବର୍ଣ୍ଣନା, ଯେଉଁଟାକି ଅଧିକ ସୂଚନା ଯୋଗାଏ, ଓ କେତେବେଳେ ଏହି ରୂପରେଖର ଉପଯୋଗ କରାଯିବା ଉଚିତ ଜଣାଏ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ସଂକ୍ଷିପ୍ତ ନାମ">
+                                                                                <longdesc>ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ସଂକ୍ଷିପ୍ତ ନାମ, ଯେଉଁଟାକି ଚୟନ କରିବାରେ ଓ ରୂପରେଖକୁ ଅନନ୍ଯ ପରିଚୟ ଦେବାରେ ବ୍ଯବହାର କରାଯିବ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="ଏହି ରୂପରେଖ ପାଇଁ ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଫାଇଲ ଅନୁଲଗ୍ନ">
+                                                                                <longdesc>ଏହି ରୂପରେଖ ଦ୍ବାରା ସଙ୍କେତ କରାଯାଇଥିବା ଫାଇଲଗୁଡ଼ିକୁ ସଞ୍ଚିତ କରିବାରେ ବ୍ଯବହାର କରାଯିବା ଫାଇଲ ନାମ ଅନୁଲଗ୍ନ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="ବ୍ଯବହୃତ ଆଂଶିକ ଜିସ୍ଟ୍ରୀମର ପାଇପ୍ ଲାଇନ୍">
+                                                                                <longdesc>ଏହି ରୂପରେଖ ପାଇଁ ବ୍ଯବହାର କରାଯିବା ନିମନ୍ତେ ଜିସ୍ଟ୍ରୀମରର ଗୋଟିଏ ଆଂଶିକ ପାଇପ୍ ଲାଇନ୍</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ବର୍ଣ୍ଣନା">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ସଂକ୍ଷିପ୍ତ ନାମ">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="ଏହି ରୂପରେଖ ପାଇଁ ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଫାଇଲ ଅନୁଲଗ୍ନ">
+                                                                                <longdesc>ଏହି ରୂପରେଖ ଦ୍ବାରା ସଙ୍କେତ କରାଯାଇଥିବା ଫାଇଲଗୁଡ଼ିକୁ ସଞ୍ଚିତ କରିବାରେ ବ୍ଯବହାର କରାଯିବା ଫାଇଲ ନାମ ଅନୁଲଗ୍ନ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="ବ୍ଯବହୃତ ଆଂଶିକ ଜିସ୍ଟ୍ରୀମର ପାଇପ୍ ଲାଇନ୍">
+                                                                                <longdesc>ଏହି ରୂପରେଖ ପାଇଁ ବ୍ଯବହାର କରାଯିବା ନିମନ୍ତେ ଜିସ୍ଟ୍ରୀମରର ଗୋଟିଏ ଆଂଶିକ ପାଇପ୍ ଲାଇନ୍</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ବର୍ଣ୍ଣନା">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ସଂକ୍ଷିପ୍ତ ନାମ">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="ଏହି ରୂପରେଖ ପାଇଁ ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଫାଇଲ ଅନୁଲଗ୍ନ">
+                                                                                <longdesc>ଏହି ରୂପରେଖ ଦ୍ବାରା ସଙ୍କେତ କରାଯାଇଥିବା ଫାଇଲଗୁଡ଼ିକୁ ସଞ୍ଚିତ କରିବାରେ ବ୍ଯବହାର କରାଯିବା ଫାଇଲ ନାମ ଅନୁଲଗ୍ନ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="ବ୍ଯବହୃତ ଆଂଶିକ ଜିସ୍ଟ୍ରୀମର ପାଇପ୍ ଲାଇନ୍">
+                                                                                <longdesc>ଏହି ରୂପରେଖ ପାଇଁ ବ୍ଯବହାର କରାଯିବା ନିମନ୍ତେ ଜିସ୍ଟ୍ରୀମରର ଗୋଟିଏ ଆଂଶିକ ପାଇପ୍ ଲାଇନ୍</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ବର୍ଣ୍ଣନା">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ସଂକ୍ଷିପ୍ତ ନାମ">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="ଏହି ରୂପରେଖ ପାଇଁ ପୂର୍ବନିର୍ଦ୍ଧାରିତ ଫାଇଲ ଅନୁଲଗ୍ନ">
+                                                                                <longdesc>ଏହି ରୂପରେଖ ଦ୍ବାରା ସଙ୍କେତ କରାଯାଇଥିବା ଫାଇଲଗୁଡ଼ିକୁ ସଞ୍ଚିତ କରିବାରେ ବ୍ଯବହାର କରାଯିବା ଫାଇଲ ନାମ ଅନୁଲଗ୍ନ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="ବ୍ଯବହୃତ ଆଂଶିକ ଜିସ୍ଟ୍ରୀମର ପାଇପ୍ ଲାଇନ୍">
+                                                                                <longdesc>ଏହି ରୂପରେଖ ପାଇଁ ବ୍ଯବହାର କରାଯିବା ନିମନ୍ତେ ଜିସ୍ଟ୍ରୀମରର ଗୋଟିଏ ଆଂଶିକ ପାଇପ୍ ଲାଇନ୍</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ବର୍ଣ୍ଣନା">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="ଧ୍ବନି ରୂପରେଖ ପାଇଁ ଗୋଟିଏ ସଂକ୍ଷିପ୍ତ ନାମ">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="ରୂପରେଖର ତାଲିକା">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="ସ୍ବଂୟ ଛାୟା ବିନ୍ଯାସ ୟୁ.ଆର.ଏଲ.">
+                                                <longdesc>ଛାୟା ବିନ୍ଯାସ ମୂଲ୍ଯଗୁଡ଼ିକ ପାଇଁ ୟୁ.ଆର.ଏଲ.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="ଏସ୍.ଓ.ସି.କେ.ଏସ୍. ଛାୟା ସଂଯୋଗିକୀ">
+                                                <longdesc>&quot;/system/proxy/socks_host&quot; ଦ୍ବାରା ଉଲ୍ଲେଖିତ ଯନ୍ତ୍ରର ସଂଯୋଗିକୀ ଯେଉଁଟାକି ଛାୟାକରଣ ପାଇଁ ବ୍ଯବହାର କରାଯାଏ.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="ଏସ୍.ଓ.ସି.କେ.ଏସ୍.  ଛାୟା ଆଧାର ନାମ">
+                                                <longdesc>ଏସ୍.ଓ.ସି.କେ.ଏସ୍. ଛାୟା ପାଇଁ ଯନ୍ତ୍ରର ନାମ.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="ଏଫ୍.ଟି.ପି. ଛାୟା ସଂଯୋଗିକୀ">
+                                                <longdesc>&quot;/system/ftp_proxy/host&quot; ଦ୍ବାରା ଉଲ୍ଲେଖିତ ଯନ୍ତ୍ରର ସଂଯୋଗିକୀ ଯେଉଁଟାକି ଛାୟାକରଣ ପାଇଁ ବ୍ଯବହାର କରାଯାଏ.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="ଏଫ୍.ଟି.ପି. ଛାୟା ଆଧାର ନାମ">
+                                                <longdesc>ଏଫ୍.ଟି.ପି. ଛାୟା ପାଇଁ ଯନ୍ତ୍ରର ନାମ.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="ସୁରକ୍ଷିତ ଏଚ୍.ଟି.ଟି.ପି. ଛାୟା ଆଧାର ସଂଯୋଗିକୀ">
+                                                <longdesc>&quot;/system/proxy/secure_host&quot; ଦ୍ବାରା ଉଲ୍ଲେଖିତ ଯନ୍ତ୍ରର ସଂଯୋଗିକୀ ଯେଉଁଟାକି ଛାୟାକରଣ ପାଇଁ ବ୍ଯବହାର କରାଯାଏ.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="ସୁରକ୍ଷିତ ଏଚ୍.ଟି.ଟି.ପି. ଛାୟା ଆଧାର ନାମ">
+                                                <longdesc>ସୁରକ୍ଷିତ ଏଚ୍.ଟି.ଟି.ପି. ଛାୟା ପାଇଁ ଯନ୍ତ୍ରର ନାମ.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="ଛାୟା ବିନ୍ଯାସ ଅବସ୍ଥା">
+                                                <longdesc>ଛାୟା ବିନ୍ଯାସ ଅବସ୍ଥା ବାଛନ୍ତୁ. ସମ୍ଭବତଃ ମୂଲ୍ଯଗୁଡି଼କ ହେଲା &quot;none&quot;, &quot;manual&quot; ଓ &quot;auto&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="ଅଣଛାୟା ଆଧାର">
+                                                <longdesc>ଛାୟା ବଦଳରେ ସିଧାସଳଖ ଭାବରେ ସଂଯୁକ୍ତ ଆଧାରଗୁଡ଼ିକର ତାଲିକା ଏହି ଚାବିରେ ରଖାଯାଇଛି. ସମ୍ଭବତଃ ମୂଲ୍ଯଗୁଡି଼କ ହେଲା ଆଧାର ନାମ, ପରିସର (*.foo.com ଭଳି ପ୍ରାରମ୍ଭିକ ୱାଇଲ୍ଡ କାର୍ଡ ବ୍ଯବହାର କରି), ଆଇ.ପି. ଆଧାର ଠିକିଣା (ଆଇ.ପି.ଭି.୪ ଓ ଆଇ.ପି.ଭି.୬) ଓ ଜାଲକ ମୁଖା ସହିତ ଜାଲକ ଠିକଣା (୧୯୨.୧୬୮.୦.୦/୨୪ ଭଳି କିଛି).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="ଏଚ୍.ଟି.ଟି.ପି. ଛାୟା ପ୍ରବେଶ ସଂକେତ">
+                                                <longdesc>ଏଚ୍.ଟି.ଟି.ପି. ଛାୟାକରଣ ବେଳେ ବୈଧିକରଣ ପାଇଁ ପ୍ରବେଶ ସଂକେତ </longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="ଏଚ୍.ଟି.ଟି.ପି. ଛାୟା ଚାଳକନାମ">
+                                                <longdesc>ଏଚ୍.ଟି.ଟି.ପି. ଛାୟାକରଣ ବେଳେ ବୈଧିକରଣ ପାଇଁ ଚାଳକ ନାମ.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="ଛାୟା ସେବକ ସଂଯୋଗଗୁଡି଼କ ବୈଧ କରନ୍ତୁ">
+                                                <longdesc>ସତ ହେଲେ, ଛାୟା ସେବକ ସହିତ ସଂଯୋଗ ପାଇଁ ବୈଧିକରଣ ଆବଶ୍ଯକ. ଚାଳକ ନାମ / ପ୍ରବେଶ ସଂକେତ &quot;/system/http_proxy/authentication_user&quot; ଓ &quot;/system/http_proxy/authentication_password&quot; ଦ୍ବାରା ଉଲ୍ଲେଖିତ.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="ଏଚ୍.ଟି.ଟି.ପି. ଛାୟା ସଂଯୋଗିକୀ">
+                                                <longdesc>&quot;/system/http_proxy/host&quot; ଦ୍ବାରା ଉଲ୍ଲେଖିତ ଯନ୍ତ୍ରର ସଂଯୋଗିକୀ ଯେଉଁଟାକି ଛାୟାକରଣ ପାଇଁ ବ୍ଯବହାର କରାଯାଏ.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="ଏଚ୍.ଟି.ଟି.ପି. ଛାୟା ଆଧାର ନାମ">
+                                                <longdesc>ଏଚ୍.ଟି.ଟି.ପି. ଛାୟା ପାଇଁ ଯନ୍ତ୍ରର ନାମ.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="ଏଚ୍.ଟି.ଟି.ପି. ଛାୟା ବ୍ଯବହାର କରନ୍ତୁ">
+                                                <longdesc>ଇଣ୍ଟରନେଟରେ ଏଚ୍.ଟି.ଟି.ପି. ଚଳାଇଲା ବେଳେ ଛାୟା ବିନ୍ଯାସକୁ ସମର୍ଥ କରେ.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="ଡି.ଏନ୍.ଏସ୍-ଏସ୍.ଡି ସେବା ଖୋଜି ପାଇବା ପାଇଁ ଅଧିକ ପରିସର">
+                                                <longdesc>କମା ଦ୍ବାରା ବିଭାଜିତ ଡି.ଏନ୍.ଏସ୍-ଏସ୍.ଡି ପରିସରର ଯାହାକି &quot;network:///&quot; ଅବସ୍ଥାନରେ ଦ୍ରୁଶ୍ଯମାନ ହେବା ଉଚିତ.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="ସ୍ଥାନୀୟ ଡି.ଏନ୍.ଏସ୍.-ଏସ୍.ଡି. ସେବାକୁ କିପରି ପ୍ରଦର୍ଶିତ କରାଯିବ">
+                                                <longdesc>ସମ୍ଭବ ମୂଲ୍ଯଗୁଡି଼କ ହେଲା &quot;merged&quot;, &quot;separate&quot; ଓ &quot;disabled&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="ଏସ୍.ଏମ୍.ବି. କାର୍ଯ୍ଯଦଳ">
+                                                <longdesc>ବ୍ଯବହରକାରୀର ୱିଣ୍ଡୋଜ କାର୍ଯ୍ଯସମୂହ ବା ପରିସର. ନୂଆ କାର୍ଯ୍ଯସମୂହ ସମ୍ପୂର୍ଣ୍ଣ ପ୍ରଭାବ ଦେଖିବା ପାଇଁ ବ୍ଯବହରକାରୀକୁ ଲଗ ଆଉଟ କରି ପୁଣି ଲଗଇନ କରିବାକୁ ପଡ଼ିପାରେ.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+  <plugin useBcop="true" name="maximumize">
+    <short>Maximumize</short>
+    <short xml:lang="en_GB">Resize to Available Screenspace</short>
+    <short xml:lang="fr">Étaler</short>
+    <short xml:lang="gl">Maximizado</short>
+    <short xml:lang="it">Allarga</short>
+    <short xml:lang="ja">最大化</short>
+    <short xml:lang="nb">Maksimumer</short>
+    <short xml:lang="pt">Maximumização</short>
+	<long>Maximumizes windows (resize them to fit the available screenspace).</long>
+	<long xml:lang="en_GB">Resize windows to fit the available screenspace.</long>
+	<long xml:lang="fr">Agrandir les fenêtres de manière à prendre toute l'espace disponible sur l'écran</long>
+	<long xml:lang="gl">Maximizar fiestra () </long>
+	<long xml:lang="it">Allarga le finestre (le ridimensiona per occupare lo spazio disponibile).</long>
+	<long xml:lang="ja">ウィンドウの最大化（画面の空きスペースの範囲内で最大限にサイズ変更）</long>
+	<long xml:lang="nb">Maksimumiserer vinduer (endrer størrelse på dem til å passe til tilgjengelig skjermplass).</long>
+	<long xml:lang="pt">Maximumiza janelas (redimensiona-as para caberem no espaço de ecrã disponível).</long>
+	<category>Window Management</category>
+    <display>
+      <option type="bool" name="ignore_sticky">
+         <short>Ignore sticky windows in the calculations</short>
+         <short xml:lang="en_GB">Ignore sticky windows in the calculations</short>
+         <short xml:lang="fr">Ignorer les fenêtres adhésives dans les calculs</short>
+         <short xml:lang="gl">Ignorar fiestras fixadas nos calculos</short>
+         <short xml:lang="it">Ignorare finestre adesive nei calcoli</short>
+         <short xml:lang="ja">計算時にスティッキー・ウィンドウを無視</short>
+         <short xml:lang="nb">Ignorer klistrevinduer i beregningene</short>
+         <short xml:lang="pt">Ignorar janelas sticky nos cálculos</short>
+	 <long>Treat sticky windows as non-existant when calculating space to use for the maximumize window.</long>
+	 <long xml:lang="en_GB">Treat sticky windows as non-existant when calculating space to use for the resized window.</long>
+	 <long xml:lang="fr">Traiter les fenêtres adhésives comme non-existantes en calculant l'espace à utiliser pour Étaler la fenêtre.</long>
+	 <long xml:lang="gl">Tratar as fiestras fixadas como non existentes nos cálculos de espacio a empregar para as fiestras maximizables.</long>
+	 <long xml:lang="it">Considera le finestre adesive come non esistenti nel calcolo dello spazio da usare per allargare la finestra.</long>
+	 <long xml:lang="ja">ウィンドウの最大化に使用するスペースの計算時に、スティッキー・ウィンドウを存在しないものとして扱う</long>
+	 <long xml:lang="nb">Behandle klistrevinduer som ikke-eksisterende når plassen som skal brukes til det maksimumiserte vinduet beregnes.</long>
+	 <long xml:lang="pt">Considerar janelas sticky como não-existentes quando se calcula o espaço a user para a janela maximumize.</long>
+         <default>true</default>
+      </option>
+      <option type="bool" name="ignore_overlapping">
+         <short>Ignore already overlapping windows in the calculations</short>
+         <short xml:lang="it">Ignorare finestre sovrapposte nei calcoli</short>
+         <short xml:lang="ja">すでに部分的に重なっているウィンドウは計算時に無視</short>
+         <short xml:lang="pt">Ignorar janelas já sobrepostas nos cálculos</short>
+	 <long>Treat windows that are already overlapping with the current window as non-existant when calculating space to use for the maximumize window.</long>
+	 <long xml:lang="it">Considera le finestre contrapposte come non esistenti nel calcolo dello spazio da usare per allargare la finestra.</long>
+	 <long xml:lang="ja">ウィンドウの最大化に使用するスペースの計算時に、現在のウィンドウと部分的に重なっているウィンドウを存在しないものとして扱う</long>
+	 <long xml:lang="pt">Considerar janelas que já estão sobrepostas à janela actual como não-existentes, quando se calcula o espaço a utilizar para a janela maximumize.</long>
+         <default>false</default>
+      </option>
+      <group>
+        <short>Bindings</short>
+        <short xml:lang="ar">الأغلفة</short>
+        <short xml:lang="bn">সীমাবদ্ধতা</short>
+        <short xml:lang="ca">Vinculacions</short>
+        <short xml:lang="de">Tastenkombinationen</short>
+        <short xml:lang="el">Συνδυασμοί</short>
+        <short xml:lang="en_GB">Bindings</short>
+        <short xml:lang="es">Combinación de Teclas</short>
+        <short xml:lang="fi">Näppäinyhdistelmät</short>
+        <short xml:lang="fr">Raccourcis</short>
+        <short xml:lang="gl">Atallos</short>
+        <short xml:lang="gu">બાઈન્ડીંગો</short>
+        <short xml:lang="hi">बाइंडिंग</short>
+        <short xml:lang="it">Scorciatoie</short>
+        <short xml:lang="ja">割り当て</short>
+        <short xml:lang="nb">Hurtigtast</short>
+        <short xml:lang="nl">Bindingen</short>
+        <short xml:lang="pl">Skróty klawiszowe</short>
+        <short xml:lang="pt">Atalhos</short>
+        <short xml:lang="pt_BR">Atalhos</short>
+        <short xml:lang="ru">Горячие клавиши</short>
+        <short xml:lang="sv">Bindningar</short>
+        <short xml:lang="tr">Bağlayıcılar</short>
+        <short xml:lang="zh_CN">按键组合</short>
+        <option type="key" name="trigger_key">
+          <short>Trigger maximumize</short>
+          <short xml:lang="en_GB">Trigger reizing of window</short>
+          <short xml:lang="fr">Activer Étaler</short>
+          <short xml:lang="gl">Disparar maximizador</short>
+          <short xml:lang="it">Avvia l'allargamento</short>
+          <short xml:lang="ja">最大化のオンオフ</short>
+          <short xml:lang="nb">Utløs maksimumiser</short>
+          <short xml:lang="pt">Activa maximumização</short>
+          <long>Trigger a resize of the window currently focused so it fits as much of the available screenspae as possible.</long>
+          <long xml:lang="en_GB">Trigger a resize of the window currently focused so it fits as much of the available screenspace as possible.</long>
+          <long xml:lang="fr">Activer un redimensionnement de la fenêtre ayant le focus pour qu'elle un maximum de place sur l'espace disponible à l'écran.</long>
+          <long xml:lang="gl">Escalar o tamaño da fiestra enfocada actualmente para que encha o espazo libre máximo dispoñible.</long>
+          <long xml:lang="it">Avvia un ridimensionamento della finestra col focus in modo che occupi lo spazio su schermo disponibile.</long>
+          <long xml:lang="ja">現在フォーカスのあるウィンドウを利用可能な画面スペースに最大限合わせるサイズ変更のオンオフ</long>
+          <long xml:lang="nb">Utløs en størrelsesendring av fokusert vindu slik at det passer til så mye av tilgjengelig skjermplass som mulig.</long>
+          <long xml:lang="pt">Activar o redimensionamento da janela focada actualmente de maneira a que ocupe o máximo possível do espaço disponível </long>
+          <default>&lt;Super&gt;m</default>
+        </option>
+      </group>
+    </display>
+  </plugin>
+</compiz>

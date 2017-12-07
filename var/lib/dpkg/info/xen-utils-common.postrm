@@ -1,0 +1,36 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+purge)
+	# Remove udev rules symlink
+	L="/etc/udev/rules.d/z60_xen-backend.rules"
+	[ -L "$L" ] && rm "$L"
+
+	XENSTORED_DIR="/var/lib/xenstored"
+	[ -d "${XENSTORED_DIR}" ] && rm -r "${XENSTORED_DIR}"
+	;;
+
+remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+	;;
+
+*)
+	echo "postrm called with unknown argument \`$1'" >&2
+	exit 
+	;;
+esac
+
+# Automatically added by dh_installinit
+if [ "$1" = "purge" ] ; then
+	update-rc.d xend remove >/dev/null || exit $?
+fi
+# End automatically added section
+# Automatically added by dh_installinit
+if [ "$1" = "purge" ] ; then
+	update-rc.d xendomains remove >/dev/null || exit $?
+fi
+# End automatically added section
+
+
+exit 0

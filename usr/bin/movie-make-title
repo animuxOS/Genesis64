@@ -1,0 +1,293 @@
+#!/bin/sh
+
+# Copyright (c) 2005-2007, Sven Berkvens-Matthijsse
+# 
+# All rights reserved.
+# 
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 
+# * Redistributions of source code must retain the above copyright
+#   notice, this list of conditions and the following disclaimer.
+# 
+# * Redistributions in binary form must reproduce the above copyright
+#   notice, this list of conditions and the following disclaimer in the
+#   documentation and/or other materials provided with the distribution.
+# 
+# * Neither the name of deKattenFabriek nor the names of its
+#   contributors may be used to endorse or promote products derived from
+#   this software without specific prior written permission.
+# 
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Botch on errors
+set -e
+
+###############################################################################
+# Load the library routines
+###############################################################################
+
+prefix="/usr"
+exec_prefix="${prefix}"
+datadir="${prefix}/share"
+bindir="${exec_prefix}/bin"
+
+. "${datadir}/videotrans/library.sh"
+
+###############################################################################
+# Function to display the program's usage
+###############################################################################
+
+usage()
+{
+	cat >&2 << EOF
+Usage: ${0##*/} -o output -s start_time -e end_time
+		[-n animation] -m mode source_video
+
+-o output	Directory to set up as the title sequence directory. If the
+		directory does not exist yet, it will be created. If the
+		directory already exists, it will be removed first and
+		recreated. If <output> exists but is not a directory, the
+		program will abort.
+
+-s start_time	The number of seconds into the movie when the dumping of
+		frames from the source should start. You could play the movie
+		using mplayer first and then pause the movie at the point
+		where you want to start capturing. Write down mplayer's idea
+		of the position (in its status line on the terminal, the
+		number in the "V:" part). Because mplayer cannot seek to the
+		number of seconds that you specify exactly, it is recommended
+		to subtract five seconds from the number that you write down.
+
+-e end_time	The number of seconds into the movie when the dumping of
+		frames from the source should stop. You could play the movie
+		using mplayer first and then pause the movie at the point
+		where you want to stop capturing. Write down mplayer's idea
+		of the position (in its status line on the terminal, the
+		number in the "V:" part). Because mplayer cannot seek to the
+		number of seconds that you specify exactly, it is recommended
+		to add five seconds to the number that you write down.
+
+-n animation	Using the -n option, you can control what the picture-in-
+		picture versions of the movies on the DVD will look like.
+		You may specify 'animated' (in which case they will be
+		animated and display previews of the movies), 'static' (in
+		which case they will be static, frozen preview images
+		instead) or 'none' (in which case no previews will be shown
+		whatsoever). The default is 'animated'.
+
+-m mode		The video mode, either 'pal' or 'ntsc'.
+EOF
+	if [ "$1" != "" ]
+	then
+		echo "" >&2
+		echo "ERROR: $@" >&2
+	fi
+	exit 1
+}
+
+###############################################################################
+# Temporary file name
+###############################################################################
+
+TEMP="/tmp/.movie-make-title.$$"
+trap "rm -f ${TEMP}* 2>/dev/null || :" EXIT
+
+###############################################################################
+# Parse options
+###############################################################################
+
+OUTPUT=""
+START_TIME=""
+END_TIME=""
+ANIMATED="animated"
+d_size=""
+while getopts "o:s:e:n:m:" option
+do
+	case "${option}"
+	in
+		o)
+			OUTPUT="${OPTARG}"
+			;;
+
+		s)
+			START_TIME="${OPTARG}"
+			;;
+
+		e)
+			END_TIME="${OPTARG}"
+			;;
+
+		m)
+			if [ "${OPTARG}" = "pal" ]
+			then
+				d_size="-dx 720 -dy 576"
+				ofps="25"
+			elif [ "${OPTARG}" = "ntsc" ]
+			then
+				d_size="-dx 720 -dy 480"
+				opfs="29.97"
+			else
+				usage "Unknown video mode for -m"
+			fi
+			;;
+
+		n)
+			case "${OPTARG}"
+			in
+				"animated" | "static" | "none")
+					ANIMATED="${OPTARG}"
+					;;
+				*)
+					usage "Unknown animation mode for -n"
+					;;
+			esac
+			;;
+
+		*)
+			usage
+			;;
+	esac
+done
+
+###############################################################################
+# Check the parameters
+###############################################################################
+
+if [ "${d_size}" = "" ]
+then
+	usage "Missing -m option"
+fi
+
+if [ "${OUTPUT}" = "" ]
+then
+	usage "Missing -o option"
+fi
+
+if ! check_filenames "${OUTPUT}"
+then
+	exit 1
+fi
+
+case "${START_TIME}"
+in
+	"" | *[!0-9.]* | *.*.* | *.)
+		usage "Illegal time specification for -s"
+		;;
+esac
+
+case "${END_TIME}"
+in
+	"" | *[!0-9.]* | *.*.* | *.)
+		usage "Illegal time specification for -e"
+		;;
+esac
+
+if [ -e "${OUTPUT}" -a ! -d "${OUTPUT}" ]
+then
+	message "ERROR: <${OUTPUT}> exists but is not a directory!"
+	exit 1
+fi
+
+###############################################################################
+# One source file?
+###############################################################################
+
+shift "`expr ${OPTIND} - 1`"
+[ "$#" = 1 ] || usage
+SOURCE="$1"
+
+if ! check_filenames "${SOURCE}"
+then
+	exit 1
+fi
+
+###############################################################################
+# Read the video properties from the background file
+###############################################################################
+
+if ! mplayer_identify "${SOURCE}"
+then
+	exit 1
+fi
+
+###############################################################################
+# Determine source aspect ratio
+###############################################################################
+
+case "${s_aspect}"
+in
+	0 | 0.0 | 0.00 | 0.000 | 0.0000)
+		s_aspect=""
+		;;
+	*)
+		s_aspect="-sax ${s_aspect} -say 1.0"
+		;;
+esac
+
+###############################################################################
+# Calculate scale factors
+###############################################################################
+
+eval `${bindir}/movie-zoomcalc -sx ${x} -sy ${y} ${s_aspect} ${d_size} -dax 4 -day 3 -panscan`
+
+###############################################################################
+# Determine number of frames times 1000
+###############################################################################
+
+fps1000="`echo "${fps} * 1000" | bc`"
+fps1000="${fps1000%.*}"
+
+###############################################################################
+# Calculate how many frames to save
+###############################################################################
+
+NUM_FRAMES="`echo "( ${END_TIME} - ${START_TIME} ) * ${fps}" | bc`"
+NUM_FRAMES="${NUM_FRAMES%.*}"
+
+###############################################################################
+# Set up the destination directory
+###############################################################################
+
+message "Setting up directory <${OUTPUT}>"
+[ -d "${OUTPUT}" ] && rm -r -- "${OUTPUT}"
+mkdir -p -- "${OUTPUT}"
+
+echo "${fps1000}:1000" > "${OUTPUT}/title.fps"
+echo "${ANIMATED}" > "${OUTPUT}/animation"
+
+###############################################################################
+# Convert to JPEG
+###############################################################################
+
+message "Converting <${SOURCE}> (${x}x${y}) to JPEG (${ZX}x${ZY}). The expanded size is ${DX}x${DY}. There are ${NUM_FRAMES} total frames. Extracting audio to <${OUTPUT}/title.wav>."
+
+if ! mplayer -channels "${ch}" -zoom -vo jpeg:quality=90:outdir="${OUTPUT}" \
+	-vf "crop=${CX}:${CY},scale=${ZX}:${ZY},expand=${DX}:${DY},harddup" \
+	-ao pcm:waveheader:file="${OUTPUT}/title.wav" -ss "${START_TIME}" \
+	-frames "${NUM_FRAMES}" -noframedrop -slave -nojoystick -nolirc \
+	-- "${SOURCE}" 2>"${TEMP}.err" < /dev/null
+then
+	message "ERROR: mplayer failed. Output follows:"
+	cat "${TEMP}.err" >&2
+	exit 1
+fi
+
+###############################################################################
+# Tell the user what to do next
+###############################################################################
+
+message "Now, delete the frames that you don't want in the <${OUTPUT}> directory. Also, edit the <${OUTPUT}/title.wav> file so that it corresponds as well as possible with the selected frames."
+
+# vim:ts=2:sw=2

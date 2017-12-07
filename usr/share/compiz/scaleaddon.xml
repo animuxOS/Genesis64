@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+    <plugin useBcop="true" name="scaleaddon">
+	<short>Scale Addons</short>
+	<short xml:lang="ca">Afegits d'escalat</short>
+	<short xml:lang="de">Scale-Erweiterungen</short>
+	<short xml:lang="el">Κλιμάκωση Addons</short>
+	<short xml:lang="en_GB">Scale Addons</short>
+	<short xml:lang="fr">Échelle (outils de mise à l'échelle)</short>
+	<short xml:lang="gl">Adicións ao Scale</short>
+	<short xml:lang="gu">ઉમેરાઓ ખેંચો</short>
+	<short xml:lang="hi">एडऑन मापें</short>
+	<short xml:lang="it">Proprietà aggiuntive di «Scala finestre»</short>
+	<short xml:lang="ja">スケールのアドオン</short>
+	<short xml:lang="nb">Skaler-tillegg</short>
+	<short xml:lang="nl">Schaal addons</short>
+	<short xml:lang="pl">Dodatki do skalowania</short>
+	<short xml:lang="pt">Adições ao Scale</short>
+	<short xml:lang="pt_BR">Adições ao plugin de Dimensionamento</short>
+	<short xml:lang="sv">Skala tillägg</short>
+	<long>Some useful additions to the scale plugin</long>
+	<long xml:lang="ca">Alguns afegits al connector d'escalat</long>
+	<long xml:lang="de">Einige nützliche Erweiterungen für das Plugin 'Skalieren'</long>
+	<long xml:lang="el">Μερικές χρήσιμες εναλλακτικές για το πρόσθετο της κλιμάκωσης</long>
+	<long xml:lang="en_GB">Some useful additions to the scale plugin</long>
+	<long xml:lang="fr">Quelques améliorations utiles de l'extension Échelle</long>
+	<long xml:lang="gl">Adicións úteis ao plugin scale</long>
+	<long xml:lang="gu">ખેંચો પ્લગઈમાં અમુક ઉપયોગી ઉમેરાઓ</long>
+	<long xml:lang="hi">मापक प्लगिन में कुछ उपयोगी जोड़</long>
+	<long xml:lang="it">Alcune aggiunte utili al plug-in «Scala finestre»</long>
+	<long xml:lang="ja">スケールプラグインに有用な追加機能</long>
+	<long xml:lang="nb">Noen nyttige tillegg til Skaler-tillegget</long>
+	<long xml:lang="nl">Een paar zinvolle toevoegingen voor de schaal plugin</long>
+	<long xml:lang="pl">Kilka przydatnych dodatków do wtyczki skalowania</long>
+	<long xml:lang="pt">Adições úteis ao plugin scale</long>
+	<long xml:lang="pt_BR">Adições úteis ao plugin de Dimensionamento</long>
+	<long xml:lang="sv">Några användbara tillägg till insticksmodulen för skalning</long>
+	<category>Utility</category>
+	<deps>
+	    <relation type="after">
+		<plugin>scale</plugin>
+		<plugin>text</plugin>
+	    </relation>
+	    <requirement>
+		<plugin>scale</plugin>
+	    </requirement>
+	</deps>
+	<display>
+	    <group>
+		<short>Bindings</short>
+		<short xml:lang="ar">الأغلفة</short>
+		<short xml:lang="bn">সীমাবদ্ধতা</short>
+		<short xml:lang="ca">Vinculacions</short>
+		<short xml:lang="de">Tastenkombinationen</short>
+		<short xml:lang="el">Συνδυασμοί</short>
+		<short xml:lang="en_GB">Bindings</short>
+		<short xml:lang="es">Combinación de Teclas</short>
+		<short xml:lang="fi">Näppäinyhdistelmät</short>
+		<short xml:lang="fr">Raccourcis</short>
+		<short xml:lang="gl">Atallos</short>
+		<short xml:lang="gu">બાઈન્ડીંગો</short>
+		<short xml:lang="hi">बाइंडिंग</short>
+		<short xml:lang="it">Scorciatoie</short>
+		<short xml:lang="ja">割り当て</short>
+		<short xml:lang="nb">Hurtigtast</short>
+		<short xml:lang="nl">Bindingen</short>
+		<short xml:lang="pl">Skróty klawiszowe</short>
+		<short xml:lang="pt">Atalhos</short>
+		<short xml:lang="pt_BR">Atalhos</short>
+		<short xml:lang="ru">Горячие клавиши</short>
+		<short xml:lang="sv">Bindningar</short>
+		<short xml:lang="tr">Bağlayıcılar</short>
+		<short xml:lang="zh_CN">按键组合</short>
+		<option type="key" name="close_key">
+		    <short>Close Window</short>
+		    <short xml:lang="ja">ウィンドウを閉じる</short>
+		    <long>Close windows while in scale mode</long>
+		    <long xml:lang="ca">Tanca finestres mentres estem en el mode d'escalat</long>
+		    <long xml:lang="de">Fenster während des 'Skalierte Fenster'-Modus schließen</long>
+		    <long xml:lang="el">Κλείσιμο παραθύρων στην μέθοδο κλιμάκωσης</long>
+		    <long xml:lang="en_GB">Close windows while in scale mode</long>
+		    <long xml:lang="fr">Fermer les fenêtres en mode Échelle</long>
+		    <long xml:lang="gl">pechar fiestras mentres en modo Scale</long>
+		    <long xml:lang="gu">જ્યારે ખેંચાણ સ્થિતિમાં હોય ત્યારે વિન્ડો બંધ કરો</long>
+		    <long xml:lang="hi">मापक मोड में विंडो बन्द करें</long>
+		    <long xml:lang="it">Chiude le finestre in modalità «Scala finestre»</long>
+		    <long xml:lang="ja">スケールモード中のウィンドウを閉じる</long>
+		    <long xml:lang="nb">Lukk vinduer mens modus er Skaler</long>
+		    <long xml:lang="nl">Sluit venster in Schaal modus</long>
+		    <long xml:lang="pl">Zamykanie okna podczas trybu skalowania.</long>
+		    <long xml:lang="pt">Fechar janelas enquanto em modo Redimensionar</long>
+		    <long xml:lang="pt_BR">Fechar janelas enquanto estiver em modo Dimensionamento</long>
+		    <long xml:lang="sv">Stäng fönster i skalningsläge</long>
+		    <passive_grab>false</passive_grab>
+		    <internal/>
+		</option>
+		<option type="button" name="close_button">
+		    <short>Close Window</short>
+		    <short xml:lang="ja">ウィンドウを閉じる</short>
+		    <long>Close window while in scale mode</long>
+		    <long xml:lang="it">Chiude la finestra mentre in modalità «Scala finestre»</long>
+		    <long xml:lang="ja">スケールモード中に選択ウィンドウを閉じる</long>
+		    <passive_grab>false</passive_grab>
+		    <default>Button2</default>
+		    <internal/>
+		</option>
+		<option type="key" name="pull_key">
+		    <short>Pull Window</short>
+		    <short xml:lang="ja">ウィンドウを引き入れる</short>
+		    <long>Pull window to current viewport while in scale mode</long>
+		    <long xml:lang="ja">スケールモード中に選択ウィンドウを現在のビューポートに引き入れる</long>
+		    <passive_grab>false</passive_grab>
+		    <internal/>
+		</option>
+		<option type="button" name="pull_button">
+		    <short>Pull Window</short>
+		    <short xml:lang="ja">ウィンドウを引き入れる</short>
+		    <long>Pull window to current viewport while in scale mode</long>
+		    <long xml:lang="ja">スケールモード中に選択ウィンドウを現在のビューポートに引き入れる</long>
+		    <passive_grab>false</passive_grab>
+		    <default/>
+		    <internal/>
+		</option>
+		<option type="key" name="zoom_key">
+		    <short>Zoom Window</short>
+		    <short xml:lang="ja">ウィンドウをズーム</short>
+		    <long>Zoom window while in scale mode</long>
+		    <long xml:lang="ja">スケールモード中に選択ウィンドウをズーム</long>
+		    <passive_grab>false</passive_grab>
+		    <internal/>
+		</option>
+		<option type="button" name="zoom_button">
+		    <short>Zoom Window</short>
+		    <short xml:lang="ja">ウィンドウをズーム</short>
+		    <long>Zoom window while in scale mode</long>
+		    <long xml:lang="ja">スケールモード中に選択ウィンドウをズーム</long>
+		    <passive_grab>false</passive_grab>
+		    <default>Button3</default>
+		    <internal/>
+		</option>
+	    </group>
+	</display>
+	<screen>
+	    <group>
+		<short>Appearance</short>
+		<short xml:lang="ca">Aparença</short>
+		<short xml:lang="de">Aussehen</short>
+		<short xml:lang="el">Εμφάνιση</short>
+		<short xml:lang="en_GB">Appearance</short>
+		<short xml:lang="es">Apariencia</short>
+		<short xml:lang="eu">Itxura</short>
+		<short xml:lang="fi">Ulkoasu</short>
+		<short xml:lang="fr">Apparence</short>
+		<short xml:lang="gl">Aparencia</short>
+		<short xml:lang="gu">દેખાવ</short>
+		<short xml:lang="hi">प्रकटन</short>
+		<short xml:lang="it">Aspetto</short>
+		<short xml:lang="ja">外観</short>
+		<short xml:lang="nb">Utseende</short>
+		<short xml:lang="nl">Verschijning</short>
+		<short xml:lang="pl">Wygląd</short>
+		<short xml:lang="pt">Aparência</short>
+		<short xml:lang="pt_BR">Aparência</short>
+		<short xml:lang="sv">Utseende</short>
+		<short xml:lang="tr">Görünüm</short>
+		<short xml:lang="zh_CN">外观</short>
+		<subgroup>
+		    <short>Window Title</short>
+		    <short xml:lang="ca">Títol de la finestra</short>
+		    <short xml:lang="de">Fenstertitel</short>
+		    <short xml:lang="el">Τίτλος Παραθύρου</short>
+		    <short xml:lang="en_GB">Window Title</short>
+		    <short xml:lang="fi">Ikkunan otsikko</short>
+		    <short xml:lang="fr">Titre de fenêtre</short>
+		    <short xml:lang="gl">Título fiestra</short>
+		    <short xml:lang="gu">વિન્ડો શીર્ષક</short>
+		    <short xml:lang="hi">विंडो का शीर्षक</short>
+		    <short xml:lang="it">Titolo finestra</short>
+		    <short xml:lang="ja">ウィンドウタイトル</short>
+		    <short xml:lang="nb">Vindustittel</short>
+		    <short xml:lang="nl">Venster titel</short>
+		    <short xml:lang="pl">Tytuł okna</short>
+		    <short xml:lang="pt">Título Janela</short>
+		    <short xml:lang="pt_BR">Título da Janela</short>
+		    <short xml:lang="sv">Fönstertitel</short>
+		    <short xml:lang="tr">Pencere Başlığı</short>
+		    <option type="int" name="window_title">
+			<short>Window Title Display</short>
+			<short xml:lang="el">Εμφάνιση Τίτλου Παραθύρου</short>
+			<short xml:lang="en_GB">Window Title Display</short>
+			<short xml:lang="fr">Affichage du Titre de Fenêtre</short>
+			<short xml:lang="gl">Mostrar Tipo da Fiestra</short>
+			<short xml:lang="it">Visualizzazione titolo finestra</short>
+			<short xml:lang="ja">ウィンドウタイトル表示</short>
+			<short xml:lang="nb">Vindustittelvisning</short>
+			<short xml:lang="nl">Venster titel tonen</short>
+			<short xml:lang="pl">Pokazuj tytuł okna</short>
+			<short xml:lang="pt">Mostrar Título Janela</short>
+			<short xml:lang="sv">Fönstertitelvisning</short>
+			<long>Window title display in scale mode</long>
+			<long xml:lang="el">Εμφάνιση τίτλου παραθύρου στην κλιμάκωση</long>
+			<long xml:lang="en_GB">Window title display in scale mode</long>
+			<long xml:lang="fr">Affichage du titre de la fenêtre en mode Échelle</long>
+			<long xml:lang="gl">Mostrar título da fiestra no modo escalado</long>
+			<long xml:lang="it">Mostra il titolo della finestra nella modalità ridotta</long>
+			<long xml:lang="ja">スケールモードでのウィンドウタイトルの表示</long>
+			<long xml:lang="nb">Vindustittelvisning i Skaler-modus</long>
+			<long xml:lang="nl">Toon venster titel in schaal modus</long>
+			<long xml:lang="pl">Pokazuj tytuł okna w trybie skalowania</long>
+			<long xml:lang="pt">Mostrar título da janela no modo Redimensionar</long>
+			<long xml:lang="sv">Visa fönstertitel i skalningsläge</long>
+			<min>0</min>
+			<max>2</max>
+			<default>1</default>
+			<desc>
+			    <value>0</value>
+			    <name>No display</name>
+			    <name xml:lang="el">Μη εμφάνιση</name>
+			    <name xml:lang="en_GB">No display</name>
+			    <name xml:lang="fr">Pas d'affichage</name>
+			    <name xml:lang="gl">Ningunha pantalla</name>
+			    <name xml:lang="it">Nessuna visualizzazione</name>
+			    <name xml:lang="ja">非表示</name>
+			    <name xml:lang="nb">Ingen visning</name>
+			    <name xml:lang="nl">Geen display</name>
+			    <name xml:lang="pl">Nie pokazuj</name>
+			    <name xml:lang="pt">Não exibe</name>
+			    <name xml:lang="sv">Ingen visning</name>
+			</desc>
+			<desc>
+			    <value>1</value>
+			    <name>Highlighted window only</name>
+			    <name xml:lang="fi">Vain korostettu ikkuna</name>
+			    <name xml:lang="fr">Fenêtre en surbrillance seulement</name>
+			    <name xml:lang="gl">Fiestras resaltadas só</name>
+			    <name xml:lang="it">Solo finestre evidenziate</name>
+			    <name xml:lang="ja">強調表示されたウィンドウのみ</name>
+			    <name xml:lang="nb">Kun valgt vindu</name>
+			    <name xml:lang="pl">Tylko podświetlonego okna</name>
+			    <name xml:lang="pt">Janela iluminada apenas</name>
+			</desc>
+			<desc>
+			    <value>2</value>
+			    <name>All windows</name>
+			    <name xml:lang="de">Sämtliche Fenster</name>
+			    <name xml:lang="el">Όλα τα παράθυρα</name>
+			    <name xml:lang="en_GB">All windows</name>
+			    <name xml:lang="fr">Toutes les fenêtres</name>
+			    <name xml:lang="gl">Tódalas fiestras</name>
+			    <name xml:lang="it">Tutte le finestre</name>
+			    <name xml:lang="ja">すべてのウィンドウ</name>
+			    <name xml:lang="nb">Alle vinduer</name>
+			    <name xml:lang="nl">Alle vensters</name>
+			    <name xml:lang="pl">Wszystkie okna</name>
+			    <name xml:lang="pt">Todas as janelas</name>
+			    <name xml:lang="sv">Alla fönster</name>
+			</desc>
+		    </option>
+		    <option type="bool" name="title_bold">
+			<short>Bold Font</short>
+			<short xml:lang="ca">Text en negreta</short>
+			<short xml:lang="de">Fettdruck für Schrift verwenden</short>
+			<short xml:lang="el">Έντονη Γραμματοσειρά</short>
+			<short xml:lang="en_GB">Bold Font</short>
+			<short xml:lang="fi">Lihavoitu kirjasin</short>
+			<short xml:lang="fr">Police Grasse</short>
+			<short xml:lang="gl">Fonte a negrito</short>
+			<short xml:lang="gu">ઘાટો ફોન્ટ</short>
+			<short xml:lang="hi">मोटा फाँट</short>
+			<short xml:lang="it">Carattere grassetto</short>
+			<short xml:lang="ja">太字</short>
+			<short xml:lang="nb">Fet skrift</short>
+			<short xml:lang="nl">Vet lettertype</short>
+			<short xml:lang="pl">Pogrubiona czcionka</short>
+			<short xml:lang="pt">Fonte a negrito</short>
+			<short xml:lang="pt_BR">Fonte em negrito</short>
+			<short xml:lang="sv">Fet typsnitt</short>
+			<short xml:lang="tr">Kalın Yazı Tipi</short>
+			<long>Use bold font for window title display</long>
+			<long xml:lang="ca">Usa text en negreta per mostrar el títol de la finestra</long>
+			<long xml:lang="de">Verwende fette Schriftart für Fenstertielanzeige.</long>
+			<long xml:lang="el">Χρησιμοποίηση έντονης γραμματοσειράς για την εμφάνιση του τίτλου παραθύρου</long>
+			<long xml:lang="en_GB">Use bold font for window title display</long>
+			<long xml:lang="fi">Käytä lihavoitua fonttia ikkunan nimelle</long>
+			<long xml:lang="fr">Afficher le titre en gras</long>
+			<long xml:lang="gl">Mostrar títulos das fiestras a negrito</long>
+			<long xml:lang="gu">વિન્ડો શીર્ષક ડિસ્પ્લે માટે ઘાટા ફોન્ટ વાપરો</long>
+			<long xml:lang="hi">विंडो शीर्षक प्रदर्शन के लिए गहरा फाँट का प्रयोग करें</long>
+			<long xml:lang="it">Usa il carattere grassetto per mostrare il titolo della finestra</long>
+			<long xml:lang="ja">ウィンドウタイトル表示に太字を使用</long>
+			<long xml:lang="nb">Bruk fet skrift for visning av vindustittel</long>
+			<long xml:lang="nl">Gebruik vet lettertype voor tonen venster titel</long>
+			<long xml:lang="pl">Użyj pogrubionej czcionki w tytułach okien</long>
+			<long xml:lang="pt">Mostrar títulos das janelas a negrito</long>
+			<long xml:lang="pt_BR">Mostrar títulos das janelas em negrito</long>
+			<long xml:lang="sv">Använd fet typsnitt för fönstertitelvisning</long>
+			<default>false</default>
+		    </option>
+		    <option type="int" name="title_size">
+			<short>Font Size</short>
+			<short xml:lang="de">Textgröße</short>
+			<short xml:lang="el">Μέγεθος Γραμματοσειράς</short>
+			<short xml:lang="en_GB">Font Size</short>
+			<short xml:lang="es">Tamaño de la fuente</short>
+			<short xml:lang="fi">Kirjasimen koko</short>
+			<short xml:lang="fr">Taille de la police</short>
+			<short xml:lang="gl">Tamaño da fonte</short>
+			<short xml:lang="gu">ફોન્ટ માપ</short>
+			<short xml:lang="hi">फ़ॉन्ट आकार</short>
+			<short xml:lang="it">Dimensione carattere</short>
+			<short xml:lang="ja">フォントの大きさ</short>
+			<short xml:lang="nb">Skriftstørrelse</short>
+			<short xml:lang="nl">Letter grootte</short>
+			<short xml:lang="pl">Wielkość czcionki</short>
+			<short xml:lang="pt">Tamanho da fonte</short>
+			<short xml:lang="pt_BR">Tamanho da fonte</short>
+			<short xml:lang="sv">Typsnittsstorlek</short>
+			<short xml:lang="tr">Yazıtipi Boyutu</short>
+			<short xml:lang="zh_CN">字体大小</short>
+			<long>Font size for window title display</long>
+			<long xml:lang="ca">Mida de la lletra del títol de la finestra</long>
+			<long xml:lang="de">Größe des Fenstertitels</long>
+			<long xml:lang="el">Χρώμα γραμματοσειράς εμφάνισης του τίτλου παραθύρου</long>
+			<long xml:lang="en_GB">Font size for window title display</long>
+			<long xml:lang="fi">Ikkunan nimen fontti</long>
+			<long xml:lang="fr">Taille de police du titre de fenêtre</long>
+			<long xml:lang="gl">Tamaño da fonte do título da fiestra</long>
+			<long xml:lang="gu">વિન્ડો શીર્ષક ડિસ્પ્લે માટે ફોન્ટ માપ</long>
+			<long xml:lang="hi">विंडो शीर्षक प्रदर्शन के लिए फ़ॉन्ट आकार</long>
+			<long xml:lang="it">Dimensione del carattere per la visualizzazione del titolo della finestra</long>
+			<long xml:lang="ja">ウィンドウタイトル表示のフォントの大きさ</long>
+			<long xml:lang="nb">Skriftstørrelse for visning av vindustittel</long>
+			<long xml:lang="nl">Font grootte om de venster titel te tonen</long>
+			<long xml:lang="pl">Rozmiar czcionki dla tytułu okna</long>
+			<long xml:lang="pt">Tamanho da fonte do título da janela</long>
+			<long xml:lang="pt_BR">Tamanho da fonte do título da janela</long>
+			<long xml:lang="sv">Typsnittsstorlek för fönstertitelvisning</long>
+			<min>6</min>
+			<max>48</max>
+			<default>10</default>
+		    </option>
+		    <option type="int" name="border_size">
+			<short>Title Border Size</short>
+			<short xml:lang="ca">Mida de la vora del títol</short>
+			<short xml:lang="de">Titelrahmen-Größe</short>
+			<short xml:lang="el">Μέγεθος Ορίου Τίτλου</short>
+			<short xml:lang="en_GB">Title Border Size</short>
+			<short xml:lang="fi">Nimen kehyksen koko</short>
+			<short xml:lang="fr">Taille de bordure du titre</short>
+			<short xml:lang="gl">Tamaño da marxe do título</short>
+			<short xml:lang="gu">શીર્ષક કિનારી માપ</short>
+			<short xml:lang="hi">शीर्षक किनारा आकार</short>
+			<short xml:lang="it">Dimensione bordo titolo</short>
+			<short xml:lang="ja">タイトルの枠の大きさ</short>
+			<short xml:lang="nb">Kantstørrelse for kant</short>
+			<short xml:lang="nl">Titel rand grootte</short>
+			<short xml:lang="pl">Rozmiar ramki tytułu okna</short>
+			<short xml:lang="pt">Tamanho da margem do título</short>
+			<short xml:lang="pt_BR">Tamanho da margem do título</short>
+			<short xml:lang="sv">Bredd på titelkant</short>
+			<short xml:lang="tr">Başlık kenarlık Boyutu</short>
+			<long>Size of the border around the window title</long>
+			<long xml:lang="ca">Mida de la vora del títol de la finestra</long>
+			<long xml:lang="de">Größe des Rahmens um den Fenstertitel</long>
+			<long xml:lang="el">Μέγεθος του ορίου γύρω απ τον τίτλο παραθύρου</long>
+			<long xml:lang="en_GB">Size of the border around the window title</long>
+			<long xml:lang="fi">Ikkunan nimen kehyksen koko</long>
+			<long xml:lang="fr">Taille de la bordure autour du titre de la fenêtre</long>
+			<long xml:lang="gl">Tamaño da marxe á volta do título da fiestra</long>
+			<long xml:lang="gu">વિન્ડો શીર્ષકની ફરતેની કિનારીનું માપ</long>
+			<long xml:lang="hi">विंडो शीर्षक के गिर्द किनारा आकार</long>
+			<long xml:lang="it">Dimensione del bordo del titolo della finestra</long>
+			<long xml:lang="ja">ウィンドウタイトル周りの枠の大きさ</long>
+			<long xml:lang="nb">Størrelse på kanten rundt vindustittelen</long>
+			<long xml:lang="nl">Grootte van de rand rondom de venster titel</long>
+			<long xml:lang="pl">Rozmiar ramki wokół tytułu okna</long>
+			<long xml:lang="pt">Tamanho da margem à volta do título da janela</long>
+			<long xml:lang="pt_BR">Tamanho da margem a volta do título da janela</long>
+			<long xml:lang="sv">Storleken på kanten runt fönstertitel</long>
+			<min>1</min>
+			<max>20</max>
+			<default>3</default>
+		    </option>
+		    <option type="color" name="font_color">
+			<short>Font Color</short>
+			<short xml:lang="de">Textfarbe</short>
+			<short xml:lang="el">Χρώμα Γραμματοσειράς</short>
+			<short xml:lang="en_GB">Font Colour</short>
+			<short xml:lang="es">Color de la fuente</short>
+			<short xml:lang="fi">Kirjasimen väri</short>
+			<short xml:lang="fr">Couleur de la police</short>
+			<short xml:lang="gl">Cor da fonte</short>
+			<short xml:lang="gu">ફોન્ટ રંગ</short>
+			<short xml:lang="hi">फॉन्ट रंग</short>
+			<short xml:lang="it">Colore carattere</short>
+			<short xml:lang="ja">フォントの色</short>
+			<short xml:lang="nb">Skriftfarge</short>
+			<short xml:lang="nl">Letterkleur</short>
+			<short xml:lang="pl">Kolor czcionki</short>
+			<short xml:lang="pt">Cor da fonte</short>
+			<short xml:lang="pt_BR">Cor da fonte</short>
+			<short xml:lang="sv">Typsnittsfärg</short>
+			<short xml:lang="tr">Yazıtipi Rengi</short>
+			<short xml:lang="zh_CN">字体颜色</short>
+			<long>Font color of the window title</long>
+			<long xml:lang="ca">Color de la lletra del títol de la finestra</long>
+			<long xml:lang="de">Farbe des Fenstertitels</long>
+			<long xml:lang="el">Χρώμα γραμματοσειράς του τίτλου παραθύρου</long>
+			<long xml:lang="en_GB">Font colour of the window title</long>
+			<long xml:lang="fi">Ikkunan nimen fontin väri</long>
+			<long xml:lang="fr">Couleur de police du titre de fenêtre</long>
+			<long xml:lang="gl">Cor do título da fiestra</long>
+			<long xml:lang="gu">વિન્ડો શીર્ષકનો ફોન્ટ રંગ</long>
+			<long xml:lang="hi">विंडो शीर्षक का फ़ॉन्ट रंग</long>
+			<long xml:lang="it">Colore del carattere del titolo della finestra</long>
+			<long xml:lang="ja">ウィンドウタイトルのフォント色</long>
+			<long xml:lang="nb">Skriftfarge på vindustittelen</long>
+			<long xml:lang="nl">Font kleur van de venster titel</long>
+			<long xml:lang="pl">Kolor czcionki dla tytułu okna</long>
+			<long xml:lang="pt">Cor do título da janela</long>
+			<long xml:lang="pt_BR">Cor do título da janela</long>
+			<long xml:lang="sv">Typsnittsfärg för fönstertitel</long>
+			<default>
+			    <red>0xffff</red>
+			    <green>0xffff</green>
+			    <blue>0xffff</blue>
+			    <alpha>0xffff</alpha>
+			</default>
+		    </option>
+		    <option type="color" name="back_color">
+			<short>Background Color</short>
+			<short xml:lang="ca">Color de fons</short>
+			<short xml:lang="de">Hintergrundfarbe</short>
+			<short xml:lang="el">Χρώμα Φόντου</short>
+			<short xml:lang="en_GB">Background Colour</short>
+			<short xml:lang="fi">Taustan väri</short>
+			<short xml:lang="fr">Couleur de fond</short>
+			<short xml:lang="gl">Cor de fondo</short>
+			<short xml:lang="gu">પાશ્વ ભાગનો રંગ</short>
+			<short xml:lang="hi">पृष्ठभूमि रंग</short>
+			<short xml:lang="it">Colore di sfondo</short>
+			<short xml:lang="ja">背景色</short>
+			<short xml:lang="nb">Bakgrunnsfarge</short>
+			<short xml:lang="nl">Achtergrond kleur</short>
+			<short xml:lang="pl">Kolor tła</short>
+			<short xml:lang="pt">Cor de fundo</short>
+			<short xml:lang="pt_BR">Cor de fundo</short>
+			<short xml:lang="sv">Bakgrundsfärg</short>
+			<short xml:lang="tr">Arkaplan Rengi</short>
+			<long>Background color of the window title</long>
+			<long xml:lang="ca">Color de fons del títol de la finestra</long>
+			<long xml:lang="de">Hintergrundfarbe für Fenstertitel</long>
+			<long xml:lang="el">Χρώμα φόντου του τίτλου παραθύρου</long>
+			<long xml:lang="en_GB">Background colour of the window title</long>
+			<long xml:lang="fi">Ikkunan nimen taustaväri</long>
+			<long xml:lang="fr">Couleur d'arrière-plan du titre de la fenêtre</long>
+			<long xml:lang="gl">Cor de fondo do título da fiestra</long>
+			<long xml:lang="gu">વિન્ડો શીર્ષકના પાશ્વભાગનો રંગ</long>
+			<long xml:lang="hi">विंडो शीर्षक का पृष्ठभूमि रंग</long>
+			<long xml:lang="it">Colore di sfondo del titolo della finestra</long>
+			<long xml:lang="ja">ウィンドウタイトルの背景色</long>
+			<long xml:lang="nb">Bakgrunnsfarge på vindustittelen</long>
+			<long xml:lang="nl">Achtergrond kleur van de venster titel</long>
+			<long xml:lang="pl">Kolor tła dla tytułu okna</long>
+			<long xml:lang="pt">Cor de fundo do título da janela</long>
+			<long xml:lang="pt_BR">Cor de fundo do título da janela</long>
+			<long xml:lang="sv">Bakgrundsfärg för fönstertitel</long>
+			<default>
+			    <red>0x0000</red>
+			    <green>0x0000</green>
+			    <blue>0x0000</blue>
+			    <alpha>0x9999</alpha>
+			</default>
+		    </option>
+		</subgroup>
+		<subgroup>
+		    <short>Window Highlight</short>
+		    <short xml:lang="ca">Realçat de finestra</short>
+		    <short xml:lang="de">Fenstervervorhebung</short>
+		    <short xml:lang="el">Τονισμός Παραθύρου</short>
+		    <short xml:lang="en_GB">Window Highlight</short>
+		    <short xml:lang="fi">Ikkunan korostus</short>
+		    <short xml:lang="fr">Surbrillance de fenêtre</short>
+		    <short xml:lang="gl">Realzar fiestra</short>
+		    <short xml:lang="gu">વિન્ડો પ્રકાશન</short>
+		    <short xml:lang="hi">विंडो उभार</short>
+		    <short xml:lang="it">Evidenziazione finestra</short>
+		    <short xml:lang="ja">ウィンドウの強調表示</short>
+		    <short xml:lang="nb">Fremhev vindu</short>
+		    <short xml:lang="nl">Venster oplichten</short>
+		    <short xml:lang="pl">Podświetlenie okna</short>
+		    <short xml:lang="pt">Realçar Janela</short>
+		    <short xml:lang="pt_BR">Realçar Janela</short>
+		    <short xml:lang="sv">Fönsterframhävning</short>
+		    <short xml:lang="tr">Pencere Vurgulaması</short>
+		    <option type="bool" name="window_highlight">
+			<short>Draw Window Highlight</short>
+			<short xml:lang="ca">Dibuixa la finestra realçada</short>
+			<short xml:lang="de">Verwende Fensterhervorhebung</short>
+			<short xml:lang="el">Σχεδίαση Τονισμού Παραθύρου</short>
+			<short xml:lang="en_GB">Draw Window Highlight</short>
+			<short xml:lang="fi">Piirrä ikkunan korostus</short>
+			<short xml:lang="fr">Dessiner la surbrillance de fenêtre</short>
+			<short xml:lang="gl">Debuxar realce da fiestra</short>
+			<short xml:lang="gu">વિન્ડો પ્રકાશન દોરો</short>
+			<short xml:lang="hi">विंडो उभार खीचें</short>
+			<short xml:lang="it">Evidenziare finestra</short>
+			<short xml:lang="ja">ウィンドウの強調表示を描画</short>
+			<short xml:lang="nb">Tegn vindusfremheving</short>
+			<short xml:lang="nl">Teken venster oplichten</short>
+			<short xml:lang="pl">Rysuj podświetlenie okien</short>
+			<short xml:lang="pt">Desenhar Realce Janela</short>
+			<short xml:lang="pt_BR">Desenhar Realce da Janela</short>
+			<short xml:lang="sv">Rita fönsterframhävning</short>
+			<long>Highlights the hovered window with the given color</long>
+			<long xml:lang="de">Hebt das aktuelle Fenster in der gewählten Farbe hervor.</long>
+			<long xml:lang="el">Τονίζει το παράθυρο που το ποντίκι μένει επάνω του με το δωθέν χρώμα.</long>
+			<long xml:lang="en_GB">Highlights the hovered window with the given colour</long>
+			<long xml:lang="fr">Mettre en surbrillance la fenêtre survolée avec la couleur donnée</long>
+			<long xml:lang="gl">Evidencía a fiestra sobre a cal paira o cursor do rato coa cor escollida</long>
+			<long xml:lang="gu">ઉપર આવેલ વિન્ડોને આપેલ રંગ સાથે પ્રકાશિત કરે છે</long>
+			<long xml:lang="hi">दिए रंग के साथ आगे पीछे करता विंडो उभारता है</long>
+			<long xml:lang="it">Evidenzia la finestra su cui ci si sofferma col mouse con un dato colore</long>
+			<long xml:lang="ja">マウスが置かれているウィンドウを指定色で強調表示</long>
+			<long xml:lang="nb">Fremhever det svevende vinduet med den gitte fargen</long>
+			<long xml:lang="nl">Laat het venster waar over heen gezweefd wordt oplichten met de gegeven kleur</long>
+			<long xml:lang="pt">Evidencia a janela sobre a qual paira o cursor do rato com a cor escolhida</long>
+			<long xml:lang="pt_BR">Evidencia a janela sobre a qual paira o cursor do mouse com a cor escolhida</long>
+			<long xml:lang="sv">Framhäver fönstret som musen är över med den angivna färgen.</long>
+			<default>false</default>
+		    </option>
+		    <option type="color" name="highlight_color">
+			<short>Highlight Color</short>
+			<short xml:lang="ca">Color de realçat</short>
+			<short xml:lang="de">Hervorhebungsfarbe</short>
+			<short xml:lang="el">Χρώμα Τονισμού</short>
+			<short xml:lang="en_GB">Highlight Colour</short>
+			<short xml:lang="fi">Korostuksen väri</short>
+			<short xml:lang="fr">Couleur de surbrillance</short>
+			<short xml:lang="gl">Cor Realce</short>
+			<short xml:lang="gu">પ્રકાશિત રંગ</short>
+			<short xml:lang="hi">रंग उभारें</short>
+			<short xml:lang="it">Colore evidenziazione</short>
+			<short xml:lang="ja">強調表示色</short>
+			<short xml:lang="nb">Farge for fremheving</short>
+			<short xml:lang="nl">Oplicht kleur</short>
+			<short xml:lang="pl">Kolor podświetlenia</short>
+			<short xml:lang="pt">Cor Realce</short>
+			<short xml:lang="pt_BR">Cor de realce</short>
+			<short xml:lang="sv">Framhävningsfärg</short>
+			<short xml:lang="tr">Vurgulama Rengi</short>
+			<long>Color used for highlighting the hovered window</long>
+			<long xml:lang="de">Farbe, die zum Hervorheben des aktuellen Fensters verwendet wird</long>
+			<long xml:lang="el">Χρώμα τονισμού του παραθύρου που το ποντίκι μένει επάνω του.</long>
+			<long xml:lang="en_GB">Colour used for highlighting the hovered window</long>
+			<long xml:lang="fr">Couleur utilisée pour mettre la fenêtre survolée en surbrillance.</long>
+			<long xml:lang="gl">Cor usada para evidenciar a fiestra sobre a cal paira o cursor do rato</long>
+			<long xml:lang="gu">ઉપર આવેલ વિન્ડોના પ્રકાશન માટે વપરાતો રંગ</long>
+			<long xml:lang="hi">आगे पीछे किये जा रहे विंडो को उभारने के लिए प्रयुक्त रंग</long>
+			<long xml:lang="it">Colore utilizzato per evidenziare la finestra selezionata</long>
+			<long xml:lang="ja">マウスが置かれているウィンドウの強調に使用する色</long>
+			<long xml:lang="nb">Farge brukt for å fremheve det svevende vinduet</long>
+			<long xml:lang="nl">Kleur gebruikt om het venster op te laten lichten waaroverheen gezweefd wordt</long>
+			<long xml:lang="pt">Cor usada para evidenciar a janela sobre a qual paira o cursor do rato</long>
+			<long xml:lang="pt_BR">Cor usada para evidenciar a janela sobre a qual paira o cursor do mouse</long>
+			<long xml:lang="sv">Färg använd för framhävning av fönster som man musen är över</long>
+			<default>
+			    <red>0xffff</red>
+			    <green>0xffff</green>
+			    <blue>0xffff</blue>
+			    <alpha>0x9696</alpha>
+			</default>
+		    </option>
+		</subgroup>
+	    </group>
+	    <group>
+		<short>Behaviour</short>
+		<short xml:lang="ca">Comportament</short>
+		<short xml:lang="de">Verhalten</short>
+		<short xml:lang="el">Συμπεριφορά</short>
+		<short xml:lang="en_GB">Behaviour</short>
+		<short xml:lang="es">Comportamiento</short>
+		<short xml:lang="eu">Jokabidea</short>
+		<short xml:lang="fi">Toiminta</short>
+		<short xml:lang="fr">Comportement</short>
+		<short xml:lang="gl">Comportamento</short>
+		<short xml:lang="gu">વર્તણૂક</short>
+		<short xml:lang="hi">आचरण</short>
+		<short xml:lang="it">Comportamento</short>
+		<short xml:lang="ja">動作</short>
+		<short xml:lang="nb">Oppførsel</short>
+		<short xml:lang="nl">Gedrag</short>
+		<short xml:lang="pl">Zachowanie</short>
+		<short xml:lang="pt">Comportamento</short>
+		<short xml:lang="pt_BR">Comportamento</short>
+		<short xml:lang="sv">Beteende</short>
+		<short xml:lang="tr">Davranış</short>
+		<short xml:lang="zh_CN">行为</short>
+		<option type="int" name="layout_mode">
+		    <short>Window Layout Mode</short>
+		    <short xml:lang="ca">Mode de col·locació de la finestra</short>
+		    <short xml:lang="de">Modus für Fensteranordnung</short>
+		    <short xml:lang="el">Μέθοδος Διάταξης Παραθύρου</short>
+		    <short xml:lang="en_GB">Window Layout Mode</short>
+		    <short xml:lang="fr">Mode de superposition des fenêtres</short>
+		    <short xml:lang="gl">Modo Exibición Fiestras</short>
+		    <short xml:lang="gu">વિન્ડો દેખાવ સ્થિતિ</short>
+		    <short xml:lang="hi">विंडो अभिन्यास प्रकार</short>
+		    <short xml:lang="it">Modalità disposizione finestra</short>
+		    <short xml:lang="ja">ウィンドウの配列方式</short>
+		    <short xml:lang="nb">Modus for vindusutforming</short>
+		    <short xml:lang="nl">Venster uitleg modus</short>
+		    <short xml:lang="pl">Tryb rozmieszczenia okien</short>
+		    <short xml:lang="pt">Modo Exibição Janelas</short>
+		    <short xml:lang="pt_BR">Modo de Exibição de Janelas</short>
+		    <short xml:lang="sv">Fönsterlayoutläge</short>
+		    <short xml:lang="tr">Pencere Yerleşim Kipi</short>
+		    <long>Selects the mode to layout the windows in scale mode</long>
+		    <long xml:lang="ca">Selecciona el mode per col·locar les finestres en el mode d'escalat</long>
+		    <long xml:lang="de">Wählt den Modus für die Anordnung der Fenster im 'Fenster skalieren'-Modus aus.</long>
+		    <long xml:lang="el">Επιλογή της μεθόδου διάταξης των παραθύρων στην μέθοδο κλιμάκωσης</long>
+		    <long xml:lang="en_GB">Selects the mode to layout the windows in scale mode</long>
+		    <long xml:lang="fr">Mode de superposition des fenêtres en mode Échelle</long>
+		    <long xml:lang="gl">Selecciona o mode para mostar as fiestras no modo Scale</long>
+		    <long xml:lang="gu">વિન્ડોને ખેંચો સ્થિતિમાં લેઆઉટ આપવા માટે સ્થિતિ પસંદ કરે છે</long>
+		    <long xml:lang="hi">मापक प्रकार में विंडो के लेआउट में मोड चुनता है</long>
+		    <long xml:lang="it">Seleziona la modalità per mostrare le finestre nella modalità «Scala finestre»</long>
+		    <long xml:lang="ja">スケールモードでのウィンドウの配列方式の選択</long>
+		    <long xml:lang="nb">Velger modus for utforming av vinduer i Skaler-modus</long>
+		    <long xml:lang="nl">Selecteert de modus om de vensters uit te leggen in schaal modus</long>
+		    <long xml:lang="pl">Wybór trybu rozmieszczenia okien w trybie skalowania</long>
+		    <long xml:lang="pt">Selecciona o modo para mostrar as janelas no modo Redimensionar</long>
+		    <long xml:lang="pt_BR">Seleciona o mode para exibir as janelas no modo de Dimensionamento</long>
+		    <long xml:lang="sv">Väljer läget för fönsterlayouten i skalningsläge</long>
+		    <min>0</min>
+		    
+		    <max>0</max>
+		    <default>0</default>
+		    <desc>
+			<value>0</value>
+			<name>Normal</name>
+			<name xml:lang="ca">Normal</name>
+			<name xml:lang="de">Normal</name>
+			<name xml:lang="el">Κανονικό</name>
+			<name xml:lang="en_GB">Normal</name>
+			<name xml:lang="fi">Tavallinen</name>
+			<name xml:lang="fr">Normal</name>
+			<name xml:lang="gl">Normal</name>
+			<name xml:lang="gu">સામાન્ય</name>
+			<name xml:lang="hi">सामान्य</name>
+			<name xml:lang="it">Normale</name>
+			<name xml:lang="ja">通常</name>
+			<name xml:lang="nb">Normal</name>
+			<name xml:lang="nl">Normaal</name>
+			<name xml:lang="pl">Normalny</name>
+			<name xml:lang="pt">Normal</name>
+			<name xml:lang="pt_BR">Normal</name>
+			<name xml:lang="sv">Normal</name>
+			<name xml:lang="tr">Normal</name>
+		    </desc>
+		    <desc>
+			<value>1</value>
+			<name>Organic - EXPERIMENTAL</name>
+			<name xml:lang="ca">Organic - EXPERIMENTAL</name>
+			<name xml:lang="de">Organisch (EXPERIMENTELL)</name>
+			<name xml:lang="el">Οργανικό - (ΠΕΙΡΑΜΑΤΙΚΟ)</name>
+			<name xml:lang="en_GB">Organic - EXPERIMENTAL</name>
+			<name xml:lang="fi">Orgaaninen - KOKEELLINEN</name>
+			<name xml:lang="fr">Organique - EXPÉRIMENTAL</name>
+			<name xml:lang="gl">Orgánico - EXPERIMENTAL</name>
+			<name xml:lang="gu">અવયવી - પ્રાયોગિક</name>
+			<name xml:lang="hi">जीवीय - प्रायोगिक</name>
+			<name xml:lang="it">Organico (sperimentale)</name>
+			<name xml:lang="ja">オーガニック - 実験的</name>
+			<name xml:lang="nb">Organisk - EKSPERIMENTELT</name>
+			<name xml:lang="nl">Organisch - EXPERIMENTEEL</name>
+			<name xml:lang="pt">Orgânico - EXPERIMENTAL</name>
+			<name xml:lang="pt_BR">Orgânico - EXPERIMENTAL</name>
+			<name xml:lang="sv">Organisk - EXPERIMENTELL</name>
+			<name xml:lang="tr">Organik - DENEYSEL</name>
+		    </desc>
+		</option>
+		<subgroup>
+		    <short>Window Pull</short>
+		    <short xml:lang="ja">ウィンドウの引き入れ</short>
+		    <option type="bool" name="constrain_pull_to_screen">
+			<short>Constrain Pull To Screen</short>
+			<short xml:lang="ja">引き入れて配置する位置を画面内に制限</short>
+			<long>Make sure windows are fully visible after pulling them to another viewport</long>
+			<long xml:lang="ja">ウィンドウを別ビューポートに引き入れた場合に、確実にそのウィンドウ全体が見えるようにする</long>
+			<default>true</default>
+		    </option>
+		    <option type="bool" name="exit_after_pull">
+			<short>Exit Scale On Pull</short>
+			<short xml:lang="ja">引き入れによりスケールを終了</short>
+			<long>Exit scale mode after a window has been pulled.</long>
+			<long xml:lang="ja">ウィンドウを引き入れた後、スケールモードを終了</long>
+			<default>false</default>
+		    </option>
+		</subgroup>
+	    </group>
+	</screen>
+    </plugin>
+</compiz>

@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+	<plugin useBcop="true" name="mag">
+		<short>Magnifier</short>
+		<short xml:lang="en_GB">Magnifier</short>
+		<short xml:lang="fi">Suurennuslasi</short>
+		<short xml:lang="fr">Grossiseur</short>
+		<short xml:lang="gl">Magnificador</short>
+		<short xml:lang="it">Lente di ingrandimento</short>
+		<short xml:lang="ja">拡大鏡</short>
+		<short xml:lang="nb">Forstørrelse</short>
+		<short xml:lang="pt">Lupa</short>
+		<long>Magnifier box</long>
+		<long xml:lang="en_GB">Magnifier box</long>
+		<long xml:lang="fi">Suurennuslaatikko</long>
+		<long xml:lang="fr">Boite du grossiseur</long>
+		<long xml:lang="gl">Caixa do magnificador</long>
+		<long xml:lang="it">Riquadro lente d'ingrandimento</long>
+		<long xml:lang="ja">拡大鏡ボックス</long>
+		<long xml:lang="nb">Forstørrelsesboks</long>
+		<long xml:lang="pt">Caixa da lupa</long>
+		<category>Accessibility</category>
+		<deps>
+			<relation type="after">
+				<plugin>cube</plugin>
+			</relation>
+			<requirement>
+				<plugin>mousepoll</plugin>
+			</requirement>
+		</deps>
+		<display>
+			<group>
+				<short>Bindings</short>
+				<short xml:lang="ar">الأغلفة</short>
+				<short xml:lang="bn">সীমাবদ্ধতা</short>
+				<short xml:lang="ca">Vinculacions</short>
+				<short xml:lang="de">Tastenkombinationen</short>
+				<short xml:lang="el">Συνδυασμοί</short>
+				<short xml:lang="en_GB">Bindings</short>
+				<short xml:lang="es">Combinación de Teclas</short>
+				<short xml:lang="fi">Näppäinyhdistelmät</short>
+				<short xml:lang="fr">Raccourcis</short>
+				<short xml:lang="gl">Atallos</short>
+				<short xml:lang="gu">બાઈન્ડીંગો</short>
+				<short xml:lang="hi">बाइंडिंग</short>
+				<short xml:lang="it">Scorciatoie</short>
+				<short xml:lang="ja">割り当て</short>
+				<short xml:lang="nb">Hurtigtast</short>
+				<short xml:lang="nl">Bindingen</short>
+				<short xml:lang="pl">Skróty klawiszowe</short>
+				<short xml:lang="pt">Atalhos</short>
+				<short xml:lang="pt_BR">Atalhos</short>
+				<short xml:lang="ru">Горячие клавиши</short>
+				<short xml:lang="sv">Bindningar</short>
+				<short xml:lang="tr">Bağlayıcılar</short>
+				<short xml:lang="zh_CN">按键组合</short>
+				<option type="key" name="initiate">
+					<short>Initiate</short>
+					<short xml:lang="ca">Inicia</short>
+					<short xml:lang="de">Auslösen</short>
+					<short xml:lang="el">Εισαγωγή</short>
+					<short xml:lang="en_GB">Initiate</short>
+					<short xml:lang="es">Iniciar</short>
+					<short xml:lang="eu">Hasi</short>
+					<short xml:lang="fi">Aloita</short>
+					<short xml:lang="fr">Initialiser</short>
+					<short xml:lang="gl">Iniciar</short>
+					<short xml:lang="gu">આરંભ કરો</short>
+					<short xml:lang="hi">आरंभ करें</short>
+					<short xml:lang="it">Avvia</short>
+					<short xml:lang="ja">開始</short>
+					<short xml:lang="nb">Start</short>
+					<short xml:lang="nl">Initiëer</short>
+					<short xml:lang="pl">Rozpocznij</short>
+					<short xml:lang="pt">Iniciar</short>
+					<short xml:lang="pt_BR">Iniciar</short>
+					<short xml:lang="sv">Initiera</short>
+					<short xml:lang="tr">Başlat</short>
+					<short xml:lang="zh_CN">启动</short>
+					<long>Zoom In</long>
+					<long xml:lang="ca">Apropar</long>
+					<long xml:lang="el">Ζουμ Μέσα</long>
+					<long xml:lang="en_GB">Zoom In</long>
+					<long xml:lang="fi">Lähennä</long>
+					<long xml:lang="fr">Zoomer</long>
+					<long xml:lang="gl">Aumentar o zoom</long>
+					<long xml:lang="gu">મોટુ કરો</long>
+					<long xml:lang="hi">ज़ूम इन</long>
+					<long xml:lang="it">Ingrandisci</long>
+					<long xml:lang="ja">ズームイン</long>
+					<long xml:lang="nb">Forstørr</long>
+					<long xml:lang="nl">Inzoomen</long>
+					<long xml:lang="pt">Aumentar o zoom</long>
+					<long xml:lang="pt_BR">Aumentar o zoom</long>
+					<long xml:lang="sv">Zooma in</long>
+					<long xml:lang="tr">Büyüt</long>
+					<default>&lt;Super&gt;m</default>
+				</option>
+				<option type="button" name="zoom_in_button">
+					<short>Zoom In</short>
+					<short xml:lang="ca">Apropar</short>
+					<short xml:lang="el">Ζουμ Μέσα</short>
+					<short xml:lang="en_GB">Zoom In</short>
+					<short xml:lang="fi">Lähennä</short>
+					<short xml:lang="fr">Zoomer</short>
+					<short xml:lang="gl">Aumentar o zoom</short>
+					<short xml:lang="gu">મોટુ કરો</short>
+					<short xml:lang="hi">ज़ूम इन</short>
+					<short xml:lang="it">Ingrandisci</short>
+					<short xml:lang="ja">ズームイン</short>
+					<short xml:lang="nb">Forstørr</short>
+					<short xml:lang="nl">Inzoomen</short>
+					<short xml:lang="pt">Aumentar o zoom</short>
+					<short xml:lang="pt_BR">Aumentar o zoom</short>
+					<short xml:lang="sv">Zooma in</short>
+					<short xml:lang="tr">Büyüt</short>
+					<long>Zoom In</long>
+					<long xml:lang="ca">Apropar</long>
+					<long xml:lang="el">Ζουμ Μέσα</long>
+					<long xml:lang="en_GB">Zoom In</long>
+					<long xml:lang="fi">Lähennä</long>
+					<long xml:lang="fr">Zoomer</long>
+					<long xml:lang="gl">Aumentar o zoom</long>
+					<long xml:lang="gu">મોટુ કરો</long>
+					<long xml:lang="hi">ज़ूम इन</long>
+					<long xml:lang="it">Ingrandisci</long>
+					<long xml:lang="ja">ズームイン</long>
+					<long xml:lang="nb">Forstørr</long>
+					<long xml:lang="nl">Inzoomen</long>
+					<long xml:lang="pt">Aumentar o zoom</long>
+					<long xml:lang="pt_BR">Aumentar o zoom</long>
+					<long xml:lang="sv">Zooma in</long>
+					<long xml:lang="tr">Büyüt</long>
+					<default>&lt;Super&gt;&lt;Shift&gt;Button4</default>
+				</option>
+				<option type="button" name="zoom_out_button">
+					<short>Zoom Out</short>
+					<short xml:lang="ca">Allunyar</short>
+					<short xml:lang="el">Ζουμ Εξω</short>
+					<short xml:lang="en_GB">Zoom Out</short>
+					<short xml:lang="fi">Loitonna</short>
+					<short xml:lang="fr">Dézoomer</short>
+					<short xml:lang="gl">Diminuír o zoom</short>
+					<short xml:lang="gu">નાનુ કરો</short>
+					<short xml:lang="hi">ज़ूम आउट</short>
+					<short xml:lang="it">Rimpicciolisci</short>
+					<short xml:lang="ja">ズームアウト</short>
+					<short xml:lang="nb">Forminsk</short>
+					<short xml:lang="nl">Uitzoomen</short>
+					<short xml:lang="pt">Diminuir o zoom</short>
+					<short xml:lang="pt_BR">Diminuir o zoom</short>
+					<short xml:lang="sv">Zooma ut</short>
+					<short xml:lang="tr">Küçült</short>
+					<long>Zoom Out</long>
+					<long xml:lang="ca">Allunyar</long>
+					<long xml:lang="el">Ζουμ Εξω</long>
+					<long xml:lang="en_GB">Zoom Out</long>
+					<long xml:lang="fi">Loitonna</long>
+					<long xml:lang="fr">Dézoomer</long>
+					<long xml:lang="gl">Diminuír o zoom</long>
+					<long xml:lang="gu">નાનુ કરો</long>
+					<long xml:lang="hi">ज़ूम आउट</long>
+					<long xml:lang="it">Rimpicciolisci</long>
+					<long xml:lang="ja">ズームアウト</long>
+					<long xml:lang="nb">Forminsk</long>
+					<long xml:lang="nl">Uitzoomen</long>
+					<long xml:lang="pt">Diminuir o zoom</long>
+					<long xml:lang="pt_BR">Diminuir o zoom</long>
+					<long xml:lang="sv">Zooma ut</long>
+					<long xml:lang="tr">Küçült</long>
+					<default>&lt;Super&gt;&lt;Shift&gt;Button5</default>
+				</option>
+			</group>
+		</display>
+		<screen>
+			<group>
+				<short>General</short>
+				<short xml:lang="de">Allgemein</short>
+				<short xml:lang="el">Γενικά</short>
+				<short xml:lang="en_GB">General</short>
+				<short xml:lang="es">General</short>
+				<short xml:lang="fi">Yleiset</short>
+				<short xml:lang="fr">Général</short>
+				<short xml:lang="gl">Xeral</short>
+				<short xml:lang="gu">સામાન્ય</short>
+				<short xml:lang="hi">सामान्य</short>
+				<short xml:lang="it">Generale</short>
+				<short xml:lang="ja">一般</short>
+				<short xml:lang="nb">Generelt</short>
+				<short xml:lang="nl">Algemeen</short>
+				<short xml:lang="pl">Ogólne</short>
+				<short xml:lang="pt">Geral</short>
+				<short xml:lang="pt_BR">Geral</short>
+				<short xml:lang="sv">Allmänt</short>
+				<short xml:lang="tr">Genel</short>
+				<short xml:lang="zh_CN">一般</short>
+				<option type="int" name="mode">
+					<short>Mode</short>
+					<short xml:lang="en_GB">Mode</short>
+					<short xml:lang="fi">Tila</short>
+					<short xml:lang="fr">Mode</short>
+					<short xml:lang="gl">Modo</short>
+					<short xml:lang="it">Modalità</short>
+					<short xml:lang="ja">形式</short>
+					<short xml:lang="nb">Modus</short>
+					<short xml:lang="pt">Modo</short>
+					<long>Mode.</long>
+					<long xml:lang="en_GB">Mode.</long>
+					<long xml:lang="fi">Tila.</long>
+					<long xml:lang="fr">Mode.</long>
+					<long xml:lang="gl">Modo.</long>
+					<long xml:lang="it">Modalità.</long>
+					<long xml:lang="ja">形式</long>
+					<long xml:lang="nb">Modus.</long>
+					<long xml:lang="pt">Modo.</long>
+					<default>0</default>
+					<min>0</min>
+					<max>2</max>
+					<desc>
+						<value>0</value>
+						<name>Simple</name>
+						<name xml:lang="ca">Simple</name>
+						<name xml:lang="de">Einfach</name>
+						<name xml:lang="el">Απλό</name>
+						<name xml:lang="en_GB">Simple</name>
+						<name xml:lang="es">Simple</name>
+						<name xml:lang="fi">Yksinkertainen</name>
+						<name xml:lang="fr">Simple</name>
+						<name xml:lang="gl">Simples</name>
+						<name xml:lang="gu">સાદું</name>
+						<name xml:lang="hi">सरल</name>
+						<name xml:lang="it">Semplice</name>
+						<name xml:lang="ja">シンプル</name>
+						<name xml:lang="nb">Enkel</name>
+						<name xml:lang="nl">Simpel</name>
+						<name xml:lang="pl">Prosty</name>
+						<name xml:lang="pt">Simples</name>
+						<name xml:lang="pt_BR">Simples</name>
+						<name xml:lang="sv">Simpel</name>
+						<name xml:lang="tr">Basit</name>
+						<name xml:lang="zh_CN">大小</name>
+					</desc>
+					<desc>
+						<value>1</value>
+						<name>Image overlay</name>
+						<name xml:lang="en_GB">Image overlay</name>
+						<name xml:lang="fr">Superposition d'image</name>
+						<name xml:lang="gl">Superposición de imaxe</name>
+						<name xml:lang="it">Sovrapposizione immagine</name>
+						<name xml:lang="ja">画像重ね</name>
+						<name xml:lang="nb">Bildeoverlegg</name>
+						<name xml:lang="pt">Sobreposição de imagem</name>
+					</desc>
+					<desc>
+						<value>2</value>
+						<name>Fisheye</name>
+						<name xml:lang="en_GB">Fisheye</name>
+						<name xml:lang="fi">Kalansilmä</name>
+						<name xml:lang="fr">Fisheye</name>
+						<name xml:lang="gl">Ollo de peixe</name>
+						<name xml:lang="it">Grandangolo</name>
+						<name xml:lang="ja">魚眼</name>
+						<name xml:lang="nb">Fiskeøye</name>
+						<name xml:lang="pt">Olho-de-Peixe</name>
+					</desc>
+				</option>
+				<option type="float" name="zoom_factor">
+					<short>Zoom</short>
+					<short xml:lang="ar">تكبير</short>
+					<short xml:lang="ca">Zoom</short>
+					<short xml:lang="de">Zoom</short>
+					<short xml:lang="el">Ζουμ</short>
+					<short xml:lang="en_GB">Zoom</short>
+					<short xml:lang="es">Zoom</short>
+					<short xml:lang="eu">Zoom</short>
+					<short xml:lang="fi">Zoomaus</short>
+					<short xml:lang="fr">Zoom</short>
+					<short xml:lang="gl">Zoom</short>
+					<short xml:lang="gu">નાનું-મોટુ કરો</short>
+					<short xml:lang="hi">ज़ूम</short>
+					<short xml:lang="it">Zoom</short>
+					<short xml:lang="ja">ズーム</short>
+					<short xml:lang="nb">Forstørr/forminsk</short>
+					<short xml:lang="nl">Inzoomen</short>
+					<short xml:lang="pl">Zbliżenie</short>
+					<short xml:lang="pt">Zoom</short>
+					<short xml:lang="pt_BR">Zoom</short>
+					<short xml:lang="sv">Zoom</short>
+					<short xml:lang="tr">Büyütme</short>
+					<short xml:lang="zh_CN">缩放特效</short>
+					<long>Zoom factor for keyboard initiated magnifier.</long>
+					<long xml:lang="en_GB">Zoom factor for keyboard initiated magnifier.</long>
+					<long xml:lang="fi">Zoomauskerroin näppäimistöltä käynnistettävälle suurentimelle.</long>
+					<long xml:lang="fr">Facteur de zoom pour le grossiseur lancé à partir du clavier.</long>
+					<long xml:lang="gl">Factor de zoom para magnificador iniciado polo teclado.</long>
+					<long xml:lang="it">Fattore di zoom per la lente d'ingrandimento avviata da tastiera.</long>
+					<long xml:lang="ja">拡大鏡がキーボードにより開始されたときのズーム係数</long>
+					<long xml:lang="nb">Forstørrelsesfaktor for tastaturstarted forstørrelse.</long>
+					<long xml:lang="pt">Factor de magnificação quando lupa iniciada através do teclado.</long>
+					<default>2.0</default>
+					<min>1.1</min>
+					<max>32.0</max>
+					<precision>0.1</precision>
+				</option>
+				<option type="float" name="speed">
+					<short>Speed</short>
+					<short xml:lang="ca">Velocitat</short>
+					<short xml:lang="de">Geschwindigkeit</short>
+					<short xml:lang="el">Ταχύτητα</short>
+					<short xml:lang="en_GB">Speed</short>
+					<short xml:lang="es">Velocidad</short>
+					<short xml:lang="fi">Nopeus</short>
+					<short xml:lang="fr">Vitesse</short>
+					<short xml:lang="gl">Velocidade</short>
+					<short xml:lang="gu">ઝડપ</short>
+					<short xml:lang="hi">गति</short>
+					<short xml:lang="it">Velocità</short>
+					<short xml:lang="ja">速度</short>
+					<short xml:lang="nb">Hastighet</short>
+					<short xml:lang="nl">Snelheid</short>
+					<short xml:lang="pl">Szybkość</short>
+					<short xml:lang="pt">Velocidade</short>
+					<short xml:lang="pt_BR">Velocidade</short>
+					<short xml:lang="sv">Hastighet</short>
+					<short xml:lang="tr">Hız</short>
+					<short xml:lang="zh_CN">速度</short>
+					<long>Zoom Speed</long>
+					<long xml:lang="ca">Velocitat del zoom</long>
+					<long xml:lang="el">Ταχύτητα Ζουμ</long>
+					<long xml:lang="en_GB">Zoom Speed</long>
+					<long xml:lang="fi">Zoomausnopeus</long>
+					<long xml:lang="fr">Vitesse de zoom</long>
+					<long xml:lang="gl">Velocidade do Zoom</long>
+					<long xml:lang="gu">નાનામોટાપણાની ઝડપ</long>
+					<long xml:lang="hi">ज़ूम गति</long>
+					<long xml:lang="it">Velocità ingrandimento</long>
+					<long xml:lang="ja">ズーム速度</long>
+					<long xml:lang="nb">Forstørrelseshastighet</long>
+					<long xml:lang="nl">Zoom snelheid</long>
+					<long xml:lang="pt">Velocidade do Zoom</long>
+					<long xml:lang="pt_BR">Velocidade do Zoom</long>
+					<long xml:lang="sv">Zoomhastighet</long>
+					<long xml:lang="tr">Büyütme Hızı</long>
+					<default>1.5</default>
+					<min>0.1</min>
+					<max>50</max>
+					<precision>0.1</precision>
+				</option>
+				<option type="float" name="timestep">
+					<short>Timestep</short>
+					<short xml:lang="de">Zeitschritt</short>
+					<short xml:lang="el">Χρονικό Βήμα</short>
+					<short xml:lang="en_GB">Timestep</short>
+					<short xml:lang="fi">Aikaviive</short>
+					<short xml:lang="fr">Intervalle</short>
+					<short xml:lang="gl">Espazo de tempo</short>
+					<short xml:lang="gu">સમયપગલું</short>
+					<short xml:lang="hi">टाइमस्टैंप</short>
+					<short xml:lang="it">Intervallo</short>
+					<short xml:lang="ja">刻み時間</short>
+					<short xml:lang="nb">Tidsskritt</short>
+					<short xml:lang="nl">Tijdstap</short>
+					<short xml:lang="pl">Krok czasu</short>
+					<short xml:lang="pt">Espaço de tempo</short>
+					<short xml:lang="pt_BR">Espaço de tempo</short>
+					<short xml:lang="sv">Tidssteg</short>
+					<short xml:lang="tr">Zaman aralığı</short>
+					<short xml:lang="zh_CN">步长</short>
+					<long>Zoom Timestep</long>
+					<long xml:lang="el">Χρονικό Βήμα Ζουμ</long>
+					<long xml:lang="en_GB">Zoom Timestep</long>
+					<long xml:lang="fi">Zoomauksen viive</long>
+					<long xml:lang="fr">Délai de zoom</long>
+					<long xml:lang="gl">Espazo de tempo de alteración entre níbeis de zoom</long>
+					<long xml:lang="gu">નાનામોટાપણાનું સમયપગલું</long>
+					<long xml:lang="hi">ज़ूम टाइमस्टैंप</long>
+					<long xml:lang="it">Intervallo ingrandimento</long>
+					<long xml:lang="ja">ズーム描画の刻み時間</long>
+					<long xml:lang="nb">Tidsskritt for forstørrelse</long>
+					<long xml:lang="nl">Zoom tijdstap</long>
+					<long xml:lang="pt">Espaço de tempo de alteração entre níveis de zoom</long>
+					<long xml:lang="pt_BR">Espaço de tempo de alteração entre níveis de zoom</long>
+					<long xml:lang="sv">Zoomtidssteg</long>
+					<long xml:lang="tr">Büyütme Zaman Aralığı</long>
+					<default>1.2</default>
+					<min>0.1</min>
+					<max>50</max>
+					<precision>0.1</precision>
+				</option>
+				<subgroup>
+				<short>Simple</short>
+				<short xml:lang="ca">Simple</short>
+				<short xml:lang="de">Einfach</short>
+				<short xml:lang="el">Απλό</short>
+				<short xml:lang="en_GB">Simple</short>
+				<short xml:lang="es">Simple</short>
+				<short xml:lang="fi">Yksinkertainen</short>
+				<short xml:lang="fr">Simple</short>
+				<short xml:lang="gl">Simples</short>
+				<short xml:lang="gu">સાદું</short>
+				<short xml:lang="hi">सरल</short>
+				<short xml:lang="it">Semplice</short>
+				<short xml:lang="ja">シンプル</short>
+				<short xml:lang="nb">Enkel</short>
+				<short xml:lang="nl">Simpel</short>
+				<short xml:lang="pl">Prosty</short>
+				<short xml:lang="pt">Simples</short>
+				<short xml:lang="pt_BR">Simples</short>
+				<short xml:lang="sv">Simpel</short>
+				<short xml:lang="tr">Basit</short>
+				<short xml:lang="zh_CN">大小</short>
+					<option type="bool" name="keep_screen">
+						<short>Keep fully on screen</short>
+						<short xml:lang="en_GB">Keep fully on screen</short>
+						<short xml:lang="fi">Pidä kokonaan ruudulla</short>
+						<short xml:lang="fr">Garder complètement sur l'écran</short>
+						<short xml:lang="gl">Manter a pantalla completa</short>
+						<short xml:lang="it">Mantenere interamente sullo schermo</short>
+						<short xml:lang="ja">常に全体を画面上に</short>
+						<short xml:lang="nb">Behold helt på skjermen</short>
+						<short xml:lang="pt">Manter totalmente no ecrã</short>
+						<long>Keep fully on screen.</long>
+						<long xml:lang="en_GB">Keep fully on screen.</long>
+						<long xml:lang="fi">Pidä kokonaan näytöllä</long>
+						<long xml:lang="fr">Garder complètement sur l'écran</long>
+						<long xml:lang="gl">Manter a toda pantalla.</long>
+						<long xml:lang="it">Mantiene interamente sullo schermo.</long>
+						<long xml:lang="ja">ボックスの外枠が画面外に出ないように</long>
+						<long xml:lang="nb">Behold helt på skjermen.</long>
+						<long xml:lang="pt">Manter totalmente no ecrã.</long>
+						<default>true</default>
+					</option>
+					<option type="int" name="box_width">
+						<short>Width</short>
+						<short xml:lang="ca">Amplada</short>
+						<short xml:lang="de">Breite</short>
+						<short xml:lang="el">Πλάτο</short>
+						<short xml:lang="en_GB">Width</short>
+						<short xml:lang="es">Ancho OR anchura</short>
+						<short xml:lang="fi">Leveys</short>
+						<short xml:lang="fr">Largeur</short>
+						<short xml:lang="gl">Ancho</short>
+						<short xml:lang="gu">પહોળાઈ</short>
+						<short xml:lang="hi">चौड़ाई</short>
+						<short xml:lang="it">Larghezza</short>
+						<short xml:lang="ja">幅</short>
+						<short xml:lang="nb">Bredde</short>
+						<short xml:lang="nl">Breedte</short>
+						<short xml:lang="pt">Largura</short>
+						<short xml:lang="pt_BR">Largura</short>
+						<short xml:lang="ru">Ширина</short>
+						<short xml:lang="sv">Bredd</short>
+						<short xml:lang="tr">Genişlik</short>
+						<short xml:lang="zh_CN">宽度</short>
+						<long>Box width.</long>
+						<long xml:lang="en_GB">Box width.</long>
+						<long xml:lang="fi">Laatikon leveys</long>
+						<long xml:lang="fr">Largeur de la boîte.</long>
+						<long xml:lang="gl">Ancho do cadro.</long>
+						<long xml:lang="it">Larghezza del riquadro.</long>
+						<long xml:lang="ja">ボックスの幅</long>
+						<long xml:lang="nb">Boksbredde.</long>
+						<long xml:lang="pt">Largura da caixa.</long>
+						<default>300</default>
+						<min>20</min>
+						<max>1000</max>
+					</option>
+					<option type="int" name="box_height">
+						<short>Height</short>
+						<short xml:lang="ca">Alçada</short>
+						<short xml:lang="de">Höhe</short>
+						<short xml:lang="el">Ύψος</short>
+						<short xml:lang="en_GB">Height</short>
+						<short xml:lang="fi">Korkeus</short>
+						<short xml:lang="fr">Hauteur</short>
+						<short xml:lang="gl">Altura</short>
+						<short xml:lang="gu">ઊંચાઈ</short>
+						<short xml:lang="hi">ऊँचाई</short>
+						<short xml:lang="it">Altezza</short>
+						<short xml:lang="ja">高さ</short>
+						<short xml:lang="nb">Høyde</short>
+						<short xml:lang="nl">Hoogte</short>
+						<short xml:lang="pl">Wysokość</short>
+						<short xml:lang="pt">Altura</short>
+						<short xml:lang="pt_BR">Altura</short>
+						<short xml:lang="ru">Высота</short>
+						<short xml:lang="sv">Höjd</short>
+						<short xml:lang="tr">Yükseklik</short>
+						<long>Box height.</long>
+						<long xml:lang="en_GB">Box height.</long>
+						<long xml:lang="fi">Laatikon korkeus</long>
+						<long xml:lang="fr">Hauteur de la boîte.</long>
+						<long xml:lang="gl">Altura da caixa.</long>
+						<long xml:lang="it">Altezza del riquadro.</long>
+						<long xml:lang="ja">ボックスの高さ</long>
+						<long xml:lang="nb">Bokshøyde.</long>
+						<long xml:lang="pt">Altura da caixa.</long>
+						<default>200</default>
+						<min>20</min>
+						<max>1000</max>
+					</option>
+					<option type="int" name="border">
+						<short>Border width</short>
+						<short xml:lang="en_GB">Border width</short>
+						<short xml:lang="fi">Reunan leveys</short>
+						<short xml:lang="fr">Largeur de la bordure</short>
+						<short xml:lang="gl">Ancho do bordo</short>
+						<short xml:lang="it">Larghezza bordo</short>
+						<short xml:lang="ja">外枠の幅</short>
+						<short xml:lang="nb">Kantbredde</short>
+						<short xml:lang="pt">Largura da margem</short>
+						<long>Border widtht.</long>
+						<long xml:lang="en_GB">Border width.</long>
+						<long xml:lang="fi">Reunuksen leveys</long>
+						<long xml:lang="fr">Largeur de la bordure.</long>
+						<long xml:lang="gl">Ancho do bordo.</long>
+						<long xml:lang="it">Larghezza del bordo.</long>
+						<long xml:lang="ja">外枠の幅</long>
+						<long xml:lang="nb">Kantbredde</long>
+						<long xml:lang="pt">Largura da margem.</long>
+						<default>2</default>
+						<min>0</min>
+						<max>20</max>
+					</option>
+					<option type="color" name="box_color">
+						<short>Border color</short>
+						<short xml:lang="en_GB">Border colour</short>
+						<short xml:lang="fr">Couleur de la bordure</short>
+						<short xml:lang="gl">Cor do bordo</short>
+						<short xml:lang="it">Colore bordo</short>
+						<short xml:lang="ja">外枠の色</short>
+						<short xml:lang="nb">Kantfarge</short>
+						<short xml:lang="pt">Cor da margem</short>
+						<long>Border color</long>
+						<long xml:lang="en_GB">Border colour</long>
+						<long xml:lang="fr">Couleur de la bordure</long>
+						<long xml:lang="gl">Cor do bordo</long>
+						<long xml:lang="it">Colore bordo</long>
+						<long xml:lang="ja">外枠の色</long>
+						<long xml:lang="nb">Kantfarge</long>
+						<long xml:lang="pt">Cor da margem</long>
+						<default>
+							<red>0x0</red>
+							<green>0x0</green>
+							<blue>0x0</blue>
+							<alpha>0xffff</alpha>
+						</default>
+					</option>
+				</subgroup>
+				<subgroup>
+					<short>Image overlay</short>
+					<short xml:lang="en_GB">Image overlay</short>
+					<short xml:lang="fr">Superposition d'image</short>
+					<short xml:lang="gl">Superposición de imaxe</short>
+					<short xml:lang="it">Sovrapposizione immagine</short>
+					<short xml:lang="ja">画像重ね</short>
+					<short xml:lang="nb">Bildeoverlegg</short>
+					<short xml:lang="pt">Sobreposição de imagem</short>
+					<option type="string" name="overlay">
+						<short>Magnifier image</short>
+						<short xml:lang="en_GB">Magnifier image</short>
+						<short xml:lang="fi">Suurentajan kuvake</short>
+						<short xml:lang="fr">Image du grossiseur</short>
+						<short xml:lang="gl">Imaxe do magnificador</short>
+						<short xml:lang="it">Immagine lente d'ingrandimento</short>
+						<short xml:lang="ja">拡大鏡画像</short>
+						<short xml:lang="nb">Forstørrelsesbilde</short>
+						<short xml:lang="pt">Imagem da lupa</short>
+						<long>Magnifier image.</long>
+						<long xml:lang="en_GB">Magnifier image.</long>
+						<long xml:lang="fi">Suurentajan kuvake.</long>
+						<long xml:lang="fr">Image du grossiseur.</long>
+						<long xml:lang="gl">Imaxe do  magnificador.</long>
+						<long xml:lang="it">Immagine della lente di ingrandimento.</long>
+						<long xml:lang="ja">拡大鏡の画像</long>
+						<long xml:lang="nb">Forstørrelsesbilde.</long>
+						<long xml:lang="pt">Imagem da lupa.</long>
+						<hints>file;image;</hints>
+						<default>Gnome/overlay.png</default>
+					</option>
+					<option type="string" name="mask">
+						<short>Clip mask</short>
+						<short xml:lang="en_GB">Clip mask</short>
+						<short xml:lang="fr">Attacher le masque</short>
+						<short xml:lang="gl">Máscara de recorte</short>
+						<short xml:lang="it">Taglia maschera</short>
+						<short xml:lang="ja">切り抜きマスク</short>
+						<short xml:lang="nb">Klippmaske</short>
+						<short xml:lang="pt">Máscara de interdição</short>
+						<long>Clip mask.</long>
+						<long xml:lang="en_GB">Clip mask.</long>
+						<long xml:lang="fr">Attacher le masque.</long>
+						<long xml:lang="gl">Máscara de recorte.</long>
+						<long xml:lang="it">Taglia la maschera.</long>
+						<long xml:lang="ja">切り抜きマスク</long>
+						<long xml:lang="nb">Klippmaske.</long>
+						<long xml:lang="pt">Máscara de interdição.</long>
+						<hints>file;image;</hints>
+						<default>Gnome/mask.png</default>
+					</option>
+					<option type="int" name="x_offset">
+						<short>X offset of the cursor</short>
+						<short xml:lang="en_GB">X offset of the cursor</short>
+						<short xml:lang="fi">Kursorin vaakapoikkeutus</short>
+						<short xml:lang="fr">Décalage X du curseur</short>
+						<short xml:lang="gl">Desvío X do cursor</short>
+						<short xml:lang="it">Offset X del cursore</short>
+						<short xml:lang="ja">カーソル X 軸オフセット</short>
+						<short xml:lang="nb">X-forskyvning for musepekeren</short>
+						<short xml:lang="pt">Valor X do cursor</short>
+						<long>X offset of the cursor.</long>
+						<long xml:lang="en_GB">X offset of the cursor.</long>
+						<long xml:lang="fi">Kursorin vaakapoikkeutus.</long>
+						<long xml:lang="fr">Décalage X du curseur.</long>
+						<long xml:lang="gl">Desvío X do cursor.</long>
+						<long xml:lang="it">L'offset X del cursore.</long>
+						<long xml:lang="ja">マウスカーソルの X 軸方向のオフセット</long>
+						<long xml:lang="nb">X-forskyvning for musepekeren.</long>
+						<long xml:lang="pt">Valor X do cursor.</long>
+						<default>155</default>
+						<min>0</min>
+						<max>1000</max>
+					</option>
+					<option type="int" name="y_offset">
+						<short>Y offset of the cursor</short>
+						<short xml:lang="en_GB">Y offset of the cursor</short>
+						<short xml:lang="fi">Kursorin pystypoikkeutus</short>
+						<short xml:lang="fr">Décalage Y du curseur</short>
+						<short xml:lang="gl">Desvío Y do cursor</short>
+						<short xml:lang="it">Offset Y del cursore</short>
+						<short xml:lang="ja">カーソル Y 軸オフセット</short>
+						<short xml:lang="nb">Y-forskyvning for musepekeren</short>
+						<short xml:lang="pt">Valor Y do cursor</short>
+						<long>Y offset of the cursor.</long>
+						<long xml:lang="en_GB">Y offset of the cursor.</long>
+						<long xml:lang="fi">Kursorin pystypoikkeutus.</long>
+						<long xml:lang="fr">Décalage Y du curseur.</long>
+						<long xml:lang="gl">Desvío Y do cursor.</long>
+						<long xml:lang="it">L'offset Y del cursore.</long>
+						<long xml:lang="ja">マウスカーソルの Y 軸方向のオフセット</long>
+						<long xml:lang="nb">Y-forskyvning for musepekeren.</long>
+						<long xml:lang="pt">Valor Y do cursor.</long>
+						<default>155</default>
+						<min>0</min>
+						<max>1000</max>
+					</option>
+				</subgroup>
+				<subgroup>
+					<short>Fisheye</short>
+					<short xml:lang="en_GB">Fisheye</short>
+					<short xml:lang="fi">Kalansilmä</short>
+					<short xml:lang="fr">Fisheye</short>
+					<short xml:lang="gl">Ollo de peixe</short>
+					<short xml:lang="it">Grandangolo</short>
+					<short xml:lang="ja">魚眼</short>
+					<short xml:lang="nb">Fiskeøye</short>
+					<short xml:lang="pt">Olho-de-Peixe</short>
+					<option type="int" name="radius">
+						<short>Radius</short>
+						<short xml:lang="en_GB">Radius</short>
+						<short xml:lang="fi">Säde</short>
+						<short xml:lang="fr">Rayon</short>
+						<short xml:lang="gl">Radio</short>
+						<short xml:lang="it">Raggio</short>
+						<short xml:lang="ja">半径</short>
+						<short xml:lang="nb">Radius</short>
+						<short xml:lang="pt">Raio</short>
+						<long>Radius of the magnification area.</long>
+						<long xml:lang="en_GB">Radius of the magnification area.</long>
+						<long xml:lang="fi">Suurennusalueen säde</long>
+						<long xml:lang="fr">Rayon de la zone de grossisement.</long>
+						<long xml:lang="gl">Radio da área de magnificación.</long>
+						<long xml:lang="it">Raggio dell'area d'ingrandimento.</long>
+						<long xml:lang="ja">拡大域の半径</long>
+						<long xml:lang="nb">Radius for det forstørrede området.</long>
+						<long xml:lang="pt">Raio da área ampliada.</long>
+						<default>200</default>
+						<min>10</min>
+						<max>1000</max>
+					</option>
+				</subgroup>
+			</group>
+		</screen>
+	</plugin>
+</compiz>

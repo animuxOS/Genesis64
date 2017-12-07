@@ -1,0 +1,22 @@
+libsensors API history
+======================
+
+SENSORS_API_VERSION tracks the evolutions made to the libsensors API
+over time. This document summarizes these evolutions so that application
+authors can quickly figure out how to test for the availability of a
+given new feature.
+
+0x401	lm-sensors 3.0.2
+* Added bus type "virtual":
+  #define SENSORS_BUS_TYPE_VIRTUAL
+* Added support for power and energy sensors
+  enum sensors_feature_type SENSORS_FEATURE_POWER
+  enum sensors_feature_type SENSORS_FEATURE_ENERGY
+  enum sensors_subfeature_type SENSORS_SUBFEATURE_POWER_AVERAGE
+  enum sensors_subfeature_type SENSORS_SUBFEATURE_POWER_AVERAGE_HIGHEST
+  enum sensors_subfeature_type SENSORS_SUBFEATURE_POWER_AVERAGE_LOWEST
+  enum sensors_subfeature_type SENSORS_SUBFEATURE_POWER_AVERAGE_INTERVAL
+  enum sensors_subfeature_type SENSORS_SUBFEATURE_ENERGY_INPUT
+
+0x400	lm-sensors 3.0.0 to 3.0.1
+* Initial API.

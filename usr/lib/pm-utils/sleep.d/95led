@@ -1,0 +1,15 @@
+#!/bin/sh
+# IBM specific hook to handle the suspend LED.
+# TODO: Merge with 05led.
+
+[ -f /proc/acpi/ibm/led ] || exit $NA
+
+case "$1" in
+	thaw|resume)
+		echo "7 blink" >/proc/acpi/ibm/led
+		;;
+	*)
+		;;
+esac
+
+exit $NA

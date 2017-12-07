@@ -1,0 +1,926 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="اذا كان عميل PKCS#11 لـ gnome-keyring مفعّلا.">
+                                                        <longdesc>سيفعّل هذا الخيار مكون  PKCS#11 لـ gnome-keyring. </longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="اذا كان عميل SSH لـ gnome-keyring مفعّلا.">
+                                                        <longdesc>سيفعّل هذا الخيار مكون  SSH  لـ gnome-keyring. </longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="عرض النّافذة">
+                                                        <longdesc>عرض النّافذة التي سيتم إظهارها</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="ارتفاع النّافذة">
+                                                        <longdesc>طول النّافذة التي سيتم إظهارها</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="الأوامر التي ستنفذ إستجابة لارتباطات المفاتيح">
+                                                        <longdesc>مفاتيح /apps/metacity/global_keybindings/run_command_N تعرف روابط مفاتيح تماثل هذه الأوامر. نقر ارتباط المفتاح لـ run_command_N سيشغل command_N.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="أمر لقطة النافذة">
+                                                        <longdesc>مفتاح  /apps/metacity/global_keybindings/run_command_window_screenshot يعرف مفتاحا رابطا ينفذ الأمر المحدد من قبل هذا التعيين.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="أمر لقطة الشاشة">
+                                                        <longdesc>مفتاح /apps/metacity/global_keybindings/run_command_screenshot يحدد مفتاح رابط ينفّذ الأمر المحدد من قبل هذا التعيين.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="شغّل أمر معرّف">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="شغّل طرفية">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="خذ لقطة لنافذة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="خذ لقطة شاشة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="اظهر حوار الشّريط لتشغيل التّطبيقات">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="اعرض قائمة الشريط">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="تحول إلى مساحة العمل تحت هذه">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="تحول إلى مساحة العمل فوق هذه">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="تحول إلى مساحة العمل على اليمين">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="تحول إلى مساحة العمل على اليسار">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="تحول إلى مساحة العمل 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="تحول إلى مساحة العمل 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="تحول إلى مساحة العمل 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="تحول إلى مساحة العمل 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="تحول إلى مساحة العمل 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="تحول إلى مساحة العمل 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="تحول إلى مساحة العمل 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="تحول إلى مساحة العمل 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="تحول إلى مساحة العمل 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="تحول إلى مساحة العمل 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="تحول إلى مساحة العمل 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="تحول إلى مساحة العمل 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="اخفي كل النوافذ و ركّز على المكتب">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="انقل إلى الوراء بين الشرائط و سطح المكتب حالاً">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="انقل بين الشرائط و سطح المكتب حالاً">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="انقل إلى الوراء بين النوافذ حالاً">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="انقل بين النوافذ حالاً">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="انقل إلى الوراء بين نوافذ التطبيق بنافذةٍ قافزة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="انقل بين نوافذ التطبيق بنافذةٍ قافزة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="انقل إلى الوراء بين نوافذ التطبيق حالاً">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="انقل بين نوافذ التطبيق حالاً">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="انقل إلى الوراء بين الشرائط و سطح المكتب بانبثاق">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="انقل بين الشرائط و سطح المكتب بابراز">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="انقل التركيز إلى الوراء بين النوافذ باستخدام عرض منبثق">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="انقل بين النوافذ بابراز">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="انقل النافذة للجانب الغربي من الشاشة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="انقل النافذة للجانب الشرقي من الشاشة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="انقل النافذة للجانب الجنوبي من الشاشة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="انقل النافذة للجانب الشمالي من الشاشة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="انقل النافذة للزاوية جنوب-شرق الشاشة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="انقل النافذة للزاوية جنوب-غرب الشاشة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="انقل النافذة للزاوية شمال-شرقي الشاشة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="انقل النافذة للزاوية شمال-غربي الشاشة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="كبّر النافذة أفقيا">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="كبّر النافذة عموديا">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="اخفض النافذة تحت النوافذ الأخرى">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="ارفع النافذة فوق النوافذ الأخرى">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="ارفع النافذة المظلمة، أو اخفظها في ما عدا ذلك">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="انقل النافذة مساحة عمل واحدة إلى الأسفل">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="انقل النافذة مساحة عمل واحدة إلى الأعلى">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="انقل النافذة مساحة عمل واحدة إلى اليمين">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="انقل النافذة مساحة عمل واحدة إلى اليسار">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="انقل النافذة إلى مساحة العمل 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="انقل النافذة إلى مساحة العمل 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="انقل النافذة إلى مساحة العمل 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="انقل النافذة إلى مساحة العمل 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="انقل النافذة إلى مساحة العمل 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="انقل النافذة إلى مساحة العمل 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="انقل النافذة إلى مساحة العمل 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="انقل النافذة إلى مساحة العمل 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="انقل النافذة إلى مساحة العمل 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="انقل النافذة إلى مساحة العمل 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="انقل النافذة إلى مساحة العمل 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="انقل النافذة إلى مساحة العمل 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="بدّل النافذة على جميع مساحات العمل">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="حجّم النّافذة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="انقل النّافذة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="صغّر النّافذة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="اغلق النّافذة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="بدّل حالة الإخفاء">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="الغي تكبير النّافذة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="كبّر النّافذة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="بدّل حالة التكبير">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="بدّل حالة دائماً على القمّة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="بدّل نمط ملء الشاشة">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="فعّل قائمة النافذة">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="اسم مساحة العمل">
+                                                        <longdesc>اسم مساحة العمل.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="عطّل الميزات السيئة المطلوبة من تطبيقات قديمة أو معطوبة">
+                                                        <longdesc>بعض التطبيقات تهمل المُوَاصفَات مما يؤدي لعطل بعض مزايا مِتسِتي. هذا الخيار يجعل مِتسِتي يعمل بطريقة عاتية، بشرط عدم تشغيل تطبيقات من ذلك الصنف.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(غير مضمن) التصفح يعمل باعتبار التطبيقات لا النوافذ">
+                                                        <longdesc>اذا كان صحيح، فسيعمل ميتاستي باعتبار التطبيقات عوض النوافذ. الفكرة مجردة، لكن عامة تعيين باعتبار التطبيق شبيه بالماكنتش أكثر منه بونداوز. عند تركيزك لنافذة في نمط اعتبار التطبيق سترفع جميع النوافذ في التطبيق، كما ان نقرات التركيز لا تمرر لنوافذ في تطبيقات أخرى. كما ان نمط اعتبار التطبيقات مازال لم يضمن بكثافة حاليا.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="إذا ضبط لصحيح، سيُبادل تسهيل الإستخدام بتقليل إستخدام الموارد">
+                                                        <longdesc>إذا ضبط لصحيح، فسيعطي مِتسِتي المستخدم ردودا أقل ، بإستخدام إطارات شبكية تتجنّب الرسوم المتحركة أو بطرق أخرى. هذا تخفيض هام لقابلية الإستخدام للعديد من المستخدمين، لكنه سيسمح يتطبيقات موروثة و خوادم الشاشات الطرفية أن تعمل عوض أن تكون غير عمليّة.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="مدير التركيب">
+                                                        <longdesc>تحدّد ما إذا كان مِتسِتي مديرا للتركيب.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="نوع الناقوس المرئي">
+                                                        <longdesc>يقول لمتاستي كيفية تنفيذ المؤشر المرئي عند عزف ناقوس النظام أو ناقوس أي تطبيق آخر. حاليا هناك قيمتان ممكنتان، &quot;fullscreen&quot; (كامل الشاشة) الذي يُنتج وميض أبيض و أسود و &quot;frame_flash&quot; الذي ينتج عنه وميض شريط عنوان التطبيق الذي أرسل إشارة الناقوس. إذا كان التطبيق الذي أرسل الجرس مجهولا (الذي هو الحال لـ &quot;بيب النظام&quot; الإفتراضي) فسيومض شريط عنوان التطبيق المركزّ حاليا.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="ناقوس النظام مسموع">
+                                                        <longdesc>يقرر فيما إذا ستنشأ التطبيقات أو النظام &apos;صفيرا&apos; مسموعاً، يمكن إستخدامه مع &apos;الناقوس المرئي&apos; للسماح &apos;بالصفير&apos; الصامت.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="فعّل الناقوس المرئي">
+                                                        <longdesc>يفعّل إشارة بصرية عند إرسال التطبيق أو النظام لـ &apos;ناقوس&apos; أو &apos;صفير&apos;، هذا مفيد للذين يسمعون يصعوبة أو للإستعمال في بيئات مفعمة بالضجيج.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="عدد مساحات العمل">
+                                                        <longdesc>عدد مساحات العمل. يجب أن يكون مغايرا لصفر، و بحد أقصى مثبت للوقاية من تدمير سطح مكتبك عفويا بطلب عدد كبير جدا من أسطح عمل.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="خط عنوان النافذة">
+                                                        <longdesc>سلسلة وصف الخطوط تصف خطا لأعمدة عناوين النوافذ. الحجم من الوصف سيستعمل فقط عند ضبط خيار titlebar_font_size لـ 0. كما يلغى هذا الخيار عند ضبط خيار titlebar_uses_desktop_font لـ صحيح. </longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="استخدم خط النظام القياسي في عناوين النوافذ">
+                                                        <longdesc>اذا كان صحيح، تجاهل خيار titlebar_font، و استعمل خط التطبيق الافتراضي لعناوين النوافذ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="السِمة الحالية">
+                                                        <longdesc>تحدّد السِمة مظهر حدود النافذة و شريط العناوين، الخ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="التأخير بالملي ثانية لخيار الرفع الآلي">
+                                                        <longdesc>التأخير الوقتي قبل رفع نافذة اذا ضبط auto_raise لـ صحيح. التأخير معطى بآلاف الأجزاء من الثانية.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="ارفع النافذة المركزة آليا">
+                                                        <longdesc>اذا كان صحيح، ونمط التركيز &quot;sloppy&quot;  أو &quot;mouse&quot; فسترفع النافذة المركزة آليا بعد تأخير محدد من قِبل مفتاح auto_raise_delay (التأخير يخصص بمفتاح auto_raise_delay).</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="إجراء النقر الأيمن على شريط العناوين">
+                                                        <longdesc>هذا الخيار يحدد نتائج النقر الأيمن على شريط العنواين. الخيارات الممكنة حاليا هي &apos;toggle_shaded&apos;، مما سيخفي/يلغي إخفاء النافذة،  &apos;toggle_maximized&apos; مما سيكبر/يلغي تكبير النافذة، &apos;minimize&apos; لإخفاء النافذة، و  &apos;none&apos; لعدم فعل أي شيء.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="إجراء النقر الأوسط على شريط العناوين">
+                                                        <longdesc>هذا الخيار يحدد نتائج النقر الأوسط على شريط العنواين. الخيارات المقبولة حاليا هي &apos;toggle_shaded&apos;، مما سيخفي/يلغي إخفاء النافذة،  &apos;toggle_maximized&apos; مما سيكبر/يلغي تكبير النافذة، &apos;minimize&apos; لإخفاء النافذة، و  &apos;none&apos; لعدم فعل أي شيء.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="إجراء النقر المزدوج على شريط العناوين">
+                                                        <longdesc>هذا الخيار يحدد نتائج النقر المزدوج على شريط العنواين. الخيارات الممكنة حاليا هي &apos;toggle_shaded&apos;، مما سيخفي/يلغي إخفاء النافذة،  &apos;toggle_maximized&apos; مما سيكبر/يلغي تكبير النافذة، &apos;minimize&apos; لإخفاء النافذة، و  &apos;none&apos; لعدم فعل أي شيء.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="إذا كان التصعيد أثرا جانبيا لتفاعلات المستخدم الأخرى">
+                                                        <longdesc>الكثير من الأفعال (كالنقر داخل أو تحجيم النافذة) ترفع النافذة كعرض جانبي. جعل هذا الخيار خطأ، وهو ما لا ينصح به وبشدة، سيفصل الرفع عن أفعال المستخدم. متجاهلا طلبات الرفع التي يولدها التطبيق. راجع http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="تحكّم في كيف تحصل النافذة الجديدة على التركيز">
+                                                        <longdesc>هذا الخيار يعطي تحكم كيفية تحصل النوافذ المنشأة جديدا على التركيز. هناك خياران: &quot;smart&quot; لإعطاء التركيز، و  &quot;strict&quot; لعدم إعطاء التركيز للنوافذ البادئة من شاشة طرفية.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="نمط تركيز النافذة">
+                                                        <longdesc>نمط تركيز النافذة يبين طريقة تفعيل النوافذ. للنمط ثلاث قيم ممكنة، &quot;click&quot; يعني انه يجب نقر النوافذ حتى تركز، &quot;sloppy&quot; يعني ان النافذة تركز عند دخول مؤشر الفأرة النافذة و &quot;mouse&quot; يعني ان النوافذ تركز عند دخول مؤشر الفأرة النافذة ثم يلغى التركيز عند خروج المؤشر من النافذة.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="تنظيم الأزرار على شريط العنوان">
+                                                        <longdesc>تنظيم الأزرار على شريط العنوان. يجب أن تكون القيمة سلسلة،مثل&quot;menu:minimize,maximize,close&quot; ،الفاصل يفصل الجانب الأيسر للنافذة عن الجانب الأيمن، كما تفصل أسماء الأزرار بفواصل. نسخ الأزرار ممنوع. يقع تجاهل الأزرار الغير معروفة حتى يمكن اضافتها لاصدارات ميتاستي القادمة دون كسر الاصدارات القديمة.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="المغير الذي سيُستعمل لعمليات نقر النوافذ المغيرة">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="تطبيق عرض المكونات الإفتراضي">
+                                                                <longdesc>التطبيق المستعمل لعرض الملفات التي تستحق مكونا لعرضها. سيعوض المتغير %s بـ URI الملف، كما سيعوض المتغير %c بـ IID المكون.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="معامل التنفيذ للطرفية الافتراضية">
+                                                                <longdesc>معامل التنفيذ الذي سيستعمل للطرفية الافتراضية.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="تطبيق الطرفية الافتراضي">
+                                                                <longdesc>الطرفية الافتراضية التي ستستعمل للتطبيقات التي تتطلب طرفية.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="شغّل الأمر في طرفية">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المستخدم لمعالجة هذا النوع من العناوين العمل في شاشة طرفية.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="معالج عناوين &quot;h323&quot;">
+                                                                <longdesc>الأمر المستخدم لمعالجة عناوين &quot;h323&quot;، في حال تمكينها.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="فيما إذا كان على الأمر المحدّد معالجة عناوين &quot;h323&quot;">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المحدّد في المفتاح &quot;command&quot; معالجة عناوين &quot;h323&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="شغّل الأمر في طرفية">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المستخدم لمعالجة هذا النوع من العناوين العمل في شاشة طرفية.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="معالج عناوين &quot;callto&quot;">
+                                                                <longdesc>الأمر المستخدم لمعالجة عناوين &quot;callto&quot;، في حال تمكينها.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="فيما إذا كان على الأمر المحدّد معالجة عناوين &quot;callto&quot;">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المحدّد في المفتاح &quot;command&quot; معالجة عناوين &quot;callto&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="شغّل الأمر في طرفية">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المستخدم لمعالجة هذا النوع من العناوين العمل في شاشة طرفية.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="معالج عناوين &quot;mailto&quot;">
+                                                                <longdesc>الأمر المستخدم لمعالجة عناوين &quot;mailto&quot;، في حال تمكينها.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="فيما إذا كان على الأمر المحدّد معالجة عناوين &quot;mailto&quot;">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المحدّد في المفتاح &quot;command&quot; معالجة عناوين &quot;mailto&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="شغّل الأمر في طرفية">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المستخدم لمعالجة هذا النوع من العناوين العمل في شاشة طرفية.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="معالج عناوين &quot;https&quot;">
+                                                                <longdesc>الأمر المستخدم لمعالجة عناوين &quot;https&quot;، في حال تمكينها.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="فيما إذا كان على الأمر المحدّد معالجة عناوين &quot;https&quot;">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المحدّد في المفتاح &quot;command&quot; معالجة عناوين &quot;https&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="شغّل الأمر في طرفية">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المستخدم لمعالجة هذا النوع من العناوين العمل في شاشة طرفية.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="شغّل الأمر في طرفية">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المستخدم لمعالجة هذا النوع من العناوين العمل في شاشة طرفية.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="معالج عناوين &quot;http&quot;">
+                                                                <longdesc>الأمر المستخدم لمعالجة عناوين &quot;http&quot;، في حال تمكينها.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="فيما إذا كان على الأمر المحدّد معالجة عناوين &quot;http&quot;">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المحدّد في المفتاح &quot;command&quot; معالجة عناوين &quot;http&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="شغّل الأمر في طرفية">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المستخدم لمعالجة هذا النوع من العناوين العمل في شاشة طرفية.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="معالج عناوين &quot;man&quot;">
+                                                                <longdesc>الأمر المستخدم لمعالجة عناوين &quot;man&quot;، في حال تمكينها.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="فيما إذا كان على الأمر المحدّد معالجة عناوين &quot;man&quot;">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المحدّد في المفتاح &quot;command&quot; معالجة عناوين &quot;man&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="شغّل الأمر في طرفية">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المستخدم لمعالجة هذا النوع من العناوين العمل في شاشة طرفية.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="معالج عناوين &quot;info&quot;">
+                                                                <longdesc>الأمر المستخدم لمعالجة عناوين &quot;info&quot;، في حال تمكينها.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="فيما إذا كان على الأمر المحدّد معالجة عناوين &quot;info&quot;">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المحدّد في المفتاح &quot;command&quot; معالجة عناوين &quot;info&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="شغّل الأمر في طرفية">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المستخدم لمعالجة هذا النوع من العناوين العمل في شاشة طرفية.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="معالج عناوين &quot;ghelp&quot;">
+                                                                <longdesc>الأمر المستخدم لمعالجة عناوين &quot;ghelp&quot;، في حال تمكينها.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="فيما إذا كان على الأمر المحدّد معالجة عناوين &quot;ghelp&quot;">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المحدّد في المفتاح &quot;command&quot; معالجة عناوين &quot;ghelp&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="شغّل الأمر في طرفية">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المستخدم لمعالجة هذا النوع من العناوين العمل في شاشة طرفية.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="معالج عناوين &quot;trash&quot;">
+                                                                <longdesc>الأمر المستخدم لمعالجة عناوين &quot;trash&quot;، في حال تمكينها.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="فيما إذا كان على الأمر المحدّد معالجة عناوين &quot;trash&quot;">
+                                                                <longdesc>إضبط لـtrue إذا كان على الأمر المحدّد في المفتاح &quot;command&quot; معالجة عناوين &quot;trash&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="فيما إذا ستستخدم هذا الطور أم لا">
+                                                                        <longdesc>فيما إذا ستستخدم و تعرض هذا الطور.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="امتداد الملف الإفتراضي لهذا الطور">
+                                                                        <longdesc>إمتداد اسم ملف يستخدم عند خزن ملفات مشفرة بهذا الطور.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="خط أنبوب جستريمر الجزئي المستخدم">
+                                                                        <longdesc>خط أنبوب جزئي لجستريمر للاستخدام مع هذا الطور.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="وصف لطور الصوت">
+                                                                        <longdesc>وصف للطور، مشتملا للمزيد من المعلومات و حالات استعمال هذا الطور.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="اسم مختصر لطور الصوت">
+                                                                        <longdesc>اسم مختصر لطور الصوت ، يمكن استعماله في المنتقيات و للتحديد الموحد للطور.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="فيما إذا ستستخدم هذا الطور أم لا">
+                                                                                <longdesc>فيما إذا ستستخدم و تعرض هذا الطور.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="امتداد الملف الإفتراضي لهذا الطور">
+                                                                                <longdesc>إمتداد اسم ملف يستخدم عند خزن ملفات مشفرة بهذا الطور.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="خط أنبوب جستريمر الجزئي المستخدم">
+                                                                                <longdesc>خط أنبوب جزئي لجستريمر للاستخدام مع هذا الطور.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="وصف لطور الصوت">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="اسم مختصر لطور الصوت">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="امتداد الملف الإفتراضي لهذا الطور">
+                                                                                <longdesc>إمتداد اسم ملف يستخدم عند خزن ملفات مشفرة بهذا الطور.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="خط أنبوب جستريمر الجزئي المستخدم">
+                                                                                <longdesc>خط أنبوب جزئي لجستريمر للاستخدام مع هذا الطور.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="وصف لطور الصوت">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="اسم مختصر لطور الصوت">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="امتداد الملف الإفتراضي لهذا الطور">
+                                                                                <longdesc>إمتداد اسم ملف يستخدم عند خزن ملفات مشفرة بهذا الطور.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="خط أنبوب جستريمر الجزئي المستخدم">
+                                                                                <longdesc>خط أنبوب جزئي لجستريمر للاستخدام مع هذا الطور.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="وصف لطور الصوت">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="اسم مختصر لطور الصوت">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="امتداد الملف الإفتراضي لهذا الطور">
+                                                                                <longdesc>إمتداد اسم ملف يستخدم عند خزن ملفات مشفرة بهذا الطور.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="خط أنبوب جستريمر الجزئي المستخدم">
+                                                                                <longdesc>خط أنبوب جزئي لجستريمر للاستخدام مع هذا الطور.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="وصف لطور الصوت">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="اسم مختصر لطور الصوت">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="امتداد الملف الإفتراضي لهذا الطور">
+                                                                                <longdesc>إمتداد اسم ملف يستخدم عند خزن ملفات مشفرة بهذا الطور.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="خط أنبوب جستريمر الجزئي المستخدم">
+                                                                                <longdesc>خط أنبوب جزئي لجستريمر للاستخدام مع هذا الطور.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="وصف لطور الصوت">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="اسم مختصر لطور الصوت">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="امتداد الملف الإفتراضي لهذا الطور">
+                                                                                <longdesc>إمتداد اسم ملف يستخدم عند خزن ملفات مشفرة بهذا الطور.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="خط أنبوب جستريمر الجزئي المستخدم">
+                                                                                <longdesc>خط أنبوب جزئي لجستريمر للاستخدام مع هذا الطور.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="وصف لطور الصوت">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="اسم مختصر لطور الصوت">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="قائمة بالأطوار">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="عنوان الإعداد الآلي للبروكسي">
+                                                <longdesc>العنوان المزود لقيم إعدادات البروكسي.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="منفذ بروكسي SOCKS">
+                                                <longdesc>منفذ الجهاز المحدد في &quot;/system/proxy/socks_host&quot; المستعمل كوكيل.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="اسم مضيف بروكسي SOCKS">
+                                                <longdesc>اسم الجهاز الذي سيقع بركسية socks·عبره.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="منفذ بروكسي الـ FTP">
+                                                <longdesc>منفذ الجهاز المحدد في &quot;/system/proxy/ftp_host&quot; المستعمل كوكيل.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="اسم مضيف بروكسي الـ FTP">
+                                                <longdesc>اسم الجهاز الذي سيقع بروكسية الـ FTP عبره.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="منفذ بروكسي HTTP آمن">
+                                                <longdesc>منفذ الجهاز المحدد في &quot;/system/proxy/secure_host&quot; المستعمل كوكيل.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="اسم مضيف بروكسي HTTP آمن">
+                                                <longdesc>اسم الجهاز الذي سيقع عبره بروكسية آمنة للـ HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="نمط إعداد البروكسي">
+                                                <longdesc>اختر نسق إعداد البروكسي. القيم المدعومة هي  &quot;none&quot;، &quot;manual&quot;و &quot;auto&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="مضيفين ليسو مضيفي بروكسي">
+                                                <longdesc>يحوي هذا المفتاح قائمة من المضيفين المتصلين مباشرة، عوضا عن المتصلين عبر بروكسي ما (هذا إذا كان نشطا). يمكن أن تكون القيم أسماء مضيفين أونطاق (باستخدام رمز تعميم أولي مثل *.foo.com)، عناوين مضيفي الـ IP(IPv4 و IPv6) أو عناوين شبكة (مثل 192.168.0.0/24).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="كلمة سر بروكسي الـ HTTP">
+                                                <longdesc>كلمة السر التي  ستمرر للتوثق عند القيام ببروكسية الـ http.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="اسم مستخدم بروكسي الـ HTTP">
+                                                <longdesc>اسم المستخدم الذي سيمرر عند القيام ببروكسية الـ HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="توثق من الاتصلات لخادم البروكسي">
+                                                <longdesc>إذا كانت صحيح، سيحتاج الإتصال بخادم البروكسي إلى توثيق. اجتماع اسم المستخدم/كلمة السر معرّف بواسطة &quot;/system/http_proxy/authentication_user&quot; و &quot;/system/http_proxy/authentication_password&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="منفذ بروكسي الـ HTTP">
+                                                <longdesc>منفذ الجهاز المحدد في &quot;/system/http_proxy/host&quot; المستعمل كوكيل.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="اسم مضيف بروكسي الـ HTTP">
+                                                <longdesc>اسم الجهاز الذي سيقع بروكسية الـ HTTP عبره.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="استخدم بروكسي HTTP">
+                                                <longdesc>تفعيل تعيينات البروكسي عند النفاذ لـ http عبر الانترنت.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="نطاقات زيادة للبحث في داخلها عن خدمات  DNS-SD">
+                                                <longdesc>قائمة -مفصولة بفاصلة- بنطاقات DNS-SD التي ستكون مرئيّة في موقع &quot;network:///&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="كيفية عرض خدمة DNS-SD المحلية">
+                                                <longdesc>القيم الممكنة هي &quot;merged&quot;، &quot;separate&quot;، و &quot;disabled&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="مجموعة عمل SMB">
+                                                <longdesc>مجموعة العمل أو نطاق شبكة ويندوز التى يتبعها هذا المستخدم. لكي تؤثّر مجموعة العمل الجديدة تأثيرا كاملا قد تحتاج للخروج ثم الولوج مرّة أخرى.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

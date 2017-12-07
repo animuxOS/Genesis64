@@ -1,0 +1,926 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="Ar gnome-keyring PKCS#11 komponentas įjungtas.">
+                                                        <longdesc>Ši parinktis įjungia PKCS#11 komponentą gnome-keyring tarnyboje. Ji svarbi tik startuojant gnome-keyring tarnybą, t.y., kai naudotojas prisijungia. Šis nustatymas gali būti pakeistas komandinės eilutės parametrais.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="Ar gnome-keyring SSH agentas įjungtas.">
+                                                        <longdesc>Ši parinktis įjungia SSH agentą gnome-keyring tarnyboje.  Ji svarbi tik startuojant gnome-keyring tarnybą, t.y., kai naudotojas prisijungia. Šis nustatymas gali būti pakeistas komandinės eilutės parametrais.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Lango plotis">
+                                                        <longdesc>Rodomo lango plotis</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Lango aukštis">
+                                                        <longdesc>Rodomo lango dydis</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Komandos, kurios turi būti paleistos, suveikus nustatytoms klavišų kombinacijoms">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_N raktai nustato specialias klavišų kombinacijas, kurios atitinka nurodytas komanda. Paspaudus klavišo kombinaciją priskirtą run_command_N bus įvykdyta komanda command_N.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Langų fotografavimo komanda">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_window_screenshot raktas nustato klavišų kombinaciją, kuri iškviečia šiame nustatyme nurodytą komandą.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Ekrano fotografavimo komanda">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_screenshot raktas nustato klavišų kombinaciją, kuri iškviečia šiame nustatyme nurodytą komandą.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Paleisti nurodytą komandą">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Paleisti terminalą">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Padaryti lango nuotrauką">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Padaryti ekrano nuotrauką">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Rodyti skydelio programų paleidimo langą">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Rodyti skydelio meniu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Perjungti į žemiau esantį darbalaukį">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Perjungti į aukščiau esantį darbalaukį">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Perjungti į dešiniau esantį darbalaukį">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Perjungti į kairiau esantį darbalaukį">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Perjungti į darbalaukį Nr.12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Perjungti į darbalaukį Nr.11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Perjungti į darbalaukį Nr.10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Perjungti į darbalaukį Nr.9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Perjungti į darbalaukį Nr.8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Perjungti į darbalaukį Nr.7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Perjungti į darbalaukį Nr.6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Perjungti į darbalaukį Nr.5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Perjungti į darbalaukį Nr.4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Perjungti į darbalaukį Nr.3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Perjungti į darbalaukį Nr.2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Perjungti į darbalaukį Nr.1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Paslėpti visus langus ir suaktyvinti darbastalį">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Greitas judėjimas atgal tarp skydelių ir darbastalio">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Greitai judėti tarp skydelių ir darbastalio">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Greitai judėti atgal tarp langų">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Greitai persijungti tarp langų">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Perjungti atgal tarp programos langų su iššokančiu langu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Persijunginėti tarp programos langų su iššokančiu langu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Greitai judėti atgal tarp programos langų">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Greitai persijungti tarp programos langų">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Judėti atgal tarp skydelių ir darbastalio kartu su iššokančiu langu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Judėti tarp skydelių ir darbastalio kartu su iššokančiu langu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Perkelti langų aktyvinimą atgal kartu su iššokančiu langu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Persijunginėti tarp langų su iššokančio lango pagalba">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Perkelti langą į dešinę ekrano pusę">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Perkelti langą į kairę ekrano pusę">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Perkelti langą į apatinę ekrano pusę">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Perkelti langą į viršutinę ekrano dalį">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Perkelti langą į ekrano apatinį kairįjį kampą">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Perkelti langą į ekrano apatinį dešinįjį kampą">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Perkelti langą į ekrano viršutinį kairįjį kampą">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Perkelti langą į ekrano viršutinį dešinįjį kampą">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Išdidinti langą horizontaliai">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Išdidinti langą vertikaliai">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Nuleisti langą žemiau kitų langų">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Iškelti langą virš kitų langų">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Iškelti neaktyvų langą, arba nuleisti aktyvų">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Perkelti langą į žemiau esantį darbalaukį">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Perkelti langą į aukščiau esantį darbalaukį">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Perkelti langą į dešiniau esantį darbalaukį">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Perkelti langą į kairiau esantį darbalaukį">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Perkelti langą į darbalaukį Nr.12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Perkelti langą į darbalaukį Nr.11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Perkelti langą į darbalaukį Nr.10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Perkelti langą į darbalaukį Nr.9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Perkelti langą į darbalaukį Nr.8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Perkelti langą į darbalaukį Nr.7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Perkelti langą į darbalaukį Nr.6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Perkelti langą į darbalaukį Nr.5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Perkelti langą į darbalaukį Nr.4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Perkelti langą į darbalaukį Nr.3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Perkelti langą į darbalaukį Nr.2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Perkelti langą į darbalaukį Nr.1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Perjungti lango buvimo visuose darbalaukiuose būseną">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Keisti lango dydį">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Perkelti langą">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Sumažinti langą">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Užverti langą">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Perjungti lango sutraukimo būseną">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Sutraukti langą">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Išdidinti langą">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Perjungti lango išdidinimo veikseną">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Perjungti visada viršuje būseną">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Perjungti viso ekrano veikseną">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Parodyti lango meniu">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Darbalaukio vardas">
+                                                        <longdesc>Darbalaukio vardas</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Atjungti savybes, kurias gali naudoti senos arba sugadintos programos">
+                                                        <longdesc>Kai kurios programos nevykdo nurodymų specifikacijose, todėl kyla smulkių nesklandumų. Ši parinktis įjungia griežtą veikseną, kuri padaro aplinką vienalytiškesnę, jei nenaudojate nekorektiškų programų.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Neįgyvendinta) Persijungimas galimas tarp programų, o ne tarp programos langų">
+                                                        <longdesc>Esant teigiamai reikšmei, langų valdyklės darbas yra artimesnis darbui su programomis nei su langais. Sąvoka gana neapibrėžta, bet apskritai programų veiksena yra artimesnė Macintosh operacinei sistemai nei Windows. Kai suaktyvinate langą programų veiksenoje, visi programos langai bus iškelti. Be to, programų veiksenoje langų aktyvinimo spustelėjimai neveikia langų, priklausančių kitoms programoms. Kol kas programų veiksenos realizacija dar ankstyvoje stadijoje.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Jei reikšmė teigiama, atsisakyti dalies galimybių vardan efektyvesnio resursų panaudojimo">
+                                                        <longdesc>Jei reikšmė teigiama, metacity, naudodama langų rėmelius, vengdama animacijų ar kitų efektų, pateiks naudotojui mažiau reakcijų ir bus mažiau jaučiama „tiesioginė manipuliacija“. Tai smarkiai suprastina sąsajos išraiškingumą, bet leidžia normaliai veikti senesnėms programoms bei terminalų serveriams. Kai įjungtos prieinamumo funkcijos, rėmelių naudojimas išjungiamas.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="Kompozicijos valdyklė">
+                                                        <longdesc>Nurodo ar Metacity yra komponuojanti valdyklė.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Vaizdinio signalo tipas">
+                                                        <longdesc>Nustato kaip langų valdyklė vykdo vaizdinį signalą suveikus sisteminiam pyptelėjimui arba kokios nors programos pyptelėjimo signalui. Šiuo metu galimos dvi reikšmės - „fullscreen“, kuris sukuria viso ekrano vaizdo juodai baltą blykstelėjimą, bei „frame_flash“, kuris sukuria programos, pasiuntusios signalą, antraštės mirgėjimą. Jei programa pasiuntusi signalą yra nežinoma (paprastai tai būna kai suveikia standartinis sisteminis pyptelėjimas), mirga tuo momentu naudojamo lango antraštė.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Sisteminis signalas yra garsinis">
+                                                        <longdesc>Nustato, ar programos arba sistema gali generuoti garsinius „pyptelėjimus“; gali būti naudojamas kartu su „vaizdiniu audio signalu“ norint generuoti tylius „pyptelėjimus“.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Įjungti vaizdinį signalą">
+                                                        <longdesc>Įjungia vaizdinius indikatorius, kai programa arba sistema perduoda standartinius garsinius perspėjimo signalus; naudinga esant klausos sutrikimams, triukšmingoje aplinkoje arba kai garsinis signalas yra išjungtas.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Darbalaukų kiekis">
+                                                        <longdesc>Darbalaukių kiekis. Turi būti didesnis už nulį. Be to, nustatyta maksimali reikšmė, kad netyčia nesunaikintumėte savo darbo aplinkos įvedę labai didelio skaičių.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Lango antraštės šriftas">
+                                                        <longdesc>Šrifto aprašymo seka, nurodanti šriftą, naudojamą langų antraštėms. Šrifto dydis, esantis aprašyme, naudojamas tik tuo atveju, jei titlebar_font_size požymis yra lygus 0. Be to, šis požymis atjungiamas, jei titlebar_uses_desktop_font požymis yra teigiamas true.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Langų antraštėse naudoti standartinį sistemos šriftą">
+                                                        <longdesc>Jei reikšmė teigiama, nepaisyti titlebar_font parinkties ir langų antraštėms naudoti standartinį programų šriftą.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Esama tema">
+                                                        <longdesc>Tema nurodo langų rėmelių, antraščių ir kitų elementų išvaizdą.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Uždelsimas milisekundėmis prieš suveikiant automatinio lango iškėlimui.">
+                                                        <longdesc>Uždelsimo laikas prieš pakeliant langą, jei auto_raise požymis yra teigiamas. Laikas nurodomas tūkstantosiomis sekundės dalimis.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Automatiškai iškelia suaktyvintą langą">
+                                                        <longdesc>Jei reikšmė teigiama ir aktyvinimo veiksena yra „sloppy“ arba „mouse“, tada suaktyvintas langas po rakte „auto_raise_delay“ nurodyto laiko tarpo bus automatiškai iškeltas. Tai nesusiję su lango spustelėjimu norint jį pakelti arba užvedimo ant lango objekto vilkimo metu.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="Veiksmas spustelėjus antraštės juostą dešiniuoju pelės mygtuku">
+                                                        <longdesc>Ši parinktis nurodo antraštės spustelėjimo dešiniuoju pelės mygtuku veiksmą. Galimos reikšmės yra „toggle_shade“ – suvynioti / išvynioti langą, „toggle_maximize“ – išdidinti / sumažinti langą, „minimize“ – paslėpti langą ir „none“ – nedaryti nieko.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="Veiksmas spustelėjus antraštės juostą viduriniuoju pelės mygtuku">
+                                                        <longdesc>Ši parinktis nurodo antraštės spustelėjimo viduriniuoju pelės mygtuku veiksmą. Galimos reikšmės yra „toggle_shade“ – suvynioti / išvynioti langą, „toggle_maximize“ – išdidinti / sumažinti langą, „minimize“ – paslėpti langą ir „none“ – nedaryti nieko.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Veiksmas du kartus spustelėjus antraštės juostą">
+                                                        <longdesc>Ši parinktis nurodo dvigubo antraštės spustelėjimo veiksmą. Galimos reikšmės yra „toggle_shade“ – suvynioti / išvynioti langą, „toggle_maximize“ – išdidinti / sumažinti langą, „minimize“ – paslėpti langą ir „none“ – nedaryti nieko.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Ar pakėlimas turėtų būti pašalinis kitų naudotojo veiksmų efektas">
+                                                        <longdesc>Kai kurie veiksmai (pvz., spustelėjimas kliento srityje, lango pozicijos ar dydžio keitimas) paprastai iškelia langą. Išjungus šį nustatymą (nerekomenduojama), lango iškėlimas bus atsietas nuo kitų veiksmų, o programų langų iškėlimo užklausos bus ignoruojamos. Žr. http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Nustatyti, kada nauji langai suaktyvinami">
+                                                        <longdesc>Ši parinktis leidžia tiksliau valdyti naujų langų aktyvinimą. Leidžiamos dvi reikšmės: „smart“ įjungia normalią veikseną, o „strict“ neaktyvina langų, paleistų iš terminalo.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Langų aktyvinimo veiksena">
+                                                        <longdesc>Lango aktyvinimo veiksena nustato kaip bus aktyvuojami langai. Yra trys galimos reikšmės; &quot;click&quot; reiškia, kad reikia spustelėti ant lango norint jį aktyvuoti, &quot;sloppy&quot; aktyvuoja langus kai ant jų užvedamas pelės kursorius, o &quot;mouse&quot; reiškia, kad langai bus aktyvuojami kai ant jų bus užvestas kursorius ir aktyvacija bus atšaukta kursoriui pasitraukus.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Mygtukų išdėstymas antraštėje">
+                                                        <longdesc>Mygtukų išdėstymas antraštės juostoje. Požymio reikšmė turi būti simbolių seka, pvz., &quot;menu:minimize,maximize,close&quot;; dvitaškis skiria kairįjį lango kampą nuo dešiniojo, o mygtukų vardai atskiriami kableliais. Mygtukų vardai neturi pasikartoti. Nežinomi mygtukai yra ignoruojami, tam atvejui jei juos kada nors naudos būsimos metacity laidos.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Klavišas, naudojamas kartu su specialiais sprangtelėjimo ant lango veiksmais">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Numatytoji komponentų peržiūros programa">
+                                                                <longdesc>Programa naudojama peržiūrėti failus, kurie reikalauja specialaus peržiūros komponento. Parametras %s bus pakeistas failo adresu, parametras %c bus pakeistas komponento IID.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Numatytojo terminalo paleidimo argumentas">
+                                                                <longdesc>Argumentas naudojamas paleidžiant numatytąją terminalo programą.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Numatytoji terminalo programa">
+                                                                <longdesc>Numatytoji terminalo programa, naudojama su programomis, kurioms reikia terminalo.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Vykdyti komandą terminale">
+                                                                <longdesc>Teigiama, jei komanda naudojama apdoroti šio tipo adresams turėtų būti paleidžiama terminale.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programa, kuriai perduoti „h323“ užklausas">
+                                                                <longdesc>Komanda naudojama apdoroti „h323“ URL, jei įjungta.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ar nurodyta programa turėtų apdoroti „h323“ adresus">
+                                                                <longdesc>Nustatykite į teigiamą reikšmę jei norite, kad programa, nurodyta „command“ rakte, apdorotų „h323“ adresus.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Vykdyti komandą terminale">
+                                                                <longdesc>Teigiama, jei komanda naudojama apdoroti šio tipo adresams turėtų būti paleidžiama terminale.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programa, kuriai perduoti „callto“ užklausas">
+                                                                <longdesc>Komanda naudojama apdoroti „callto“ URL, jeigu įjungta.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ar nurodyta programa turėtų apdoroti „callto“ adresus">
+                                                                <longdesc>Nustatykite teigiamai norėdami, kad programa, nurodyta „command“ rakte, apdorotų „callto“ adresus.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Vykdyti komandą terminale">
+                                                                <longdesc>Teigiama, jei komanda naudojama apdoroti šio tipo adresams turėtų būti paleidžiama terminale.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programa, kuriai perduoti „mailto“ užklausas">
+                                                                <longdesc>Komanda naudojama apdoroti „mailto“ URL, jei įjungta.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ar nurodyta programa turėtų apdoroti „mailto“ adresus">
+                                                                <longdesc>Nustatykite teigiamai norėdami, kad programa, nurodyta „command“ rakte, apdorotų „mailto“ adresus.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Vykdyti komandą terminale">
+                                                                <longdesc>Teigiama, jei komanda naudojama apdoroti šio tipo adresams turėtų būti paleidžiama terminale.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programa, kuriai perduoti „https“ užklausas">
+                                                                <longdesc>Komanda naudojama apdoroti „https“ URL, jei įjungta.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ar nurodyta programa turėtų apdoroti „https“ adresus">
+                                                                <longdesc>Nustatykite į teigiamą reikšmę jei norite, kad programa, nurodyta „command“ rakte, apdorotų „https“ adresus.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Vykdyti komandą terminale">
+                                                                <longdesc>Teigiama, jei komanda naudojama apdoroti šio tipo adresams turėtų būti paleidžiama terminale.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Vykdyti komandą terminale">
+                                                                <longdesc>Teigiama, jei komanda naudojama apdoroti šio tipo adresams turėtų būti paleidžiama terminale.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programa, kuriai perduoti „http“ užklausas">
+                                                                <longdesc>Komanda naudojama apdoroti „http“ URL, jeigu įjungta.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ar nurodyta programa turėtų apdoroti „http“ adresus">
+                                                                <longdesc>Nustatykite į teigiamą reikšmę jei norite, kad programa, nurodyta „command“ rakte, apdorotų „http“ adresus.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Vykdyti komandą terminale">
+                                                                <longdesc>Teigiama, jei komanda naudojama apdoroti šio tipo adresams turėtų būti paleidžiama terminale.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programa, kuriai perduoti „man“ užklausas">
+                                                                <longdesc>Komanda naudojama apdoroti „man“ URL, jei įjungta.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ar nurodyta programa turėtų apdoroti „man“ adresus">
+                                                                <longdesc>Nustatykite teigiamai norėdami, kad programa, nurodyta „command“ rakte, apdorotų „man“ adresus.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Vykdyti komandą terminale">
+                                                                <longdesc>Teigiama, jei komanda naudojama apdoroti šio tipo adresams turėtų būti paleidžiama terminale.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programa, kuriai perduoti „info“ užklausas">
+                                                                <longdesc>Komanda naudojama apdoroti „info“ URL, jei įjungta.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ar nurodyta programa turėtų apdoroti „info“ adresus">
+                                                                <longdesc>Nustatykite teigiamai norėdami, kad programa, nurodyta „command“ rakte, apdorotų „info“ adresus.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Vykdyti komandą terminale">
+                                                                <longdesc>Teigiama, jei komanda naudojama apdoroti šio tipo adresams turėtų būti paleidžiama terminale.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programa, kuriai perduoti „ghelp“ užklausas">
+                                                                <longdesc>Komanda naudojama apdoroti „ghelp“ URL, jeigu įjungta.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ar nurodyta programa turėtų apdoroti „ghelp“ adresus">
+                                                                <longdesc>Nustatykite teigiamai norėdami, kad programa, nurodyta „command“ rakte, apdorotų „ghelp“ adresus.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Vykdyti komandą terminale">
+                                                                <longdesc>Teigiama, jei komanda naudojama apdoroti šio tipo adresams turėtų būti paleidžiama terminale.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Programa, kuriai perduoti „trash“ užklausas">
+                                                                <longdesc>Komanda naudojama apdoroti „trash“ URL, jei įjungta.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ar nurodyta programa turėtų apdoroti „trash“ adresus">
+                                                                <longdesc>Nustatykite teigiamai norėdami, kad programa, nurodyta „command“ rakte, apdorotų „trash“ adresus.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Ar naudojamas šis profilis">
+                                                                        <longdesc>Ar rodyti ir naudoti šį profilį.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Numatytasis šio profilio failų plėtinys">
+                                                                        <longdesc>Failo plėtinys, naudojamas, kai saugomi failai koduoti pagal šį profilį.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Dalinis naudotas GStreamer konvejeris">
+                                                                        <longdesc>Dalinis GStreamer konvejeris skirtas naudoti su šiuo profiliu.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="Audio profilio aprašymas">
+                                                                        <longdesc>Profilio aprašymas, kuriame yra daugiau informacijos ir aprašymas kada naudoti šį profilį.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Trumpas audio profilio vardas">
+                                                                        <longdesc>Trumpas audio profilio vardas, naudojamas pasirinkimuose ir unikaliai identifikuojantis profilį.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Ar naudojamas šis profilis">
+                                                                                <longdesc>Ar rodyti ir naudoti šį profilį.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Numatytasis šio profilio failų plėtinys">
+                                                                                <longdesc>Failo plėtinys, naudojamas, kai saugomi failai koduoti pagal šį profilį.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Dalinis naudotas GStreamer konvejeris">
+                                                                                <longdesc>Dalinis GStreamer konvejeris skirtas naudoti su šiuo profiliu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audio profilio aprašymas">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Trumpas audio profilio vardas">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Numatytasis šio profilio failų plėtinys">
+                                                                                <longdesc>Failo plėtinys, naudojamas, kai saugomi failai koduoti pagal šį profilį.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Dalinis naudotas GStreamer konvejeris">
+                                                                                <longdesc>Dalinis GStreamer konvejeris skirtas naudoti su šiuo profiliu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audio profilio aprašymas">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Trumpas audio profilio vardas">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Numatytasis šio profilio failų plėtinys">
+                                                                                <longdesc>Failo plėtinys, naudojamas, kai saugomi failai koduoti pagal šį profilį.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Dalinis naudotas GStreamer konvejeris">
+                                                                                <longdesc>Dalinis GStreamer konvejeris skirtas naudoti su šiuo profiliu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audio profilio aprašymas">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Trumpas audio profilio vardas">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Numatytasis šio profilio failų plėtinys">
+                                                                                <longdesc>Failo plėtinys, naudojamas, kai saugomi failai koduoti pagal šį profilį.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Dalinis naudotas GStreamer konvejeris">
+                                                                                <longdesc>Dalinis GStreamer konvejeris skirtas naudoti su šiuo profiliu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audio profilio aprašymas">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Trumpas audio profilio vardas">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Numatytasis šio profilio failų plėtinys">
+                                                                                <longdesc>Failo plėtinys, naudojamas, kai saugomi failai koduoti pagal šį profilį.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Dalinis naudotas GStreamer konvejeris">
+                                                                                <longdesc>Dalinis GStreamer konvejeris skirtas naudoti su šiuo profiliu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audio profilio aprašymas">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Trumpas audio profilio vardas">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Numatytasis šio profilio failų plėtinys">
+                                                                                <longdesc>Failo plėtinys, naudojamas, kai saugomi failai koduoti pagal šį profilį.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Dalinis naudotas GStreamer konvejeris">
+                                                                                <longdesc>Dalinis GStreamer konvejeris skirtas naudoti su šiuo profiliu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audio profilio aprašymas">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Trumpas audio profilio vardas">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Profilių sąrašas">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="Automatinių tarpinio serverio nustatymų adresas">
+                                                <longdesc>Adresas, kuriame saugomi tarpinio serverio nustatymai</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="SOCKS tarpinio serverio prievadas">
+                                                <longdesc>Tarpinio socks serverio prievadas, saugomas „/system/http_proxy/host“ rakte.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="SOCKS tarpinio serverio vardas">
+                                                <longdesc>Kompiuteris, teikiantis tarpinio socks serverio paslaugas.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="FTP tarpinio serverio prievadas">
+                                                <longdesc>Tarpinio ftp serverio prievadas, saugomas „/system/http_proxy/host“ rakte.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="FTP tarpinio serverio vardas">
+                                                <longdesc>Kompiuteris, teikiantis tarpinio FTP serverio paslaugas.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Saugaus HTTP tarpinio serverio prievadas">
+                                                <longdesc>Tarpinio saugaus http serverio prievadas, saugomas „/system/http_proxy/host“ rakte.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Saugaus HTTP tarpinio serverio vardas">
+                                                <longdesc>Kompiuteris, teikiantis tarpinio saugaus HTTP serverio paslaugas.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Tarpinio serverio nustatymų režimas">
+                                                <longdesc>Pasirinkite tarpinio serverio nustatymų režimą. Galimos reikšmės yra „none“, „manual“, „auto“.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Adresai pasiekiami nenaudojant tarpinio serverio">
+                                                <longdesc>Šis raktas saugo adresus, prie kurių yra jungiamasi tiesiogiai, o ne per tarpinį serverį (jei toks naudojamas). Reikšmėse galima saugoti kompiuterių vardus, sritis (su priekyje esančių apibendrinančiu simboliu, pvz., kaip *.pavyzdys.lt), kompiuterių IP adresus (tiek IPv4, tiek IPv6) bei tinklų adresus su tinklo kaukėmis (kažkas panašaus į 192.168.0.0/24).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="HTTP tarpinio serverio slaptažodis">
+                                                <longdesc>Slaptažodis, naudojamas jungiantis per HTTP tarpinį serverį.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="HTTP tarpinio serverio naudotojas">
+                                                <longdesc>Naudotojo vardas naudojamas jungiantis per HTTP tarpinį serverį.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Tarpiniamer serveryje naudoti autorizavimą">
+                                                <longdesc>Jei teigiama, jungtims į tarpinę stotį yra būtina autorizacija. Naudotojo vardas ir slaptažodis yra saugomi „/system/http_proxy/authentication_user“ ir „/system/http_proxy/authentication_password“ raktuose.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="HTTP tarpinio serverio prievadas">
+                                                <longdesc>Tarpinio http serverio prievadas, saugomas „/system/http_proxy/host“ rakte.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="HTTP tarpinio serverio vardas">
+                                                <longdesc>Kompiuteris, teikiantis tarpinio HTTP serverio paslaugas.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="Naudoti HTTP tarpinį serverį">
+                                                <longdesc>Įjungia tarpinio serverio naudojimą naršant Internete per HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Papildomos sritys, kuriose ieškoti DNS-SD paslaugų">
+                                                <longdesc>Kableliu atskirtų DNS-SD sričių, kurios turėtų būti matomos „network:///“ vietoje, sąrašas.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Kaip rodyti vietinę DNS-SD paslaugą">
+                                                <longdesc>Galimos reikšmės yra „merged“, „separate“ ir „disabled“.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="SMB darbo grupė">
+                                                <longdesc>Windows tinklų darbo grupė arba sritis, kuriai priklauso naudotojas. Tam, kad visiškai įsigaliotų atlikti pakeitimai, naudotojui gali reikti atsijungti ir prisijungti iš naujo.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

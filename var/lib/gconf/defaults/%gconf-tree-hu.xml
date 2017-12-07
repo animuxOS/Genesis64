@@ -1,0 +1,963 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="A gnome-keyring PKCS#11 összetevője engedélyezve van-e?">
+                                                        <longdesc>Ez a lehetőség engedélyezi a PKCS#11 összetevőt a gnome-keyring démonban. Csak a gnome-keyring démonnal együtt indul el, például ha a felhasználó bejelentkezik. Ezt a beállítást felülbírálhatják a démonnak átadott bizonyos parancssori argumentumok.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="A gnome-keyring SSH ügynöke engedélyezve van-e.">
+                                                        <longdesc>Ez a lehetőség engedélyezi az SSH ügynököt a gnome-keyring démonban. Csak a gnome-keyring démonnal együtt indul el, például ha a felhasználó bejelentkezik. Ezt a beállítást felülbírálhatják a démonnak átadott bizonyos parancssori argumentumok.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Az ablak szélessége">
+                                                        <longdesc>A megjelenítendő ablak szélessége</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Az ablak magassága">
+                                                        <longdesc>A megjelenítendő ablak magassága</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gksu">
+                                <entry name="save-keyring">
+                                        <local_schema short_desc="A kulcstartó, amelyre a jelszavak mentve lesznek">
+                                                <longdesc>A gksu által használandó kulcstartó neve. A szokásos értékek a  &quot;session&quot; (munkamenet), amely a jelszót a munkamenet számára menti, és a  &quot;default&quot; (alapértelmezett), amely a jelszót időkorlát nélkül menti.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="save-to-keyring">
+                                        <local_schema short_desc="Jelszó mentése a Gnome kulcstartóra">
+                                                <longdesc>A gksu képes elmenteni a beírt jelszót a Gnome kulcstartóra, így nem kérdez rá minden alkalommal</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display-no-pass-info">
+                                        <local_schema short_desc="Információs üzenet megjelenítése, ha nincs szükség jelszóra">
+                                                <longdesc>Ez a kapcsoló megadja, hogy szükséges-e a felhasználót egy párbeszédablak megjelenítésével értesíteni arról, hogy a program valamilyen okból a jelszó megadásának szükségessége nélkül fut.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="prompt">
+                                        <local_schema short_desc="Rákérdezés a zárolásra">
+                                                <longdesc>Ezen kapcsoló hatására a gksu megkérdezi a felhasználót, hogy akarja-e a képernyő zárolását a jelszó megadása előtt. Ne feledje, hogy ez csak akkor hatásos, ha a force-grab kapcsoló le van tiltva.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="sudo-mode">
+                                        <local_schema short_desc="Sudo mód">
+                                                <longdesc>A sudo legyen-e az alapértelmezett háttér eljárás. Egyébként ez az eljárás a -S kapcsolóval érhető el, vagy a gksudo futtatásával a gksu helyett.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="force-grab">
+                                        <local_schema short_desc="Billentyűzet és egér zárolásának kikényszerítése">
+                                                <longdesc>A billentyűzet és egér megragadása, még ha a -g paraméter meg is lett adva.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="disable-grab">
+                                        <local_schema short_desc="Billentyűzet és egér zárolásának letiltása">
+                                                <longdesc>A billentyűzet és egér zárolása ki legyen-e kapcsolva. Ez lehetővé teszi már X alkalmazások számára, hogy figyeljék a billentyűzet bemeneti eseményeket és nem teszi lehetővé, hogy az esetlegesen futó rosszindulatú alkalmazásokkal szemben védelmet biztosítson.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="A billentyűkombinációkra válaszul futtatandó parancsok">
+                                                        <longdesc>Az /apps/metacity/global_keybindings/run_command_N határozza meg a billentyűkombinációkat, amelyek ezekhez a parancsokhoz tartoznak. A run_command_N-hez tartozó billentyűkombináció lenyomásakor végre lesz hajtva a command_N.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Az ablakról képernyőképet készítő parancs">
+                                                        <longdesc>Az /apps/metacity/global_keybindings/run_command_window_screenshot kulcs definiálja azt a billentyűkombinációt, amely ezen beállítások által meghatározott parancsot hívja meg.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="A képernyőkép-készítő parancs">
+                                                        <longdesc>Az /apps/metacity/global_keybindings/run_command_screenshot kulcs definiálja azt a billentyűkombinációt, amely ezen beállítások által meghatározott parancsot hívja meg.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Megadott parancs futtatása">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Terminál futtatása">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Képernyőkép készítése egy ablakról">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Képernyőkép készítése">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="A panel futtatás párbeszédablakának megjelenítése">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="A panelmenü megjelenítése">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Átváltás a jelenlegi alatti munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Átváltás a jelenlegi feletti munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Átváltás a jobb oldali munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Átváltás a bal oldali munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Átváltás a 12. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Átváltás a 11. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Átváltás a 10. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Átváltás a 9. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Átváltás a 8. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Átváltás a 7. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Átváltás a 6. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Átváltás az 5. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Átváltás a 4. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Átváltás a 3. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Átváltás a 2. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Átváltás az 1. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Minden ablak elrejtése és fókusz a munkaasztalra">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Váltás hátrafelé a panelek és az asztal között azonnal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Váltás a panelek és az asztal között azonnal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Váltás hátrafelé az ablakok között azonnal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Váltás az ablakok között azonnal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Váltás hátrafelé egy alkalmazás ablakai között felugró ablakkal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Váltás egy alkalmazás ablakai között felugró ablakkal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Váltás hátrafelé egy alkalmazás ablakai között azonnal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Váltás egy alkalmazás ablakai között azonnal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Váltás hátrafelé a panelek és az asztal között felugró ablakkal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Váltás a panelek és az asztal között felugró ablakkal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="A fókusz mozgatása hátrafelé az ablakok között felugró ablaklista használatával">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Váltás ablakok között felugró ablakkal">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Ablak áthelyezése a képernyő nyugati oldalára">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Ablak áthelyezése a képernyő keleti oldalára">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Ablak áthelyezése a képernyő déli oldalára">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Ablak áthelyezése a képernyő északi oldalára">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Ablak áthelyezése a délkeleti sarokba">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Ablak áthelyezése a délnyugati sarokba">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Ablak áthelyezése az északkeleti sarokba">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Ablak áthelyezése az északnyugati sarokba">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Ablak vízszintes maximalizálása">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Ablak függőleges maximalizálása">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Ablak más ablakok mögé küldése">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Ablak más ablakok elé hozása">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Fedett ablak előtérbe hozása, egyébként háttérbe küldés">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Ablak áthelyezése egy munkaterülettel lejjebb">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Ablak áthelyezése egy munkaterülettel feljebb">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Ablak áthelyezése a jobbra lévő munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Ablak áthelyezése a balra lévő munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Ablak áthelyezése a 12. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Ablak áthelyezése a 11. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Ablak áthelyezése a 10. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Ablak áthelyezése a 9. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Ablak áthelyezése a 8. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Ablak áthelyezése a 7. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Ablak áthelyezése a 6. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Ablak áthelyezése az 5. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Ablak áthelyezése a 4. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Ablak áthelyezése a 3. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Ablak áthelyezése a 2. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Ablak áthelyezése az 1. munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Ablak kirakása minden munkaterületre">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Ablak átméretezése">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Ablak áthelyezése">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Ablak minimalizálása">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Ablak bezárása">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Felgördített állapot átváltása">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Ablak eredeti mérete">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Ablak maximalizálása">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Maximalizált állapot átváltása">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Mindig legfelül állapot átváltása">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Teljes képernyős üzemmód">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Ablakmenü aktiválása">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Munkaterület neve">
+                                                        <longdesc>A munkaterület neve.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Azon hibás funkciók letiltása, amelyeket régi vagy hibás alkalmazások használnak">
+                                                        <longdesc>Néhány alkalmazás a szabványokat olyan módon veszi semmibe, hogy az az ablakkezelő hibás viselkedését okozza. Ez a lehetőség a Metacity-t kérlelhetetlenül helyes módba kapcsolja, amely sokkal konzisztensebb felhasználói felületet eredményez, feltéve hogy nem kell hibásan működő alkalmazásokat futtatnia.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Nincs megvalósítva) A navigáció az alkalmazások és nem az ablakok szintjén működik">
+                                                        <longdesc>Ha ez be van állítva, akkor a Metacity inkább az alkalmazások és nem az ablakok szintjén működik. A koncepció egy kicsit elvont, de összességében az alkalmazás alapú beállítás inkább mac-es és kevésbé windowsos. Ha fókuszba kerül valamelyik ablak az alkalmazás alapú módban, akkor az alkalmazás minden ablaka előtérbe kerül. Szintén ebben az üzemmódban a kattintások nem jutnak át más alkalmazások ablakain. Az alkalmazás alapú üzemmód azonban jelenleg nagyrészt nincs megvalósítva.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Ha ez be van állítva, a kisebb erőforrásigény érdekében a könnyű használhatóságból áldoz fel">
+                                                        <longdesc>Ha ez be van állítva, akkor a metacity a felhasználónak kevesebb visszajelzést ad drótvázak használatával, animációk kikapcsolásával, vagy egyéb módon. Ez a használhatóság jelentős csökkentése sok felhasználó számára, de lehetővé teszi az örökölt alkalmazásoknak a működés folytatását és terminál kiszolgálóknak is hasznos engedmény lehet. Azonban a drótváz szolgáltatás ki van kapcsolva, ha az akadálymentesítés be van kapcsolva.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="Kompozíciókezelő">
+                                                        <longdesc>Meghatározza, hogy a Metacity kompozíciókezelő-e.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Látható csengetés típusa">
+                                                        <longdesc>Meghatározza, hogy a Metacity hogyan jelenítse meg látható módon, ha a rendszercsengő (esetleg másik alkalmazás „csengője”) megszólal. Jelenleg két érvényes értéke van: a „fullscreen”, amely teljes képernyős fekete-fehér villanását okozza illetve a „frame_flash”, amely a címsor villanását okozza annál az alkalmazásnál, amely a jelzést kiváltotta. Ha ez az alkalmazás ismeretlen (amely általános az alapértelmezett „system beep” esetén), akkor a jelenleg aktív ablak címsora fog felvillanni.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="A rendszer pittyenése hallható">
+                                                        <longdesc>Meghatározza, hogy az alkalmazások vagy a rendszer tudnak-e hallható hangjelzéseket kiadni, hasznos lehet a „látható rendszercsengővel” együtt alkalmazni, mert ennek segítségével lehetségesek a „néma hangjelzések” is.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="„Látható csipogás” engedélyezése">
+                                                        <longdesc>Látható jelzést ad, amikor egy alkalmazás vagy a rendszer egy „csengést” vagy „sípolást” bocsát ki; hasznos a nagyothallók számára vagy hangos környezetben.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Munkaterületek száma">
+                                                        <longdesc>A munkaterületek száma. Az értéknek nullánál nagyobbnak kell lennie, és van egy rögzített maximális érték, amely megakadályozza a munkaasztal használhatatlanná tételét túl sok munkaterület véletlen beállításával.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Az ablak címsorának betűtípusa">
+                                                        <longdesc>Betűkészlet-leíró karakterlánc, amely meghatározza az ablak címsorának betűkészletét. A leírás méret része csak akkor érvényesül, ha a titlebar_font_size opció értéke 0. Ez az opció le van tiltva, ha a titlebar_uses_desktop_font értéke igaz.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="A rendszer szabvány betűtípusának használata az ablak címsorában">
+                                                        <longdesc>Ha igazra van állítva, a titlebar_font opciót figyelmen kívül hagyja, és a szabvány alkalmazás betűkészletet használja az ablakok címsoraihoz.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Jelenlegi téma">
+                                                        <longdesc>A téma meghatározza az ablakkeretek, a címsor és sok más kinézetét.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Az automatikus előtérbe hozás opció késleltetése (ezredmásodpercben)">
+                                                        <longdesc>Késleltetés (ezredmásodpercben) az ablak automatikus előtérbe hozása előtt, ha az auto_raise engedélyezett.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Automatikusan előtérbe hozza az aktív ablakot">
+                                                        <longdesc>Ha igazra van állítva és a fókuszmód a „sloppy” vagy „mouse” egyike, akkor a fókuszba került ablak automatikusan az előtérbe lesz hozva az auto_raise_delay kulcsban megadott késleltetés letelte után. Ez nem kapcsolódik az ablakra kattintáshoz annak előtérbe hozása érdekében, sem az ablakra mutatáshoz fogd és ejtsd művelet során.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="A címsoron való jobbgombos kattintáskor bekövetkező esemény">
+                                                        <longdesc>Ez az opció határozza meg, hogy mi történjen a címsoron való jobb gombos kattintás esetén. Jelenleg érvényes opciók a „toggle_shade”, amely hatására az ablak felgördül/legördül, a „toggle_maximize”, amely hatására teljes képernyős/eredeti méretű lesz, „minimize”, amely hatására kis méretű lesz az ablak és „none”, amely nem hajt végre semmit.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="A címsoron való középsőgombos kattintáskor bekövetkező esemény">
+                                                        <longdesc>Ez az opció határozza meg, hogy mi történjen a címsoron való középsőgombos kattintás esetén. Jelenleg érvényes opciók a „toggle_shade”, amely hatására az ablak felgördül/legördül, a „toggle_maximize”, amely hatására teljes képernyős/eredeti méretű lesz, „minimize”, amely hatására kis méretű lesz az ablak és „none”, amely nem hajt végre semmit.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="A címsoron való dupla kattintáskor bekövetkező esemény">
+                                                        <longdesc>Ez az opció határozza meg, hogy mi történjen a címsoron való dupla kattintás esetén. Jelenleg érvényes opciók a „toggle_shade”, amely hatására az ablak felgördül/legördül, a „toggle_maximize”, amely hatására teljes képernyős/eredeti méretű lesz, „minimize”, amely hatására kis méretű lesz az ablak és „none”, amely nem hajt végre semmit.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Az előtérbe hozás más felhasználói tevékenységek mellékhatása legyen-e">
+                                                        <longdesc>Számos művelet (például a kattintás a kliens területén, az ablak mozgatása vagy átméretezése) mellékhatásként előtérbe hozzák az ablakot. Ezen beállítás hamisra állításával (ami nem javasolt) az előtérbe hozást elválaszthatja más felhasználói műveletektől. További információkért keresse fel a http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6 oldalt.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Új ablakok fókuszba kerülésének vezérlése">
+                                                        <longdesc>Ez a beállítás az újonnan létrehozott ablakok fókuszba kerülésének irányítására biztosít további lehetőséget. Két lehetséges értéke van: a „smart” (intelligens) a felhasználó normál fókuszmódját alkalmazza, a „strict” (korlátozott) hatására pedig a terminálból indított ablakok nem kapnak fókuszt.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Ablakfókusz módja">
+                                                        <longdesc>Az ablakfókusz módja jelzi, hogy az ablakokat hogyan tehetőek aktívvá. Három lehetséges értéke van; „click” azt jelenti, hogy rá kell kattintani az adott ablakra hogy aktív legyen, „sloppy” azt jelenti, hogy az ablak aktív lesz, amint az egér az ablak fölé ér és a „mouse” azt jelenti, hogy az ablak aktív lesz, amint az egér az ablak fölé ér és nem lesz az, ha az egér elhagyja az ablakot.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="A gombok elrendezése az ablak címsorában">
+                                                        <longdesc>A címsor gombjainak igazítása. Az értéknek szövegnek kell lennie, mint például „menu:minimize,maximize,close”; kettőspont választja el az ablak jobb és bal sarkát, a gombneveket pedig vesszők. Kettőzött gombok nem megengedettek. Az ismeretlen gombnevek jelzés nélkül figyelmen kívül lesznek hagyva, így a jövőbeli metacity verziókkal készült gombsorok visszafelé kompatibilisek maradnak.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Módosító, amellyel a módosított ablakra kattintás műveletek használhatók">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Alapértelmezett komponensnéző alkalmazás">
+                                                                <longdesc>Az azon fájlok megtekintésére használt alkalmazás, amelyek megtekintéséhez egy összetevő szükséges. A %s paraméter a fájl URI címére, a %c az összetevő IID-jére lesz cserélve.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Az alapértelmezett terminál exec paramétere">
+                                                                <longdesc>Az alapértelmezett terminálalkalmazásnál használandó exec paraméter.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Alapértelmezett terminál alkalmazás">
+                                                                <longdesc>A terminált igénylő alkalmazásokhoz használandó alapértelmezett terminál.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Parancs futtatása terminálban">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancsnak terminálban kell futnia.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="„h323” URL címek kezelője">
+                                                                <longdesc>A „h323” URL címek kezelésére használt parancs, ha engedélyezve van.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="A megadott parancs kezelje-e a „h323” URL címeket">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancs kezeli a „h323” URL címeket.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Parancs futtatása terminálban">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancsnak terminálban kell futnia.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="„callto” URL címek kezelője">
+                                                                <longdesc>A „callto” URL címek kezelésére használt parancs, ha engedélyezve van.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="A megadott parancs kezelje-e a „callto” URL címeket">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancs kezeli a „callto” URL címeket.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Parancs futtatása terminálban">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancsnak terminálban kell futnia.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="„mailto” URL címek kezelője">
+                                                                <longdesc>A „mailto” URL címek kezelésére használt parancs, ha engedélyezve van.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="A megadott parancs kezelje-e a „mailto” URL címeket">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancs kezeli a „mailto” URL címeket.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Parancs futtatása terminálban">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancsnak terminálban kell futnia.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="„https” URL címek kezelője">
+                                                                <longdesc>A „https” URL címek kezelésére használt parancs, ha engedélyezve van.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="A megadott parancs kezelje-e a „https” URL címeket">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancs kezeli a „https” URL címeket.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Parancs futtatása terminálban">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancsnak terminálban kell futnia.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Parancs futtatása terminálban">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancsnak terminálban kell futnia.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="„http” URL címek kezelője">
+                                                                <longdesc>A „http” URL címek kezelésére használt parancs, ha engedélyezve van.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="A megadott parancs kezelje-e a „http” URL címeket">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancs kezeli a „http” URL címeket.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Parancs futtatása terminálban">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancsnak terminálban kell futnia.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="„man” URL címek kezelője">
+                                                                <longdesc>A „man” URL címek kezelésére használt parancs, ha engedélyezve van.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="A megadott parancs kezelje-e a „man” URL címeket">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancs kezeli a „man” URL címeket.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Parancs futtatása terminálban">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancsnak terminálban kell futnia.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="„info” URL címek kezelője">
+                                                                <longdesc>Az „info” URL címek kezelésére használt parancs, ha engedélyezve van.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="A megadott parancs kezelje-e az „info” URL címeket">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancs kezeli az „info” URL címeket.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Parancs futtatása terminálban">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancsnak terminálban kell futnia.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="„ghelp” URL címek kezelője">
+                                                                <longdesc>A „ghelp” URL címek kezelésére használt parancs, ha engedélyezve van.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="A megadott parancs kezelje-e a „ghelp” URL címeket">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancs kezeli a „ghelp” URL címeket.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Parancs futtatása terminálban">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancsnak terminálban kell futnia.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="„trash” URL címek kezelője">
+                                                                <longdesc>A „trash” URL címek kezelésére használt parancs, ha engedélyezve van.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="A megadott parancs kezelje-e a „trash” URL címeket">
+                                                                <longdesc>Ha igazra van állítva, a „command” kulcsban beállított parancs kezeli a „trash” URL címeket.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Használatban van-e vagy sem ez a profil">
+                                                                        <longdesc>Használja és jelenítse-e meg ezt a profilt.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Az alapértelmezett fájl kiterjesztés ehhez a profilhoz">
+                                                                        <longdesc>Az ezzel a profillal kódolt fájlok tárolásakor használt fájlnévkiterjesztés.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="A használt részleges GStreamer csővezeték">
+                                                                        <longdesc>Az ezzel a profillal használandó, részleges GStreamer csővezeték.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="A hangprofil leírása">
+                                                                        <longdesc>A profil több információt tartalmazó leírása, amely megadja, mikor használandó ez a profil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="A hangprofil rövid neve">
+                                                                        <longdesc>A profil kiválasztásokkor és egyedi azonosítására használandó rövid neve.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Használatban van-e vagy sem ez a profil">
+                                                                                <longdesc>Használja és jelenítse-e meg ezt a profilt.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Az alapértelmezett fájl kiterjesztés ehhez a profilhoz">
+                                                                                <longdesc>Az ezzel a profillal kódolt fájlok tárolásakor használt fájlnévkiterjesztés.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="A használt részleges GStreamer csővezeték">
+                                                                                <longdesc>Az ezzel a profillal használandó, részleges GStreamer csővezeték.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="A hangprofil leírása">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="A hangprofil rövid neve">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Az alapértelmezett fájl kiterjesztés ehhez a profilhoz">
+                                                                                <longdesc>Az ezzel a profillal kódolt fájlok tárolásakor használt fájlnévkiterjesztés.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="A használt részleges GStreamer csővezeték">
+                                                                                <longdesc>Az ezzel a profillal használandó, részleges GStreamer csővezeték.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="A hangprofil leírása">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="A hangprofil rövid neve">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Az alapértelmezett fájl kiterjesztés ehhez a profilhoz">
+                                                                                <longdesc>Az ezzel a profillal kódolt fájlok tárolásakor használt fájlnévkiterjesztés.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="A használt részleges GStreamer csővezeték">
+                                                                                <longdesc>Az ezzel a profillal használandó, részleges GStreamer csővezeték.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="A hangprofil leírása">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="A hangprofil rövid neve">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Az alapértelmezett fájl kiterjesztés ehhez a profilhoz">
+                                                                                <longdesc>Az ezzel a profillal kódolt fájlok tárolásakor használt fájlnévkiterjesztés.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="A használt részleges GStreamer csővezeték">
+                                                                                <longdesc>Az ezzel a profillal használandó, részleges GStreamer csővezeték.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="A hangprofil leírása">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="A hangprofil rövid neve">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Az alapértelmezett fájl kiterjesztés ehhez a profilhoz">
+                                                                                <longdesc>Az ezzel a profillal kódolt fájlok tárolásakor használt fájlnévkiterjesztés.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="A használt részleges GStreamer csővezeték">
+                                                                                <longdesc>Az ezzel a profillal használandó, részleges GStreamer csővezeték.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="A hangprofil leírása">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="A hangprofil rövid neve">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Az alapértelmezett fájl kiterjesztés ehhez a profilhoz">
+                                                                                <longdesc>Az ezzel a profillal kódolt fájlok tárolásakor használt fájlnévkiterjesztés.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="A használt részleges GStreamer csővezeték">
+                                                                                <longdesc>Az ezzel a profillal használandó, részleges GStreamer csővezeték.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="A hangprofil leírása">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="A hangprofil rövid neve">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Profilok listája">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="Automatikus proxybeállítás URL címe">
+                                                <longdesc>A proxy beállításokat tartalmazó URL.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="SOCKS proxy port">
+                                                <longdesc>A „/system/proxy/socks_host” kulcsban proxyként megadott gép portja.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="SOCKS proxy gépnév">
+                                                <longdesc>A socks proxy gépneve.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="FTP proxy port">
+                                                <longdesc>A „/system/proxy/ftp_host” kulcsban proxyként megadott gép portja.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="FTP proxy gépnév">
+                                                <longdesc>Az FTP proxy gépneve.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Biztonságos HTTP proxy port">
+                                                <longdesc>A „/system/proxy/secure_host” kulcsban proxyként megadott gép portja.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Biztonságos HTTP proxy gépnév">
+                                                <longdesc>A biztonságos HTTP proxy gépneve.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Proxybeállítás módja">
+                                                <longdesc>Válassza ki a proxybeállítás módját. Támogatott értékek: „none”, „manual”, „auto”.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Proxy nélkül elérhető kiszolgálók">
+                                                <longdesc>Ez a kulcs azon kiszolgálók listáját tartalmazza, amelyekhez közvetlenül kapcsolódik, proxy használata nélkül (ha az aktív). Az értékek lehetnek kiszolgálónevek, tartományok (kezdő helyettesítő karakterek használhatóak, pl. *.akarmi.hu), IP kiszolgálócímek (IPv4 és IPv6 egyaránt) és hálózati címek hálózati maszkkal (pl. 192.168.0.0/24).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="HTTP proxy jelszó">
+                                                <longdesc>HTTP proxy használatakor hitelesítéshez használandó jelszó.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="HTTP proxy felhasználónév">
+                                                <longdesc>HTTP proxy használatakor hitelesítéshez használandó felhasználónév.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Kapcsolatok hitelesítése a proxy kiszolgálókhoz">
+                                                <longdesc>Ha be van kapcsolva, akkor a proxy kiszolgálóhoz történő kapcsolódásokhoz hitelesítés szükséges. A felhasználónév/jelszó párost a „/system/http_proxy/authentication_user” és a „/system/http_proxy/authentication_password” adja meg.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="HTTP proxy port">
+                                                <longdesc>A „/system/http_proxy/host” kulcsban proxyként megadott gép portja.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="HTTP proxy gépnév">
+                                                <longdesc>A HTTP proxy gépneve.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="HTTP proxy használata">
+                                                <longdesc>Proxybeállítások bekapcsolása interneten keresztüli HTTP eléréskor.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Extra tartományok a DNS-SD szolgáltatások kereséséhez">
+                                                <longdesc>A „network:///” helyen látható DNS-SD tartományok vesszővel elválasztott listája.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Hogyan jelenítse meg a helyi DNS-SD szolgáltatást">
+                                                <longdesc>Lehetséges értékek: „merged”, „separate” és „disabled”.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="SMB-munkacsoport">
+                                                <longdesc>A Windows hálózati munkacsoport vagy tartomány, amelynek a felhasználó része. Egy új munkacsoport teljes életbe lépéséhez a felhasználónak lehet, hogy ki-, majd újra be kell jelentkeznie.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

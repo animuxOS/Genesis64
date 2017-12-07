@@ -1,0 +1,221 @@
+#!/usr/bin/perl -w
+#
+# "SystemImager" 
+#
+#  Copyright (C) 1999-2001 Brian Elliott Finley <brian.finley@baldguysoftware.com>
+#  Copyright (C) 2002 Bald Guy Software <brian.finley@baldguysoftware.com>
+#
+#  $Id: si_lsimage 2872 2004-09-29 18:36:18Z brianfinley $
+#
+#   2004.06.02 Brian Elliott Finley
+#   - add --verbose option, and show image retrieval date
+#   2004.06.24 Brian Elliott Finley
+#   - show image retrieval time from IMAGE_RETRIEVAL_TIME if it exists, if not, 
+#     use mounted_filesystems
+#   - show client retrieved from, if it exists
+#
+
+# declare modules
+use Getopt::Long;
+
+# set some variables
+$version_number="3.6.3";
+$program_name="si_lsimage";
+$get_help = "         Try \"$program_name -help\" for more options.";
+$imageserver="127.0.0.1";
+
+# functions
+sub trim {
+  my @out = @_;
+  for (@out) {
+    s/^\s+//;
+    s/\s+$//;
+  }
+  return wantarray ? @out : $out[0];
+}
+
+# set version information
+$version_info = <<"EOF";
+$program_name (part of SystemImager) version $version_number
+
+Copyright (C) 1999-2004 Brian Elliott Finley
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+EOF
+
+# set help information
+$help_info = $version_info . <<"EOF";
+
+Usage: $program_name [OPTION]... -server HOSTNAME -image IMAGENAME
+
+Options: (options can be presented in any order)
+
+ --help
+    Display this output.
+
+ --version
+    Display version and copyright information.
+
+ --verbose
+    Display more information, including image retrieval dates.
+
+ --server HOSTNAME
+    Hostname or IP address of the imageserver.  Defaults to localhost.
+
+ --ssh-user USERNAME
+    Username for ssh connection to the client.  Only needed if an encrypted
+    connection is required.
+
+Download, report bugs, and make suggestions at:
+http://systemimager.org/
+EOF
+
+
+my $verbose;
+
+# interpret command line options
+GetOptions( 
+  "help"        => \$help,
+  "version"     => \$version,
+  "verbose|v"   => \$verbose,
+  "ssh-user=s"  => \$ssh_user,
+  "server=s"    => \$imageserver
+) or die qq($help_info);
+
+# if requested, print help information
+if($help) {
+  print qq($help_info);
+  exit 0;
+}
+
+# if requested, print version and copyright information
+if($version) {
+  print qq($version_info);
+  exit 0;
+}
+
+# be sure $imageserver name doesn't start with a hyphen
+if($imageserver) {
+  if($imageserver =~ /^-/) { 
+    die "\n$program_name: Imageserver name can\'t start with a hyphen.\n\n$get_help";
+  }
+}
+
+# default port number
+$port = "873";
+
+# If we're using SSH, go ahead and establish port forwarding
+if (($ssh_user) and ("$imageserver" ne "127.0.0.1") and ("$imageserver" ne "localhost"))
+{
+  # Get a random port number (normal rsync port won't work if rsync daemon is running)
+  my $port_in_use="yes";
+  until ( $port_in_use eq "no" )
+  {
+    $port_in_use="no";
+    $port = rand 60000;
+    $port =~ s/\..*//;
+
+    # Be sure port isn't reserved
+    $file="/etc/services";
+    open (FILE, "<$file") || die ("$0: Couldn't open $file for reading\n");
+      while (<FILE>) {
+        if (/$port/) { 
+          $port_in_use="yes";
+          next;
+        }
+      }
+    close FILE;
+  
+    # Be sure port isn't in use
+    open (NETSTAT, "netstat -tn |");
+    while (<NETSTAT>) {
+      (my $junk, my $port_and_junk) = split (/:/);
+      if ($port_and_junk) { 
+        (my $netstat_port, my $other_junk) = split (/ +/, $port_and_junk);
+        if ($netstat_port = /$port/) { 
+          $port_in_use="yes";
+          next;
+        }
+      }
+    }
+  }
+
+  # Setup the port forwarding
+  $command="ssh -f -l $ssh_user -L $port:$imageserver:873 $imageserver sleep 5";
+  $rc = 0xffff & system($command);
+  if ($rc != 0) { 
+    print "FATAL: Failed to establish secure port forwarding to $imageserver!\n";
+    die   "       Be sure that you can run \"ssh -l $ssh_user $imageserver\" successfully.\n";
+  }
+
+  # and change the source host to point to localhost so we can use the port forwarding
+  $imageserver="127.0.0.1";
+}
+
+# get listing
+print "--------------------------------------------------------------------------------\n";
+print "Available image(s):\n";
+print "--------------------------------------------------------------------------------\n";
+$command = "rsync rsync://${imageserver}:$port/";
+open(FILE, "$command|");
+while (<FILE>) {
+    $_ = trim ($_);
+    next if( m/^(scripts|boot|overrides)$/ );
+    if($verbose) {
+
+	    print "  Image: $_"; 
+
+        my $file = "/tmp/tmp_file.$$";
+
+        # display time stamp
+        my $cmd1 = "rsync -a rsync://${imageserver}:$port/$_/etc/systemimager/IMAGE_RETRIEVAL_TIME $file 1>/dev/null 2>/dev/null";
+        my $cmd2 = "rsync -a rsync://${imageserver}:$port/$_/etc/systemimager/mounted_filesystems  $file 1>/dev/null 2>/dev/null";
+        if( !system($cmd1) ) {
+
+            open(IMAGE_RETRIEVAL_TIME,"<$file") or die("Couldn't open $file! $!");
+                my $time = <IMAGE_RETRIEVAL_TIME>;
+                chomp($time);
+                print "\tTime: $time";
+            close(IMAGE_RETRIEVAL_TIME);
+
+        } elsif( !system($cmd2) ) {
+
+            my ($dev,$ino,$mode,$nlink,$uid,$gid,$rdev,$size,$atime,$mtime,$ctime,$blksize,$blocks) = stat($file);
+            my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime($mtime);
+            $mon++;
+            $year += 1900;
+            printf("\tTime: %04d.%02d.%02d %02d:%02d", $year,$mon,$mday,$hour,$min);
+
+        } else {
+
+            print "\tTime: N/A";
+        }
+        
+
+        # display golden client
+        my $cmd = "rsync -a rsync://${imageserver}:$port/$_/etc/systemimager/IMAGE_RETRIEVED_FROM $file 1>/dev/null 2>/dev/null";
+        my $golden_client;
+        if( !system($cmd) ) {
+
+            open(IMAGE_RETRIEVED_FROM,"<$file") or die("Couldn't open $file! $!");
+                $golden_client = <IMAGE_RETRIEVED_FROM>;
+                chomp($golden_client);
+            close(IMAGE_RETRIEVED_FROM);
+        } else {
+            
+            $golden_client = "N/A";
+        }
+        unlink($file);
+
+        print "\tGolden Client: $golden_client"; 
+
+    } else {
+
+	    print "  $_"; 
+    }
+    print "\n";
+}
+close(FILE);
+print "\n";
+
+exit 0;

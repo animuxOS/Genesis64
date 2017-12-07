@@ -1,0 +1,38 @@
+%% -*- mode:erlang; erlang-indent-level: 2 -*-
+{wpc_torus,
+ [
+  {make_lu_torus,
+   [
+    {1,"Lumpy Torus Options"},
+    {2,"U Resolution"},
+    {3,"V Resolution"},
+    {4,"Major Radius"},
+    {5,"Minor Radius"},
+    {6,"Lumps"},
+    {7,"Lump Amplitude"}
+   ]},
+  {make_sp_torus,
+   [
+    {1,"Spiral Torus Options"},
+    {2,"U Resolution"},
+    {3,"V Resolution"},
+    {4,"Major Radius"},
+    {5,"Minor Radius"},
+    {6,"Loops"},
+    {7,"Loop Radius "}
+   ]},
+  {make_uv_torus,
+   [
+    {1,"UV Torus Options"},
+    {2,"U Resolution"},
+    {3,"V Resolution"},
+    {4,"Major Radius"},
+    {5,"Minor Radius"}
+   ]},
+  {torus_menu,
+   [
+    {1,"UV Torus"},
+    {2,"Lumpy Torus"},
+    {3,"Spiral Torus"}
+   ]}
+ ]}.

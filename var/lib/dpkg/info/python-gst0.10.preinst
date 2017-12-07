@@ -1,0 +1,55 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_pycentral
+if which pycentral >/dev/null 2>&1 && pycentral --help 2>/dev/null | grep -q '^ *version'; then
+	pycentral pkgprepare python-gst0.10 <<PYEOF
+[python-package]
+format = 1
+python-version = 2.4, 2.5
+[pycentral]
+version = 0.6.7
+[files]
+/usr/share/gst-python/0.10/examples/fvumeter.py=f
+/usr/share/gst-python/0.10/examples/decodebin.py=f
+/usr/share/gst-python/0.10/examples/sinkelement.py=f
+/usr/share/gst-python/0.10/examples/bps.py=f
+/usr/share/gst-python/0.10/examples/play.py=f
+/usr/share/gst-python/0.10/examples/vumeter.py=f
+/usr/share/gst-python/0.10/examples/f2f.py=f
+/usr/share/gst-python/0.10/examples/cp.py=f
+/usr/share/gst-python/0.10/examples/remuxer.py=f
+/usr/share/gst-python/0.10/examples/gstfile.py=f
+/usr/share/gst-python/0.10/examples/filesrc.py=f
+/usr/share/gst-python/0.10/examples/mixer.py=f
+/usr/share/gst-python/0.10/examples/audio-controller.py=f
+/usr/share/gst-python/0.10/examples/debugslider.py=f
+/usr/share/gst-python/0.10/examples/audioconcat.py=f
+/usr/share/pyshared/pygst.pth=f
+/usr/share/pyshared/pygst.py=f
+/usr/share/pyshared/gst-0.10=d
+/usr/share/pyshared/gst-0.10/gst=d
+/usr/share/pyshared/gst-0.10/gst/__init__.py=f
+/usr/share/pyshared/gst-0.10/gst/extend=d
+/usr/share/pyshared/gst-0.10/gst/extend/pygobject.py=f
+/usr/share/pyshared/gst-0.10/gst/extend/leveller.py=f
+/usr/share/pyshared/gst-0.10/gst/extend/jukebox.py=f
+/usr/share/pyshared/gst-0.10/gst/extend/sources.py=f
+/usr/share/pyshared/gst-0.10/gst/extend/__init__.py=f
+/usr/share/pyshared/gst-0.10/gst/extend/utils.py=f
+/usr/share/pyshared/gst-0.10/gst/extend/discoverer.py=f
+/usr/lib/python2.4/site-packages/gst-0.10=d
+/usr/lib/python2.4/site-packages/gst-0.10/gst=d
+/usr/lib/python2.4/site-packages/gst-0.10/gst/_gst.so=f
+/usr/lib/python2.4/site-packages/gst-0.10/gst/pbutils.so=f
+/usr/lib/python2.4/site-packages/gst-0.10/gst/interfaces.so=f
+/usr/lib/python2.5/site-packages/gst-0.10=d
+/usr/lib/python2.5/site-packages/gst-0.10/gst=d
+/usr/lib/python2.5/site-packages/gst-0.10/gst/_gst.so=f
+/usr/lib/python2.5/site-packages/gst-0.10/gst/pbutils.so=f
+/usr/lib/python2.5/site-packages/gst-0.10/gst/interfaces.so=f
+PYEOF
+else
+	mkdir -p /var/lib/pycentral
+	echo python-gst0.10 >> /var/lib/pycentral/delayed-pkgs
+fi
+# End automatically added section

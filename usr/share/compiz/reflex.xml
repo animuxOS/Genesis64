@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+	<plugin useBcop="true" name="reflex">
+		<short>Reflection</short>
+		<short xml:lang="ca">Reflexió</short>
+		<short xml:lang="de">Reflektionen</short>
+		<short xml:lang="el">Αντανάκλαση</short>
+		<short xml:lang="en_GB">Reflection</short>
+		<short xml:lang="es">Reflejos</short>
+		<short xml:lang="fi">Heijastus</short>
+		<short xml:lang="fr">Réflexion</short>
+		<short xml:lang="gl">Reflexo</short>
+		<short xml:lang="gu">પરાવર્તન</short>
+		<short xml:lang="hi">परावर्तन</short>
+		<short xml:lang="it">Riflesso</short>
+		<short xml:lang="ja">反射</short>
+		<short xml:lang="nb">Speiling</short>
+		<short xml:lang="nl">Reflectie</short>
+		<short xml:lang="pl">Odbicie</short>
+		<short xml:lang="pt">Reflexão</short>
+		<short xml:lang="pt_BR">Reflexão</short>
+		<short xml:lang="sv">Reflektion</short>
+		<short xml:lang="tr">Yansıma</short>
+		<short xml:lang="zh_CN">映影</short>
+		<long>Draws reflections</long>
+		<long xml:lang="ca">Dibuixa reflexes</long>
+		<long xml:lang="de">Zeichnet Reflektionen auf Fenster</long>
+		<long xml:lang="el">Σχεδιάζει αντανακλάσεις</long>
+		<long xml:lang="en_GB">Draws reflections</long>
+		<long xml:lang="es">Dibuja reflejos</long>
+		<long xml:lang="fi">Piirrä heijastumat</long>
+		<long xml:lang="fr">Activer les réflexions</long>
+		<long xml:lang="gl">Debuxar reflexos</long>
+		<long xml:lang="gu">પરાવર્તનો દોરે છે</long>
+		<long xml:lang="hi">परावर्तन खीचें</long>
+		<long xml:lang="it">Disegna dei riflessi</long>
+		<long xml:lang="ja">反射の描画</long>
+		<long xml:lang="nb">Tegn speilinger</long>
+		<long xml:lang="nl">Tekent reflectie's</long>
+		<long xml:lang="pl">Rysuje odbicia</long>
+		<long xml:lang="pt">Desenhar reflexões</long>
+		<long xml:lang="pt_BR">Desenhar reflexões</long>
+		<long xml:lang="sv">Ritar reflektioner</long>
+		<long xml:lang="tr">Yansımaları oluştur</long>
+		<long xml:lang="zh_CN">绘制映影</long>
+		<category>Effects</category>
+		<deps>
+			<relation type="after">
+				<plugin>blur</plugin>
+				<plugin>svg</plugin>
+				<plugin>png</plugin>
+				<plugin>imgjpeg</plugin>
+			</relation>
+		</deps>
+		<screen>
+			<group>
+				<short>Main</short>
+				<short xml:lang="ca">Principal</short>
+				<short xml:lang="de">Allgemein</short>
+				<short xml:lang="el">Βασικό</short>
+				<short xml:lang="en_GB">Main</short>
+				<short xml:lang="es">Principal</short>
+				<short xml:lang="eu">Nagusi</short>
+				<short xml:lang="fr">Principal</short>
+				<short xml:lang="gl">Principal</short>
+				<short xml:lang="gu">મુખ્ય</short>
+				<short xml:lang="hi">मुख्य</short>
+				<short xml:lang="it">Principale</short>
+				<short xml:lang="ja">主要設定</short>
+				<short xml:lang="nb">Hoved</short>
+				<short xml:lang="nl">Algemeen</short>
+				<short xml:lang="pl">Główny</short>
+				<short xml:lang="pt">Principal</short>
+				<short xml:lang="pt_BR">Principal</short>
+				<short xml:lang="sv">Allmänt</short>
+				<short xml:lang="tr">Ana Ayarlar</short>
+				<short xml:lang="zh_CN">主要设置</short>
+				<option type="string" name="file">
+					<short>Reflection Image</short>
+					<short xml:lang="ca">Imatge de reflexió</short>
+					<short xml:lang="de">Reflektionsbild</short>
+					<short xml:lang="el">Εικόνα αντανάκλασης</short>
+					<short xml:lang="en_GB">Reflection Image</short>
+					<short xml:lang="es">Imagen de la Reflexión</short>
+					<short xml:lang="fr">Image pour la Réflexion</short>
+					<short xml:lang="gl">Imaxe da Reflexo</short>
+					<short xml:lang="gu">પરાવર્તન ચિત્ર</short>
+					<short xml:lang="hi">परावर्तन चित्र</short>
+					<short xml:lang="it">Immagine riflesso</short>
+					<short xml:lang="ja">反射の画像</short>
+					<short xml:lang="nb">Speilingsbilde</short>
+					<short xml:lang="nl">Reflectie afbeelding</short>
+					<short xml:lang="pl">Obraz odbicia</short>
+					<short xml:lang="pt">Imagem da Reflexão</short>
+					<short xml:lang="pt_BR">Imagem da Reflexão</short>
+					<short xml:lang="sv">Reflektionsbild</short>
+					<short xml:lang="tr">Yansıma Resmi</short>
+					<short xml:lang="zh_CN">映影图像</short>
+					<long>Reflection Image file</long>
+					<long xml:lang="ca">Fitxer d'imatge de reflexió</long>
+					<long xml:lang="de">Für Reflektion verwendete Bilddatei.</long>
+					<long xml:lang="el">Αρχείο Εικόνας Αντανάκλασης</long>
+					<long xml:lang="en_GB">Reflection Image file</long>
+					<long xml:lang="es">Reflexión del archivo de imagen</long>
+					<long xml:lang="fr">Fichier image pour la Réflexion</long>
+					<long xml:lang="gl">Ficheiro de Imaxe da Reflexo</long>
+					<long xml:lang="gu">પરાવર્તન ચિત્ર ફાઈલ</long>
+					<long xml:lang="hi">परावर्तन चित्र फाइल</long>
+					<long xml:lang="it">File immagine da usare come riflesso</long>
+					<long xml:lang="ja">反射の画像ファイル</long>
+					<long xml:lang="nb">Speilingens bildefil</long>
+					<long xml:lang="nl">Reflectie afbeeldings bestand</long>
+					<long xml:lang="pl">Plik z obrazem odbicia</long>
+					<long xml:lang="pt">Ficheiro de Imagem da Reflexão</long>
+					<long xml:lang="pt_BR">Arquivo de Imagem da Reflexão</long>
+					<long xml:lang="sv">Reflektionens bildfil</long>
+					<long xml:lang="tr">Yansıma resmi dosyası</long>
+					<long xml:lang="zh_CN">映影图像文件</long>
+					<hints>file;image;</hints>
+					<default>reflection.png</default>
+				</option>
+				<option type="match" name="match">
+					<short>Window match</short>
+					<short xml:lang="de">Betroffene Fenster</short>
+					<short xml:lang="el">Ταίριασμα Παραθύρου</short>
+					<short xml:lang="en_GB">Window match</short>
+					<short xml:lang="fr">Correspondance de fenêtres</short>
+					<short xml:lang="gl">Tipos de fiestras</short>
+					<short xml:lang="gu">વિન્ડો જોડણી</short>
+					<short xml:lang="hi">विंडो मिलान</short>
+					<short xml:lang="it">Tipi di finestre</short>
+					<short xml:lang="ja">適用ウィンドウ</short>
+					<short xml:lang="nb">Vindustreff</short>
+					<short xml:lang="nl">Venster match</short>
+					<short xml:lang="pl">Dopasowanie okien</short>
+					<short xml:lang="pt">Tipos de janelas</short>
+					<short xml:lang="pt_BR">Tipos de janelas</short>
+					<short xml:lang="sv">Fönstermatchning</short>
+					<short xml:lang="tr">Pencere eşlemesi</short>
+					<short xml:lang="zh_CN">窗口匹配</short>
+					<long>Reflection Window Match</long>
+					<long xml:lang="de">Fenster, auf die die Reflektion angewendet wird.</long>
+					<long xml:lang="el">Ταίριασμα Αντανάκλασης Παραθύρου</long>
+					<long xml:lang="en_GB">Reflection Window Match</long>
+					<long xml:lang="es">Exactitud de la reflexion de la ventana </long>
+					<long xml:lang="fr">Types de fenêtres pour la réflexion</long>
+					<long xml:lang="gl">Tipos de Fiestras con Reflexo</long>
+					<long xml:lang="gu">પરાવર્તન વિન્ડો જોડણી</long>
+					<long xml:lang="hi">परावर्तन विंडो मिलान</long>
+					<long xml:lang="it">Finestre a cui applicare il riflesso</long>
+					<long xml:lang="ja">反射適用ウィンドウ</long>
+					<long xml:lang="nb">Speilingens vindustreff</long>
+					<long xml:lang="nl">Reflectie venster match</long>
+					<long xml:lang="pl">Okna, które mają być odbite</long>
+					<long xml:lang="pt">Tipos de Janelas com Reflexão</long>
+					<long xml:lang="pt_BR">Tipos de Janelas com Reflexão</long>
+					<long xml:lang="sv">Reflektionens fönstermatchning</long>
+					<long xml:lang="tr">Yansıma Pencere Eşlemesi</long>
+					<long xml:lang="zh_CN">映影窗口匹配</long>
+					<default>any</default>
+				</option>
+				<option type="bool" name="window">
+					<short>Reflection for Windows</short>
+					<short xml:lang="ca">Reflexió per les finestres</short>
+					<short xml:lang="de">Reflektionen für Fenster</short>
+					<short xml:lang="el">Αντανάκλαση Παραθύρων</short>
+					<short xml:lang="en_GB">Reflection for Windows</short>
+					<short xml:lang="es">Reflexión en las ventanas</short>
+					<short xml:lang="fr">Réflexion pour les fenêtres</short>
+					<short xml:lang="gl">Reflexo de Fiestras</short>
+					<short xml:lang="gu">વિન્ડો માટે પરાવર્તન</short>
+					<short xml:lang="hi">विंडोज़ के लिए परावर्तन</short>
+					<short xml:lang="it">Riflessi per le finestre</short>
+					<short xml:lang="ja">ウィンドウの反射</short>
+					<short xml:lang="nb">Speiling for vinduer</short>
+					<short xml:lang="nl">Reflectie voor vensters</short>
+					<short xml:lang="pl">Odbicia okien</short>
+					<short xml:lang="pt">Reflexão de Janelas</short>
+					<short xml:lang="pt_BR">Reflexão de Janelas</short>
+					<short xml:lang="sv">Reflektionen för fönster</short>
+					<short xml:lang="tr">Pencereleri için Yansıma</short>
+					<short xml:lang="zh_CN">窗口映影</short>
+					<long>Draw Reflection for windows.</long>
+					<long xml:lang="ca">Dibuixa el reflex per les finestres</long>
+					<long xml:lang="de">Verwende Reflektionen für Fenster.</long>
+					<long xml:lang="el">Σχεδίαση Αντανάκλασης παραθύρων.</long>
+					<long xml:lang="en_GB">Draw Reflection for windows.</long>
+					<long xml:lang="es">Dibujar reflejos en las ventanas.</long>
+					<long xml:lang="fi">Piirrä heijastumat ikkunoille</long>
+					<long xml:lang="fr">Dessiner les réflexions des fenêtres.</long>
+					<long xml:lang="gl">Debuxar Reflexo nas fiestras.</long>
+					<long xml:lang="gu">વિન્ડો માટે પરાવર્તન દોરો.</long>
+					<long xml:lang="hi">विंडो के लिए परावर्तन खीचें.</long>
+					<long xml:lang="it">Disegna il riflesso per le finestre.</long>
+					<long xml:lang="ja">ウィンドウの反射を描画</long>
+					<long xml:lang="nb">Tegn speiling for vinduer</long>
+					<long xml:lang="nl">Teken reflectie voor vensters.</long>
+					<long xml:lang="pl">Rysuj odbicia dla okien.</long>
+					<long xml:lang="pt">Desenhar Reflexão para janelas.</long>
+					<long xml:lang="pt_BR">Desenhar Reflexão para janelas.</long>
+					<long xml:lang="sv">Rita reflektion för fönster</long>
+					<long xml:lang="tr">Pencereler için yansımaları oluştur.</long>
+					<long xml:lang="zh_CN">为窗口绘制映影。</long>
+					<default>false</default>
+				</option>
+				<option type="bool" name="decoration">
+					<short>Reflection for Decorations</short>
+					<short xml:lang="ca">Fitxer d'imatge de reflexió</short>
+					<short xml:lang="de">Reflektionen für Fensterrahmen</short>
+					<short xml:lang="el">Αντανάκλαση Διακοσμίσεων</short>
+					<short xml:lang="en_GB">Reflection for Decorations</short>
+					<short xml:lang="es">Reflexión en las decoraciones</short>
+					<short xml:lang="fr">Réflexion pour les décorations</short>
+					<short xml:lang="gl">Reflexo de Decoracións</short>
+					<short xml:lang="gu">શણગારો માટે પરાવર્તન</short>
+					<short xml:lang="hi">सजावट के लिए परावर्तन</short>
+					<short xml:lang="it">Riflessi per le decorazioni</short>
+					<short xml:lang="ja">装飾の反射</short>
+					<short xml:lang="nb">Speiling for deokrasjoner</short>
+					<short xml:lang="nl">Reflectie voor decoratie's</short>
+					<short xml:lang="pl">Odbicia dekoracji</short>
+					<short xml:lang="pt">Reflexão de Decorações</short>
+					<short xml:lang="pt_BR">Reflexão de Decorações</short>
+					<short xml:lang="sv">Reflektionen för ramar</short>
+					<short xml:lang="tr">Dekorasyonlar için Yansıma</short>
+					<short xml:lang="zh_CN">装饰映影</short>
+					<long>Draw Reflection for decorations.</long>
+					<long xml:lang="ca">Dibuixa el reflex per les decoracions.</long>
+					<long xml:lang="de">Verwende Reflektion für Fensterrahmen.</long>
+					<long xml:lang="el">Απεικόνιση Αντανάκλασης διακοσμίσεων.</long>
+					<long xml:lang="en_GB">Draw Reflection for decorations.</long>
+					<long xml:lang="es">Dibujar reflejos en las decoraciones.</long>
+					<long xml:lang="fr">Dessiner les réflexions des décorations.</long>
+					<long xml:lang="gl">Debuxar Reflexo para as decoracións.</long>
+					<long xml:lang="gu">શણગારો માટે પરાવર્તન દોરો.</long>
+					<long xml:lang="hi">सजावट के लिए परावर्तन खीचें.</long>
+					<long xml:lang="it">Disegna il riflesso per le decorazioni.</long>
+					<long xml:lang="ja">装飾の反射を描画</long>
+					<long xml:lang="nb">Tegn speiling for dekorasjoner</long>
+					<long xml:lang="nl">Teken reflectie voor decoratie's.</long>
+					<long xml:lang="pl">Rysuj odbicia dla dekoracji.</long>
+					<long xml:lang="pt">Desenhar Reflexão para decorações.</long>
+					<long xml:lang="pt_BR">Desenhar Reflexão para decorações.</long>
+					<long xml:lang="sv">Rita reflektion för ramar</long>
+					<long xml:lang="tr">Dekorasyonlar için yansımaları oluştur.</long>
+					<long xml:lang="zh_CN">为装饰绘制映影。</long>
+					<default>true</default>
+				</option>
+				<option type="int" name="threshold">
+					<short>Alpha Dependence Threshold</short>
+					<short xml:lang="de">Transparenz-Abhängigkeitsschwelle</short>
+					<short xml:lang="el">Κατώφλι Εξάρτησης Alpha</short>
+					<short xml:lang="en_GB">Alpha Dependence Threshold</short>
+					<short xml:lang="es">Umbral de dependencia alfa</short>
+					<short xml:lang="fr">Seuil de dépendance Alpha</short>
+					<short xml:lang="gl">Limite de Dependencia Alfa</short>
+					<short xml:lang="gu">આલ્ફા આધારભૂત થ્રેશોલ્ડ</short>
+					<short xml:lang="hi">अल्फा निर्भरता दहलीज</short>
+					<short xml:lang="it">Soglia dipendenza alfa</short>
+					<short xml:lang="ja">アルファ依存しきい値</short>
+					<short xml:lang="nb">Alfa avhengighetsterskel</short>
+					<short xml:lang="nl">Alpha afhankelĳke drempel</short>
+					<short xml:lang="pl">Próg zależności alfa</short>
+					<short xml:lang="pt">Limite de Dependência Alfa</short>
+					<short xml:lang="pt_BR">Limite de Dependência Alfa</short>
+					<short xml:lang="sv">Alfa-beroende tröskel</short>
+					<short xml:lang="zh_CN">Alpha 独立性阈值</short>
+					<long>Alpha dependence threshold.</long>
+					<long xml:lang="de">Transparenz-Abhängigkeitsschwelle.</long>
+					<long xml:lang="el">Κατώφλι εξάρτησης alpha.</long>
+					<long xml:lang="en_GB">Alpha dependence threshold.</long>
+					<long xml:lang="es">Umbral de dependencia alfa</long>
+					<long xml:lang="fr">Seuil de dépendance alpha.</long>
+					<long xml:lang="gl">Limite de dependencia alfa.</long>
+					<long xml:lang="gu">આલ્ફા આધારભૂત થ્રેશોલ્ડ.</long>
+					<long xml:lang="hi">अल्फा निर्भरता दहलीज.</long>
+					<long xml:lang="it">Soglia della dipendenza alfa.</long>
+					<long xml:lang="ja">アルファ依存しきい値</long>
+					<long xml:lang="nb">Alfa avhengighetsterskel</long>
+					<long xml:lang="nl">Alpha afhankelĳke drempel.</long>
+					<long xml:lang="pl">Próg zależności alfa.</long>
+					<long xml:lang="pt">Limite de dependência alfa.</long>
+					<long xml:lang="pt_BR">Limite de dependência alfa.</long>
+					<long xml:lang="sv">Alfa-beroende tröskel</long>
+					<long xml:lang="zh_CN">Alpha 独立性阈值。</long>
+					<default>1</default>
+					<min>1</min>
+					<max>10</max>
+				</option>
+				<option type="bool" name="moving">
+					<short>Moving reflection</short>
+					<short xml:lang="ca">Reflexió del moviment</short>
+					<short xml:lang="de">Bewegte Reflektionen</short>
+					<short xml:lang="el">Μετακινούμενη αντανάκλαση</short>
+					<short xml:lang="en_GB">Moving reflection</short>
+					<short xml:lang="es">Reflexión con movimiento</short>
+					<short xml:lang="fr">Réflexions mouvantes</short>
+					<short xml:lang="gl">Reflexo Dinámica</short>
+					<short xml:lang="gu">પરાવર્તન ખસેડવાનું</short>
+					<short xml:lang="hi">परावर्तन खिसका रहा है</short>
+					<short xml:lang="it">Riflessi in movimento</short>
+					<short xml:lang="ja">反射の移動</short>
+					<short xml:lang="nb">Flyttende speiling</short>
+					<short xml:lang="nl">Verplaatste reflectie</short>
+					<short xml:lang="pl">Poruszanie odbić</short>
+					<short xml:lang="pt">Reflexão dinâmica</short>
+					<short xml:lang="pt_BR">Reflexão Dinâmica</short>
+					<short xml:lang="sv">Rörlig reflektion</short>
+					<short xml:lang="tr">Taşıma yansıması</short>
+					<short xml:lang="zh_CN">移动映影</short>
+					<long>Move the reflection on window move.</long>
+					<long xml:lang="ca">Mou el reflex quan es mou la finestra.</long>
+					<long xml:lang="de">Bewege die Reflektionen mit dem Fenster</long>
+					<long xml:lang="el">Μετακίνηση αντανάκλασης στην μετακίνηση παραθύρου.</long>
+					<long xml:lang="en_GB">Move the reflection on window move.</long>
+					<long xml:lang="es">Mover los reflejos cuando la ventana es movida.</long>
+					<long xml:lang="fr">Animer les réflexions lorsqu'une fenêtre bouge</long>
+					<long xml:lang="gl">Mover a reflexo cando se move a fiestra.</long>
+					<long xml:lang="gu">વિન્ડો ચાલ પર પરાવર્તન ખસેડો.</long>
+					<long xml:lang="hi">विंडो खिसकाव पर परावर्तन खिसकाएं.</long>
+					<long xml:lang="it">Muove il riflesso al movimento della finestra.</long>
+					<long xml:lang="ja">ウィンドウ移動時に反射を移動</long>
+					<long xml:lang="nb">Flytt speilingen ved vindusflytting</long>
+					<long xml:lang="nl">Verplaats de reflectie bĳ verplaatsen venster.</long>
+					<long xml:lang="pl">Poruszaj odbiciami podczas poruszania oknem.</long>
+					<long xml:lang="pt">Mover a reflexão quando se move a janela.</long>
+					<long xml:lang="pt_BR">Mover a reflexão quando se move a janela.</long>
+					<long xml:lang="sv">Flyttar reflektion vid fönsterflyttning</long>
+					<long xml:lang="zh_CN">窗口移动时出现映影。</long>
+					<default>true</default>
+				</option>
+			</group>
+		</screen>
+	</plugin>
+</compiz>

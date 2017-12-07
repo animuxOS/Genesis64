@@ -1,0 +1,25 @@
+body {
+  /* Sans-serif fonts will be much more readable than serif on a TV. */
+  font-family: sans-serif;
+  /* No scroll bars. */
+  overflow: hidden;
+}
+a:link, a:visited {
+  color: blue;
+  /* Don't underline links because underlining tends to flicker on TVs. */
+  text-decoration: none;
+  /* Buttons have to be rectangular (AFAIK). */
+  white-space: nowrap;
+}
+/* The hover state must be made obvious since DVD players have no pointer. */
+a:link:hover, a:visited:hover {
+  color: red;
+}
+/* The active state should provide visual feedback, but is not so critical. */
+a:link:active, a:visited:active {
+  color: purple;
+}
+/* Don't show focus rectangles. */
+*|*:-moz-any-link:focus {
+  -moz-outline: none !important;
+}

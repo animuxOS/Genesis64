@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<westley title="Blur">
+  <producer in="0" out="499">
+    <property name="resource">motion_blur.jpg</property>
+    <property name="meta.fx_cut">1</property>
+	<filter mlt_service="luma" jah_title="motion blur">
+      <property name="blur">1</property>
+      <property name="period">2500</property>
+      <property name="luma.fixed">0.9</property>
+    </filter>
+  </producer>
+</westley>

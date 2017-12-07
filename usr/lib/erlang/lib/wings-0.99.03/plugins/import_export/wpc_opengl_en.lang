@@ -1,0 +1,47 @@
+%% -*- mode:erlang; erlang-indent-level: 2 -*-
+{wpc_opengl,
+ [
+  {aa_frame,
+   [
+    {1,"Draft Quality (no AA)"},
+    {2,"Regular Quality (normal AA)"},
+    {3,"Super Quality"},
+    {4,"Premium Quality"}
+   ]},
+  {create_dls,
+   [
+    {1,"Generating shadows and bump data per light "},
+    {2,"Rendering"}
+   ]},
+  {dialog_qs,
+   [
+    {1,"Targa File"},
+    {2,"Sub-division Steps"},
+    {3,"Background Color"},
+    {4,"Render Alpha Channel"},
+    {5,"Render Shadows"},
+    {6,"Render Self-Shadows (Bump maps)"},
+    {7,"Image Window"},
+    {8,"File"},
+    {9,"Render Output"}
+   ]},
+  {do_render,
+   [
+    {1,"Render Options"},
+    {2,"Rendering"}
+   ]},
+  {load_program,
+   [
+    {1,"Error when loading program"}
+   ]},
+  {prepare_mesh,
+   [
+    {1,"Triangulating"},
+    {2,"Subdividing and triangulating"},
+    {3,"Generating mesh data"}
+   ]},
+  {render_redraw,
+   [
+    {1,"<<Rendered>>"}
+   ]}
+ ]}.

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<deviceinfo version="0.2">
+  <device>
+    <match key="info.product" string="Asus Extra Buttons">
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="ASUS">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" string="W3J">
+          <append key="input.keymap.data" type="strlist">0x041:nextsong</append>
+          <append key="input.keymap.data" type="strlist">0x045:playpause</append>
+          <append key="input.keymap.data" type="strlist">0x043:stopcd</append>
+          <append key="input.keymap.data" type="strlist">0x040:previoussong</append>
+          <append key="input.keymap.data" type="strlist">0x04c:ejectclosecd</append>
+          <append key="input.keymap.data" type="strlist">0x032:mute</append>
+          <append key="input.keymap.data" type="strlist">0x031:volumedown</append>
+          <append key="input.keymap.data" type="strlist">0x030:volumeup</append>
+          <!-- Disable touchpad -->
+          <!-- <append ket="input.keymap.data" type="strlist">0x06b:unknown</append> -->
+          <append key="input.keymap.data" type="strlist">0x05d:wlan</append>
+          <append key="input.keymap.data" type="strlist">0x07e:bluetooth</append>
+          <!-- Performance -->
+          <!-- <append key="input.keymap.data" type="strlist">0x05c:unknown</append> -->
+          <append key="input.keymap.data" type="strlist">0x08a:tv</append>
+          <!-- TODO: sleep/power buttons -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
+    </match>
+  </device>
+</deviceinfo>

@@ -1,0 +1,926 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="PKCS#11 コンポーネントを有効にするかどうか">
+                                                        <longdesc>このオプションは gnome-keyring デーモンの PKCS#11 コンポーネントを有効にします。gnome-keyring デーモンを起動した時 (すなわちユーザがログインしている場合) にのみ効果があります。ここで設定した内容はコマンドラインから上書きすることができます。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="SSH エージェントを有効にするかどうか">
+                                                        <longdesc>このオプションは gnome-keyring デーモンの SSH コンポーネントを有効にします。gnome-keyring デーモンを起動した時 (すなわちユーザがログインしている場合) にのみ効果があります。ここで設定した内容はコマンドラインから上書きすることができます。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="ウィンドウの幅">
+                                                        <longdesc>表示するウィンドウの幅です。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="ウィンドウの高さ">
+                                                        <longdesc>表示するウィンドウの高さです。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="キーバインドの応答で走らせるコマンド">
+                                                        <longdesc>/apps/metacity/global_keybindings/runs_command_N キーは、これらのコマンドに対応するキーバインドを定義します。run_command_N のキーバインドを押すとcommand_Nが実行されます。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="ウィンドウのスクリーンショットを撮影するコマンド">
+                                                        <longdesc>/apps/metacity/global_keybindings/runs_command_window_screenshot キーは、この設定で実行するよう指定されたコマンドに対応するキーバインドを定義します。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="スクリーンショットを撮影するコマンド">
+                                                        <longdesc>/apps/metacity/global_keybindings/runs_command_screenshot キーは。この設定で実行するよう指定されたコマンドに対応するキーバインドを定義します。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="実行するコマンド">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="端末の起動">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="ウィンドウのスクリーンショットを撮る">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="スクリーンショットを撮る">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="パネル実行アプリケーション・ダイアログを表示する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="パネルメニューを表示する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="下側のワークスペースへ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="上側のワークスペースへ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="右側のワークスペースへ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="左側のワークスペースへ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="ワークスペース 12 へ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="ワークスペース 11 へ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="ワークスペース 10 へ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="ワークスペース 9 へ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="ワークスペース 8 へ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="ワークスペース 7 へ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="ワークスペース 6 へ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="ワークスペース 5 へ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="ワークスペース 4 へ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="ワークスペース 3 へ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="ワークスペース 2 へ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="ワークスペース 1 へ切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="全てのウィンドウを隠してデスクトップにフォーカスを移す">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="後方のパネルとデスクトップとの間を切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="パネルとデスクトップとのフォーカスを切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="後方にあるウィンドウのフォーカスを切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="ウィンドウ間のフォーカスを切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="ポップアップしながら複数のウィンドウを後方に移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="ポップアップしながら複数のウィンドウの間を移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="アプリケーションが持つ複数のウィンドウを後方に移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="アプリケーションが持つ複数のウィンドウの間を移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="後方のパネルとデスクトップの間のフォーカスをポップアップを使って切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="パネルとデスクトップの間のフォーカスをポップアップを使って切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="後方にあるウィンドウ間のフォーカスをポップアップを使って切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="ウィンドウ間のフォーカスをポップアップを使って切り替える">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="ウィンドウを左側へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="ウィンドウを右側へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="ウィンドウを下側へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="ウィンドウを上側へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="ウィンドウを右側の斜め下へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="ウィンドウを左側の斜め下へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="ウィンドウを右側の斜め上へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="ウィンドウを左側の斜め上へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="ウィンドウを水平方向に最大化する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="ウィンドウを垂直方向に最大化する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="ウィンドウを一番奥に移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="ウィンドウを前面に出す">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="隠れているウィンドウを前面に出す">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="ウィンドウを下側のワークスペースへ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="ウィンドウを上側のワークスペースへ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="ウィンドウを右側のワークスペースへ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="ウィンドウを左側のワークスペースへ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="ウィンドウをワークスペース 12 へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="ウィンドウをワークスペース 11 へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="ウィンドウをワークスペース 10 へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="ウィンドウをワークスペース 9 へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="ウィンドウをワークスペース 8 へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="ウィンドウをワークスペース 7 へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="ウィンドウをワークスペース 6 へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="ウィンドウをワークスペース 5 へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="ウィンドウをワークスペース 4 へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="ウィンドウをワークスペース 3 へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="ウィンドウをワークスペース 2 へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="ウィンドウをワークスペース 1 へ移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="ウィンドウを全ワークスペースに配置するか切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="ウィンドウ・サイズを変更する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="ウィンドウを移動する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="ウィンドウを最小化する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="ウィンドウを閉じる">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="シェードの状態を切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="ウィンドウの最大化を解除する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="ウィンドウを最大化する">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="最大化/最小化の状態を切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="常に前に出すの状態を切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="フル・スクリーン表示を切り替える">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="ウィンドウ・メニューをアクティブにする">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="ワークスペースの名前">
+                                                        <longdesc>ワークスペースの名前</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="古いあるいは仕様に準拠していないアプリケーションが要求する不要な機能を無効にする">
+                                                        <longdesc>いくつかのアプリケーションではウィンドウ・マネージャの間違った動きや機能の結果、仕様を無視します。このオプションは Metacity を厳格に正しいモードにし、さらに一貫したユーザ・インタフェースを提供することで、何かおかしな動きをするアプリケーションを実行することがないようにします。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="ウィンドウを利用しないアプリの動作をナビゲートする条件 (未実装) ">
+                                                        <longdesc>この値が TRUE の場合、Metacity の動作はウィンドウではなくアプリケーションに依存します。この概念はやや抽象的ですが、一般的にアプリケーション固定モードは Apple の MacOS に近く、Microsoft Windows にはあまり似ていません。アプリケーション固定モードでウィンドウがフォーカスされると、アプリケーションの全てのウィンドウが手前に表示されます。また、アプリケーション固定モードでは、フォーカス・クリックが他のアプリケーションのウィンドウに渡されることはありません。しかしながら、アプリケーション固定モードは現在のところ大部分が未実装です。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="ユーザビリティとリソースの省力化がトレードオフ">
+                                                        <longdesc>この値が TRUE の場合、Metacity はワイヤフレームを使ったり、アニメーションをしなくなったりするなど、ユーザへのフィードバックが少なくなり、&quot;直感的な操作&quot; という点でもその操作性が落ちます。これは多くのユーザにとってユーザビリティの重大な低下につながりますが、そうしないと操作に困るような旧式のアプリケーションやターミナル・サーバもうまく使えるようになります。しかしながら、アクセシビリティの機能が有効な場合はワイヤフレームの機能は無効になります。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="合成マネージャ">
+                                                        <longdesc>Metacity が合成マネージャになれるかどうかです。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="視覚的なベルの種類">
+                                                        <longdesc>システムベルや他のアプリケーションの &apos;ベル&apos; 表示が鳴らされたことを視覚的に通知する実装の方法を metacity に通知します。現在、2つの方法が有効です。&quot;fullscree&quot; は全画面を白黒で点滅させます。&quot;frame_flas&quot; はベルのシグナルを通知したアプリケーションのタイトルバーを点滅させます。どのアプリケーションがベルのシグナルを鳴らしたのか分からないとき (デフォルトの &quot;システムビープ&quot; ではよくあるケースです) は、その時点でフォーカスされているウィンドウのタイトルバーを点滅させます。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="システム・ベルの聴覚性">
+                                                        <longdesc>アプリケーションもしくはシステムが聴覚的な &apos;ビープ&apos; 音を生成できるか決定します; これは、無音の &apos;ビープ&apos; を許可する &apos;視覚的なベル&apos; と共に用いられます。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="視覚的なベルを有効にする">
+                                                        <longdesc>アプリケーションもしくはシステムが &apos;ベル&apos; や &apos;ビープ&apos; を鳴らしたときに，視覚的に通知するようにします。難聴のユーザや騒々しい環境で作業するユーザには便利です。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="ワークスペースの数">
+                                                        <longdesc>ワークスペースの数です。ワークスペースの数を 0にしないで下さい。そしてたくさんのワークスペース要求してデスクトップを誤って破損するのを防ぐために、最大値は固定になっています。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="ウィンドウ・タイトルのフォント">
+                                                        <longdesc>ウィンドウのタイトルバーに表示するフォントを記述するフォント記述文字です。ただし、ここで指定したフォント・サイズが使用されるのは、titlebar_font_size オプションが 0 の場合だけです。また titlebar_uses_desktop_font オプションが TRUE の場合でも、このオプションは無効になります。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="ウィンドウのタイトルに標準のシステム・フォントを使う">
+                                                        <longdesc>この値が True の場合、titlebar_font オプションを無視してウィンドウ・タイトルに標準的なアプリケーション・フォントを使用します。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="現在使用しているテーマ">
+                                                        <longdesc>テーマはウィンドウの境界やタイトルバーなどの外観を決定します。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="自動的に前に出すオプションの遅延時間 (ミリ秒)">
+                                                        <longdesc>auto_raiseがtrueに設定されている場合に，ウィンドウを手前に表示するまでの遅延時間を指定します．この遅延は1000分の1秒単位で指定します</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="フォーカスされたウィンドウを自動的に上げる">
+                                                        <longdesc>この値が TRUE でかつフォーカス・モードが &quot;sloppy&quot; または &quot;mouse&quot; の場合、フォーカスを取得したウィンドウは auto_raise_delay キーに指定した時間が経過した後に自動的に前面に表示されます。これはウィンドウをクリックして前面に表示する場合とは関係はなく、ドラッグ＆ドロップ中にポインタがウィンドウ内に入った場合とも関係はありません。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="タイトル・バーを右クリックした時のアクション">
+                                                        <longdesc>このオプションでタイトル・バーを右クリックした際の効果を設定します。設定可能なオプション: &apos;toggle_shade&apos; (ウィンドウの巻き上げ状態を切り替える)、&apos;toggle_maximize&apos; (ウィンドウを最大化/最小化を切り換える)、&apos;minimize&apos; (ウィンドウを最小化する)、&apos;none&apos; (何もしない)</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="タイトル・バーを中クリックした時のアクション">
+                                                        <longdesc>このオプションでタイトル・バーを中クリックした際の効果を設定します。設定可能なオプション: &apos;toggle_shade&apos; (ウィンドウの巻き上げ状態を切り替える)、&apos;toggle_maximize&apos; (ウィンドウを最大化/最小化を切り換える)、&apos;minimize&apos; (ウィンドウを最小化する)、&apos;none&apos; (何もしない)</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="タイトル・バーをダブル・クリックした時のアクション">
+                                                        <longdesc>このオプションでタイトル・バーをダブル・クリックした際の効果を設定します。設定可能なオプション: &apos;toggle_shade&apos; (ウィンドウの巻き上げ状態を切り替える)、&apos;toggle_maximize&apos; (ウィンドウを最大化/最小化を切り換える)、&apos;minimize&apos; (ウィンドウを最小化する)、&apos;none&apos; (何もしない)</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="他のユーザ操作による副作用としてウィンドウを前面に出すかどうか">
+                                                        <longdesc>通常、いろいろな操作 (例: クライアントの領域をクリックしたり、ウィンドウの移動や大きさの変更など) はその副作用としてウィンドウを前面に出します。このオプションを FALSE にすると、これの効果を強制的に無効にします。すなわち、ユーザ操作とウィンドウを前面に出す機能を切り離して、アプリケーションが要求する前面に出す機能を無視するようになります。詳細は http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6 を参照して下さい。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="新しいウィンドウに対するフォーカスの当て方">
+                                                        <longdesc>このオプションを使い、新しく生成したウィンドウに対して、どのようにフォーカスを与えるかを制御します。設定可能なオプション: &quot;smart&quot; (ユーザが定義したフォーカス・モードを適用します)、&quot;strict&quot; (端末から起動したアプリのウィンドウにはフォーカスを与えないようにします)</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="ウィンドウ・フォーカスのモード">
+                                                        <longdesc>ウィンドウフォーカスモードはウィンドウがどのようにアクティブにされるかを示します．設定可能な値は3つあり，&quot;click&quot;はフォーカスするためにクリックする必要があることを意味します．&quot;sloppy&quot;はマウスがウィンドウ内に入る時ウィンドウがフォーカスされることを意味し，&quot;mouse&quot;はマウスがウィンドウ内に入る時にウィンドウがフォーカスされ，マウスがウィンドウから出る時にフォーカスが解除されることを意味します</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="タイトルバーのボタンの配置">
+                                                        <longdesc>タイトル・バーのボタンの配置を設定します。指定する値は，&quot;menu:minimize,maximize,close&quot; のような文字列にして下さい; コロンでウィンドウの左上の角と右上の角とを分け、ボタン名はコンマで区切ります。ボタンを重複させることはできません。不明なボタン名は単に無視されるだけですので、古いバージョンを壊すことなく、将来の metacity にボタンを追加することができます。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="変更したウィンドウ・クリック操作の修飾キー">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="デフォルトのコンポーネント・ビューア・アプリケーション">
+                                                                <longdesc>コンポーネントが必要となるファイルを閲覧するためのアプリケーションです。%s はファイルの URI で、パラメータ %c はコポーネントの IID でそれぞれ置き換えられます。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="デフォルトの端末で使用する Exec 用引数">
+                                                                <longdesc>デフォルトの端末アプケーションで使用するプログラムを実行する時の引数です。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="デフォルトの端末アプリケーション">
+                                                                <longdesc>端末を必要とするアプリケーションで使用するデフォルトの端末アプリケーションです。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="端末でプログラムを実行するかどうか">
+                                                                <longdesc>この種類の URL を処理するコマンドを端末内で実行する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;h323&quot; の URL の処理">
+                                                                <longdesc>&quot;h323&quot; の URL を処理する際に使用するコマンドです (任意)。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定したコマンドで &quot;h323&quot; の URL を処理するかどうか">
+                                                                <longdesc>&quot;h323&quot; の URL を処理するキー &quot;command&quot; にコマンドを指定する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="端末でプログラムを実行するかどうか">
+                                                                <longdesc>この種類の URL を処理するコマンドを端末内で実行する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="URL &quot;callto&quot; の 処理">
+                                                                <longdesc>&quot;callto&quot; の URL を処理する際に使用するコマンドです (任意)。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定したコマンドで URL &quot;callto&quot; を処理するかどうか">
+                                                                <longdesc>URL &quot;callto&quot; を処理するキー &quot;command&quot; にコマンドを指定する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="端末でプログラムを実行するかどうか">
+                                                                <longdesc>この種類の URL を処理するコマンドを端末内で実行する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="URL &quot;mailto&quot; の 処理">
+                                                                <longdesc>&quot;mailto&quot; の URL を処理する際に使用するコマンドです (任意)。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定したコマンドで URL &quot;mailto&quot; を処理するかどうか">
+                                                                <longdesc>URL &quot;mailto&quot; を処理するキー &quot;command&quot; にコマンドを指定する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="端末でプログラムを実行するかどうか">
+                                                                <longdesc>この種類の URL を処理するコマンドを端末内で実行する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="URL &quot;https&quot; の 処理">
+                                                                <longdesc>&quot;https&quot; の URL を処理する際に使用するコマンドです (任意)。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定したコマンドで URL &quot;https&quot; を処理するかどうか">
+                                                                <longdesc>URL &quot;https&quot; を処理するキー &quot;command&quot; にコマンドを指定する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="端末でプログラムを実行するかどうか">
+                                                                <longdesc>この種類の URL を処理するコマンドを端末内で実行する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="端末でプログラムを実行するかどうか">
+                                                                <longdesc>この種類の URL を処理するコマンドを端末内で実行する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="URL &quot;http&quot; の 処理">
+                                                                <longdesc>&quot;http&quot; の URL を処理する際に使用するコマンドです (任意)。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定したコマンドで URL &quot;http&quot; を処理するかどうか">
+                                                                <longdesc>URL &quot;http&quot; を処理するキー &quot;command&quot; にコマンドを指定する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="端末でプログラムを実行するかどうか">
+                                                                <longdesc>この種類の URL を処理するコマンドを端末内で実行する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="URL &quot;man&quot; の 処理">
+                                                                <longdesc>&quot;man&quot; の URL を処理する際に使用するコマンドです (任意)。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定したコマンドで URL &quot;man&quot; を処理するかどうか">
+                                                                <longdesc>URL &quot;man&quot; を処理するキー &quot;command&quot; にコマンドを指定する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="端末でプログラムを実行するかどうか">
+                                                                <longdesc>この種類の URL を処理するコマンドを端末内で実行する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="URL &quot;info&quot; の 処理">
+                                                                <longdesc>&quot;info&quot; の URL を処理する際に使用するコマンドです (任意)。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定したコマンドで URL &quot;info&quot; を処理するかどうか">
+                                                                <longdesc>URL &quot;info&quot; を処理するキー &quot;command&quot; にコマンドを指定する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="端末でプログラムを実行するかどうか">
+                                                                <longdesc>この種類の URL を処理するコマンドを端末内で実行する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="URL &quot;ghelp&quot; の 処理">
+                                                                <longdesc>&quot;ghelp&quot; の URL を処理する際に使用するコマンドです (任意)。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定したコマンドで URL &quot;ghelp&quot; を処理するかどうか">
+                                                                <longdesc>URL &quot;ghelp&quot; を処理するキー &quot;command&quot; にコマンドを指定する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="端末でプログラムを実行するかどうか">
+                                                                <longdesc>この種類の URL を処理するコマンドを端末内で実行する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="URL &quot;trash&quot; の 処理">
+                                                                <longdesc>&quot;trash&quot; の URL を処理する際に使用するコマンドです (任意)。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定したコマンドで URL &quot;trash&quot; を処理するかどうか">
+                                                                <longdesc>URL &quot;trash&quot; を処理するキー &quot;command&quot; にコマンドを指定する場合は TRUE にします。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="プロファイルを使用するかどうか">
+                                                                        <longdesc>このプロファイルを使用したり表示するかどうかを指定します。</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="プロファイルのデフォルトの拡張子">
+                                                                        <longdesc>格納するファイルをこのプロファイルでエンコーディングした際に使用するファイル名の拡張子です。</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="使用する GStreamer パイプライン部">
+                                                                        <longdesc>このプロファイルで使用する GStreamer のパイプライン部です。</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="オーディオ・プロファイルの説明">
+                                                                        <longdesc>プロファイルの説明で、このプロファイルを使用する際のさらに詳細な情報が含まれています。</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="オーディオ・プロファイルの短い名前">
+                                                                        <longdesc>オーディオ・プロファイルの短い名前で、選択で使用したりプロファイルを識別するための重複しない文字列です。</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="プロファイルを使用するかどうか">
+                                                                                <longdesc>このプロファイルを使用したり表示するかどうかを指定します。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="プロファイルのデフォルトの拡張子">
+                                                                                <longdesc>格納するファイルをこのプロファイルでエンコーディングした際に使用するファイル名の拡張子です。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="使用する GStreamer パイプライン部">
+                                                                                <longdesc>このプロファイルで使用する GStreamer のパイプライン部です。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="オーディオ・プロファイルの説明">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="オーディオ・プロファイルの短い名前">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="プロファイルのデフォルトの拡張子">
+                                                                                <longdesc>格納するファイルをこのプロファイルでエンコーディングした際に使用するファイル名の拡張子です。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="使用する GStreamer パイプライン部">
+                                                                                <longdesc>このプロファイルで使用する GStreamer のパイプライン部です。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="オーディオ・プロファイルの説明">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="オーディオ・プロファイルの短い名前">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="プロファイルのデフォルトの拡張子">
+                                                                                <longdesc>格納するファイルをこのプロファイルでエンコーディングした際に使用するファイル名の拡張子です。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="使用する GStreamer パイプライン部">
+                                                                                <longdesc>このプロファイルで使用する GStreamer のパイプライン部です。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="オーディオ・プロファイルの説明">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="オーディオ・プロファイルの短い名前">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="プロファイルのデフォルトの拡張子">
+                                                                                <longdesc>格納するファイルをこのプロファイルでエンコーディングした際に使用するファイル名の拡張子です。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="使用する GStreamer パイプライン部">
+                                                                                <longdesc>このプロファイルで使用する GStreamer のパイプライン部です。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="オーディオ・プロファイルの説明">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="オーディオ・プロファイルの短い名前">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="プロファイルのデフォルトの拡張子">
+                                                                                <longdesc>格納するファイルをこのプロファイルでエンコーディングした際に使用するファイル名の拡張子です。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="使用する GStreamer パイプライン部">
+                                                                                <longdesc>このプロファイルで使用する GStreamer のパイプライン部です。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="オーディオ・プロファイルの説明">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="オーディオ・プロファイルの短い名前">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="プロファイルのデフォルトの拡張子">
+                                                                                <longdesc>格納するファイルをこのプロファイルでエンコーディングした際に使用するファイル名の拡張子です。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="使用する GStreamer パイプライン部">
+                                                                                <longdesc>このプロファイルで使用する GStreamer のパイプライン部です。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="オーディオ・プロファイルの説明">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="オーディオ・プロファイルの短い名前">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="プロファイルの一覧">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="自動プロキシ設定の URL">
+                                                <longdesc>プロキシの設定値を提供する URL です。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="SOCKS プロキシのポート番号">
+                                                <longdesc>プロキシとして利用する、&quot;/system/proxy/socks_host&quot; で定義されたマシンのポート番号です。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="SOCKS プロキシのホスト名">
+                                                <longdesc>SOCKS プロキシとして利用するマシンの名前です。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="FTP プロキシのポート番号">
+                                                <longdesc>プロキシとして利用する、&quot;/system/proxy/ftp_host&quot; で定義されたマシンのポート番号です。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="FTP プロキシのホスト名">
+                                                <longdesc>FTP プロキシとして利用するマシンの名前です。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="セキュア HTTP プロキシのポート番号">
+                                                <longdesc>プロキシとして利用する、&quot;/system/proxy/secure_host&quot; で定義されたマシンのポート番号です。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="セキュア HTTP プロキシのホスト名">
+                                                <longdesc>セキュア HTTP のプロキシとして利用するマシンの名前です。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="プロキシ設定モード">
+                                                <longdesc>プロキシ設定モードを選択します (利用可能な値: &quot;none&quot;, &quot;manual&quot;, &quot;auto&quot;)。</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="プロキシではないホスト名">
+                                                <longdesc>このキーには、(アクティブな場合は) プロキシ経由ではなく直接接続される多くのホストが含まれています。ホスト名、ドメイン (*.foo.com のように先頭にワイルド・カードが使われます)、IP ホスト・アドレス (IPv4 と IPv6 の両方)、ネット・マスクが併記されたネットワーク・アドレス (192.168.0.0/24のような値) といった値になります。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="HTTP プロキシのパスワード">
+                                                <longdesc>HTTP プロキシを利用するときに認証として引き渡すパスワードです。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="HTTP プロキシのユーザ名">
+                                                <longdesc>HTTP プロキシを利用するときに認証として引き渡すユーザ名です。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="認証プロキシ・サーバへの接続">
+                                                <longdesc>TRUE の場合、プロキシ・サーバへの接続で認証が要求されます。ユーザ名/パスワードの組み合わせは &quot;/system/http_proxy/authentication_user&quot; と &quot;/system/http_proxy/authentication_password&quot; で定義されます。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="HTTP プロキシのポート番号">
+                                                <longdesc>プロキシとして利用する、&quot;/system/http_proxy/host&quot; で定義されたマシンのポート番号です。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="HTTP プロキシのホスト名">
+                                                <longdesc>HTTP のプロキシとして利用するマシンの名前です。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="HTTP プロキシの使用">
+                                                <longdesc>インターネットへ HTTP アクセスするときにプロキシの設定を有効にします。</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="DNS-SD サービスで検索する追加ドメイン">
+                                                <longdesc>コンマ (,) で区切った DNS-SD のリストで、&quot;network:///&quot; の中に表示されます。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="ローカルの DNS-SD サービスの表示方法">
+                                                <longdesc>設定可能な値: &quot;merged&quot;、&quot;separate&quot;、&quot;disabled&quot;</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="SMB ワークグループ">
+                                                <longdesc>ユーザが所属する Windows ネットワーク・グループまたはドメインです。新しいワークグループを認識するには、ユーザがそのグループにログインしてログアウトする必要があります。</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

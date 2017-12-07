@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<westley title="Mirror">
+  <producer in="0" out="499">
+    <property name="resource">mirror.jpg</property>
+    <property name="meta.fx_cut">1</property>
+	<filter mlt_service="mirror" jah_title="mirror">
+      <property name="mirror">vertical</property>
+      <property name="reverse">1</property>
+    </filter>
+  </producer>
+</westley>

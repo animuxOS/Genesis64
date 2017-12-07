@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+  <plugin useBcop="true" name="thumbnail">
+    <short>Window Previews</short>
+    <short xml:lang="ca">Previsualtizacions de les finestres</short>
+    <short xml:lang="de">Fenster-Vorschaubilder</short>
+    <short xml:lang="el">Προεπισκοπίσεις Παραθύρου</short>
+    <short xml:lang="en_GB">Window Previews</short>
+    <short xml:lang="fr">Prévisualisation des Fenêtres</short>
+    <short xml:lang="gl">Antevisións Fiestras</short>
+    <short xml:lang="gu">વિન્ડો પૂર્વદર્શનો</short>
+    <short xml:lang="hi">विंडो पूर्वावलोकन</short>
+    <short xml:lang="it">Anteprima finestre</short>
+    <short xml:lang="ja">ウィンドウのプレビュー</short>
+    <short xml:lang="nb">Forhåndsvisning av vinduer</short>
+    <short xml:lang="nl">Venster previews</short>
+    <short xml:lang="pl">Podgląd okien</short>
+    <short xml:lang="pt">Antevisões Janelas</short>
+    <short xml:lang="pt_BR">Previsões das janelas</short>
+    <short xml:lang="sv">Förhandsvisning av fönster</short>
+    <short xml:lang="tr">Pencere Önizlemeleri</short>
+    <long>Window thumbnails at the taskbar</long>
+    <long xml:lang="ca">Miniatures de les finestres a la barra de tasques</long>
+    <long xml:lang="de">Vorschaubilder für Fenster in der Taskleiste</long>
+    <long xml:lang="el">Μέγεθος των μικρογραφιών στην γραμμή εργασιών</long>
+    <long xml:lang="en_GB">Window thumbnails at the taskbar</long>
+    <long xml:lang="fr">Miniature des fenêtres dans la barre de tâches</long>
+    <long xml:lang="gl">Mostrar vistas previas das fiestras na barra de tarefas</long>
+    <long xml:lang="gu">ક્રિયાપટ્ટી આગળ વિન્ડો થમ્બનેઈલો</long>
+    <long xml:lang="hi">टास्कबार पर विंडो लघुचित्र</long>
+    <long xml:lang="it">Anteprima delle finestre nella barra delle applicazioni</long>
+    <long xml:lang="ja">タスクバーのウィンドウ・サムネイル</long>
+    <long xml:lang="nb">Forhåndsvisning av vinduer på oppgavelinjen</long>
+    <long xml:lang="nl">Venster thumbnails op de taakbalk</long>
+    <long xml:lang="pl">Miniatury okien na pasku zadań</long>
+    <long xml:lang="pt">Mostrar antevisões das janelas na barra de tarefas</long>
+    <long xml:lang="pt_BR">Mostrar miniaturas na barra de tarefas</long>
+    <long xml:lang="sv">Miniatyrfönster på aktivitetsfältet</long>
+    <long xml:lang="tr">Görev çubuğunda pencere önizlemeleri</long>
+	<category>Extras</category>
+	<deps>
+		<relation type="after">
+			<plugin>text</plugin>
+		</relation>
+	</deps>
+    <screen>
+      <group>
+        <short>Settings</short>
+        <short xml:lang="ca">Configuració</short>
+        <short xml:lang="de">Einstellungen</short>
+        <short xml:lang="el">Ρυθμίσεις</short>
+        <short xml:lang="en_GB">Settings</short>
+        <short xml:lang="es">Configuraciones</short>
+        <short xml:lang="fi">Asetukset</short>
+        <short xml:lang="fr">Paramètres</short>
+        <short xml:lang="gl">Configuracións</short>
+        <short xml:lang="gu">સુયોજનો</short>
+        <short xml:lang="hi">जमावट</short>
+        <short xml:lang="it">Impostazioni</short>
+        <short xml:lang="ja">設定</short>
+        <short xml:lang="nb">Innstillinger</short>
+        <short xml:lang="nl">Instellingen</short>
+        <short xml:lang="pl">Ustawienia</short>
+        <short xml:lang="pt">Definições</short>
+        <short xml:lang="pt_BR">Definições</short>
+        <short xml:lang="sv">Inställningar</short>
+        <short xml:lang="tr">Ayarlar</short>
+        <short xml:lang="zh_CN">设置</short>
+        <option type="int" name="thumb_size">
+          <short>Thumbnail Window Size</short>
+          <short xml:lang="ca">Mida de la miniatura de la finestra</short>
+          <short xml:lang="de">Vorschaubildgröße</short>
+          <short xml:lang="el">Μέγεθος Παραθύρου Μικρογραφίας</short>
+          <short xml:lang="en_GB">Thumbnail Window Size</short>
+          <short xml:lang="fr">Taille de la miniature</short>
+          <short xml:lang="gl">Tamaño da miniatura</short>
+          <short xml:lang="gu">થમ્બનેઈલ વિન્ડો માપ</short>
+          <short xml:lang="hi">लघुचित्र विंडो आकार</short>
+          <short xml:lang="it">Dimensione anteprima</short>
+          <short xml:lang="ja">サムネイルウィンドウの大きさ</short>
+          <short xml:lang="nb">Miniatyrens vindusstørrelse</short>
+          <short xml:lang="nl">Thumbnail venster grootte</short>
+          <short xml:lang="pl">Rozmiar miniaturki</short>
+          <short xml:lang="pt">Tamanho da miniatura</short>
+          <short xml:lang="pt_BR">Tamanho da miniatura</short>
+          <short xml:lang="sv">Fönsterstorlek på miniatyr</short>
+          <short xml:lang="tr">Önizleme Pencere Boyutu</short>
+          <long>Thumbnail window size.</long>
+          <long xml:lang="ca">Mida de la miniatura de la finestra.</long>
+          <long xml:lang="de">Größe des Vorschaubildes</long>
+          <long xml:lang="el">Μέγεθος παραθύρου μικρογραφίας.</long>
+          <long xml:lang="en_GB">Thumbnail window size.</long>
+          <long xml:lang="fr">Taille de la fenêtre de la miniature.</long>
+          <long xml:lang="gl">Tamaño da miniatura.</long>
+          <long xml:lang="gu">થમ્બનેઈલ વિન્ડો માપ.</long>
+          <long xml:lang="hi">लघुचित्र विंडो आकार.</long>
+          <long xml:lang="it">Dimensione dell'anteprima della finestra.</long>
+          <long xml:lang="ja">サムネイルのウィンドウの大きさ</long>
+          <long xml:lang="nb">Miniatyrens vindusstørrelse</long>
+          <long xml:lang="nl">Thumbnail venster grootte.</long>
+          <long xml:lang="pl">Rozmiar miniaturki.</long>
+          <long xml:lang="pt">Tamanho da miniatura.</long>
+          <long xml:lang="pt_BR">Tamanho da miniatura.</long>
+          <long xml:lang="sv">Fönsterstorlek på miniatyr</long>
+          <long xml:lang="tr">Önizleme pencere boyutu.</long>
+          <default>200</default>
+          <min>50</min>
+          <max>1500</max>
+        </option>
+        <option type="int" name="show_delay">
+          <short>Show Delay</short>
+          <short xml:lang="ca">Mostra el retard</short>
+          <short xml:lang="de">Anzeigeverzögerung</short>
+          <short xml:lang="el">Καθυστέρηση Εμφάνισης</short>
+          <short xml:lang="en_GB">Show Delay</short>
+          <short xml:lang="fr">Délai d'affichage</short>
+          <short xml:lang="gl">Atraso Aparecemento</short>
+          <short xml:lang="gu">વિલંબ બતાવો</short>
+          <short xml:lang="hi">देरी दिखाएँ</short>
+          <short xml:lang="it">Ritardo anteprima</short>
+          <short xml:lang="ja">表示遅延時間</short>
+          <short xml:lang="nb">Visningsforsinkelse</short>
+          <short xml:lang="nl">Toon delay</short>
+          <short xml:lang="pt">Atraso Aparecimento</short>
+          <short xml:lang="pt_BR">Atraso no aparecimento</short>
+          <short xml:lang="sv">Visa fördröjning</short>
+          <short xml:lang="tr">Gecikmeyi Göster</short>
+          <long>Time (in ms) before Thumbnail is shown.</long>
+          <long xml:lang="ca">Temps (en ms) abans que es mostri la miniatura.</long>
+          <long xml:lang="de">Verzögerung (in ms) vor der Anzeige des Vorschaubildes</long>
+          <long xml:lang="el">Χρόνος (σε ms) πριν εμφανιστει η Μικρογραφία.</long>
+          <long xml:lang="en_GB">Time (in ms) before Thumbnail is shown.</long>
+          <long xml:lang="fr">Durée (en ms) avant d'afficher la miniature.</long>
+          <long xml:lang="gl">Tempo (en ms) antes de mostar a Miniatura.</long>
+          <long xml:lang="gu">થમ્બનેઈલ બતાવવામાં આવે તે પહેલાં સમય (મિલિસેકન્ડોમાં).</long>
+          <long xml:lang="hi">लघुचित्र दिखाने के पहले समय (मिलीसेकेंड में)</long>
+          <long xml:lang="it">Tempo (in millisecondi) prima di mostrare l'anteprima.</long>
+          <long xml:lang="ja">サムネイルが表示されまでの時間（ミリ秒）</long>
+          <long xml:lang="nb">Tid (i ms) før miniatyr vises</long>
+          <long xml:lang="nl">Tĳd (in ms) voordat de thumbnail wordt getoond.</long>
+          <long xml:lang="pl">Czas (w ms) przed pojawieniem się miniaturki.</long>
+          <long xml:lang="pt">Tempo (em ms) antes de mostar a Miniatura.</long>
+          <long xml:lang="pt_BR">Tempo (em ms) antes de exibir a miniatura.</long>
+          <long xml:lang="sv">Tid (i ms) innan miniatyr visas</long>
+          <long xml:lang="tr">Önizlemeler gösterilmeden önce geçmesi gereken süre (ms olarak)</long>
+          <default>100</default>
+          <min>100</min>
+          <max>10000</max>
+        </option>
+        <option type="int" name="border">
+          <short>Thumbnail Border Size</short>
+          <short xml:lang="ca">Mida de la vora de la miniatura</short>
+          <short xml:lang="de">Rahmengröße</short>
+          <short xml:lang="el">Μέγεθος Ορίου Μικρογραφιών</short>
+          <short xml:lang="en_GB">Thumbnail Border Size</short>
+          <short xml:lang="fr">Taille du bord de la miniature</short>
+          <short xml:lang="gl">Tamaño Borda Miniatura.</short>
+          <short xml:lang="gu">થમ્બનેઈલ કિનારી માપ</short>
+          <short xml:lang="hi">लघुचित्र किनारा आकार</short>
+          <short xml:lang="it">Dimensione bordo anteprima</short>
+          <short xml:lang="ja">サムネイルの枠の大きさ</short>
+          <short xml:lang="nb">Miniatyrens kantstørrelse</short>
+          <short xml:lang="nl">Thumbnail rand grootte</short>
+          <short xml:lang="pl">Rozmiar ramek miniaturek okien</short>
+          <short xml:lang="pt">Tamanho Borda Miniatura</short>
+          <short xml:lang="pt_BR">Tamanho da borda da miniatura</short>
+          <short xml:lang="sv">Kantstorlek på miniatyr</short>
+          <short xml:lang="tr">Önizleme Kenarlık Boyutu</short>
+          <long>Size of Thumbnail Border.</long>
+          <long xml:lang="ca">Mida de la vora de la miniatura.</long>
+          <long xml:lang="de">Größe des Vorschaubild-Rahmens.</long>
+          <long xml:lang="el">Μέγεθος Ορίου Μικρογραφίας.</long>
+          <long xml:lang="en_GB">Size of Thumbnail Border.</long>
+          <long xml:lang="fr">Taille du bord des miniatures.</long>
+          <long xml:lang="gl">Tamaño do borde da Miniatura.</long>
+          <long xml:lang="gu">થમ્બનેઈલ કિનારીનું માપ.</long>
+          <long xml:lang="hi">थंबनेल किनारा का आकार.</long>
+          <long xml:lang="it">Dimensione del bordo dell'anteprima.</long>
+          <long xml:lang="ja">サムネイルの枠のサイズ</long>
+          <long xml:lang="nb">Miniatyrkantens størrelse.</long>
+          <long xml:lang="nl">Grootte van thumbnail rand.</long>
+          <long xml:lang="pt">Tamanho da Borda da Miniatura.</long>
+          <long xml:lang="pt_BR">Tamanho da borda da miniatura.</long>
+          <long xml:lang="sv">Storlek på miniatyrkant</long>
+          <long xml:lang="tr">Önizleme Kenarlık Boyutu.</long>
+          <default>16</default>
+          <min>1</min>
+          <max>32</max>
+        </option>
+        <option type="color" name="thumb_color">
+          <short>Thumbnail Border Glow Color</short>
+          <short xml:lang="ca">Color de realçat de la vora de la miniatura</short>
+          <short xml:lang="de">Rahmenfarbe</short>
+          <short xml:lang="el">Χρώμα Ορίου Λάμψης Μικρογραφιών</short>
+          <short xml:lang="en_GB">Thumbnail Border Glow Colour</short>
+          <short xml:lang="fr">Couleur de la lueur du bord des miniatures</short>
+          <short xml:lang="gl">Cor Aura Marxe Miniatura</short>
+          <short xml:lang="gu">થમ્બનેઈલ કિનારી તેજ રંગ</short>
+          <short xml:lang="hi">लघुचित्र किनारा चमक रंग</short>
+          <short xml:lang="it">Colore bagliore bordo anteprima</short>
+          <short xml:lang="ja">サムネイル枠の発光の色</short>
+          <short xml:lang="nb">Miniatyrkants glødefarge</short>
+          <short xml:lang="nl">Thumbnail rand gloeikleur</short>
+          <short xml:lang="pl">Kolor, jakim świecą się ramki miniaturek okien</short>
+          <short xml:lang="pt">Cor Aura Margem Miniatura</short>
+          <short xml:lang="pt_BR">Cor aura da margem da miniatura</short>
+          <short xml:lang="sv">Kantglödens färg på miniatyr</short>
+          <short xml:lang="tr">Önizleme Kernarlığı Parlama Rengi</short>
+          <long>Thumbnail Background and Border Glow Color.</long>
+          <long xml:lang="ca">Fons de la miniatura i color de la vora realçada.</long>
+          <long xml:lang="de">Farbe für Vorschaubild-Hintergrund und Glühen des Rahmens.</long>
+          <long xml:lang="el">Φόντο Μικρογραφιών και Χρώμα Ορίου Λάμψης.</long>
+          <long xml:lang="en_GB">Thumbnail Background and Border Glow Colour.</long>
+          <long xml:lang="fr">Arrière-plan et Couleur de la lueur du bord des miniatures.</long>
+          <long xml:lang="gl">Fondo da Miniatura e Cor da Aura da Borda</long>
+          <long xml:lang="gu">થમ્બનેઈલ પાશ્વભાગ અને કિનારી તેજ રંગ.</long>
+          <long xml:lang="hi">लघुचित्र पृष्ठभूमि और किनारा चमक रंग.</long>
+          <long xml:lang="it">Colore dello sfondo e del bagliore del bordo dell'anteprima.</long>
+          <long xml:lang="ja">サムネイルの背景や枠の発光の色</long>
+          <long xml:lang="nb">Miniatyrbakgrunn og kantens glødefarge</long>
+          <long xml:lang="nl">Thumbnail achtergrond en rand gloei kleur.</long>
+          <long xml:lang="pt">Fundo da Miniatura e Cor da Aura da Borda.</long>
+          <long xml:lang="pt_BR">Fundo da miniatura e cor da Aura da borda</long>
+          <long xml:lang="sv">Miniatyrbakgrund och kantglödens färg</long>
+          <long xml:lang="tr">Önizleme Arkaplanı ve Kernarlığı için Parlama Rengi.</long>
+          <default>
+            <red>0x0000</red>
+            <green>0x0000</green>
+            <blue>0x0000</blue>
+            <alpha>0x7fff</alpha>
+          </default>
+        </option>
+        <option type="float" name="fade_speed">
+          <short>Fade In/Out Duration</short>
+          <short xml:lang="de">Ein-/Ausblendzeit</short>
+          <short xml:lang="el">Διάρκεια Ξεθωριάσματος Μέσα/Έξω</short>
+          <short xml:lang="en_GB">Fade In/Out Duration</short>
+          <short xml:lang="fr">Durée du fondu d'entrée/sortie</short>
+          <short xml:lang="gl">Duración Desvanecemento</short>
+          <short xml:lang="gu">ધૂંધ અંદર/બહાર ગાળો</short>
+          <short xml:lang="hi">इन/आउट अवधि फीका कीजिये</short>
+          <short xml:lang="it">Durata dissolvenza</short>
+          <short xml:lang="ja">フェードイン/アウトの継続時間</short>
+          <short xml:lang="nb">Varighet for inn-/ut-toning</short>
+          <short xml:lang="nl">Duur van fade In/Out</short>
+          <short xml:lang="pt">Duração Desvanecimento</short>
+          <short xml:lang="pt_BR">Duração do desvanecimento</short>
+          <short xml:lang="sv">Tona in/ut varaktighet</short>
+          <short xml:lang="tr">Solgunlaştırma/Belirginleştirme Süresi</short>
+          <long>Fade In/Out Duration in seconds.</long>
+          <long xml:lang="de">Ein-/Ausblendzeit in Sekunden</long>
+          <long xml:lang="el">Διάρκεια Ξεθωριάσματος Μέσα/Έξω σε δευτερόλεπτα.</long>
+          <long xml:lang="en_GB">Fade In/Out Duration in seconds.</long>
+          <long xml:lang="fr">Durée du fondu d'entrée/sortie en secondes.</long>
+          <long xml:lang="gl">Duración do desvanecemento en segundos.</long>
+          <long xml:lang="gu">ધૂંધ અંદર/બહાર ગાળો સેકન્ડોમાં.</long>
+          <long xml:lang="hi">सेकेंड में इन/आउट अवधि फीका कीजिये</long>
+          <long xml:lang="it">Durata della dissolvenza in secondi.</long>
+          <long xml:lang="ja">フェードイン/アウトの継続時間（秒）</long>
+          <long xml:lang="nb">Varighet for inn-/ut-toning i sekunder</long>
+          <long xml:lang="nl">Duur van Fade In/Out in seconden.</long>
+          <long xml:lang="pt">Duração do desvanecimento em segundos.</long>
+          <long xml:lang="pt_BR">Duração do desvanecimento em segundos.</long>
+          <long xml:lang="sv">Tona in/ut varaktighet i sekunder</long>
+          <long xml:lang="tr">Saniye türünden Solgunlaştırma/Belirginleştirme süresi.</long>
+          <default>0.5</default>
+          <min>0.0</min>
+          <max>5.0</max>
+          <precision>0.1</precision>
+        </option>
+        <subgroup>
+          <short>Taskbar</short>
+          <short xml:lang="ca">Barra de tasques</short>
+          <short xml:lang="de">Taskleiste</short>
+          <short xml:lang="el">Γραμμή Εργασιών</short>
+          <short xml:lang="en_GB">Taskbar</short>
+          <short xml:lang="fi">Tehtäväpalkki</short>
+          <short xml:lang="fr">Barre de tâches</short>
+          <short xml:lang="gl">Barra de tarefas</short>
+          <short xml:lang="gu">ક્રિયાપટ્ટી</short>
+          <short xml:lang="hi">टास्कबार</short>
+          <short xml:lang="it">Barra delle applicazioni</short>
+          <short xml:lang="ja">タスクバー</short>
+          <short xml:lang="nb">Oppgavelinje</short>
+          <short xml:lang="nl">Taakbalk</short>
+          <short xml:lang="pl">Pasek Zadań</short>
+          <short xml:lang="pt">Barra de tarefas</short>
+          <short xml:lang="pt_BR">Barra de tarefas</short>
+          <short xml:lang="ru">Список задач</short>
+          <short xml:lang="sv">Aktivitetsfältet</short>
+          <short xml:lang="tr">Görev Çubuğu</short>
+          <option type="bool" name="current_viewport">
+            <short>Taskbar Shows Only Windows of Current Viewport</short>
+            <short xml:lang="ca">La barra de tasques només mostra les finestres de la vista actual</short>
+            <short xml:lang="de">Taskleiste zeigt nur Fenster der aktuellen Arbeitsfläche</short>
+            <short xml:lang="el">Η Γραμμή Εργασιών Δείχνει Μόνο Παράθυρα της Τρέχουσας Εικονικής Επιφάνειας Εργασίας</short>
+            <short xml:lang="en_GB">Taskbar Shows Only Windows of Current Viewport</short>
+            <short xml:lang="fr">La barre de tâches ne montre les fenêtres que du bureau courant</short>
+            <short xml:lang="gl">Barra de tarefas Mostra Só Fiestras doescritorio Actual</short>
+            <short xml:lang="gu">ક્રિયાપટ્ટી માત્ર વર્તમાન દૃશ્યપોર્ટની વિન્ડો જ બતાવે છે</short>
+            <short xml:lang="hi">टास्कबार सिर्फ मौज़ूदा व्यूपोर्ट का विंडो दिखाता है</short>
+            <short xml:lang="it">Mostrare solo le finestre dell'area di lavoro corrente</short>
+            <short xml:lang="ja">タスクバーは現在のビューポートのウィンドウのみ表示</short>
+            <short xml:lang="nb">Oppgavelinje viser bare vinduer fra nåværende arbeidsområde</short>
+            <short xml:lang="nl">Taakbalk toont allen vensters in huidige viewport</short>
+            <short xml:lang="pt">Barra de tarefas Mostra Apenas Janelas do Viewport Actual</short>
+            <short xml:lang="pt_BR">Barra de tarefas exibe apenas janelas da janela de visualização atual</short>
+            <short xml:lang="sv">Aktivitetsfältet visar endast fönster på den nuvarande skrivbordsytan</short>
+            <short xml:lang="tr">Görev Çubuğu Sadece Geçerli Masaüstüne ait Pencereleri Gösterir</short>
+            <long>Set it if the Taskbar shows only Windows of Current Viewport.</long>
+            <long xml:lang="ca">Marca'l si la barra de tasques només mostra les Finestres de la Vista Actual.</long>
+            <long xml:lang="de">Diese Option sollte aktiviert werden, falls die Taskleiste nur Fenster der aktuellen Arbeitsfläche anzeigt.</long>
+            <long xml:lang="el">Ρύθμιση αν τα Παράθυρα που εμφανίζονται στην Γραμμή Εργασιών ανήκουν στην Τρέχουσα Εικονική Επιφάνεια Εργασιών.</long>
+            <long xml:lang="en_GB">Set it if the Taskbar shows only Windows of Current Viewport.</long>
+            <long xml:lang="fr">Cochez cette case si la barre de tâches ne montre les fenêtres que du Bureau Courant.</long>
+            <long xml:lang="gl">Seleccione se a Barra de tarefas mostra só Fiestras doescritorio Actual.</long>
+            <long xml:lang="gu">તેને સુયોજીત કરો જો ક્રિયાપટ્ટી માત્ર વર્તમાન દૃશ્યપોર્ટની વિન્ડો બતાવે.</long>
+            <long xml:lang="hi">इसे सेट करें यदि टास्कबार सिर्फ मौजूदा व्यूपोर्ट के विंडो को दिखाता है.</long>
+            <long xml:lang="it">Indica se la barra delle applicazioni mostra solo le finestre dell'area di lavoro corrente.</long>
+            <long xml:lang="ja">タスクバーが現在のビューポートのウィンドウのみ表示する場合にチェックを入れる</long>
+            <long xml:lang="nb">Sett dette hvis oppgavelinjen kun viser vinduer fra nåværende arbeidsområde.</long>
+            <long xml:lang="nl">Instellen als taakbalk alleen vensters toont van huidige viewport.</long>
+            <long xml:lang="pt">Seleccione se a Barra de tarefas mostra apenas Janelas do Viewport Actual.</long>
+            <long xml:lang="pt_BR">Define se a barra de tarefas exibirá apenas janelas da janela de visualização atual.</long>
+            <long xml:lang="sv">Ställ in om aktivitetsfältet bara visar fönster på den nuvarande arbetsytan.</long>
+            <long xml:lang="tr">Görev Çubuğu Sadece Geçerli Masaüstüne ait Pencereleri gösteriyorsa seçin.</long>
+            <default>true</default>
+          </option>
+          <option type="bool" name="always_on_top">
+            <short>Thumbnails Always on Top</short>
+            <short xml:lang="ca">Les miniatures sempre per damunt</short>
+            <short xml:lang="de">Vorschaubilder immer im Vordergrund</short>
+            <short xml:lang="el">Μικρογραφίες Πάντα απο Πάνω</short>
+            <short xml:lang="en_GB">Thumbnails Always on Top</short>
+            <short xml:lang="fr">Miniatures Toujours au Dessus</short>
+            <short xml:lang="gl">Miniaturas sempre enriba</short>
+            <short xml:lang="gu">થમ્બનેઈલ હંમેશા ટોચ પર.</short>
+            <short xml:lang="hi">हमेशा ऊपर लघुचित्र</short>
+            <short xml:lang="it">Anteprime sempre in primo piano</short>
+            <short xml:lang="ja">サムネイルを常に最前面に表示</short>
+            <short xml:lang="nb">Miniatyrer alltid øverst</short>
+            <short xml:lang="nl">Thumbnails altijd bovenop</short>
+            <short xml:lang="pl">Miniaturki zawsze na wierzchu</short>
+            <short xml:lang="pt">Miniaturas Sempre no Topo</short>
+            <short xml:lang="pt_BR">Miniaturas sempre no topo</short>
+            <short xml:lang="sv">Miniatyrer är alltid överst</short>
+            <short xml:lang="tr">Önizlemeler Her Zaman Üstte</short>
+            <long>Paint Thumbnails Always on Top.</long>
+            <long xml:lang="ca">Mostra les miniatures sempre al damunt.</long>
+            <long xml:lang="de">Vorschaubilder immer im Vordergrund anzeigen</long>
+            <long xml:lang="el">Ζωγράφισε τις Μικρογραφίες Παντα απο Πάνω.</long>
+            <long xml:lang="en_GB">Paint Thumbnails Always on Top.</long>
+            <long xml:lang="fr">Afficher les miniatures Toujours au Dessus.</long>
+            <long xml:lang="gl">Debuxar miniaturas das fiestras sempre enribaa.</long>
+            <long xml:lang="gu">થમ્બનેઈલોને હંમેશા ટોચ પર રંગો.</long>
+            <long xml:lang="hi">हमेशा सबसे ऊपर लघु चित्र पेंट करें.</long>
+            <long xml:lang="it">Disegna le anteprime sempre in primo piano.</long>
+            <long xml:lang="ja">サムネイルを常に最前面に描画</long>
+            <long xml:lang="nb">Mal miniatyrer alltid på topp</long>
+            <long xml:lang="nl">Thumbnails altijd boven alle venster weergeven.</long>
+            <long xml:lang="pl">Rysuj miniaturki zawsze na wierzchu.</long>
+            <long xml:lang="pt">Desenhar Miniaturas Sempre no Topo.</long>
+            <long xml:lang="pt_BR">Desenhar miniaturas sempre no Topo.</long>
+            <long xml:lang="sv">Rita alltid miniatyrer överst</long>
+            <long xml:lang="tr">Önizlemeleri Her Zaman En Üstte Göster.</long>
+            <default>true</default>
+          </option>
+        </subgroup>
+        <option type="bool" name="window_like">
+          <short>Paint Window Like Background</short>
+          <short xml:lang="ca">Pinta la finestra com el fons</short>
+          <short xml:lang="de">Fensterartiger Hintergrund</short>
+          <short xml:lang="el">Ζωγράφισε το Παράθυρο Όπως το Φόντο</short>
+          <short xml:lang="en_GB">Paint Window Like Background</short>
+          <short xml:lang="fr">Afficher la fenêtre comme l'arrière-plan</short>
+          <short xml:lang="gl">Mostrar fiestra Como fondo</short>
+          <short xml:lang="gu">વિન્ડો જેવા પાશ્વભાગને રંગો</short>
+          <short xml:lang="hi">विंडो को पृष्ठभूमि की तरह पेंट करें</short>
+          <short xml:lang="it">Colorare le finestre come lo sfondo</short>
+          <short xml:lang="ja">ウィンドウに背景のような色を塗る</short>
+          <short xml:lang="nb">Mal vindu som bakgrunn</short>
+          <short xml:lang="nl">Teken venster zoals achtergrond</short>
+          <short xml:lang="pl">Rysuj okno jako tło</short>
+          <short xml:lang="pt">Mostrar Janela Como Fundo</short>
+          <short xml:lang="pt_BR">Mostrar janela como fundo</short>
+          <short xml:lang="sv">Rita fönster som bakgrund</short>
+          <long>Paint Window Like Background instead of Glow.</long>
+          <long xml:lang="ca">Dibuixa la finestra com el fons enlloc de realçar-la.</long>
+          <long xml:lang="de">Fensterartigen Hintergrund anstatt Glühen verwenden</long>
+          <long xml:lang="el">Ζωγράφισε το Παράθυρο Όπως το Φόντο εκτός απ'τη Λάμψη.</long>
+          <long xml:lang="en_GB">Paint Window Like Background instead of Glow.</long>
+          <long xml:lang="fr">Afficher la fenêtre comme l'arrière-plan </long>
+          <long xml:lang="gl">Pintar fiestra como fondo no canto de aura.</long>
+          <long xml:lang="gu">વિન્ડો જેવા પાશ્વભાગને તેજની જગ્યાએ રંગો.</long>
+          <long xml:lang="hi">ग्लो के बजाएं विंडो को पृष्ठभूमि की तरह पेंट करें</long>
+          <long xml:lang="it">Colora le finestre come lo sfondo invece che con un bagliore.</long>
+          <long xml:lang="ja">ウィンドウに発光の代わりの背景のような色を塗る</long>
+          <long xml:lang="nb">Mal vindu som bakgrunn i stedet for glød</long>
+          <long xml:lang="nl">Teken venster zoals achtergrond ipv. gloeien.</long>
+          <long xml:lang="pt">Pintar Janela Como Fundo em Vez de Aura.</long>
+          <long xml:lang="pt_BR">Desenhar janela como Fundo ao invés de aura.</long>
+          <long xml:lang="sv">Rita fönster som bakgrund istället för glöd.</long>
+          <default>true</default>
+        </option>
+        <option type="bool" name="mipmap">
+          <short>Generate Mipmaps</short>
+          <short xml:lang="ca">Genera mipmaps</short>
+          <short xml:lang="de">Mipmaps benutzen</short>
+          <short xml:lang="el">Δημιουργία Mipmaps</short>
+          <short xml:lang="en_GB">Generate Mipmaps</short>
+          <short xml:lang="eu">Sortu Mipmaps</short>
+          <short xml:lang="fr">Générer des mipmaps</short>
+          <short xml:lang="gl">Crear Mipmaps</short>
+          <short xml:lang="gu">મીપમેપ બનાવો</short>
+          <short xml:lang="hi">मिपमैप बनाएं</short>
+          <short xml:lang="it">Creare mipmap</short>
+          <short xml:lang="ja">ミップマップを生成</short>
+          <short xml:lang="nb">Lag MIP-kart</short>
+          <short xml:lang="nl">Mipmaps genereren</short>
+          <short xml:lang="pt">Criar Mipmaps</short>
+          <short xml:lang="pt_BR">Criar Mipmaps</short>
+          <short xml:lang="sv">Generera mipmaps</short>
+          <long>Generate mipmaps when possible for higher quality scaling.</long>
+          <long xml:lang="ca">Genera mipmaps quan sigui possible per una millor qualitat de l'escalat.</long>
+          <long xml:lang="de">Mipmaps benutzen (wenn möglich), um eine bessere Darstellungsqualität zu erreichen.</long>
+          <long xml:lang="el">Δημιουργία mipmaps ει δυνατόν για υψηλότερη ποιότητα κλιμάκωσης.</long>
+          <long xml:lang="en_GB">Generate mipmaps when possible for higher quality scaling.</long>
+          <long xml:lang="fr">Générer des mipmaps quand cela est possible pour une meilleure qualité de mise à l'échelle.</long>
+          <long xml:lang="gl">Xerar imaxes cando sexa posíbel para escalas de mellor calidade.</long>
+          <long xml:lang="gu">જ્યારે ઊંચા ગુણવત્તાવાળા ખેંચાણ માટે શક્ય હોય ત્યારે મીપમેપ બનાવો.</long>
+          <long xml:lang="hi">मिपमैप बनाएं जब उच्चतर गुणवत्ता के स्केलिंग के लिए संभव हो.</long>
+          <long xml:lang="it">Genera mipmap quando possibile per una migliore qualità.</long>
+          <long xml:lang="ja">より高質のスケールが可能なときはミップマップを生成</long>
+          <long xml:lang="nb">Lag MIP-kart når det er mulig for skalering med høyere kvalitet</long>
+          <long xml:lang="nl">Mipmaps genereren indien mogelijk voor hogere kwaliteit schalen.</long>
+          <long xml:lang="pl">Generuj mipmapy kiedy jest to możliwe dla lepszej jakości skalowania.</long>
+          <long xml:lang="pt">Gerar mipmaps quando possível para escalamento de melhor qualidade.</long>
+          <long xml:lang="pt_BR">Gerar mipmaps quando possível para escalamento de melhor qualidade.</long>
+          <long xml:lang="sv">Generera mipmaps när det är möjligt att förbättra kvalitet på skalning.</long>
+          <default>false</default>
+        </option>
+        <subgroup>
+          <short>Window title</short>
+          <short xml:lang="ca">Títol de la finestra</short>
+          <short xml:lang="de">Fenstertitel</short>
+          <short xml:lang="el">Τίτλος Παραθύρου</short>
+          <short xml:lang="en_GB">Window title</short>
+          <short xml:lang="fi">Ikkunan otsikko</short>
+          <short xml:lang="fr">Titre de la fenêtre</short>
+          <short xml:lang="gl">Título da fiestra</short>
+          <short xml:lang="gu">વિન્ડો શીર્ષક</short>
+          <short xml:lang="hi">विंडो शीर्षक</short>
+          <short xml:lang="it">Titolo finestra</short>
+          <short xml:lang="ja">ウィンドウタイトル</short>
+          <short xml:lang="nb">Vindustittel</short>
+          <short xml:lang="nl">Venster titel</short>
+          <short xml:lang="pl">Tytuł okna</short>
+          <short xml:lang="pt">Título da janela</short>
+          <short xml:lang="pt_BR">Título da janela</short>
+          <short xml:lang="ru">Заголовок окна</short>
+          <short xml:lang="sv">Fönstertitel</short>
+          <short xml:lang="tr">Pencere başlığı</short>
+          <option type="bool" name="title_enabled">
+            <short>Enable Titles</short>
+            <short xml:lang="ca">Activa títols</short>
+            <short xml:lang="de">Zeige Fenstertitel an</short>
+            <short xml:lang="el">Ενεργοποίηση Τίτλων</short>
+            <short xml:lang="en_GB">Enable Titles</short>
+            <short xml:lang="fr">Activer les titres</short>
+            <short xml:lang="gl">Activar Títulos</short>
+            <short xml:lang="gu">શીર્ષકો સક્રિય કરો</short>
+            <short xml:lang="hi">शीर्षक सक्रिय करें</short>
+            <short xml:lang="it">Attiva titoli</short>
+            <short xml:lang="ja">タイトルを有効</short>
+            <short xml:lang="nb">Bruk titler</short>
+            <short xml:lang="nl">Inschakelen titels</short>
+            <short xml:lang="pt">Activar Títulos</short>
+            <short xml:lang="pt_BR">Ativar Títulos</short>
+            <short xml:lang="sv">Aktivera titlar</short>
+            <short xml:lang="tr">Başlıkları Etkinleştir</short>
+            <long>Show Window Title in Thumbnail.</long>
+            <long xml:lang="ca">Mostra el títol de la finestra en la miniatura.</long>
+            <long xml:lang="de">Fenstertitel im Vorschaubild anzeigen.</long>
+            <long xml:lang="el">Εμφάνιση του Τίτλου Παραθύρου στην Μικρογραφία.</long>
+            <long xml:lang="en_GB">Show Window Title in Thumbnail.</long>
+            <long xml:lang="fr">Afficher le titre de la fenêtre dans la miniature.</long>
+            <long xml:lang="gl">Mostrar Título da fiestra na Miniatura.</long>
+            <long xml:lang="gu">વિન્ડો શીર્ષક થમ્બમેઈલમાં બતાવો.</long>
+            <long xml:lang="hi">विंडो शीर्षक को लघुचित्र में दिखाएँ</long>
+            <long xml:lang="it">Mostra il titolo della finestra nell'anteprima.</long>
+            <long xml:lang="ja">ウィンドウタイトルをサムネイルに表示</long>
+            <long xml:lang="nb">Vis vindustittel i miniatyr.</long>
+            <long xml:lang="nl">Toon venster titel in thumbnail.</long>
+            <long xml:lang="pl">Pokazuj tytuł okna w miniaturce.</long>
+            <long xml:lang="pt">Mostrar Título da Janela na Miniatura.</long>
+            <long xml:lang="pt_BR">Mostrar título da janela na miniatura.</long>
+            <long xml:lang="sv">Visa fönstertitel i miniatyren</long>
+            <long xml:lang="tr">Önzilemelerde Pencere Başlığını Göster.</long>
+            <default>true</default>
+          </option>
+          <option type="bool" name="font_bold">
+            <short>Bold Font</short>
+            <short xml:lang="ca">Text en negreta</short>
+            <short xml:lang="de">Fettdruck für Schrift verwenden</short>
+            <short xml:lang="el">Έντονη Γραμματοσειρά</short>
+            <short xml:lang="en_GB">Bold Font</short>
+            <short xml:lang="fi">Lihavoitu kirjasin</short>
+            <short xml:lang="fr">Police Grasse</short>
+            <short xml:lang="gl">Fonte a negrito</short>
+            <short xml:lang="gu">ઘાટો ફોન્ટ</short>
+            <short xml:lang="hi">मोटा फाँट</short>
+            <short xml:lang="it">Carattere grassetto</short>
+            <short xml:lang="ja">太字</short>
+            <short xml:lang="nb">Fet skrift</short>
+            <short xml:lang="nl">Vet lettertype</short>
+            <short xml:lang="pl">Pogrubiona czcionka</short>
+            <short xml:lang="pt">Fonte a negrito</short>
+            <short xml:lang="pt_BR">Fonte em negrito</short>
+            <short xml:lang="sv">Fet typsnitt</short>
+            <short xml:lang="tr">Kalın Yazı Tipi</short>
+            <long>Should be the window title Bold.</long>
+            <long xml:lang="ca">Dibuixa el títol de la finestra en negreta.</long>
+            <long xml:lang="de">Aktiviert Fettdruck für die Anzeige des Fenstertitels.</long>
+            <long xml:lang="el">Αν πρέπει ο τίτλος παραθύρου να γίνει Έντονος.</long>
+            <long xml:lang="en_GB">Should be the window title Bold.</long>
+            <long xml:lang="fr">Graisse du titre de la fenêtre.</long>
+            <long xml:lang="gl">Deberá o título da fiestra ser mostra a negrito</long>
+            <long xml:lang="gu">વિન્ડો શીર્ષક ઘાટા હોવા જોઈએ.</long>
+            <long xml:lang="hi">विंडो शीर्षक को बोल्ड होना चाहिए</long>
+            <long xml:lang="it">Titolo della finestra in grassetto.</long>
+            <long xml:lang="ja">ウィンドウタイトルを太字にする</long>
+            <long xml:lang="nb">Skal være vindustittelen fet.</long>
+            <long xml:lang="nl">De venstertitel in vet lettertype.</long>
+            <long xml:lang="pt">Deverá o título da janela ser mostrada a negrito.</long>
+            <long xml:lang="pt_BR">O título da janela deverá ser exibido em negrito</long>
+            <long xml:lang="sv">Ska fönstertiteln vara fet</long>
+            <long xml:lang="tr">Pencere başlığı kalın olmalıdır.</long>
+            <default>true</default>
+          </option>
+          <option type="int" name="font_size">
+            <short>Font Size</short>
+            <short xml:lang="de">Textgröße</short>
+            <short xml:lang="el">Μέγεθος Γραμματοσειράς</short>
+            <short xml:lang="en_GB">Font Size</short>
+            <short xml:lang="es">Tamaño de la fuente</short>
+            <short xml:lang="fi">Kirjasimen koko</short>
+            <short xml:lang="fr">Taille de la police</short>
+            <short xml:lang="gl">Tamaño da fonte</short>
+            <short xml:lang="gu">ફોન્ટ માપ</short>
+            <short xml:lang="hi">फ़ॉन्ट आकार</short>
+            <short xml:lang="it">Dimensione carattere</short>
+            <short xml:lang="ja">フォントの大きさ</short>
+            <short xml:lang="nb">Skriftstørrelse</short>
+            <short xml:lang="nl">Letter grootte</short>
+            <short xml:lang="pl">Wielkość czcionki</short>
+            <short xml:lang="pt">Tamanho da fonte</short>
+            <short xml:lang="pt_BR">Tamanho da fonte</short>
+            <short xml:lang="sv">Typsnittsstorlek</short>
+            <short xml:lang="tr">Yazıtipi Boyutu</short>
+            <short xml:lang="zh_CN">字体大小</short>
+            <long>Window title Font Size.</long>
+            <long xml:lang="ca">Mida del text del títol de la finestra.</long>
+            <long xml:lang="de">Schriftgröße für Fenstertitel</long>
+            <long xml:lang="el">Μέγεθος Γραμματοσειράς Τίτλου Παραθύρου.</long>
+            <long xml:lang="en_GB">Window title Font Size.</long>
+            <long xml:lang="fr">Taille de police du titre de la fenêtre.</long>
+            <long xml:lang="gl">Tamaño da fonte do título da fiestra.</long>
+            <long xml:lang="gu">વિન્ડો શીર્ષક ફોન્ટ માપ.</long>
+            <long xml:lang="hi">विंडो शीर्षक फ़ॉन्ट आकार.</long>
+            <long xml:lang="it">Dimensione del carattere per il titolo della finestra.</long>
+            <long xml:lang="ja">ウィンドウタイトルのフォントの大きさ</long>
+            <long xml:lang="nb">Skriftstørrelse for vindustittelen.</long>
+            <long xml:lang="nl">Venster titel lettertype grootte.</long>
+            <long xml:lang="pl">Rozmiar czcionki ttytułu okna</long>
+            <long xml:lang="pt">Tamanho da fonte do título da janela.</long>
+            <long xml:lang="pt_BR">Tamanho da fonte do título da janela.</long>
+            <long xml:lang="sv">Fönstertitelns typsnittstorlek</long>
+            <long xml:lang="tr">Pencere başlığı YazıTipi Boyutu.</long>
+            <default>12</default>
+            <min>6</min>
+            <max>36</max>
+          </option>
+          <option type="color" name="font_color">
+            <short>Font Color</short>
+            <short xml:lang="de">Textfarbe</short>
+            <short xml:lang="el">Χρώμα Γραμματοσειράς</short>
+            <short xml:lang="en_GB">Font Colour</short>
+            <short xml:lang="es">Color de la fuente</short>
+            <short xml:lang="fi">Kirjasimen väri</short>
+            <short xml:lang="fr">Couleur de la police</short>
+            <short xml:lang="gl">Cor da fonte</short>
+            <short xml:lang="gu">ફોન્ટ રંગ</short>
+            <short xml:lang="hi">फॉन्ट रंग</short>
+            <short xml:lang="it">Colore carattere</short>
+            <short xml:lang="ja">フォントの色</short>
+            <short xml:lang="nb">Skriftfarge</short>
+            <short xml:lang="nl">Letterkleur</short>
+            <short xml:lang="pl">Kolor czcionki</short>
+            <short xml:lang="pt">Cor da fonte</short>
+            <short xml:lang="pt_BR">Cor da fonte</short>
+            <short xml:lang="sv">Typsnittsfärg</short>
+            <short xml:lang="tr">Yazıtipi Rengi</short>
+            <short xml:lang="zh_CN">字体颜色</short>
+            <long>Window title Font Color.</long>
+            <long xml:lang="ca">Color del text del títol de la finestra.</long>
+            <long xml:lang="de">Schriftfarbe für Fenstertitel</long>
+            <long xml:lang="el">Χρώμα Γραμματοσειράς Τίτλου Παραθύρου.</long>
+            <long xml:lang="en_GB">Window title Font Colour.</long>
+            <long xml:lang="fr">Couleur de police du titre de la fenêtre.</long>
+            <long xml:lang="gl">Cor da fonte do título da fiestra.</long>
+            <long xml:lang="gu">વિન્ડો શીર્ષક ફોન્ટ રંગ.</long>
+            <long xml:lang="hi">विंडो शीर्षक फ़ॉन्ट रंग.</long>
+            <long xml:lang="it">Colore del carattere per il titolo della finestra.</long>
+            <long xml:lang="ja">ウィンドウタイトルのフォント色</long>
+            <long xml:lang="nb">Skriftfarge for vindustittel.</long>
+            <long xml:lang="nl">Venster titel lettertype kleur.</long>
+            <long xml:lang="pl">Kolor czcionki tytułu okna</long>
+            <long xml:lang="pt">Cor da fonte do título da janela.</long>
+            <long xml:lang="pt_BR">Cor da fonte do título da janela.</long>
+            <long xml:lang="sv">Fönstertitelns typsnittfärg</long>
+            <long xml:lang="tr">Pencere başlığı Yazıtipi Rengi.</long>
+            <default>
+              <red>0x0000</red>
+              <green>0x0000</green>
+              <blue>0x0000</blue>
+              <alpha>0xffff</alpha>
+            </default>
+          </option>
+        </subgroup>
+      </group>
+    </screen>
+  </plugin>
+</compiz>

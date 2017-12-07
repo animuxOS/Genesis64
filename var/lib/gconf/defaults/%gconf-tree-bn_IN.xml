@@ -1,0 +1,861 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="উইন্ডোর প্রস্থ">
+                                                        <longdesc>যে উইন্ডোকে প্রদর্শন করা হবে, তার প্রস্থ</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="উইন্ডোর উচ্চতা">
+                                                        <longdesc>যে উইন্ডোকে প্রদর্শন করা হবে, তার উচ্চতা</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="কি-বাইন্ডিং ব্যবহৃত হলে সঞ্চালনযোগ্য কমান্ড">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_N কিগুলি দ্বারা এই সমস্ত কমান্ডের ক্ষেত্রে সংশ্লিস্ট কি-বাইন্ডিং ব্যাখ্যা করা হয়।run_command_N&apos;র কি-বাইন্ডিং প্রয়োগ করা হলে command_N সঞ্চালিত হবে।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="উইন্ডোর ছবি নেওয়ার জন্য ব্যবহৃত কমান্ড">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_window_screenshot কি দ্বারা একটি কি-বাইন্ডিং ব্যাখ্যা করা হয় যার ফলে এই বৈশিষ্ট্য দ্বারা চিহ্নিত কমান্ড সঞ্চালিত হবে।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="পর্দার ছবি নেওয়ার কমান্ড">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_screenshot কি দ্বারা একটি কি-বাইন্ডিং ব্যাখ্যা করা হয় যার ফলে এই বৈশিষ্ট্য দ্বারা চিহ্নিত কমান্ড সঞ্চালিত হবে।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="একটি সুনির্দিষ্ট কমান্ড সঞ্চালন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="টার্মিনাল আরম্ভ করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="উইন্ডোর ছবি নিন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="পর্দার ছবি নিন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="প্যানেলের অ্যাপ্লিকেশন সঞ্চালনের ডায়লগ বক্স প্রদর্শন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="প্যানেল মেনু প্রদর্শন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="নিম্নস্থিত কর্মক্ষেত্রে পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="ঊর্ধস্থ কর্মক্ষেত্রে পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="ডানদিকের পার্শ্ববর্তী কর্মক্ষেত্রে পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="বাঁদিকের পার্শ্ববর্তী কর্মক্ষেত্রে পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="কর্মক্ষেত্র ১২&apos;এ পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="কর্মক্ষেত্র ১১&apos;এ পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="কর্মক্ষেত্র ১&apos;এ পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="কর্মক্ষেত্র ৯&apos;এ পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="কর্মক্ষেত্র ৮&apos;এ পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="কর্মক্ষেত্র ৭&apos;এ পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="কর্মক্ষেত্র ৬&apos;এ পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="কর্মক্ষেত্র ৫&apos;এ পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="কর্মক্ষেত্র ৪&apos;এ পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="কর্মক্ষেত্র ৩&apos;এ পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="কর্মক্ষেত্র ১৩&apos;এ পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="কর্মক্ষেত্র ১&apos;এ পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="সমস্ত উইন্ডো আড়াল করে ডেস্কটপ উজ্জ্বল করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="প্যানেল ও ডেস্কটপের মধ্যে তৎক্ষনাৎ বিপরীত দিশায় স্থান পরিবর্তন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="প্যানেল ও ডেস্কটপের মধ্যে তৎক্ষনাৎ স্থান পরিবর্তন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="উইন্ডোগুলির মধ্যে তৎক্ষনাৎ বিপরীতদিকে স্থান পরিবর্তন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="উইন্ডোগুলির মধ্যে তৎক্ষনাৎ স্থান পরিবর্তন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="অ্যাপ্লিকেশনের উইন্ডোগুলির মধ্যে পপ-আপ সহ তৎক্ষনাৎ বিপরীতদিকে স্থান পরিবর্তন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="অ্যাপ্লিকেশনের উইন্ডোগুলির মধ্যে পপ-আপ সহ তৎক্ষনাৎ স্থান পরিবর্তন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="অ্যাপ্লিকেশনের উইন্ডোগুলির মধ্যে তৎক্ষনাৎ বিপরীতদিকে স্থান পরিবর্তন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="অ্যাপ্লিকেশনের উইন্ডোগুলির মধ্যে তৎক্ষনাৎ স্থান পরিবর্তন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="প্যানেল ও ডেস্কটপের মধ্যে পপ-আপ সহ তৎক্ষনাৎ বিপরীত দিশায় স্থান পরিবর্তন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="প্যানেল ও ডেস্কটপের মধ্যে পপ-আপ সহ তৎক্ষনাৎ স্থান পরিবর্তন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="উইন্ডোগুলির মধ্যে পপ-আপ সহ বিপরীতদিকে উজ্জ্বলতা পরিবর্তন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="উইন্ডোগুলির মধ্যে পপ-আপ সহ তৎক্ষনাৎ স্থান পরিবর্তন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="উইন্ডো অনুভূমিক দিশায় বড় করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="উইন্ডো উলম্ব দিশায় বড় করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="উইন্ডোটিকে অন্য উইন্ডোর নীচে নামানো হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="অন্যান্য উইন্ডোর উপরে উইন্ডো উত্থাপন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="উইন্ডো একটি কর্মক্ষেত্র নীচে স্থানান্তরণ করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="উইন্ডো একটি কর্মক্ষেত্র উপরে স্থানান্তরণ করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="উইন্ডো ডানদিকের পার্শ্ববর্তী কর্মক্ষেত্রে স্থানান্তরণ করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="উইন্ডো বাঁদিকের পার্শ্ববর্তী কর্মক্ষেত্রে স্থানান্তরণ করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="কর্মক্ষেত্র ১২&apos;এ স্থানান্তর করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="কর্মক্ষেত্র ১১&apos;এ স্থানান্তর করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="কর্মক্ষেত্র ১০&apos;এ স্থানান্তর করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="কর্মক্ষেত্র ৯&apos;এ স্থানান্তর করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="কর্মক্ষেত্র ৮&apos;এ স্থানান্তর করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="কর্মক্ষেত্র ৭&apos;এ স্থানান্তর করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="কর্মক্ষেত্র ৬&apos;এ স্থানান্তর করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="কর্মক্ষেত্র ৫&apos;এ স্থানান্তর করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="কর্মক্ষেত্র ৪&apos;এ স্থানান্তর করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="কর্মক্ষেত্র ৩&apos;এ স্থানান্তর করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="কর্মক্ষেত্র ২&apos;এ স্থানান্তর করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="কর্মক্ষেত্র ১&apos;এ স্থানান্তর করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="সকল কর্মক্ষেত্রে উইন্ডোর অবস্থা অদল-বদল করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="উইন্ডোর মাপ পরিবর্তন করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="উইন্ডো স্থানান্তরণ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="উইন্ডো আড়াল করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="উইন্ডো বন্ধ করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="ছায়াবৃত প্রদর্শনের অবস্থা অদল-বদল করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="উইন্ডো স্বাভাবিক মাপে স্থাপন করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="উইন্ডো বড় করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="সর্বোচ্চ মাপে প্রদর্শনের অবস্থা অদল-বদল করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="সর্বদা উপরে থাকার বৈশিষ্ট্য অদল বদল করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="সম্পূর্ণ পর্দা জুড়ে প্রদর্শনের মোড অদল-বদল করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="সক্রিয় উইন্ডো মেনু">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="কর্মক্ষেত্রের নাম">
+                                                        <longdesc>কর্মক্ষেত্রের নাম</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="পুরোনো অথবা ক্ষতিগ্রস্ত অ্যাপ্লিকেশনের ক্ষেত্রে আবশ্যক ত্রুটিপূর্ণ বৈশিষ্ট্যের ব্যবহার নিষ্ক্রিয় করা হবে">
+                                                        <longdesc>কয়েকটি অ্যাপ্লিকেশন দ্বারা সুনির্দিষ্ট বৈশিষ্ট্যের মান অগ্রাহ্য করা হয় যার ফলে উইন্ডো পরিচালন ব্যবস্থা ক্ষতিগ্রস্ত হয়। এই বিকল্পের দ্বারা Metacity সুস্পষ্টরূপে সঠিক চালনার মোডে স্থাপিত হবে যার ফলে ইউজার ইন্টারফেস তুলনামূলকরূপে স্থায়ী হবে যদি কোনো অ্যাপ্লিকেশনের গতিবিধি উশৃঙ্খল না হয়ে থাকে।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(কার্যকরী নয়) উইন্ডোর পরিবর্তে অ্যাপ্লিকেশন অনুসারে চলাচল করা সম্ভব">
+                                                        <longdesc>মান true হলে, উইন্ডোর পরিবর্তে Metacity অ্যাপ্লিকেশন অনুযায়ী কর্ম সঞ্চালন করবে। অ্যাপ্লিকেশন-ভিত্তিক পরিবেশ Mac&apos;র অনুরূপ ও Windows&apos;র সাথে এর সাদৃশ্য কম। অ্যাপ্লিকেশন-ভিত্তিক মোডে কোনে উইন্ডো উজ্জ্বল করা হলে সংশ্লিষ্ট অ্যাপ্লিকেশনের সমস্ত উইন্ডো বড় করা হবে। উপরন্তু উজ্জ্বল করার সময় কৃত ক্লিক, উইন্ডোর মাধ্যমে অন্যান্য অ্যাপ্লিকেশনে প্রেরিত হয় না। বাস্তবে অ্যাপ্লিকেশন-ভিত্তিক মোড বর্তমানে বিশেষ প্রয়োগ করা হয় না।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="মান true হলে, রিসোর্সের ব্যবহার হ্রাস করতে কর্মক্ষমতা হ্রাস করা হবে">
+                                                        <longdesc>মান true হলে, metacity দ্বারা ব্যবহারকারীদের কম ফিড-ব্যাক প্রদান করা হবে এবং এর জন্য অ্যানিমেশন প্রভৃতি উপেক্ষা করে ওয়াইর-ফ্রেম ব্যবহার করা হবে। এর ফলে অনেক ব্যবহারকারীর ক্ষেত্রে ব্যবহারযোগ্যতা হ্রাস পেলেও লিগাসি অ্যাপ্লিকেশন সঞ্চালন করা যাবে এবং টারমিনাল সার্ভারের ক্ষেত্রে বিশেষ কর্মোপযোগিতা উপলব্ধ করবে। তথাপি সহায়ক প্রযুক্তির ব্যবহার সক্রিয় থাকাকালীন ওয়াইর-ফ্রেমের ব্যবহার নিষ্ক্রিয় করা হয়।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema>
+                                                        <longdesc>এর দ্বারা Metacity&apos;কে সিস্টেম ঘন্টি অথবা অন্য কোনো অ্যাপ্লিকেশনের &apos;ঘন্টি&apos; থেকে উৎপন্ন শব্দের সংকেত প্রদর্শনের নির্দেশ প্রদান করা হয়। বর্তমানে দুটি বৈধ মান উপস্থিত রয়েছে, &quot;fullscreen&quot; যার ফলে সম্পূর্ণ পর্দা জুড়ে সাদা-কালো ঝলকানি হয় এবং &quot;frame_flash&quot; যার ফলে ঘন্টির শব্দ উৎপন্নকারী অ্যাপ্লিকেশনের শিরোনাম-বারে ঝলকানি সৃষ্টি করা হবে। শব্দ উৎপন্নকারী অ্যাপ্লিকেশনের পরিচয় জানতে পারা না গেলে (ডিফল্ট  &quot;system beep (সিস্টেম বিপ)&quot;&apos;র ক্ষেত্রে) বর্তমানে উজ্জ্বলিত উইন্ডোর শিরোনামের বারে ঝলকানি সৃষ্টি করা হবে।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="সিস্টেম ঘন্টি শোনা যাবে">
+                                                        <longdesc>অ্যাপ্লিকেশন অথবা সিস্টেমের দ্বারা শ্রুতিগম্য &apos;beeps&apos; শব্দ উৎপন্ন করা হবে কিনা তা নির্ধারণ করে; নিঃশব্দ &apos;beeps&apos; শব্দের জন্য &apos;visual bell&apos;-র সাথে ব্যবহারযোগ্য।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Visual Bell সক্রিয় করা হবে">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="কর্মক্ষেত্রের সংখ্যা">
+                                                        <longdesc>কর্মক্ষেত্রের সংখ্যা। শূণ্যের অধিক হওয়া আবশ্যক ও সর্বোচ্চ অনুমোদিত কর্মক্ষেত্রের সংখ্যা চিহ্নিত হওয়া আবশ্যক যার ফলে ভুলবসত অত্যাধিক কর্মক্ষেত্রের উপস্থিতির ফলে ডেস্কটপ ক্ষতিগ্রস্ত না হয়।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="উইন্ডোর শিরোনামে ব্যবহৃত ফন্ট">
+                                                        <longdesc>উইন্ডোর শিরোনামে ব্যবহৃত ফন্টের ব্যাখ্যা রূপে একটি পংক্তি। titlebar_font_size বিকল্পের মান 0 রূপে ধার্য করা হলে ফন্টের ব্যাখ্যায় উল্লিখিত ফন্টের মাপ ব্যবহৃত হবে। titlebar_uses_desktop_font বিকল্পের মান true হলে এই বিকল্পের ব্যবহার নিষ্ক্রিয় করা হবে।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="উইন্ডোর শিরোনামে সিস্টেমের প্রমিত মাপের ফন্ট ব্যবহার করা হবে">
+                                                        <longdesc>মান true হলে, titlebar_font বিকল্পটি অগ্রাহ্য করা হবে ও উইন্ডোর শিরোনামের জন্য অ্যাপ্লিকেশনের ক্ষেত্রে চিহ্নিত প্রমিত ফন্ট ব্যবহৃত হবে।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="বর্তমানে ব্যবহৃত থিম">
+                                                        <longdesc>থিম দ্বারা উইন্ডোর প্রান্ত, শিরোনামের-বার প্রভৃতির বিন্যাস নির্ধারিত হবে।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="স্বয়ংক্রিয়রূপে উইন্ডোর বড় করার পূর্বে বিলম্বক্ষণ, মিলিসেকেন্ডে ব্যক্ত">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="ব্যবহৃত উইন্ডো স্বয়ংক্রিয়রূপে বড় করা হবে">
+                                                        <longdesc>মান true ধার্য করা হলে ও উজ্জ্বল করার মোড &quot;sloppy&quot; অথবা &quot;mouse&quot; হয়ে থাকলে auto_raise_delay কি দ্বারা চিহ্নিত মিলিসেকেন্ড পরে উজ্জ্বলিত উইন্ডোটি স্বয়ংক্রিয়রূপে বড় করা হবে। উইন্ডোর উপর ক্লিক করে উইন্ডো বড় করার বৈশিষ্ট্য অথবা ড্র্যাগ-ড্রপ কর্ম সঞ্চালনকালে উইন্ডোর মধ্যে প্রবেশের সাথে এর কোনো সম্পর্ক নেই।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="শিরোনামের বারে দুইবার ক্লিক করা হলে করণীয় কর্ম">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="ব্যবহারকারীদের দ্বারা সঞ্চালিত কর্মের ফলে উইন্ডো বড় করা হবে কি না">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="নতুন উইন্ড উজ্জ্বল করার প্রণালী নিয়ন্ত্রণ করুন">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="উইন্ডো উজ্জ্বল করার মোড">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="শিরোনাম বারে বাটনের বিন্যাস">
+                                                        <longdesc>শিরোনাম বারের মধ্যে বাটনের বিন্যাস। চিহ্নিত মান একটি পংক্তি হওয়া আবশ্যক যেমন &quot;menu:minimize,maximize,close&quot;; কোলোন চিহ্ন দ্বারা উইন্ডোর বাঁদিকের কোণার ও ডানদিকের কোণার মান বিভাজিত করা হয় এবং বাটনের নামগুলি কমা-চিহ্ন দ্বারা বিভক্ত।দুটি বাটন অনুরূপ হওয়া সম্ভব নয়। অজানা বাটনের নাম সতর্কবাণী বিনা অগ্রাহ্য করা হয় যার ফলে ভবিষ্যতে প্রকাশিত metacity&apos;র সংস্করণের সাথে বিনা দ্বন্দ্বে বাটন যোগ করা সম্ভব হবে।</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="পরিবর্তিত উইন্ডো ক্লিক কর্মের ফলে ব্যবহারযোগ্য পরিবর্তক">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="কম্পোনেন্ট প্রদর্শনের ডিফল্ট অ্যাপ্লিকেশন">
+                                                                <longdesc>আবশ্যকরূপে কোনো কম্পোনেন্ট সহযোগে প্রদর্শনের উদ্দেশ্যে চিহ্নিত ফাইল প্রদর্শনের জন্য ব্যবহৃত অ্যাপ্লিকেশন। %s পরামিতির দ্বারা ফাইলের URI উল্লিখিত হবে ও পরামিতি %c দ্বারা কম্পোনেন্টের IID নির্দিষ্ট করা হবে।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="ডিফল্ট টার্মিনালের জন্য exec আর্গুমেন্ট">
+                                                                <longdesc>ডিফল্ট টার্মিনাল অ্যাপ্লিকেশনের জন্য ব্যবহারযোগ্য exec আর্গুমেন্ট।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="ডিফল্ট টার্মিনাল অ্যাপ্লিকেশন">
+                                                                <longdesc>আবশ্যকরূপে টার্মিনাল প্রয়োগকারী অ্যাপ্লিকেশনগুলির দ্বারা ব্যবহারযোগ্য ডিফল্ট টার্মিনাল।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="টার্মিনালে কমান্ড চালানো হবে">
+                                                                <longdesc>এই ধরনের URL ব্যবস্থাকারী কমান্ড টার্মিনালে চালানো হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;h323&quot; URL ব্যবস্থাপনার হ্যান্ডলার">
+                                                                <longdesc>সক্রিয় করা হলে, &quot;h323&quot; URL ব্যবস্থাপনার উদ্দেশ্যে ব্যবহৃত কমান্ড।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="উল্লিখিত কমান্ডের দ্বারা &quot;h323&quot; URL ব্যবস্থাপনা করা হবে কিনা">
+                                                                <longdesc>&quot;command&quot; কি&apos;র দ্বারা &quot;h323&quot; URL ব্যবস্থাপনা নির্ধারিত হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="টার্মিনালে কমান্ড চালানো হবে">
+                                                                <longdesc>এই ধরনের URL ব্যবস্থাকারী কমান্ড টার্মিনালে চালানো হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;callto&quot; URL ব্যবস্থাপনার হ্যান্ডলার">
+                                                                <longdesc>সক্রিয় করা হলে, &quot;callto&quot; URL ব্যবস্থাপনার উদ্দেশ্যে ব্যবহৃত কমান্ড।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="উল্লিখিত কমান্ডের দ্বারা &quot;callto&quot; URL ব্যবস্থাপনা করা হবে কিনা">
+                                                                <longdesc>&quot;command&quot; কি&apos;র দ্বারা &quot;callto&quot; URL ব্যবস্থাপনা নির্ধারিত হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="টার্মিনালে কমান্ড চালানো হবে">
+                                                                <longdesc>এই ধরনের URL ব্যবস্থাকারী কমান্ড টার্মিনালে চালানো হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;mailto&quot; URL ব্যবস্থাপনার হ্যান্ডলার">
+                                                                <longdesc>সক্রিয় করা হলে, &quot;mailto&quot; URL ব্যবস্থাপনার উদ্দেশ্যে ব্যবহৃত কমান্ড।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="উল্লিখিত কমান্ডের দ্বারা &quot;mailto&quot; URL ব্যবস্থাপনা করা হবে কিনা">
+                                                                <longdesc>&quot;command&quot; কি&apos;র দ্বারা &quot;mailto&quot; URL ব্যবস্থাপনা নির্ধারিত হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="টার্মিনালে কমান্ড চালানো হবে">
+                                                                <longdesc>এই ধরনের URL ব্যবস্থাকারী কমান্ড টার্মিনালে চালানো হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;https&quot; URL ব্যবস্থাপনার হ্যান্ডলার">
+                                                                <longdesc>সক্রিয় করা হলে, &quot;https&quot; URL ব্যবস্থাপনার উদ্দেশ্যে ব্যবহৃত কমান্ড।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="উল্লিখিত কমান্ডের দ্বারা &quot;https&quot; URL ব্যবস্থাপনা করা হবে কিনা">
+                                                                <longdesc>&quot;command&quot; কি&apos;র দ্বারা &quot;https&quot; URL ব্যবস্থাপনা নির্ধারিত হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="টার্মিনালে কমান্ড চালানো হবে">
+                                                                <longdesc>এই ধরনের URL ব্যবস্থাকারী কমান্ড টার্মিনালে চালানো হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="টার্মিনালে কমান্ড চালানো হবে">
+                                                                <longdesc>এই ধরনের URL ব্যবস্থাকারী কমান্ড টার্মিনালে চালানো হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;http&quot; URL ব্যবস্থাপনার হ্যান্ডলার">
+                                                                <longdesc>সক্রিয় করা হলে, &quot;http&quot; URL ব্যবস্থাপনার উদ্দেশ্যে ব্যবহৃত কমান্ড।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="উল্লিখিত কমান্ডের দ্বারা &quot;&quot; URL ব্যবস্থাপনা করা হবে কিনা">
+                                                                <longdesc>&quot;command&quot; কি&apos;র দ্বারা &quot;http&quot; URL ব্যবস্থাপনা নির্ধারিত হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="টার্মিনালে কমান্ড চালানো হবে">
+                                                                <longdesc>এই ধরনের URL ব্যবস্থাকারী কমান্ড টার্মিনালে চালানো হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;man&quot; URL ব্যবস্থাপনার হ্যান্ডলার">
+                                                                <longdesc>সক্রিয় করা হলে, &quot;man&quot; URL ব্যবস্থাপনার উদ্দেশ্যে ব্যবহৃত কমান্ড।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="উল্লিখিত কমান্ডের দ্বারা &quot;man&quot; URL ব্যবস্থাপনা করা হবে কিনা">
+                                                                <longdesc>&quot;command&quot; কি&apos;র দ্বারা &quot;man&quot; URL ব্যবস্থাপনা নির্ধারিত হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="টার্মিনালে কমান্ড চালানো হবে">
+                                                                <longdesc>এই ধরনের URL ব্যবস্থাকারী কমান্ড টার্মিনালে চালানো হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;info&quot; URL ব্যবস্থাপনার হ্যান্ডলার">
+                                                                <longdesc>সক্রিয় করা হলে, &quot;info&quot; URL ব্যবস্থাপনার উদ্দেশ্যে ব্যবহৃত কমান্ড।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="উল্লিখিত কমান্ডের দ্বারা &quot;info&quot; URL ব্যবস্থাপনা করা হবে কিনা">
+                                                                <longdesc>&quot;command&quot; কি&apos;র দ্বারা &quot;info&quot; URL ব্যবস্থাপনা নির্ধারিত হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="টার্মিনালে কমান্ড চালানো হবে">
+                                                                <longdesc>এই ধরনের URL ব্যবস্থাকারী কমান্ড টার্মিনালে চালানো হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ghelp&quot; URL ব্যবস্থাপনার হ্যান্ডলার">
+                                                                <longdesc>সক্রিয় করা হলে, &quot;ghelp&quot; URL ব্যবস্থাপনার উদ্দেশ্যে ব্যবহৃত কমান্ড।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="উল্লিখিত কমান্ডের দ্বারা &quot;ghelp&quot; URL ব্যবস্থাপনা করা হবে কিনা">
+                                                                <longdesc>&quot;command&quot; কি&apos;র দ্বারা &quot;ghelp&quot; URL ব্যবস্থাপনা নির্ধারিত হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="টার্মিনালে কমান্ড চালানো হবে">
+                                                                <longdesc>এই ধরনের URL ব্যবস্থাকারী কমান্ড টার্মিনালে চালানো হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;trash&quot; URL ব্যবস্থাপনার হ্যান্ডলার">
+                                                                <longdesc>সক্রিয় করা হলে, &quot;trash&quot; URL ব্যবস্থাপনার উদ্দেশ্যে ব্যবহৃত কমান্ড।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="উল্লিখিত কমান্ডের দ্বারা &quot;trash&quot; URL ব্যবস্থাপনা করা হবে কিনা">
+                                                                <longdesc>&quot;command&quot; কি&apos;র দ্বারা &quot;trash&quot; URL ব্যবস্থাপনা নির্ধারিত হলে মান true (সত্য)।</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="এই প্রোফাইলটি ব্যবহৃত হবে কিনা">
+                                                                        <longdesc>এই প্রোফাইলটি ব্যবহৃত এবং প্রদর্শিত হবে কিনা।</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="এই প্রোফাইলের জন্য ডিফল্ট ফাইল এক্সটেনশন">
+                                                                        <longdesc>এই প্রোফাইল সাহায্যে যেসব ফাইলকে এনকোড করা হয়েছে, তাদের সংরক্ষণের সময় ফাইলের নামের সাথে যে এক্সটেনশন ব্যবহৃত হবে।</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="যে আংশিক GStreamer পাইপলাইন ব্যবহৃত হয়েছে">
+                                                                        <longdesc>এই প্রোফাইলের জন্য যে আংশিক GStreamer পাইপলাইন ব্যবহার করতে হবে।</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="অডিও প্রোফাইলের বিবরণ">
+                                                                        <longdesc>প্রোফাইলের একটি বিবরণ, যাতে আরো অধিক তথ্য থাকে এবং কখন এই প্রোফাইল ব্যবহার করতে হবে তা বলা থাকে।</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="অডিও প্রোফাইলটির জন্য একটি সংক্ষিপ্ত নাম">
+                                                                        <longdesc>অডিও প্রোফাইলটির জন্য একটি সংক্ষিপ্ত নাম, যা প্রোফাইল নির্বাচন ও সনাক্তকরণের সময় ব্যবহৃত হবে।</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="এই প্রোফাইলটি ব্যবহৃত হবে কিনা">
+                                                                                <longdesc>এই প্রোফাইলটি ব্যবহৃত এবং প্রদর্শিত হবে কিনা।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="এই প্রোফাইলের জন্য ডিফল্ট ফাইল এক্সটেনশন">
+                                                                                <longdesc>এই প্রোফাইল সাহায্যে যেসব ফাইলকে এনকোড করা হয়েছে, তাদের সংরক্ষণের সময় ফাইলের নামের সাথে যে এক্সটেনশন ব্যবহৃত হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="যে আংশিক GStreamer পাইপলাইন ব্যবহৃত হয়েছে">
+                                                                                <longdesc>এই প্রোফাইলের জন্য যে আংশিক GStreamer পাইপলাইন ব্যবহার করতে হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="অডিও প্রোফাইলের বিবরণ">
+                                                                                <longdesc>প্রোফাইলের একটি বিবরণ, যাতে আরো অধিক তথ্য থাকে এবং কখন এই প্রোফাইল ব্যবহার করতে হবে তা বলা থাকে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="অডিও প্রোফাইলটির জন্য একটি সংক্ষিপ্ত নাম">
+                                                                                <longdesc>অডিও প্রোফাইলটির জন্য একটি সংক্ষিপ্ত নাম, যা প্রোফাইল নির্বাচন ও সনাক্তকরণের সময় ব্যবহৃত হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="এই প্রোফাইলের জন্য ডিফল্ট ফাইল এক্সটেনশন">
+                                                                                <longdesc>এই প্রোফাইল সাহায্যে যেসব ফাইলকে এনকোড করা হয়েছে, তাদের সংরক্ষণের সময় ফাইলের নামের সাথে যে এক্সটেনশন ব্যবহৃত হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="যে আংশিক GStreamer পাইপলাইন ব্যবহৃত হয়েছে">
+                                                                                <longdesc>এই প্রোফাইলের জন্য যে আংশিক GStreamer পাইপলাইন ব্যবহার করতে হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="অডিও প্রোফাইলের বিবরণ">
+                                                                                <longdesc>প্রোফাইলের একটি বিবরণ, যাতে আরো অধিক তথ্য থাকে এবং কখন এই প্রোফাইল ব্যবহার করতে হবে তা বলা থাকে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="অডিও প্রোফাইলটির জন্য একটি সংক্ষিপ্ত নাম">
+                                                                                <longdesc>অডিও প্রোফাইলটির জন্য একটি সংক্ষিপ্ত নাম, যা প্রোফাইল নির্বাচন ও সনাক্তকরণের সময় ব্যবহৃত হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="এই প্রোফাইলের জন্য ডিফল্ট ফাইল এক্সটেনশন">
+                                                                                <longdesc>এই প্রোফাইল সাহায্যে যেসব ফাইলকে এনকোড করা হয়েছে, তাদের সংরক্ষণের সময় ফাইলের নামের সাথে যে এক্সটেনশন ব্যবহৃত হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="যে আংশিক GStreamer পাইপলাইন ব্যবহৃত হয়েছে">
+                                                                                <longdesc>এই প্রোফাইলের জন্য যে আংশিক GStreamer পাইপলাইন ব্যবহার করতে হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="অডিও প্রোফাইলের বিবরণ">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="অডিও প্রোফাইলটির জন্য একটি সংক্ষিপ্ত নাম">
+                                                                                <longdesc>অডিও প্রোফাইলটির জন্য একটি সংক্ষিপ্ত নাম, যা প্রোফাইল নির্বাচন ও সনাক্তকরণের সময় ব্যবহৃত হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="এই প্রোফাইলের জন্য ডিফল্ট ফাইল এক্সটেনশন">
+                                                                                <longdesc>এই প্রোফাইল সাহায্যে যেসব ফাইলকে এনকোড করা হয়েছে, তাদের সংরক্ষণের সময় ফাইলের নামের সাথে যে এক্সটেনশন ব্যবহৃত হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="যে আংশিক GStreamer পাইপলাইন ব্যবহৃত হয়েছে">
+                                                                                <longdesc>এই প্রোফাইলের জন্য যে আংশিক GStreamer পাইপলাইন ব্যবহার করতে হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="অডিও প্রোফাইলের বিবরণ">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="অডিও প্রোফাইলটির জন্য একটি সংক্ষিপ্ত নাম">
+                                                                                <longdesc>অডিও প্রোফাইলটির জন্য একটি সংক্ষিপ্ত নাম, যা প্রোফাইল নির্বাচন ও সনাক্তকরণের সময় ব্যবহৃত হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="এই প্রোফাইলের জন্য ডিফল্ট ফাইল এক্সটেনশন">
+                                                                                <longdesc>এই প্রোফাইল সাহায্যে যেসব ফাইলকে এনকোড করা হয়েছে, তাদের সংরক্ষণের সময় ফাইলের নামের সাথে যে এক্সটেনশন ব্যবহৃত হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="যে আংশিক GStreamer পাইপলাইন ব্যবহৃত হয়েছে">
+                                                                                <longdesc>এই প্রোফাইলের জন্য যে আংশিক GStreamer পাইপলাইন ব্যবহার করতে হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="অডিও প্রোফাইলের বিবরণ">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="অডিও প্রোফাইলটির জন্য একটি সংক্ষিপ্ত নাম">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="এই প্রোফাইলের জন্য ডিফল্ট ফাইল এক্সটেনশন">
+                                                                                <longdesc>এই প্রোফাইল সাহায্যে যেসব ফাইলকে এনকোড করা হয়েছে, তাদের সংরক্ষণের সময় ফাইলের নামের সাথে যে এক্সটেনশন ব্যবহৃত হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="যে আংশিক GStreamer পাইপলাইন ব্যবহৃত হয়েছে">
+                                                                                <longdesc>এই প্রোফাইলের জন্য যে আংশিক GStreamer পাইপলাইন ব্যবহার করতে হবে।</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="অডিও প্রোফাইলের বিবরণ">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="অডিও প্রোফাইলটির জন্য একটি সংক্ষিপ্ত নাম">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="প্রোফাইলের তালিকা">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="স্বয়ংক্রিয় প্রক্সি কনফিগারেশনের URL">
+                                                <longdesc>প্রক্সি কনফিগার করার জন্য ব্যবহৃত মান প্রস্তুতকারী URL।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="SOCKS প্রক্সি পোর্ট">
+                                                <longdesc>প্রক্সি করার উদ্দেশ্যে ব্যবহৃত মেশিনের পোর্ট &quot;/system/proxy/socks_host&quot; দ্বারা ব্যাখ্যা করা হয়।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="SOCKS প্রক্সি হোস্ট-নেম">
+                                                <longdesc>socks প্রক্সির জন্য ব্যবহারযোগ্য মেশিনের নাম।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="FTP প্রক্সি পোর্ট">
+                                                <longdesc>প্রক্সি করার উদ্দেশ্যে ব্যবহৃত মেশিনের পোর্ট &quot;/system/proxy/ftp_host&quot; দ্বারা ব্যাখ্যা করা হয়।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="FTP প্রক্সির হোস্ট-নেম">
+                                                <longdesc>FTP প্রক্সির জন্য ব্যবহারযোগ্য মেশিনের নাম।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="নিরাপদ HTTP প্রক্সি পোর্ট">
+                                                <longdesc>প্রক্সি করার উদ্দেশ্যে ব্যবহৃত মেশিনের পোর্ট &quot;/system/proxy/secure_host&quot; দ্বারা ব্যাখ্যা করা হয়।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="নিরাপদ HTTP প্রক্সি হোস্ট-নেম">
+                                                <longdesc>নিরাপদ HTTP প্রক্সির জন্য ব্যবহারযোগ্য মেশিনের নাম।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="প্রক্সি কনফিগারেশন মোড">
+                                                <longdesc>প্রক্সি কনফিগারেশন মোড নির্বাচন করুন। সমর্থিত মান হল &quot;none&quot;, &quot;manual&quot;, &quot;auto&quot;।</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="প্রক্সি-বিহীন হোস্ট">
+                                                <longdesc>প্রক্সির (যদি সক্রিয়) পরিবর্তে সরাসরি সংযোগকারী হোস্টের তালিকা এই কি দ্বারা উল্লিখিত হয়েছে। হোস্ট-নেম, ডোমেইন (প্রারম্ভিক ওয়াইল্ডকার্ডসহ যেমন *.foo.com), IP হোস্ট ঠিকানা (IPv4 ও IPv6) ও নেটমাস্কসহ নেটওয়ার্ক ঠিকানার (যেমন 192.168.0.0/24) মান এই ক্ষেত্রে অন্তর্ভুক্ত করা যাবে।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="HTTP প্রক্সি পাসওয়ার্ড">
+                                                <longdesc>HTTP প্রক্সির ক্ষেত্রে অনুমোদনের জন্য প্রযোজ্য পাসওয়ার্ড</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="HTTP প্রক্সি ব্যবহারকারীর নাম">
+                                                <longdesc>HTTP প্রক্সির ক্ষেত্রে অনুমোদনের জন্য প্রযোজ্য ব্যবহারকারীর নাম।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="প্রক্সি সার্ভারের সংযোগ অনুমোদন করা হবে">
+                                                <longdesc>মান true (সত্য) হলে প্রক্সি সার্ভারের সাথে সংযোগের জন্য অনুমোদন আবশ্যক। ব্যবহারকারীর নাম/পাসওয়ার্ড জুটি &quot;/system/http_proxy/authentication_user&quot; ও &quot;/system/http_proxy/authentication_password&quot; দ্বারা ব্যাখ্যা করা হয়।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="HTTP প্রক্সি পোর্ট">
+                                                <longdesc>প্রক্সি করার উদ্দেশ্যে ব্যবহৃত মেশিনের পোর্ট &quot;/system/http_proxy/host&quot; দ্বারা ব্যাখ্যা করা হয়।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="HTTP প্রক্সি হোস্ট-নেম">
+                                                <longdesc>HTTP প্রক্সির জন্য ব্যবহারযোগ্য মেশিনের নাম।</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="HTTP প্রক্সি ব্যবহার করা হবে">
+                                                <longdesc>ইন্টারনেটের মাধ্যমে HTTP ব্যবহারের সময় প্রক্সি সংক্রান্ত বৈশিষ্ট্য সক্রিয় করা হবে</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="DNS-SD পরিসেবার জন্য অতিরিক্ত ডোমেইন অনুসন্ধান করা হবে">
+                                                <longdesc>&quot;network:///&quot; location&apos;র মধ্যে প্রদর্শনযোগ্য DNS-SD&apos;র তালিকা, কমা চিহ্ন দ্বারা বিভাজিত</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="স্থানীয় DNS-SD পরিসেবা প্রদর্শনের প্রণালী">
+                                                <longdesc>সম্ভব মান &quot;merged&quot;, &quot;separate&quot; ও &quot;disabled&quot;।</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="SMB ওয়ার্ক-গ্রুপ">
+                                                <longdesc>ব্যবহারকারী যে Windows নেটওয়ার্কিং ওয়ার্কগ্রুপ অথবা ডোমেইনের অংশ। নতুন ওয়ার্কগ্রুপ সম্পূর্ণরূপে সক্রিয় করার জন্য ব্যবহারকারীকে সম্ভবত লগ-আউট করে পুনরায় লগ-ইন করতে হবে।</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

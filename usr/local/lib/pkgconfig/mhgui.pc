@@ -1,0 +1,13 @@
+prefix=/usr/local
+exec_prefix=/usr/local
+libdir=${prefix}/lib
+includedir=/usr/local/include
+
+Name: mhgui
+Description: A simple GUI library for MakeHuman
+Version: 0.2
+Requires: 
+Conflicts: 
+Libs: -L${libdir} -lmhgui
+Cflags: -I${includedir}
+

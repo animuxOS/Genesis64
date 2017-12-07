@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+  remove)
+    ldconfig
+
+    dpkg-divert --divert /usr/bin/ldd.ia32-libs --quiet --rename --package ia32-libs --remove /usr/bin/ldd
+    ;;
+esac
+
+

@@ -1,0 +1,38 @@
+#!/bin/sh
+
+SYSTEMCONFIG_FILE="/etc/sunflowrc"
+USERCONFIG_FILE="${HOME}/.sunflowrc"
+JAR_FILE="/usr/share/java/sunflow.jar"
+
+# Save environment options
+save_SUNFLOW_JAVA=$SUNFLOW_JAVA
+save_SUNFLOW_JAVA_OPTIONS=$SUNFLOW_JAVA_OPTIONS
+save_SUNFLOW_OPTIONS=$SUNFLOW_OPTIONS
+
+# System-wide configuration
+if [ -f "$SYSTEMCONFIG_FILE" ]; then
+	. "$SYSTEMCONFIG_FILE"
+fi
+
+# Per-user configuration
+if [ -f "$USERCONFIG_FILE" ]; then
+	. "$USERCONFIG_FILE"
+fi
+
+# Restore environment options
+if [ ! -z "$save_SUNFLOW_JAVA" ]; then
+	SUNFLOW_JAVA=$save_SUNFLOW_JAVA
+fi
+if [ ! -z "$save_SUNFLOW_JAVA_OPTIONS" ]; then
+	SUNFLOW_JAVA_OPTIONS=$save_SUNFLOW_JAVA_OPTIONS
+fi
+if [ ! -z "$save_SUNFLOW_OPTIONS" ]; then
+	SUNFLOW_OPTIONS=$save_SUNFLOW_OPTIONS
+fi
+
+# Default: use the alternatives system
+if [ -z "$SUNFLOW_JAVA" ]; then
+	SUNFLOW_JAVA=java
+fi
+
+$SUNFLOW_JAVA $SUNFLOW_JAVA_OPTIONS -jar "$JAR_FILE" $SUNFLOW_OPTIONS "$@"

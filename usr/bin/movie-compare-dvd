@@ -1,0 +1,130 @@
+#!/bin/sh
+
+# Copyright (c) 2005-2007, Sven Berkvens-Matthijsse
+# 
+# All rights reserved.
+# 
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 
+# * Redistributions of source code must retain the above copyright
+#   notice, this list of conditions and the following disclaimer.
+# 
+# * Redistributions in binary form must reproduce the above copyright
+#   notice, this list of conditions and the following disclaimer in the
+#   documentation and/or other materials provided with the distribution.
+# 
+# * Neither the name of deKattenFabriek nor the names of its
+#   contributors may be used to endorse or promote products derived from
+#   this software without specific prior written permission.
+# 
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+# Botch on errors
+set -e
+
+# Get the name of the directory to check
+
+if [ "$#" != 2 ]
+then
+	echo "Usage: movie-compare-dvd directory1_to_check directory2_to_check" >&2
+	exit 1
+fi
+
+directory1="$1"
+directory2="$2"
+
+# Check whether the directories exist at all
+
+if [ ! -d "${directory1}" ]
+then
+	echo "<${directory1}> does not exist or is not a directory!" >&2
+	exit 1
+fi
+
+if [ ! -d "${directory2}" ]
+then
+	echo "<${directory2}> does not exist or is not a directory!" >&2
+	exit 1
+fi
+
+# Find the md5, md5sum or openssl program
+
+set -- `echo "${PATH}" | tr ':' ' '`
+program=""
+for path
+do
+	for prog in "md5" "md5sum" "openssl"
+	do
+		if [ -x "${path}/${prog}" ]
+		then
+			if [ "${prog}" = "openssl" ]
+			then
+				program="${path}/${prog} md5"
+			else
+				program="${path}/${prog}"
+			fi
+			break 2
+		fi
+	done
+done
+
+if [ "${program}" = "" ]
+then
+	echo "Cannot find any of the <md5>, <md5sum> or <openssl> programs" >&2
+	echo "in the current PATH. movie-compare-dvd requires one of these" >&2
+	echo "programs to function. Please install one of them and try again." >&2
+	exit 1
+fi
+
+echo "INFO: Using <${program}> to calculate file checksums" >&2
+
+# Find all the checksums of the files in the directories
+
+find -- "${directory1}" -type f | while read -r filename
+do
+	echo -n "Processing ${filename} ... " >&2
+	lfilename="${filename#${directory1}}"
+	lfilename="${lfilename#/}"
+	echo -n "${lfilename}	" | tr '_[A-Z]' '-[a-z]'
+	${program} < "${filename}"
+	echo "done" >&2
+done | sort > /tmp/checksums."$$".dir1
+
+find -- "${directory2}" -type f | while read -r filename
+do
+	echo -n "Processing ${filename} ... " >&2
+	lfilename="${filename#${directory2}}"
+	lfilename="${lfilename#/}"
+	echo -n "${lfilename}	" | tr '_[A-Z]' '-[a-z]'
+	${program} < "${filename}"
+	echo "done" >&2
+done | sort > /tmp/checksums."$$".dir2
+
+echo "" >&2
+
+if cmp "/tmp/checksums.$$.dir1" "/tmp/checksums.$$.dir2"
+then
+	echo "The files are the same!" >&2
+	rm -f "/tmp/checksums.$$.dir1" "/tmp/checksums.$$.dir2"
+	exit 0
+fi
+
+echo "The files are NOT the same!" >&2
+diff "/tmp/checksums.$$.dir1" "/tmp/checksums.$$.dir2"
+rm -f "/tmp/checksums.$$.dir1" "/tmp/checksums.$$.dir2"
+exit 1
+
+# vim:ts=2:sw=2

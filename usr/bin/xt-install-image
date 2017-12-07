@@ -1,0 +1,1034 @@
+#!/usr/bin/perl -w
+
+=head1 NAME
+
+xt-install-image - Install a fresh copy of GNU/Linux into a directory
+
+=cut
+
+=head1 SYNOPSIS
+
+  xt-install-image [options]
+
+  Help Options:
+   --help           Show this scripts help information.
+   --manual         Read this scripts manual.
+   --version        Show the version number and exit.
+
+  Debugging Options:
+   --verbose        Be verbose in our execution.
+
+  Mandatory Options:
+   --location       The location to use for the new installation
+   --dist           The name of the distribution which has been installed.
+
+  Misc Options:
+   --arch           Pass the given arch setting to debootstrap or rpmstrap.
+   --config         Read the specified config file in addition to the global
+                    configuration file.
+   --mirror         The mirror to use when installing with 'debootstrap'.
+
+  Installation Options:
+   --install-method Specify the installation method to use.
+   --install-source Specify the installation source to use.
+
+  All other options from xen-create-image will be passed as environmental
+ variables.
+
+=cut
+
+
+=head1 NOTES
+
+  This script is invoked by xen-create-image after to create a new
+ distribution of Linux.  Once the script has been created the companion
+ script xt-customize-image will be invoked to perform the network
+ configuration, etc.
+
+
+=cut
+
+=head1 INSTALLATION METHODS
+
+  There are several available methods of installation, depending upon the
+ users choice.  Only one option may be chosen at any given time.
+
+  The methods available are:
+
+=over 8
+
+=item B<debootstrap>
+Install the distribution specified by the B<--dist> argument using the debootstrap.  If you use this option you must specify a mirror with B<--mirror>.
+
+=item B<copy>
+Copy the given directory recursively.  This local directory is assumed to contain a complete installation.  Specify the directory to copy with the B<--install-source> argument.
+
+=item B<rinse>
+Install the distribution specified by B<--dist> using the rinse command.
+
+=item B<rpmstrap>
+Install the distribution specified by B<--dist> using the rpmstrap command.
+
+=item B<tar>
+Untar a .tar file into the new installation location.  This tarfile is assumed to contain a complete archived system.   Specify the directory to copy with the B<--install-source> argument.
+
+=back
+
+=cut
+
+
+=head1 AUTHOR
+
+ Steve
+ --
+ http://www.steve.org.uk/
+
+=cut
+
+
+=head1 LICENSE
+
+Copyright (c) 2005-2007 by Steve Kemp.  All rights reserved.
+
+This module is free software;
+you can redistribute it and/or modify it under
+the same terms as Perl itself.
+The LICENSE file contains the full text of the license.
+
+=cut
+
+
+use strict;
+use Env;
+use File::Copy;
+use Getopt::Long;
+use Pod::Usage;
+
+
+#
+#  Configuration values read from the command line.
+#
+my %CONFIG;
+
+#
+# Release number.
+#
+my $RELEASE = '3.9';
+
+
+#
+# Dispatch table mapping installation types to their names.
+#
+# The names are the methods, and the hash keys are:
+#
+#  sub           The routine to execute.
+#  needBinary    If set the name of an executable we need to exist.
+#  needFile      Defined if we need an install-source file specified.
+#  needDirectory Defined if we need an install-source directory specified.
+#
+#
+my %dispatch =
+  (
+   "copy" =>
+     {
+               sub    => \&do_copy,
+        needBinary    => "/bin/cp",
+        needDirectory => 1,
+     },
+   "debootstrap" =>
+     {
+               sub => \&do_debootstrap,
+        needBinary => "/usr/sbin/debootstrap",
+     },
+   "image-server" =>
+     {
+               sub => \&do_image_server,
+           needURL => 1,
+     },
+   "rinse" =>
+     {
+               sub => \&do_rinse,
+        needBinary => "/usr/bin/rinse",
+     },
+   "rpmstrap" =>
+     {
+               sub => \&do_rpmstrap,
+        needBinary => "/usr/bin/rpmstrap",
+     },
+   "tar" =>
+     {
+               sub => \&do_tar,
+        needBinary => "/bin/tar",
+          needFile => 1,
+     }
+);
+
+
+
+
+
+#
+#  Read the global configuration file.
+#
+readConfigurationFile( "/etc/xen-tools/xen-tools.conf" );
+
+
+#
+#  Parse the command line arguments.
+#
+parseCommandLineArguments();
+
+
+#
+#  If we received a configuration file then read it.
+#
+if ( $CONFIG{'config'} )
+{
+    my $path = $CONFIG{'config'};
+
+    # If not fully-qualified then read from /etc/xen-tools.
+    if ( $path !~ /^[\/]/ )
+    {
+        $path = "/etc/xen-tools/" . $path;
+    }
+
+    # Read the file, if it exists.
+    readConfigurationFile( $path ) if ( -e $path );
+}
+
+
+#
+#  Check our arguments
+#
+checkArguments();
+
+
+#
+#  Now lookup our installation type and dispatch control to it.
+#
+if ( defined( $CONFIG{'install-method'} ) &&
+      length( $CONFIG{'install-method'} ) )
+{
+
+    #
+    #  Get the entry from the dispatch table.
+    #
+    my $installer = $dispatch{ lc($CONFIG{'install-method'}) };
+
+    if ( defined( $installer ) )
+    {
+        #
+        #  If we found it.
+        #
+
+        # Do we need to test for a binary.
+        if  ( ( $installer->{'needBinary'} ) &&
+              ( ! -x $installer->{'needBinary'} ) )
+        {
+            print "The following required binary for the installation was not found\n";
+            print "\t" . $installer->{'needBinary'} . "\n";
+            exit 1;
+        }
+
+        # Do we need a directory specified as the installation source?
+        if ( ( $installer->{'needDirectory'} ) &&
+             ( ! $CONFIG{'install-source'} || ! -d $CONFIG{'install-source'} ) )
+        {
+            print "Please specify the source directory with --install-source\n";
+            if ( $CONFIG{'install-source'} )
+            {
+                print "The specified directory $CONFIG{'install-source'} does not exist.\n";
+            }
+            exit 1;
+        }
+
+        # Do we need a file specified as the installation source?
+        if ( ( $installer->{'needFile'} ) &&
+             ( ! $CONFIG{'install-source'} || ! -e $CONFIG{'install-source'} ) )
+        {
+            print "Please specify the source file with --install-source\n";
+
+            if ( $CONFIG{'install-source'} )
+            {
+                print "The specified file $CONFIG{'install-source'} does not exist.\n";
+            }
+            exit 1;
+        }
+
+        # Do we need an URL specified as the installation source?
+        if ( ( $installer->{'needURL'} ) &&
+             ( ! $CONFIG{'install-source'} ||
+               ( $CONFIG{'install-source'} !~ /^http/i ) ) )
+        {
+            print "Please specify the image server URL with --install-source\n";
+            exit 1;
+        }
+
+
+
+        #
+        #  Now we can call the appropriate handler.
+        #
+        $installer->{'sub'}->();
+
+        #
+        #  Did the operation succeed?
+        #
+        #  Test that we have some "standard" files present.
+        #
+        foreach my $file ( qw( /bin/ls /bin/cp ) )
+        {
+            if ( ! -x $CONFIG{'location'} . $file )
+            {
+                print "The installation of the new system has failed.\n";
+                print "\n";
+                print "The system is missing the common file: $file\n";
+                exit 1;
+            }
+        }
+
+        #
+        #  All done.
+        #
+        exit 0;
+    }
+    else
+    {
+        print "The installation method specified is invalid.\n";
+        exit 1;
+    }
+}
+else
+{
+    print "An installation method is mandatory\n";
+    exit 1;
+}
+
+
+
+
+
+
+
+=begin doc
+
+  Read the specified configuration file, and update our global configuration
+ hash with the values found in it.
+
+=end doc
+
+=cut
+
+sub readConfigurationFile
+{
+    my ($file) = ( @_ );
+
+    # Don't read the file if it doesn't exist.
+    return if ( ! -e $file );
+
+
+    my $line = "";
+
+    open( FILE, "<", $file ) or die "Cannot read file '$file' - $!";
+
+    while (defined($line = <FILE>) )
+    {
+        chomp $line;
+        if ($line =~ s/\\$//)
+        {
+            $line .= <FILE>;
+            redo unless eof(FILE);
+        }
+
+        # Skip lines beginning with comments
+        next if ( $line =~ /^([ \t]*)\#/ );
+
+        # Skip blank lines
+        next if ( length( $line ) < 1 );
+
+        # Strip trailing comments.
+        if ( $line =~ /(.*)\#(.*)/ )
+        {
+            $line = $1;
+        }
+
+        # Find variable settings
+        if ( $line =~ /([^=]+)=([^\n]+)/ )
+        {
+            my $key = $1;
+            my $val = $2;
+
+            # Strip leading and trailing whitespace.
+            $key =~ s/^\s+//;
+            $key =~ s/\s+$//;
+            $val =~ s/^\s+//;
+            $val =~ s/\s+$//;
+
+            # command expansion?
+            if ( $val =~ /(.*)`([^`]+)`(.*)/ )
+            {
+                # store
+                my $pre  = $1;
+                my $cmd  = $2;
+                my $post = $3;
+
+                # get output
+                my $output = `$cmd`;
+                chomp( $output );
+
+                # build up replacement.
+                $val = $pre . $output . $post;
+            }
+
+            # Store value.
+            $CONFIG{ $key } = $val;
+        }
+    }
+
+    close( FILE );
+}
+
+
+
+=begin doc
+
+  Parse the command line arguments this script was given.
+
+=end doc
+
+=cut
+
+sub parseCommandLineArguments
+{
+    my $HELP    = 0;
+    my $MANUAL  = 0;
+    my $VERSION = 0;
+
+    #
+    #  Parse options.
+    #
+    GetOptions(
+               # Mandatory
+               "location=s",     \$CONFIG{'location'},
+               "dist=s",         \$CONFIG{'dist'},
+               "hostname=s",     \$CONFIG{'hostname'},
+
+               # Installation method
+               "install-method=s",  \$CONFIG{'install-method'},
+               "install-source=s",  \$CONFIG{'install-source'},
+
+               # Misc
+               "arch=s",         \$CONFIG{'arch'},
+               "cache=s",        \$CONFIG{'cache'},
+               "config=s",       \$CONFIG{'config'},
+               "mirror=s",       \$CONFIG{'mirror'},
+
+               # Help.
+               "verbose",        \$CONFIG{'verbose'},
+               "help",           \$HELP,
+               "manual",         \$MANUAL,
+               "version",        \$VERSION
+             );
+
+    pod2usage(1) if $HELP;
+    pod2usage(-verbose => 2 ) if $MANUAL;
+
+
+    if ( $VERSION )
+    {
+        my $REVISION      = '$Revision: 1.65 $';
+        if ( $REVISION =~ /1.([0-9.]+) / )
+        {
+            $REVISION = $1;
+        }
+
+        print "xt-install-image release $RELEASE - CVS: $REVISION\n";
+        exit;
+    }
+}
+
+
+
+=begin doc
+
+  Test that the command line arguments we were given make sense.
+
+=end doc
+
+=cut
+
+sub checkArguments
+{
+    #
+    #  We require a location.
+    #
+    if ( ! defined( $CONFIG{'location'} ) )
+    {
+        print "The '--location' argument is mandatory\n";
+        exit 1;
+    }
+
+
+    #
+    #  Test that the location we've been given exists
+    #
+    if ( ! -d $CONFIG{'location'} )
+    {
+        print "The installation directory we've been given doesn't exist\n";
+        print "We tried to use : $CONFIG{'location'}\n";
+        exit 1;
+    }
+
+
+    #
+    #  We require a distribution name.
+    #
+    if ( ! defined( $CONFIG{'dist'} ) )
+    {
+        print "The '--dist' argument is mandatory\n";
+        exit 1;
+    }
+
+
+    #
+    #  Test that the distribution name we've been given
+    # to configure has a collection of hook scripts.
+    #
+    #  If there are no scripts then we clearly cannot
+    # customise it!
+    #
+    my $dir = "/usr/lib/xen-tools/"  . $CONFIG{'dist'} .  ".d";
+
+    if ( ! -d $dir )
+    {
+        print <<E_OR;
+
+  We're trying to configure an installation of $CONFIG{'dist'} in
+ $CONFIG{'location'} - but there is no hook directory for us to use.
+
+  This means we won't know how to configure this installation.
+
+  We'd expect the hook directory to be : $dir
+
+  Aborting.
+E_OR
+        exit 1;
+    }
+
+
+    #
+    #  Test that we received a valid installation type.
+    #
+    my $valid = 0;
+    if ( defined( $CONFIG{'install-method'} ) )
+    {
+        foreach my $recognised ( keys %dispatch )
+        {
+            $valid = 1 if ( lc($CONFIG{'install-method'}) eq lc($recognised) );
+        }
+    }
+    else
+    {
+        $valid = 1;
+    }
+
+    if ( !$valid )
+    {
+        print <<EOF;
+  Please specify the installation method to use.
+
+  For example:
+
+     --install-method=copy        --install-source=/some/path
+     --install-method=debootstrap
+     --install-method=rpmstrap
+     --install-method=tar         --install-source=/some/file.tar
+
+EOF
+        exit;
+    }
+
+}
+
+
+
+
+=begin doc
+
+  A utility method to run a system command.  We will capture the return
+ value and exit if the command fails.
+
+  When running verbosely we will also display any command output.
+
+=end doc
+
+=cut
+
+sub runCommand
+{
+    my ( $cmd ) = (@_ );
+
+    #
+    #  Command start.
+    #
+    $CONFIG{'verbose'} && print "Executing : $cmd\n";
+
+    #
+    #  Copy stderr to stdout, so we can see it, and make sure we log it.
+    #
+    $cmd .= " 2>&1 | tee --append /var/log/xen-tools/$CONFIG{'hostname'}.log";
+
+    #
+    #  Run it.
+    #
+    my $output = `$cmd`;
+
+    if ( $? != 0 )
+    {
+        print "Running command '$cmd' failed.\n";
+        print "Aborting\n";
+        exit;
+    }
+
+    #
+    #  Command finished.
+    #
+    $CONFIG{'verbose'} && print "Finished : $cmd\n";
+
+    return( $output );
+}
+
+
+
+
+=begin doc
+
+  This function will copy all the .deb files from one directory
+ to another as a caching operation which will speed up installations via
+ debootstrap.
+
+=end doc
+
+=cut
+
+sub copyDebFiles
+{
+    my ( $source, $dest ) = ( @_ );
+
+    print "Copying files from $source -> $dest\n";
+
+    #
+    # Loop over only .deb files.
+    #
+    foreach my $file ( sort ( glob( $source . "/*.deb" ) ) )
+    {
+        my $name = $file;
+        if ( $name =~ /(.*)\/(.*)/ )
+        {
+            $name = $2;
+        }
+
+        #
+        #  Only copy if the file doesn't already exist.
+        #
+        if ( ! ( -e $dest . "/" . $name ) )
+        {
+            File::Copy::cp( $file, $dest );
+        }
+    }
+
+    print "Done\n";
+}
+
+
+
+
+
+###
+#
+#  Installation functions follow.
+#
+###
+
+
+
+
+=begin doc
+
+  Install a new image of a distribution using `cp`.
+
+=end doc
+
+=cut
+
+sub do_copy
+{
+    #
+    #  Find the copy command to run from the configuration file.
+    #
+    my $cmd = $CONFIG{'copy-cmd'} ;
+    if ( !defined( $cmd ) )
+    {
+        print "Falling back to default copy command\n";
+        $cmd = '/bin/cp -a $src/* $dest';   # Note: single quotes.
+    }
+
+    #
+    #  Expand the source and the destination.
+    #
+    $cmd =~ s/\$src/$CONFIG{'install-source'}/g;
+    $cmd =~ s/\$dest/$CONFIG{'location'}/g;
+
+    #
+    #  Run the copy command.
+    #
+    runCommand( $cmd );
+}
+
+
+
+
+=begin doc
+
+  Install a new image of Debian using 'debootstrap'.
+
+=end doc
+
+=cut
+
+sub do_debootstrap
+{
+    #
+    #  The command is a little configurable - mostly to allow you
+    # to use cdebootstrap.
+    #
+    my $cmd = $CONFIG{'debootstrap-cmd'} ;
+    if ( !defined( $cmd ) )
+    {
+        print "Falling back to default debootstrap command\n";
+        $cmd = '/usr/sbin/debootstrap';
+    }
+
+
+    #
+    #  Cache from host -> new installation if we've got caching
+    # enabled.
+    #
+    if ( $CONFIG{'cache'} eq "yes" )
+    {
+        print "\nCopying files from host to image.\n";
+        runCommand( "mkdir -p $CONFIG{'location'}/var/cache/apt/archives" );
+        copyDebFiles( "/var/cache/apt/archives", "$CONFIG{'location'}/var/cache/apt/archives" );
+        print( "Done\n" );
+    }
+
+    #
+    #  Propogate --verbose appropriately.
+    #
+    my $EXTRA = '';
+    if ( $CONFIG{'verbose'} )
+    {
+        $EXTRA = ' --verbose';
+    }
+
+    #
+    #  Propogate the --arch argument
+    #
+    if ( $CONFIG{'arch'} )
+    {
+        $EXTRA .= " --arch $CONFIG{'arch'}"
+    }
+
+
+    #
+    #  This is the command we'll run
+    #
+    my $command = "$cmd $EXTRA $CONFIG{'dist'} $CONFIG{'location'} $CONFIG{'mirror'}";
+
+    #
+    #  Run the command.
+    #
+    runCommand( $command );
+
+
+    #
+    #  Cache from the new installation -> the host if we've got caching
+    # enabled.
+    #
+    if ( $CONFIG{'cache'} eq "yes" )
+    {
+        print "\nCopying files from new installation to host.\n";
+        copyDebFiles( "$CONFIG{'location'}/var/cache/apt/archives",
+                      "/var/cache/apt/archives" );
+        print( "Done\n" );
+    }
+
+
+}
+
+
+
+
+=begin doc
+
+  Install a system using the image-server.
+
+  Note:  NON-Advertised ....
+
+=end doc
+
+=cut
+
+sub do_image_server
+{
+    #
+    #  Load the modules we require.
+    #
+    my $test = 'use LWP::UserAgent; use CGI;';
+
+    #
+    #  Test loading the module, if it fails then
+    # we must abort.  We don't want to insist the module
+    # is installed since that adds to the dependencies
+    # which users will not require for the typical installation
+    # method(s).
+    #
+    eval( $test );
+    if ( $@ )
+    {
+        die "The module LDP::UserAgent wasn't found...\n";
+    }
+
+
+    #
+    #  The number of attempts to request the image from our
+    # image server, and the time to sleep between them.
+    #
+    my $attempts = 30;
+    my $sleep    = 30;
+
+
+    #
+    #  Build up the request we're going to send.
+    #
+    my $request = $CONFIG{'install-source'} . "/create.cgi?submit=1";
+
+    #
+    #  Some parameters are hard-wired.
+    #
+    $request .= "&arch=amd64";
+    $request .= "&root_device=/dev/sda";
+    $request .= "&ip1="      . $ENV{'ip1'};
+    $request .= "&dist="     . CGI::escapeHTML( $CONFIG{'dist'} );
+    $request .= "&hostname=" . CGI::escapeHTML( $CONFIG{'hostname'} );
+
+    #
+    #  We only care about some keys
+    #
+    foreach my $k ( qw/ dhcp broadcast gateway netmask  / )
+    {
+        # Skip values which aren't defined.
+        next unless defined $ENV{$k};
+
+        # CGI encode.
+        my $val = CGI::escapeHTML( $ENV{$k} );
+
+        # Add on to the request
+        $request .= "&$k=$val";
+    }
+
+
+    #
+    #  Create a new user agent.
+    #
+    my $ua = LWP::UserAgent->new;
+    $ua->timeout(10);
+    $ua->env_proxy;
+
+    #
+    #  Do the creation step
+    #
+    my $response = $ua->get( $request );
+    if ($response->is_success)
+    {
+        my $content = $response->content;
+
+        if ( $content =~ /fetch.cgi\?session=([^"]+)"/ )
+        {
+            my $session = $1;
+            my $new     = $CONFIG{'install-source'};
+            $new       .= "/fetch.cgi?session=$session";
+            my $attempt = 1;
+
+            # Make sure we don't wait indefinitely.
+            while( $attempt < $attempts )
+            {
+                $CONFIG{'verbose'} && print "Request: [$attempt/$attempts]\n";
+
+                #
+                #  Make a request to see if our tar file is ready yet.
+                #
+                $response = $ua->head( $new );
+                if ( $response->is_success )
+                {
+
+                    #
+                    #  Get the headers
+                    #
+                    my $header  = $response->headers();
+                    my $type    = $header->{'content-type'};
+
+                    #
+                    # OK our file is correct.
+                    #
+                    if ( $type =~ /tar/ )
+                    {
+                        #
+                        #  Download it to the installation root.
+                        #
+                        $ua->get( $new,
+                                  ":content_file" => $CONFIG{'location'} . "/$session.tar"
+                                );
+
+                        #
+                        #  If it worked .. then untar, remove, and return.
+                        #
+                        system( "cd $CONFIG{'location'} && tar --numeric-owner -xf $session.tar && rm -f $CONFIG{'location'}/$session.tar" );
+                        return 1;
+                    }
+                }
+
+                sleep( $sleep );
+                $attempt += 1;
+
+            }
+            print ( "ERROR:  Timeout waiting for image to be ready." );
+            return 0;
+        }
+        else
+        {
+            print( "ERROR:  Failed to find session.  Received this:\n$content\n" );
+            return 0;
+        }
+    }
+    else
+    {
+        print( "ERROR: Submitting the image create request failed:\n" . $response->status_line );
+        return 0;
+    }
+}
+
+
+
+
+=begin doc
+
+  Install a new distribution of GNU/Linux using the rpmstrap tool.
+
+=end doc
+
+=cut
+
+sub do_rinse
+{
+    #
+    #  The command we're going to run.
+    #
+    my $command = "rinse --distribution=$CONFIG{'dist'} --directory=$CONFIG{'location'}";
+
+    #
+    #  Propogate the --arch argument
+    #
+    if ( $CONFIG{'arch'} )
+    {
+        $command .= " --arch $CONFIG{'arch'}"
+    }
+
+
+    #
+    #  Propogate the verbosity setting.
+    #
+    if ( $CONFIG{'verbose'} )
+    {
+        $command .= " --verbose";
+    }
+
+    runCommand( $command );
+}
+
+
+
+=begin doc
+
+  Install a new distribution of GNU/Linux using the rpmstrap tool.
+
+=end doc
+
+=cut
+
+sub do_rpmstrap
+{
+
+    #
+    #  Propogate the verbosity setting.
+    #
+    my $EXTRA='';
+    if ( $CONFIG{'verbose'} )
+    {
+        $EXTRA .= " --verbose";
+    }
+
+    #
+    #  Propogate any arch setting we might have.
+    #
+    if ( $CONFIG{'arch'} )
+    {
+        $EXTRA .= " --arch $CONFIG{'arch'}";
+    }
+
+    #
+    #  Setup mirror if present.
+    #
+    my $mirror = "";
+    $mirror    = $CONFIG{'mirror'} if ( $CONFIG{'mirror'} );
+
+    #
+    #  The command we're going to run.
+    #
+    my $command = "rpmstrap $EXTRA $CONFIG{'dist'} $CONFIG{'location'} $mirror";
+    runCommand( $command );
+}
+
+
+
+
+=begin doc
+
+  Install a new image of a distribution using `tar`.
+
+=end doc
+
+=cut
+
+sub do_tar
+{
+    #
+    #  Find the tar command to run from the configuration file.
+    #
+    my $cmd = $CONFIG{'tar-cmd'} ;
+    if ( !defined( $cmd ) )
+    {
+        print "Falling back to default tar command\n";
+        $cmd = '/bin/tar --numeric-owner -xvf $src';  # Note: single quotes.
+    }
+
+    #
+    #  Expand the tarfile.
+    #
+    $cmd =~ s/\$src/$CONFIG{'install-source'}/g;
+
+    #
+    #  Run a command to copy an installed system into the new root.
+    #
+    runCommand( "cd $CONFIG{'location'} && $cmd" );
+}

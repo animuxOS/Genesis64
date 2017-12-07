@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<westley jah_title="Fly In">
+  <producer id="producer0" in="0" out="74">
+    <property name="mlt_type">producer</property>
+    <property name="mlt_service">colour</property>
+    <property name="resource">blue</property>
+    <property name="meta.fx_cut">1</property>
+    <filter id="filter0" jah_title="fly in">
+      <property name="composite.geometry">45%,45%,10%,10%;24=0,0,100%,100%</property>
+      <property name="composite.fill">1</property>
+      <property name="composite.distort">1</property>
+      <property name="composite.aligned">1</property>
+      <property name="composite.repeat_off">1</property>
+      <property name="composite.mirror_off">1</property>
+      <property name="composite.always_active">1</property>
+      <property name="composite.valign">centre</property>
+      <property name="composite.halign">centre</property>
+      <property name="resource">colour:0x00000000</property>
+      <property name="mlt_type">filter</property>
+      <property name="mlt_service">watermark</property>
+      <property name="reverse">1</property>
+    </filter>
+  </producer>
+</westley>

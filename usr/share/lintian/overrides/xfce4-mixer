@@ -1,0 +1,8 @@
+# These are private libs so this isn't really evil
+xfce4-mixer binary: binary-or-shlib-defines-rpath ./usr/lib/xfce4/panel-plugins/libmixer.so /usr/lib/xfce4/modules
+xfce4-mixer binary: binary-or-shlib-defines-rpath ./usr/lib/xfce4/mcs-plugins/sound_settings.so /usr/lib/xfce4/modules
+xfce4-mixer binary: binary-or-shlib-defines-rpath ./usr/bin/xfce4-mixer /usr/lib/xfce4/modules
+xfce4-mixer binary: binary-or-shlib-defines-rpath ./usr/lib/xfce4/panel-plugins/xfce4-mixer-plugin /usr/lib/xfce4/modules
+
+# xfce4-mixer is part of Xfce, but still is modular
+xfce4-mixer: desktop-command-not-in-package /usr/share/applications/xfce-mixer-settings.desktop xfce-setting-show

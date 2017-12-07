@@ -1,0 +1,33 @@
+#!/bin/sh
+set -e
+
+# Automatically added by dh_installdocs
+if [ "$1" = configure ] && which install-docs >/dev/null 2>&1; then
+	install-docs -i /usr/share/doc-base/kino-manual
+fi
+# End automatically added section
+# Automatically added by dh_installdocs
+if [ "$1" = configure ] && which install-docs >/dev/null 2>&1; then
+	install-docs -i /usr/share/doc-base/kino-manual
+fi
+# End automatically added section
+# Automatically added by dh_installmenu
+if [ "$1" = "configure" ] && [ -x "`which update-menus 2>/dev/null`" ]; then
+	update-menus
+fi
+# End automatically added section
+
+
+PACKAGE="kino"
+
+# create udev rules file
+if [ "$1" = "configure" ]; then
+        # install the udev file only once:
+        #    - the first time the package is installed
+        # OR - the first time the package is upgraded from a version earlier than 2.1.6-5.1
+        if [ -z "$2" ] || dpkg --compare-versions "$2" lt 0.80-1 ; then
+		ln -s ../$PACKAGE.rules /etc/udev/rules.d/035_$PACKAGE.rules
+        fi
+fi
+
+exit 0

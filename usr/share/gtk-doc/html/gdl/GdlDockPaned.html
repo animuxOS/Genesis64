@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>GdlDockPaned</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="GDL Reference Manual">
+<link rel="up" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+<link rel="prev" href="GdlComboButton.html" title="GdlComboButton">
+<link rel="next" href="GdlDockBar.html" title="GdlDockBar">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GdlComboButton.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="gdl-main.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GDL Reference Manual</th>
+<td><a accesskey="n" href="GdlDockBar.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2565684" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2607282" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2573998" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2607224" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id2607252" class="shortcut">Properties</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="GdlDockPaned"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2565684"></a><span class="refentrytitle">GdlDockPaned</span>
+</h2>
+<p>GdlDockPaned</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+                    <a href="GdlDockPaned.html#GdlDockPaned-struct">GdlDockPaned</a>;
+GtkWidget*          <a href="GdlDockPaned.html#gdl-dock-paned-new">gdl_dock_paned_new</a>                  (GtkOrientation orientation);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2573998"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----GtkObject
+               +----GtkWidget
+                     +----GtkContainer
+                           +----<a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a>
+                                 +----<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a>
+                                       +----GdlDockPaned
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2607224"></a><h2>Implemented Interfaces</h2>
+<p>
+GdlDockPaned implements
+ GtkBuildable and  AtkImplementorIface.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2607252"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="GdlDockPaned.html#GdlDockPaned--position">position</a>"                 guint                 : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2607282"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608465"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2608476"></a><h3>
+<a name="GdlDockPaned-struct"></a>GdlDockPaned</h3>
+<a class="indexterm" name="id2608488"></a><pre class="programlisting">typedef struct _GdlDockPaned GdlDockPaned;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2608504"></a><h3>
+<a name="gdl-dock-paned-new"></a>gdl_dock_paned_new ()</h3>
+<a class="indexterm" name="id2608516"></a><pre class="programlisting">GtkWidget*          gdl_dock_paned_new                  (GtkOrientation orientation);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>orientation</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608574"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2608585"></a><h3>
+<a name="GdlDockPaned--position"></a>The "<code class="literal">position</code>" property</h3>
+<a class="indexterm" name="id2608048"></a><pre class="programlisting">  "position"                 guint                 : Read / Write</pre>
+<p>Position of the divider in pixels.</p>
+<p>Allowed values: &lt;= G_MAXINT</p>
+<p>Default value: 0</p>
+</div>
+</div>
+</div>
+</body>
+</html>

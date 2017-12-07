@@ -1,0 +1,911 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="சாளரத்தின் அகலம்">
+                                                        <longdesc>காட்ட வேண்டிய சாளரத்தின் உயரம்</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="சாளரத்தின் உயரம்">
+                                                        <longdesc>காட்ட வேண்டிய சாளரத்தின் உயரம்</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="பதிக் கீபைண்டிங்கை இயக்க கட்டளை">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_N கீபைன்டிங்கை அதனோடு தொடர்புடைய கட்டளையோடு இணைக்கும்.இந்த கட்டளைக்காக run_command_N கீபைன்டிங்கை அழுத்துவதால் command_N இயங்கும்.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="சாளர திரைவெட்டு கட்டளை">
+                                                        <longdesc>The /apps/metacity/global_keybindings/run_command_window_screenshot விசை இந்த கட்டளை செயல்படுத்த வேண்டிய கீபைன்டிங்கை குறிக்கும்</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="திரைவெட்டு கட்டளை">
+                                                        <longdesc> /apps/metacity/global_keybindings/run_command_screenshot கட்டளை அமைப்பை துவக்க பயன்படும் கீபைன்டிங்கை குறிக்கும்</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="குறிப்பிட்ட கட்டளையை இயக்கு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="முனையம் ஒன்றை இயக்கு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="சாளரத்தின் திரைவெட்டை பதிவு செய்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="திரைவெட்டை பதிவு செய்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="பயன்பாட்டு உரையாடலை இயக்கும் பலகத்தை காட்டு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="பலக மெனுவை காட்டு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="பணியிடத்தை ஒன்றின் கீழ் ஒன்றாக நகர்த்து">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="பணியிடத்தை ஒன்றின் மேல் ஒன்றாக நகர்த்து">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="பணியிடத்தை வலது பக்கம் நகர்த்து">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="பணியிடத்தை இடது பக்கம் ாக நகர்த்து">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="பணியிடம் 11 க்கு மாறு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="பணியிடம் 11 க்கு மாறு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="பணியிடம் 10 க்கு மாறு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="பணியிடம் 9 க்கு மாறு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="பணியிடம் 8 க்கு மாறு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="பணியிடம் 7 க்கு மாறு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="பணியிடம் 6 க்கு மாறு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="பணியிடம் 5 க்கு மாறு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="பணியிடம் 4 க்கு மாறு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="பணியிடம் 3 க்கு மாறு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="பணியிடம் 2 க்கு மாறு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="பணியிடம் 1க்கு மாறு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="எல்லா சாளரங்களையும் மறைந்து மேல்மேசையை காட்டு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="பலகம் மற்றும் மேல்மேசையில் பின்னோக்கி நகரவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="பலகம் மற்றும் மேல்மேசையில் உடனடியாக நகரவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="மேல்மேசையில் பின்னோக்கி நகரவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="சாளரத்திற்கிடையில் உடனடியாக நகரவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="மேல்மேசையில் ஒரு பயன்பாட்டின் சாளரங்களிடையே துள்ளு சாளரத்துடன் பின்னோக்கி நகரவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="ஒரு பயன்பாட்டின் சாளரங்களிடையே துள்ளு சாளரத்துடன் உடனடியாக நகரவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="மேல்மேசையில் ஒரு பயன்பாட்டின் சாளரங்களிடையே உடனடியாக பின்னோக்கி நகரவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="ஒரு பயன்பாட்டின் சாளரங்களிடையே உடனடியாக நகரவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="பலகம் மற்றும் மேல்மேசையில் தோன்றும் சாளரத்தோடு பின்னோக்கி நகரவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="பலகம் மற்றும் மேல்மேசையில் தோன்றும் சாளரத்தோடு நகரவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="தோன்றும் சாளரக்காட்சியை பயன்படுத்தி சாளரத்தின் குறியை பினோக்கி மாற்றவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="சாளரம் மற்றும் தோன்றும் சாளரத்தோடு நகரவும்">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="சாளரத்தை திரையின் மேற்கே நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="சாளரத்தை திரையின் கிழக்கே நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="சாளரத்தை திரையின் தெற்கே நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="சாளரத்தை திரையின் வடக்கே நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="தென் கிழக்கு மூலைக்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="தென் மேற்கு மூலைக்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="வட கிழக்கு மூலைக்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="வட மேற்கு மூலைக்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="சாளரத்தை செங்குத்தாக பெரிதாக்கு ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="சாளரத்தை இடவலமாக பெரிதாக்கு ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="மற்ற சாளரத்திற்கு கீழே சாளரத்தை வைக்கவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="மற்ற சாளரத்திற்கு மேல் இந்த சாளரத்தை உயர்த்து">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="தெளிவற்ற சாளரத்தை உயர்த்து, அல்லது சிறிதாக்கு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="ஒருபணியிடத்திற்கு கீழே சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="ஒருபணியிடத்திற்கு மேலே சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="ஒருபணியிடத்திற்கு வலதுபக்கம் சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="ஒருபணியிடத்திற்கு இடது பக்கம் சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="பணியிடம் 12 க்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="பணியிடம் 11 க்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="பணியிடம் 10 க்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="பணியிடம் 9 க்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="பணியிடம் 8 க்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="பணியிடம் 7 க்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="பணியிடம் 6 க்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="பணியிடம் 5 க்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="பணியிடம் 4 க்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="பணியிடம் 3 க்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="பணியிடம் 2 க்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="பணியிடம் 1 க்கு சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="சாளரத்தை அனைத்து பணியிடத்திற்கும் நகர்த்து">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="சாளரத்தின் அளவை மாற்று">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="சாளரத்தை நகர்த்தவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="சாளரத்தை சிறிதாக்கு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="சாளரம் மூடவும்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="எப்போதும் நிழை நிலைக்கு செல்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="சாளரத்தை சிறிதாக்கு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="சாளரத்தை பெரிதாக்கு">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="எப்போதும் பெரிய சாளர நிலைக்கு செல்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="எப்போதும் மேல் நிலைக்கு நகர்த்து">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="எப்போதும் முழுதிரை பாங்கிற்கு செல்">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="சாளர மெனுவை செயல்படுத்து">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="பணியிடத்தின் பெயர்">
+                                                        <longdesc>பணியிடத்தின் பெயர்</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="பழைய மற்றும் உடைந்த பயன்பாடுகளாள் செயல்நீக்கம் செய்யப்பட்ட காணாமல் போன வசதிகள்">
+                                                        <longdesc>சில நிரல்கள் சாளர மேலாளர் குறிப்பிடும் வரையரைகளை மீறுவதால் பிரச்சினைகள் ஏற்படுகிறன. இந்த தேர்வு மெட்டாசிட்டி ஐ வெகு சரியான பாங்கில் அமைக்கும். இதனால் சரியில்லாத பயன்பாடுகள் தவிர பயனருக்கு எப்போதுமே சரியான பயன்பாடு இடைமுகம் கிடைக்கும். </longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(செயல்படுத்தப்படாத) உலாவல் பயன்பாட்டின் படி சாளரத்தின் படி அல்ல">
+                                                        <longdesc>உண்மையெனில், மெட்டாசிட்டி சாளரத்தில் இல்லாமல் பயன்பாட்டில் இயங்கும். இந்த கொள்கை சிறிது சிக்கலானது என்றாலும், மேக் போன்ற பயன்பாடு-சார்ந்த அமைப்புக்கு மிக பயனுள்ளது, சாளரத்தை பயன்பாடு-சார்ந்து அமைக்கும் போது பயன்பாடோடு தொடர்புடைய சாளரங்கள் மேலெழும்பும்.மேலும் இது மற்ற சாளரங்களை பாதிக்காது. ஆனால் இதன் அமைப்பு சற்றே கேள்விக்குட்பட்டது. ஆனால் அமைப்புகள் பயன்பாடு சார்ந்த மற்றும் சாளரம் சார்ந்தவைகளின் விளக்கத்தை தெரிந்துகொள்வது நல்லது. மேலும் பயன்பாடு-சார்ந்தவை முடிக்கப்படாத நிலையில் உள்ளது</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="உண்மையெனில், குறைவான வளத்தை பயன்படுத்தும்">
+                                                        <longdesc>உண்மையெனில், மெட்டாசிட்டி குறைவான கருத்து மற்றும் குறைந்த நேர் மாற்றத்திற்கும் வசதி செய்து தரும், கம்பி சட்டங்களை பயன்படுத்தி, அசைவூட்டங்களை தவிர்க்கும். இதனால் பயனீட்டாளரின் பயன்பாடுகளில் குறிப்பிடும்படி குறைகள்  இருக்கும் , ஆனால் பழைய பயன்பாடுகள் மற்றும் முனைய சேவைகள் பாகுபாடு பாராமல் வேலை செய்ய அனுமதிக்கும். எனினும் வயர்ப்ரேம் வசதி அணுகல் தேர்வு இருப்பின் செயலிழக்கப்படும்.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="பலவின் ஆக்க மேலாளர்">
+                                                        <longdesc>மெட்டாசிட்டி பலவின் ஆக்க மேலாளரா என நிர்ணயிக்கிறது</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="காட்சி மணி வகை">
+                                                        <longdesc>மணி ஒலிப்பதை காட்சியாக காட்டுவது எப்படி என்பதை மெட்டாசிட்டி குறிப்பிடும். தற்போது இரண்டு மதிப்புகள் உள்ளது &quot;முழுதிரை: முழுதிரையும் கருப்பு வெள்ளையாக தெரியும். &quot;சட்ட_காட்சி&quot; தலைப்புப்பட்டியில் பயன்பாட்டின் சின்னம் மணியோசையை அனுப்பும். மணியோசையை அனுப்பிய பயன்பாடு தெரியாத பயன்பாடு(இது இயல்பான &quot;கணினி ஒலிக்கு&quot; பொருந்தும்)</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="கணினி ஒலி கேட்கும்படி">
+                                                        <longdesc>கணினி அல்லது பயன்பாட்டால் மணியை காட்டுவதற்கு பதில் கேட்கக்கூடிய ஒலியை உருவாக்க முடியுமா. </longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="்சி மணகாட்சியாக ியை செயல்படுத்து">
+                                                        <longdesc>கணினி ஒரு பெல் அல்லது பீப் எச்சரிக்கை தரும் போது ஒரு காட்சி குறிப்பை தரும். இது காது சரியாக கேட்காதவர்களுக்கும் சத்தமான சூழலில் வேலை செய்பவர்களுக்கும் உபயோகமாகும்.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="பணியிடங்களின் எண்ணிக்கை">
+                                                        <longdesc>பணிக்களங்களின் எண். இது பூஜ்யமாக இருக்க வேண்டும்.  அதிகபட்சம் வரையறுக்கப்பட்டு இருக்க வேண்டும். இல்லாவிடில் தவறுதலாக் மிக அதிக பணிக்களம் கேட்கப்பட்டால் மேல்மேசை பயன்படுத்த முடியாததாகி விடும்.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="சாளர தலைப்பு எழுத்துரு">
+                                                        <longdesc>சாளரத்தின் தலைப்புப்பட்டிக்கான  எழுத்துருவை விளக்கும் எழுத்துரு விளக்க சரம். titlebar_font_size தேர்வில் 0 ஐ அமைத்தால் மட்டும் விளக்க சரத்தில் உள்ள அளவு பயன்படுத்தப்படும். மேலும் titlebar_uses_desktop_font தேர்வை உண்மை என அமைத்தால் இந்த தேர்வு செயல்படாது. </longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="சாளர தலைப்பிம் நிலையான கணினி எழுத்துருவை பயன்படுத்து">
+                                                        <longdesc>உண்மையெனில், titlebar_font தேர்வை தவிர்கும். நிலையான எழுத்துருவை சாளர தலைப்பில் காட்டும்.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="தற்போதைய கருப்பொருள்">
+                                                        <longdesc>கருப்பொருள் ஓரம், தலைப்புப்பட்டி போன்றவைகளின் தோற்றத்தை கண்டறியும்.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="தானாக துவக்க தேர்வில் தாமதம் மில்லிசெகண்டில்">
+                                                        <longdesc>(_r)தானாக துவங்குதல் உண்மையென்று அமைக்கப்பட்டால் சாளரம் எடுத்துக்கொள்ளும் தாமத நேரம். தாமதம் 1000 நொடிகளில் குறிக்கப்பட்டுள்ளது</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="குறிக்கப்பட்ட சாளரத்தை தானாக ஏற்று">
+                                                        <longdesc>உண்மையெனில், குவியும் பாணி &quot;sloppy&quot; அல்லது &quot;mouse&quot; எனில் சிறிது தாமதத்திற்கு பிறகு சாளரம் தானாக மேலெழும் (தாமதம் auto_raise_delay விசையால் குறிக்கப்படும்). இதற்கும் ஒரு சாளரத்தை சொடுக்கி மேலெழச் செய்வதற்கும் அல்லது இழுத்து விடுதலில் ஒரு சாளரத்தில் நுழைவதற்கும் சம்பந்தமில்லை.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="தலைப்புப்பட்டியை வலது சொடுக்கு செய்யும் போது நிகழவேண்டியது">
+                                                        <longdesc>இந்த தேர்வு தலைப்பு பட்டியில் வலது சொடுக்கு செய்வதின் பலனை நிர்ணயிக்கிறது. இப்போதைய செல்லுபடியாகும் விருப்பங்கள் &apos;toggle_shade&apos;, -இது சாளரத்தை நிழல் அல்லது நிழலற்றதாக ஆக்கும். &apos;toggle_maximize&apos; சாளரத்தை பெரிதாக்கும் அல்லது பெரிதாகியதை மீட்கும், &apos;minimize&apos; சாளரத்தை சிறிதாக்கும் அல்லது சிறிதாக்கியியதை மீட்கும், மற்றும்  &apos;none&apos; -எதுவும் செய்யாது.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="தலைப்புப்பட்டியை நடு சொடுக்கு செய்யும் போது நிகழவேண்டியது">
+                                                        <longdesc>இந்த தேர்வு தலைப்பு பட்டியில் நடு சொடுக்கு செய்வதின் பலனை நிர்ணயிக்கிறது. இப்போதைய செல்லுபடியாகும் விருப்பங்கள் &apos;toggle_shade&apos;, -இது சாளரத்தை நிழல் அல்லது நிழலற்றதாக ஆக்கும். &apos;toggle_maximize&apos; சாளரத்தை பெரிதாக்கும் அல்லது பெரிதாகியதை மீட்கும், &apos;minimize&apos; சாளரத்தை சிறிதாக்கும் அல்லது சிறிதாக்கியியதை மீட்கும், மற்றும்  &apos;none&apos; -எதுவும் செய்யாது.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="தலைப்புப்பட்டியை இரண்டு-சொடுக்கு செய்யும் போது நிகழவேண்டியது">
+                                                        <longdesc>இந்த தேர்வு தலைப்பு பட்டியில் இரட்டை சொடுக்கு செய்வதின் பலனை நிர்ணயிக்கிறது. இப்போதைய செல்லுபடியாகும் விருப்பங்கள் &apos;toggle_shade&apos;, -இது சாளரத்தை நிழல் அல்லது நிழலற்றதாக ஆக்கும். &apos;toggle_maximize&apos; சாளரத்தை பெரிதாக்கும் அல்லது பெரிதாகியதை மீட்கும், &apos;minimize&apos; சாளரத்தை சிறிதாக்கும் அல்லது சிறிதாக்கியியதை மீட்கும், மற்றும்  &apos;none&apos; -எதுவும் செய்யாது.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="முன்னிருத்தம் மற்றா பயனர் ஊடாடலுக்கு பக்க விளைவாக இருக்க வேண்டுமா?">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="புதிய சாளரம் எப்படி முன்னிலை பெறும் என கட்டுப்படுத்துகிறது">
+                                                        <longdesc>இந்த தேர்வு புதிதாக உருவாக்கிய சாளரங்கல் மீது மேலும் கூடுதல் கட்டுப்பாடு தருகிறது. இதில் இரண்டு மதிப்புகள் இருக்கக்கூடும். &quot;smart&quot;  என்பது பயனரின் வழக்கமான குவிப்பு பாங்கை தரும். &quot;strict&quot; என்பது முனையத்திலிருந்து துவக்கிய சாளரத்துக்கு முன்னிலை தராது.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="சாளர குறி பாங்கு">
+                                                        <longdesc>சாளர துவக்க குறி சாளரங்கள் எவ்வாறு செயல்படுத்தப்படுகிறது என்பதை குறிப்பிடும். இதில் மூன்றுவித மதிப்புகள் இருக்கும்,&quot;க்ளிக்&quot; எனில் க்ளிக் செய்யும் போது சாளரம் குறியை நகர்த்தும்.&quot;sloppy&quot; எனில் சுட்டி சாளரத்தில் நுழையும் போது செயல்படும் மற்றும்  &quot;mouse&quot; எனில் சுட்டி சாளரதில் நுழையும் போது செயல்படும்.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="தலைப்புப்பட்டியில் பட்டன்கள் அடுக்கப்பட்ட நிலை">
+                                                        <longdesc>தலைப்புப்பட்டியில் பட்டன்கள் அடுக்கப்பட்ட நிலை.&quot;menu:minimize,maximize,close&quot; என மதிப்புகள் இருக்க வேண்டும்; அரைப்புள்ளி சாளரத்தின் இடது மூலையிலிருந்து வலது மூலையை தனிப்படுத்த பயன்படும். மேலும் பட்டன் பெயர்கள் கமா வால் பிரிக்கப்பட்டிருக்கும் பொய் பட்டனுக்கு அனுமதி இல்லை. தெரியாத பட்டன் பெயர்கள் தவிர்க்கப்பட்டு மெட்டா சிட்டியின் அடுத்த பதிப்பின் சேர்க்கப்படும்.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="சாளர க்ளிக் செயல்பாட்டின் போது பயன்பட வேண்டிய மாற்றி">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="இயல்பான ான பொருள் காட பயன்பாடுகள்ின்">
+                                                                <longdesc>கோப்புகளை பார்க்க தேவைப்படும் பயன்பாடுகளுக்கு பொருள்கள் தேவை. அளவுரு %s அதன் URI யால் மாற்றப்படும், அளவுரு %c அதன் பொருள் அடையாளத்தால் மாற்றப்படும்</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="இயல்பான முனையத்திற்கான Exec அளவுரு">
+                                                                <longdesc>exec அளவுரு பயன்படுத்த வேண்டிய இயல்பான முனைய பயன்பாடு</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="இயல்பான முனைய பயன்பாடுகள்">
+                                                                <longdesc>முனையத்திறகு தேவைப்படும் இயல்பான முனைய பயன்பாடு </longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="கட்டளையை முனையத்தில் இயக்கு">
+                                                                <longdesc>இந்த வகை URL ஐ முனையத்தில் இயக்க முடியுமெனில் உண்மை</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;h323&quot; கையாள்வதற்கான URL">
+                                                                <longdesc>&quot;h323&quot; ஐ கையாள பயன்படும் URL செயல்படுத்தப்பட்டது</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="குறிப்பிட்ட கட்டளை &quot;h323&quot; URL ஐ கையாளுமா">
+                                                                <longdesc>உண்மை, &quot;command&quot; விசையில் குறிக்கப்பட்ட கட்டளை &quot;h323&quot; URL ஐ கையாளுமெனில்.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="கட்டளையை முனையத்தில் இயக்கு">
+                                                                <longdesc>இந்த வகை URL ஐ முனையத்தில் இயக்க முடியுமெனில் உண்மை</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;callto&quot;கையாள்வதற்கான URL">
+                                                                <longdesc>&quot;callto&quot; ஐ கையாள பயன்படும் URL செயல்படுத்தப்பட்டது</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="குறிப்பிட்ட கட்டளை &quot;callto&quot;  URL ஐ கையாளுமா">
+                                                                <longdesc>உண்மை, &quot;command&quot; விசையில் குறிக்கப்பட்ட கட்டளை &quot;aim&quot; URL ஐ கையாளுமெனில்.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="கட்டளையை முனையத்தில் இயக்கு">
+                                                                <longdesc>இந்த வகை URL ஐ முனையத்தில் இயக்க முடியுமெனில் உண்மை</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;mailto&quot; கையாள்வதற்கான URL">
+                                                                <longdesc>&quot;mailto&quot;ஐ கையாள பயன்படும் URL செயல்படுத்தப்பட்டது</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="குறிப்பிட்ட கட்டளை &quot;mailto&quot;URL ஐ கையாளுமா">
+                                                                <longdesc>உண்மை, &quot;command&quot; விசையில் குறிக்கப்பட்ட கட்டளை &quot;mailto&quot; URL ஐ கையாளுமெனில்.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="கட்டளையை முனையத்தில் இயக்கு">
+                                                                <longdesc>இந்த வகை URL ஐ முனையத்தில் இயக்க முடியுமெனில் உண்மை</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;https&quot; கையாள்வதற்கான URL">
+                                                                <longdesc>&quot;https&quot; ஐ கையாள பயன்படும் URL செயல்படுத்தப்பட்டது</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="குறிப்பிட்ட கட்டளை &quot;https&quot; URL ஐ கையாளுமா">
+                                                                <longdesc>உண்மை, &quot;command&quot; விசையில் குறிக்கப்பட்ட கட்டளை &quot;ghelp&quot; URL ஐ கையாளுமெனில்.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="கட்டளையை முனையத்தில் இயக்கு">
+                                                                <longdesc>இந்த வகை URL ஐ முனையத்தில் இயக்க முடியுமெனில் உண்மை</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="கட்டளையை முனையத்தில் இயக்கு">
+                                                                <longdesc>இந்த வகை URL ஐ முனையத்தில் இயக்க முடியுமெனில் உண்மை</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;http&quot; கையாள்வதற்கான URL">
+                                                                <longdesc>&quot;http&quot; ஐ கையாள பயன்படும் URL செயல்படுத்தப்பட்டது</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="குறிப்பிட்ட கட்டளை &quot;http&quot; URL ஐ கையாளுமா">
+                                                                <longdesc>&quot;command&quot; விசையில் குறிக்கப்பட்ட கட்டளை &quot;http&quot; URL ஐ கையாளுமெனில்,உண்மை.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="கட்டளையை முனையத்தில் இயக்கு">
+                                                                <longdesc>இந்த வகை URL ஐ முனையத்தில் இயக்க முடியுமெனில் உண்மை</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;man&quot; கையாள்வதற்கான URL">
+                                                                <longdesc>&quot;man&quot; ஐ கையாள பயன்படும் URL செயல்படுத்தப்பட்டது</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="குறிப்பிட்ட கட்டளை &quot;man&quot; URL ஐ கையாளுமா">
+                                                                <longdesc>உண்மை, &quot;command&quot; விசையில் குறிக்கப்பட்ட கட்டளை &quot;man&quot; URL ஐ கையாளுமெனில்.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="கட்டளையை முனையத்தில் இயக்கு">
+                                                                <longdesc>இந்த வகை URL ஐ முனையத்தில் இயக்க முடியுமெனில் உண்மை</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;info&quot; கையாள்வதற்கான URL">
+                                                                <longdesc>&quot;info&quot; ஐ கையாள பயன்படும் URL செயல்படுத்தப்பட்டது</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="குறிப்பிட்ட கட்டளை &quot;info&quot; URL ஐ கையாளுமா">
+                                                                <longdesc>உண்மை, &quot;command&quot; விசையில் குறிக்கப்பட்ட கட்டளை &quot;info&quot; URL ஐ கையாளுமெனில்.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="கட்டளையை முனையத்தில் இயக்கு">
+                                                                <longdesc>இந்த வகை URL ஐ முனையத்தில் இயக்க முடியுமெனில் உண்மை</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ghelp&quot; கையாள்வதற்கான URL">
+                                                                <longdesc>&quot;ghelp&quot; ஐ கையாள பயன்படும் URL செயல்படுத்தப்பட்டது</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="குறிப்பிட்ட கட்டளை &quot;ghelp&quot; URL ஐ கையாளுமா">
+                                                                <longdesc>உண்மை, &quot;command&quot; விசையில் குறிக்கப்பட்ட கட்டளை &quot;ghelp&quot; URL ஐ கையாளுமெனில்.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="கட்டளையை முனையத்தில் இயக்கு">
+                                                                <longdesc>இந்த வகை URL ஐ முனையத்தில் இயக்க முடியுமெனில் உண்மை</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;trash&quot; கையாள்வதற்கான URL">
+                                                                <longdesc>&quot;trash&quot; ஐ கையாள பயன்படும் URL செயல்படுத்தப்பட்டது</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="குறிப்பிட்ட கட்டளை &quot;trash&quot; URL ஐ கையாளுமா">
+                                                                <longdesc>உண்மை, &quot;command&quot; விசையில் குறிக்கப்பட்ட கட்டளை &quot;trash&quot;  URL ஐ கையாளுமெனில்.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="விவரக்குறிப்பை உபயோகப்படுத்து">
+                                                                        <longdesc>விவரக்குறிப்பை உபயோகப்படுத்தி காட்டு</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="கோப்பின் விவரங்கள் விவரக்குறிப்பில் உள்ளன">
+                                                                        <longdesc>கோப்பின் விவரங்களை உபயோகப்படுத்தி அதற்கான கோப்பில் சேமி</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Gஸ்டிரிமைர் தேக்கநீக்கம் உபயோகப்படுத்திடு">
+                                                                        <longdesc>_Gஸ்டிரிமெர் தேக்கநீக்கம் விவரக்குறிப்புகளை உபயோகப்படுத்தப்படுகிறது:</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="அடியோ விவரக்குறிப்பின் விவரங்கள்">
+                                                                        <longdesc>விவரக்குறிப்பின் விரிவாக்கம்.அதிகமான அறிக்கைகளை சேமி</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="அடியோ விவரக்குறிப்பின் பெயர்கள்">
+                                                                        <longdesc>ஆடியோ விவரக்குறிப்புகளின் பெயர்கள்,</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="விவரக்குறிப்பை உபயோகப்படுத்து">
+                                                                                <longdesc>விவரக்குறிப்பை உபயோகப்படுத்தி காட்டு</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="கோப்பின் விவரங்கள் விவரக்குறிப்பில் உள்ளன">
+                                                                                <longdesc>கோப்பின் விவரங்களை உபயோகப்படுத்தி அதற்கான கோப்பில் சேமி</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Gஸ்டிரிமைர் தேக்கநீக்கம் உபயோகப்படுத்திடு">
+                                                                                <longdesc>_Gஸ்டிரிமெர் தேக்கநீக்கம் விவரக்குறிப்புகளை உபயோகப்படுத்தப்படுகிறது:</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="அடியோ விவரக்குறிப்பின் விவரங்கள்">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="அடியோ விவரக்குறிப்பின் பெயர்கள்">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="கோப்பின் விவரங்கள் விவரக்குறிப்பில் உள்ளன">
+                                                                                <longdesc>கோப்பின் விவரங்களை உபயோகப்படுத்தி அதற்கான கோப்பில் சேமி</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Gஸ்டிரிமைர் தேக்கநீக்கம் உபயோகப்படுத்திடு">
+                                                                                <longdesc>_Gஸ்டிரிமெர் தேக்கநீக்கம் விவரக்குறிப்புகளை உபயோகப்படுத்தப்படுகிறது:</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="அடியோ விவரக்குறிப்பின் விவரங்கள்">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="அடியோ விவரக்குறிப்பின் பெயர்கள்">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="கோப்பின் விவரங்கள் விவரக்குறிப்பில் உள்ளன">
+                                                                                <longdesc>கோப்பின் விவரங்களை உபயோகப்படுத்தி அதற்கான கோப்பில் சேமி</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Gஸ்டிரிமைர் தேக்கநீக்கம் உபயோகப்படுத்திடு">
+                                                                                <longdesc>_Gஸ்டிரிமெர் தேக்கநீக்கம் விவரக்குறிப்புகளை உபயோகப்படுத்தப்படுகிறது:</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="அடியோ விவரக்குறிப்பின் விவரங்கள்">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="அடியோ விவரக்குறிப்பின் பெயர்கள்">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="கோப்பின் விவரங்கள் விவரக்குறிப்பில் உள்ளன">
+                                                                                <longdesc>கோப்பின் விவரங்களை உபயோகப்படுத்தி அதற்கான கோப்பில் சேமி</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Gஸ்டிரிமைர் தேக்கநீக்கம் உபயோகப்படுத்திடு">
+                                                                                <longdesc>_Gஸ்டிரிமெர் தேக்கநீக்கம் விவரக்குறிப்புகளை உபயோகப்படுத்தப்படுகிறது:</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="அடியோ விவரக்குறிப்பின் விவரங்கள்">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="அடியோ விவரக்குறிப்பின் பெயர்கள்">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="கோப்பின் விவரங்கள் விவரக்குறிப்பில் உள்ளன">
+                                                                                <longdesc>கோப்பின் விவரங்களை உபயோகப்படுத்தி அதற்கான கோப்பில் சேமி</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Gஸ்டிரிமைர் தேக்கநீக்கம் உபயோகப்படுத்திடு">
+                                                                                <longdesc>_Gஸ்டிரிமெர் தேக்கநீக்கம் விவரக்குறிப்புகளை உபயோகப்படுத்தப்படுகிறது:</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="அடியோ விவரக்குறிப்பின் விவரங்கள்">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="அடியோ விவரக்குறிப்பின் பெயர்கள்">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="கோப்பின் விவரங்கள் விவரக்குறிப்பில் உள்ளன">
+                                                                                <longdesc>கோப்பின் விவரங்களை உபயோகப்படுத்தி அதற்கான கோப்பில் சேமி</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Gஸ்டிரிமைர் தேக்கநீக்கம் உபயோகப்படுத்திடு">
+                                                                                <longdesc>_Gஸ்டிரிமெர் தேக்கநீக்கம் விவரக்குறிப்புகளை உபயோகப்படுத்தப்படுகிறது:</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="அடியோ விவரக்குறிப்பின் விவரங்கள்">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="அடியோ விவரக்குறிப்பின் பெயர்கள்">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="விவரக்குறிப்பின் பட்டியல்கள்">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="தானாக ப்ராக்ஸி சேவகனை அமைக்கும் URL">
+                                                <longdesc>ப்ராக்ஸி அமைப்பின் மதிப்பை தரும் URL</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="SOCKS ப்ராக்ஸி வழி">
+                                                <longdesc>&quot;/system/proxy/socks_host&quot; இனால் குறிப்பிடப்பட்ட வழியை ப்ராக்ஸி பயன்படுத்துகிறது</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="SOCKS ப்ராக்ஸி புரவலன் பெயர்">
+                                                <longdesc>socks வழியாக ப்ராக்ஸிக்கான கணினி பெயர்</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="FTP ப்ராக்ஸி வழி">
+                                                <longdesc>&quot;/system/proxy/ftp_host&quot; இனால் குறிப்பிடப்பட்ட வழியை ப்ராக்ஸி பயன்படுத்துகிறது</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="FTP ப்ராக்ஸி புரவலன் பெயர்">
+                                                <longdesc>FTP ப்ராக்ஸி க்கான கணினி பெயர்</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="பாதுகாப்பான HTTP ப்ராக்ஸி வழி">
+                                                <longdesc>&quot;/system/proxy/secure_host&quot; இனால் குறிப்பிடப்பட்ட வழியை ப்ராக்ஸி பயன்படுத்துகிறது</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="பாதுகாப்பான HTTP ப்ராக்ஸி புரவலன் பெயர்">
+                                                <longdesc>பாதுகாப்பான HTTP ப்ராக்ஸி க்கான கணினி பெயர்</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="ப்ராக்ஸி அமைப்பு பாங்கு">
+                                                <longdesc>ப்ராக்ஸி அமைப்பு வழியை தேர்வு செய்யவும். &quot;none&quot;, &quot;manual&quot;, &quot;auto&quot; மதிப்புகளுக்கு ஆதரவு உண்டு</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="ப்ராக்ஸி இல்லாத புரவலன்">
+                                                <longdesc>இந்த பட்டியல் ப்ராக்ஸியை(செயலிலிருந்தும்) நேரடியாக பயன்படுத்தாத கணினியின் பட்டியலை காட்டுகிறது. இதில் புரவலன் பெயர், டொமைன்(குழுக்குறிகளை பயன்படுத்தும் உம் *.foo.com) புரவலன் IP முகவரி (both IPv4 மற்றும்IPv6) மற்றும் வலைப்பின்னல் முகவரியுடன் வலைமூடியும் இருக்கும் (உதாரணம் 192.168.0.0/24)</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="HTTP ப்ராக்ஸி கடவுச்சொல்">
+                                                <longdesc>HTTP ப்ராக்ஸி பயன்படுத்தும்போது பயன்படுத்த வேண்டிய கடவுச்சொல்</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="HTTP ப்ராக்ஸி பயனீட்டாளர் பெயர்">
+                                                <longdesc>HTTP ப்ராக்ஸியை பயன்படுத்தும் போது அனுமதி பெற பயன்படுத்த வேண்டிய பயனீட்டாளர் பெயர்</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="ப்ராக்ஸி வேகன் இணைப்பின் அனுமதியை சரிபார்">
+                                                <longdesc>உண்மையெனில் பதிலாள் சேவையகத்தை இணைக்க அங்கீகாரம் தேவை.  &quot;/system/http_proxy/authentication_user&quot; and &quot;/system/http_proxy/authentication_password&quot;ஆல்பயனர்பெயர்/கடவுச்சொல் சேர்க்கை பெட்டியில் குறிப்பிடப்பட்டிருக்கும்.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="HTTP ப்ராக்ஸி வழி">
+                                                <longdesc>&quot;/system/http_proxy/host&quot; இனால் குறிப்பிடப்பட்ட வழியை ப்ராக்ஸி பயன்படுத்துகிறது</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="HTTP ப்ராக்ஸி புரவலன் பெயர்">
+                                                <longdesc>HTTP ப்ராக்ஸி க்கான கணினி பெயர்</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="HTTP ப்ராக்ஸியை பயன்படுத்து">
+                                                <longdesc>HTTP அணுகும் போது ப்ராக்ஸி அமைப்பை செயல்படுத்து</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="DNS-SD சேவைகளுக்கு கூடுதல் களங்கள்">
+                                                <longdesc>DNS-SD களங்களின் கால்புள்ளியால் பிரிக்கப்பட்ட பட்டியல் &quot;network:///&quot; இடத்தில் தெரிய வேண்டும்.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="உள் DNS-SD சேவையை காட்டுவது எப்படி">
+                                                <longdesc>இயன்ற மதிப்புகள் &quot;merged&quot;, &quot;separate&quot; மற்றும் &quot;disabled&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="SMB பணிகுழு">
+                                                <longdesc>பயனர் விண்டோஸ் பிணைய பணி குழு அல்லது களத்தின் பகுதியாக உள்ளார். புதிய பணிக்குழு முழுவதும் பணி செய்ய பயனர் வெளியேற வேண்டும் அல்லது மீண்டும் உள் அனுமதி பெற வேண்டும்.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

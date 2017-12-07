@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>PrinterQueueWindow</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.73.2">
+<link rel="start" href="index.html" title="libxfprint Reference Manual">
+<link rel="up" href="ch01.html" title="API Reference">
+<link rel="prev" href="PrinterListWindow.html" title="PrinterListWindow">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="ch01.html" title="API Reference">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="PrinterListWindow.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libxfprint Reference Manual</th>
+<td>&#160;</td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2590804" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2596630" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2593583" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2593644" class="shortcut">Implemented Interfaces</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="PrinterQueueWindow"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2590804"></a><span class="refentrytitle">PrinterQueueWindow</span>
+</h2>
+<p>PrinterQueueWindow</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;libxfprint/libxfprint.h&gt;
+
+
+                    <a class="link" href="PrinterQueueWindow.html#PrinterQueueWindow-struct">PrinterQueueWindow</a>;
+enum                <a class="link" href="PrinterQueueWindow.html#PrinterQueueWindowColumn">PrinterQueueWindowColumn</a>;
+<a
+href="/usr/share/gtk-doc/html/gtk/GtkWidget.html"
+>GtkWidget</a>*          <a class="link" href="PrinterQueueWindow.html#printer-queue-window-new">printer_queue_window_new</a>            (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *printer);
+<a
+href="/usr/share/gtk-doc/html/gtk/GtkUIManager.html"
+>GtkUIManager</a>*       <a class="link" href="PrinterQueueWindow.html#printer-queue-window-get-ui-manager">printer_queue_window_get_ui_manager</a> (<a class="link" href="PrinterQueueWindow.html" title="PrinterQueueWindow">PrinterQueueWindow</a> *win);
+void                <a class="link" href="PrinterQueueWindow.html#printer-queue-window-hide-column">printer_queue_window_hide_column</a>    (<a class="link" href="PrinterQueueWindow.html" title="PrinterQueueWindow">PrinterQueueWindow</a> *win,
+                                                         <a class="link" href="PrinterQueueWindow.html#PrinterQueueWindowColumn">PrinterQueueWindowColumn</a> column);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"
+>guint</a>               <a class="link" href="PrinterQueueWindow.html#printer-queue-window-get-selected-job">printer_queue_window_get_selected_job</a>
+                                                        (<a class="link" href="PrinterQueueWindow.html" title="PrinterQueueWindow">PrinterQueueWindow</a> *win);
+
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2593583"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  <a
+href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----<a
+href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GInitiallyUnowned"
+>GInitiallyUnowned</a>
+         +----<a
+href="/usr/share/gtk-doc/html/gtk/GtkObject.html"
+>GtkObject</a>
+               +----<a
+href="/usr/share/gtk-doc/html/gtk/GtkWidget.html"
+>GtkWidget</a>
+                     +----<a
+href="/usr/share/gtk-doc/html/gtk/GtkContainer.html"
+>GtkContainer</a>
+                           +----<a
+href="/usr/share/gtk-doc/html/gtk/GtkBin.html"
+>GtkBin</a>
+                                 +----<a
+href="/usr/share/gtk-doc/html/gtk/GtkWindow.html"
+>GtkWindow</a>
+                                       +----PrinterQueueWindow
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2593644"></a><h2>Implemented Interfaces</h2>
+<p>
+PrinterQueueWindow implements
+ AtkImplementorIface and  <a
+href="/usr/share/gtk-doc/html/gtk/gtk-gtkbuildable.html#GtkBuildable"
+>GtkBuildable</a>.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2596630"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2596646"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2596656"></a><h3>
+<a name="PrinterQueueWindow-struct"></a>PrinterQueueWindow</h3>
+<a class="indexterm" name="id2596668"></a><pre class="programlisting">typedef struct _PrinterQueueWindow PrinterQueueWindow;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2596685"></a><h3>
+<a name="PrinterQueueWindowColumn"></a>enum PrinterQueueWindowColumn</h3>
+<a class="indexterm" name="id2596696"></a><pre class="programlisting">typedef enum
+{
+  PRINTER_QUEUE_WINDOW_NAME_COLUMN,
+  PRINTER_QUEUE_WINDOW_ID_COLUMN,
+  PRINTER_QUEUE_WINDOW_USER_COLUMN,
+  PRINTER_QUEUE_WINDOW_STATE_COLUMN,
+  PRINTER_QUEUE_WINDOW_SIZE_COLUMN,
+  PRINTER_QUEUE_WINDOW_PRIORITY_COLUMN,
+  PRINTER_QUEUE_WINDOW_CREATION_TIME_COLUMN,
+  PRINTER_QUEUE_WINDOW_PROCESSING_TIME_COLUMN,
+} PrinterQueueWindowColumn;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2596717"></a><h3>
+<a name="printer-queue-window-new"></a>printer_queue_window_new ()</h3>
+<a class="indexterm" name="id2596728"></a><pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/gtk/GtkWidget.html"
+>GtkWidget</a>*          printer_queue_window_new            (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *printer);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ps</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>printer</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2532219"></a><h3>
+<a name="printer-queue-window-get-ui-manager"></a>printer_queue_window_get_ui_manager ()</h3>
+<a class="indexterm" name="id2532230"></a><pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/gtk/GtkUIManager.html"
+>GtkUIManager</a>*       printer_queue_window_get_ui_manager (<a class="link" href="PrinterQueueWindow.html" title="PrinterQueueWindow">PrinterQueueWindow</a> *win);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2532287"></a><h3>
+<a name="printer-queue-window-hide-column"></a>printer_queue_window_hide_column ()</h3>
+<a class="indexterm" name="id2532298"></a><pre class="programlisting">void                printer_queue_window_hide_column    (<a class="link" href="PrinterQueueWindow.html" title="PrinterQueueWindow">PrinterQueueWindow</a> *win,
+                                                         <a class="link" href="PrinterQueueWindow.html#PrinterQueueWindowColumn">PrinterQueueWindowColumn</a> column);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>column</code></em>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2532364"></a><h3>
+<a name="printer-queue-window-get-selected-job"></a>printer_queue_window_get_selected_job ()</h3>
+<a class="indexterm" name="id2532378"></a><pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#guint"
+>guint</a>               printer_queue_window_get_selected_job
+                                                        (<a class="link" href="PrinterQueueWindow.html" title="PrinterQueueWindow">PrinterQueueWindow</a> *win);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

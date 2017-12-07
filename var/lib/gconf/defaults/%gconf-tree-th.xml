@@ -1,0 +1,926 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="จะเปิดใช้องค์ประกอบ PKCS#11 ของ gnome-keyring หรือไม่">
+                                                        <longdesc>ตัวเลือกนี้จะเปิดใช้องค์ประกอบ PKCS#11 ในดีมอน gnome-keyring ซึ่งจะมีผลเมื่อดีมอน gnome-keyring ทำงานเท่านั้น (กล่าวคือ เมื่อผู้ใช้เข้าระบบ) ค่าตั้งนี้อาจถูกแทนที่โดยอาร์กิวเมนต์บางอย่างในบรรทัดคำสั่งที่ใช้เรียกดีมอน</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="จะเปิดใช้ SSH agent ของ gnome-keyring หรือไม่">
+                                                        <longdesc>ตัวเลือกนี้จะเปิดใช้ SSH agent ในดีมอน gnome-keyring ซึ่งจะมีผลเมื่อดีมอน gnome-keyring ทำงานเท่านั้น (กล่าวคือ เมื่อผู้ใช้เข้าระบบ) ค่าตั้งนี้อาจถูกแทนที่โดยอาร์กิวเมนต์บางอย่างในบรรทัดคำสั่งที่ใช้เรียกดีมอน</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="ความกว้างของหน้าต่าง">
+                                                        <longdesc>ความกว้างของหน้าต่างที่จะแสดง</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="ความสูงของหน้าต่าง">
+                                                        <longdesc>ความสูงของหน้าต่างที่จะแสดง</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="คำสั่งที่จะกระทำเมื่อมีการกดปุ่มตาม keybinding ที่กำหนด">
+                                                        <longdesc>กำหนดคำสั่งที่จะเรียกจากการกดปุ่มลัดที่กำหนดในคีย์ /apps/metacity/global_keybindings/run_command_N การกดปุ่มลัดใน run_command_N จะเรียกคำสั่ง command_N</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="คำสั่งจับภาพหน้าต่าง">
+                                                        <longdesc>กำหนดคำสั่งที่จะเรียกจากการกดปุ่มลัดที่กำหนดในคีย์ /apps/metacity/global_keybindings/run_command_window_screenshot</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="คำสั่งจับภาพหน้าจอ">
+                                                        <longdesc>กำหนดคำสั่งที่จะเรียกจากการกดปุ่มลัดที่กำหนดในคีย์ /apps/metacity/global_keybindings/run_command_screenshot</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="เรียกใช้คำสั่งที่กำหนดไว้">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="เปิดเทอร์มินัล">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="จับภาพหน้าต่าง">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="จับภาพหน้าจอ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="เปิดกล่องเรียกใช้โปรแกรม">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="แสดงเมนูพาเนล">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงานด้านล่าง">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงานด้านบน">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงานด้านขวา">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงานด้านซ้าย">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงาน 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงาน 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงาน 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงาน 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงาน 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงาน 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงาน 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงาน 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงาน 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงาน 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงาน 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="สลับไปทำงานพื้นที่ทำงาน 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="ซ่อนหน้าต่างทั้งหมดแล้วโฟกัสไปยังพื้นโต๊ะ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="ย้ายโฟกัสย้อนหลังระหว่างพาเนลและพื้นโต๊ะโดยทันที">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="ย้ายโฟกัสระหว่างพาเนลและพื้นโต๊ะโดยทันที">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="ย้ายโฟกัสย้อนหลังระหว่างหน้าต่างโดยทันที">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="ย้ายโฟกัสระหว่างหน้าต่างโดยทันที">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="ย้ายโฟกัสย้อนหลังระหว่างหน้าต่างทั้งหลายของโปรแกรมประยุกต์ผ่านป๊อบอัพ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="ย้ายโฟกัสระหว่างหน้าต่างทั้งหลายของโปรแกรมประยุกต์ผ่านป๊อบอัพ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="ย้ายโฟกัสย้อนหลังระหว่างหน้าต่างทั้งหลายของโปรแกรมประยุกต์โดยทันที">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="ย้ายโฟกัสระหว่างหน้าต่างทั้งหลายของโปรแกรมประยุกต์โดยทันที">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="ย้ายโฟกัสย้อนหลังระหว่างพาเนลและพื้นโต๊ะผ่านป๊อบอัพ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="ย้ายโฟกัสระหว่างพาเนลและพื้นโต๊ะผ่านป๊อบอัพ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="ย้ายโฟกัสย้อนหลังระหว่างหน้าต่างผ่านป๊อบอัพ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="ย้ายโฟกัสระหว่างหน้าต่างผ่านป๊อบอัพ">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปที่ขอบด้านตะวันตกของหน้าจอ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปที่ขอบด้านตะวันออกของหน้าจอ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปที่ขอบด้านใต้ของหน้าจอ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปที่ขอบด้านเหนือของหน้าจอ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปที่มุมตะวันออกเฉียงใต้ของหน้าจอ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปที่มุมตะวันตกเฉียงใต้ของหน้าจอ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปที่มุมตะวันออกเฉียงเหนือของหน้าจอ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปที่มุมตะวันตกเฉียงเหนือของหน้าจอ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="ขยายหน้าต่างเต็มด้านกว้าง">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="ขยายหน้าต่างเต็มด้านสูง">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="ถอยหน้าต่างลงไปใว้หลังหน้าต่างอื่น">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="ยกหน้าต่างขึ้นมาไว้หน้าหน้าต่างอื่นๆ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="ยกหน้าต่างขึ้นถ้าถูกบัง ไม่งั้นเอาลงด้านหลัง">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงานด้านล่าง">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงานด้านบน">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงานด้านขวา">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงานด้านซ้าย">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงาน 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงาน 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงาน 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงาน 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงาน 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงาน 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงาน 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงาน 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงาน 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงาน 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงาน 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="ย้ายหน้าต่างไปพื้นที่ทำงาน 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="สลับการแสดงหน้าต่างบนทุกพื้นที่ทำงาน">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="ปรับขนาดหน้าต่าง">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="ย้ายหน้าต่าง">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="ย่อหน้าต่างหาย">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="ปิดหน้าต่าง">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="ม้วน/คลี่หน้าต่าง">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="เลิกขยายหน้าต่างเต็ม">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="ขยายหน้าต่างเต็มจอ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="สลับสถานะขยายเต็ม">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="สลับการค้างอยู่บนสุด">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="สลับโหมดเต็มหน้าจอ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="เปิดเมนูหน้าต่าง">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="ชื่อของพื้นที่ทำงาน">
+                                                        <longdesc>ชื่อของพื้นที่ทำงาน</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="ปิดคุณสมบัติแก้ขัดที่แก้ปัญหาให้กับโปรแกรมประยุกต์ที่เก่าหรือไม่ทำงาน">
+                                                        <longdesc>โปรแกรมบางตัวไม่สนใจข้อกำหนด โดยทำให้โปรแกรมจัดการหน้าต่างต้องทำงานแก้ขัด ตัวเลือกนี้จะกำหนดให้ Metacity เข้าสู่โหมดการทำงานที่ถูกหลักเกณฑ์อย่างเข้มงวด ซึ่งจะทำให้การติดต่อผู้ใช้คงเส้นคงวายิ่งขึ้น โดยถือว่าผู้ใช้ไม่จำเป็นต้องเรียกโปรแกรมใดๆ ที่ประพฤติผิดหลักเกณฑ์</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(ยังใช้ไม่ได้) เคลื่อนย้ายระหว่างโปรแกรม แทนระหว่างหน้าต่าง">
+                                                        <longdesc>ถ้าเป็นจริง Metacity จะทำงานในหน่วยของโปรแกรมประยุกต์แทนหน่วยของหน้าต่าง แนวคิดนี้ค่อนข้างเป็นนามธรรม แต่โดยทั่วไปการตั้งค่าแบบนี้จะคล้าย Mac และต่างจากวินโดวส์ เมื่อคุณโฟกัสหน้าต่างหนึ่งในโหมดโปรแกรมประยุกต์ หน้าต่างทั้งหมดในโปรแกรมประยุกต์เดียวกันจะถูกยกขึ้นพร้อมกัน นอกจากนี้ ในโหมดโปรแกรมประยุกต์นี้ การคลิกเพื่อโฟกัสจะไม่ถูกส่งผ่านไปยังหน้าต่างของโปรแกรมประยุกต์อื่นด้วย อย่างไรก็ดี โหมดโปรแกรมประยุกต์ยังใช้การไม่ได้ในขณะนี้</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="ถ้าตั้ง จะสละความง่ายในการใช้เพื่อประหยัดทรัพยากร">
+                                                        <longdesc>ถ้าเป็นจริง metacity จะตอบสนองผู้ใช้น้อยลง โดยใช้ wireframe ใช้ภาพเคลื่อนไหวน้อยลง หรืออะไรก็ตาม ซึ่งอาจดูใช้ยากขึ้นสำหรับผู้ใช้หลายๆ คน แต่จะช่วยให้โปรแกรมเก่าๆ ยังทำงานได้ และอาจช่วยให้การใช้เทอร์มินัลเซิร์ฟเวอร์คล่องตัวขึ้น อย่างไรก็ดี metacity จะไม่ใช้ wireframe เมื่อเปิดระบบอำนวยการใช้งาน</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="จัดการ Composite">
+                                                        <longdesc>กำหนดว่า จะให้ Metacity เป็นผู้จัดการ composite หรือไม่</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="ชนิดของระฆังภาพ">
+                                                        <longdesc>บอก metacity ว่าจะแสดงออกทางจอภาพอย่างไรเมื่อมีการสั่นระฆังของระบบหรือโปรแกรมประยุกต์ ค่าที่เป็นไปได้ ณ ขณะนี้มีสองค่า คือ &quot;fullscreen&quot; ซึ่งจะวาบจอภาพทั้งจอ และ &quot;frame_flash&quot; ซึ่งจะวาบแถบหัวหน้าต่างของโปรแกรมที่สั่นระฆัง หรือถ้าไม่ปรากฏโปรแกรมที่สั่นระฆัง (ซึ่งเป็นปกติสำหรับ &quot;เสียงบี๊ปของระบบ&quot;) ก็จะวาบแถบหัวหน้าต่างของโปรแกรมที่ได้โฟกัสอยู่</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="เปิดเล่นเสียงระฆังระบบ">
+                                                        <longdesc>ระบุว่าจะให้โปรแกรมหรือระบบส่งเสียง &apos;บี๊ป&apos; หรือไม่ สามารถใช้ร่วมกับ &apos;ระฆังภาพ&apos; เพื่อใช้ &apos;บี๊ป&apos; แบบเงียบได้</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="ใช้ระฆังภาพ">
+                                                        <longdesc>เปิดใช้การส่งสัญญาณทางภาพเมื่อโปรแกรมหรือระบบสั่นระฆังหรือส่งเสียงบี๊ป ซึ่งจะมีประโยชน์สำหรับผู้ที่มีปัญหาเรื่องการฟัง หรือใช้ในสภาวะที่จอแจ</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="จำนวนพื้นที่ทำงาน">
+                                                        <longdesc>จำนวนพื้นที่ทำงาน ต้องมากกว่าศูนย์ และมีขีดจำกัดตายตัวอยู่ เพื่อป้องกันการทำให้เดสก์ท็อปใช้การไม่ได้ด้วยการร้องขอพื้นที่ทำงานมากเกินไปโดยไม่เจตนา</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="แบบอักษรหัวหน้าต่าง">
+                                                        <longdesc>คำบรรยายแบบอักษรสำหรับแถบหัวเรื่องของหน้าต่าง ขนาดตัวอักษรในคำบรรยายนี้จะมีผลก็ต่อเมื่อตัวเลือก titlebar_font_size มีค่าเป็น 0 นอกจากนี้ ค่าตัวเลือกนี้จะไม่มีผลถ้าตัวเลือก titlebar_uses_desktop_font มีค่าเป็นจริง</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="ใช้แบบตัวอักษรปกติของระบบสำหรับหัวหน้าต่าง">
+                                                        <longdesc>ถ้าเป็นจริง จะละเว้นตัวเลือก titlebar_font และใช้แบบอักษรมาตรฐาน สำหรับแถบหัวเรื่องของหน้าต่าง</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="ธีมปัจจุบัน">
+                                                        <longdesc>ชุดตกแต่งนี้จะกำหนดลักษณะขอบหน้าต่าง หัวหน้าต่าง ฯลฯ</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="การหน่วงเวลาในหน่วยมิลลิวินาทีสำหรับการยกหน้าต่างมาด้านหน้าโดยอัตโนมัติ">
+                                                        <longdesc>ระยะเวลารอก่อนยกหน้าต่างขึ้นมาด้านหน้า ใช้ถ้า auto_raise ถูกตั้ง ระบุเวลาเป็นมิลลิวินาที</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="ยกหน้าต่างที่ถูกโฟกัสขึ้นมาด้านหน้าโดยอัตโนมัติ">
+                                                        <longdesc>ถ้ามีค่าเป็นจริง และโหมดโฟกัสเป็น &quot;sloppy&quot; หรือ &quot;mouse&quot; อย่างใดอย่างหนึ่งแล้ว จะยกหน้าต่างที่ได้โฟกัสขึ้นมาโดยอัตโนมัติ หลังจากหน่วงเวลาเป็นระยะเวลาตามที่ระบุในคีย์ auto_raise_delay  การยกหน้าต่างดังกล่าว ไม่เกี่ยวกับการคลิกบนหน้าต่างเพื่อยกหน้าต่างขึ้น หรือการเลื่อนเมาส์เข้าสู่หน้าต่างระหว่างการลากวางแต่อย่างใด</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="การกระทำเมื่อคลิกเมาส์ปุ่มขวาที่แถบหัวหน้าต่าง">
+                                                        <longdesc>ตัวเลือกนี้เลือกการปฏิบัติเมื่อคลิกเมาส์ปุ่มขวาที่แถบหัวหน้าต่าง ค่าตัวเลือกที่เป็นไปได้ในขณะนี้คือ &apos;toggle_shade&apos; ซึ่งจะม้วนหรือคลี่หน้าต่าง, &apos;toggle_maximize&apos; ซึ่งจะขยายหรือยกเลิกการขยายหน้าต่างให้เต็มพื้นโต๊ะ, &apos;minimize&apos; ซึ่งจะย่อหน้าต่างหาย และ &apos;none&apos; ซึ่งจะไม่ทำอะไรเลย</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="การกระทำเมื่อคลิกเมาส์ปุ่มกลางที่แถบหัวหน้าต่าง">
+                                                        <longdesc>ตัวเลือกนี้เลือกการปฏิบัติเมื่อคลิกเมาส์ปุ่มกลางที่แถบหัวหน้าต่าง ค่าตัวเลือกที่เป็นไปได้ในขณะนี้คือ &apos;toggle_shade&apos; ซึ่งจะม้วนหรือคลี่หน้าต่าง, &apos;toggle_maximize&apos; ซึ่งจะขยายหรือยกเลิกการขยายหน้าต่างให้เต็มพื้นโต๊ะ, &apos;minimize&apos; ซึ่งจะย่อหน้าต่างหาย และ &apos;none&apos; ซึ่งจะไม่ทำอะไรเลย</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="การกระทำเมื่อดับเบิลคลิกที่แถบหัวหน้าต่าง">
+                                                        <longdesc>ตัวเลือกนี้เลือกการปฏิบัติเมื่อดับเบิลคลิกที่แถบหัวหน้าต่าง ค่าตัวเลือกที่เป็นไปได้ในขณะนี้คือ &apos;toggle_shade&apos; ซึ่งจะม้วนหรือคลี่หน้าต่าง, &apos;toggle_maximize&apos; ซึ่งจะขยายหรือยกเลิกการขยายหน้าต่างให้เต็มพื้นโต๊ะ, &apos;minimize&apos; ซึ่งจะย่อหน้าต่างหาย และ &apos;none&apos; ซึ่งจะไม่ทำอะไรเลย</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="กำหนดว่าควรยกหน้าต่างขึ้นเมื่อมีปฏิสัมพันธ์กับผู้ใช้หรือไม่">
+                                                        <longdesc>โดยปกติ ปฏิบัติการหลายอย่าง (เช่น การคลิกบนพื้นที่ภายในหน้าต่าง การย้ายหรือปรับขนาดหน้าต่าง) จะยกหน้าต่างขึ้นด้วย ถ้ากำหนดตัวเลือกนี้เป็นเท็จ (ซึ่งไม่ขอแนะนำ) จะไม่ยกหน้าต่างเมื่อมีการโต้ตอบอย่างอื่นกับผู้ใช้ และจะไม่ตอบสนองการร้องขอการยกหน้าต่างจากโปรแกรมอื่นๆ ด้วย ดูรายละเอียดได้ที่ http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="ควบคุมการโฟกัสหน้าต่างใหม่">
+                                                        <longdesc>ตัวเลือกนี้เพิ่มการควบคุมการโฟกัสหน้าต่างที่สร้างใหม่ ค่าที่เป็นไปได้มีสองค่า คือ &quot;smart&quot; ซึ่งจะใช้วิธีโฟกัสตามปกติของผู้ใช้ และ &quot;strict&quot; ซึ่งจะไม่โฟกัสหน้าต่างที่เรียกจากเทอร์มินัล</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="โหมดโฟกัสหน้าต่าง">
+                                                        <longdesc>โหมดโฟกัสหน้าต่างกำหนดวิธีการโฟกัสหน้าต่างเพื่อใช้งาน ค่าที่เป็นไปได้มีสามค่า คือ &quot;click&quot; หมายถึงการโฟกัสหน้าต่างด้วยการคลิก, &quot;sloppy&quot; หมายความว่าหน้าต่างจะได้โฟกัสก็ต่อเมื่อเมาส์เคลื่อนเข้าสู่หน้าต่าง, และ&quot;mouse&quot; หมายความว่าหน้าต่างจะได้โฟกัสเมื่อเมาส์เคลื่อนเข้าสู่หน้าต่าง และเสียโฟกัสเมื่อเมาส์เคลื่อนออกจากหน้าต่าง</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="การจัดเรียงปุ่มบนแถบหัวหน้าต่าง">
+                                                        <longdesc>การจัดเรียงปุ่มบนแถบหัวหน้าต่าง ค่าของคีย์ควรเป็นข้อความ ตัวอย่างเช่น &quot;menu:minimize,maximize,close&quot; โดย colon จะแบ่งมุมซ้ายกับมุมขวาของหน้าต่างออกจากกัน และปุ่มต่างๆ จะคั่นด้วยจุลภาค ห้ามใช้ปุ่มซ้ำกัน ปุ่มที่ไม่รู้จักจะถูกข้ามไป เพื่อรองรับการเพิ่มปุ่มใหม่ในอนาคตได้โดยไม่ขัดกับ metacity รุ่นเก่า</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="ปุ่ม modifier เพื่อเปลี่ยนพฤติกรรมการคลิกหน้าต่าง">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="โปรแกรมแสดงปริยาย">
+                                                                <longdesc>โปรแกรมแสดง แฟ้มที่ต้องใช้คอมโพเนนต์แสดง %s จะถูกแทนที่ด้วย URI ของแฟ้ม และ %c จะถูกแทนที่ด้วย IID ของคอมโพเนนต์</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="อาร์กิวเมนต์ exec สำหรับเทอร์มินัลปริยาย">
+                                                                <longdesc>อาร์กิวเมนต์สำหรับโปรแกรมเทอร์มินัลปริยาย</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="โปรแกรมเทอร์มินัลปริยาย">
+                                                                <longdesc>โปรแกรมเทอร์มินัลปริยาย ไว้ใช้สำหรับ โปรแกรมที่ต้องใช้เทอร์มินัล</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="เรียกใช้โปรแกรมในเทอร์มินัล">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าโปรแกรมที่จัดการ URL นี้ควรถูกเรียกใช้ในเทอร์มินัล</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="คำสั่งจัดการ URL ชนิด h323">
+                                                                <longdesc>คำสั่งสำหรับจัดการ URL ชนิด h323 (ถ้าเปิดใช้)</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="กำหนดให้คำสั่งนี้จัดการ URL ชนิด h323">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าต้องการให้โปรแกรมในคีย์ &quot;command&quot; จัดการ URL ชนิด h323</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="เรียกใช้โปรแกรมในเทอร์มินัล">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าโปรแกรมที่จัดการ URL นี้ควรถูกเรียกใช้ในเทอร์มินัล</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="คำสั่งจัดการ URL ชนิด callto">
+                                                                <longdesc>คำสั่งสำหรับจัดการ URL ชนิด callto (ถ้าเปิดใช้)</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="กำหนดให้คำสั่งนี้จัดการ URL ชนิด callto">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าต้องการให้โปรแกรมในคีย์ &quot;command&quot; จัดการ URL ชนิด callto</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="เรียกใช้โปรแกรมในเทอร์มินัล">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าโปรแกรมที่จัดการ URL นี้ควรถูกเรียกใช้ในเทอร์มินัล</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="คำสั่งจัดการ URL ชนิด mailto">
+                                                                <longdesc>คำสั่งสำหรับจัดการ URL ชนิด mailto (ถ้าเปิดใช้)</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="กำหนดให้คำสั่งนี้จัดการ URL ชนิด mailto">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าต้องการให้โปรแกรมในคีย์ &quot;command&quot; จัดการ URL ชนิด mailto</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="เรียกใช้โปรแกรมในเทอร์มินัล">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าโปรแกรมที่จัดการ URL นี้ควรถูกเรียกใช้ในเทอร์มินัล</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="คำสั่งจัดการ URL ชนิด https">
+                                                                <longdesc>คำสั่งสำหรับจัดการ URL ชนิด https (ถ้าเปิดใช้)</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="กำหนดให้คำสั่งนี้จัดการ URL ชนิด https">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าต้องการให้โปรแกรมในคีย์ &quot;command&quot; จัดการ URL ชนิด https</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="เรียกใช้โปรแกรมในเทอร์มินัล">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าโปรแกรมที่จัดการ URL นี้ควรถูกเรียกใช้ในเทอร์มินัล</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="เรียกใช้โปรแกรมในเทอร์มินัล">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าโปรแกรมที่จัดการ URL นี้ควรถูกเรียกใช้ในเทอร์มินัล</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="คำสั่งจัดการ URL ชนิด http">
+                                                                <longdesc>คำสั่งสำหรับจัดการ URL ชนิด http (ถ้าเปิดใช้)</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="กำหนดให้คำสั่งนี้จัดการ URL ชนิด http">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าต้องการให้โปรแกรมในคีย์ &quot;command&quot; จัดการ URL ชนิด http</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="เรียกใช้โปรแกรมในเทอร์มินัล">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าโปรแกรมที่จัดการ URL นี้ควรถูกเรียกใช้ในเทอร์มินัล</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="คำสั่งจัดการ URL ชนิด man">
+                                                                <longdesc>คำสั่งสำหรับจัดการ URL ชนิด man (ถ้าเปิดใช้)</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="กำหนดให้คำสั่งนี้จัดการ URL ชนิด man">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าต้องการให้โปรแกรมในคีย์ &quot;command&quot; จัดการ URL ชนิด man</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="เรียกใช้โปรแกรมในเทอร์มินัล">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าโปรแกรมที่จัดการ URL นี้ควรถูกเรียกใช้ในเทอร์มินัล</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="คำสั่งจัดการ URL ชนิด info">
+                                                                <longdesc>คำสั่งสำหรับจัดการ URL ชนิด info (ถ้าเปิดใช้)</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="กำหนดให้คำสั่งนี้จัดการ URL ชนิด info">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าต้องการให้โปรแกรมใน &quot;command&quot; จัดการ URL ชนิด info</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="เรียกใช้โปรแกรมในเทอร์มินัล">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าโปรแกรมที่จัดการ URL นี้ควรถูกเรียกใช้ในเทอร์มินัล</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="คำสั่งจัดการ URL ชนิด ghelp">
+                                                                <longdesc>คำสั่งสำหรับจัดการ URL ชนิด ghelp (ถ้าเปิดใช้)</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="กำหนดให้คำสั่งนี้จัดการ URL ชนิด ghelp">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าต้องการให้โปรแกรมในคีย์ &quot;command&quot; จัดการ URL ชนิด ghelp</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="เรียกใช้โปรแกรมในเทอร์มินัล">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าโปรแกรมที่จัดการ URL นี้ควรถูกเรียกใช้ในเทอร์มินัล</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="คำสั่งจัดการ URL ชนิด trash">
+                                                                <longdesc>คำสั่งสำหรับจัดการ URL ชนิด trash (ถ้าเปิดใช้)</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="กำหนดให้คำสั่งนี้จัดการ URL ชนิด trash">
+                                                                <longdesc>ตั้งเป็นค่าจริงถ้าต้องการให้โปรแกรมในคีย์ &quot;command&quot; จัดการ URL ชนิด trash</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="เปิดใช้โพรไฟล์">
+                                                                        <longdesc>กำหนดว่าจะเปิดใช้และแสดงโพรไฟล์นี้หรือไม่</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="นามสกุลแฟ้มปริยายสำหรับโพรไฟล์นี้">
+                                                                        <longdesc>นามสกุลแฟ้มที่จะใช้เมื่อจะบันทึกแฟ้มที่ลงรหัสด้วยโพรไฟล์นี้</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="ส่วนของไปป์ไลน์ GStreamer ที่จะใช้">
+                                                                        <longdesc>ส่วนของไปป์ไลน์ GStreamer ที่จะใช้สำหรับโพรไฟล์นี้</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="คำอธิบายสำหรับโพรไฟล์เสียง">
+                                                                        <longdesc>คำอธิบายของโพรไฟล์ประกอบด้วยข้อมูลจำนวนมาก และคำอธิบายนี้จะมีเมื่อใช้โพรไฟล์นี้</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="ชื่อสั้นๆ ของโพรไฟล์เสียง">
+                                                                        <longdesc>ชื่อสั้นๆ สำหรับโพรไฟล์เสียง เพื่อใช้ในการเลือกและระบุโพรไฟล์</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="เปิดใช้โพรไฟล์">
+                                                                                <longdesc>กำหนดว่าจะเปิดใช้และแสดงโพรไฟล์นี้หรือไม่</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="นามสกุลแฟ้มปริยายสำหรับโพรไฟล์นี้">
+                                                                                <longdesc>นามสกุลแฟ้มที่จะใช้เมื่อจะบันทึกแฟ้มที่ลงรหัสด้วยโพรไฟล์นี้</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="ส่วนของไปป์ไลน์ GStreamer ที่จะใช้">
+                                                                                <longdesc>ส่วนของไปป์ไลน์ GStreamer ที่จะใช้สำหรับโพรไฟล์นี้</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="คำอธิบายสำหรับโพรไฟล์เสียง">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="ชื่อสั้นๆ ของโพรไฟล์เสียง">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="นามสกุลแฟ้มปริยายสำหรับโพรไฟล์นี้">
+                                                                                <longdesc>นามสกุลแฟ้มที่จะใช้เมื่อจะบันทึกแฟ้มที่ลงรหัสด้วยโพรไฟล์นี้</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="ส่วนของไปป์ไลน์ GStreamer ที่จะใช้">
+                                                                                <longdesc>ส่วนของไปป์ไลน์ GStreamer ที่จะใช้สำหรับโพรไฟล์นี้</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="คำอธิบายสำหรับโพรไฟล์เสียง">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="ชื่อสั้นๆ ของโพรไฟล์เสียง">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="นามสกุลแฟ้มปริยายสำหรับโพรไฟล์นี้">
+                                                                                <longdesc>นามสกุลแฟ้มที่จะใช้เมื่อจะบันทึกแฟ้มที่ลงรหัสด้วยโพรไฟล์นี้</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="ส่วนของไปป์ไลน์ GStreamer ที่จะใช้">
+                                                                                <longdesc>ส่วนของไปป์ไลน์ GStreamer ที่จะใช้สำหรับโพรไฟล์นี้</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="คำอธิบายสำหรับโพรไฟล์เสียง">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="ชื่อสั้นๆ ของโพรไฟล์เสียง">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="นามสกุลแฟ้มปริยายสำหรับโพรไฟล์นี้">
+                                                                                <longdesc>นามสกุลแฟ้มที่จะใช้เมื่อจะบันทึกแฟ้มที่ลงรหัสด้วยโพรไฟล์นี้</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="ส่วนของไปป์ไลน์ GStreamer ที่จะใช้">
+                                                                                <longdesc>ส่วนของไปป์ไลน์ GStreamer ที่จะใช้สำหรับโพรไฟล์นี้</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="คำอธิบายสำหรับโพรไฟล์เสียง">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="ชื่อสั้นๆ ของโพรไฟล์เสียง">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="นามสกุลแฟ้มปริยายสำหรับโพรไฟล์นี้">
+                                                                                <longdesc>นามสกุลแฟ้มที่จะใช้เมื่อจะบันทึกแฟ้มที่ลงรหัสด้วยโพรไฟล์นี้</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="ส่วนของไปป์ไลน์ GStreamer ที่จะใช้">
+                                                                                <longdesc>ส่วนของไปป์ไลน์ GStreamer ที่จะใช้สำหรับโพรไฟล์นี้</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="คำอธิบายสำหรับโพรไฟล์เสียง">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="ชื่อสั้นๆ ของโพรไฟล์เสียง">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="นามสกุลแฟ้มปริยายสำหรับโพรไฟล์นี้">
+                                                                                <longdesc>นามสกุลแฟ้มที่จะใช้เมื่อจะบันทึกแฟ้มที่ลงรหัสด้วยโพรไฟล์นี้</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="ส่วนของไปป์ไลน์ GStreamer ที่จะใช้">
+                                                                                <longdesc>ส่วนของไปป์ไลน์ GStreamer ที่จะใช้สำหรับโพรไฟล์นี้</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="คำอธิบายสำหรับโพรไฟล์เสียง">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="ชื่อสั้นๆ ของโพรไฟล์เสียง">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="รายการของโพรไฟล์">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="URL สำหรับตั้งค่าพร็อกซีโดยอัตโนมัติ">
+                                                <longdesc>URL ที่จัดส่งค่าตั้งพร็อกซี</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="พอร์ตพร็อกซี SOCKS">
+                                                <longdesc>พอร์ตบนเครื่องที่ตั้งไว้ใน &quot;/system/proxy/socks_host&quot; ที่จะใช้ติดต่อผ่าน</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="ชื่อโฮสต์พร็อกซี SOCKS">
+                                                <longdesc>ชื่อเครื่องที่จะติดต่อ socks ผ่าน</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="พอร์ตพร็อกซี FTP">
+                                                <longdesc>พอร์ตบนเครื่องที่ตั้งไว้ใน &quot;/system/proxy/ftp_host&quot; ที่จะใช้ติดต่อผ่าน</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="ชื่อโฮสต์พร็อกซี FTP">
+                                                <longdesc>ชื่อเครื่องที่จะติดต่อ FTP ผ่าน</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="พอร์ตพร็อกซี Secure HTTP">
+                                                <longdesc>พอร์ตบนเครื่องที่ตั้งไว้ใน &quot;/system/proxy/secure_host&quot; ที่จะใช้ติดต่อผ่าน</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="ชื่อโฮสต์พร็อกซี Secure HTTP">
+                                                <longdesc>ชื่อเครื่องที่จะติดต่อ Secure HTTP ผ่าน</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="โหมดการตั้งค่าพร็อกซี">
+                                                <longdesc>เลือกโหมดการตั้งค่าพร็อกซี สามารถตั้งเป็น &quot;none&quot;, &quot;manual&quot;, &quot;auto&quot;</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="โอสต์ที่ไม่ติดต่อผ่านพร็อกซี">
+                                                <longdesc>คีย์นี้เก็บรายชื่อโฮสต์ที่ให้ติดต่อโดยตรง แทนที่จะผ่านพร็อกซี (ถ้าเปิดทำงานอยู่)  สามารถตั้งเป็น ชื่อโฮสต์ โดเมน (ใช้ wildcard ข้างหน้าเช่น *.foo.com), ที่อยู่ IP (ทั้ง IPv4 และ IPv6) หรือที่อยู่บนเครือข่ายพร้อมกับ netmask (เช่น 192.168.0.0/24)</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="รหัสผ่านพร็อกซี HTTP">
+                                                <longdesc>รหัสผ่านสำหรับการตรวจสอบสิทธิ์ใช้พร็อกซี HTTP</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="ชื่อบัญชีผู้ใช้พร็อกซี HTTP">
+                                                <longdesc>ชื่อบัญชีผู้ใช้สำหรับตรวจสอบสิทธิ์กับพร็อกซี HTTP</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="ตรวจสอบสิทธิ์ก่อนใช้พร็อกซี">
+                                                <longdesc>ถ้าตั้งเป็นค่าจริง การเชื่อมต่อผ่านพร็อกซีจะต้องผ่านการตรวจสอบสิทธิ์ก่อน ชื่อผู้ใช้และรหัสผ่านเอามาจาก &quot;/system/http_proxy/authentication_user&quot; และ &quot;/system/http_proxy/authentication_password&quot;</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="พอร์ตพร็อกซี HTTP">
+                                                <longdesc>พอร์ตบนเครื่องที่ตั้งไว้ใน &quot;/system/http_proxy/host&quot; ที่จะใช้ติดต่อผ่าน</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="ชื่อโฮสต์พร็อกซี HTTP">
+                                                <longdesc>ชื่อเครื่องที่จะติดต่อ HTTP ผ่าน</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="ใช้พร็อกซี HTTP">
+                                                <longdesc>ใช้ค่าพร็อกซีที่ตั้งไว้เวลาใช้ HTTP บนอินเทอร์เน็ต</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="โดเมนเพิ่มเติมที่จะมองหาบริการ DNS-SD">
+                                                <longdesc>รายการโดเมน DNS-SD (คั่นด้วยจุลภาค) ที่น่าจะมองเห็นได้ในตำแหน่ง &quot;network:///&quot;</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="วิธีแสดงผลบริการ DNS-SD ในเครือข่ายท้องถิ่น">
+                                                <longdesc>ค่าที่เป็นไปได้คือ &quot;merged&quot;, &quot;separate&quot; และ &quot;disabled&quot;</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="เวิร์กกรุป SMB">
+                                                <longdesc>เวิร์กกรุปหรือโดเมนของเครือข่ายวินโดวส์ที่ผู้ใช้อาศัยอยู่ ผู้ใช้อาจต้องออกจากระบบแล้วเข้าใหม่เพื่อจะเริ่มใช้เวิร์กกรุปใหม่ได้</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

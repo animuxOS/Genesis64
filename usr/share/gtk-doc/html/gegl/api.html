@@ -1,0 +1,1858 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/tr/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>          
+  <head>
+    <title>GEGL API</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+    <style type='text/css'>
+       @import url("gegl.css");
+       div#toc ul {
+          font-size: 70%;
+       }
+       h3 {
+         margin-top: 2em;
+         margin-bottom: 0;
+         padding-bottom: 0;
+         padding-top: 0.2em;
+         border-top: 1px solid grey;
+       }
+       h4 {
+         margin-top: 1.5em;
+         margin-bottom: 0;
+         padding-bottom: 0.5em;
+         padding-top: 0.2em;
+         border-top: 1px solid grey;
+       }
+       div.function{
+    margin-top: 2em;
+  }
+  div.function_signature{
+      background-color: #ddd;
+      padding: 0.5em;
+  }
+  div.function_header{
+      position: relative;
+      top: 0;
+      left: 0;
+      display:block;
+  }
+  div.return_type{
+        display: block;
+        font-style: italic;
+        color: #22F;
+        float:left;
+        padding-right: 1em;
+  }
+  div.function_name{
+     display: block;
+     float: left;
+     font-weight: bold;
+  }
+  div.function_args{
+        float: right;
+      display:block;
+  }
+  div.argument{
+     display: block;
+     clear: left;
+  }
+  div.arg_type{
+        display: block;
+        font-style: italic;
+        color: #22F;
+        width: 10em;
+        float: left;
+  }
+  div.arg_name{
+        color: #050;
+        display: block;
+        float: left;
+  }
+  span.arg_name{
+        color: #050;
+  }
+  div.arg_doc{
+        display: none;
+  }
+  div.function_doc{
+        display: block;
+        margin-top: 2em;
+  }
+  div.float_breaker{
+     clear: both;
+  }
+  div.return_doc{
+        margin-top: 2em;
+  }
+  span.const{
+        color: grey;
+  }
+  span.pointer{
+        color: red;
+  }
+  span.varargs{
+        color: #F22;
+        font-style: italic;
+  }
+  span.keyword {
+        color: #22F;
+        font-family: mono;
+  }
+
+  div.sect{
+    margin-top: 2em;
+  }
+  div.sect_doc{
+        display: block;
+        margin-top: 2em;
+  }
+
+    </style>
+    </head>
+    <body>
+<div id='toc'>
+      <div class='print'>
+         <h3>Contents</h3>
+      </div>
+      <ul>
+        <li><a href='index.html' style='padding-top: 0.5em;'>GEGL</a></li>
+        <li><a href='index.html#Documentation' style='padding-top: 0.5em;'>Documentation</a></li>
+        <li><a href='index.html#_glossary'>&nbsp;&nbsp;Glossary</a></li>
+        <li><a href='operations.html'>&nbsp;&nbsp;Operations</a></li>
+
+<li><a href='#The_GEGL_API'><div style='padding-top:0.5em'>The GEGL API</div></a></li>
+<li><a href='#Introduction'>Introduction</a></li>
+<li><a href='#Initialization'>Initialization</a></li>
+<li><a href='#gegl_init'>&nbsp;&nbsp;gegl_init</a></li>
+<li><a href='#gegl_get_option_group'>&nbsp;&nbsp;gegl_get_option_group</a></li>
+<li><a href='#gegl_exit'>&nbsp;&nbsp;gegl_exit</a></li>
+<li><a href='#'></a></li>
+<li><a href='#gegl_get_version'>&nbsp;&nbsp;gegl_get_version</a></li>
+<li><a href='#Available_operations'>Available operations</a></li>
+<li><a href='#gegl_list_operations'>&nbsp;&nbsp;gegl_list_operations</a></li>
+<li><a href='#gegl_list_properties'>&nbsp;&nbsp;gegl_list_properties</a></li>
+<li><a href='#GeglNode'><div style='padding-top:0.5em'>GeglNode</div></a></li>
+<li><a href='#gegl_node_new'>&nbsp;&nbsp;gegl_node_new</a></li>
+<li><a href='#gegl_node_new_child'>&nbsp;&nbsp;gegl_node_new_child</a></li>
+<li><a href='#Making_connections'>Making connections</a></li>
+<li><a href='#gegl_node_connect_from'>&nbsp;&nbsp;gegl_node_connect_from</a></li>
+<li><a href='#gegl_node_connect_to'>&nbsp;&nbsp;gegl_node_connect_to</a></li>
+<li><a href='#gegl_node_link'>&nbsp;&nbsp;gegl_node_link</a></li>
+<li><a href='#gegl_node_link_many'>&nbsp;&nbsp;gegl_node_link_many</a></li>
+<li><a href='#gegl_node_disconnect'>&nbsp;&nbsp;gegl_node_disconnect</a></li>
+<li><a href='#Properties'>Properties</a></li>
+<li><a href='#gegl_node_set'>&nbsp;&nbsp;gegl_node_set</a></li>
+<li><a href='#gegl_node_get'>&nbsp;&nbsp;gegl_node_get</a></li>
+<li><a href='#Processing'>Processing</a></li>
+<li><a href='#gegl_node_blit'>&nbsp;&nbsp;gegl_node_blit</a></li>
+<li><a href='#gegl_node_process'>&nbsp;&nbsp;gegl_node_process</a></li>
+<li><a href='#Reparenting'>Reparenting</a></li>
+<li><a href='#gegl_node_adopt_child'>&nbsp;&nbsp;gegl_node_adopt_child</a></li>
+<li><a href='#gegl_node_add_child'>&nbsp;&nbsp;gegl_node_add_child</a></li>
+<li><a href='#gegl_node_remove_child'>&nbsp;&nbsp;gegl_node_remove_child</a></li>
+<li><a href='#gegl_node_get_parent'>&nbsp;&nbsp;gegl_node_get_parent</a></li>
+<li><a href='#State_queries'>State queries</a></li>
+<li><a href='#gegl_node_detect'>&nbsp;&nbsp;gegl_node_detect</a></li>
+<li><a href='#gegl_node_find_property'>&nbsp;&nbsp;gegl_node_find_property</a></li>
+<li><a href='#gegl_node_get_bounding_box'>&nbsp;&nbsp;gegl_node_get_bounding_box</a></li>
+<li><a href='#gegl_node_get_children'>&nbsp;&nbsp;gegl_node_get_children</a></li>
+<li><a href='#gegl_node_get_consumers'>&nbsp;&nbsp;gegl_node_get_consumers</a></li>
+<li><a href='#gegl_node_get_input_proxy'>&nbsp;&nbsp;gegl_node_get_input_proxy</a></li>
+<li><a href='#gegl_node_get_operation'>&nbsp;&nbsp;gegl_node_get_operation</a></li>
+<li><a href='#gegl_node_get_output_proxy'>&nbsp;&nbsp;gegl_node_get_output_proxy</a></li>
+<li><a href='#gegl_node_get_producer'>&nbsp;&nbsp;gegl_node_get_producer</a></li>
+<li><a href='#Binding_conveniences'>Binding conveniences</a></li>
+<li><a href='#gegl_node_create_child'>&nbsp;&nbsp;gegl_node_create_child</a></li>
+<li><a href='#gegl_node_get_property'>&nbsp;&nbsp;gegl_node_get_property</a></li>
+<li><a href='#gegl_node_set_property'>&nbsp;&nbsp;gegl_node_set_property</a></li>
+<li><a href='#XML'><div style='padding-top:0.5em'>XML</div></a></li>
+<li><a href='#gegl_node_new_from_xml'>&nbsp;&nbsp;gegl_node_new_from_xml</a></li>
+<li><a href='#gegl_node_new_from_file'>&nbsp;&nbsp;gegl_node_new_from_file</a></li>
+<li><a href='#gegl_node_to_xml'>&nbsp;&nbsp;gegl_node_to_xml</a></li>
+<li><a href='#GeglProcessor'><div style='padding-top:0.5em'>GeglProcessor</div></a></li>
+<li><a href='#gegl_node_new_processor'>&nbsp;&nbsp;gegl_node_new_processor</a></li>
+<li><a href='#gegl_processor_set_rectangle'>&nbsp;&nbsp;gegl_processor_set_rectangle</a></li>
+<li><a href='#gegl_processor_work'>&nbsp;&nbsp;gegl_processor_work</a></li>
+<li><a href='#gegl_processor_destroy'>&nbsp;&nbsp;gegl_processor_destroy</a></li>
+<li><a href='#gegl_config'>&nbsp;&nbsp;gegl_config</a></li>
+<li><a href='#GeglRectangle'><div style='padding-top:0.5em'>GeglRectangle</div></a></li>
+<li><a href='#'></a></li>
+<li><a href='#GeglBuffer'><div style='padding-top:0.5em'>GeglBuffer</div></a></li>
+<li><a href='#gegl_buffer_new'>&nbsp;&nbsp;gegl_buffer_new</a></li>
+<li><a href='#gegl_buffer_open'>&nbsp;&nbsp;gegl_buffer_open</a></li>
+<li><a href='#gegl_buffer_save'>&nbsp;&nbsp;gegl_buffer_save</a></li>
+<li><a href='#gegl_buffer_load'>&nbsp;&nbsp;gegl_buffer_load</a></li>
+<li><a href='#gegl_buffer_flush'>&nbsp;&nbsp;gegl_buffer_flush</a></li>
+<li><a href='#gegl_buffer_create_sub_buffer'>&nbsp;&nbsp;gegl_buffer_create_sub_buffer</a></li>
+<li><a href='#gegl_buffer_destroy'>&nbsp;&nbsp;gegl_buffer_destroy</a></li>
+<li><a href='#gegl_buffer_get_extent'>&nbsp;&nbsp;gegl_buffer_get_extent</a></li>
+<li><a href='#gegl_buffer_set_extent'>&nbsp;&nbsp;gegl_buffer_set_extent</a></li>
+<li><a href='#gegl_buffer_get_x'>&nbsp;&nbsp;gegl_buffer_get_x</a></li>
+<li><a href='#gegl_buffer_get_y'>&nbsp;&nbsp;gegl_buffer_get_y</a></li>
+<li><a href='#gegl_buffer_get_width'>&nbsp;&nbsp;gegl_buffer_get_width</a></li>
+<li><a href='#gegl_buffer_get_height'>&nbsp;&nbsp;gegl_buffer_get_height</a></li>
+<li><a href='#gegl_buffer_get_pixel_count'>&nbsp;&nbsp;gegl_buffer_get_pixel_count</a></li>
+<li><a href='#gegl_buffer_get'>&nbsp;&nbsp;gegl_buffer_get</a></li>
+<li><a href='#gegl_buffer_set'>&nbsp;&nbsp;gegl_buffer_set</a></li>
+<li><a href='#gegl_buffer_get_format'>&nbsp;&nbsp;gegl_buffer_get_format</a></li>
+<li><a href='#gegl_buffer_clear'>&nbsp;&nbsp;gegl_buffer_clear</a></li>
+<li><a href='#gegl_buffer_copy'>&nbsp;&nbsp;gegl_buffer_copy</a></li>
+<li><a href='#gegl_buffer_dup'>&nbsp;&nbsp;gegl_buffer_dup</a></li>
+<li><a href='#gegl_buffer_sample'>&nbsp;&nbsp;gegl_buffer_sample</a></li>
+<li><a href='#gegl_buffer_sample_cleanup'>&nbsp;&nbsp;gegl_buffer_sample_cleanup</a></li>
+<li><a href='#gegl_buffer_interpolation_from_string'>&nbsp;&nbsp;gegl_buffer_interpolation_from_string</a></li>
+<li><a href='#gegl_buffer_linear_new'>&nbsp;&nbsp;gegl_buffer_linear_new</a></li>
+<li><a href='#gegl_buffer_linear_new_from_data'>&nbsp;&nbsp;gegl_buffer_linear_new_from_data</a></li>
+<li><a href='#gegl_buffer_linear_open'>&nbsp;&nbsp;gegl_buffer_linear_open</a></li>
+<li><a href='#gegl_buffer_linear_close'>&nbsp;&nbsp;gegl_buffer_linear_close</a></li>
+<li><a href='#'>&nbsp;&nbsp;</a></li>
+<li><a href='#GeglOperation'>GeglOperation</a></li>
+</ul></div>
+<div class='paper'><div class='content'>
+<div class='section' id='section_The_GEGL_API'><a name='The_GEGL_API'></a><div class='sect'>
+                 <h2>The GEGL API</h2><div class='sect_doc'><p>
+ This document is both a tutorial and a reference for the C API of GEGL.
+ The concepts covered in this reference should also be applicable when
+ using other languages.
+</p><p> The core API of GEGL isn't frozen yet and feedback regarding its use as
+ well as the clarity of this documentation is most welcome.
+</p><pre class='sample_code'></pre></div></div></div>
+<div class='section' id='section_Introduction'><a name='Introduction'></a><div class='sect'>
+                 <h2>Introduction</h2><div class='sect_doc'><p>
+ Algorithms created with GEGL are expressed as graphs of nodes. The nodes
+ have associated image processing operations. A node has output and input
+ pads which can be connected. By connecting these nodes in chains a set of
+ image operation filters and combinators can be applied to the image data.
+</p><p> To make GEGL process data you request a rectangular region of a node's
+ output pad to be rendered into a provided linear buffer of any (supported
+ by babl) pixel format. GEGL uses information provided by the nodes to
+ determine the smallest buffers needed at each stage of processing.
+</p><pre class='sample_code'></pre></div></div></div>
+<div class='section' id='section_Initialization'><a name='Initialization'></a><div class='sect'>
+                 <h2>Initialization</h2><div class='sect_doc'><p>
+ Before GEGL can be used the engine should be initialized by either calling
+ <a href='#gegl_init'>gegl_init</a> or through the use of <a href='#gegl_get_option_group'>gegl_get_option_group</a>. To shut down the
+ GEGL engine call <a href='#gegl_exit'>gegl_exit</a>.
+</p><p></p><pre class='sample_code'>#include &lt;gegl.h&gt;
+
+int main(int argc, char **argv)
+{
+  gegl_init (&amp;argc, &amp;argv);
+      <span style='color:gray;text-style:italic'># other GEGL code</span>
+  gegl_exit ();
+}
+</pre></div></div></div>
+<div class='section' id='section_gegl_init'><a name='gegl_init'></a><div class='function'>
+                 <!--<h3>gegl_init</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_init</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span>gint&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>argc<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gchar&nbsp;<span class='pointer'>*</span><span class='pointer'>*</span><span class='pointer'>*</span></div>
+                      <div class='arg_name'>argv<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Call this function before using any other GEGL functions. It will
+ initialize everything needed to operate GEGL and parses some
+ standard command line options.  <span class='arg_name'>argc</span> and <span class='arg_name'>argv</span> are adjusted
+ accordingly so your own code will never see those standard
+ arguments. gegl_init() will call g_thread_init(), unless you, or
+ some other code already has initialized gthread.
+</p><p> Note that there is an alternative way to initialize GEGL: if you
+ are calling g_option_context_parse() with the option group returned
+ by <a href='#gegl_get_option_group'>gegl_get_option_group</a>(), you don't have to call <a href='#gegl_init'>gegl_init</a>() but
+ you have to call g_thread_init() before any glib or glib dependant code
+ yourself.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>argc</span></td><td> a pointer to the number of command line arguments.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>argv</span></td><td> a pointer to the array of command line arguments.</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_get_option_group'><a name='gegl_get_option_group'></a><div class='function'>
+                 <!--<h3>gegl_get_option_group</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='http://developer.gnome.org/doc/API/2.2/glib/glib-Commandline-option-parser.html#GOptionGroup'>GOptionGroup</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_get_option_group</div>
+                   </div><div class='function_args'><div class='argument'><div class='arg_type'><span class='const'>(void)</span></div></div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p></p></div><div class='return_doc'><b>Returns</b> a GOptionGroup for the commandline arguments recognized
+ by GEGL. You should add this group to your GOptionContext
+ with g_option_context_add_group() if you are using
+ g_option_context_parse() to parse your commandline arguments.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_exit'><a name='gegl_exit'></a><div class='function'>
+                 <!--<h3>gegl_exit</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_exit</div>
+                   </div><div class='function_args'><div class='argument'><div class='arg_type'><span class='const'>(void)</span></div></div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Call this function when you're done using GEGL. It will clean up
+ caches and write/dump debug information if the correct debug flags
+ are set.
+</p></div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_get_version'><a name='gegl_get_version'></a><div class='function'>
+                 <!--<h3>gegl_get_version</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_get_version</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#int'>int</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>major<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#int'>int</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>minor<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#int'>int</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>micro<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> This function fetches the version of the GEGL library being used by
+ the running process.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>major</span></td><td> a pointer to a int where the major version number will be stored</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>minor</span></td><td> ditto for the minor version number</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>micro</span></td><td> ditto for the micro version number</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_Available_operations'><a name='Available_operations'></a><div class='sect'>
+                 <h2>Available operations</h2><div class='sect_doc'><p> Gegl provides means to check for available processing operations that
+ can be used with nodes using <a href='#gegl_list_operations'>gegl_list_operations</a> and for a specified
+ op give a list of properties with <a href='#gegl_list_properties'>gegl_list_properties</a>.
+</p><pre class='sample_code'></pre></div></div></div>
+<div class='section' id='section_gegl_list_operations'><a name='gegl_list_operations'></a><div class='function'>
+                 <!--<h3>gegl_list_operations</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>gchar&nbsp;<span class='pointer'>*</span><span class='pointer'>*</span></div>
+                   <div class='function_name'>gegl_list_operations</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span>guint&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>n_operations_p<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>n_operations_p</span></td><td> return location for number of operations.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> an alphabetically sorted array of available operation names. The
+ list should be freed with g_free after use.
+</div><pre class='sample_code'>gchar **operations;
+guint   n_operations;
+gint i;
+
+operations = gegl_list_operations (&amp;n_operations);
+g_print ("Available operations:\n");
+for (i=0; i &lt; n_operations; i++)
+  {
+    g_print ("\t%s\n", operations[i]);
+  }
+g_free (operations);
+</pre></div></div>
+<div class='section' id='section_gegl_list_properties'><a name='gegl_list_properties'></a><div class='function'>
+                 <!--<h3>gegl_list_properties</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='http://developer.gnome.org/doc/API/2.0/gobject/gobject-GParamSpec.html#GParamSpec'>GParamSpec</a><span class='pointer'>*</span><span class='pointer'>*</span>&nbsp;</div>
+                   <div class='function_name'>gegl_list_properties</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>operation_type<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>guint&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>n_properties_p<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>operation_type</span></td><td> the name of the operation type we want to query to properties of.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>n_properties_p</span></td><td> return location for number of properties.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> an allocated array of <a href='#GParamSpecs'>GParamSpecs</a> describing the properties
+ of the operation available when a node has operation_type set.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_GeglNode'><a name='GeglNode'></a><div class='sect'>
+                 <h2>GeglNode</h2><div class='sect_doc'><p>
+ The Node is the image processing primitive connected to create compositions
+ in GEGL. The toplevel <a href='#GeglNode'>GeglNode</a> which contains a graph of <a href='#GeglNodes'>GeglNodes</a> is
+ created with <a href='#gegl_node_new'>gegl_node_new</a>. Using this toplevel node we can create children
+ of this node which are individual processing elements using <a href='#gegl_node_new_child'>gegl_node_new_child</a>
+</p><p> A node either has an associated operation or is a parent for other nodes,
+ that are connected to their parent through proxies created with
+ <a href='#gegl_node_get_input_proxy'>gegl_node_get_input_proxy</a> and <a href='#gegl_node_get_output_proxy'>gegl_node_get_output_proxy</a>.
+</p><p> The properties available on a node depends on which <a
+ href='operations.html'>operation</a> is specified.
+</p><p></p><pre class='sample_code'>GeglNode *gegl, *load, *bcontrast;
+
+gegl = gegl_node_new ();
+load = gegl_node_new_child (gegl,
+                            "operation", "load",
+                            "path",      "input.png",
+                            NULL);
+bcontrast = gegl_node_new_child (gegl,
+                                 "operation", "brightness-contrast",
+                                 "brightness", 0.2,
+                                 "contrast",   1.5,
+                                 NULL);
+</pre></div></div></div>
+<div class='section' id='section_gegl_node_new'><a name='gegl_node_new'></a><div class='function'>
+                 <!--<h3>gegl_node_new</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_node_new</div>
+                   </div><div class='function_args'><div class='argument'><div class='arg_type'><span class='const'>(void)</span></div></div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Create a new graph that can contain further processing nodes.
+</p><p></p></div><div class='return_doc'><b>Returns</b> a new top level <a href='#GeglNode'>GeglNode</a> (which can be used as a graph). When you
+ are done using this graph instance it should be unreferenced with g_object_unref.
+ This will also free any sub nodes created from this node.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_new_child'><a name='gegl_node_new_child'></a><div class='function'>
+                 <!--<h3>gegl_node_new_child</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_node_new_child</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>parent<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>first_property_name<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#'></a></div>
+                      <div class='arg_name'><span class='varargs'>..., NULL</span><span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Creates a new processing node that performs the specified operation with
+ a <span class='keyword'>NULL</span> terminated list of key/value pairs for initial parameter values
+ configuring the operation. Usually the first pair should be "operation"
+ and the type of operation to be associated. If no operation is provided
+ the node doesn't have an initial operation and can be used to construct
+ a subgraph with special middle-man routing nodes created with
+ <a href='#gegl_node_get_output_proxy'>gegl_node_get_output_proxy</a> and <a href='#gegl_node_get_input_proxy'>gegl_node_get_input_proxy</a>.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>parent</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>first_property_name</span></td><td> the first property name</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>...</span></td><td> first property value, optionally followed by more key/value pairs, ended terminated with <span class='keyword'>NULL</span>.
+</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> a newly created node. The node will be destroyed by the parent.
+ Calling g_object_unref on a node will cause the node to be dropped by the
+ parent. (You may also add additional references using
+ g_object_ref/g_object_unref, but in general relying on the parents reference
+ counting is easiest.)
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_Making_connections'><a name='Making_connections'></a><div class='sect'>
+                 <h2>Making connections</h2><div class='sect_doc'><p>
+ Nodes in GEGL are connected to each other. The resulting graph of nodes
+ represents the image processing pipeline to be processed.
+</p><p></p><pre class='sample_code'>gegl_node_link_many (background, over, png_save, NULL);
+gegl_node_connect_to (translate, "output", over, "aux");
+gegl_node_link_many (text, blur, translate, NULL);
+</pre></div></div></div>
+<div class='section' id='section_gegl_node_connect_from'><a name='gegl_node_connect_from'></a><div class='function'>
+                 <!--<h3>gegl_node_connect_from</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>gboolean&nbsp;</div>
+                   <div class='function_name'>gegl_node_connect_from</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>sink<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>input_pad_name<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>source<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>output_pad_name<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Makes a connection between the pads of two nodes.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>sink</span></td><td> the node we're connecting an input to</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>input_pad_name</span></td><td> the name of the input pad we are connecting to</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>source</span></td><td> the node producing data we want to connect.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>output_pad_name</span></td><td> the output pad we want to use on the source.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> <span class='keyword'>TRUE</span> if the connection was succesfully made.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_connect_to'><a name='gegl_node_connect_to'></a><div class='function'>
+                 <!--<h3>gegl_node_connect_to</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>gboolean&nbsp;</div>
+                   <div class='function_name'>gegl_node_connect_to</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>source<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>output_pad_name<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>sink<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>input_pad_name<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Makes a connection between the pads of two nodes.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>source</span></td><td> the node producing data we want to connect.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>output_pad_name</span></td><td> the output pad we want to use on the source.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>sink</span></td><td> the node we're connecting an input to</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>input_pad_name</span></td><td> the name of the input pad we are connecting to</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> <span class='keyword'>TRUE</span> if the connection was succesfully made.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_link'><a name='gegl_node_link'></a><div class='function'>
+                 <!--<h3>gegl_node_link</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_node_link</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>source<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>sink<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Synthetic sugar for linking the "output" pad of <span class='arg_name'>source</span> to the "input"
+ pad of <span class='arg_name'>sink</span>.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>source</span></td><td> the producer of data.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>sink</span></td><td> the consumer of data.</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_link_many'><a name='gegl_node_link_many'></a><div class='function'>
+                 <!--<h3>gegl_node_link_many</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_node_link_many</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>source<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>first_sink<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#'></a></div>
+                      <div class='arg_name'><span class='varargs'>..., NULL</span><span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Synthetic sugar for linking a chain of nodes with "input"->"output". The
+ list is <span class='keyword'>NULL</span> terminated.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>source</span></td><td> the producer of data.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>first_sink</span></td><td> the first consumer of data.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>...</span></td><td> <span class='keyword'>NULL</span>, or optionally more consumers followed by <span class='keyword'>NULL</span>.</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_disconnect'><a name='gegl_node_disconnect'></a><div class='function'>
+                 <!--<h3>gegl_node_disconnect</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>gboolean&nbsp;</div>
+                   <div class='function_name'>gegl_node_disconnect</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>input_pad<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Disconnects node connected to <span class='arg_name'>input_pad</span> of <span class='arg_name'>node</span> (if any).
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>input_pad</span></td><td> the input pad to disconnect.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> <span class='keyword'>TRUE</span> if a connection was broken.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_Properties'><a name='Properties'></a><div class='sect'>
+                 <h2>Properties</h2><div class='sect_doc'><p>
+ Properties can be set either when creating the node with
+ <a href='#gegl_node_new_child'>gegl_node_new_child</a> as well as later when changing the initial
+ value with <a href='#gegl_node_set'>gegl_node_set</a>.
+</p><p> To see what properties are available for a given operation look in the <a
+ href='operations.html'>Operations reference</a> or use
+ <a href='#gegl_node_get'>gegl_node_get</a>.
+</p><pre class='sample_code'></pre></div></div></div>
+<div class='section' id='section_gegl_node_set'><a name='gegl_node_set'></a><div class='function'>
+                 <!--<h3>gegl_node_set</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_node_set</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>first_property_name<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#'></a></div>
+                      <div class='arg_name'><span class='varargs'>..., NULL</span><span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Set properties on a node, possible properties to be set are the properties
+ of the currently set operations as well as <em>"name"</em> and
+ <em>"operation"</em>. <em>"operation"</em> changes the current operations
+ set for the node, <em>"name"</em> doesn't have any role internally in
+ GEGL.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>first_property_name</span></td><td> name of the first property to set</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>...</span></td><td> value for the first property, followed optionally by more name/value pairs, followed by <span class='keyword'>NULL</span>.
+</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'>gegl_node_set (node, "brightness", -0.2,
+                     "contrast",   2.0,
+                     NULL);
+</pre></div></div>
+<div class='section' id='section_gegl_node_get'><a name='gegl_node_get'></a><div class='function'>
+                 <!--<h3>gegl_node_get</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_node_get</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>first_property_name<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#'></a></div>
+                      <div class='arg_name'><span class='varargs'>..., NULL</span><span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Gets properties of a <a href='#GeglNode'>GeglNode</a>.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>first_property_name</span></td><td> name of the first property to get.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>...</span></td><td> return location for the first property, followed optionally by more name/value pairs, followed by <span class='keyword'>NULL</span>.
+</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'>double level;
+char  *path;
+
+gegl_node_get (png_save, "path", &amp;path, NULL);
+gegl_node_get (threshold, "level", &amp;level, NULL);
+</pre></div></div>
+<div class='section' id='section_Processing'><a name='Processing'></a><div class='sect'>
+                 <h2>Processing</h2><div class='sect_doc'><p>
+ There are two different ways to do processing with GEGL, either you
+ query any node providing output for a rectangular region to be rendered
+ using <a href='#gegl_node_blit'>gegl_node_blit</a>, or you use <a href='#gegl_node_process'>gegl_node_process</a> on a sink node (A
+ display node, an image file writer or similar). To do iterative processing
+ you need to use a <a href='#GeglProcessor'>GeglProcessor</a>. See <a href='#gegl_processor_work'>gegl_processor_work</a> for a code
+ sample.
+</p><pre class='sample_code'></pre></div></div></div>
+<div class='section' id='section_gegl_node_blit'><a name='gegl_node_blit'></a><div class='function'>
+                 <!--<h3>gegl_node_blit</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_node_blit</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gdouble&nbsp;</div>
+                      <div class='arg_name'>scale<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>roi<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#Babl'>Babl</a>          <span class='pointer'>*</span></div>
+                      <div class='arg_name'>format<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gpointer&nbsp;</div>
+                      <div class='arg_name'>destination_buf<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gint&nbsp;</div>
+                      <div class='arg_name'>rowstride<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#GeglBlitFlags'>GeglBlitFlags</a>&nbsp;</div>
+                      <div class='arg_name'>flags<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Render a rectangular region from a node.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>scale</span></td><td> the scale to render at 1.0 is default, other values changes the width/height of the sampled region.
+</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>roi</span></td><td> the rectangle to render from the node, the coordinate system used is coordinates after scale has been applied.
+</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>format</span></td><td> the <a href='#BablFormat'>BablFormat</a> desired.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>destination_buf</span></td><td> a memory buffer large enough to contain the data, can be left as <span class='keyword'>NULL</span> when forcing a rendering of a region.
+</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>rowstride</span></td><td> rowstride in bytes, or GEGL_AUTO_ROWSTRIDE to compute the rowstride based on the width and bytes per pixel for the specified format.
+</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>flags</span></td><td> an or'ed combination of GEGL_BLIT_DEFAULT, GEGL_BLIT_CACHE and GEGL_BLIT_DIRTY. if cache is enabled, a cache will be set up for subsequent
+ requests of image data from this node. By passing in GEGL_BLIT_DIRTY the
+ function will return with the latest rendered results in the cache without
+ regard to wheter the regions has been rendered or not.
+</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_process'><a name='gegl_node_process'></a><div class='function'>
+                 <!--<h3>gegl_node_process</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_node_process</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>sink_node<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Render a composition. This can be used for instance on a node with a "png-save"
+ operation to render all neccesary data, and make it be written to file. This
+ function wraps the usage of a GeglProcessor in a single blocking function
+ call. If you need a non-blocking operation, then make a direct use of
+ <a href='#gegl_processor_work'>gegl_processor_work</a>. See <a href='#GeglProcessor'>GeglProcessor</a>.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>sink_node</span></td><td> a <a href='#GeglNode'>GeglNode</a> without outputs.</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'>GeglNode      *gegl;
+GeglRectangle  roi;
+GeglNode      *png_save;
+unsigned char *buffer;
+
+gegl = gegl_parse_xml (xml_data);
+roi      = gegl_node_get_bounding_box (gegl);
+# create png_save from the graph, the parent/child relationship
+# only mean anything when it comes to memory management.
+png_save = gegl_node_new_child (gegl,
+                                "operation", "png-save",
+                                "path",      "output.png",
+                                NULL);
+
+gegl_node_link (gegl, png_save);
+gegl_node_process (png_save);
+
+buffer = malloc (roi.w*roi.h*4);
+gegl_node_blit (gegl,
+                &amp;roi,
+                1.0,
+                babl_format("R'G'B'A u8",
+                roi.w*4,
+                buffer,
+                GEGL_BLIT_DEFAULT);
+</pre></div></div>
+<div class='section' id='section_Reparenting'><a name='Reparenting'></a><div class='sect'>
+                 <h2>Reparenting</h2><div class='sect_doc'><p>
+ Sometimes it is useful to be able to move nodes between graphs or even
+ handle orphaned nods that are not part of a graph. gegl_node_adopt_child
+ and gegl_node_get_parent are provided to handle such cases.
+</p><p> (gegl_node_adopt_child is deprecated, and will be removed in a future
+ release)
+</p><pre class='sample_code'></pre></div></div></div>
+<div class='section' id='section_gegl_node_adopt_child'><a name='gegl_node_adopt_child'></a><div class='function'>
+                 <!--<h3>gegl_node_adopt_child</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_node_adopt_child</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>parent<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>child<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Adds <span class='arg_name'>child</span> to the responsibilities of <span class='arg_name'>node</span>, this makes the parent node
+ take a reference on the child that is kept as long as the parent itself is
+ being referenced. The node is stolen from an existing parent if there is one,
+ or a presumed existing reference is used. If <span class='arg_name'>parent</span> is <span class='keyword'>NULL</span> the child will
+ be orphaned and the developer is given a reference to be responsible of.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>parent</span></td><td> a <a href='#GeglNode'>GeglNode</a> or <span class='keyword'>NULL</span>.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>child</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr></table>
+</div><div class='return_doc'><b>Returns</b> the child, or <span class='keyword'>NULL</span> if there was a problem with the arguments.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_add_child'><a name='gegl_node_add_child'></a><div class='function'>
+                 <!--<h3>gegl_node_add_child</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span>    </div>
+                   <div class='function_name'>gegl_node_add_child</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>graph<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>child<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Make the GeglNode <span class='arg_name'>graph</span>, take a reference on child. This reference
+ will be dropped when the reference count on the graph reaches zero.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>graph</span></td><td> a GeglNode (graph)</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>child</span></td><td> a GeglNode.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> the child.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_remove_child'><a name='gegl_node_remove_child'></a><div class='function'>
+                 <!--<h3>gegl_node_remove_child</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span>    </div>
+                   <div class='function_name'>gegl_node_remove_child</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>graph<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>child<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Removes a child from a GeglNode. The reference previously held will be
+ dropped so increase the reference count before removing when reparenting
+ a child between two graphs.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>graph</span></td><td> a GeglNode (graph)</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>child</span></td><td> a GeglNode.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> the child.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_get_parent'><a name='gegl_node_get_parent'></a><div class='function'>
+                 <!--<h3>gegl_node_get_parent</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_node_get_parent</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr></table>
+</div><div class='return_doc'><b>Returns</b> a GeglNode that keeps a reference on a child.
+</p><p> Returns the parent of a node or <span class='keyword'>NULL</span>.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_State_queries'><a name='State_queries'></a><div class='sect'>
+                 <h2>State queries</h2><div class='sect_doc'><p>
+ This section lists functions that retrieve information, mostly needed
+ for interacting with a graph in a GUI, not creating one from scratch.
+</p><p> You can figure out what the bounding box of a node is with <a href='#gegl_node_get_bounding_box'>gegl_node_get_bounding_box</a>,
+ retrieve the values of named properties using <a href='#gegl_node_get'>gegl_node_get</a>.
+</p><pre class='sample_code'></pre></div></div></div>
+<div class='section' id='section_gegl_node_detect'><a name='gegl_node_detect'></a><div class='function'>
+                 <!--<h3>gegl_node_detect</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_node_detect</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gint&nbsp;</div>
+                      <div class='arg_name'>x<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gint&nbsp;</div>
+                      <div class='arg_name'>y<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Performs hit detection by returning the node providing data at a given
+ coordinate pair. Currently operates only on bounding boxes and not
+ pixel data.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>x</span></td><td> x coordinate</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>y</span></td><td> y coordinate</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> the GeglNode providing the data ending up at <span class='arg_name'>x</span>,<span class='arg_name'>y</span> in the output
+ of <span class='arg_name'>node</span>.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_find_property'><a name='gegl_node_find_property'></a><div class='function'>
+                 <!--<h3>gegl_node_find_property</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='http://developer.gnome.org/doc/API/2.0/gobject/gobject-GParamSpec.html#GParamSpec'>GParamSpec</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_node_find_property</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>property_name<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> the node to lookup a paramspec on</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>property_name</span></td><td> the name of the property to get a paramspec for.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> the GParamSpec of property or <span class='keyword'>NULL</span> if no such property exists.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_get_bounding_box'><a name='gegl_node_get_bounding_box'></a><div class='function'>
+                 <!--<h3>gegl_node_get_bounding_box</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglRectangle'>GeglRectangle</a>&nbsp;</div>
+                   <div class='function_name'>gegl_node_get_bounding_box</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr></table>
+</div><div class='return_doc'><b>Returns</b> the position and dimensions of a rectangle spanning the area
+ defined by a node.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_get_children'><a name='gegl_node_get_children'></a><div class='function'>
+                 <!--<h3>gegl_node_get_children</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='http://developer.gnome.org/doc/API/2.0/glib/glib-Singly-Linked-Lists.html#GSList'>GSList</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_node_get_children</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> the node to retrieve the children of.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> a list of nodes with children/internal nodes. The list must be
+ freed by the caller.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_get_consumers'><a name='gegl_node_get_consumers'></a><div class='function'>
+                 <!--<h3>gegl_node_get_consumers</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>gint&nbsp;</div>
+                   <div class='function_name'>gegl_node_get_consumers</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>output_pad<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span><span class='pointer'>*</span><span class='pointer'>*</span></div>
+                      <div class='arg_name'>nodes<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar <span class='pointer'>*</span><span class='pointer'>*</span><span class='pointer'>*</span></div>
+                      <div class='arg_name'>pads<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Retrieve which pads on which nodes are connected to a named output_pad,
+ and the number of connections. Both the location for the generated
+ nodes array and pads array can be left as <span class='keyword'>NULL</span>. If they are non <span class='keyword'>NULL</span>
+ both should be freed with g_free. The arrays are <span class='keyword'>NULL</span> terminated.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> the node we are querying.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>output_pad</span></td><td> the output pad we want to know who uses.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>nodes</span></td><td> optional return location for array of nodes.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>pads</span></td><td> optional return location for array of pad names.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> the number of consumers connected to this output_pad.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_get_input_proxy'><a name='gegl_node_get_input_proxy'></a><div class='function'>
+                 <!--<h3>gegl_node_get_input_proxy</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_node_get_input_proxy</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>pad_name<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Proxies are used to route between nodes of a subgraph contained within
+ a node.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>pad_name</span></td><td> the name of the pad.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> an input proxy for the named pad. If no input proxy exists with
+ this name a new one will be created.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_get_operation'><a name='gegl_node_get_operation'></a><div class='function'>
+                 <!--<h3>gegl_node_get_operation</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><span class='const'>const</span>&nbsp;gchar <span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_node_get_operation</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><span class='const'>const</span>&nbsp;<a href='#GeglNode'>GeglNode</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr></table>
+</div><div class='return_doc'><b>Returns</b> the type of processing operation associated with this node, or
+ <span class='keyword'>NULL</span> if there is no op associated. The special name "GraphNode"
+ is returned if the node is the container of a subgraph.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_get_output_proxy'><a name='gegl_node_get_output_proxy'></a><div class='function'>
+                 <!--<h3>gegl_node_get_output_proxy</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_node_get_output_proxy</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>pad_name<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Proxies are used to route between nodes of a subgraph contained within
+ a node.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>pad_name</span></td><td> the name of the pad.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> a output proxy for the named pad. If no output proxy exists with
+ this name a new one will be created.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_get_producer'><a name='gegl_node_get_producer'></a><div class='function'>
+                 <!--<h3>gegl_node_get_producer</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_node_get_producer</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gchar&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>input_pad_name<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gchar&nbsp;<span class='pointer'>*</span><span class='pointer'>*</span></div>
+                      <div class='arg_name'>output_pad_name<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> the node we are querying</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>input_pad_name</span></td><td> the input pad we want to get the producer for</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>output_pad_name</span></td><td> optional pointer to a location where we can store a                   freshly allocated string with the name of the output pad.
+</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> the node providing data or <span class='keyword'>NULL</span> if no node is connected to the
+ input_pad.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_Binding_conveniences'><a name='Binding_conveniences'></a><div class='sect'>
+                 <h2>Binding conveniences</h2><div class='sect_doc'><p>
+ The following functions are mostly included to make it easier to create
+ language bindings for the nodes. The varargs versions will in most cases
+ lead to both more efficient and readable code from C.
+</p><pre class='sample_code'></pre></div></div></div>
+<div class='section' id='section_gegl_node_create_child'><a name='gegl_node_create_child'></a><div class='function'>
+                 <!--<h3>gegl_node_create_child</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_node_create_child</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>parent<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>operation<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Creates a new processing node that performs the specified operation.
+ All properties of the operation will have their default values. This
+ is included as an addiiton to <a href='#gegl_node_new_child'>gegl_node_new_child</a> in the public API to have
+ a non varargs entry point for bindings as well as sometimes simpler more
+ readable code.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>parent</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>operation</span></td><td> the type of node to create.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> a newly created node. The node will be destroyed by the parent.
+ Calling g_object_unref on a node will cause the node to be dropped by the
+ parent. (You may also add additional references using
+ g_object_ref/g_object_unref, but in general relying on the parents reference
+ counting is easiest.)
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_get_property'><a name='gegl_node_get_property'></a><div class='function'>
+                 <!--<h3>gegl_node_get_property</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_node_get_property</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>property_name<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='http://developer.gnome.org/doc/API/2.0/gobject/gobject-Generic-values.html#GValue'>GValue</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>value<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> This is mainly included for language bindings. Using <a href='#gegl_node_get'>gegl_node_get</a> is
+ more convenient when programming in C.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> the node to get a property from</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>property_name</span></td><td> the name of the property to get</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>value</span></td><td> pointer to a GValue where the value of the property should be stored</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_set_property'><a name='gegl_node_set_property'></a><div class='function'>
+                 <!--<h3>gegl_node_set_property</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_node_set_property</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>property_name<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='http://developer.gnome.org/doc/API/2.0/gobject/gobject-Generic-values.html#GValue'>GValue</a>  <span class='pointer'>*</span></div>
+                      <div class='arg_name'>value<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> This is mainly included for language bindings. Using <a href='#gegl_node_set'>gegl_node_set</a> is
+ more convenient when programming in C.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>property_name</span></td><td> the name of the property to set</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>value</span></td><td> a GValue containing the value to be set in the property.</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_XML'><a name='XML'></a><div class='sect'>
+                 <h2>XML</h2><div class='sect_doc'><p> The XML format used by GEGL is not stable and should not be relied on
+ for anything but testing purposes yet.
+</p><pre class='sample_code'></pre></div></div></div>
+<div class='section' id='section_gegl_node_new_from_xml'><a name='gegl_node_new_from_xml'></a><div class='function'>
+                 <!--<h3>gegl_node_new_from_xml</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_node_new_from_xml</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>xmldata<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>path_root<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> The <a href='#GeglNode'>GeglNode</a> returned contains the graph described by the tree of stacks
+ in the XML document. The tree is connected to the "output" pad of the
+ returned node and thus can be used directly for processing.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>xmldata</span></td><td> a \0 terminated string containing XML data to be parsed.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>path_root</span></td><td> a file system path that relative paths in the XML will be resolved in relation to.
+</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> a GeglNode containing the parsed XML as a subgraph.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_new_from_file'><a name='gegl_node_new_from_file'></a><div class='function'>
+                 <!--<h3>gegl_node_new_from_file</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_node_new_from_file</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>path<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> The <a href='#GeglNode'>GeglNode</a> returned contains the graph described by the tree of stacks
+ in the XML document. The tree is connected to the "output" pad of the
+ returned node and thus can be used directly for processing.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>path</span></td><td> the path to a file on the local file system to be parsed.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> a GeglNode containing the parsed XML as a subgraph.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_node_to_xml'><a name='gegl_node_to_xml'></a><div class='function'>
+                 <!--<h3>gegl_node_to_xml</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>gchar&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_node_to_xml</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar   <span class='pointer'>*</span></div>
+                      <div class='arg_name'>path_root<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>path_root</span></td><td> filesystem path to construct relative paths from.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> a freshly allocated \0 terminated string containing a XML
+ serialization of the composition produced by a node (and thus also
+ the nodes contributing data to the specified node). To export a
+ gegl graph, connect the internal output node to an output proxy (see
+ <a href='#gegl_node_get_output_proxy'>gegl_node_get_output_proxy</a>.) and use the proxy node as the basis
+ for the serialization.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_GeglProcessor'><a name='GeglProcessor'></a><div class='sect'>
+                 <h2>GeglProcessor</h2><div class='sect_doc'><p>
+ A <a href='#GeglProcessor'>GeglProcessor</a>, is a worker that can be used for background rendering
+ of regions in a node's cache. Or for processing a sink node. For most
+ non GUI tasks using <a href='#gegl_node_blit'>gegl_node_blit</a> and <a href='#gegl_node_process'>gegl_node_process</a> directly
+ should be sufficient. See <a href='#gegl_processor_work'>gegl_processor_work</a> for a code sample.
+</p><p></p><pre class='sample_code'></pre></div></div></div>
+<div class='section' id='section_gegl_node_new_processor'><a name='gegl_node_new_processor'></a><div class='function'>
+                 <!--<h3>gegl_node_new_processor</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglProcessor'>GeglProcessor</a>&nbsp;<span class='pointer'>*</span></div>
+                   <div class='function_name'>gegl_node_new_processor</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglNode'>GeglNode</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>node<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>rectangle<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>node</span></td><td> a <a href='#GeglNode'>GeglNode</a></td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>rectangle</span></td><td> the <a href='#GeglRectangle'>GeglRectangle</a> to work on or <span class='keyword'>NULL</span> to work on all available data.
+</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> a new <a href='#GeglProcessor'>GeglProcessor</a>.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_processor_set_rectangle'><a name='gegl_processor_set_rectangle'></a><div class='function'>
+                 <!--<h3>gegl_processor_set_rectangle</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_processor_set_rectangle</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglProcessor'>GeglProcessor</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>processor<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>rectangle<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Change the rectangle a <a href='#GeglProcessor'>GeglProcessor</a> is working on.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>processor</span></td><td> a <a href='#GeglProcessor'>GeglProcessor</a></td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>rectangle</span></td><td> the new <a href='#GeglRectangle'>GeglRectangle</a> the processor shold work on or <span class='keyword'>NULL</span> to make it work on all data in the buffer.
+</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_processor_work'><a name='gegl_processor_work'></a><div class='function'>
+                 <!--<h3>gegl_processor_work</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>gboolean&nbsp;</div>
+                   <div class='function_name'>gegl_processor_work</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglProcessor'>GeglProcessor</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>processor<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gdouble&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>progress<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Do an iteration of work for the processor.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>processor</span></td><td> a <a href='#GeglProcessor'>GeglProcessor</a></td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>progress</span></td><td> a location to store the (estimated) percentage complete.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> <span class='keyword'>TRUE</span> if there is more work to be done.
+</p><p></div><pre class='sample_code'>GeglProcessor *processor = gegl_node_new_processor (node, &amp;roi);
+double         progress;
+
+while (gegl_processor_work (processor, &amp;progress))
+  g_warning ("%f%% complete", progress);
+gegl_processor_destroy (processor);
+</pre></div></div>
+<div class='section' id='section_gegl_processor_destroy'><a name='gegl_processor_destroy'></a><div class='function'>
+                 <!--<h3>gegl_processor_destroy</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_processor_destroy</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglProcessor'>GeglProcessor</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>processor<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Frees up resources used by a processing handle.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>processor</span></td><td> a <a href='#GeglProcessor'>GeglProcessor</a></td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_config'><a name='gegl_config'></a><div class='function'>
+                 <!--<h3>gegl_config</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GObject'>GObject</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_config</div>
+                   </div><div class='function_args'><div class='argument'><div class='arg_type'><span class='const'>(void)</span></div></div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p></p></div><div class='return_doc'><b>Returns</b> a GObject with properties that can be manipulated to control
+ GEGLs behavior. Properties available on the object are:
+</p><p> "cache-size" "quality" and "swap", the two first is an integer denoting
+ number of bytes, the secons a double value between 0 and 1 and the last
+ the path of the directory to swap to (or "ram" to not use diskbased swap)
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_GeglRectangle'><a name='GeglRectangle'></a><div class='sect'>
+                 <h2>GeglRectangle</h2><div class='sect_doc'><p>
+ GeglRectangles are used in <a href='#gegl_node_get_bounding_box'>gegl_node_get_bounding_box</a> and <a href='#gegl_node_blit'>gegl_node_blit</a>
+ for specifying rectangles.
+</p><p> </p><pre>struct GeglRectangle
+ {
+   gint x;
+   gint y;
+   gint width;
+   gint height;
+ };</pre><p>
+</p><p></p><pre class='sample_code'></pre></div></div></div>
+<div class='section' id='section_GeglBuffer'><a name='GeglBuffer'></a><div class='sect'>
+                 <h2>GeglBuffer</h2><div class='sect_doc'><p>
+ GeglBuffer is the API used by GEGL for storing and retrieving raster data.
+ GeglBuffer heavily relies on babl for translation and description of
+ different pixel formats.
+</p><p> Internally GeglBuffer currently uses a tiled mipmap pyramid structure that
+ can be swapped to disk. In the future GeglBuffer might also support a linear
+ backend, a GPU memory backend and a network backend for buffers.
+</p><pre class='sample_code'></pre></div></div></div>
+<div class='section' id='section_gegl_buffer_new'><a name='gegl_buffer_new'></a><div class='function'>
+                 <!--<h3>gegl_buffer_new</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglBuffer'>GeglBuffer</a><span class='pointer'>*</span>&nbsp;</div>
+                   <div class='function_name'>gegl_buffer_new</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>extent<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#Babl'>Babl</a>          <span class='pointer'>*</span></div>
+                      <div class='arg_name'>format<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Create a new GeglBuffer of a given format with a given extent. It is
+ possible to pass in <span class='keyword'>NULL</span> for both extent and format, a <span class='keyword'>NULL</span> extent creates
+ an empty buffer and a <span class='keyword'>NULL</span> format makes the buffer default to "RGBA float".
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>extent</span></td><td> the geometry of the buffer (origin, width and height) a GeglRectangle.
+</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>format</span></td><td> the Babl pixel format to be used, create one with babl_format("RGBA u8") and similar.
+</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_open'><a name='gegl_buffer_open'></a><div class='function'>
+                 <!--<h3>gegl_buffer_open</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglBuffer'>GeglBuffer</a><span class='pointer'>*</span>&nbsp;</div>
+                   <div class='function_name'>gegl_buffer_open</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><span class='const'>const</span>&nbsp;gchar         <span class='pointer'>*</span></div>
+                      <div class='arg_name'>path<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Open an existing on-disk GeglBuffer, this buffer is opened in a monitored
+ state so multiple instances of gegl can share the same buffer. Sets on
+ one buffer are reflected in the other.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>path</span></td><td> the path to a gegl buffer on disk.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b>: a GeglBuffer object.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_save'><a name='gegl_buffer_save'></a><div class='function'>
+                 <!--<h3>gegl_buffer_save</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_buffer_save</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>buffer<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;gchar         <span class='pointer'>*</span></div>
+                      <div class='arg_name'>path<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>roi<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Write a GeglBuffer to a file.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> a <a href='#GeglBuffer'>GeglBuffer</a>.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>path</span></td><td> the path where the gegl buffer will be saved, any writable GIO uri is valid.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>roi</span></td><td> the region of interest to write, this is the tiles that will be collected and written to disk.
+</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_load'><a name='gegl_buffer_load'></a><div class='function'>
+                 <!--<h3>gegl_buffer_load</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                   <div class='function_name'>gegl_buffer_load</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><span class='const'>const</span>&nbsp;gchar         <span class='pointer'>*</span></div>
+                      <div class='arg_name'>path<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Loads an existing GeglBuffer from disk, if it has previously been saved with
+ gegl_buffer_save it should be possible to open through any GIO transport, buffers
+ that have been used as swap needs random access to be opened.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>path</span></td><td> the path to a gegl buffer on disk.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b>: a <a href='#GeglBuffer'>GeglBuffer</a> object.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_flush'><a name='gegl_buffer_flush'></a><div class='function'>
+                 <!--<h3>gegl_buffer_flush</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_buffer_flush</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>buffer<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Flushes all unsaved data to disk, this is not neccesary for shared
+ geglbuffers opened with gegl_buffer_open since they auto-sync on writes.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> a <a href='#GeglBuffer'>GeglBuffer</a></td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_create_sub_buffer'><a name='gegl_buffer_create_sub_buffer'></a><div class='function'>
+                 <!--<h3>gegl_buffer_create_sub_buffer</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglBuffer'>GeglBuffer</a><span class='pointer'>*</span>&nbsp;</div>
+                   <div class='function_name'>gegl_buffer_create_sub_buffer</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>buffer<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>extent<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Create a new sub GeglBuffer, that is a view on a larger buffer.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> parent buffer.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>extent</span></td><td> coordinates of new buffer.</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_destroy'><a name='gegl_buffer_destroy'></a><div class='function'>
+                 <!--<h3>gegl_buffer_destroy</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_buffer_destroy</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>buffer<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Destroys a buffer and frees up the resources used by a buffer, internally
+ this is done with reference counting and gobject, and gegl_buffer_destroy
+ is a thin wrapper around g_object_unref.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> the buffer we're done with.</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_get_extent'><a name='gegl_buffer_get_extent'></a><div class='function'>
+                 <!--<h3>gegl_buffer_get_extent</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_buffer_get_extent</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>buffer<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> the buffer to operate on.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> a pointer to a GeglRectangle structure defining the geometry of a
+ specific GeglBuffer, this is also the default width/height of buffers passed
+ in to gegl_buffer_set and gegl_buffer_get (with a scale of 1.0 at least).
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_set_extent'><a name='gegl_buffer_set_extent'></a><div class='function'>
+                 <!--<h3>gegl_buffer_set_extent</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>gboolean&nbsp;</div>
+                   <div class='function_name'>gegl_buffer_set_extent</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>buffer<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>extent<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Changes the size and position that is considered active in a buffer, this
+ operation is valid on any buffer, reads on subbuffers outside the master
+ buffer's extent are at the moment undefined.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> the buffer to operate on.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>extent</span></td><td> new extent.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> <span class='keyword'>TRUE</span> if the change of extent was succesful.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_get_x'><a name='gegl_buffer_get_x'></a><div class='function'>
+                 <!--<h3>gegl_buffer_get_x</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#'></a></div>
+                   <div class='function_name'>gegl_buffer_get_x</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#'></a></div>
+                      <div class='arg_name'>buffer<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Evaluates to the X coordinate of the upper left corner of the buffer's extent.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> a GeglBuffer</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_get_y'><a name='gegl_buffer_get_y'></a><div class='function'>
+                 <!--<h3>gegl_buffer_get_y</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#'></a></div>
+                   <div class='function_name'>gegl_buffer_get_y</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#'></a></div>
+                      <div class='arg_name'>buffer<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Evaluates to the Y coordinate of the upper left corner of the buffer's extent.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> a GeglBuffer</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_get_width'><a name='gegl_buffer_get_width'></a><div class='function'>
+                 <!--<h3>gegl_buffer_get_width</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#'></a></div>
+                   <div class='function_name'>gegl_buffer_get_width</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#'></a></div>
+                      <div class='arg_name'>buffer<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Evaluates to the width of the buffer's extent.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> a GeglBuffer</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_get_height'><a name='gegl_buffer_get_height'></a><div class='function'>
+                 <!--<h3>gegl_buffer_get_height</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#'></a></div>
+                   <div class='function_name'>gegl_buffer_get_height</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#'></a></div>
+                      <div class='arg_name'>buffer<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Evaluates to the height of the buffer's extent.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> a GeglBuffer</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_get_pixel_count'><a name='gegl_buffer_get_pixel_count'></a><div class='function'>
+                 <!--<h3>gegl_buffer_get_pixel_count</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#'></a></div>
+                   <div class='function_name'>gegl_buffer_get_pixel_count</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#'></a></div>
+                      <div class='arg_name'>buffer<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> a GeglBuffer</td></tr></table>
+</div><div class='return_doc'><b>Returns</b> the number of pixels of the extent of the buffer.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_get'><a name='gegl_buffer_get'></a><div class='function'>
+                 <!--<h3>gegl_buffer_get</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_buffer_get</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>buffer<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gdouble&nbsp;</div>
+                      <div class='arg_name'>scale<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>rect<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#Babl'>Babl</a>          <span class='pointer'>*</span></div>
+                      <div class='arg_name'>format<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gpointer&nbsp;</div>
+                      <div class='arg_name'>dest<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gint&nbsp;</div>
+                      <div class='arg_name'>rowstride<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Fetch a rectangular linear buffer of pixel data from the GeglBuffer, the
+ data is converted to the desired BablFormat, if the BablFormat stored and
+ fetched is the same this amounts to a series of memcpy's aligned to demux
+ the tile structure into a linear buffer.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> the buffer to retrieve data from.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>scale</span></td><td> sampling scale, 1.0 = pixel for pixel 2.0 = magnify, 0.5 scale down.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>rect</span></td><td> the coordinates we want to retrieve data from, and width/height of destination buffer, if <span class='keyword'>NULL</span> equal to the extent of the buffer. The
+ coordinates and dimensions are after scale has been applied.
+</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>format</span></td><td> the BablFormat to store in the linear buffer <span class='arg_name'>dest</span>.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>dest</span></td><td> the memory destination for a linear buffer for the pixels, the size needed depends on the requested BablFormat.
+</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>rowstride</span></td><td> rowstride in bytes, or GEGL_AUTO_ROWSTRIDE to compute the rowstride based on the width and bytes per pixel for the specified format.
+</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_set'><a name='gegl_buffer_set'></a><div class='function'>
+                 <!--<h3>gegl_buffer_set</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_buffer_set</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>buffer<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>rect<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#Babl'>Babl</a>          <span class='pointer'>*</span></div>
+                      <div class='arg_name'>format<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>void&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>src<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gint&nbsp;</div>
+                      <div class='arg_name'>rowstride<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Store a linear raster buffer into the GeglBuffer.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> the buffer to modify.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>rect</span></td><td> the coordinates we want to change the data of and the width/height extent, if <span class='keyword'>NULL</span> equal to the extent of the buffer.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>format</span></td><td> the babl_format the linear buffer <span class='arg_name'>src</span>.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>src</span></td><td> linear buffer of image data to be stored in <span class='arg_name'>buffer</span>.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>rowstride</span></td><td> rowstride in bytes, or GEGL_AUTO_ROWSTRIDE to compute the rowstride based on the width and bytes per pixel for the specified format.
+</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_get_format'><a name='gegl_buffer_get_format'></a><div class='function'>
+                 <!--<h3>gegl_buffer_get_format</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><span class='const'>const</span>&nbsp;<a href='#Babl'>Babl</a>    <span class='pointer'>*</span></div>
+                   <div class='function_name'>gegl_buffer_get_format</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>buffer<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Get the native babl format of the buffer.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> a <a href='#GeglBuffer'>GeglBuffer</a></td></tr></table>
+</div><div class='return_doc'><b>Returns</b>: the babl format used for storing pixels in the buffer.
+ 
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_clear'><a name='gegl_buffer_clear'></a><div class='function'>
+                 <!--<h3>gegl_buffer_clear</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_buffer_clear</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>buffer<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>roi<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Clears the provided rectangular region by setting all the associated memory
+ to 0
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> a <a href='#GeglBuffer'>GeglBuffer</a></td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>roi</span></td><td> a rectangular region</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_copy'><a name='gegl_buffer_copy'></a><div class='function'>
+                 <!--<h3>gegl_buffer_copy</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_buffer_copy</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>src<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>src_rect<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>dst<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>dst_rect<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> copies a region from source buffer to destination buffer.
+</p><p> If the babl_formats of the buffers are the same, and the tile boundaries
+ align, this should optimally lead to shared tiles that are copy on write,
+ this functionality is not implemented yet.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>src</span></td><td> source buffer.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>src_rect</span></td><td> source rectangle (or <span class='keyword'>NULL</span> to copy entire source buffer)</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>dst</span></td><td> destination buffer.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>dst_rect</span></td><td> position of upper left destination pixel, or <span class='keyword'>NULL</span> for top left coordinates of the buffer extents.
+</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_dup'><a name='gegl_buffer_dup'></a><div class='function'>
+                 <!--<h3>gegl_buffer_dup</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_buffer_dup</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>buffer<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> duplicate a buffer (internally uses gegl_buffer_copy), this should ideally
+ lead to a buffer that shares the raster data with the original on a tile
+ by tile COW basis. This is not yet implemented
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> the GeglBuffer to duplicate.</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_sample'><a name='gegl_buffer_sample'></a><div class='function'>
+                 <!--<h3>gegl_buffer_sample</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_buffer_sample</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>buffer<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gdouble&nbsp;</div>
+                      <div class='arg_name'>x<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gdouble&nbsp;</div>
+                      <div class='arg_name'>y<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gdouble&nbsp;</div>
+                      <div class='arg_name'>scale<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gpointer&nbsp;</div>
+                      <div class='arg_name'>dest<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#Babl'>Babl</a>       <span class='pointer'>*</span></div>
+                      <div class='arg_name'>format<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#GeglInterpolation'>GeglInterpolation</a>&nbsp;</div>
+                      <div class='arg_name'>interpolation<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Query interpolate pixel values at a given coordinate using a specified form
+ of interpolation. The samplers used cache for a small neighbourhood of the
+ buffer for more efficient access.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> the GeglBuffer to sample from</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>x</span></td><td> x coordinate to sample in buffer coordinates</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>y</span></td><td> y coordinate to sample in buffer coordinates</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>scale</span></td><td> the scale we're fetching at (<1.0 can lead to decimation)</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>dest</span></td><td> buffer capable of storing one pixel in <span class='arg_name'>format</span>.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>format</span></td><td> the format to store the sampled color in.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>interpolation</span></td><td> the interpolation behavior to use, currently only nearest neighbour is implemented for this API, bilinear, bicubic and lanczos needs
+ to be ported from working code. Valid values: GEGL_INTERPOLATION_NEAREST and
+ GEGL_INTERPOLATION_LINEAR, GEGL_INTERPOLATON_CUBIC and
+ GEGL_INTERPOLATION_LANCZOS.
+</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_sample_cleanup'><a name='gegl_buffer_sample_cleanup'></a><div class='function'>
+                 <!--<h3>gegl_buffer_sample_cleanup</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_buffer_sample_cleanup</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>buffer<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Clean up resources used by sampling framework of buffer (will be freed
+ automatically later when the buffer is destroyed, for long lived buffers
+ cleaning up the sampling infrastructure when it has been used for its
+ purpose will sometimes be more efficient).
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> the GeglBuffer to sample from</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_interpolation_from_string'><a name='gegl_buffer_interpolation_from_string'></a><div class='function'>
+                 <!--<h3>gegl_buffer_interpolation_from_string</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglInterpolation'>GeglInterpolation</a>&nbsp;</div>
+                   <div class='function_name'>gegl_buffer_interpolation_from_string</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><span class='const'>const</span>&nbsp;gchar <span class='pointer'>*</span></div>
+                      <div class='arg_name'>string<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Looks up the GeglInterpolation corresponding to a string, if no matching
+ interpolation is found returns GEGL_INTERPOLATION_NEAREST.
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>string</span></td><td> the string to look up</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_linear_new'><a name='gegl_buffer_linear_new'></a><div class='function'>
+                 <!--<h3>gegl_buffer_linear_new</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                   <div class='function_name'>gegl_buffer_linear_new</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>extent<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#Babl'>Babl</a>          <span class='pointer'>*</span></div>
+                      <div class='arg_name'>format<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Creates a GeglBuffer backed by a linear memory buffer, of the given
+ <span class='arg_name'>extent</span> in the specified <span class='arg_name'>format</span>. babl_format ("R'G'B'A u8") for instance
+ to make a normal 8bit buffer.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>extent</span></td><td> dimensions of buffer.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>format</span></td><td> desired pixel format.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b>: a GeglBuffer that can be used as any other GeglBuffer.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_linear_new_from_data'><a name='gegl_buffer_linear_new_from_data'></a><div class='function'>
+                 <!--<h3>gegl_buffer_linear_new_from_data</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span> </div>
+                   <div class='function_name'>gegl_buffer_linear_new_from_data</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><span class='const'>const</span>&nbsp;gpointer       </div>
+                      <div class='arg_name'>data<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#Babl'>Babl</a>          <span class='pointer'>*</span></div>
+                      <div class='arg_name'>format<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>extent<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gint&nbsp;</div>
+                      <div class='arg_name'>rowstride<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><a href='#GCallback'>GCallback</a>&nbsp;</div>
+                      <div class='arg_name'>destroy_fn<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gpointer&nbsp;</div>
+                      <div class='arg_name'>destroy_fn_data<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Creates a GeglBuffer backed by a linear memory buffer that already exists,
+ of the given <span class='arg_name'>extent</span> in the specified <span class='arg_name'>format</span>. babl_format ("R'G'B'A u8")
+ for instance to make a normal 8bit buffer. 
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>data</span></td><td> a pointer to a linear buffer in memory.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>format</span></td><td> the format of the data in memory</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>extent</span></td><td> the dimensions (and upper left coordinates) of linear buffer.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>rowstride</span></td><td> the number of bytes between rowstarts in memory (or 0 to             autodetect)
+</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>destroy_fn</span></td><td> function to call to free data or <span class='keyword'>NULL</span> if memory should not be              freed.
+</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>destroy_fn_data</span></td><td> extra argument to be passed to void destroy(ptr, data) type              function.
+</td></tr></table>
+</div><div class='return_doc'><b>Returns</b>: a GeglBuffer that can be used as any other GeglBuffer.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_linear_open'><a name='gegl_buffer_linear_open'></a><div class='function'>
+                 <!--<h3>gegl_buffer_linear_open</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>gpointer&nbsp;<span class='pointer'>*</span></div>
+                   <div class='function_name'>gegl_buffer_linear_open</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>buffer<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#GeglRectangle'>GeglRectangle</a> <span class='pointer'>*</span></div>
+                      <div class='arg_name'>extent<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gint&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>rowstride<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'><span class='const'>const</span>&nbsp;<a href='#Babl'>Babl</a>          <span class='pointer'>*</span></div>
+                      <div class='arg_name'>format<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> Raw direct random access to the full data of a buffer in linear memory.
+</p><p></p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> a <a href='#GeglBuffer'>GeglBuffer</a>.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>extent</span></td><td> region to open, pass <span class='keyword'>NULL</span> for entire buffer.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>rowstride</span></td><td> return location for rowstride.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>format</span></td><td> desired format or <span class='keyword'>NULL</span> to use buffers format.</td></tr></table>
+</div><div class='return_doc'><b>Returns</b>: a pointer to a linear memory region describing the buffer, if the
+ request is compatible with the underlying data storage direct access
+ to the underlying data is provided.
+</div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_gegl_buffer_linear_close'><a name='gegl_buffer_linear_close'></a><div class='function'>
+                 <!--<h3>gegl_buffer_linear_close</h3>-->
+                 <div class='function_signature'>
+                   <div class='function_header'>
+                   <div class='return_type'>void&nbsp;</div>
+                   <div class='function_name'>gegl_buffer_linear_close</div>
+                   </div><div class='function_args'><div class='argument'>
+                      <div class='arg_type'><span class='const'>(</span><a href='#GeglBuffer'>GeglBuffer</a>&nbsp;<span class='pointer'>*</span></div>
+                      <div class='arg_name'>buffer<span class='const'>,</span></div>
+                    </div>
+<div class='argument'>
+                      <div class='arg_type'>gpointer&nbsp;</div>
+                      <div class='arg_name'>linear<span class='const'>)</span></div>
+                    </div>
+</div><div class='float_breaker'></div></div><div class='function_doc'><p> This function makes sure GeglBuffer and underlying code is aware of changes
+ being made to the linear buffer. If the request was not a compatible one
+ it is written back to the buffer. Multiple concurrent users can be handed
+ the same buffer (both raw access and converted).
+</p><p><b>Arguments:</b></p><table>
+<tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>buffer</span></td><td> a <a href='#GeglBuffer'>GeglBuffer</a>.</td></tr><tr><td style='padding-right:1em;vertical-align:top'><span class='arg_name'>linear</span></td><td> a previously returned buffer.</td></tr></table>
+</div><div class='return_doc'></div><pre class='sample_code'></pre></div></div>
+<div class='section' id='section_GeglOperation'><a name='GeglOperation'></a><div class='sect'>
+                 <h2>GeglOperation</h2><div class='sect_doc'><p> 
+ All the image processing code in GEGL is implemented as GeglOperations,
+ GEGL operations are implemented as GObject with a convenience API called
+ chanting that abstracts away the boiler plater needed to generate introspectable
+ named properties of different types.
+</p><p> Most types of operations like: filters, composers, sources, sinks, point
+ operations, compositing operations, and spatial operations with fixed
+ neighbourhoods. These base classes build on top of the GeglOperationsClass:
+</p><p> See <a href='gegl-plugin.h.html'>gegl-plugin.h</a> for details.
+</p><pre class='sample_code'></pre></div></div></div>
+</div></div>
+  </body>
+</html>

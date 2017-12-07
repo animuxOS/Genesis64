@@ -1,0 +1,925 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="Дали да се задейства компонентът на gnome-keyring PKCS#11.">
+                                                        <longdesc>Тази опция задейства компонента PKCS#11 в демона gnome-keyring и има ефект само при стартирането на gnome-keyring-daemon (т.е. когато потребителят влиза в системата). Тази настройка може да се заобиколи чрез определени опции на командния ред, зададени на демона.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="Дали да се задейства агентът на SSH в gnome-keyring.">
+                                                        <longdesc>Тази опция задейства агента на SSH в демона gnome-keyring и има ефект само при стартирането на gnome-keyring-daemon (т.е. когато потребителят влиза в системата). Тази настройка може да се заобиколи чрез определени опции на командния ред, зададени на демона.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Широчина на прозореца">
+                                                        <longdesc>Широчина на прозореца, който ще бъде показан</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Височина на прозореца">
+                                                        <longdesc>Височина на прозореца, който ще бъде показан</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Команди, които да се изпълнят при натискането на бърз клавиш">
+                                                        <longdesc>Ключовете в /apps/metacity/global_keybindings/run_command_N дефинират клавишни комбинации, съответстващи на тези команди. Натискането на клавишната комбинация за run_command_N ще изпълни команда command_N.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Командата за снимка на екрана">
+                                                        <longdesc>Ключът /apps/metacity/global_keybindings/run_command_windows_screenshot определя бързия клавиш, който при натискането си пуска указаната програма.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Команда за снимка на екрана">
+                                                        <longdesc>Ключът /apps/metacity/global_keybindings/run_command_screenshot определя бързия клавиш, който при натискането си пуска указаната програма.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Изпълняване на определена команда">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Стартиране на терминал">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Снимка на отделен прозорец">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Снимане на екрана">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Показване на диалоговия прозорец на панела за стартиране на програма">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Показване на менюто на панела">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Превключване към работния плот отдолу">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Превключване към работния плот отгоре">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Превключване към работния плот вдясно">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Превключване към работния плот вляво">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Превключване към работен плот 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Превключване към работен плот 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Превключване към работен плот 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Превключване към работен плот 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Превключване към работен плот 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Превключване към работен плот 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Превключване към работен плот 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Превключване към работен плот 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Превключване към работен плот 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Превключване към работен плот 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Превключване към работен плот 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Превключване към работен плот 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Скриване на всички прозорци и фокусиране на работното място">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Незабавно преместване на фокуса между панелите и работното място в обратен ред">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Незабавно преместване на фокуса между панелите и работното място">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Незабавно преместване на фокуса между прозорците в обратен ред">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Незабавно преместване на фокуса между прозорците ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Незабавно преместване на фокуса между прозорците на едно приложение, като се използва изскачащ прозорец">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Незабавно преместване на фокуса между прозорците на едно приложение, като се използва изскачащ прозорец">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Незабавно преместване на фокуса между прозорците на едно приложение в обратен ред">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Незабавно преместване на фокуса между прозорците на едно приложение">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Незабавно преместване на фокуса между панелите и работното място в обратен ред, като се използва изскачащ прозорец">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Незабавно преместване на фокуса между панелите и работното място, като се използва изскачащ прозорец">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Незабавно преместване на фокуса между прозорците в обратен ред, като се използва изскачащ прозорец">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Незабавно преместване на фокуса между прозорците, като се използва изскачащ прозорец">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Преместване на прозореца в западния край на екрана">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Преместване на прозореца в източния край на екрана">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Преместване на прозореца в южния край на екрана">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Преместване на прозореца в северния край на екрана">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Преместване на прозореца в югоизточния ъгъл на екрана">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Преместване на прозореца в югозападния ъгъл на екрана">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Преместване на прозореца в североизточния ъгъл на екрана">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Преместване на прозореца в северозападния ъгъл на екрана">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Максимизиране на прозореца хоризонтално">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Максимизиране прозореца вертикално">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Понижаване на прозореца под другите прозорци">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Издигане на прозореца над другите">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Ако прозорецът е под друг, го издига, иначе го понижава">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Преместване на прозореца един работен плот надолу">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Преместване на прозореца един работен плот нагоре">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Преместване на прозореца един работен плот надясно">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Преместване на прозореца един работен плот наляво">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Преместване на прозореца в работен плот 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Преместване на прозореца в работен плот 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Преместване на прозореца в работен плот 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Преместване на прозореца на работен плот 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Преместване на прозореца в работен плот 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Преместване на прозореца в работен плот 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Преместване на прозореца в работен плот 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Преместване на прозореца в работен плот 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Преместване на прозореца в работен плот 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Преместване на прозореца в работен плот 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Преместване на прозореца в работен плот 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Преместване на прозореца в работен плот 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Превключване на появата на прозореца на всички работни места">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Оразмеряване на прозорец">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Преместване на прозорец">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Минимизиране на прозореца">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Затваряне на прозореца">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Превключване на състоянието на навиване">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Демаксимизиране на прозорец">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Максимизиране на прозорец">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Превключване на състоянието на максимизиране">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Превключване на състоянието на винаги отгоре">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Превключване на режима за цял екран">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Активиране на менюто за прозорците">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Име на работния плот">
+                                                        <longdesc>Името на работния плот</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Изключва неправилното поведение изисквано от стари приложения или такива с грешки">
+                                                        <longdesc>Някои програми нарушават спецификациите по начини, които предизвикват грешно поведение на мениджъра на прозорци. Тази настройка кара Metacity да работи в изцяло правилен режим, което дава малко по-добър потребителски интерфейс, ако няма да стартирате развалени програми.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="Все още не е осъществено: навигацията работи в рамките на програмите, а не на прозорците">
+                                                        <longdesc>Ако е истина, Metacity работи на базата на приложения, а не на прозорци. Идеята е малко абстрактна, но като цяло подходът базиран на приложения е по-близък до Macintosh отколкото до Windows. Когато фокусирате прозорец при подход базиран на приложения, всички прозорци на приложението ще се издигнат. При този подход натисканията за фокусиране не се предават на прозорците на други приложения. На този етап подходът на базата на приложения още не е осъществен изцяло.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Ако е включено, се жертва част от използваемостта за повече свободни ресурси">
+                                                        <longdesc>Ако е включено, metacity ще дава на потребителя по-малко обратна връзка, като се използват рамки вместо цели прозорци, избягват се анимации или чрез други средства. Това е значимо влошаване на използваемостта за много потребители, но може да позволи на специфични програми и терминални сървъри да работят. Рамките за прозорците са изключени, когато са включени възможностите за достъпност.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="Мениджър за наслагване">
+                                                        <longdesc>Указва дали Metacity ще действа и като мениджър за наслагване.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Вид визуален звънец">
+                                                        <longdesc>Задава начинът, по който Metacity визуално представя системния звънец или звънеца на приложение. В момента валидни са следните две стойности: „fullscreen“, което съответства на черно-бяло премигване на целия екран, и „frame_flash“, което съответства на премигване на заглавната лента на приложението, което звънва. Ако приложението, което звънва е неизвестно (какъвто е най-честия случай при подразбиращият се системен звънец), премигва заглавната лента на текущо фокусирания прозорец.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Системният звънец е звуков">
+                                                        <longdesc>Определя дали програми или системата може да генерират звукови „бибиткания“. Може да се използва заедно с „визуален звънец“, за да се позволят тихи „бибиткания“.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Включване на визуалния звънец">
+                                                        <longdesc>Включва визуална индикация, когато програма или системата се обърнат към „звънец“ или „бибиткане“. Това е полезно при хора с проблемен слух или при шумно обкръжение.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Брой работни плотове">
+                                                        <longdesc>Брой работни плотове. Трябва да е над 0. Има горна граница (за да се предотврати случайното разрушаване на средата, ако поискате прекалено много работни места).</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Шрифт за заглавията на прозорците">
+                                                        <longdesc>Низ описващ шрифта за заглавната лента на прозорците. Размерът от описанието ще се използва, само ако настройката titlebar_font_size е установена на 0. Тази настройка е неактивна, ако настройката titlebar_uses_desktop_font е включена.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Използване на стандартния системен шрифт за заглавията на прозорците">
+                                                        <longdesc>Ако е зададено като истина, настройката за titlebar_font се игнорира. За заглавията на прозорците се използва стандартният шрифт за приложенията.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Текуща тема">
+                                                        <longdesc>Темата определя външния вид на рамките на прозорците, заглавната лента и т.н.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Забавяне в милисекунди за настройката за автоматично издигане">
+                                                        <longdesc>Закъснението в милисекунди преди да се издигне прозорец, ако auto_raise е истина.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Автоматично издигане на фокусирания прозорец">
+                                                        <longdesc>Ако е включено и начинът за фокусиране е „sloppy“ или „mouse“, тогава фокусираният прозорец ще бъде автоматично издигнат след определен интервал, който е зададен в ключа auto_raise_delay. Това поведение не е свързано с натискането на бутоните на мишката за издигането на прозорец, нито с с навлизането на показалеца на мишката при действие на провлачване и пускане.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="Действие при натискане с десния бутон на мишката върху заглавната лента">
+                                                        <longdesc>Тази настройка определя ефекта на натискането с десния бутон на мишката върху заглавната лента. Засега валидни стойности са „toggle_shade“, която навива/развива прозореца, „toggle_maximize“, която максимизира/демаксимизира прозореца, „minimize“, която минимизира прозореца и „none“, която не прави нищо.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="Действие при натискане със средния бутон на мишката върху заглавната лента">
+                                                        <longdesc>Тази настройка определя ефекта на натискането със среден бутон на мишката върху заглавната лента. Засега валидни стойности са „toggle_shade“, която навива/развива прозореца, „toggle_maximize“, която максимизира/демаксимизира прозореца, „minimize“, която минимизира прозореца и „none“, която не прави нищо.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Действие при двойно натискане върху заглавната лента">
+                                                        <longdesc>Тази настройка определя ефекта на двойното натискане с левия бутон на мишката върху заглавната лента. Засега валидни стойности са „toggle_shade“, която навива/развива прозореца, „toggle_maximize“, която максимизира/демаксимизира прозореца, „minimize“, която минимизира прозореца и „none“, която не прави нищо.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Дали издигането трябва да се получава като страничен резултат от други потребителски действия">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Кога новите прозорци получават фокуса">
+                                                        <longdesc>Тази настройка доуточнява, кога новите прозорци получават фокуса. Възможните стойности са две: „smart“ (хитър) - нормалният начин за получаване на фокус и „strict“ (стриктен) - прозорците стартирани през терминал не получават фокуса.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Режим на фокусиране на прозорци">
+                                                        <longdesc>Начинът за фокусиране на прозорци указва как се активират прозорците. Има три възможни стойности: „click“ означава, че прозорците трябва да бъдат натиснати с мишката, за да се фокусират, „sloppy“ означава, че прозорците се фокусират, когато мишката влезе в тях, а „mouse“, че прозорците се фокусират, когато мишката влезе в тях и губят фокуса, когато мишката излезе от тях.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Подредба на бутоните в заглавната лента">
+                                                        <longdesc>Подредба на бутоните в заглавната лента. Стойността трябва да е низ от вида „menu:minimize,maximize,close“. С „;“ се разделят левия от десния ъгъл на прозореца, а със „,“ - имената на бутоните. Не са позволени повторения на бутоните. Непознатите имена се игнорират, така че в бъдещи версии на Metacity да могат да се добавят нови бутони без да се пречи на старите версии.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Модификатор, който да се ползва за модифицираните действия с натискания по прозорците">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Стандартната програма-компонент за преглед">
+                                                                <longdesc>Програмата, която да се използва за преглед на файлове, които изискват определен компонент за преглед. Параметърът %s ще бъде заменен пътя до файла, параметъра %c ще бъде заменен с IID на компонента.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Аргументът exec за стандартната програма за терминал">
+                                                                <longdesc>Аргументът за изпълнение (exec) за терминалния емулатор по подразбиране.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Стандартна програма за терминал">
+                                                                <longdesc>Стандартната терминална програма да се използва за програми, които изискват терминал.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Пускане на програмата в терминал">
+                                                                <longdesc>Истина, ако програмата, която ще обслужва този вид адреси, трябва да бъде изпълнена в терминал.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Програма за обработка на адреси от вида „h323“">
+                                                                <longdesc>Програмата за обработка на адреси от вида „h323“, ако е включена.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Дали избраната програма да обработва адреси от вида „h323“">
+                                                                <longdesc>Истина, ако програмата в ключа „command“ ще обслужва адреси от вида „h323“.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Пускане на програмата в терминал">
+                                                                <longdesc>Истина, ако програмата, която ще обслужва този вид адреси, трябва да бъде изпълнена в терминал.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Програма за обработка на адреси от вида „callto“">
+                                                                <longdesc>Програмата обработка на адреси от вида „callto“, ако е включена.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Дали избраната програма да обработва адреси от вида „callto“">
+                                                                <longdesc>Истина, ако програмата в ключа „command“ ще обслужва адреси от вида „callto“.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Пускане на програмата в терминал">
+                                                                <longdesc>Истина, ако програмата, която ще обслужва този вид адреси, трябва да бъде изпълнена в терминал.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Програма за обработка на адреси от вида „mailto“">
+                                                                <longdesc>Програмата за обработка на адреси от вида „mailto“, ако е включена.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Дали избраната програма да обработва адреси от вида „mailto“">
+                                                                <longdesc>Истина, ако програмата в ключа „command“ ще обслужва адреси от вида „mailto“.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Пускане на програмата в терминал">
+                                                                <longdesc>Истина, ако програмата, която ще обслужва този вид адреси, трябва да бъде изпълнена в терминал.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Програма за обработка на адреси от вида „https“">
+                                                                <longdesc>Програмата за обработка на адреси от вида „https“, ако е включена.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Дали избраната програма да обработва адреси от вида „https“">
+                                                                <longdesc>Истина, ако програмата в ключа „command“ ще обслужва адреси от вида „https“.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Пускане на програмата в терминал">
+                                                                <longdesc>Истина, ако програмата, която ще обслужва този вид адреси, трябва да бъде изпълнена в терминал.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Пускане на програмата в терминал">
+                                                                <longdesc>Истина, ако програмата, която ще обслужва този вид адреси, трябва да бъде изпълнена в терминал.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Програма за обработка на адреси от вида „http“">
+                                                                <longdesc>Програмата за обработка на адреси от вида „http“, ако е включена.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Дали избраната програма да обработва адреси от вида „http“">
+                                                                <longdesc>Истина, ако програмата в ключа „command“ ще обслужва адреси от вида „http“.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Пускане на програмата в терминал">
+                                                                <longdesc>Истина, ако програмата, която ще обслужва този вид адреси, трябва да бъде изпълнена в терминал.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Програма за обработка на адреси от вида „man“">
+                                                                <longdesc>Програмата за обработка на адреси от вида „man“, ако е включена.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Дали избраната програма да обработва адреси от вида „man“">
+                                                                <longdesc>Истина, ако програмата в ключа „command“ ще обслужва адреси от вида „man“.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Пускане на програмата в терминал">
+                                                                <longdesc>Истина, ако програмата, която ще обслужва този вид адреси, трябва да бъде изпълнена в терминал.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Програма за обработка на адреси от вида „info“">
+                                                                <longdesc>Програмата за обработка на адреси от вида „info“, ако е включена.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Дали избраната програма да обработва адреси от вида „info“">
+                                                                <longdesc>Истина, ако програмата в ключа „command“ ще обслужва адреси от вида „info“.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Пускане на програмата в терминал">
+                                                                <longdesc>Истина, ако програмата, която ще обслужва този вид адреси, трябва да бъде изпълнена в терминал.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Програма за обработка на адреси от вида „ghelp“">
+                                                                <longdesc>Програмата за обработка на адреси от вида „ghelp“, ако е включена.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Дали избраната програма да обработва адреси от вида „ghelp“">
+                                                                <longdesc>Истина, ако програмата в ключа „command“ ще обслужва адреси от вида „ghelp“.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Пускане на програмата в терминал">
+                                                                <longdesc>Истина, ако програмата, която ще обслужва този вид адреси, трябва да бъде изпълнена в терминал.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Програма за обработка на адреси от вида „trash“">
+                                                                <longdesc>Програмата за обработка на адреси от вида „trash“, ако е включена.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Дали избраната програма да обработва адреси от вида „trash“">
+                                                                <longdesc>Истина, ако програмата в ключа „command“ ще обслужва адреси от вида „trash“.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Дали да се използва този профил или не">
+                                                                        <longdesc>Дали да се или не се използва и показва този профил.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Стандартното файлово разширение за този профил">
+                                                                        <longdesc>Файлово разширение, което да се използва при запазване на файлове кодирани с този профил.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Непълният канал на GStreamer, който се използва">
+                                                                        <longdesc>Непълен канал на GStreamer, който да се ползва за този профил.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="Описание на звуковия профил">
+                                                                        <longdesc>Описание на профила, съдържащо повече информация и описващо кога да се използва този профил.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Кратко име за звуковия профил">
+                                                                        <longdesc>Кратко име за звуковия профил, което да се използва в селекциите и уникално да идентифицира профила.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Дали да се използва този профил или не">
+                                                                                <longdesc>Дали да се или не се използва и показва този профил.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Стандартното файлово разширение за този профил">
+                                                                                <longdesc>Файлово разширение, което да се използва при запазване на файлове кодирани с този профил.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Непълният канал на GStreamer, който се използва">
+                                                                                <longdesc>Непълен канал на GStreamer, който да се ползва за този профил.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Описание на звуковия профил">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Кратко име за звуковия профил">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Стандартното файлово разширение за този профил">
+                                                                                <longdesc>Файлово разширение, което да се използва при запазване на файлове кодирани с този профил.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Непълният канал на GStreamer, който се използва">
+                                                                                <longdesc>Непълен канал на GStreamer, който да се ползва за този профил.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Описание на звуковия профил">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Кратко име за звуковия профил">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Стандартното файлово разширение за този профил">
+                                                                                <longdesc>Файлово разширение, което да се използва при запазване на файлове кодирани с този профил.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Непълният канал на GStreamer, който се използва">
+                                                                                <longdesc>Непълен канал на GStreamer, който да се ползва за този профил.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Описание на звуковия профил">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Кратко име за звуковия профил">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Стандартното файлово разширение за този профил">
+                                                                                <longdesc>Файлово разширение, което да се използва при запазване на файлове кодирани с този профил.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Непълният канал на GStreamer, който се използва">
+                                                                                <longdesc>Непълен канал на GStreamer, който да се ползва за този профил.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Описание на звуковия профил">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Кратко име за звуковия профил">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Стандартното файлово разширение за този профил">
+                                                                                <longdesc>Файлово разширение, което да се използва при запазване на файлове кодирани с този профил.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Непълният канал на GStreamer, който се използва">
+                                                                                <longdesc>Непълен канал на GStreamer, който да се ползва за този профил.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Описание на звуковия профил">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Кратко име за звуковия профил">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Стандартното файлово разширение за този профил">
+                                                                                <longdesc>Файлово разширение, което да се използва при запазване на файлове кодирани с този профил.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Непълният канал на GStreamer, който се използва">
+                                                                                <longdesc>Непълен канал на GStreamer, който да се ползва за този профил.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Описание на звуковия профил">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Кратко име за звуковия профил">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Списък на профилите">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="Адрес за автоматични настройки на сървъра-посредник">
+                                                <longdesc>Адрес, от който се вземат настройките на сървъра-посредник.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="Порт на сървъра-посредник за SOCKS">
+                                                <longdesc>Портът на сървъра-посредник, който е дефиниран в „/system/proxy/socks_host“.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="Име на сървъра-посредник за SOCKS">
+                                                <longdesc>Името на сървъра-посредник за връзки по SOCKS</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="Порт на сървъра-посредник за FTP">
+                                                <longdesc>Портът на сървъра-посредник, който е дефиниран в „/system/proxy/ftp_host“.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="Име на сървъра-посредник за FTP">
+                                                <longdesc>Името на сървъра-посредник за връзки по FTP</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Порт на сървъра-посредник за HTTPS">
+                                                <longdesc>Портът на сървъра-посредник, който е дефиниран в „/system/proxy/secure_host“.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Име на сървъра-посредник за HTTPS">
+                                                <longdesc>Името на сървъра-посредник за връзки по сигурен HTTP (HTTPS)</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Режим на конфигурация на сървър-посредник">
+                                                <longdesc>Изберете режим на настройка на сървър-посредник. Поддържани стойности са „none“ - без сървър посредник, „manual“ - настройка на ръка и „auto“ - автоматично настройване.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Сървъри, които да не минават през сървър-посредник">
+                                                <longdesc>Този ключ съдържа списък с хостове, които за свързани директно, вместо през сървър-посредник (ако е активно). Стойностите могат да са хостове, домейни (*.foo.com), IP адреси на хостове(и IPv4, и IPv6) и мрежови адреси с мрежова маска (192.168.0.0/24).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="Парола за сървъра-посредник за HTTP">
+                                                <longdesc>Парола, която да се подава като идентификация на сървъра-посредник за HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="Потребителско име за сървъра-посредник за HTTP">
+                                                <longdesc>Потребителско име, което да се подава като идентификация, при използване на сървър-посредник за HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Идентификация при връзката със сървъра-посредник">
+                                                <longdesc>Ако е истина, връзките към сървъра-посредник изискват идентификация. Комбинацията „потребителско име/парола“ е дефинирана в „/system/http_proxy/authentication_user“ и „/system/http_proxy/authentication_password“.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="Порт на сървъра-посредник за HTTP">
+                                                <longdesc>Портът на сървъра-посредник, който е дефиниран в „/system/proxy/http_host“.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="Име на сървъра-посредник за HTTP">
+                                                <longdesc>Името на сървъра-посредник за връзки по HTTP</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="Използване на сървър-посредник за HTTP">
+                                                <longdesc>Включване на настройки за сървър-посредник за HTTP в Интернет</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Допълнителни домейни, в които да се търсят услуги от тип DNS-SD">
+                                                <longdesc>Списък от домейни тип DNS-SD, разделени със запетаи, които трябва да са видими в местоположението „network:///“.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Как да се показва локална услуга от тип DNS-SD">
+                                                <longdesc>Възможни стойности са „merged“, „separate“ и „disabled“.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="Работна група на SMB">
+                                                <longdesc>Работната група или домейнът на Windows, в която потребителят участва. Възможно е да се наложи да излезете и да влезете в системата отново, за да може тази настройка да влезе в сила.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

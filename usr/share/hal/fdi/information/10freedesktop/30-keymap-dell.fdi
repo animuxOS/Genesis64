@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- -->
+
+<deviceinfo version="0.2">
+  <device>
+
+    <!-- These are raw scancodes produced by the atkbd driver -->
+    <match key="@input.originating_device:info.linux.driver" string="atkbd">
+
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="Dell">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Latitude">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="D420;D820">
+            <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
+            <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
+            <append key="input.keymap.data" type="strlist">e00b:displaytoggle</append> <!-- Fn+F8 CRT/LCD -->
+            <append key="input.keymap.data" type="strlist">e00f:switchvideomode</append> <!-- Fn+F7 aspect ratio -->
+            <append key="input.keymap.data" type="strlist">e013:f23</append> <!-- FIXME Fn+Left arrow Auto Brightness -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="D610">
+            <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
+            <append key="input.keymap.data" type="strlist">e008:wlan</append> <!-- Fn+F2 Turn On/Off Wireless -->
+            <append key="input.keymap.data" type="strlist">e009:ejectclosecd</append> <!-- Fn+F10 Eject CD -->
+            <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
+            <append key="input.keymap.data" type="strlist">e00b:displaytoggle</append> <!-- Fn+F8 CRT/LCD -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="D620">
+            <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
+            <append key="input.keymap.data" type="strlist">e008:wlan</append> <!-- Turn On/Off Wireless -->
+            <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
+            <append key="input.keymap.data" type="strlist">e00b:displaytoggle</append> <!-- Fn+F8 CRT/LCD -->
+            <append key="input.keymap.data" type="strlist">e00f:switchvideomode</append> <!-- Fn+F7 aspect ratio -->
+            <append key="input.keymap.data" type="strlist">e013:f23</append> <!-- Fn+Left arrow Auto Brightness -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="D630">
+            <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
+            <append key="input.keymap.data" type="strlist">e008:wlan</append> <!-- Turn On/Off Wireless -->
+            <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
+            <append key="input.keymap.data" type="strlist">e00b:displaytoggle</append> <!-- Fn+F8 CRT/LCD -->
+            <append key="input.keymap.data" type="strlist">e00f:switchvideomode</append> <!-- Fn+F7 aspect ratio -->
+            <append key="input.keymap.data" type="strlist">e011:prog1</append> <!-- Wifi Catcher (DELL Specific) -->
+            <append key="input.keymap.data" type="strlist">e013:f23</append> <!-- Fn+Left arrow Auto Brightness -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+        </match> <!-- prefix="Latitude" -->
+
+	<!-- Dell Inspiron 9400, 640m, E1505/6400 -->
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix_outof="MP061;MXC061;MM061"> 
+          <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
+          <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
+          <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
+          <append key="input.keymap.data" type="strlist">e008:wlan</append> <!-- Fn+F2 Toggle WiFi -->
+          <append key="input.keymap.data" type="strlist">e008:bluetooth</append> <!-- FIXME Bluetooth switch (same as wireless) -->
+          <append key="input.keymap.data" type="strlist">e009:ejectclosecd</append> <!-- Fn+F10 Eject CD -->
+          <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
+          <append key="input.keymap.data" type="strlist">e00b:switchvideomode</append> <!-- Fn+F8 CRT/LCD -->
+          <append key="input.keymap.data" type="strlist">e012:media</append> <!-- MediaDirect button (house icon) -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="MXC062"> <!-- Dell XPS M1210 -->
+          <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
+          <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
+          <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 Battery icon -->
+          <append key="input.keymap.data" type="strlist">e008:wlan</append> <!-- Wirelesss switch -->
+          <append key="input.keymap.data" type="strlist">e008:bluetooth</append> <!-- FIXME Bluetooth switch (same as wireless) -->
+          <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 Hibernate -->
+          <append key="input.keymap.data" type="strlist">e00b:switchvideomode</append> <!-- Fn+F8 CRT/LCD -->
+          <append key="input.keymap.data" type="strlist">e012:media</append> <!-- Dell MediaDirect button Opens Dell Media Experience (a sort of media player) -->
+          <append key="input.keymap.data" type="strlist">e015:camera</append> <!-- Shutter button Takes a picture if optional camera available -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Inspiron">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="8500">
+            <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
+            <append key="input.keymap.data" type="strlist">e008:wlan</append> <!-- Fn+F2 Toggle WiFi -->
+            <append key="input.keymap.data" type="strlist">e009:ejectclosecd</append> <!-- Fn+F10 Eject CD -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains_outof="XPS Gen2;1501">
+            <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
+            <append key="input.keymap.data" type="strlist">e008:wlan</append> <!-- Fn+F2 Toggle WiFi -->
+            <append key="input.keymap.data" type="strlist">e009:ejectclosecd</append> <!-- Fn+F10 Eject CD -->
+            <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 Hibernate -->
+            <append key="input.keymap.data" type="strlist">e00b:switchvideomode</append> <!-- Fn+F8 CRT/LCD -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="1520">
+            <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
+            <append key="input.keymap.data" type="strlist">e009:ejectclosecd</append> <!-- Fn+F10 Eject CD -->
+            <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 Hibernate -->
+            <append key="input.keymap.data" type="strlist">e00b:switchvideomode</append> <!-- Fn+F8 CRT/LCD -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+        </match>
+
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" prefix="Precision">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="M20">
+            <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
+            <append key="input.keymap.data" type="strlist">e008:wlan</append> <!-- Fn+F2 Turn On/Off Wireless -->
+            <append key="input.keymap.data" type="strlist">e009:ejectclosecd</append> <!-- Fn+F10 Eject CD -->
+            <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
+            <append key="input.keymap.data" type="strlist">e00b:displaytoggle</append> <!-- Fn+F8 CRT/LCD -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.product" contains="M65">
+            <append key="input.keymap.data" type="strlist">e005:brightnessdown</append> <!-- Fn+Down arrow Brightness Down -->
+            <append key="input.keymap.data" type="strlist">e006:brightnessup</append> <!-- Fn+Up arrow Brightness Up -->
+            <append key="input.keymap.data" type="strlist">e007:battery</append> <!-- Fn+F3 battery icon -->
+            <append key="input.keymap.data" type="strlist">e00a:suspend</append> <!-- Fn+F1 hibernate -->
+            <append key="input.keymap.data" type="strlist">e00f:switchvideomode</append> <!-- Fn+F7 aspect ratio -->
+            <append key="input.keymap.data" type="strlist">e013:f23</append> <!-- Fn+Left arrow Auto Brightness -->
+            <append key="info.capabilities" type="strlist">input.keymap</append>
+          </match>
+        </match>
+      </match>
+    </match>
+  </device>
+</deviceinfo>
+
+

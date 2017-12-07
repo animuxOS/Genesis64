@@ -1,0 +1,94 @@
+#!/bin/sh
+
+# Copyright 2005 Branden Robinson.
+
+# Permission is hereby granted, free of charge, to any person obtaining a
+# copy of this software and associated documentation files (the "Software"),
+# to deal in the Software without restriction, including without limitation
+# the rights to use, copy, modify, merge, publish, distribute, sublicense,
+# and/or sell copies of the Software, and to permit persons to whom the
+# Software is furnished to do so, subject to the following condition:
+#
+#     The above copyright notice and this permission notice shall be
+#     included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+# SOFTWARE IN THE PUBLIC INTEREST, INC. BE LIABLE FOR ANY CLAIM, DAMAGES OR
+# OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+# ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+# DEALINGS IN THE SOFTWARE.
+
+# I rewrote Paul Eggert's script in POSIX shell because it was a little
+# odd, and did not confine itself to puritantical pre-POSIX conventions.
+# For example, in one place it used:
+#   case ${1--} in
+#   -*)
+# to test for $1 being null, presumably due to fears that test -n and -z
+# will not be available.  Yet later in the script, test -n was used.
+#
+# This seemed quite silly.  I decided to rewrite it since I am arrgoant
+# enough to think I know what I'm doing in POSIX shell.
+#
+# If someone needs a pre-POSIX version of mkdirhier, they'll probably need to
+# turn to someone else, as I have no idea where such a thing is specified.
+
+set -e
+
+PROGNAME=${0##*/}
+STATUS=0
+
+usage() {
+    cat <<EOF
+usage: $PROGNAME DIRECTORY ...
+Create each directory DIRECTORY, also creating intermediate directories in the
+specified hierarchy as necessary.
+
+Note: Use "mkdir -p" instead of "$PROGNAME" if the system supports it.
+EOF
+}
+
+makedir () {
+    FUNC_STATUS=0
+    # Does the desired directory already exist?
+    if ! [ -d "$1" ]; then
+        # Is a directory hierarchy specified (i.e., are any slashes in the
+        # argument)?
+        PARENT=${1%/*}
+        if [ -n "$PARENT" ] && [ "$PARENT" != "$1" ]; then
+            # Yes; does the desired directory's immediate parent exist?
+            if ! [ -d "$PARENT" ]; then
+                # No; push it onto the stack.  If that fails, return
+                # immediately, as we know later calls will also fail.  E.g., if
+                # we are asked to create /usr/bin/foo/bar/baz/quux and
+                # /usr/bin/foo fails, we don't have to even try anything deeper
+                # in the hierarchy.
+                if ! makedir "$PARENT"; then
+                    return $FUNC_STATUS
+                fi
+            fi
+        fi
+        mkdir "$1" || FUNC_STATUS=$?
+    fi
+    return $FUNC_STATUS
+}
+
+if [ -z "$1" ]; then
+    usage >&2
+    exit 64
+fi
+
+while [ -n "$1" ]; do
+    ARG="$1"
+    makedir "$ARG" || \
+    {
+        STATUS=$?
+        echo "$PROGNAME: could not create directory \"$ARG\"" >&2
+    }
+    shift
+done
+
+exit $STATUS
+
+# vim:set ai et sts=4 sw=4 tw=80:

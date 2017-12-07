@@ -1,0 +1,15 @@
+<inkscape-extension>
+    <_name>EPS Input</_name>
+    <id>org.inkscape.input.eps</id>
+    <dependency type="executable">pstoedit</dependency>
+    <input>
+        <extension>.eps</extension>
+        <mimetype>image/x-encapsulated-postscript</mimetype>
+        <_filetypename>Encapsulated Postscript (*.eps)</_filetypename>
+        <_filetypetooltip>Encapsulated Postscript</_filetypetooltip>
+        <output_extension>org.inkscape.output.eps</output_extension>
+    </input>
+    <script>
+        <command reldir="path">pstoedit -f plot-svg</command>
+    </script>
+</inkscape-extension>

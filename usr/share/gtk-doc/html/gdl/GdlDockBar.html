@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>GdlDockBar</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="GDL Reference Manual">
+<link rel="up" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+<link rel="prev" href="GdlDockPaned.html" title="GdlDockPaned">
+<link rel="next" href="GdlSwitcher.html" title="GdlSwitcher">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GdlDockPaned.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="gdl-main.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GDL Reference Manual</th>
+<td><a accesskey="n" href="GdlSwitcher.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2561954" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2613000" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2608168" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2608223" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id2612958" class="shortcut">Properties</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="GdlDockBar"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2561954"></a><span class="refentrytitle">GdlDockBar</span>
+</h2>
+<p>GdlDockBar</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+                    <a href="GdlDockBar.html#GdlDockBarPrivate">GdlDockBarPrivate</a>;
+enum                <a href="GdlDockBar.html#GdlDockBarStyle">GdlDockBarStyle</a>;
+                    <a href="GdlDockBar.html#GdlDockBar-struct">GdlDockBar</a>;
+GtkWidget*          <a href="GdlDockBar.html#gdl-dock-bar-new">gdl_dock_bar_new</a>                    (<a href="GdlDock.html" title="GdlDock">GdlDock</a> *dock);
+GtkOrientation      <a href="GdlDockBar.html#gdl-dock-bar-get-orientation">gdl_dock_bar_get_orientation</a>        (<a href="GdlDockBar.html" title="GdlDockBar">GdlDockBar</a> *dockbar);
+void                <a href="GdlDockBar.html#gdl-dock-bar-set-orientation">gdl_dock_bar_set_orientation</a>        (<a href="GdlDockBar.html" title="GdlDockBar">GdlDockBar</a> *dockbar,
+                                                         GtkOrientation orientation);
+void                <a href="GdlDockBar.html#gdl-dock-bar-set-style">gdl_dock_bar_set_style</a>              (<a href="GdlDockBar.html" title="GdlDockBar">GdlDockBar</a> *dockbar,
+                                                         <a href="GdlDockBar.html#GdlDockBarStyle">GdlDockBarStyle</a> style);
+<a href="GdlDockBar.html#GdlDockBarStyle">GdlDockBarStyle</a>     <a href="GdlDockBar.html#gdl-dock-bar-get-style">gdl_dock_bar_get_style</a>              (<a href="GdlDockBar.html" title="GdlDockBar">GdlDockBar</a> *dockbar);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608168"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----GtkObject
+               +----GtkWidget
+                     +----GtkContainer
+                           +----GtkBox
+                                 +----GdlDockBar
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2608223"></a><h2>Implemented Interfaces</h2>
+<p>
+GdlDockBar implements
+ GtkBuildable and  AtkImplementorIface.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2612958"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="GdlDockBar.html#GdlDockBar--dockbar-style">dockbar-style</a>"            <a href="GdlDockBar.html#GdlDockBarStyle">GdlDockBarStyle</a>       : Read / Write / Construct
+  "<a href="GdlDockBar.html#GdlDockBar--master">master</a>"                   <a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a>         : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2613000"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2613016"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2613026"></a><h3>
+<a name="GdlDockBarPrivate"></a>GdlDockBarPrivate</h3>
+<a class="indexterm" name="id2613039"></a><pre class="programlisting">typedef struct _GdlDockBarPrivate GdlDockBarPrivate;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2613055"></a><h3>
+<a name="GdlDockBarStyle"></a>enum GdlDockBarStyle</h3>
+<a class="indexterm" name="id2613068"></a><pre class="programlisting">typedef enum {
+    GDL_DOCK_BAR_ICONS,
+    GDL_DOCK_BAR_TEXT,
+    GDL_DOCK_BAR_BOTH,
+    GDL_DOCK_BAR_AUTO
+} GdlDockBarStyle;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2613085"></a><h3>
+<a name="GdlDockBar-struct"></a>GdlDockBar</h3>
+<a class="indexterm" name="id2613098"></a><pre class="programlisting">typedef struct _GdlDockBar GdlDockBar;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2613113"></a><h3>
+<a name="gdl-dock-bar-new"></a>gdl_dock_bar_new ()</h3>
+<a class="indexterm" name="id2613125"></a><pre class="programlisting">GtkWidget*          gdl_dock_bar_new                    (<a href="GdlDock.html" title="GdlDock">GdlDock</a> *dock);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>dock</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2613182"></a><h3>
+<a name="gdl-dock-bar-get-orientation"></a>gdl_dock_bar_get_orientation ()</h3>
+<a class="indexterm" name="id2613193"></a><pre class="programlisting">GtkOrientation      gdl_dock_bar_get_orientation        (<a href="GdlDockBar.html" title="GdlDockBar">GdlDockBar</a> *dockbar);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>dockbar</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2608781"></a><h3>
+<a name="gdl-dock-bar-set-orientation"></a>gdl_dock_bar_set_orientation ()</h3>
+<a class="indexterm" name="id2608793"></a><pre class="programlisting">void                gdl_dock_bar_set_orientation        (<a href="GdlDockBar.html" title="GdlDockBar">GdlDockBar</a> *dockbar,
+                                                         GtkOrientation orientation);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>dockbar</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>orientation</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2608860"></a><h3>
+<a name="gdl-dock-bar-set-style"></a>gdl_dock_bar_set_style ()</h3>
+<a class="indexterm" name="id2608871"></a><pre class="programlisting">void                gdl_dock_bar_set_style              (<a href="GdlDockBar.html" title="GdlDockBar">GdlDockBar</a> *dockbar,
+                                                         <a href="GdlDockBar.html#GdlDockBarStyle">GdlDockBarStyle</a> style);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>dockbar</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>style</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2608939"></a><h3>
+<a name="gdl-dock-bar-get-style"></a>gdl_dock_bar_get_style ()</h3>
+<a class="indexterm" name="id2608950"></a><pre class="programlisting"><a href="GdlDockBar.html#GdlDockBarStyle">GdlDockBarStyle</a>     gdl_dock_bar_get_style              (<a href="GdlDockBar.html" title="GdlDockBar">GdlDockBar</a> *dockbar);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>dockbar</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2609007"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2609017"></a><h3>
+<a name="GdlDockBar--dockbar-style"></a>The "<code class="literal">dockbar-style</code>" property</h3>
+<a class="indexterm" name="id2609031"></a><pre class="programlisting">  "dockbar-style"            <a href="GdlDockBar.html#GdlDockBarStyle">GdlDockBarStyle</a>       : Read / Write / Construct</pre>
+<p>Dockbar style to show items on it.</p>
+<p>Default value: GDL_DOCK_BAR_BOTH</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2609056"></a><h3>
+<a name="GdlDockBar--master"></a>The "<code class="literal">master</code>" property</h3>
+<a class="indexterm" name="id2609071"></a><pre class="programlisting">  "master"                   <a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a>         : Read / Write</pre>
+<p>GdlDockMaster object which the dockbar widget is attached to.</p>
+</div>
+</div>
+</div>
+</body>
+</html>

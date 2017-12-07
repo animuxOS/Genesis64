@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section>
+	<sec_name>Sysinfo</sec_name>
+	<sec_name xml:lang="bg">Системна информация</sec_name>
+	<sec_name xml:lang="es">Información de Sistema</sec_name>
+	<sec_name xml:lang="fr">Sysinfo</sec_name>
+	<sec_name xml:lang="it">Informazioni di Sistema</sec_name>
+	<sec_name xml:lang="ja">システム情報</sec_name>
+	<sec_name xml:lang="pt">Sysinfo</sec_name>
+	<sec_desc>Monitor for various Devices in a Kiba Icon.</sec_desc>
+	<sec_icon>[gnome-monitor]</sec_icon>
+	<subsection>
+		<sub_sec_name>General</sub_sec_name>
+		<sub_sec_name xml:lang="bg">Общи</sub_sec_name>
+		<sub_sec_name xml:lang="de">Generell</sub_sec_name>
+		<sub_sec_name xml:lang="es">General</sub_sec_name>
+		<sub_sec_name xml:lang="fr">Général</sub_sec_name>
+		<sub_sec_name xml:lang="it">Generale</sub_sec_name>
+		<sub_sec_name xml:lang="ja">全般</sub_sec_name>
+		<sub_sec_name xml:lang="pt">Geral</sub_sec_name>
+		<option>
+			<name>sysinfo_enable</name>
+			<title>Enable</title>
+			<title xml:lang="bg">Пускане</title>
+			<title xml:lang="de">Aktivieren</title>
+			<title xml:lang="es">Activar</title>
+			<title xml:lang="fr">Activer</title>
+			<title xml:lang="it">Abilita</title>
+			<title xml:lang="ja">有効</title>
+			<title xml:lang="pt">Habilitar</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable the Sysinfo plugin</description>
+			<description xml:lang="bg">Пускане/спиране на плъгина за системна информация</description>
+			<description xml:lang="de">Aktiviere/Deaktiviere das Sysinfo Plugin</description>
+			<description xml:lang="ja">システム情報プラグインの有効化/無効化</description>
+		</option>
+		<option>
+			<name>sysinfo_device</name>
+			<title>Device</title>
+			<title xml:lang="bg">устройството</title>
+			<title xml:lang="de">Gerät</title>
+			<title xml:lang="ja">デバイス</title>
+			<type>char</type>
+			<range>cpu,memory,swap,net,root</range>
+			<default>memory</default>
+			<description>Device to monitor</description>
+			<description xml:lang="bg">Устройство което да бъде наблюдавано</description>
+			<description xml:lang="ja">監視するデバイス</description>
+		</option>
+		<option>
+			<name>sysinfo_theme</name>
+			<title>Theme</title>
+			<title xml:lang="bg">Тема</title>
+			<title xml:lang="de">Thema</title>
+			<title xml:lang="es">Tema</title>
+			<title xml:lang="fr">Thème</title>
+			<title xml:lang="it">Tema</title>
+			<title xml:lang="ja">テーマ</title>
+			<title xml:lang="pt">Tema</title>
+			<type>char</type>
+			<range/>
+			<default/>
+			<description>Theme</description>
+			<description xml:lang="bg">Тема</description>
+			<description xml:lang="de">Thema</description>
+			<description xml:lang="es">Tema</description>
+			<description xml:lang="fr">Thème</description>
+			<description xml:lang="it">Tema</description>
+			<description xml:lang="ja">テーマ</description>
+			<description xml:lang="pt">Tema</description>
+		</option>
+		<option>
+			<name>sysinfo_size_factor</name>
+			<title>Size factor</title>
+			<title xml:lang="bg">Степен на оразмеряване</title>
+			<title xml:lang="de">Größen Faktor</title>
+			<title xml:lang="ja">アイコンの大きさ</title>
+			<type>double</type>
+			<range>0.1-2.0</range>
+			<default>1.3</default>
+			<description>Size factor</description>
+			<description xml:lang="bg">Степен на оразмеряване</description>
+			<description xml:lang="de">Größen Faktor</description>
+			<description xml:lang="ja">アイコンの大きさ</description>
+		</option>
+		<option>
+			<name>sysinfo_alpha</name>
+			<title>Alpha</title>
+			<title xml:lang="bg">Прозрачност</title>
+			<title xml:lang="de">Transparenz</title>
+			<title xml:lang="es">Transparencia</title>
+			<title xml:lang="it">Alpha</title>
+			<title xml:lang="ja">透明度</title>
+			<title xml:lang="pt">Transparência</title>
+			<type>double</type>
+			<range>0.0-1.0</range>
+			<default>1.0</default>
+			<description>Alpha</description>
+			<description xml:lang="bg">Прозрачност</description>
+			<description xml:lang="de">Transparenz</description>
+			<description xml:lang="es">Transparencia</description>
+			<description xml:lang="it">Alpha</description>
+			<description xml:lang="ja">透明度</description>
+			<description xml:lang="pt">Transparência</description>
+		</option>
+		<option>
+			<name>sysinfo_text_rgba</name>
+			<title>Text color</title>
+			<title xml:lang="bg">Свят на текста</title>
+			<title xml:lang="de">Text Farbe</title>
+			<title xml:lang="ja">文字の色</title>
+			<type>char</type>
+			<range>rgba</range>
+			<default>#000000FF</default>
+			<description>Text color</description>
+			<description xml:lang="bg">Свят на текста</description>
+			<description xml:lang="de">Text Farbe</description>
+			<description xml:lang="ja">文字の色</description>
+		</option>
+		<option>
+			<name>sysinfo_max_netload</name>
+			<title>Maximal Netload</title>
+			<title xml:lang="bg">Максимална скорост на мрежата</title>
+			<title xml:lang="de">Maximale Netzlast</title>
+			<title xml:lang="es">Carga Máxima de Red</title>
+			<title xml:lang="it">Carico di Rete Massimo</title>
+			<title xml:lang="ja">ネット読み込みの最高値</title>
+			<title xml:lang="pt">Carga máxima da rede</title>
+			<type>int</type>
+			<range>28-10280</range>
+			<default>128</default>
+			<description>Maximal Netload</description>
+			<description xml:lang="bg">Максимална скорост на мрежата</description>
+			<description xml:lang="de">Maximale Netzlast</description>
+			<description xml:lang="es">Carga Máxima de Red</description>
+			<description xml:lang="it">Carico di Rete Massimo</description>
+			<description xml:lang="ja">ネット読み込みの最高値</description>
+			<description xml:lang="pt">Carga máxima da rede</description>
+		</option>
+	</subsection>
+</section>

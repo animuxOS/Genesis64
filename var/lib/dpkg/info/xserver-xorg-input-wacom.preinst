@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installudev
+if [ "$1" = install ] || [ "$1" = upgrade ]; then
+	if [ -e "/etc/udev/xserver-xorg-input-wacom.rules" ]; then
+		if [ "`md5sum \"/etc/udev/xserver-xorg-input-wacom.rules\" | sed -e \"s/ .*//\"`" = \
+		     "`dpkg-query -W -f='${Conffiles}' xserver-xorg-input-wacom | sed -n -e \"\\\\' /etc/udev/xserver-xorg-input-wacom.rules's/.* //p\"`" ]
+		then
+			rm -f "/etc/udev/xserver-xorg-input-wacom.rules"
+		fi
+	fi
+	if [ -L "/etc/udev/rules.d/z60_xserver-xorg-input-wacom.rules" ]; then
+		rm -f "/etc/udev/rules.d/z60_xserver-xorg-input-wacom.rules"
+	fi
+fi
+# End automatically added section

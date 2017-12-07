@@ -1,0 +1,1457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+	<plugin useBcop="true" name="cubeaddon">
+		<short>Cube Reflection and Deformation</short>
+		<short xml:lang="ja">キューブの反射と変形</short>
+		<long>Compiz cube reflection and deformation</long>
+		<long xml:lang="ja">Compiz キューブの反射と変形</long>
+		<category>Effects</category>
+		<deps>
+		<relation type="after">
+			<plugin>cube</plugin>
+			<plugin>rotate</plugin>
+			<plugin>cubecaps</plugin>
+			<plugin>svg</plugin>
+			<plugin>png</plugin>
+			<plugin>imgjpeg</plugin>
+		</relation>
+		<requirement>
+			<plugin>cube</plugin>
+		</requirement>
+		</deps>
+		<display>
+			<group>
+				<short>Cube caps</short>
+				<short xml:lang="ja">キューブのふた</short>
+				<subgroup>
+					<short>Bindings</short>
+					<short xml:lang="ar">الأغلفة</short>
+					<short xml:lang="bn">সীমাবদ্ধতা</short>
+					<short xml:lang="ca">Vinculacions</short>
+					<short xml:lang="de">Tastenkombinationen</short>
+					<short xml:lang="el">Συνδυασμοί</short>
+					<short xml:lang="en_GB">Bindings</short>
+					<short xml:lang="es">Combinación de Teclas</short>
+					<short xml:lang="fi">Näppäinyhdistelmät</short>
+					<short xml:lang="fr">Raccourcis</short>
+					<short xml:lang="gl">Atallos</short>
+					<short xml:lang="gu">બાઈન્ડીંગો</short>
+					<short xml:lang="hi">बाइंडिंग</short>
+					<short xml:lang="it">Scorciatoie</short>
+					<short xml:lang="ja">割り当て</short>
+					<short xml:lang="nb">Hurtigtast</short>
+					<short xml:lang="nl">Bindingen</short>
+					<short xml:lang="pl">Skróty klawiszowe</short>
+					<short xml:lang="pt">Atalhos</short>
+					<short xml:lang="pt_BR">Atalhos</short>
+					<short xml:lang="ru">Горячие клавиши</short>
+					<short xml:lang="sv">Bindningar</short>
+					<short xml:lang="tr">Bağlayıcılar</short>
+					<short xml:lang="zh_CN">按键组合</short>
+					<option type="key" name="top_next_key">
+						<short>Next top image</short>
+						<short xml:lang="ca">Següent imatge superior</short>
+						<short xml:lang="el">Επόμενη πάνω εικόνα</short>
+						<short xml:lang="en_GB">Next top image</short>
+						<short xml:lang="eu">Hurrengo goiko irudia</short>
+						<short xml:lang="fr">Image supérieure suivante</short>
+						<short xml:lang="gl">Imaxe superior seguinte</short>
+						<short xml:lang="gu">આગળનું ટોચનું ચિત્ર</short>
+						<short xml:lang="hi">अगला ऊपरी चित्र</short>
+						<short xml:lang="it">Immagine superiore successiva</short>
+						<short xml:lang="ja">次の上面画像</short>
+						<short xml:lang="nb">Neste toppbilde</short>
+						<short xml:lang="nl">Volgende afbeelding bovenzĳde</short>
+						<short xml:lang="pl">Następny górny obrazek</short>
+						<short xml:lang="pt">Imagem superior seguinte</short>
+						<short xml:lang="pt_BR">Próxima imagem superior</short>
+						<short xml:lang="sv">Nästa bild på översida</short>
+						<short xml:lang="tr">Sonraki tavan resmi</short>
+						<long>Advance to next image for top face of the cube</long>
+						<long xml:lang="ca">Passa a la següent imatge per la superior inferior del cub</long>
+						<long xml:lang="el">Πέρασμα στην επόμενη εικόνα για την πάνω όψη του κύβου</long>
+						<long xml:lang="en_GB">Advance to next image for top face of the cube</long>
+						<long xml:lang="eu">Kuboko goiko irudirako joan hurrengo irudira</long>
+						<long xml:lang="fr">Avancer à l'image suivante pour la face supérieure du cube</long>
+						<long xml:lang="gl">Avanzar á próxima imaxe na cara de arriba do cubo.</long>
+						<long xml:lang="gu">ઘનના ટોચના ચહેરા માટે આગળના ચિત્ર પર વધો</long>
+						<long xml:lang="hi">घन के ऊपरी फेस के लिए अगला चित्र में जाएं</long>
+						<long xml:lang="it">Avanza all'immagine successiva per la faccia superiore del cubo</long>
+						<long xml:lang="ja">キューブ上面の次の画像に進む</long>
+						<long xml:lang="nb">Gå videre til neste toppbilde for kuben</long>
+						<long xml:lang="nl">Doorgaan naar volgende afbeelding voor bovenzĳde van de kubus</long>
+						<long xml:lang="pl">Idź do następnego obrazka górnej ściany kostki</long>
+						<long xml:lang="pt">Avançar para a próxima imagem na face de cima do cubo</long>
+						<long xml:lang="pt_BR">Avançar para a próxima imagem na face de cima do cubo</long>
+						<long xml:lang="sv">Byt till nästa bild för översidan av kuben</long>
+						<passive_grab>false</passive_grab>
+						<default>space</default>
+					</option>
+					<option type="button" name="top_next_button">
+						<short>Next top image</short>
+						<short xml:lang="ca">Següent imatge superior</short>
+						<short xml:lang="el">Επόμενη πάνω εικόνα</short>
+						<short xml:lang="en_GB">Next top image</short>
+						<short xml:lang="eu">Hurrengo goiko irudia</short>
+						<short xml:lang="fr">Image supérieure suivante</short>
+						<short xml:lang="gl">Imaxe superior seguinte</short>
+						<short xml:lang="gu">આગળનું ટોચનું ચિત્ર</short>
+						<short xml:lang="hi">अगला ऊपरी चित्र</short>
+						<short xml:lang="it">Immagine superiore successiva</short>
+						<short xml:lang="ja">次の上面画像</short>
+						<short xml:lang="nb">Neste toppbilde</short>
+						<short xml:lang="nl">Volgende afbeelding bovenzĳde</short>
+						<short xml:lang="pl">Następny górny obrazek</short>
+						<short xml:lang="pt">Imagem superior seguinte</short>
+						<short xml:lang="pt_BR">Próxima imagem superior</short>
+						<short xml:lang="sv">Nästa bild på översida</short>
+						<short xml:lang="tr">Sonraki tavan resmi</short>
+						<long>Advance to next image for top face of the cube</long>
+						<long xml:lang="ca">Passa a la següent imatge per la superior inferior del cub</long>
+						<long xml:lang="el">Πέρασμα στην επόμενη εικόνα για την πάνω όψη του κύβου</long>
+						<long xml:lang="en_GB">Advance to next image for top face of the cube</long>
+						<long xml:lang="eu">Kuboko goiko irudirako joan hurrengo irudira</long>
+						<long xml:lang="fr">Avancer à l'image suivante pour la face supérieure du cube</long>
+						<long xml:lang="gl">Avanzar á próxima imaxe na cara de arriba do cubo.</long>
+						<long xml:lang="gu">ઘનના ટોચના ચહેરા માટે આગળના ચિત્ર પર વધો</long>
+						<long xml:lang="hi">घन के ऊपरी फेस के लिए अगला चित्र में जाएं</long>
+						<long xml:lang="it">Avanza all'immagine successiva per la faccia superiore del cubo</long>
+						<long xml:lang="ja">キューブ上面の次の画像に進む</long>
+						<long xml:lang="nb">Gå videre til neste toppbilde for kuben</long>
+						<long xml:lang="nl">Doorgaan naar volgende afbeelding voor bovenzĳde van de kubus</long>
+						<long xml:lang="pl">Idź do następnego obrazka górnej ściany kostki</long>
+						<long xml:lang="pt">Avançar para a próxima imagem na face de cima do cubo</long>
+						<long xml:lang="pt_BR">Avançar para a próxima imagem na face de cima do cubo</long>
+						<long xml:lang="sv">Byt till nästa bild för översidan av kuben</long>
+						<passive_grab>false</passive_grab>
+					</option>
+					<option type="key" name="top_prev_key">
+						<short>Prev top image</short>
+						<short xml:lang="ca">Imatge superior prèvia.</short>
+						<short xml:lang="el">Προηγούμενη κάτω εικόνα</short>
+						<short xml:lang="en_GB">Prev top image</short>
+						<short xml:lang="eu">Aurreko goiko irudia</short>
+						<short xml:lang="fr">Image supérieure précédente</short>
+						<short xml:lang="gl">Imaxe superior anterior</short>
+						<short xml:lang="gu">પહેલાંનું ટોચનું ચિત્ર</short>
+						<short xml:lang="hi">पिछला ऊपरी चित्र</short>
+						<short xml:lang="it">Immagine superiore precedente</short>
+						<short xml:lang="ja">前の上面画像</short>
+						<short xml:lang="nb">Forrige toppbilde</short>
+						<short xml:lang="nl">Vorige afbeelding onderzĳde</short>
+						<short xml:lang="pl">Poprzedni górny obrazek</short>
+						<short xml:lang="pt">Imagem superior seguinte</short>
+						<short xml:lang="pt_BR">Imagem superior anterior</short>
+						<short xml:lang="sv">Föreg bild på översida</short>
+						<short xml:lang="tr">Önceki tavan resmi</short>
+						<long>Go back to previous image for top face of the cube</long>
+						<long xml:lang="ca">Torna a la imatge anterior per la cara superior del cub</long>
+						<long xml:lang="el">Πήγαινε πίσω στη προηγούμενη εικόνα για την πάνω όψη του κύβου</long>
+						<long xml:lang="en_GB">Go back to previous image for top face of the cube</long>
+						<long xml:lang="eu">Kuboko goiko aurpegiko irudirako joan aurreko irudira</long>
+						<long xml:lang="fr">Revenir à l'image précédente pour la face supérieure du cube</long>
+						<long xml:lang="gl">Retroceder para a imaxe anterior na cara de cima do cubo.</long>
+						<long xml:lang="gu">ઘનના ટોચના ચહેરા માટે પહેલાંના ચિત્ર પર પાછા જાવ</long>
+						<long xml:lang="hi">घन का ऊपरी फेस के लिए पिछले चित्र में वापस जाएं</long>
+						<long xml:lang="it">Torna all'immagine precedente per la faccia superiore del cubo</long>
+						<long xml:lang="ja">前にキューブ上面の画像に戻る</long>
+						<long xml:lang="nb">Gå tilbake til forrige bilde for toppen av kuben</long>
+						<long xml:lang="nl">Ga terug naar vorige afbeelding voor bovenzĳde kubus</long>
+						<long xml:lang="pl">Idź do poprzedniego obrazka górnej ściany kostki</long>
+						<long xml:lang="pt">Retroceder para a imagem anterior na face de cima do cubo</long>
+						<long xml:lang="pt_BR">Voltar para a imagem anterior na face de cima do cubo.</long>
+						<long xml:lang="sv">Gå tillbaka till föregående bild för översidan av kuben</long>
+						<passive_grab>false</passive_grab>
+						<default>Backspace</default>
+					</option>
+					<option type="button" name="top_prev_button">
+						<short>Prev top image</short>
+						<short xml:lang="ca">Imatge superior prèvia.</short>
+						<short xml:lang="el">Προηγούμενη κάτω εικόνα</short>
+						<short xml:lang="en_GB">Prev top image</short>
+						<short xml:lang="eu">Aurreko goiko irudia</short>
+						<short xml:lang="fr">Image supérieure précédente</short>
+						<short xml:lang="gl">Imaxe superior anterior</short>
+						<short xml:lang="gu">પહેલાંનું ટોચનું ચિત્ર</short>
+						<short xml:lang="hi">पिछला ऊपरी चित्र</short>
+						<short xml:lang="it">Immagine superiore precedente</short>
+						<short xml:lang="ja">前の上面画像</short>
+						<short xml:lang="nb">Forrige toppbilde</short>
+						<short xml:lang="nl">Vorige afbeelding onderzĳde</short>
+						<short xml:lang="pl">Poprzedni górny obrazek</short>
+						<short xml:lang="pt">Imagem superior seguinte</short>
+						<short xml:lang="pt_BR">Imagem superior anterior</short>
+						<short xml:lang="sv">Föreg bild på översida</short>
+						<short xml:lang="tr">Önceki tavan resmi</short>
+						<long>Go back to previous image for top face of the cube</long>
+						<long xml:lang="ca">Torna a la imatge anterior per la cara superior del cub</long>
+						<long xml:lang="el">Πήγαινε πίσω στη προηγούμενη εικόνα για την πάνω όψη του κύβου</long>
+						<long xml:lang="en_GB">Go back to previous image for top face of the cube</long>
+						<long xml:lang="eu">Kuboko goiko aurpegiko irudirako joan aurreko irudira</long>
+						<long xml:lang="fr">Revenir à l'image précédente pour la face supérieure du cube</long>
+						<long xml:lang="gl">Retroceder para a imaxe anterior na cara de cima do cubo.</long>
+						<long xml:lang="gu">ઘનના ટોચના ચહેરા માટે પહેલાંના ચિત્ર પર પાછા જાવ</long>
+						<long xml:lang="hi">घन का ऊपरी फेस के लिए पिछले चित्र में वापस जाएं</long>
+						<long xml:lang="it">Torna all'immagine precedente per la faccia superiore del cubo</long>
+						<long xml:lang="ja">前にキューブ上面の画像に戻る</long>
+						<long xml:lang="nb">Gå tilbake til forrige bilde for toppen av kuben</long>
+						<long xml:lang="nl">Ga terug naar vorige afbeelding voor bovenzĳde kubus</long>
+						<long xml:lang="pl">Idź do poprzedniego obrazka górnej ściany kostki</long>
+						<long xml:lang="pt">Retroceder para a imagem anterior na face de cima do cubo</long>
+						<long xml:lang="pt_BR">Voltar para a imagem anterior na face de cima do cubo.</long>
+						<long xml:lang="sv">Gå tillbaka till föregående bild för översidan av kuben</long>
+						<passive_grab>false</passive_grab>
+					</option>
+					<option type="key" name="bottom_next_key">
+						<short>Next bottom image</short>
+						<short xml:lang="ca">Següent imatge inferior</short>
+						<short xml:lang="el">Επόμενη κάτω εικόνα</short>
+						<short xml:lang="en_GB">Next bottom image</short>
+						<short xml:lang="eu">Hurrengo azpiko irudia</short>
+						<short xml:lang="fr">Image inférieure suivante</short>
+						<short xml:lang="gl">Imaxe inferior seguinte</short>
+						<short xml:lang="gu">આગળનું તળિયેનું ચિત્ર</short>
+						<short xml:lang="hi">अगला तलवर्ती चित्र</short>
+						<short xml:lang="it">Immagine inferiore successiva</short>
+						<short xml:lang="ja">次の下面画像</short>
+						<short xml:lang="nb">Neste bunnbilde</short>
+						<short xml:lang="nl">Volgende afbeelding onderzĳde</short>
+						<short xml:lang="pl">Następny dolny obrazek</short>
+						<short xml:lang="pt">Imagem inferior seguinte</short>
+						<short xml:lang="pt_BR">Próxima imagem inferior</short>
+						<short xml:lang="sv">Nästa bild på undersida</short>
+						<short xml:lang="tr">Sonraki taban resmi</short>
+						<long>Advance to next image for bottom face of the cube</long>
+						<long xml:lang="ca">Passa a la següent imatge per la cara inferior del cub</long>
+						<long xml:lang="el">Πέρασμα στην επόμενη εικόνα για την κάτω όψη του κύβου</long>
+						<long xml:lang="en_GB">Advance to next image for bottom face of the cube</long>
+						<long xml:lang="eu">Kuboko azpiko irudirako joan hurrengo irudira</long>
+						<long xml:lang="fr">Avancer à l'image suivante pour la face inférieure du cube</long>
+						<long xml:lang="gl">Avanzar á próxima imaxe na cara de abaixo do cubo.</long>
+						<long xml:lang="gu">ઘનના તળિયેના ચહેરા માટે આગળના ચિત્ર પર વધો</long>
+						<long xml:lang="hi">घन के तलवर्ती फेस के लिए अगला चित्र में जाएं</long>
+						<long xml:lang="it">Avanza all'immagine successiva per la faccia inferiore del cubo</long>
+						<long xml:lang="ja">キューブ下面の次の画像に進む</long>
+						<long xml:lang="nb">Gå videre til neste bunnbilde for kuben</long>
+						<long xml:lang="nl">Doorgaan naar volgende afbeelding voor onderzĳde van de kubus</long>
+						<long xml:lang="pl">Idź do następnego obrazka dolnej ściany kostki</long>
+						<long xml:lang="pt">Avançar para a próxima imagem na face de baixo do cubo</long>
+						<long xml:lang="pt_BR">Avançar para a próxima imagem na face de baixo do cubo</long>
+						<long xml:lang="sv">Byt till nästa bild för undersidan av kuben</long>
+						<passive_grab>false</passive_grab>
+					</option>
+					<option type="button" name="bottom_next_button">
+						<short>Next bottom image</short>
+						<short xml:lang="ca">Següent imatge inferior</short>
+						<short xml:lang="el">Επόμενη κάτω εικόνα</short>
+						<short xml:lang="en_GB">Next bottom image</short>
+						<short xml:lang="eu">Hurrengo azpiko irudia</short>
+						<short xml:lang="fr">Image inférieure suivante</short>
+						<short xml:lang="gl">Imaxe inferior seguinte</short>
+						<short xml:lang="gu">આગળનું તળિયેનું ચિત્ર</short>
+						<short xml:lang="hi">अगला तलवर्ती चित्र</short>
+						<short xml:lang="it">Immagine inferiore successiva</short>
+						<short xml:lang="ja">次の下面画像</short>
+						<short xml:lang="nb">Neste bunnbilde</short>
+						<short xml:lang="nl">Volgende afbeelding onderzĳde</short>
+						<short xml:lang="pl">Następny dolny obrazek</short>
+						<short xml:lang="pt">Imagem inferior seguinte</short>
+						<short xml:lang="pt_BR">Próxima imagem inferior</short>
+						<short xml:lang="sv">Nästa bild på undersida</short>
+						<short xml:lang="tr">Sonraki taban resmi</short>
+						<long>Advance to next image for bottom face of the cube</long>
+						<long xml:lang="ca">Passa a la següent imatge per la cara inferior del cub</long>
+						<long xml:lang="el">Πέρασμα στην επόμενη εικόνα για την κάτω όψη του κύβου</long>
+						<long xml:lang="en_GB">Advance to next image for bottom face of the cube</long>
+						<long xml:lang="eu">Kuboko azpiko irudirako joan hurrengo irudira</long>
+						<long xml:lang="fr">Avancer à l'image suivante pour la face inférieure du cube</long>
+						<long xml:lang="gl">Avanzar á próxima imaxe na cara de abaixo do cubo.</long>
+						<long xml:lang="gu">ઘનના તળિયેના ચહેરા માટે આગળના ચિત્ર પર વધો</long>
+						<long xml:lang="hi">घन के तलवर्ती फेस के लिए अगला चित्र में जाएं</long>
+						<long xml:lang="it">Avanza all'immagine successiva per la faccia inferiore del cubo</long>
+						<long xml:lang="ja">キューブ下面の次の画像に進む</long>
+						<long xml:lang="nb">Gå videre til neste bunnbilde for kuben</long>
+						<long xml:lang="nl">Doorgaan naar volgende afbeelding voor onderzĳde van de kubus</long>
+						<long xml:lang="pl">Idź do następnego obrazka dolnej ściany kostki</long>
+						<long xml:lang="pt">Avançar para a próxima imagem na face de baixo do cubo</long>
+						<long xml:lang="pt_BR">Avançar para a próxima imagem na face de baixo do cubo</long>
+						<long xml:lang="sv">Byt till nästa bild för undersidan av kuben</long>
+						<passive_grab>false</passive_grab>
+					</option>
+					<option type="key" name="bottom_prev_key">
+						<short>Prev bottom image</short>
+						<short xml:lang="ca">Imatge inferior prèvia.</short>
+						<short xml:lang="el">Προηγούμενη κάτω εικόνα</short>
+						<short xml:lang="en_GB">Prev bottom image</short>
+						<short xml:lang="eu">Aurreko azpiko irudia</short>
+						<short xml:lang="fr">Image inférieure précédente</short>
+						<short xml:lang="gl">Imaxe inferior anterior</short>
+						<short xml:lang="gu">પહેલાંનું તળિયેનું ચિત્ર</short>
+						<short xml:lang="hi">पिछला तलवर्ती चित्र</short>
+						<short xml:lang="it">Immagine inferiore precedente</short>
+						<short xml:lang="ja">前の下面画像</short>
+						<short xml:lang="nb">Forrige bunnbilde</short>
+						<short xml:lang="nl">Vorige afbeelding onderzĳde</short>
+						<short xml:lang="pl">Poprzedni dolny obrazek</short>
+						<short xml:lang="pt">Imagem inferior anterior</short>
+						<short xml:lang="pt_BR">Imagem inferior anterior</short>
+						<short xml:lang="sv">Föreg bild på undersida</short>
+						<short xml:lang="tr">Önceki taban resmi</short>
+						<long>Go back to previous image for bottom face of the cube</long>
+						<long xml:lang="ca">Torna a la imatge anterior per la cara inferior del cub</long>
+						<long xml:lang="el">Πήγαινε πίσω στη προηγούμενη εικόνα για την κάτω όψη του κύβου</long>
+						<long xml:lang="en_GB">Go back to previous image for bottom face of the cube</long>
+						<long xml:lang="eu">Kuboko azpiko aurpegiko irudirako joan aurreko irudira</long>
+						<long xml:lang="fr">Revenir à l'image précédente pour la face inférieure du cube</long>
+						<long xml:lang="gl">Retroceder para a imaxe anterior na cara de abaixo do cubo.</long>
+						<long xml:lang="gu">ઘનના તળિયેના ચહેરા માટે પહેલાંના ચિત્ર પર પાછા જાવ</long>
+						<long xml:lang="hi">घन का तलवर्ती फेस के लिए पिछले चित्र में वापस जाएं</long>
+						<long xml:lang="it">Torna all'immagine precedente per la faccia inferiore del cubo</long>
+						<long xml:lang="ja">前のキューブ下面の画像に戻る</long>
+						<long xml:lang="nb">Gå tilbake til forrige bilde for bunnen av kuben</long>
+						<long xml:lang="nl">Ga terug naar vorige afbeelding voor onderzĳde van de kubus</long>
+						<long xml:lang="pl">Idź do poprzedniego obrazka dolnej ściany kostki</long>
+						<long xml:lang="pt">Retroceder para a imagem anterior na face de baixo do cubo</long>
+						<long xml:lang="pt_BR">Voltar para a imagem anterior na face de baixo do cubo</long>
+						<long xml:lang="sv">Gå tillbaka till föregående bild för undersidan av kuben</long>
+						<passive_grab>false</passive_grab>
+					</option>
+					<option type="button" name="bottom_prev_button">
+						<short>Prev bottom image</short>
+						<short xml:lang="ca">Imatge inferior prèvia.</short>
+						<short xml:lang="el">Προηγούμενη κάτω εικόνα</short>
+						<short xml:lang="en_GB">Prev bottom image</short>
+						<short xml:lang="eu">Aurreko azpiko irudia</short>
+						<short xml:lang="fr">Image inférieure précédente</short>
+						<short xml:lang="gl">Imaxe inferior anterior</short>
+						<short xml:lang="gu">પહેલાંનું તળિયેનું ચિત્ર</short>
+						<short xml:lang="hi">पिछला तलवर्ती चित्र</short>
+						<short xml:lang="it">Immagine inferiore precedente</short>
+						<short xml:lang="ja">前の下面画像</short>
+						<short xml:lang="nb">Forrige bunnbilde</short>
+						<short xml:lang="nl">Vorige afbeelding onderzĳde</short>
+						<short xml:lang="pl">Poprzedni dolny obrazek</short>
+						<short xml:lang="pt">Imagem inferior anterior</short>
+						<short xml:lang="pt_BR">Imagem inferior anterior</short>
+						<short xml:lang="sv">Föreg bild på undersida</short>
+						<short xml:lang="tr">Önceki taban resmi</short>
+						<long>Go back to previous image for bottom face of the cube</long>
+						<long xml:lang="ca">Torna a la imatge anterior per la cara inferior del cub</long>
+						<long xml:lang="el">Πήγαινε πίσω στη προηγούμενη εικόνα για την κάτω όψη του κύβου</long>
+						<long xml:lang="en_GB">Go back to previous image for bottom face of the cube</long>
+						<long xml:lang="eu">Kuboko azpiko aurpegiko irudirako joan aurreko irudira</long>
+						<long xml:lang="fr">Revenir à l'image précédente pour la face inférieure du cube</long>
+						<long xml:lang="gl">Retroceder para a imaxe anterior na cara de abaixo do cubo.</long>
+						<long xml:lang="gu">ઘનના તળિયેના ચહેરા માટે પહેલાંના ચિત્ર પર પાછા જાવ</long>
+						<long xml:lang="hi">घन का तलवर्ती फेस के लिए पिछले चित्र में वापस जाएं</long>
+						<long xml:lang="it">Torna all'immagine precedente per la faccia inferiore del cubo</long>
+						<long xml:lang="ja">前のキューブ下面の画像に戻る</long>
+						<long xml:lang="nb">Gå tilbake til forrige bilde for bunnen av kuben</long>
+						<long xml:lang="nl">Ga terug naar vorige afbeelding voor onderzĳde van de kubus</long>
+						<long xml:lang="pl">Idź do poprzedniego obrazka dolnej ściany kostki</long>
+						<long xml:lang="pt">Retroceder para a imagem anterior na face de baixo do cubo</long>
+						<long xml:lang="pt_BR">Voltar para a imagem anterior na face de baixo do cubo</long>
+						<long xml:lang="sv">Gå tillbaka till föregående bild för undersidan av kuben</long>
+						<passive_grab>false</passive_grab>
+					</option>
+				</subgroup>
+			</group>
+		</display>
+		<screen>
+			<group>
+				<short>Reflection</short>
+				<short xml:lang="ca">Reflexió</short>
+				<short xml:lang="de">Reflektionen</short>
+				<short xml:lang="el">Αντανάκλαση</short>
+				<short xml:lang="en_GB">Reflection</short>
+				<short xml:lang="es">Reflejos</short>
+				<short xml:lang="fi">Heijastus</short>
+				<short xml:lang="fr">Réflexion</short>
+				<short xml:lang="gl">Reflexo</short>
+				<short xml:lang="gu">પરાવર્તન</short>
+				<short xml:lang="hi">परावर्तन</short>
+				<short xml:lang="it">Riflesso</short>
+				<short xml:lang="ja">反射</short>
+				<short xml:lang="nb">Speiling</short>
+				<short xml:lang="nl">Reflectie</short>
+				<short xml:lang="pl">Odbicie</short>
+				<short xml:lang="pt">Reflexão</short>
+				<short xml:lang="pt_BR">Reflexão</short>
+				<short xml:lang="sv">Reflektion</short>
+				<short xml:lang="tr">Yansıma</short>
+				<short xml:lang="zh_CN">映影</short>
+				<option type="bool" name="reflection">
+					<short>Enabled</short>
+					<short xml:lang="ja">有効化</short>
+					<long>Give cube a reflective ground.</long>
+					<long xml:lang="ja">キューブに反射的な地面を付ける</long>
+					<default>true</default>
+				</option>
+				<option type="color" name="ground_color1">
+					<short>Ground color(near)</short>
+					<short xml:lang="ca">Color del terra(a prop)</short>
+					<short xml:lang="de">Bodenfarbe (nah)</short>
+					<short xml:lang="el">Χρώμα δαπέδου(κοντινό)</short>
+					<short xml:lang="en_GB">Ground colour(near)</short>
+					<short xml:lang="es">Color del suelo (cerca).</short>
+					<short xml:lang="eu">Oinarri kolorea (gertu)</short>
+					<short xml:lang="fi">Maan väri (lähellä)</short>
+					<short xml:lang="fr">Couleur de la surface (près)</short>
+					<short xml:lang="gl">Cor do chán (perto)</short>
+					<short xml:lang="gu">મેદાન રંગ (નજીક)</short>
+					<short xml:lang="hi">तल रंग (नजदीक)</short>
+					<short xml:lang="it">Colore della base (vicino)</short>
+					<short xml:lang="ja">地面の色(近景)</short>
+					<short xml:lang="nb">Bakkfarge (nært)</short>
+					<short xml:lang="nl">Grond kleur (dichtbĳ)</short>
+					<short xml:lang="pl">Kolor bliskiego tła</short>
+					<short xml:lang="pt">Cor do chão (perto)</short>
+					<short xml:lang="pt_BR">Cor do chão (perto)</short>
+					<short xml:lang="sv">Markfärg (nära)</short>
+					<short xml:lang="tr">Alan rengi (yakın)</short>
+					<short xml:lang="zh_CN">基底近景色</short>
+					<long>Color of the ground (near).</long>
+					<long xml:lang="ca">Color del terra (a prop).</long>
+					<long xml:lang="de">Farbe für den Boden (nah)</long>
+					<long xml:lang="el">Χρώμα Δαπέδου (κοντινό).</long>
+					<long xml:lang="en_GB">Colour of the ground (near).</long>
+					<long xml:lang="es">Color del suelo (cerca).</long>
+					<long xml:lang="eu">Oinarriko kolorea (gertu).</long>
+					<long xml:lang="fi">Maan väri (lähellä).</long>
+					<long xml:lang="fr">Couleur de la surface (près).</long>
+					<long xml:lang="gl">Cor do chán (perto)</long>
+					<long xml:lang="gu">મેદાનનો રંગ (નજીક).</long>
+					<long xml:lang="hi">तल का रंग (नजदीक).</long>
+					<long xml:lang="it">Colore della base (vicino).</long>
+					<long xml:lang="ja">地面の色(近景)</long>
+					<long xml:lang="nb">Farge på bakken (nært).</long>
+					<long xml:lang="nl">Kleur van de grond (dichtĳ).</long>
+					<long xml:lang="pl">Kolor bliskiego tła.</long>
+					<long xml:lang="pt">Cor do chão (perto).</long>
+					<long xml:lang="pt_BR">Cor do chão (perto)</long>
+					<long xml:lang="sv">Färgen på marken (nära)</long>
+					<long xml:lang="tr">Alanın rengi (yakın).</long>
+					<long xml:lang="zh_CN">基底近景色</long>
+					<default>
+						<red>0xb333</red>
+						<green>0xb333</green>
+						<blue>0xb333</blue>
+						<alpha>0xcccc</alpha>
+					</default>
+				</option>
+				<option type="color" name="ground_color2">
+					<short>Ground color(far)</short>
+					<short xml:lang="ca">Color del terra(lluny)</short>
+					<short xml:lang="de">Bodenfarbe (weit weg)</short>
+					<short xml:lang="el">Χρώμα δαπέδου(μακρινό)</short>
+					<short xml:lang="en_GB">Ground colour (far)</short>
+					<short xml:lang="es">Color del suelo (lejos).</short>
+					<short xml:lang="eu">Oinarri kolorea (urruti)</short>
+					<short xml:lang="fi">Maan väri (kaukana)</short>
+					<short xml:lang="fr">Couleur de la surface (loin)</short>
+					<short xml:lang="gl">Cor do chán (lonxe)</short>
+					<short xml:lang="gu">મેદાનનો રંગ (દૂર)</short>
+					<short xml:lang="hi">तल रंग (दूर)</short>
+					<short xml:lang="it">Colore della base (lontano)</short>
+					<short xml:lang="ja">地面の色(遠方)</short>
+					<short xml:lang="nb">Bakkefarge (langt unna)</short>
+					<short xml:lang="nl">Grond kleur (ver)</short>
+					<short xml:lang="pl">Kolor dalekiego tła</short>
+					<short xml:lang="pt">Cor do chão (longe)</short>
+					<short xml:lang="pt_BR">Cor do chão (longe)</short>
+					<short xml:lang="sv">Markfärg (långt bort)</short>
+					<short xml:lang="tr">Alan rengi (uzak)</short>
+					<short xml:lang="zh_CN">基底远景色</short>
+					<long>Color of the ground (far).</long>
+					<long xml:lang="ca">Color del terra (lluny).</long>
+					<long xml:lang="de">Farbe für den Boden (weit entfernt)</long>
+					<long xml:lang="el">Χρώμα Δαπέδου (μακρινό).</long>
+					<long xml:lang="en_GB">Colour of the ground (far).</long>
+					<long xml:lang="es">Color del suelo (lejos).</long>
+					<long xml:lang="eu">Oinarriko kolorea (urruti).</long>
+					<long xml:lang="fi">Maan väri (kaukana).</long>
+					<long xml:lang="fr">Couleur de la surface (loin).</long>
+					<long xml:lang="gl">Cor do chán (lonxe)</long>
+					<long xml:lang="gu">મેદાનનો રંગ (દૂર).</long>
+					<long xml:lang="hi">तल का रंग (दूर).</long>
+					<long xml:lang="it">Colore della base (lontano).</long>
+					<long xml:lang="ja">地面の色(遠方)</long>
+					<long xml:lang="nb">Farge på bakken (langt unna).</long>
+					<long xml:lang="nl">Kleur van de grond (ver).</long>
+					<long xml:lang="pl">Kolor dalekiego tła.</long>
+					<long xml:lang="pt">Cor do chão (longe).</long>
+					<long xml:lang="pt_BR">Cor do chão (longe)</long>
+					<long xml:lang="sv">Färgen på marken (långt bort)</long>
+					<long xml:lang="tr">Alanın rengi (uzak).</long>
+					<long xml:lang="zh_CN">基底远景色</long>
+					<default>
+						<red>0xb333</red>
+						<green>0xb333</green>
+						<blue>0xb333</blue>
+						<alpha>0x0000</alpha>
+					</default>
+				</option>
+				<option type="float" name="ground_size">
+					<short>Reflection ground size</short>
+					<short xml:lang="ca">Mida del terra en la reflexió</short>
+					<short xml:lang="de">Größe des Bodens für die Reflektion</short>
+					<short xml:lang="el">Μέγεθος αντανάκλασης στο δάπεδο</short>
+					<short xml:lang="en_GB">Reflection ground size</short>
+					<short xml:lang="es">Tamaño del suelo del reflejo</short>
+					<short xml:lang="fi">Heijastuksen koko alustalla</short>
+					<short xml:lang="fr">Taille de la surface de réflexion</short>
+					<short xml:lang="gl">Tamaño do reflexo no chán</short>
+					<short xml:lang="gu">મેદાન માપ પરાવર્તન</short>
+					<short xml:lang="hi">आधार आकार का परावर्तन</short>
+					<short xml:lang="it">Dimensione base riflesso</short>
+					<short xml:lang="ja">反射の地面の大きさ</short>
+					<short xml:lang="nb">Refleksjonens størrelse</short>
+					<short xml:lang="nl">Reflectie grond grootte</short>
+					<short xml:lang="pl">Rozmiar podłoża</short>
+					<short xml:lang="pt">Tamanho da reflexão</short>
+					<short xml:lang="pt_BR">Tamanho da superfície de reflexão.</short>
+					<short xml:lang="sv">Storleken på reflektionen på marken</short>
+					<short xml:lang="tr">Yansıma alanı boyutu</short>
+					<short xml:lang="zh_CN">映影基底大小</short>
+					<long>Reflection ground size.</long>
+					<long xml:lang="ca">Mida del terra en la reflexió.</long>
+					<long xml:lang="de">Größe des Bodens für die Reflektion.</long>
+					<long xml:lang="el">Μέγεθος αντανάκλασης στο δάπεδο.</long>
+					<long xml:lang="en_GB">Reflection ground size.</long>
+					<long xml:lang="es">Tamaño del suelo del reflejo.</long>
+					<long xml:lang="fi">Heijastuksen koko alustalla.</long>
+					<long xml:lang="fr">Taille de la surface de réflexion.</long>
+					<long xml:lang="gl">Tamaño da superficie de reflexo.</long>
+					<long xml:lang="gu">મેદાન માપ પરાવર્તન.</long>
+					<long xml:lang="hi">आधार आकार का परावर्तन</long>
+					<long xml:lang="it">Dimensione della base del riflesso.</long>
+					<long xml:lang="ja">反射の地面の大きさ</long>
+					<long xml:lang="nb">Refleksjonens størrelse</long>
+					<long xml:lang="nl">Reflectie grond grootte.</long>
+					<long xml:lang="pl">Rozmiar podłoża w efekcie odbicia kostki</long>
+					<long xml:lang="pt">Tamanho da superfície de reflexão.</long>
+					<long xml:lang="pt_BR">Tamanho da superfície de reflexão.</long>
+					<long xml:lang="sv">Storleken på reflektionen på marken.</long>
+					<long xml:lang="tr">Yansıma alanı boyutu.</long>
+					<long xml:lang="zh_CN">映影基底大小。</long>
+					<default>0.5</default>
+					<min>0.0</min>
+					<max>1.0</max>
+					<precision>0.01</precision>
+				</option>
+				<option type="float" name="intensity">
+					<short>Intensity</short>
+					<short xml:lang="ca">Intensitat</short>
+					<short xml:lang="de">Intensivität</short>
+					<short xml:lang="el">Ένταση</short>
+					<short xml:lang="en_GB">Intensity</short>
+					<short xml:lang="es">Intensidad</short>
+					<short xml:lang="eu">Intentsitatea</short>
+					<short xml:lang="fi">Voimakkuus</short>
+					<short xml:lang="fr">Intensité</short>
+					<short xml:lang="gl">Intensidade</short>
+					<short xml:lang="gu">તીવ્રતા</short>
+					<short xml:lang="hi">तीव्रता</short>
+					<short xml:lang="it">Intensità</short>
+					<short xml:lang="ja">輝度</short>
+					<short xml:lang="nb">Intensitet</short>
+					<short xml:lang="nl">Intensiteit</short>
+					<short xml:lang="pl">Intensywność</short>
+					<short xml:lang="pt">Intensidade</short>
+					<short xml:lang="pt_BR">Intensidade</short>
+					<short xml:lang="sv">Intensitet</short>
+					<short xml:lang="tr">Yoğunluk</short>
+					<short xml:lang="zh_CN">密度</short>
+					<long>Reflection intensity</long>
+					<long xml:lang="ca">Intensitat de la reflexió</long>
+					<long xml:lang="de">Reflektionsintensität</long>
+					<long xml:lang="el">Ένταση αντανάκλασης</long>
+					<long xml:lang="en_GB">Reflection intensity</long>
+					<long xml:lang="es">Intensidad del reflejo</long>
+					<long xml:lang="fr">Intensité de la réflexion</long>
+					<long xml:lang="gl">Intensidade da reflexo</long>
+					<long xml:lang="gu">પરાવર્તન તીવ્રતા</long>
+					<long xml:lang="hi">परावर्तन तीव्रता</long>
+					<long xml:lang="it">Intensità del riflesso</long>
+					<long xml:lang="ja">反射の輝度</long>
+					<long xml:lang="nb">Refleksjonens intensitet</long>
+					<long xml:lang="nl">Reflectie intensiteit</long>
+					<long xml:lang="pl">Intensywność odbicia</long>
+					<long xml:lang="pt">Intensidade da reflexão</long>
+					<long xml:lang="pt_BR">Intensidade da reflexão</long>
+					<long xml:lang="sv">Reflektionsintensitet</long>
+					<long xml:lang="tr">Yansıma yoğunluğu</long>
+					<long xml:lang="zh_CN">映影密度</long>
+					<default>0.4</default>
+					<min>0.0</min>
+					<max>1.0</max>
+					<precision>0.01</precision>
+				</option>
+				<option type="bool" name="auto_zoom">
+					<short>Auto zoom</short>
+					<short xml:lang="ca">Zoom automàtic</short>
+					<short xml:lang="de">Automatischer Zoom</short>
+					<short xml:lang="el">Αυτόματο ζουμ</short>
+					<short xml:lang="en_GB">Auto zoom</short>
+					<short xml:lang="es">Zoom automático</short>
+					<short xml:lang="eu">Auto zoom</short>
+					<short xml:lang="fr">Zoom automatique</short>
+					<short xml:lang="gl">Zoom automático</short>
+					<short xml:lang="gu">આપોઆપ નાનુંમોટું કરો</short>
+					<short xml:lang="hi">स्वचालित जूम</short>
+					<short xml:lang="it">Zoom automatico</short>
+					<short xml:lang="ja">自動ズーム</short>
+					<short xml:lang="nb">Autoforstørr/forminsk</short>
+					<short xml:lang="nl">Auto zoom</short>
+					<short xml:lang="pl">Automatyczne pomniejszenie kostki</short>
+					<short xml:lang="pt">Zoom automático</short>
+					<short xml:lang="pt_BR">Zoom automático</short>
+					<short xml:lang="sv">Automatisk zoom</short>
+					<short xml:lang="tr">Otomatik Büyütme</short>
+					<short xml:lang="zh_CN">自动缩放</short>
+					<long>Zoom out automatically to make the cube fit to the screen.</long>
+					<long xml:lang="ca">Allunya automàticament per encavir el cub a la pantalla.</long>
+					<long xml:lang="de">Automatisch herauszoomen, um den Würfel dem Bildschirm anzupassen.</long>
+					<long xml:lang="el">Αυτόματο ζουμ out για να χορέσει ο κύβος στην οθόνη.</long>
+					<long xml:lang="en_GB">Zoom out automatically to make the cube fit to the screen.</long>
+					<long xml:lang="fr">Dézoomer automatiquement pour que la taille du cube soit adaptée à l'écran</long>
+					<long xml:lang="gl">Diminuír o zoom automaticamente para que o cubo caiba na pantalla .</long>
+					<long xml:lang="gu">ઘનને સ્ક્રીનમાં બંધબેસાડવા માટે આપોઆપ નાનું કરો.</long>
+					<long xml:lang="hi">स्क्रीन में घन फिट करने के लिए स्वतः जूम आउट करें.</long>
+					<long xml:lang="it">Esegue lo zoom automatico per mostrare tutto il cubo sullo schermo.</long>
+					<long xml:lang="ja">キューブを画面に合わせるための自動的なズームアウト</long>
+					<long xml:lang="nb">Forminsk automatisk for å få kuben til å passe til skjermen.</long>
+					<long xml:lang="nl">Automatisch uitzoomen om de kubus in het beeld te laten passen.</long>
+					<long xml:lang="pl">Oddala kostkę automatycznie aby dopasować ją do ekranu.</long>
+					<long xml:lang="pt">Diminuir o zoom automaticamente para o cubo caber no ecrã.</long>
+					<long xml:lang="pt_BR">Diminuir o zoom automaticamente para o cubo caber na tela.</long>
+					<long xml:lang="sv">Zooma ut automatiskt för att få kuben att passa skärmen.</long>
+					<default>true</default>
+				</option>
+				<option type="bool" name="zoom_manual_only">
+					<short>Auto zoom only on Mouse Rotate</short>
+					<short xml:lang="ca">Zoom automàtic només quan girem amb el ratolí</short>
+					<short xml:lang="de">Automatischer Zoom nur bei manuellem Rotieren</short>
+					<short xml:lang="el">Αυτόματο ζουμ μόνο σε Γύρισμα με το Ποντίκι</short>
+					<short xml:lang="en_GB">Auto zoom only on Mouse Rotate</short>
+					<short xml:lang="es">Zoom automático cuando la rotación es conducida por el ratón</short>
+					<short xml:lang="eu">Auto zoom xaguaz biratzean bakarrik</short>
+					<short xml:lang="fr">Zoom automatique seulement lors d'une rotation avec la souris</short>
+					<short xml:lang="gl">Zoom automático só con rotación através do rato</short>
+					<short xml:lang="gu">માત્ર માઉસ ફેરવવા પર જ આપોઆપ નાનુંમોટું કરો</short>
+					<short xml:lang="hi">सिर्फ माउस घुमाने पर स्वचालित जूम</short>
+					<short xml:lang="it">Zoom automatico solo alla rotazione col mouse</short>
+					<short xml:lang="ja">マウス回転時のみ自動ズーム</short>
+					<short xml:lang="nb">Autoforstørr/forminsk kun ved muserotering</short>
+					<short xml:lang="nl">Auto zoom alleen bĳ roteren met muis</short>
+					<short xml:lang="pl">Automatyczne pomniejszenie tylko podczas obrotu kostki myszą</short>
+					<short xml:lang="pt">Zoom automático apenas com rotação através do rato</short>
+					<short xml:lang="pt_BR">Zoom automático apenas com rotação através do mouse</short>
+					<short xml:lang="sv">Zooma endast automatiskt vid musrotation</short>
+					<short xml:lang="tr">Sadec Fare ile Döndürüldüğünde Otomatik Büyüt</short>
+					<short xml:lang="zh_CN">仅仅在鼠标转面时自动缩放</short>
+					<long>Zoom out automatically only on mouse rotate.</long>
+					<long xml:lang="ca">Allunya automàticament només quan girem amb el ratolí.</long>
+					<long xml:lang="de">Automatischer Zoom nur bei manueller Rotation des Würfels mit der Maus.</long>
+					<long xml:lang="el">Αυτόματο ζουμ out μόνο στο γύρισμα με το ποντίκι.</long>
+					<long xml:lang="en_GB">Zoom out automatically only on mouse rotate.</long>
+					<long xml:lang="es">Zoom automático cuando la rotación es conducida por el ratón.</long>
+					<long xml:lang="fr">Dézoomer automatiquement lors d'une rotation avec la souris uniquement.</long>
+					<long xml:lang="gl">Retroceder o zoom automaticamente só coa rotación do rato.</long>
+					<long xml:lang="gu">માત્ર માઉસ ફેરવવા પર જ આપોઆપ નાનું કરો.</long>
+					<long xml:lang="hi">सिर्फ माउस घुमाव पर स्वतः जूम आउट करें.</long>
+					<long xml:lang="it">Esegue lo zoom automatico solo alla rotazione col mouse.</long>
+					<long xml:lang="ja">マウス回転時のみ自動的なズームアウト</long>
+					<long xml:lang="nb">Forminsk automatisk kun ved muserotering.</long>
+					<long xml:lang="nl">Automatisch uitzoomen alleen bĳ muis rotatie.</long>
+					<long xml:lang="pl">Oddala kostkę automatycznie tylko gdy nastąpi obrót myszą.</long>
+					<long xml:lang="pt">Retroceder o zoom automaticamente apenas com rotação através do rato.</long>
+					<long xml:lang="pt_BR">Diminuir o zoom automaticamente apenas com rotação através do mouse</long>
+					<long xml:lang="sv">Zooma ut automatiskt endast vid musrotation.</long>
+					<long xml:lang="zh_CN">仅在鼠标转面时自动缩小。</long>
+					<default>true</default>
+				</option>
+				<option type="int" name="mode">
+					<short>Reflection mode</short>
+					<short xml:lang="ca">Mode de reflexió</short>
+					<short xml:lang="de">Reflektions-Modus</short>
+					<short xml:lang="el">Είδος αντανάκλασης</short>
+					<short xml:lang="en_GB">Reflection mode</short>
+					<short xml:lang="es">Modo del reflejo</short>
+					<short xml:lang="fr">Mode de réflexion</short>
+					<short xml:lang="gl">Modo de reflexo</short>
+					<short xml:lang="gu">પરાવર્તન સ્થિતિ</short>
+					<short xml:lang="hi">परावर्तन मोड</short>
+					<short xml:lang="it">Modalità riflesso</short>
+					<short xml:lang="ja">反射形式</short>
+					<short xml:lang="nb">Refleksjonsmodus</short>
+					<short xml:lang="nl">Reflectie modus</short>
+					<short xml:lang="pl">Tryb odbicia</short>
+					<short xml:lang="pt">Modo de reflexão</short>
+					<short xml:lang="pt_BR">Modo de reflexão</short>
+					<short xml:lang="sv">Reflektionsläge</short>
+					<short xml:lang="tr">Yansıma kipi</short>
+					<short xml:lang="zh_CN">映影模式</short>
+					<long>Reflection mode.</long>
+					<long xml:lang="ca">Mode de reflexió.</long>
+					<long xml:lang="de">Reflektions-Modus</long>
+					<long xml:lang="el">Είδος αντανάκλασης.</long>
+					<long xml:lang="en_GB">Reflection mode.</long>
+					<long xml:lang="es">Modo del reflejo.</long>
+					<long xml:lang="fr">Mode de réflexion.</long>
+					<long xml:lang="gl">Modo de reflexo.</long>
+					<long xml:lang="gu">પરાવર્તન સ્થિતિ.</long>
+					<long xml:lang="hi">परावर्तन मोड.</long>
+					<long xml:lang="it">La modalità del riflesso.</long>
+					<long xml:lang="ja">反射の形式</long>
+					<long xml:lang="nb">Refleksjonsmodus.</long>
+					<long xml:lang="nl">Reflectie modus.</long>
+					<long xml:lang="pl">Tryb odbicia.</long>
+					<long xml:lang="pt">Modo de reflexão.</long>
+					<long xml:lang="pt_BR">Modo de reflexão.</long>
+					<long xml:lang="sv">Reflektionsläge.</long>
+					<long xml:lang="tr">Yansıma kipi.</long>
+					<long xml:lang="zh_CN">映影模式。</long>
+					<default>0</default>
+					<min>0</min>
+					<max>3</max>
+					<desc>
+						<value>0</value>
+						<name>Jumpy</name>
+						<name xml:lang="de">Sprunghaft</name>
+						<name xml:lang="el">Χοροπηδηχτό</name>
+						<name xml:lang="en_GB">Jumpy</name>
+						<name xml:lang="es">Saltón</name>
+						<name xml:lang="fi">Vaihteleva</name>
+						<name xml:lang="fr">Sautillante</name>
+						<name xml:lang="gl">Saltante (O cubo acompaña ó reflexo) </name>
+						<name xml:lang="gu">કૂદકાવાળું</name>
+						<name xml:lang="hi">जंपी</name>
+						<name xml:lang="it">Saltellante</name>
+						<name xml:lang="ja">飛び跳ね</name>
+						<name xml:lang="nb">Hoppende</name>
+						<name xml:lang="nl">Springerig</name>
+						<name xml:lang="pl">Odbicie lustrzane na podłożu</name>
+						<name xml:lang="pt">Saltitante (O cubo acompanha a reflexão)</name>
+						<name xml:lang="pt_BR">Saltitante (O cubo acompanha a reflexão)</name>
+						<name xml:lang="sv">Hoppig</name>
+						<name xml:lang="tr">Gerginleştir</name>
+						<name xml:lang="zh_CN">跳动</name>
+					</desc>
+					<desc>
+						<value>1</value>
+						<name>Jumpy reflection</name>
+						<name xml:lang="de">Sprunghafte Reflektion</name>
+						<name xml:lang="el">Χοροπηδηχτή αντανάκλαση</name>
+						<name xml:lang="en_GB">Jumpy reflection</name>
+						<name xml:lang="es">Reflejo saltón</name>
+						<name xml:lang="fr">Réflexion sautillante</name>
+						<name xml:lang="gl">Reflexo saltante (A reflexo acompaña o cubo) </name>
+						<name xml:lang="gu">કૂદકાવાળું પરાવર્તન</name>
+						<name xml:lang="hi">जंपी परावर्तन</name>
+						<name xml:lang="it">Riflesso saltellante</name>
+						<name xml:lang="ja">反射側の飛び跳ね</name>
+						<name xml:lang="nb">Hoppende refleksjon</name>
+						<name xml:lang="nl">Springerige reflectie</name>
+						<name xml:lang="pl">Odbicie lustrzane w powietrzu</name>
+						<name xml:lang="pt">Reflexão saltitante (A reflexão acompanha o cubo)</name>
+						<name xml:lang="pt_BR">Reflexão saltitante (A reflexão acompanha o cubo)</name>
+						<name xml:lang="sv">Hoppig reflektion</name>
+						<name xml:lang="tr">Gerginlik yansıması</name>
+						<name xml:lang="zh_CN">跳动映影</name>
+					</desc>
+					<desc>
+						<value>2</value>
+						<name>Distance</name>
+						<name xml:lang="ca">Distància</name>
+						<name xml:lang="de">Entfernung</name>
+						<name xml:lang="el">Απόσταση</name>
+						<name xml:lang="en_GB">Distance</name>
+						<name xml:lang="es">Distancia</name>
+						<name xml:lang="eu">Distantzia</name>
+						<name xml:lang="fi">Etäisyys</name>
+						<name xml:lang="fr">Distance</name>
+						<name xml:lang="gl">Distancia</name>
+						<name xml:lang="gu">અંતર</name>
+						<name xml:lang="hi">दूरी</name>
+						<name xml:lang="it">Distanza</name>
+						<name xml:lang="ja">距離</name>
+						<name xml:lang="nb">Avstand</name>
+						<name xml:lang="nl">Afstand</name>
+						<name xml:lang="pl">Odległość</name>
+						<name xml:lang="pt">Distância</name>
+						<name xml:lang="pt_BR">Distância</name>
+						<name xml:lang="sv">Avstånd</name>
+						<name xml:lang="tr">Uzaklık</name>
+						<name xml:lang="zh_CN">距离</name>
+					</desc>
+					<desc>
+						<value>3</value>
+						<name>Above</name>
+						<name xml:lang="ca">Per damunt</name>
+						<name xml:lang="de">Über</name>
+						<name xml:lang="el">Απο Πάνω</name>
+						<name xml:lang="en_GB">Above</name>
+						<name xml:lang="es">Arriba</name>
+						<name xml:lang="eu">Gaina</name>
+						<name xml:lang="fi">Ylhäällä</name>
+						<name xml:lang="fr">Au-dessus</name>
+						<name xml:lang="gl">Arriba</name>
+						<name xml:lang="gu">ઉપર</name>
+						<name xml:lang="hi">ऊपर</name>
+						<name xml:lang="it">Sopra</name>
+						<name xml:lang="ja">上</name>
+						<name xml:lang="nb">Over</name>
+						<name xml:lang="nl">Boven</name>
+						<name xml:lang="pl">Ponad</name>
+						<name xml:lang="pt">Topo</name>
+						<name xml:lang="pt_BR">Acima</name>
+						<name xml:lang="sv">Ovanför</name>
+						<name xml:lang="tr">Yukarı</name>
+						<name xml:lang="zh_CN">之上</name>
+					</desc>
+				</option>
+			</group>
+			<group>
+				<short>Deformation</short>
+				<short xml:lang="fr">Déformation</short>
+				<short xml:lang="gl">Deformación</short>
+				<short xml:lang="it">Deformazione</short>
+				<short xml:lang="ja">変形</short>
+				<short xml:lang="nb">Deformering</short>
+				<short xml:lang="pl">Zniekształcenie</short>
+				<short xml:lang="pt">Deformação:</short>
+				<short xml:lang="sv">Deformation</short>
+				<option type="int" name="deformation">
+					<short>Deformation</short>
+					<short xml:lang="fr">Déformation</short>
+					<short xml:lang="gl">Deformación</short>
+					<short xml:lang="it">Deformazione</short>
+					<short xml:lang="ja">変形</short>
+					<short xml:lang="nb">Deformering</short>
+					<short xml:lang="pl">Zniekształcenie</short>
+					<short xml:lang="pt">Deformação:</short>
+					<short xml:lang="sv">Deformation</short>
+					<long>Deformation mode.</long>
+					<long xml:lang="ja">変形の形態</long>
+					<default>1</default>
+					<min>0</min>
+					<max>2</max>
+					<desc>
+						<value>0</value>
+						<name>None</name>
+						<name xml:lang="ar">لا شئ</name>
+						<name xml:lang="ca">Cap</name>
+						<name xml:lang="de">Nichts</name>
+						<name xml:lang="el">Κανένα</name>
+						<name xml:lang="en_GB">None</name>
+						<name xml:lang="es">Ninguno/a</name>
+						<name xml:lang="eu">Ezer ez</name>
+						<name xml:lang="fi">Ei mitään</name>
+						<name xml:lang="fr">Aucun</name>
+						<name xml:lang="gl">Ningunha</name>
+						<name xml:lang="gu">કંઈ નહિં</name>
+						<name xml:lang="hi">कोई नहीं</name>
+						<name xml:lang="it">Nessuno</name>
+						<name xml:lang="ja">なし</name>
+						<name xml:lang="nb">Ingen</name>
+						<name xml:lang="nl">Geen</name>
+						<name xml:lang="pl">Brak</name>
+						<name xml:lang="pt">Nenhuma</name>
+						<name xml:lang="pt_BR">Nenhum</name>
+						<name xml:lang="sv">Inget</name>
+						<name xml:lang="tr">Hiçbiri</name>
+						<name xml:lang="zh_CN">无</name>
+					</desc>
+					<desc>
+						<value>1</value>
+						<name>Cylinder</name>
+						<name xml:lang="ja">シリンダー</name>
+					</desc>
+					<desc>
+						<value>2</value>
+						<name>Sphere</name>
+						<name xml:lang="ja">球体</name>
+					</desc>
+				</option>
+				<option type="bool" name="unfold_deformation">
+					<short>Unfold cube deformation</short>
+					<short xml:lang="ja">展開したキューブの変形</short>
+					<long>Deformation in unfold cube mode.</long>
+					<long xml:lang="ja">キューブの展開モード時における変形</long>
+					<default>true</default>
+				</option>
+				<option type="bool" name="cylinder_manual_only">
+					<short>Deform only on mouse rotate</short>
+					<short xml:lang="ja">マウスによる回転時にのみ変形</short>
+					<long>Initiates cube cylinder deformation only if rotation is mouse driven.</long>
+					<long xml:lang="ja">マウスによって回転される場合にのみキューブのシリンダー変形を開始</long>
+					<default>false</default>
+				</option>
+				<subgroup>
+					<short>Sphere</short>
+					<short xml:lang="ja">球体</short>
+					<option type="bool" name="deform_caps">
+						<short>Deform caps</short>
+						<short xml:lang="ja">ふたの変形</short>
+						<long>Deform cube caps.</long>
+						<long xml:lang="ja">キューブのふたを変形させる</long>
+						<default>true</default>
+					</option>
+					<option type="float" name="sphere_aspect">
+						<short>Aspect ratio</short>
+						<short xml:lang="ja">縦横比</short>
+						<long>Aspect ratio of the deformed cube</long>
+						<long xml:lang="ja">変形キューブの縦横比</long>
+						<min>0.0</min>
+						<max>1.0</max>
+						<precision>0.1</precision>
+						<default>0.0</default>
+					</option>
+				</subgroup>
+			</group>
+			<group>
+				<short>Cube caps</short>
+				<short xml:lang="ja">キューブのふた</short>
+				<subgroup>
+					<short>Behaviour</short>
+					<short xml:lang="ca">Comportament</short>
+					<short xml:lang="de">Verhalten</short>
+					<short xml:lang="el">Συμπεριφορά</short>
+					<short xml:lang="en_GB">Behaviour</short>
+					<short xml:lang="es">Comportamiento</short>
+					<short xml:lang="eu">Jokabidea</short>
+					<short xml:lang="fi">Toiminta</short>
+					<short xml:lang="fr">Comportement</short>
+					<short xml:lang="gl">Comportamento</short>
+					<short xml:lang="gu">વર્તણૂક</short>
+					<short xml:lang="hi">आचरण</short>
+					<short xml:lang="it">Comportamento</short>
+					<short xml:lang="ja">動作</short>
+					<short xml:lang="nb">Oppførsel</short>
+					<short xml:lang="nl">Gedrag</short>
+					<short xml:lang="pl">Zachowanie</short>
+					<short xml:lang="pt">Comportamento</short>
+					<short xml:lang="pt_BR">Comportamento</short>
+					<short xml:lang="sv">Beteende</short>
+					<short xml:lang="tr">Davranış</short>
+					<short xml:lang="zh_CN">行为</short>
+					<option type="bool" name="draw_top">
+						<short>Draw top face</short>
+						<short xml:lang="ca">Dibuixa la cara superior</short>
+						<short xml:lang="el">Ζωγράφισε πάνω όψη</short>
+						<short xml:lang="en_GB">Draw top face</short>
+						<short xml:lang="eu">Marraztu goiko aurpegia</short>
+						<short xml:lang="fr">Dessiner la face supérieure</short>
+						<short xml:lang="gl">Debuxar a cara superior</short>
+						<short xml:lang="gu">ટોચનો ચહેરો દોરો</short>
+						<short xml:lang="hi">ऊपरी फेस खीचें</short>
+						<short xml:lang="it">Disegnare la faccia superiore</short>
+						<short xml:lang="ja">上面を描画</short>
+						<short xml:lang="nb">Tegn topp</short>
+						<short xml:lang="nl">Teken bovenzĳde</short>
+						<short xml:lang="pl">Rysuj górną ścianę</short>
+						<short xml:lang="pt">Desenhar face superior</short>
+						<short xml:lang="pt_BR">Desenhar face superior</short>
+						<short xml:lang="sv">Rita översida</short>
+						<short xml:lang="tr">Üst kapağı oluştur</short>
+						<long>Draw top face of the cube</long>
+						<long xml:lang="ca">Dibuixa la cara superior del cub</long>
+						<long xml:lang="el">Ζωγράφισε πάνω όψη του κύβου</long>
+						<long xml:lang="en_GB">Draw top face of the cube</long>
+						<long xml:lang="eu">Marraztu kuboaren goiko aurpegia</long>
+						<long xml:lang="fr">Dessiner la face supérieure du cube</long>
+						<long xml:lang="gl">Debuxar a cara superior do cubo</long>
+						<long xml:lang="gu">ઘનનો ટોચનો ચહેરો દોરો</long>
+						<long xml:lang="hi">घन का ऊपरी फेस खीचें</long>
+						<long xml:lang="it">Disegna la faccia superiore del cubo</long>
+						<long xml:lang="ja">キューブの上面を描画</long>
+						<long xml:lang="nb">Tegn toppen på kuben</long>
+						<long xml:lang="nl">Teken bovenzĳde van de kubus</long>
+						<long xml:lang="pl">Rysuj górną ścianę kostki</long>
+						<long xml:lang="pt">Desenhar face superior do cubo</long>
+						<long xml:lang="pt_BR">Desenhar face superior do cubo</long>
+						<long xml:lang="sv">Ritar översidan av kuben</long>
+						<long xml:lang="tr">Küpün üst kapağını oluştur</long>
+						<default>true</default>
+					</option>
+					<option type="bool" name="draw_bottom">
+						<short>Draw bottom face</short>
+						<short xml:lang="ca">Dibuixa la cara inferior</short>
+						<short xml:lang="el">Ζωγράφισε κάτω όψη</short>
+						<short xml:lang="en_GB">Draw bottom face</short>
+						<short xml:lang="eu">Marraztu azpiko aurpegia</short>
+						<short xml:lang="fr">Dessiner la face inférieure</short>
+						<short xml:lang="gl">Debuxar a cara inferior</short>
+						<short xml:lang="gu">તળિયેનો ચહેરો દોરો</short>
+						<short xml:lang="hi">तलवर्ती फेस खीचें</short>
+						<short xml:lang="it">Disegnare la faccia inferiore</short>
+						<short xml:lang="ja">下面を描画</short>
+						<short xml:lang="nb">Tegn bunn</short>
+						<short xml:lang="nl">Teken onderzĳde</short>
+						<short xml:lang="pl">Rysuj dolną ścianę</short>
+						<short xml:lang="pt">Desenhar face inferior</short>
+						<short xml:lang="pt_BR">Desenhar face inferior</short>
+						<short xml:lang="sv">Rita undersida</short>
+						<short xml:lang="tr">Alt kapağı oluştur</short>
+						<long>Draw bottom face of the cube</long>
+						<long xml:lang="ca">Dibuixa la cara de sota del cub</long>
+						<long xml:lang="el">Ζωγράφισε κάτω όψη του κύβου</long>
+						<long xml:lang="en_GB">Draw bottom face of the cube</long>
+						<long xml:lang="eu">Marraztu kuboaren azpiko aurpegia</long>
+						<long xml:lang="fr">Dessiner la face inférieure du cube</long>
+						<long xml:lang="gl">Debuxar a cara inferior do cubo</long>
+						<long xml:lang="gu">ઘનનો તળિયેનો ચહેરો દોરો</long>
+						<long xml:lang="hi">घन का तलवर्ती फेस खीचें</long>
+						<long xml:lang="it">Disegna la faccia inferiore del cubo</long>
+						<long xml:lang="ja">キューブの下面を描画</long>
+						<long xml:lang="nb">Tegn bunnen på kuben</long>
+						<long xml:lang="nl">Teken onderzĳde van de kubus</long>
+						<long xml:lang="pl">Rysuj dolną ścianę kostki</long>
+						<long xml:lang="pt">Desenhar face inferior do cubo</long>
+						<long xml:lang="pt_BR">Desenhar face inferior do cubo</long>
+						<long xml:lang="sv">Ritar undersidan av kuben</long>
+						<long xml:lang="tr">Küpün alt kapağını oluştur</long>
+						<default>true</default>
+					</option>
+					<option type="bool" name="adjust_top">
+						<short>Adjust top image</short>
+						<short xml:lang="ca">Ajusta la imatge superior</short>
+						<short xml:lang="el">Προσαρμογή πάνω εικόνας</short>
+						<short xml:lang="en_GB">Adjust top image</short>
+						<short xml:lang="eu">Goiko irudia doitu</short>
+						<short xml:lang="fi">Sovita kannen kuva</short>
+						<short xml:lang="fr">Ajuster l'image supérieure</short>
+						<short xml:lang="gl">Axustar imaxe da cara superior</short>
+						<short xml:lang="gu">ટોચના ચિત્રને સંતુલિત કરો</short>
+						<short xml:lang="hi">ऊपरी चित्र समायोजित करें</short>
+						<short xml:lang="it">Regolare immagine superiore</short>
+						<short xml:lang="ja">上面画像の調整</short>
+						<short xml:lang="nb">Juster toppbilde</short>
+						<short xml:lang="nl">Afbeelding bovenzĳde bĳstellen</short>
+						<short xml:lang="pl">Dopasuj górny obrazek</short>
+						<short xml:lang="pt">Ajustar imagem da face superior</short>
+						<short xml:lang="pt_BR">Ajustar imagem da face superior</short>
+						<short xml:lang="sv">Justera bilden på översidan</short>
+						<short xml:lang="tr">Tavan resmini ayarla</short>
+						<long>Adjust top face image to rotation</long>
+						<long xml:lang="ca">Ajusta la imatge superior a la rotació</long>
+						<long xml:lang="el">Προσαρμογή εικόνας πάνω όψης για περιστροφή</long>
+						<long xml:lang="en_GB">Adjust top face image to rotation</long>
+						<long xml:lang="eu">Biratzean goiko aurpegiko irudia doitu</long>
+						<long xml:lang="fr">Ajuster l'image de la face supérieure à la rotation</long>
+						<long xml:lang="gl">Axustar imaxe da cara superior ó efectuar a rotación</long>
+						<long xml:lang="gu">ટોચના ચહેરાના ચિત્રને ફેરવવામાં સંતુલિત કરો</long>
+						<long xml:lang="hi">शीर्ष फेस चित्र को घुमाव के लिए समायोजित करें</long>
+						<long xml:lang="it">Regola immagine faccia superiore alla rotazione</long>
+						<long xml:lang="ja">上面画像を回転に合わせる</long>
+						<long xml:lang="nb">Juster toppbilde til rotasjon</long>
+						<long xml:lang="nl">Top zijde afbeelding bijstellen op rotatie</long>
+						<long xml:lang="pl">Dopasuj górny obrazek do obrotu</long>
+						<long xml:lang="pt">Ajustar imagem da face superior para rotação</long>
+						<long xml:lang="pt_BR">Ajustar imagem da face superior para rotação</long>
+						<long xml:lang="sv">Justera bilden på översidan till rotation</long>
+						<long xml:lang="tr">Tavan resmini döndürmeye ayarla</long>
+						<default>false</default>
+					</option>
+					<option type="bool" name="adjust_bottom">
+						<short>Adjust bottom image</short>
+						<short xml:lang="ca">Ajusta la imatge inferior</short>
+						<short xml:lang="el">Προσαρμογή κάτω εικόνας</short>
+						<short xml:lang="en_GB">Adjust bottom image</short>
+						<short xml:lang="es">Ajustar la imagen del fondo</short>
+						<short xml:lang="eu">Azpiko irudia doitu</short>
+						<short xml:lang="fr">Ajuster l'image inférieure</short>
+						<short xml:lang="gl">Axustar imaxe da cara superior</short>
+						<short xml:lang="gu">તળિયેના ચિત્રને સંતુલિત કરો</short>
+						<short xml:lang="hi">तलवर्ती चित्र को समायोजित करें</short>
+						<short xml:lang="it">Regolare immagine inferiore</short>
+						<short xml:lang="ja">下面画像の調整</short>
+						<short xml:lang="nb">Juster bunnbilde</short>
+						<short xml:lang="nl">Afbeelding onderzĳde bĳstellen</short>
+						<short xml:lang="pl">Dopasuj dolny obrazek</short>
+						<short xml:lang="pt">Ajustar imagem da face superior</short>
+						<short xml:lang="pt_BR">Ajustar imagem da face inferior</short>
+						<short xml:lang="sv">Justera bilden på undersidan</short>
+						<short xml:lang="tr">Taban resmini ayarla</short>
+						<long>Adjust bottom face image to rotation</long>
+						<long xml:lang="ca">Ajusta la imatge de la cara inferior a la rotació</long>
+						<long xml:lang="el">Προσαρμογή εικόνα κάτω όψης για περιστροφή</long>
+						<long xml:lang="en_GB">Adjust bottom face image to rotation</long>
+						<long xml:lang="eu">Biratzean azpiko aurpegiko irudia doitu</long>
+						<long xml:lang="fr">Ajuster l'image de la face inférieure à la rotation</long>
+						<long xml:lang="gl">Axustar imaxe da cara inferior ó efectuar a rotación</long>
+						<long xml:lang="gu">તળિયેના ચહેરાના ચિત્રને ફેરવવામાં સંતુલિત કરો</long>
+						<long xml:lang="hi">तलवर्ती फेस चित्र को घुमाव पर समायोजित करें</long>
+						<long xml:lang="it">Regola immagine faccia inferiore alla rotazione</long>
+						<long xml:lang="ja">下面画像を回転に合わせる</long>
+						<long xml:lang="nb">Juster bunnbilde til rotasjon</long>
+						<long xml:lang="nl">Onderzĳde afbeelding bĳstellen op rotatie</long>
+						<long xml:lang="pl">Dopasuj dolny obrazek do obrotu</long>
+						<long xml:lang="pt">Ajustar imagem da face inferior para rotação</long>
+						<long xml:lang="pt_BR">Ajustar imagem da face inferior para rotação</long>
+						<long xml:lang="sv">Justera bilden på undersidan till rotation</long>
+						<long xml:lang="tr">Taban resmini döndürmeye ayarla</long>
+						<default>false</default>
+					</option>
+					<option type="bool" name="top_scale">
+						<short>Scale top image</short>
+						<short xml:lang="ca">Escala la imatge superior</short>
+						<short xml:lang="el">Κλιμάκωση πάνω εικόνας</short>
+						<short xml:lang="en_GB">Scale top image</short>
+						<short xml:lang="eu">Goiko irudia eskalatu</short>
+						<short xml:lang="fr">Mettre l'image supérieure à l'échelle</short>
+						<short xml:lang="gl">Escalar imaxe superior</short>
+						<short xml:lang="gu">ટોચના ચિત્રને ખેંચો</short>
+						<short xml:lang="hi">ऊपरी चित्र मापें</short>
+						<short xml:lang="it">Scalare immagine superiore</short>
+						<short xml:lang="ja">上面画像の引き伸ばし</short>
+						<short xml:lang="nb">Skaler toppbilde</short>
+						<short xml:lang="nl">Schaal afbeelding bovenzĳde</short>
+						<short xml:lang="pl">Skaluj górny obrazek</short>
+						<short xml:lang="pt">Escalar imagem superior</short>
+						<short xml:lang="pt_BR">Redimensionar imagem superior</short>
+						<short xml:lang="sv">Skala bilden på översidan</short>
+						<short xml:lang="tr">Tavan resmini boyutlandır</short>
+						<long>Scale image to cover top face of cube</long>
+						<long xml:lang="ca">Escala la imatge per cobrir la cara superior del cub</long>
+						<long xml:lang="el">Κλιμάκωση εικόνας ωστε να καλύπτει την πάνω όψη του κύβου</long>
+						<long xml:lang="en_GB">Scale image to cover top face of cube</long>
+						<long xml:lang="eu">Kuboaren goiko aurpegia estaltzen duen irudia eskalatu</long>
+						<long xml:lang="fr">Mettre l'image à l'échelle pour couvrir la face supérieure du cube</long>
+						<long xml:lang="gl">Escalar imaxe para cobrir a cara superior do cubo</long>
+						<long xml:lang="gu">ઘનના ટોચના ચહેરાને આવરવા માટે ચિત્ર ખેંચો</long>
+						<long xml:lang="hi">घन के ऊपरी फेस को कवर करने के लिए चित्र मापें</long>
+						<long xml:lang="it">Scala l'immagine in modo da coprire la faccia superiore del cubo</long>
+						<long xml:lang="ja">キューブ上面を覆うように画像を引き伸ばす</long>
+						<long xml:lang="nb">Skaler bilde til å dekke toppen av kuben</long>
+						<long xml:lang="nl">Schaal afbeelding voor afdekken van bovenzĳde van kubus</long>
+						<long xml:lang="pl">Skaluj obrazek, by pokrywał górną ścianę kostki</long>
+						<long xml:lang="pt">Escalar imagem para cobrir a face superior do cubo</long>
+						<long xml:lang="pt_BR">Redimensionar imagem para cobrir a face superior do cubo</long>
+						<long xml:lang="sv">Skala bilden så den täcker översidan av kuben</long>
+						<default>true</default>
+					</option>
+					<option type="bool" name="bottom_scale">
+						<short>Scale bottom image</short>
+						<short xml:lang="ca">Escala la imatge inferior</short>
+						<short xml:lang="el">Κλιμάκωση κάτω εικόνας</short>
+						<short xml:lang="en_GB">Scale bottom image</short>
+						<short xml:lang="eu">Azpiko irudia eskalatu</short>
+						<short xml:lang="fr">Mettre l'image inférieure à l'échelle</short>
+						<short xml:lang="gl">Escalar imaxe inferior</short>
+						<short xml:lang="gu">તળિયેનું ચિત્ર ખેંચો</short>
+						<short xml:lang="hi">तलवर्ती चित्र मापें</short>
+						<short xml:lang="it">Scalare immagine inferiore</short>
+						<short xml:lang="ja">下面画像の引き伸ばし</short>
+						<short xml:lang="nb">Skaler bunnbilde</short>
+						<short xml:lang="nl">Schaal afbeelding onderzĳde</short>
+						<short xml:lang="pl">Skaluj dolny obrazek</short>
+						<short xml:lang="pt">Escalar imagem inferior</short>
+						<short xml:lang="pt_BR">Redimensionar imagem inferior</short>
+						<short xml:lang="sv">Skala bilden på undersidan</short>
+						<short xml:lang="tr">Taban resmini boyutlandır</short>
+						<long>Scale image to cover bottom face of cube</long>
+						<long xml:lang="ca">Escala la imatge per cobrir la cara inferior del cub</long>
+						<long xml:lang="el">Κλιμάκωση εικόνας ωστε να καλύπτει την κάτω όψη του κύβου</long>
+						<long xml:lang="en_GB">Scale image to cover bottom face of cube</long>
+						<long xml:lang="eu">Kuboaren azpiko aurpegia estaltzen duen irudia eskalatu</long>
+						<long xml:lang="fr">Mettre l'image à l'échelle pour couvrir la face inférieure du cube</long>
+						<long xml:lang="gl">Escalar imaxe para cobrir a cara inferior do cubo</long>
+						<long xml:lang="gu">ઘનના તળિયેના ચહેરાને આવરવા માટે ચિત્ર ખેંચો</long>
+						<long xml:lang="hi">घन के तलवर्ती फेस को कवर करने के लिए चित्र मापें</long>
+						<long xml:lang="it">Scala l'immagine in modo da coprire la faccia inferiore del cubo</long>
+						<long xml:lang="ja">キューブ下面を覆うように画像を引き伸ばす</long>
+						<long xml:lang="nb">Skaler bilde til å dekke bunnen av kuben</long>
+						<long xml:lang="nl">Schaal afbeelding voor afdekken van onderzĳde kubus</long>
+						<long xml:lang="pl">Skaluj obrazek, by pokrywał dolną ścianę kostki</long>
+						<long xml:lang="pt">Escalar imagem para cobrir a face inferior do cubo</long>
+						<long xml:lang="pt_BR">Redimensionar imagem para cobrir a face inferior do cubo</long>
+						<long xml:lang="sv">Skala bilden så den täcker undersidan av kuben</long>
+						<default>true</default>
+					</option>
+					<option type="bool" name="top_aspect">
+						<short>Maintain top aspect ratio</short>
+						<short xml:lang="ja">上面画像の縦横比を保つ</short>
+						<long>Maintain top cap image aspect ratio.</long>
+						<long xml:lang="ja">上面のふたの画像の縦横比を保つ</long>
+						<default>true</default>
+					</option>
+					<option type="bool" name="bottom_aspect">
+						<short>Maintain bottom aspect ratio</short>
+						<short xml:lang="ja">下面画像の縦横比を保つ</short>
+						<long>Maintain bottom cap image aspect ratio.</long>
+						<long xml:lang="ja">下面のふたの画像の縦横比を保つ</long>
+						<default>true</default>
+					</option>
+					<option type="bool" name="top_clamp">
+						<short>Clamp top face image to border</short>
+						<short xml:lang="el">Συρρίκνωση εικόνας πάνω όψης στα όρια</short>
+						<short xml:lang="en_GB">Clamp top face image to border</short>
+						<short xml:lang="fr">Fixer la face supérieure à la bordure</short>
+						<short xml:lang="gl">Cortar imaxe da cara superior nas marxes</short>
+						<short xml:lang="gu">ટોચના ચહેરાના ચિત્રને કિનારી પર લગાવો</short>
+						<short xml:lang="hi">किनारे में ऊपरी फेस चित्र को क्लैंप करें</short>
+						<short xml:lang="it">Bloccare l'immagine superiore al bordo</short>
+						<short xml:lang="ja">上面画像を境界に沿って固定</short>
+						<short xml:lang="nb">Hold toppbilde fast til kanten</short>
+						<short xml:lang="nl">Klem afbeelding bovenzĳde aan rand</short>
+						<short xml:lang="pl">Rozciągaj obrazek górnej ściany kostki do krawędzi</short>
+						<short xml:lang="pt">Cortar imagem da face superior nas margens</short>
+						<short xml:lang="pt_BR">Cortar nas margens a imagem da face superior</short>
+						<short xml:lang="sv">Spänn fast översidans bild till kanten</short>
+						<long>Clamp top face image to border. This is often the best if your image doesn't fit the size of the cube or if it's transparent. It can lead to some ugly dotted lines when enabled (especially with large enough images) though.</long>
+						<long xml:lang="el">Συρρίκνωση εικόνας πάνω όψης στα όρια. Είναι συχνά το καλύτερο αν η εικόνα σας δεν ταιριάζει στο μέγεθος του κύβου ή είναι διάφανη. Μπορεί να οδηγήσει σε ορισμένες άσχημες γραμμές όταν ενεργοποιηθεί (ειδικά σε αρκετά μεγάλες εικόνες) όμως.</long>
+						<long xml:lang="en_GB">Clamp top face image to border. This is often the best if your image doesn't fit the size of the cube or if it's transparent. It can lead to some ugly dotted lines when enabled (especially with large enough images) though.</long>
+						<long xml:lang="fr">Fixer l'image de la face supérieure à la bordure. C'est souvent le mieux si votre image n'est pas ajustée à la taille du cube ou si elle est transparente, bien que cela puisse faire apparaître des lignes pointillées inesthétiques si activé (particulièrement avec de grandes images).</long>
+						<long xml:lang="gl">Cortar imaxe da cara de cima nas marxes. Esta opción é moitas veces amellor se a súa imaxe non cabe no cubo, ou se é transparente. Sen embargo, pode orixinar que se vexan algunhas liñas punteadas (especialmente con  imaxes bastante grandes) .</long>
+						<long xml:lang="gu">ટોચના ચહેરાના ચિત્રને કિનારી પર લગાવો. આ હંમેશા શ્રેષ્ઠ હોય છે જો તમારું ચિત્ર ઘનના માપમાં બંધબેસે નહિં અથવા જો તે પારદર્શક હોય. તે કોઈક ગંદા ટપકાંવાળી લીટીઓ બતાવી શકે છે જ્યારે સક્રિય કરેલ હોય છતાં પણ (ખાસ કરીને પૂરતા મોટા ચિત્રો સાથે).</long>
+						<long xml:lang="hi">किनारे में ऊपरी फेस चित्र क्लैंप करें. यह प्रायः तब सबसे अच्छा होता है यदि आपका चित्र घन के आकार में फिट नहीं होता है या यदि यह पारदर्शी है. यह कुछ बदसूरत डाटेड पंक्ति के रूप में हो सकता है जब सक्रिय किया जाता है (खासकर पर्याप्त बड़े चित्र के साथ).</long>
+						<long xml:lang="it">Blocca l'immagine della faccia superiore al bordo. È l'opzione raccomandata se l'immagine non è della dimensione del cubo o se è trasparente. Può però causare la presenza di alcune righe di puntini.</long>
+						<long xml:lang="ja">上面画像を画像の境界に沿って固定。画像がキューブの大きさに合っていなかったり透明の場合には、大抵これが最適です。しかし有効にすると、汚い点線がいくつか生じる可能性があります（特に充分大きな画像のとき）。</long>
+						<long xml:lang="nb">Hold toppbildet fast i kanten. Dette er ofte det beste hvis bildet ditt ikke passer til størrelsen på kuben, eller er gjennomsiktig. Det kan likevel føre til noen stygge prikkede linjer når det brukes (spesielt ved store nok bilder).</long>
+						<long xml:lang="nl">Klem afbeelding bovenzĳde aan rand.Dit is vaak het beste als je afbeelding niet goed past in de aafmetingen van de kubus of als deze transparant is. Maar het kan ook leiden tot lelĳke stippellĳnen indien ingeschakeld (speciaal met afbeeldingen die groot genoeg zĳn).</long>
+						<long xml:lang="pl">Rozciągaj obrazek górnej ściany kostki do krawędzi. Ta metoda jest często najlepsza, jeśli twój obrazek nie pasuje do rozmiaru ściany kostki bądź jest przezroczysty. Ta opcja może jednak powodować wyświetlanie brzydkich, kropkowanych linii, kiedy jest włączona (zwłaszcza przy odpowiednio dużych obrazkach).</long>
+						<long xml:lang="pt">Cortar imagem da face de cima nas margens. Esta opção é muitas vezes a melhor se a sua imagem não cabe no cubo, ou se é transparente. No entanto, pode originar algumas linhas ponteadas quando activa (especialmente com imagens bastante grandes).</long>
+						<long xml:lang="pt_BR">Cortar nas margens a imagem da face superior. Esta opção é geralmente amelhor se a sua imagem não cabe no cubo, ou se ela é transparente. No entanto,pode resultar em algumas linhas pontilhadas quando ativada (especialmente comimagens bem grandes).</long>
+						<long xml:lang="sv">Spänn fast översidans bild till kanten. Detta är oftast det bästa om din bild inte passar till storleken på kuben eller om den är genomskinlig. Det här kan leda till fula prickade linjer (speciellt med tillräckligt stora bilder).</long>
+						<default>true</default>
+					</option>
+					<option type="bool" name="bottom_clamp">
+						<short>Clamp bottom face image to border</short>
+						<short xml:lang="el">Συρρίκνωση εικόνας κάτω όψης στα όρια</short>
+						<short xml:lang="en_GB">Clamp bottom face image to border</short>
+						<short xml:lang="fr">Fixer la face inférieure à la bordure</short>
+						<short xml:lang="gl">Cortar imaxe da cara de abaixo nas marxes</short>
+						<short xml:lang="gu">તળિયેના ચહેરાના ચિત્રને કિનારી પર લગાવો</short>
+						<short xml:lang="hi">किनारे में तलवर्ती फेस चित्र क्लैंप करें</short>
+						<short xml:lang="it">Bloccare l'immagine inferiore al bordo</short>
+						<short xml:lang="ja">下面画像を境界に沿って固定</short>
+						<short xml:lang="nb">Hold bunnbilde fast til kanten</short>
+						<short xml:lang="nl">Klem afbeelding onderzĳde aan rand</short>
+						<short xml:lang="pl">Rozciągaj obrazek dolnej ściany kostki do krawędzi</short>
+						<short xml:lang="pt">Cortar imagem da face de baixo nas margens</short>
+						<short xml:lang="pt_BR">Cortar nas margens a imagem da face inferior</short>
+						<short xml:lang="sv">Spänn fast undersidans bild till kanten</short>
+						<long>Clamp bottom face image to border. This is often the best if your image doesn't fit the size of the cube or if it's transparent. It can lead to some ugly dotted lines when enabled (especially with large enough images) though.</long>
+						<long xml:lang="el">Συρρίκνωση εικόνας κάτω όψης στα όρια. Είναι συχνά το καλύτερο αν η εικόνα σας δεν ταιριάζει στο μέγεθος του κύβου ή είναι διάφανη. Μπορεί να οδηγήσει σε ορισμένες άσχημες γραμμές όταν ενεργοποιηθεί (ειδικά σε αρκετά μεγάλες εικόνες) όμως.</long>
+						<long xml:lang="en_GB">Clamp bottom face image to border. This is often the best if your image doesn't fit the size of the cube or if it's transparent. It can lead to some ugly dotted lines when enabled (especially with large enough images) though.</long>
+						<long xml:lang="fr">Fixer l'image de la face inférieure à la bordure. C'est souvent le mieux si votre image n'est pas ajustée à la taille du cube ou si elle est transparente, bien que cela puisse faire apparaître des lignes pointillées inesthétiques si activé (particulièrement avec de grandes images).</long>
+						<long xml:lang="gl">Cortar imaxe da cara de abaixo nas marxes. Esta opción é moitas veces a mellor se a súa imaxe non cabe no cubo, ou se é transparente. Sen embargo, pode orixinar que se vexan algunhas liñas punteadas (especialmente con  imaxes bastante grandes) .</long>
+						<long xml:lang="gu">તળિયેના ચહેરાના ચિત્રને કિનારી પર લગાવો. આ હંમેશા શ્રેષ્ઠ હોય છે જો તમારું ચિત્ર ઘનના માપમાં બંધબેસે નહિં અથવા જો તે પારદર્શક હોય. તે કોઈક ગંદા ટપકાંવાળી લીટીઓ બતાવી શકે છે જ્યારે સક્રિય કરેલ હોય છતાં પણ (ખાસ કરીને પૂરતા મોટા ચિત્રો સાથે).</long>
+						<long xml:lang="hi">किनारे में तलवर्ती फेस चित्र क्लैंप करें. यह प्रायः तब सबसे अच्छा होता है यदि आपका चित्र घन के आकार में फिट नहीं होता है या यदि यह पारदर्शी है. यह कुछ बदसूरत डाटेड पंक्ति के रूप में हो सकता है जब सक्रिय किया जाता है (खासकर पर्याप्त बड़े चित्र के साथ).</long>
+						<long xml:lang="it">Blocca l'immagine della faccia inferiore al bordo. È l'opzione raccomandata se l'immagine non è della dimensione del cubo o se è trasparente. Può però causare la presenza di alcune righe di puntini.</long>
+						<long xml:lang="ja">下面画像を画像の境界に沿って固定。画像がキューブの大きさに合っていなかったり透明の場合には、大抵これが最適です。しかし有効にすると、汚い点線がいくつか生じる可能性があります（特に充分大きな画像のとき）。</long>
+						<long xml:lang="nb">Hold bunnbildet fast i kanten. Dette er ofte det beste hvis bildet ditt ikke passer til størrelsen på kuben, eller er gjennomsiktig. Det kan likevel føre til noen stygge prikkede linjer når det brukes (spesielt ved store nok bilder).</long>
+						<long xml:lang="nl">Klem onderzĳde afbeelding aan rand. Dit is vaak het beste als je afbeelding niet past inde afmetingen van de kubus of als deze transparant is. Het kan helaas wel leiden tot lelĳke stippellĳnen indien ingeschakeld (speciaal als de afbeelding groot genoeg is).</long>
+						<long xml:lang="pl">Rozciągaj obrazek dolnej ściany kostki do krawędzi. Ta metoda jest często najlepsza, jeśli twój obrazek nie pasuje do rozmiaru ściany kostki bądź jest przezroczysty. Ta opcja może jednak powodować wyświetlanie brzydkich, kropkowanych linii, kiedy jest włączona (zwłaszcza przy odpowiednio dużych obrazkach).</long>
+						<long xml:lang="pt">Cortar imagem da face de baixo nas margens. Esta opção é muitas vezes a melhor se a sua imagem não cabe no cubo, ou se é transparente. No entanto, pode originar algumas linhas ponteadas quando activa (especialmente com imagens bastante grandes).</long>
+						<long xml:lang="pt_BR">Cortar nas margens a imagem da face inferior. Esta opção é geralmente amelhor se a sua imagem não cabe no cubo, ou se ela é transparente. No entanto,pode resultar em algumas linhas pontilhadas quando ativada (especialmente comimagens bem grandes).</long>
+						<long xml:lang="sv">Spänn fast undersidans bild till kanten. Detta är oftast det bästa om din bild inte passar storleken på kuben eller om den är genomskinlig. Det här kan leda till fula prickade linjer (speciellt med tillräckligt stora bilder).</long>
+						<default>true</default>
+					</option>
+				</subgroup>
+				<subgroup>
+					<short>Appearance</short>
+					<short xml:lang="ca">Aparença</short>
+					<short xml:lang="de">Aussehen</short>
+					<short xml:lang="el">Εμφάνιση</short>
+					<short xml:lang="en_GB">Appearance</short>
+					<short xml:lang="es">Apariencia</short>
+					<short xml:lang="eu">Itxura</short>
+					<short xml:lang="fi">Ulkoasu</short>
+					<short xml:lang="fr">Apparence</short>
+					<short xml:lang="gl">Aparencia</short>
+					<short xml:lang="gu">દેખાવ</short>
+					<short xml:lang="hi">प्रकटन</short>
+					<short xml:lang="it">Aspetto</short>
+					<short xml:lang="ja">外観</short>
+					<short xml:lang="nb">Utseende</short>
+					<short xml:lang="nl">Verschijning</short>
+					<short xml:lang="pl">Wygląd</short>
+					<short xml:lang="pt">Aparência</short>
+					<short xml:lang="pt_BR">Aparência</short>
+					<short xml:lang="sv">Utseende</short>
+					<short xml:lang="tr">Görünüm</short>
+					<short xml:lang="zh_CN">外观</short>
+					<option type="color" name="top_color">
+						<short>Cube Top Color</short>
+						<short xml:lang="ca">Color superior del cub</short>
+						<short xml:lang="el">Πάνω Χρώμα Κύβου</short>
+						<short xml:lang="en_GB">Cube Top Colour</short>
+						<short xml:lang="eu">Kuboaren goiko kolorea</short>
+						<short xml:lang="fr">Couleur du dessus du Cube.</short>
+						<short xml:lang="gl">Cor da cara superior do cubo</short>
+						<short xml:lang="gu">ઘન ટોચ રંગ</short>
+						<short xml:lang="hi">घन ऊपरी रंग</short>
+						<short xml:lang="it">Colore superiore del cubo</short>
+						<short xml:lang="ja">キューブ上面の色</short>
+						<short xml:lang="nb">Kubens toppfarge</short>
+						<short xml:lang="nl">Kubus bovenkant kleur</short>
+						<short xml:lang="pl">Kolor górnej ściany kostki</short>
+						<short xml:lang="pt">Cor Face Superior Cubo</short>
+						<short xml:lang="pt_BR">Cor Face Superior do Cubo</short>
+						<short xml:lang="sv">Färgen på kubens översida</short>
+						<short xml:lang="tr">Küp Üst Rengi</short>
+						<long>Color of top face of the cube</long>
+						<long xml:lang="ca">Color de la cara superior del cub</long>
+						<long xml:lang="de">Farbe der oberen Würfelfläche</long>
+						<long xml:lang="el">Χρώμα πάνω όψης του κύβου.</long>
+						<long xml:lang="en_GB">Colour of top face of the cube</long>
+						<long xml:lang="eu">Kuboaren goiko aurpegiko kolorea</long>
+						<long xml:lang="fr">Couleur de la face supérieure du cube.</long>
+						<long xml:lang="gl">Cor da cara superior do cubo</long>
+						<long xml:lang="gu">ઘનના ટોચના ચહેરાનો રંગ</long>
+						<long xml:lang="hi">घन के ऊपरी फेस का रंग</long>
+						<long xml:lang="it">Colore della faccia superiore del cubo</long>
+						<long xml:lang="ja">キューブの上面の色</long>
+						<long xml:lang="nb">Farge på toppen av kuben</long>
+						<long xml:lang="nl">Kleur van de bovenzĳde van de kubus</long>
+						<long xml:lang="pl">Kolor górnej ściany kostki</long>
+						<long xml:lang="pt">Cor da face superior do cubo</long>
+						<long xml:lang="pt_BR">Cor da face superior do cubo</long>
+						<long xml:lang="sv">Färgen på toppytan av kuben</long>
+						<long xml:lang="tr">Küpün üst yüzünün rengi</long>
+						<default>
+							<red>0xffff</red>
+							<green>0xffff</green>
+							<blue>0xffff</blue>
+						</default>
+					</option>
+					<option type="color" name="bottom_color">
+						<short>Cube Bottom Color</short>
+						<short xml:lang="ca">Color inferior del cub</short>
+						<short xml:lang="el">Κάτω Χρώμα Κύβου</short>
+						<short xml:lang="en_GB">Cube Bottom Colour</short>
+						<short xml:lang="eu">Kuboaren azpiko kolorea</short>
+						<short xml:lang="fr">Couleur du dessous du Cube</short>
+						<short xml:lang="gl">Cor da cara inferior do cubo</short>
+						<short xml:lang="gu">ઘન તળિયેનો રંગ</short>
+						<short xml:lang="hi">घन तलवर्ती रंग</short>
+						<short xml:lang="it">Colore inferiore del cubo</short>
+						<short xml:lang="ja">キューブ下面の色</short>
+						<short xml:lang="nb">Kubens bunnfarge</short>
+						<short xml:lang="nl">Kleur onderkant kubus</short>
+						<short xml:lang="pl">Kolor dolnej ściany kostki</short>
+						<short xml:lang="pt">Cor Face Inferior Cubo</short>
+						<short xml:lang="pt_BR">Cor Face Inferior do Cubo</short>
+						<short xml:lang="sv">Färgen på kubens undersidan</short>
+						<short xml:lang="tr">Küp Alt Rengi</short>
+						<long>Color of bottom face of the cube</long>
+						<long xml:lang="ca">Color de la cara inferior del cub</long>
+						<long xml:lang="de">Farbe der unteren Würfelfläche</long>
+						<long xml:lang="el">Χρώμα κάτω όψης του κύβου.</long>
+						<long xml:lang="en_GB">Colour of bottom face of the cube</long>
+						<long xml:lang="eu">Kuboaren azpiko aurpegiko kolorea</long>
+						<long xml:lang="fr">Couleur de la face inférieure du cube.</long>
+						<long xml:lang="gl">Cor da cara inferior do cubo</long>
+						<long xml:lang="gu">ઘનના તળિયેના ચહેરાનો રંગ</long>
+						<long xml:lang="hi">घन के तलवर्ती फेस का रंग</long>
+						<long xml:lang="it">Colore della faccia inferiore del cubo</long>
+						<long xml:lang="ja">キューブの下面の色</long>
+						<long xml:lang="nb">Farge på bunnen av kuben</long>
+						<long xml:lang="nl">Kleur van de onderzĳde van de kubus</long>
+						<long xml:lang="pl">Kolor dolnej ściany kostki</long>
+						<long xml:lang="pt">Cor da face inferior do cubo</long>
+						<long xml:lang="pt_BR">Cor da face inferior do cubo</long>
+						<long xml:lang="sv">Färgen på bottenytan av kuben</long>
+						<long xml:lang="tr">Küpün alt yüzünün rengi</long>
+						<default>
+							<red>0xffff</red>
+							<green>0xffff</green>
+							<blue>0xffff</blue>
+						</default>
+					</option>
+					<option type="list" name="top_images">
+						<short>Top image files</short>
+						<short xml:lang="ca">Arxius de les imatges superiors</short>
+						<short xml:lang="el">Αρχεία πάνω εικόνας</short>
+						<short xml:lang="en_GB">Top image files</short>
+						<short xml:lang="eu">Goiko irudi fitxategiak</short>
+						<short xml:lang="fr">Fichiers image du dessus</short>
+						<short xml:lang="gl">Ficheiros coas imaxes para cara superior</short>
+						<short xml:lang="gu">ટોચની ચિત્ર ફાઈલો</short>
+						<short xml:lang="hi">ऊपरी चित्र फाइल</short>
+						<short xml:lang="it">File immagine superiore</short>
+						<short xml:lang="ja">上面の画像ファイル</short>
+						<short xml:lang="nb">Toppbildefiler</short>
+						<short xml:lang="nl">Afbeelding bovenzĳde bestanden</short>
+						<short xml:lang="pl">Pliki górnego obrazka</short>
+						<short xml:lang="pt">icheiros com as imagens para face superior</short>
+						<short xml:lang="pt_BR">Arquivos com as imagens para a face superior</short>
+						<short xml:lang="sv">Bildfiler för översida</short>
+						<short xml:lang="tr">Tavan resim dosyaları</short>
+						<long>List of PNG and SVG files that should be rendered on top face of cube</long>
+						<long xml:lang="ca">Llista d'arxius PNG i SVG que s'han de renderitzar a la tapa superior del cub</long>
+						<long xml:lang="el">Λίστα των PNG και SVG αρχείων που πρέπει να απεικονιστούν στην πάνω όψη του κύβου</long>
+						<long xml:lang="en_GB">List of PNG and SVG files that should be rendered on top face of cube</long>
+						<long xml:lang="es">Lista de archivos PNG y SVG que se renderizaran en la parte superior de la cara del cubo</long>
+						<long xml:lang="eu">Kuboko goiko aurpegian prozesatu daitezkeen PNG eta SVG fitxategien zerrenda</long>
+						<long xml:lang="fi">Luettelo kuution päälle asetettavista PNG- ja SVG-tiedostoista</long>
+						<long xml:lang="fr">Liste de fichiers PNG et SVG devant être dessinés sur la face supérieure du cube</long>
+						<long xml:lang="gl">Lista de arquivos PNG e SVG que deben ser renderizados na cara superior do cubo</long>
+						<long xml:lang="gu">PNG અને SVG ફાઈલોની યાદી કે જે ઘનની ટોચે રેન્ડર થવી જોઈએ</long>
+						<long xml:lang="hi">सूची का PNG और SVG फाइल पर ऊपर का</long>
+						<long xml:lang="it">Elenco di file PNG e SVG da usare per la faccia superiore del cubo</long>
+						<long xml:lang="ja">キューブ上面に表示する PNG や SVG ファイルのリスト</long>
+						<long xml:lang="nb">Liste med PNG- og SVG-filer som skal gjengis på toppen av kuben</long>
+						<long xml:lang="nl">Lijst van PNG en SVG bestanden die afgebeeld moeten worden op de bovenzijde van de kubus</long>
+						<long xml:lang="pl">Lista plików PNG i SVG, które mają być renderowane na górnej ścianie kostki</long>
+						<long xml:lang="pt">Lista de arquivos PNG e SVG que devem ser renderizados na face superior do cubo</long>
+						<long xml:lang="pt_BR">Lista de arquivos PNG e SVG que devem ser renderizados na face superior do cubo</long>
+						<long xml:lang="sv">Lista på PNG och SVG filer som ska renderas på översidan av kuben</long>
+						<type>string</type>
+						<hints>file;image;</hints>
+						<default>
+							<value>fusioncap.png</value>
+						</default>
+						<hints>file;image;</hints>
+					</option>
+					<option type="list" name="bottom_images">
+						<short>Bottom image files</short>
+						<short xml:lang="ca">Arxius de les imatges inferiors</short>
+						<short xml:lang="el">Αρχεία κάτω εικόνας</short>
+						<short xml:lang="en_GB">Bottom image files</short>
+						<short xml:lang="eu">Azpiko irudiaren fitxategiak</short>
+						<short xml:lang="fr">Fichiers image du dessous</short>
+						<short xml:lang="gl">Ficheiros coas imaxes para a cara inferior</short>
+						<short xml:lang="gu">તળિયેની ચિત્ર ફાઈલો</short>
+						<short xml:lang="hi">तलवर्ती चित्र फाइल</short>
+						<short xml:lang="it">File immagine inferiore</short>
+						<short xml:lang="ja">下面の画像ファイル</short>
+						<short xml:lang="nb">Bunnbildefiler</short>
+						<short xml:lang="nl">Onderkant afbeelding bestanden</short>
+						<short xml:lang="pt">Ficheiros com as imagens para face inferior</short>
+						<short xml:lang="pt_BR">Arquivos com as imagens para a face inferior</short>
+						<short xml:lang="sv">Bildfiler för undersida</short>
+						<short xml:lang="tr">Alt resim dosyaları</short>
+						<long>List of PNG and SVG files that should be rendered on bottom face of cube</long>
+						<long xml:lang="ca">Llista d'arxius PNG i SVG que s'han de renderitzar a la tapa inferior del cub</long>
+						<long xml:lang="el">Λίστα των PNG και SVG αρχείων που πρέπει να απεικονιστούν στην κάτω όψη του κύβου</long>
+						<long xml:lang="en_GB">List of PNG and SVG files that should be rendered on bottom face of cube</long>
+						<long xml:lang="eu">Kuboko azpiko aurpegian prozesatu daitezkeen PNG eta SVG fitxategien zerrenda</long>
+						<long xml:lang="fi">Luettelo kuution pohjaan asetettavista PNG- ja SVG-tiedostoista</long>
+						<long xml:lang="fr">Liste de fichiers PNG et SVG devant être dessinés sur la face inférieure du cube</long>
+						<long xml:lang="gl">Lista de arquivos PNG e SVG que deben ser renderizados na cara inferior do cubo</long>
+						<long xml:lang="gu">PNG અને SVG ફાઈલોની યાદી કે જે ઘનના તળિયેની બાજુએ રેન્ડર થવી જોઈએ</long>
+						<long xml:lang="hi">PNG और SVG फाइल की सूची जो घन के तलवर्ती फेस पर रेंडर किया जाना चाहिए</long>
+						<long xml:lang="it">Elenco di file PNG e SVG da usare per la faccia inferiore del cubo</long>
+						<long xml:lang="ja">キューブ下面に表示する PNG や SVG ファイルのリスト</long>
+						<long xml:lang="nb">Liste med PNG- og SVG-filer som skal gjengis på bunnen av kuben</long>
+						<long xml:lang="nl">Lĳst van PNG en SVG bestanden die afgebeeld moeten worden op de onderzĳde van de kubus</long>
+						<long xml:lang="pl">Lista plików PNG i SVG, które mają być renderowane na dolnej ścianie kostki</long>
+						<long xml:lang="pt">Lista de arquivos PNG e SVG que devem ser renderizados na face inferior do cubo</long>
+						<long xml:lang="pt_BR">Lista de arquivos PNG e SVG que devem ser renderizados na face inferior do cubo</long>
+						<long xml:lang="sv">Lista på PNG och SVG filer som ska renderas på undersidan av kuben</long>
+						<type>string</type>
+						<hints>file;image;</hints>
+						<default>
+							<value>compizcap.png</value>
+						</default>
+						<hints>file;image;</hints>
+					</option>
+				</subgroup>
+			</group>
+		</screen>
+	</plugin>
+</compiz>

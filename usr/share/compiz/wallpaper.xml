@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+	<plugin useBcop="true" name="wallpaper">
+		<short>Wallpaper</short>
+		<short xml:lang="ca">Paper de fons</short>
+		<short xml:lang="de">Hintergrundbild</short>
+		<short xml:lang="el">Ταπετσαρία</short>
+		<short xml:lang="en_GB">Wallpaper</short>
+		<short xml:lang="es">Fondo de Pantalla</short>
+		<short xml:lang="fr">Fond d'écran</short>
+		<short xml:lang="gl">Fondo do escritorio</short>
+		<short xml:lang="gu">વોલપેપર</short>
+		<short xml:lang="hi">वालपेपर</short>
+		<short xml:lang="it">Rivestimento</short>
+		<short xml:lang="ja">壁紙</short>
+		<short xml:lang="nb">Bakgrunnsbilde</short>
+		<short xml:lang="nl">Achtergrond</short>
+		<short xml:lang="pl">Tło</short>
+		<short xml:lang="pt">Fundo do ambiente de trabalho</short>
+		<short xml:lang="pt_BR">Papel de parede</short>
+		<short xml:lang="ru">Обои рабочего стола</short>
+		<short xml:lang="sv">Bakgrund</short>
+		<short xml:lang="tr">Duvar Kağıdı</short>
+		<long>Draw the desktop wallpaper</long>
+		<long xml:lang="ca">Dibuixa el paper de fons</long>
+		<long xml:lang="el">Σχεδίαση του φόντου της επιφάνειας εργασίας</long>
+		<long xml:lang="en_GB">Draw the desktop wallpaper</long>
+		<long xml:lang="es">Dibuje el papel tapiz del escritorio</long>
+		<long xml:lang="fr">Dessiner l'arrière-plan du bureau</long>
+		<long xml:lang="gl">Debuxar o fondo do escritorio</long>
+		<long xml:lang="gu">ડેસ્કટોપ વોલપેપર દોરો</long>
+		<long xml:lang="hi">डेस्कटॉप वालपेपर खीचें</long>
+		<long xml:lang="it">Disegna il rivestimento della scrivania</long>
+		<long xml:lang="ja">デスクトップの壁紙を描画</long>
+		<long xml:lang="nb">Tegn bakgrunnsbilde</long>
+		<long xml:lang="nl">Teken de bureaublad achtergrond</long>
+		<long xml:lang="pl">Rysuj tło pulpitu</long>
+		<long xml:lang="pt">Desenhar o fundo da área de trabalho</long>
+		<long xml:lang="pt_BR">Desenhar o papel de parede da área de trabalho</long>
+		<long xml:lang="sv">Rita bakgrundsbilden</long>
+		<long xml:lang="tr">Arkaplan duvar kağıdını oluştur</long>
+		<category>Utility</category>
+		<deps>
+			<relation type="after">
+				<plugin>svg</plugin>
+				<plugin>png</plugin>
+				<plugin>imgjpeg</plugin>
+			</relation>
+		</deps>
+		<screen>
+			<subgroup>
+				<short>Backgrounds</short>
+				<short xml:lang="ca">Fons</short>
+				<short xml:lang="de">Hintergrundbild</short>
+				<short xml:lang="el">Φόντο</short>
+				<short xml:lang="en_GB">Backgrounds</short>
+				<short xml:lang="fr">Arrière-plan</short>
+				<short xml:lang="gl">Fondos</short>
+				<short xml:lang="gu">પાશ્વભાગો</short>
+				<short xml:lang="hi">पृष्ठभूमि</short>
+				<short xml:lang="it">Sfondi</short>
+				<short xml:lang="ja">背景</short>
+				<short xml:lang="nb">Bakgrunner</short>
+				<short xml:lang="nl">Achtergronden</short>
+				<short xml:lang="pl">Tła</short>
+				<short xml:lang="pt">Fundos</short>
+				<short xml:lang="pt_BR">Fundos</short>
+				<short xml:lang="sv">Bakgrunder</short>
+				<short xml:lang="tr">Arkaplanlar</short>
+				<option type="list" name="bg_image">
+					<short>Image</short>
+					<short xml:lang="it">Immagine</short>
+					<short xml:lang="ja">画像</short>
+					<short xml:lang="pl">Obrazek</short>
+					<short xml:lang="pt">Imagem</short>
+					<long>Image file.</long>
+					<long xml:lang="it">File immagine.</long>
+					<long xml:lang="ja">画像ファイル</long>
+					<long xml:lang="pl">Plik obrazka.</long>
+					<long xml:lang="pt">Ficheiro de imagem.</long>
+					<type>string</type>
+					<hints>file;image;</hints>
+				</option>
+				<option type="list" name="bg_image_pos">
+					<short>Position</short>
+					<short xml:lang="it">Posizione</short>
+					<short xml:lang="ja">配置位置</short>
+					<short xml:lang="pl">Położenie</short>
+					<short xml:lang="pt">Posição</short>
+					<long>Image position.</long>
+					<long xml:lang="it">Posizione immagine.</long>
+					<long xml:lang="ja">画像の配置位置</long>
+					<long xml:lang="pl">Położenie obrazka</long>
+					<long xml:lang="pt">Posição da imagem.</long>
+					<type>int</type>
+					<min>0</min>
+					<max>4</max>
+					<desc>
+						<value>0</value>
+						<name>Scale and Crop</name>
+						<name xml:lang="it">Scala e taglia</name>
+						<name xml:lang="ja">拡大と切り取り</name>
+						<name xml:lang="pl">Skaluj i przytnij</name>
+						<name xml:lang="pt">Redimensionar e Cortar</name>
+					</desc>
+					<desc>
+						<value>1</value>
+						<name>Scaled</name>
+						<name xml:lang="it">Scalato</name>
+						<name xml:lang="ja">拡大</name>
+						<name xml:lang="pl">Wyskalowany</name>
+						<name xml:lang="pt">Redimensionada</name>
+					</desc>
+					<desc>
+						<value>2</value>
+						<name>Centered</name>
+						<name xml:lang="it">Centrato</name>
+						<name xml:lang="ja">中央</name>
+						<name xml:lang="pt">Centrada</name>
+					</desc>
+					<desc>
+						<value>3</value>
+						<name>Tiled</name>
+						<name xml:lang="it">Piastrellato</name>
+						<name xml:lang="ja">タイル状</name>
+						<name xml:lang="pl">Przekrzywiony</name>
+						<name xml:lang="pt">Em mosaico</name>
+					</desc>
+					<desc>
+						<value>4</value>
+						<name>Center Tiled</name>
+						<name xml:lang="it">Piastrellato al centro</name>
+						<name xml:lang="ja">中央からタイル状</name>
+						<name xml:lang="pt">Centrar Mosaico</name>
+					</desc>
+				</option>
+				<option type="list" name="bg_fill_type">
+					<short>Fill type</short>
+					<short xml:lang="it">Tipo riempimento</short>
+					<short xml:lang="ja">塗り方</short>
+					<short xml:lang="pl">Typ wypełnienia</short>
+					<short xml:lang="pt">Tipo de preenchimento</short>
+					<long>Background fill type.</long>
+					<long xml:lang="it">Tipo di riempimento dello sfondo.</long>
+					<long xml:lang="ja">背景の塗り方</long>
+					<long xml:lang="pl">Rodzaj wypełnienia tła</long>
+					<long xml:lang="pt">Tipo de preenchimento do fundo.</long>
+					<type>int</type>
+					<min>0</min>
+					<max>2</max>
+					<desc>
+						<value>0</value>
+						<name>Solid fill</name>
+						<name xml:lang="it">Riempimento solido</name>
+						<name xml:lang="ja">塗りつぶし</name>
+						<name xml:lang="pl">Jednolite wypełnienie</name>
+						<name xml:lang="pt">Preenchimento sólido</name>
+					</desc>
+					<desc>
+						<value>1</value>
+						<name>Vertical gradient</name>
+						<name xml:lang="it">Gradiente verticale</name>
+						<name xml:lang="ja">縦方向にグラデーション</name>
+						<name xml:lang="pl">Gradient pionowy</name>
+						<name xml:lang="pt">Gradiente vertical</name>
+					</desc>
+					<desc>
+						<value>2</value>
+						<name>Horizontal gradient</name>
+						<name xml:lang="it">Gradiente orizzontale</name>
+						<name xml:lang="ja">横方向にグラデーション</name>
+						<name xml:lang="pl">Gradient poziomy</name>
+						<name xml:lang="pt">Gradiente horizontal</name>
+					</desc>
+				</option>
+				<option type="list" name="bg_color1">
+					<short>Color 1</short>
+					<short xml:lang="it">Colore 1</short>
+					<short xml:lang="ja">色1</short>
+					<short xml:lang="pt">Cor 1</short>
+					<long>Fill or first gradient color.</long>
+					<long xml:lang="it">Riempimento o colore del primo gradiente.</long>
+					<long xml:lang="ja">塗りつぶしの色またはグラデーションの開始色</long>
+					<long xml:lang="pl">Wypełnienie albo pierwszy kolor gradientu</long>
+					<long xml:lang="pt">Primeira cor para o gradiente ou de preechnimento.</long>
+					<type>color</type>
+				</option>
+				<option type="list" name="bg_color2">
+					<short>Color 2</short>
+					<short xml:lang="it">Colore 2</short>
+					<short xml:lang="ja">色2</short>
+					<short xml:lang="pt">Cor 2</short>
+					<long>Second gradient color.</long>
+					<long xml:lang="it">Colore del secondo gradiente.</long>
+					<long xml:lang="ja">グラデーションの終端色</long>
+					<long xml:lang="pl">Kolor drugiego gradientu</long>
+					<long xml:lang="pt">Segunda cor do gradiente.</long>
+					<type>color</type>
+				</option>
+			</subgroup>
+		</screen>
+	</plugin>
+</compiz>

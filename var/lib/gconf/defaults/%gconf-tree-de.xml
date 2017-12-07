@@ -1,0 +1,929 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="Legt fest, ob die PKCS #11-Komponente des GNOME-Schlüsselbunddienstes aktiviert ist.">
+                                                        <longdesc>Diese Option aktiviert die PKCS #11-Komponente im GNOME-Schlüsselbunddienst. Sie tritt nur in Kraft, wenn der Schlüsselbunddienst gestartet wird (also der Benutzer sich anmeldet). Diese Einstellung kann von bestimmten Befehlszeilenargumenten, die dem Dienst übergeben werden, überschrieben werden.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="Legt fest, ob der SSH-Agent des GNOME-Schlüsselbunddienstes aktiviert ist.">
+                                                        <longdesc>Diese Option aktiviert den SSH-Agenten des GNOME-Schlüsselbunddienstes. Sie tritt nur in Kraft, wenn der Schlüsselbunddienst gestartet wird (also der Benutzer sich anmeldet). Diese Einstellung kann von bestimmten Befehlszeilenargumenten, die dem Dienst übergeben werden, überschrieben werden.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Breite des Fensters">
+                                                        <longdesc>Die Breite mit der das Fenster angezeigt wird.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Höhe des Fensters">
+                                                        <longdesc>Die Höhe mit der das Fenster angezeigt wird.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Auf das Drücken von Tastenkombinationen hin auszuführende Befehle">
+                                                        <longdesc>Die »/apps/metacity/global_keybindings/run_command_N«-Schlüssel legen Tastenkombinationen fest, auf deren Eingabe hin diese Befehle ausgeführt werden. Die Eingabe der Tastenkombination run_command_N führt dazu, dass command_N ausgeführt wird.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Der Bildschirmfoto eines Fensters-Befehl">
+                                                        <longdesc>Der Schlüssel »/apps/metacity/global_keybindings/run_command_window_screenshot« legt eine Tastenkombination fest, auf deren Eingabe hin der vom diesem Schlüssel angegebene Befehl ausgeführt wird.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Der Bildschirmfoto-Befehl">
+                                                        <longdesc>Der Schlüssel »/apps/metacity/global_keybindings/run_command_screenshot« legt eine Tastenkombination fest, auf deren Eingabe hin der vom diesem Schlüssel angegebene Befehl ausgeführt wird.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Einen festgelegten Befehl ausführen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Ein Terminal starten">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Ein Bildschirmfoto eines Fensters aufnehmen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Ein Bildschirmfoto aufnehmen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Den »Anwendung ausführen«-Dialog des Panels anzeigen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Das Panelmenü anzeigen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Zur Arbeitsfläche unterhalb der Aktuellen wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Zur Arbeitsfläche oberhalb der Aktuellen wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Zur Arbeitsfläche rechts der Aktuellen wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Zur Arbeitsfläche links der Aktuellen wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Zur Arbeitsfläche 12 wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Zur Arbeitsfläche 11 wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Zur Arbeitsfläche 10 wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Zur Arbeitsfläche 9 wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Zur Arbeitsfläche 8 wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Zur Arbeitsfläche 7 wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Zur Arbeitsfläche 6 wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Zur Arbeitsfläche 5 wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Zur Arbeitsfläche 4 wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Zur Arbeitsfläche 3 wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Zur Arbeitsfläche 2 wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Zur Arbeitsfläche 1 wechseln">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Alle Fenster verbergen und den Desktop fokussieren">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Fokus sofort rückwärts zwischen den Panels und dem Desktop durchreichen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Fokus sofort zwischen den Panels und dem Desktop durchreichen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Fokus sofort rückwärts zwischen den Fenstern durchreichen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Fokus sofort zwischen den Fenstern durchreichen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Fokus rückwärts zwischen den Fenstern einer Anwendung unter Verwendung der Fensterliste durchreichen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Fokus zwischen den Fenstern einer Anwendung unter Verwendung der Fensterliste durchreichen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Fokus sofort rückwärts zwischen den Fenstern einer Anwendung durchreichen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Fokus sofort zwischen den Fenstern einer Anwendung durchreichen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Fokus rückwärts zwischen den Panels und dem Desktop unter Verwendung der Fensterliste durchreichen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Fokus zwischen den Panels und dem Desktop unter Verwendung der Fensterliste durchreichen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Fokus zwischen den Fenstern unter Verwendung der Fensterliste durchreichen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Fokus zwischen den Fenstern unter Verwendung der Fensterliste durchreichen">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Fenster zur westlichen Seite des Bildschirms verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Fenster zur östlichen Seite des Bildschirms verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Fenster zur südlichen Seite des Bildschirms verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Fenster zur nördlichen Seite des Bildschirms verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Fenster in südöstliche Ecke des Bildschirms verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Fenster in südwestliche Ecke des Bildschirms verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Fenster in nordöstliche Ecke des Bildschirms verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Fenster in nordwestliche Ecke des Bildschirms verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Fenster horizontal maximieren">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Fenster vertikal maximieren">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Fenster hinter die anderen Fenster absenken">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Fenster vor die anderen Fenster anheben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Fenster anheben, falls im Hintergrund, andernfalls absenken">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Fenster eine Arbeitsfläche nach unten verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Fenster eine Arbeitsfläche nach oben verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Fenster eine Arbeitsfläche nach rechts verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Fenster eine Arbeitsfläche nach links verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Fenster auf Arbeitsfläche 12 verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Fenster auf Arbeitsfläche 11 verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Fenster auf Arbeitsfläche 10 verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Fenster auf Arbeitsfläche 9 verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Fenster auf Arbeitsfläche 8 verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Fenster auf Arbeitsfläche 7 verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Fenster auf Arbeitsfläche 6 verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Fenster auf Arbeitsfläche 5 verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Fenster auf Arbeitsfläche 4 verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Fenster auf Arbeitsfläche 3 verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Fenster auf Arbeitsfläche 2 verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Fenster auf Arbeitsfläche 1 verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Soll das Fenster auf allen Arbeitsflächen sichtbar sein?">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Fenstergröße ändern">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Fenster verschieben">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Fenster minimieren">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Fenster schließen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Fenster ein- und wieder ausrollen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Fenster wiederherstellen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Fenster maximieren">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Maximierungszustand ein-/ausschalten">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Immer Oben-Zustand ein-/ausschalten">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Vollbildmodus ein-/ausschalten">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Fenstermenü aktivieren">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Name der Arbeitsfläche">
+                                                        <longdesc>Der Name einer Arbeitsfläche.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="»Miss-Features«, die von alten oder defekten Anwendungen benötigt werden, deaktivieren">
+                                                        <longdesc>Einige Anwendungen halten sich nicht an Spezifikationen, wodurch Fenstermanager anders als erwartet funktionieren können. Diese Option schaltet Metacity in einen rigorosen Korrekturmodus, der eine konsistentere Benutzerumgebung bringt, falls Sie keine sich falsch verhaltenden Anwendungen benötigen.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Nicht implementiert) Navigation arbeitet anwendungs- und nicht fensterorientiert">
+                                                        <longdesc>Falls dieser Schlüssel gesetzt ist, arbeitet Metacity anwendungs- und nicht fensterorientiert. Das Konzept ist etwas abstrakt, aber generell verhält sich der Computer im anwendungsorientierten Modus eher wie ein Mac und weniger wie Windows. Wenn Sie im anwendungsorientierten Modus ein Fenster fokussieren, werden alle zur Anwendung gehörigen Fenster angehoben. Außerdem werden in diesem Modus Fokusklicks nicht an Fenster von anderen Anwendungen weitergereicht. Allerdings ist der anwendungsorientierte Modus momentan in weiten Teilen nicht implementiert.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Benutzerfreundlichkeit zu Gunsten von geringerem Ressourcenverbrauch reduzieren">
+                                                        <longdesc>Falls dieser Schlüssel wahr ist, gibt Metacity dem Benutzer weniger Rückmeldungen durch Verwendung von Drahtrahmen. Dies bedeutet eine signifikante Verschlechterung in Sachen Benutzerfreundlichkeit, erlaubt es jedoch älteren Anwendungen und Terminal-Servern von Drittanbietern, auch dann zu funktionieren, wenn dies sonst nicht möglich wäre. Die Drahtrahmenfunktion wird jedoch nicht verwendet, wenn die Barrierefreiheit eingeschaltet ist.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="Compositing-Manager">
+                                                        <longdesc>Legt fest, ob Metacity als Compositing-Manager agiert.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Typ der Visuellen Glocke">
+                                                        <longdesc>Legt fest, wie Metacity visuell verdeutlichen soll, dass die Systemglocke ausgelöst wurde oder ein anderer »Piepser« seitens der Anwendung erfolgt ist. Zulässige Werte: »fullscreen« (Schwarz/weiß-Blinken im Vollbild) sowie »frame_flash« (Titelbar der betroffenen Anwendung blinkt). Ist die Anwendung unbekannt, die die Glocke ausgelöst hat (bei Systemsignaltönen ist dies der Normalfall), blinkt die Titelbar des momentan fokussierten Fensters.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="System-Glocke hörbar machen">
+                                                        <longdesc>Legt fest, ob Anwendungen oder das System hörbare Signaltöne ausgeben können; kann in Verbindung mit der »visuellen Glocke« verwendet werden, um stumme Signaltöne auszugeben.&apos;</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Visuelle Glocke aktivieren">
+                                                        <longdesc>Soll visuell verdeutlicht werden, wenn eine Anwendung oder das System eine »Glocke« oder einen Signalton auslöst? Dies ist nützlich für Schwerhörige und die Arbeit in lauter Umgebung.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Anzahl der Arbeitsflächen">
+                                                        <longdesc>Anzahl der Arbeitsflächen. Die Zahl muss größer als Null sein und hat ein festgelegtes Maximum (um zu Verhindern, dass Ihr Desktop durch das versehentliche Anfordern von zig-Millionen Arbeitsflächen zerstört wird)</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Schrift für Fenstertitel">
+                                                        <longdesc>Eine Zeichenkette, die für die Fenstertitel verwendete Schrift angibt. Die Größe dieser Angabe wird jedoch nur verwendet, falls die Option »titlebar_font_size« auf 0 gesetzt ist. Außerdem ist diese Funktion wirkungslos, falls die Option »titlebar_uses_desktop_font« »WAHR« ist.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Standard-Systemschrift für Fenstertitel verwenden">
+                                                        <longdesc>Falls dieser Schlüssel gesetzt ist, wird die Option zum Setzen der Titelleistenschrift (»titlebar_font«) ignoriert und die Standard-Anwendungsschrift für Fenstertitel verwendet</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Aktuelles Thema">
+                                                        <longdesc>Das Thema legt das unter anderem das Aussehen von Fensterrahmen und Titelleisten fest.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Verzögerung für die Auto-Anheben-Funktion in Millisekunden">
+                                                        <longdesc>Die Zeitverzögerung, bevor ein Fenster angehoben wird, falls auto_raise auf WAHR gesetzt ist. Die Verzögerung wird in tausendstel Sekunden angegeben.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Hebt automatisch das fokussierte Fenster an">
+                                                        <longdesc>Falls dieser Schlüssel gesetzt ist und der Fokusmodus entweder »sloppy« oder »mouse« ist, wird das fokussierte Fenster automatisch nach der vom Schlüssel »auto_raise_delay« angegeben Zeit angehoben. Dies hat weder Einfluss auf das Klicken auf ein Fenster um es anzuheben, noch auf das Überfahren eines Fensters beim Drag&amp;Drop.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="Aktion beim Rechtsklick auf die Titelleiste">
+                                                        <longdesc>Dieser Schlüssel legt fest, was bei einem Rechtsklick auf die Titelleiste geschehen soll. Zulässige Werte: »toggle_shade« (Fenster ein- bzw. ausrollen), »toggle_maximize« (Fenster maximieren bzw. wiederherstellen) sowie »none« (nichts tun).</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="Aktion beim Klick mit der mittleren Maustaste auf die Titelleiste">
+                                                        <longdesc>Dieser Schlüssel legt die Aktion, beim einem Klick mit der mittleren Maustaste auf die Titelleiste fest. Zulässige Werte: »toggle_shade« (Fenster ein- bzw. ausrollen), »toggle_maximize« (Fenster maximieren bzw. wiederherstellen) sowie »none« (nichts tun).</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Aktion beim Doppelklick auf Titelleiste">
+                                                        <longdesc>Dieser Schlüssel legt fest, was bei einem Doppelklick auf die Titelleiste geschehen soll. Zulässige Werte: »toggle_shade« (Fenster ein- bzw. ausrollen), »toggle_maximize« (Fenster maximieren bzw. wiederherstellen) sowie »none« (nichts tun).</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Legt Fest, ob das Anheben von Fenstern ein Seiteneffekt von Benutzeraktionen sein soll">
+                                                        <longdesc>Viele Aktionen (wie das Klicken in einer Anwendung, das Verschieben oder Größeändern eines Fensters) heben das Fenster als Nebeneffekt an. 
+Wenn diese Option nicht gesetzt ist, wovon abgeraten wird, so wird das Anheben von anderen Benutzeraktionen 
+abgekoppelt und Anhebeanfragen von Anwendungsseite ignoriert. 
+Schauen Sie für mehr Informationen unter http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6 nach.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Festlegen, wie neue Fenster den Fokus erhalten">
+                                                        <longdesc>Dieser Schlüssel bietet erweiterte Kontrolle darüber, wie neu erstellte Fenster den Fokus erhalten. Zulässige Werte: »smart« benutzt den vom Nutzer festgelegten Fokusmodus, »strict« erteilt von einer Befehlszeile gestarteten Fenstern keinen Fokus.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Modus des Fensterfokus">
+                                                        <longdesc>Der Modus des Fensterfokus legt fest, wie Fenster aktiviert werden. Er hat drei mögliche Werte: »click« führt dazu, dass Fenster angeklickt werden müssen, um fokussiert zu werden, »sloppy« bewirkt, dass Fenster fokussiert werden, sobald sich der Mauszeiger über dem Fenster befindet, und das Verhalten bei »mouse« entspricht dem von »sloppy« mit dem Zusatz, dass den Fenstern der Fokus wieder genommen wird, sobald der Mauszeiger das Fenster verlässt.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Knopfanordnung auf der Titelleiste">
+                                                        <longdesc>Die Anordnung der Knöpfe auf der Titelleiste. Der Wert muss eine Zeichenkette der Form »menu:minimize,maximize,close« sein. Der Doppelpunkt trennt die rechte von der linken Ecke der Titelleiste und die Namen der einzelnen Knöpfe sind durch Kommas getrennt. Mehrfachnennungen von Knopfnamen sind nicht erlaubt. Unbekannte Knopfnamen werden ohne Ausgabe ignoriert, sodass in zukünftigen Versionen dieses Fenstermanagers Knöpfe hinzugefügt werden können, ohne die Konfiguration älterer Versionen zu beeinflussen.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Der zum Umschalten der Fensterklick-Aktionen verwendete Umschalter">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Vorgabeanwendung für Ansichtskomponenten">
+                                                                <longdesc>Die zum Anzeigen von Dateien, die eine Ansichtskomponente erforderlich machen, verwendete Anwendung. Der Parameter %s wird durch die Dateiadresse, der Parameter %d durch die Komponenten-IID ersetzt.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Exec-Argument für Vorgabe-Terminal">
+                                                                <longdesc>Das an die Vorgabe-Terminal-Anwendung zu übergebende exec-Argument.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Vorgabe-Terminal-Anwendung">
+                                                                <longdesc>Die Vorgabe-Terminal-Anwendung, die für Anwendungen verwendet wird, die ein Terminal erforderlich machen.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Den Befehl in einem Terminal ausführen">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, wird das Programm, dass diesen URL-Typ handhaben soll, in einem Terminal ausgeführt.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Der Handler für »h323«-URLs">
+                                                                <longdesc>Der zum Handhaben von »h323«-URLs verwendete Befehl, falls aktiviert.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Soll der angegebene Befehl »h323«-URLs handhaben?">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, handhabt das in »command« angegebene Programm »h323«-URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Den Befehl in einem Terminal ausführen">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, wird das Programm, dass diesen URL-Typ handhaben soll, in einem Terminal ausgeführt.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Der Handler für »callto«-URLs">
+                                                                <longdesc>Der zum Handhaben von »callto«-URLs verwendete Befehl, falls aktiviert.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Soll der angegebene Befehl »callto«-URLs handhaben?">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, handhabt das in »command« angegebene Programm »callto«-URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Den Befehl in einem Terminal ausführen">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, wird das Programm, dass diesen URL-Typ handhaben soll, in einem Terminal ausgeführt.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Der Handler für »mailto«-URLs">
+                                                                <longdesc>Der zum Handhaben von »mailto«-URLs verwendete Befehl, falls aktiviert.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Soll der angegebene Befehl »mailto«-URLs handhaben?">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, handhabt das in »command« angegebene Programm »mailto«-URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Den Befehl in einem Terminal ausführen">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, wird das Programm, dass diesen URL-Typ handhaben soll, in einem Terminal ausgeführt.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Der Handler für »https«-URLs">
+                                                                <longdesc>Der zum Handhaben von »https«-URLs verwendete Befehl, falls aktiviert.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Soll der angegebene Befehl »https«-URLs handhaben?">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, handhabt das in »command« angegebene Programm »https«-URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Den Befehl in einem Terminal ausführen">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, wird das Programm, dass diesen URL-Typ handhaben soll, in einem Terminal ausgeführt.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Den Befehl in einem Terminal ausführen">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, wird das Programm, dass diesen URL-Typ handhaben soll, in einem Terminal ausgeführt.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Der Handler für »http«-URLs">
+                                                                <longdesc>Der zum Handhaben von »http«-URLs verwendete Befehl, falls aktiviert.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Soll der angegebene Befehl »http«-URLs handhaben?">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, handhabt das in »command« angegebene Programm »http«-URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Den Befehl in einem Terminal ausführen">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, wird das Programm, dass diesen URL-Typ handhaben soll, in einem Terminal ausgeführt.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Der Handler für »man«-URLs">
+                                                                <longdesc>Der zum Handhaben von »man«-URLs verwendete Befehl, falls aktiviert.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Soll der angegebene Befehl »man«-URLs handhaben?">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, handhabt das in »command« angegebene Programm »man«-URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Den Befehl in einem Terminal ausführen">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, wird das Programm, dass diesen URL-Typ handhaben soll, in einem Terminal ausgeführt.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Der Handler für »info«-URLs">
+                                                                <longdesc>Der zum Handhaben von »info«-URLs verwendete Befehl, falls aktiviert.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Soll der angegebene Befehl »info«-URLs handhaben?">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, handhabt das in »command« angegebene Programm »info«-URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Den Befehl in einem Terminal ausführen">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, wird das Programm, dass diesen URL-Typ handhaben soll, in einem Terminal ausgeführt.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Der Handler für »ghelp«-URLs">
+                                                                <longdesc>Der zum Handhaben von »ghelp«-URLs verwendete Befehl, falls aktiviert.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Soll der angegebene Befehl »ghelp«-URLs handhaben?">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, handhabt das in »command« angegebene Programm »ghelp«-URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Den Befehl in einem Terminal ausführen">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, wird das Programm, dass diesen URL-Typ handhaben soll, in einem Terminal ausgeführt.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Der Handler für »trash«-URLs">
+                                                                <longdesc>Der zum Handhaben von »trash«-URLs verwendete Befehl, falls aktiviert.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Soll der angegebene Befehl »trash«-URLs handhaben?">
+                                                                <longdesc>Falls dieser Schlüssel wahr ist, handhabt das in »command« angegebene Programm »trash«-URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Dieses Profil verwenden?">
+                                                                        <longdesc>Soll dieses Profil verwendet und angezeigt werden?</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Die voreingestellte Dateiendung für dieses Profil">
+                                                                        <longdesc>Eine Dateiendung, die zum Speichern von mit diesem Profil kodierten Dateien verwendet werden soll.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Die zu verwendende unvollständige GStreamer-Weiterleitung">
+                                                                        <longdesc>Eine unvollständige, für dieses Profil zu verwendende, GStreamer-Weiterleitung.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="Eine Beschreibung des Audio-Profils">
+                                                                        <longdesc>Eine Profilbeschreibung, die weitere Informationen enthält und beschreibt, wann dieses Profil eingesetzt werden sollte.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Ein Kurzname für das Audio-Profil">
+                                                                        <longdesc>Ein kurzer Name für das Audio-Profil, der zum Auswählen verwendet wird und das Profil eindeutig identifiziert.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Dieses Profil verwenden?">
+                                                                                <longdesc>Soll dieses Profil verwendet und angezeigt werden?</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Die voreingestellte Dateiendung für dieses Profil">
+                                                                                <longdesc>Eine Dateiendung, die zum Speichern von mit diesem Profil kodierten Dateien verwendet werden soll.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Die zu verwendende unvollständige GStreamer-Weiterleitung">
+                                                                                <longdesc>Eine unvollständige, für dieses Profil zu verwendende, GStreamer-Weiterleitung.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Eine Beschreibung des Audio-Profils">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ein Kurzname für das Audio-Profil">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Die voreingestellte Dateiendung für dieses Profil">
+                                                                                <longdesc>Eine Dateiendung, die zum Speichern von mit diesem Profil kodierten Dateien verwendet werden soll.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Die zu verwendende unvollständige GStreamer-Weiterleitung">
+                                                                                <longdesc>Eine unvollständige, für dieses Profil zu verwendende, GStreamer-Weiterleitung.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Eine Beschreibung des Audio-Profils">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ein Kurzname für das Audio-Profil">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Die voreingestellte Dateiendung für dieses Profil">
+                                                                                <longdesc>Eine Dateiendung, die zum Speichern von mit diesem Profil kodierten Dateien verwendet werden soll.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Die zu verwendende unvollständige GStreamer-Weiterleitung">
+                                                                                <longdesc>Eine unvollständige, für dieses Profil zu verwendende, GStreamer-Weiterleitung.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Eine Beschreibung des Audio-Profils">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ein Kurzname für das Audio-Profil">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Die voreingestellte Dateiendung für dieses Profil">
+                                                                                <longdesc>Eine Dateiendung, die zum Speichern von mit diesem Profil kodierten Dateien verwendet werden soll.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Die zu verwendende unvollständige GStreamer-Weiterleitung">
+                                                                                <longdesc>Eine unvollständige, für dieses Profil zu verwendende, GStreamer-Weiterleitung.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Eine Beschreibung des Audio-Profils">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ein Kurzname für das Audio-Profil">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Die voreingestellte Dateiendung für dieses Profil">
+                                                                                <longdesc>Eine Dateiendung, die zum Speichern von mit diesem Profil kodierten Dateien verwendet werden soll.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Die zu verwendende unvollständige GStreamer-Weiterleitung">
+                                                                                <longdesc>Eine unvollständige, für dieses Profil zu verwendende, GStreamer-Weiterleitung.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Eine Beschreibung des Audio-Profils">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ein Kurzname für das Audio-Profil">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Die voreingestellte Dateiendung für dieses Profil">
+                                                                                <longdesc>Eine Dateiendung, die zum Speichern von mit diesem Profil kodierten Dateien verwendet werden soll.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Die zu verwendende unvollständige GStreamer-Weiterleitung">
+                                                                                <longdesc>Eine unvollständige, für dieses Profil zu verwendende, GStreamer-Weiterleitung.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Eine Beschreibung des Audio-Profils">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ein Kurzname für das Audio-Profil">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Profilliste">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="URL zur automatischen Proxy-Konfiguration">
+                                                <longdesc>URL, die Proxy-Konfigurationswerte liefert.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="Port am SOCKS-Proxy">
+                                                <longdesc>Der Proxy-Port am von »/system/http_proxy/socks_host« festgelegten Rechner.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="Rechnername des Socks-Proxys">
+                                                <longdesc>Der Rechnername des Socks-Proxys.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="Port am FTP-Proxy">
+                                                <longdesc>Der Proxy-Port am von »/system/http_proxy/ftp_host« festgelegten Rechner.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="Rechnername des FTP-Proxys">
+                                                <longdesc>Der Rechnername des FTP-Proxys.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Port am sicheren HTTP-Proxy">
+                                                <longdesc>Der Proxy-Port am von »/system/http_proxy/secure_host« festgelegten Rechner.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Rechnername des sicheren HTTP-Proxys">
+                                                <longdesc>Der Rechnername des sicheren HTTP-Proxys.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Proxy-Konfigurationsmodus">
+                                                <longdesc>Legt den Proxy-Konfigurationsmodus fest. Zulässige Werte: »none« (keiner), »manual« (manuell) sowie »auto« (automatisch).</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Nicht-Proxy-Rechner">
+                                                <longdesc>Dieser Schlüssel enthält eine Liste der Rechner, mit denen eine Direktverbindung aufgebaut werden soll, also nicht via Proxy (falls aktiv). Als Werte sind Rechnernamen, Domänen (per Wildcard, z.B. *.foo.de), IP-Rechneradresse (sowohl IPv4 als auch IPv6) und Netzwerkadressen mit einer Netzmaske (der Form 192.168.0.0/24) zulässig.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="Passwort am HTTP-Proxy">
+                                                <longdesc>Zur HTTP-Proxy-Legitimation zu übergebendes Passwort</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="Benutzername am HTTP-Proxy">
+                                                <longdesc>Zur HTTP-Proxy-Legitimation zu übergebender Benutzername.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Verbindungen mit dem Proxy-Server legitimieren">
+                                                <longdesc>Legt fest, ob Verbindungen mit dem Proxy-Server legitimiert werden müssen. Hierbei werden die Werte von »/system/http_proxy/authentication_user« und »/system/http_proxy/authentication_password« als Benutzername bzw. Passwort verwendet.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="Port am HTTP-Proxy">
+                                                <longdesc>Der Proxy-Port am von »/system/http_proxy/host« festgelegten Rechner.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="Rechnername des HTTP-Proxys">
+                                                <longdesc>Der Rechnername des HTTP-Proxys.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="HTTP-Proxy verwenden">
+                                                <longdesc>Sollen die Proxy-Einstellungen zum HTTP-Zugriff per Internet verwendet werden?</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Zusätzlich nach DNS-SD-Diensten zu durchsuchende Domänen">
+                                                <longdesc>Durch Kommata unterteilte Liste der DNS-SD-Domänen, die am Netzwerk-Speicherort »network:///« angezeigt werden sollen.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Legt fest, der lokale DNS-SD-Dienst angezeigt werden soll">
+                                                <longdesc>Zulässige Werte: »merged«, »separate« sowie »disabled«.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="SMB-Arbeitsgruppe">
+                                                <longdesc>Die Windows-Netzwerkarbeitsgruppe oder -domäne zu der der Benutzer gehört. Damit eine neue Arbeitsgruppe vollständig übernommen werden kann, muss sich der Benutzer ab- und wieder anmelden.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

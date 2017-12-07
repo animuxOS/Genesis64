@@ -1,0 +1,352 @@
+#!/bin/sh
+
+# Copyright (c) 2005-2007, Sven Berkvens-Matthijsse
+# 
+# All rights reserved.
+# 
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 
+# * Redistributions of source code must retain the above copyright
+#   notice, this list of conditions and the following disclaimer.
+# 
+# * Redistributions in binary form must reproduce the above copyright
+#   notice, this list of conditions and the following disclaimer in the
+#   documentation and/or other materials provided with the distribution.
+# 
+# * Neither the name of deKattenFabriek nor the names of its
+#   contributors may be used to endorse or promote products derived from
+#   this software without specific prior written permission.
+# 
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Botch on errors
+set -e
+
+##############################################################################
+# Load the function library
+##############################################################################
+
+prefix="/usr"
+exec_prefix="${prefix}"
+datadir="${prefix}/share"
+bindir="${exec_prefix}/bin"
+
+. "${datadir}/videotrans/library.sh"
+
+##############################################################################
+# Usage definition
+##############################################################################
+
+usage()
+{
+	cat >&2 << EOF
+Usage: ${0##*/} [-t title_mode] [-l language] < epg.data > your_movie_file.info
+
+-t title_mode	Sets the title mode. With this option, you can determine which
+		part of the epg.data file will become the title that is used
+		in the DVD menu that will be created by movie-title. Possible
+		values are:
+			title	This will simply use the "T" line in the file
+			short	This will simply use the "S" line in the file
+			squote	This will use the quoted part of the "S" line
+			auto	This will try to autodetect what to use
+		The "title" setting is the default if you don't use -t.
+
+-l language	Sets the language of the title headings that are produced in
+		the .info file (the default is English, which will use the
+		headings "Title", "Short description" and "Synopsis"). You may
+		either specify "english", "french" or "dutch" or specify your
+		language's words for title, short description and synopis (or
+		long description), separated by pipe signs (|).
+		For example: ... -l "Title|Short description|Synopsis" ...
+		could be used instead of "english".
+EOF
+
+	if [ "$#" != "0" ]
+	then
+		echo "" >&2
+		echo "$@" >&2
+	fi
+
+	exit 1
+}
+
+##############################################################################
+# Temporary file name
+##############################################################################
+
+TEMP="/tmp/.video-epg.data.$$"
+trap "rm -fr ${TEMP}* 2>/dev/null || :" EXIT
+
+##############################################################################
+# Process the options
+##############################################################################
+
+title_mode="title"
+language="Title|Short description|Synopsis"
+while getopts "t:l:" option
+do
+	case "${option}"
+	in
+		t)
+			case "${OPTARG}"
+			in
+				"title" | "short" | "squote" | "auto")
+					title_mode="${OPTARG}"
+					;;
+				*)
+					usage "ERROR: Undefined mode <${OPTARG}> used with the -t option"
+					;;
+			esac
+			;;
+
+		l)
+			case "${OPTARG}"
+			in
+				"english")
+					language="Title|Short description|Synopsis"
+					;;
+				"french")
+					language="Titre|Description courte|Résumé"
+					;;
+				"dutch")
+					language="Titel|Korte omschrijving|Samenvatting"
+					;;
+				*"|"*"|"*"|"*)
+					usage "ERROR: Too many <|> signs in the argument to -l"
+					;;
+				*"|"*"|"*)
+					language="${OPTARG}"
+					;;
+				*"|"*)
+					usage "ERROR: Not enough <|> signs in the argument to -l"
+					;;
+				*)
+					usage "ERROR: Unknown language <${OPTARG}> specified"
+					;;
+			esac
+			;;
+
+		*)
+			usage "ERROR: Unknown option specified"
+			;;
+	esac
+done
+
+##############################################################################
+# Get rid of all the parameters
+##############################################################################
+
+shift "`expr ${OPTIND} - 1`"
+
+##############################################################################
+# Any more arguments?
+##############################################################################
+
+[ "$#" -eq 0 ] || usage
+
+##############################################################################
+# Function to dump some text neatly into the output
+##############################################################################
+
+dump()
+{
+	dump_title="$1"
+	{
+		echo -n "$2"
+		echo ""
+	} |
+	{
+		blankline="no"
+		first="yes"
+		seen_title="no"
+		while read -r line
+		do
+			case "${line}"
+			in
+				'')
+					if [ "${blankline}" = "no" -a "${first}" = "no" ]
+					then
+						echo ""
+						blankline="yes"
+					fi
+					;;
+				*)
+					if [ "${seen_title}" = "no" ]
+					then
+						echo "${dump_title}"
+						echo ""
+						seen_title="yes"
+					fi
+					echo "    ${line}" | LC_ALL="en_US.ISO8859-15" fmt -s -w 60
+					blankline="no"
+					first="no"
+					;;
+			esac
+		done
+		if [ "${seen_title}" = "yes" ]
+		then
+			echo ""
+		fi
+	}
+}
+
+##############################################################################
+# Gather the information
+##############################################################################
+
+text=""
+record_in=""
+data_T=""
+data_S=""
+data_D=""
+done="false"
+while IFS="" read -r line
+do
+	echo -n "${line}" | sed 's,^\(.\).*$,\1,' > "${TEMP}.tr"
+	first_char="`cat "${TEMP}.tr"`"
+	rest="`echo -n "${line}" | sed 's,^. *,,'`"
+	if [ "x${first_char}" = "x " ]
+	then
+		if [ "x${text}" = "x" ]
+		then
+			text="${rest}"
+		else
+			text="${text} ${rest}"
+		fi
+		continue
+	fi
+
+	if [ "x${record_in}" != "x" ]
+	then
+		eval "previous_val=\"\$data_${record_in}\"" || :
+		if [ "x${previous_val}" != "x" ]
+		then
+			message "ERROR: There is more than one <${record_in}> line, which is probably not correct. Please fix the input file and try again."
+			exit 1
+		fi
+		eval "data_${record_in}=\"\${text}\"" || :
+	fi
+
+	case "${first_char}"
+	in
+		"C" | "E")
+			record_in=""
+			;;
+		"T" | "S" | "D")
+			record_in="${first_char}"
+			text="${rest}"
+			;;
+		e)
+			done="true"
+			;;
+		*)
+			record_in=""
+	esac
+	if [ "${done}" = "true" ]
+	then
+		break
+	fi
+done
+
+if [ "${record_in}" != "" ]
+then
+	eval "previous_val=\"\$data_${record_in}\"" || :
+	if [ "x${previous_val}" != "x" ]
+	then
+		message "ERROR: There is more than one <${record_in}> line, which is probably not correct. Please fix the input file and try again."
+		exit 1
+	fi
+	eval "data_${record_in}=\"\${text}\"" || :
+fi
+
+##############################################################################
+# Check what we gathered
+##############################################################################
+
+if [ "x${data_T}" = "x" ]
+then
+	message "ERROR: No title collected from the input file!"
+	exit 1
+fi
+
+data_D="`echo -n "${data_D}" | tr '|' '
+'`"
+data_S="`echo -n "${data_S}" | tr '|' '
+'`"
+
+case "${title_mode}"
+in
+	"title")
+		echo "${data_T}"
+		;;
+
+	"short")
+		if [ "x${data_S}" = "x" ]
+		then
+			echo "${data_T}"
+		else
+			echo "${data_S}"
+		fi
+		;;
+
+	"squote")
+		case "${data_S}"
+		in
+			"")
+				echo "${data_T}"
+				;;
+			*'"'*'"'*)
+				txt="${data_S%\"*}"
+				txt="${txt##*\"}"
+				echo "${txt}"
+				;;
+			*)
+				echo "${data_S}"
+				;;
+		esac
+		;;
+
+	"auto")
+		case "${data_S}"
+		in
+			"")
+				echo "${data_T}"
+				;;
+			*'"'*'"'*)
+				txt="${data_S%\"*}"
+				txt="${txt##*\"}"
+				echo "${txt}"
+				;;
+			*)
+				echo "${data_T}"
+				;;
+		esac
+		;;
+esac
+
+txt_title="${language%%|*}"
+language="${language#*|}"
+txt_short_description="${language%%|*}"
+language="${language#*|}"
+txt_synopsis="${language}"
+
+dump "#ffff00 ${txt_title}:" "${data_T}"
+dump "#ffff00 ${txt_short_description}:" "${data_S}"
+dump "#ffff00 ${txt_synopsis}:" "${data_D}"
+
+exit 0
+
+# vim:ts=2:sw=2

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+    <plugin useBcop="true" name="staticswitcher">
+	<short>Static Application Switcher</short>
+	<long>Static Application Switcher</long>
+	<deps>
+	    <relation type="after">
+		<plugin>fade</plugin>
+	    </relation>
+	    <relation type="before">
+		<plugin>bs</plugin>
+	    </relation>
+	</deps>
+	<category>Window Management</category>
+	<display>
+	    <group>
+		<short>Bindings</short>
+		<short xml:lang="ar">الأغلفة</short>
+		<short xml:lang="bn">সীমাবদ্ধতা</short>
+		<short xml:lang="ca">Vinculacions</short>
+		<short xml:lang="de">Tastenkombinationen</short>
+		<short xml:lang="el">Συνδυασμοί</short>
+		<short xml:lang="en_GB">Bindings</short>
+		<short xml:lang="es">Combinación de Teclas</short>
+		<short xml:lang="fi">Näppäinyhdistelmät</short>
+		<short xml:lang="fr">Raccourcis</short>
+		<short xml:lang="gl">Atallos</short>
+		<short xml:lang="gu">બાઈન્ડીંગો</short>
+		<short xml:lang="hi">बाइंडिंग</short>
+		<short xml:lang="it">Scorciatoie</short>
+		<short xml:lang="ja">割り当て</short>
+		<short xml:lang="nb">Hurtigtast</short>
+		<short xml:lang="nl">Bindingen</short>
+		<short xml:lang="pl">Skróty klawiszowe</short>
+		<short xml:lang="pt">Atalhos</short>
+		<short xml:lang="pt_BR">Atalhos</short>
+		<short xml:lang="ru">Горячие клавиши</short>
+		<short xml:lang="sv">Bindningar</short>
+		<short xml:lang="tr">Bağlayıcılar</short>
+		<short xml:lang="zh_CN">按键组合</short>
+		<option type="button" name="next_button">
+		    <short>Next window</short>
+		    <long>Popup switcher if not visible and select next window</long>
+		</option>
+		<option type="key" name="next_key">
+		    <short>Next window</short>
+		    <long>Popup switcher if not visible and select next window</long>
+		    <default>&lt;Alt&gt;Tab</default>
+		</option>
+		<option type="button" name="prev_button">
+		    <short>Prev window</short>
+		    <long>Popup switcher if not visible and select previous window</long>
+		</option>
+		<option type="key" name="prev_key">
+		    <short>Prev window</short>
+		    <long>Popup switcher if not visible and select previous window</long>
+		    <default>&lt;Shift&gt;&lt;Alt&gt;Tab</default>
+		</option>
+		<option type="button" name="next_all_button">
+		    <short>Next window (All windows)</short>
+		    <long>Popup switcher if not visible and select next window out of all windows</long>
+		</option>
+		<option type="key" name="next_all_key">
+		    <short>Next window (All windows)</short>
+		    <long>Popup switcher if not visible and select next window out of all windows</long>
+		    <default>&lt;Control&gt;&lt;Alt&gt;Tab</default>
+		</option>
+		<option type="button" name="prev_all_button">
+		    <short>Prev window (All windows)</short>
+		    <long>Popup switcher if not visible and select previous window out of all windows</long>
+		</option>
+		<option type="key" name="prev_all_key">
+		    <short>Prev window (All windows)</short>
+		    <long>Popup switcher if not visible and select previous window out of all windows</long>
+		    <default>&lt;Shift&gt;&lt;Control&gt;&lt;Alt&gt;Tab</default>
+		</option>
+		<option type="button" name="next_group_button">
+		    <short>Next window (Group)</short>
+		    <long>Popup switcher if not visible and select next window of the current application.</long>
+		</option>
+		<option type="key" name="next_group_key">
+		    <short>Next window (Group)</short>
+		    <long>Popup switcher if not visible and select next window of the current application.</long>
+		</option>
+		<option type="button" name="prev_group_button">
+		    <short>Prev window (Group)</short>
+		    <long>Popup switcher if not visible and select previous window of the current application.</long>
+		</option>
+		<option type="key" name="prev_group_key">
+		    <short>Prev window (Group)</short>
+		    <long>Popup switcher if not visible and select previous window of the current application.</long>
+		</option>
+		<option type="button" name="next_no_popup_button">
+		    <short>Next window (No popup)</short>
+		    <long>Select next window without showing the popup window.</long>
+		</option>
+		<option type="key" name="next_no_popup_key">
+		    <short>Next window (No popup)</short>
+		    <long>Select next window without showing the popup window.</long>
+		</option>
+		<option type="button" name="prev_no_popup_button">
+		    <short>Prev window (No popup)</short>
+		    <long>Select previous window without showing the popup window.</long>
+		</option>
+		<option type="key" name="prev_no_popup_key">
+		    <short>Prev window (No popup)</short>
+		    <long>Select previous window without showing the popup window.</long>
+		</option>
+		<option type="button" name="next_panel_button">
+		    <short>Next Panel</short>
+		    <long>Select next panel type window.</long>
+		</option>
+		<option type="key" name="next_panel_key">
+		    <short>Next Panel</short>
+		    <long>Select next panel type window.</long>
+		</option>
+		<option type="button" name="prev_panel_button">
+		    <short>Prev Panel</short>
+		    <long>Select previous panel type window.</long>
+		</option>
+		<option type="key" name="prev_panel_key">
+		    <short>Prev Panel</short>
+		    <long>Select previous panel type window.</long>
+		</option>
+	    </group>
+	</display>
+	<screen>
+	    <group>
+		<short>Behaviour</short>
+		<short xml:lang="ca">Comportament</short>
+		<short xml:lang="de">Verhalten</short>
+		<short xml:lang="el">Συμπεριφορά</short>
+		<short xml:lang="en_GB">Behaviour</short>
+		<short xml:lang="es">Comportamiento</short>
+		<short xml:lang="eu">Jokabidea</short>
+		<short xml:lang="fi">Toiminta</short>
+		<short xml:lang="fr">Comportement</short>
+		<short xml:lang="gl">Comportamento</short>
+		<short xml:lang="gu">વર્તણૂક</short>
+		<short xml:lang="hi">आचरण</short>
+		<short xml:lang="it">Comportamento</short>
+		<short xml:lang="ja">動作</short>
+		<short xml:lang="nb">Oppførsel</short>
+		<short xml:lang="nl">Gedrag</short>
+		<short xml:lang="pl">Zachowanie</short>
+		<short xml:lang="pt">Comportamento</short>
+		<short xml:lang="pt_BR">Comportamento</short>
+		<short xml:lang="sv">Beteende</short>
+		<short xml:lang="tr">Davranış</short>
+		<short xml:lang="zh_CN">行为</short>
+		<option type="float" name="speed">
+		    <short>Speed</short>
+		    <short xml:lang="ca">Velocitat</short>
+		    <short xml:lang="de">Geschwindigkeit</short>
+		    <short xml:lang="el">Ταχύτητα</short>
+		    <short xml:lang="en_GB">Speed</short>
+		    <short xml:lang="es">Velocidad</short>
+		    <short xml:lang="fi">Nopeus</short>
+		    <short xml:lang="fr">Vitesse</short>
+		    <short xml:lang="gl">Velocidade</short>
+		    <short xml:lang="gu">ઝડપ</short>
+		    <short xml:lang="hi">गति</short>
+		    <short xml:lang="it">Velocità</short>
+		    <short xml:lang="ja">速度</short>
+		    <short xml:lang="nb">Hastighet</short>
+		    <short xml:lang="nl">Snelheid</short>
+		    <short xml:lang="pl">Szybkość</short>
+		    <short xml:lang="pt">Velocidade</short>
+		    <short xml:lang="pt_BR">Velocidade</short>
+		    <short xml:lang="sv">Hastighet</short>
+		    <short xml:lang="tr">Hız</short>
+		    <short xml:lang="zh_CN">速度</short>
+		    <long>Switcher speed</long>
+		    <default>4</default>
+		    <min>0.1</min>
+		    <max>50</max>
+		    <precision>0.1</precision>
+		</option>
+		<option type="float" name="timestep">
+		    <short>Timestep</short>
+		    <short xml:lang="de">Zeitschritt</short>
+		    <short xml:lang="el">Χρονικό Βήμα</short>
+		    <short xml:lang="en_GB">Timestep</short>
+		    <short xml:lang="fi">Aikaviive</short>
+		    <short xml:lang="fr">Intervalle</short>
+		    <short xml:lang="gl">Espazo de tempo</short>
+		    <short xml:lang="gu">સમયપગલું</short>
+		    <short xml:lang="hi">टाइमस्टैंप</short>
+		    <short xml:lang="it">Intervallo</short>
+		    <short xml:lang="ja">刻み時間</short>
+		    <short xml:lang="nb">Tidsskritt</short>
+		    <short xml:lang="nl">Tijdstap</short>
+		    <short xml:lang="pl">Krok czasu</short>
+		    <short xml:lang="pt">Espaço de tempo</short>
+		    <short xml:lang="pt_BR">Espaço de tempo</short>
+		    <short xml:lang="sv">Tidssteg</short>
+		    <short xml:lang="tr">Zaman aralığı</short>
+		    <short xml:lang="zh_CN">步长</short>
+		    <long>Switcher timestep</long>
+		    <default>1.2</default>
+		    <min>0.1</min>
+		    <max>50</max>
+		    <precision>0.1</precision>
+		</option>
+		<option type="match" name="window_match">
+		    <short>Switcher windows</short>
+		    <long>Windows that should be shown in switcher</long>
+		    <default>any</default>
+		</option>
+		<option type="bool" name="bring_to_front">
+		    <short>Bring To Front</short>
+		    <long>Bring selected window to front</long>
+		    <default>true</default>
+		</option>
+		<option type="bool" name="minimized">
+		    <short>Show Minimized</short>
+		    <short xml:lang="ca">Mostra minimitzat</short>
+		    <short xml:lang="de">Zeige minimierte Fenster an</short>
+		    <short xml:lang="el">Εμφάνιση Ελαχιστοποιημένου</short>
+		    <short xml:lang="en_GB">Show Minimised</short>
+		    <short xml:lang="fi">Näytä pienennetyt ikkunat</short>
+		    <short xml:lang="fr">Afficher les Fenêtres Minimisées</short>
+		    <short xml:lang="gl">Mostrar Fiestras Minimizadas</short>
+		    <short xml:lang="gu">ન્યૂનતમ બનાવેલ બતાવો</short>
+		    <short xml:lang="hi">न्यूनतम किया हुआ दिखाएँ</short>
+		    <short xml:lang="it">Mostrare minimizzata</short>
+		    <short xml:lang="ja">最小化を表示</short>
+		    <short xml:lang="nb">Vis minimerte</short>
+		    <short xml:lang="nl">Toon geminimaliseerd</short>
+		    <short xml:lang="pl">Pokazuj zminimalizowane okna</short>
+		    <short xml:lang="pt">Mostrar Janelas Minimizadas</short>
+		    <short xml:lang="pt_BR">Mostrar janelas minimizadas</short>
+		    <short xml:lang="sv">Visa minimerad</short>
+		    <short xml:lang="tr">Küçültülmüşleri Göster</short>
+		    <long>Show minimized windows</long>
+		    <default>true</default>
+		</option>
+		<option type="bool" name="auto_change_vp">
+		    <short>Auto Change Viewport</short>
+		    <long>Change to the viewport of the selected window while switching</long>
+		    <default>false</default>
+		</option>
+		<option type="float" name="popup_delay">
+		    <short>Popup Window Delay</short>
+		    <long>Time (in s) the popup window should be delayed before appearing</long>
+		    <default>0.0</default>
+		    <min>0.0</min>
+		    <max>2.0</max>
+		    <precision>0.05</precision>
+		</option>
+	    </group>
+	    <group>
+		<short>Appearance</short>
+		<short xml:lang="ca">Aparença</short>
+		<short xml:lang="de">Aussehen</short>
+		<short xml:lang="el">Εμφάνιση</short>
+		<short xml:lang="en_GB">Appearance</short>
+		<short xml:lang="es">Apariencia</short>
+		<short xml:lang="eu">Itxura</short>
+		<short xml:lang="fi">Ulkoasu</short>
+		<short xml:lang="fr">Apparence</short>
+		<short xml:lang="gl">Aparencia</short>
+		<short xml:lang="gu">દેખાવ</short>
+		<short xml:lang="hi">प्रकटन</short>
+		<short xml:lang="it">Aspetto</short>
+		<short xml:lang="ja">外観</short>
+		<short xml:lang="nb">Utseende</short>
+		<short xml:lang="nl">Verschijning</short>
+		<short xml:lang="pl">Wygląd</short>
+		<short xml:lang="pt">Aparência</short>
+		<short xml:lang="pt_BR">Aparência</short>
+		<short xml:lang="sv">Utseende</short>
+		<short xml:lang="tr">Görünüm</short>
+		<short xml:lang="zh_CN">外观</short>
+		<option type="int" name="saturation">
+		    <short>Saturation</short>
+		    <short xml:lang="ar">قوة الألوان</short>
+		    <short xml:lang="bn">সম্পৃক্তি</short>
+		    <short xml:lang="ca">Saturació</short>
+		    <short xml:lang="de">Sättigung</short>
+		    <short xml:lang="el">Κορεσμός</short>
+		    <short xml:lang="en_GB">Saturation</short>
+		    <short xml:lang="es">Saturación</short>
+		    <short xml:lang="eu">Saturazioa</short>
+		    <short xml:lang="fi">Kylläisyys</short>
+		    <short xml:lang="fr">Saturation</short>
+		    <short xml:lang="gl">Contrastes</short>
+		    <short xml:lang="gu">સંતુલન</short>
+		    <short xml:lang="hi">संतृप्ति</short>
+		    <short xml:lang="it">Saturazione</short>
+		    <short xml:lang="ja">彩度</short>
+		    <short xml:lang="nb">Metning</short>
+		    <short xml:lang="nl">Verzadiging</short>
+		    <short xml:lang="pl">Nasycenie</short>
+		    <short xml:lang="pt">Contraste</short>
+		    <short xml:lang="pt_BR">Saturação</short>
+		    <short xml:lang="ru">Насыщенность</short>
+		    <short xml:lang="sv">Mättnad</short>
+		    <short xml:lang="tr">Doygunluk</short>
+		    <short xml:lang="zh_CN">饱和度</short>
+		    <long>Amount of saturation in percent</long>
+		    <default>50</default>
+		    <min>0</min>
+		    <max>100</max>
+		</option>
+		<option type="int" name="brightness">
+		    <short>Brightness</short>
+		    <short xml:lang="ar">النصوع</short>
+		    <short xml:lang="bn">উজ্জ্বলতা</short>
+		    <short xml:lang="ca">Brillantor</short>
+		    <short xml:lang="de">Helligkeit</short>
+		    <short xml:lang="el">Φωτεινότητα</short>
+		    <short xml:lang="en_GB">Brightness</short>
+		    <short xml:lang="es">Brillo</short>
+		    <short xml:lang="eu">Disdira</short>
+		    <short xml:lang="fi">Kirkkaus</short>
+		    <short xml:lang="fr">Luminosité</short>
+		    <short xml:lang="gl">Brillo</short>
+		    <short xml:lang="gu">તેજસ્વીતા</short>
+		    <short xml:lang="hi">चमकीलापन</short>
+		    <short xml:lang="it">Luminosità</short>
+		    <short xml:lang="ja">明度</short>
+		    <short xml:lang="nb">Skarphet</short>
+		    <short xml:lang="nl">Helderheid</short>
+		    <short xml:lang="pl">Jasnosć</short>
+		    <short xml:lang="pt">Brilho</short>
+		    <short xml:lang="pt_BR">Brilho</short>
+		    <short xml:lang="ru">Яркость</short>
+		    <short xml:lang="sv">Ljusstyrka</short>
+		    <short xml:lang="tr">Parlaklık</short>
+		    <short xml:lang="zh_CN">亮度</short>
+		    <long>Amount of brightness in percent</long>
+		    <default>50</default>
+		    <min>0</min>
+		    <max>100</max>
+		</option>
+		<option type="int" name="opacity">
+		    <short>Opacity</short>
+		    <short xml:lang="ar">اللاشفافية</short>
+		    <short xml:lang="bn">অস্বচ্ছতা</short>
+		    <short xml:lang="ca">Opacitat</short>
+		    <short xml:lang="de">Sichtbarkeit</short>
+		    <short xml:lang="el">Αδιαφάνεια</short>
+		    <short xml:lang="en_GB">Opacity</short>
+		    <short xml:lang="es">Transparencia</short>
+		    <short xml:lang="eu">Opakutasun</short>
+		    <short xml:lang="fi">Läpinäkyvyys</short>
+		    <short xml:lang="fr">Opacité</short>
+		    <short xml:lang="gl">Opacidade</short>
+		    <short xml:lang="gu">અપારદર્શકતા</short>
+		    <short xml:lang="hi">अपारदर्शिता</short>
+		    <short xml:lang="it">Opacità</short>
+		    <short xml:lang="ja">不透明度</short>
+		    <short xml:lang="nb">Dekkevne</short>
+		    <short xml:lang="nl">Ondoorzichtigheid</short>
+		    <short xml:lang="pl">Nieprzezroczystość</short>
+		    <short xml:lang="pt">Opacidade</short>
+		    <short xml:lang="pt_BR">Opacidade</short>
+		    <short xml:lang="ru">Непрозрачность</short>
+		    <short xml:lang="sv">Opacitet</short>
+		    <short xml:lang="tr">Matlık</short>
+		    <short xml:lang="zh_CN">不透明度</short>
+		    <long>Amount of opacity in percent</long>
+		    <default>100</default>
+		    <min>0</min>
+		    <max>100</max>
+		</option>
+		<option type="bool" name="icon">
+		    <short>Icon</short>
+		    <long>Show icon next to thumbnail</long>
+		    <default>true</default>
+		</option>
+		<option type="bool" name="mipmap">
+		    <short>Mipmap</short>
+		    <long>Generate mipmaps when possible for higher quality scaling</long>
+		    <default>true</default>
+		</option>
+		<option type="int" name="row_align">
+		    <short>Row Alignment</short>
+		    <long>Alignment for rows that are not fully filled</long>
+		    <default>1</default>
+		    <min>0</min>
+		    <max>1</max>
+		    <desc>
+			<value>0</value>
+			<name>Left</name>
+			<name xml:lang="ar">يسار</name>
+			<name xml:lang="bn">বাম</name>
+			<name xml:lang="ca">Esquerra</name>
+			<name xml:lang="de">Links</name>
+			<name xml:lang="el">Αριστερά</name>
+			<name xml:lang="en_GB">Left</name>
+			<name xml:lang="es">Izquierda</name>
+			<name xml:lang="eu">Ezkerra</name>
+			<name xml:lang="fi">Vasen</name>
+			<name xml:lang="fr">Gauche</name>
+			<name xml:lang="gl">Para a esquerda</name>
+			<name xml:lang="gu">ડાબું</name>
+			<name xml:lang="hi">बायाँ</name>
+			<name xml:lang="it">Sinistra</name>
+			<name xml:lang="ja">左</name>
+			<name xml:lang="nb">Venstre</name>
+			<name xml:lang="nl">Links</name>
+			<name xml:lang="pl">W lewo</name>
+			<name xml:lang="pt">Para a esquerda</name>
+			<name xml:lang="pt_BR">Para a esquerda</name>
+			<name xml:lang="sv">Vänster</name>
+			<name xml:lang="tr">Sol</name>
+			<name xml:lang="zh_CN">左</name>
+		    </desc>
+		    <desc>
+			<value>1</value>
+			<name>Centered</name>
+			<name xml:lang="it">Centrato</name>
+			<name xml:lang="ja">中央</name>
+			<name xml:lang="pt">Centrada</name>
+		    </desc>
+		</option>
+	    </group>
+	</screen>
+    </plugin>
+</compiz>

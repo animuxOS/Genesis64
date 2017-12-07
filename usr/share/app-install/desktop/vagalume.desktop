@@ -1,0 +1,22 @@
+[Desktop Entry]
+X-AppInstall-Package=vagalume
+X-AppInstall-Popcon=28
+X-AppInstall-Section=main
+
+Version=1.0
+Type=Application
+Categories=Audio;AudioVideo;GNOME;GTK;Application;Player;
+Name=Vagalume Last.fm Client
+Exec=/usr/bin/vagalume
+Icon=vagalume
+X-Icon-path=
+X-Window-Icon=vagalume
+X-HildonDesk-ShowInToolbar=true
+X-Osso-Service=com.igalia.vagalume
+X-Osso-Type=application/x-executable
+X-Osso-URI-Actions=lastfm;
+
+[X-Osso-URI-Action Handler lastfm]
+Method=PlayUrl
+Name=uri_link_play
+TranslationDomain=osso-uri

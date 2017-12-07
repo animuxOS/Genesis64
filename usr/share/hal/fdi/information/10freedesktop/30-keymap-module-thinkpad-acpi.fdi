@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> <!-- -*- SGML -*- -->
+
+<deviceinfo version="0.2">
+  <device>
+    <!-- These are buttons synthesized in the thinkpad-acpi kernel module -->
+    <match key="input.product" string="ThinkPad Extra Buttons">
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="IBM">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="600">
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
+          <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
+          <append key="input.keymap.data" type="strlist">0x07:search</append> <!-- Fn+F8 screen expand -->
+          <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
+          <append key="input.keymap.data" type="strlist">0x17:vendor</append> <!-- ThinkPad/ThinkVantage button -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="750">
+          <append key="input.keymap.data" type="strlist">0x02:battery</append> <!-- Fn+F3 battery -->
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
+          <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
+          <append key="input.keymap.data" type="strlist">0x07:search</append> <!-- Fn+F8 screen expand -->
+          <append key="input.keymap.data" type="strlist">0x0a:mode</append> <!-- Fn+F11 power mode -->
+          <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
+          <append key="input.keymap.data" type="strlist">0x17:vendor</append> <!-- ThinkPad/ThinkVantage button -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="R5">
+          <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
+          <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 switch wifi -->
+          <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
+          <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
+          <append key="input.keymap.data" type="strlist">0x0f:brightnessup</append> <!-- Fn+Home -->
+          <append key="input.keymap.data" type="strlist">0x10:brightnessdown</append> <!-- Fn+End -->
+          <append key="input.keymap.data" type="strlist">0x13:zoom</append> <!-- Fn+Space -->
+          <append key="input.keymap.data" type="strlist">0x17:vendor</append> <!-- ThinkPad/ThinkVantage button -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains_outof="T3;X2;R3;A2">
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
+          <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
+          <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
+          <append key="input.keymap.data" type="strlist">0x0f:brightnessup</append> <!-- Fn+Home -->
+          <append key="input.keymap.data" type="strlist">0x10:brightnessdown</append> <!-- Fn+End -->
+          <append key="input.keymap.data" type="strlist">0x13:zoom</append> <!-- Fn+Space -->
+          <append key="input.keymap.data" type="strlist">0x17:vendor</append> <!-- ThinkPad/ThinkVantage button -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="T4">
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
+          <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 switch radio -->
+          <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
+          <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
+          <append key="input.keymap.data" type="strlist">0x0f:brightnessup</append> <!-- Fn+Home -->
+          <append key="input.keymap.data" type="strlist">0x10:brightnessdown</append> <!-- Fn+End -->
+          <append key="input.keymap.data" type="strlist">0x13:zoom</append> <!-- Fn+Space -->
+          <append key="input.keymap.data" type="strlist">0x17:vendor</append> <!-- ThinkPad/ThinkVantage button -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains_outof="X3;G40">
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
+          <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
+          <append key="input.keymap.data" type="strlist">0x07:radio</append> <!-- Fn+F8 switch radio -->
+          <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
+          <append key="input.keymap.data" type="strlist">0x0f:brightnessup</append> <!-- Fn+Home -->
+          <append key="input.keymap.data" type="strlist">0x10:brightnessdown</append> <!-- Fn+End -->
+          <append key="input.keymap.data" type="strlist">0x13:zoom</append> <!-- Fn+Space -->
+          <append key="input.keymap.data" type="strlist">0x17:vendor</append> <!-- ThinkPad/ThinkVantage button -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="X4">
+          <append key="input.keymap.data" type="strlist">0x02:screenlock</append> <!-- Fn+F3 lock -->
+          <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
+          <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 switch radio -->
+          <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
+          <append key="input.keymap.data" type="strlist">0x08:f24</append> <!-- Fn+F9 undock -->
+          <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
+          <append key="input.keymap.data" type="strlist">0x0f:brightnessup</append> <!-- Fn+Home -->
+          <append key="input.keymap.data" type="strlist">0x10:brightnessdown</append> <!-- Fn+End -->
+          <append key="input.keymap.data" type="strlist">0x13:zoom</append> <!-- Fn+Space -->
+          <append key="input.keymap.data" type="strlist">0x17:vendor</append> <!-- ThinkPad/ThinkVantage button -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
+
+      <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="LENOVO">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains_outof="X6;Z6">
+          <append key="input.keymap.data" type="strlist">0x01:screenlock</append> <!-- Fn+F2 lock -->
+          <append key="input.keymap.data" type="strlist">0x02:battery</append> <!-- Fn+F3 battery -->
+          <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
+          <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 wifi -->
+          <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
+          <append key="input.keymap.data" type="strlist">0x07:f22</append> <!-- Fn+F8 touchpadtoggle -->
+          <append key="input.keymap.data" type="strlist">0x08:f24</append> <!-- Fn+F9 undock -->
+          <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
+          <append key="input.keymap.data" type="strlist">0x0f:brightnessup</append> <!-- Fn+Home -->
+          <append key="input.keymap.data" type="strlist">0x10:brightnessdown</append> <!-- Fn+End -->
+          <append key="input.keymap.data" type="strlist">0x13:zoom</append> <!-- Fn+Space -->
+          <append key="input.keymap.data" type="strlist">0x17:vendor</append> <!-- ThinkPad/ThinkVantage button -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="T6">
+          <append key="input.keymap.data" type="strlist">0x01:screenlock</append> <!-- Fn+F2 lock -->
+          <append key="input.keymap.data" type="strlist">0x02:battery</append> <!-- Fn+F3 battery -->
+          <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
+          <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 wifi -->
+          <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
+          <append key="input.keymap.data" type="strlist">0x07:f22</append> <!-- Fn+F8 touchpadtoggle -->
+          <append key="input.keymap.data" type="strlist">0x08:f24</append> <!-- Fn+F9 undock -->
+          <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
+          <append key="input.keymap.data" type="strlist">0x0f:brightnessup</append> <!-- Fn+Home -->
+          <append key="input.keymap.data" type="strlist">0x10:brightnessdown</append> <!-- Fn+End -->
+          <append key="input.keymap.data" type="strlist">0x11:kbdillumtoggle</append> <!-- Fn+PgUp - ThinkLight -->
+          <append key="input.keymap.data" type="strlist">0x14:volumeup</append> <!-- Volume Up button -->
+	  <append key="input.keymap.data" type="strlist">0x15:volumedown</append> <!-- Volume Down button -->
+          <append key="input.keymap.data" type="strlist">0x16:mute</append> <!-- Mute button -->
+          <append key="input.keymap.data" type="strlist">0x13:zoom</append> <!-- Fn+Space -->
+          <append key="input.keymap.data" type="strlist">0x17:vendor</append> <!-- ThinkPad/ThinkVantage button -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.version" contains="R6">
+          <append key="input.keymap.data" type="strlist">0x01:screenlock</append> <!-- Fn+F2 lock -->
+          <append key="input.keymap.data" type="strlist">0x02:battery</append> <!-- Fn+F3 battery -->
+          <append key="input.keymap.data" type="strlist">0x03:sleep</append> <!-- Fn+F4 suspend -->
+          <append key="input.keymap.data" type="strlist">0x04:radio</append> <!-- Fn+F5 wifi -->
+          <append key="input.keymap.data" type="strlist">0x06:switchvideomode</append> <!-- Fn+F7 switch video output device -->
+          <append key="input.keymap.data" type="strlist">0x07:prog1</append> <!-- Fn+F8 ultranav -->
+          <append key="input.keymap.data" type="strlist">0x08:ejectcd</append> <!-- Fn+F9 eject -->
+          <append key="input.keymap.data" type="strlist">0x0b:suspend</append> <!-- Fn+F12 hibernate -->
+          <append key="input.keymap.data" type="strlist">0x0f:brightnessup</append> <!-- Fn+Home -->
+          <append key="input.keymap.data" type="strlist">0x10:brightnessdown</append> <!-- Fn+End -->
+          <append key="input.keymap.data" type="strlist">0x13:zoom</append> <!-- Fn+Space -->
+          <append key="input.keymap.data" type="strlist">0x17:vendor</append> <!-- ThinkPad/ThinkVantage button -->
+          <append key="info.capabilities" type="strlist">input.keymap</append>
+        </match>
+      </match>
+    </match>
+  </device>
+</deviceinfo>
+

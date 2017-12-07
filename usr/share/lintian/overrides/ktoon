@@ -1,0 +1,10 @@
+# No -dev package for ktoon.
+ktoon: non-dev-pkg-with-shlib-symlink usr/lib/libstore.so.1.0.0 usr/lib/libstore.so
+ktoon: non-dev-pkg-with-shlib-symlink usr/lib/libktoon.so.1.0.0 usr/lib/libktoon.so
+ktoon: non-dev-pkg-with-shlib-symlink usr/lib/libdgui.so.1.0.0 usr/lib/libdgui.so
+ktoon: non-dev-pkg-with-shlib-symlink usr/lib/libdcore.so.1.0.0 usr/lib/libdcore.so
+# Few sonames contained in ktoon.
+ktoon: package-name-doesnt-match-sonames libdcore1 libdgui1 libktoon1 libstore1
+# Extra COPYING files called by program.
+ktoon: extra-license-file usr/share/ktoon/data/en/COPYING
+ktoon: extra-license-file usr/share/ktoon/data/es/COPYING

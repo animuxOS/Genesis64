@@ -1,0 +1,59 @@
+<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
+<kpartgui version="1" name="kdar" >
+ <MenuBar>
+  <Menu name="File" >
+   <text>&amp;File</text>
+   <Action name="select_archive" />
+   <Action name="open_recent" />
+   <Separator/>
+   <Action name="quit" />
+  </Menu>
+  <Menu name="Archive" >
+   <text>&amp;Archive</text>
+   <Action name="list_archive" />
+   <Action name="extract_archive" />
+   <Action name="isolate_archive" />
+   <Separator/>
+   <Action name="test_archive" />
+   <Action name="diff_archive" />
+   <Separator/>
+   <Action name="create_archive" />
+   <Separator/>
+   <Action name="stop_operation" />
+  </Menu>
+  <Menu name="Messages" >
+   <text>&amp;Messages</text>
+   <Action name="print" />
+   <Action name="clear_messages" />
+  </Menu>
+  <Menu name="settings" noMerge="1"><text>&amp;Settings</text>
+   <Action name="show_logwindow"/>
+   <Action name="options_show_toolbar"/>
+   <Action name="options_show_statusbar"/>
+   <Separator/>
+   <Action name="options_configure_keybinding"/>
+   <Action name="options_configure_toolbars"/>
+   <Action name="options_configure"/>
+  </Menu>
+ </MenuBar>
+ <ToolBar newline="true" noMerge="1" name="mainToolBar" fullWidth="true" >
+  <text>Main Toolbar</text>
+  <Action name="file_quit" />
+  <Action name="select_archive" />
+  <Separator name="separator_4" />
+  <Action name="list_archive" />
+  <Action name="extract_archive" />
+  <Action name="isolate_archive" />
+  <Separator name="separator_3" />
+  <Action name="diff_archive" />
+  <Action name="test_archive" />
+  <Separator name="separator_2" />
+  <Action name="create_archive" />
+  <Separator name="separator_1" />
+  <Action name="log_window" />
+  <Action name="options_configure" />
+  <Action name="stop_operation" />
+  <Separator name="separator_0" />
+  <Action name="quit" />
+ </ToolBar>
+</kpartgui>

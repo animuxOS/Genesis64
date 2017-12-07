@@ -1,0 +1,25 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" -a ! -z "$2" ]; then
+
+	# Newer versions of ndiswrapper (> 1.0rc3) expect conf files to have
+	# the bustype in the file name.  So, for upgrades from older versions,
+	# assume a bustype of PCI ('5'), and make appropriate symlinks.
+	if dpkg --compare-versions "$2" lt "1.0-1"; then
+		confs=/etc/ndiswrapper/*/*.conf
+		if [ "$confs" != "$(echo $confs)" ]; then
+			for c in $confs; do
+				match=$(basename $c | grep -o ':[0-9]\+\.[0-9]\.conf' || true)
+				if [ -z "$match" ]; then
+					ln -sf "$(basename $c)" "${c%.conf}.5.conf"
+				fi
+			done
+		fi
+	fi
+fi
+
+
+
+exit 0

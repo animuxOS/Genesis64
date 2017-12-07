@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE greeter SYSTEM "greeter.dtd">
+<greeter>
+ 
+	<!-- background -->
+	<item type="svg" background="true">
+		<normal file="background.svg"/>
+		<pos x="0" y="0" width="100%" height="100%"/>
+	</item>
+
+	<!-- Messages/warnings -->
+	<!-- timer warning -->
+		<item type="label" id="timed-label">
+			<pos anchor="c" x="50%" y="90%"/>
+			<normal font="Sans 11" color="#FFFFFF"/>
+			<stock type="timed-label"/>
+			<show type="timed"/>
+		</item>
+
+	<!-- CAPS-LOCK warning -->
+		<item type="label" id="caps-lock-warning">
+			<pos anchor="c" x="50%" y="85%"/>
+			<normal font="Sans Bold 11" color="#FF3300"/>
+			<stock type="caps-lock-warning"/>
+		</item>
+	<!-- pam error -->
+		<item type="label" id="pam-error">
+			<pos anchor="c" x="50%" y="96%"/>
+			<normal font="Sans 11" color="#FFFFFF"/>
+			<text/>
+		</item>
+
+
+	<!-- login window -->
+	<item type="rect">
+		<pos anchor="center" x="50%" y="50%" width="550" height="462"/>
+		<fixed>	
+			<!-- login window backdrop -->
+			<item type="pixmap">
+				<normal file="ecran.png"/>
+				<pos anchor="center" x="50%" y="50%"/>
+			</item>
+
+
+			
+			<!-- username/password label & entry container -->
+			<item type="rect">
+				<pos anchor="n" x="43.5%" y="278" height="box" width="box"/>
+				<box orientation="horizontal" spacing="20" expand="true">
+
+					<!-- username/password label -->
+					<item type="label" id="pam-prompt">
+						<pos x="0"/>
+						<normal color="#C1ABAB" font="Sans 9"/>
+						<stock type="username-label"/>
+					</item>
+
+					<!-- username/password entry -->
+					<item type="entry" id="user-pw-entry">
+						<pos y="1"/>
+						<normal color="#000000" font="Sans 9"/>
+						<pos width="140" height="18"/>
+					</item>
+				</box>
+			</item>
+		
+			<!-- The list itself -->
+      <item type="rect">
+	<!--  height-= 30 + * + 8 + 30 + 54 + 30 = -->
+	<pos anchor="n" x="53%" y="60%" width="180" height="-440"/>
+      	<fixed>
+	  <!-- The same background trick for userlist. -->
+	  <!-- top -->
+	  <item type="pixmap">
+	    <normal file="entry-0-0.png"/>
+	    <pos x="0" y="0" />
+	  </item>
+
+	  <item type="pixmap">
+	    <normal file="entry-1-0.png"/>
+	    <pos x="10" width="-20" y="0" />
+	  </item>
+
+	  <item type="pixmap">
+	    <normal file="entry-2-0.png"/>
+	    <pos x="-10" y="0" />
+	  </item>
+
+	  <!-- body -->
+	  <item type="pixmap">
+	    <normal file="entry-0-1.png"/>
+	    <pos x="0" y="10" height="-20"/>
+	  </item>
+
+	  <item type="pixmap">
+	    <normal file="entry-1-1.png"/>
+	    <pos x="10" y="10" width="-20" height="-20"/>
+	  </item>
+
+	  <item type="pixmap">
+	    <normal file="entry-2-1.png"/>
+	    <pos x="-10" y="10" height="-20"/>
+	  </item>
+
+	  <!-- bottom -->
+	  <item type="pixmap">
+	    <normal file="entry-0-2.png"/>
+	    <pos x="0" y="-10"/>
+	  </item>
+
+	  <item type="pixmap">
+	    <normal file="entry-1-2.png"/>
+	    <pos x="10" y="-10" width="-20"/>
+	  </item>
+
+	  <item type="pixmap">
+	    <normal file="entry-2-2.png"/>
+	    <pos x="-10" y="-10"/>
+	  </item>
+
+      	</fixed>
+      </item>
+	</fixed>
+</item>
+
+			<!-- lower button container -->
+<item type="rect">
+	<pos x="165" y="99%" anchor="s" width="box" height="box"/>
+	<box orientation="horizontal" spacing="10" >
+			<!-- session button -->
+			<item type="rect" id="session_button" button="true">
+				<pos x="0" y="0" width="box" height="box"/>
+				<box xpadding="0" spacing="1" ypadding="1" orientation="horizontal">
+				       	<item type="svg">
+						<normal file="session.svg"/>
+						<pos width="100%" height="100%"/>
+		                	</item>
+					<item type="label">
+						<normal font="Sans 8" color="#ffffff"/>
+						<pos y="50%" anchor="w"/>
+						<text>session</text>	
+					</item>
+				</box>
+			</item>
+
+			<!--options button-->
+			<item type="rect" id="options_button" button="true">
+				<pos x="0" y="0" width="box" height="box"/>
+				<box xpadding="10" spacing="1" ypadding="1" orientation="horizontal">
+					<item type="svg">
+						<normal file="options.svg"/>
+						<pos width="100%" height="100%"/>
+				       	</item>
+					<item type="label">
+						<normal font="Sans 8" color="#ffffff"/>
+						<pos y="50%" anchor="w"/>
+						<text>options</text>	
+					</item>
+				</box>
+			</item>
+	</box>
+</item>
+
+			<!-- upper button container -->
+<item type="rect">
+	<pos x="158" y="91%" anchor="s" width="box" height="box"/>
+	<box orientation="horizontal" spacing="8">
+			<!-- shutdown button -->
+			<item type="rect" id="halt_button" button="true">
+				<pos x="0" y="0" width="box" height="box"/>
+				<box xpadding="0" spacing="1" ypadding="1" orientation="horizontal">
+				       	<item type="svg">
+						<normal file="shutdown.svg"/>
+						<pos width="100%" height="100%"/>
+		                	</item>
+					<item type="label">
+						<normal font="Sans 8" color="#ffffff"/>
+						<pos y="50%" anchor="w"/>
+						<text>shutdown</text>	
+					</item>
+				</box>
+			</item>
+
+			<!--reboot button-->
+			<item type="rect" id="reboot_button" button="true">
+				<pos x="0" y="0" width="box" height="box"/>
+				<box spacing="1" ypadding="0" orientation="horizontal">
+					<item type="svg">
+						<normal file="restart.svg"/>
+						<pos width="100%" height="100%"/>
+				       	</item>
+					<item type="label">
+						<normal font="Sans 8" color="#ffffff"/>
+						<pos y="50%" anchor="w"/>
+						<text>restart</text>	
+					</item>
+				</box>
+			</item>
+	</box>
+</item>
+
+
+</greeter>

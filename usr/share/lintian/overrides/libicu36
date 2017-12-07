@@ -1,0 +1,6 @@
+# libicu36 installs multiple shared libraries, none of which is
+# actually called libicu.so.36, but all of which are libicu*.so.36.
+libicu36: package-name-doesnt-match-sonames
+# libicudata.so.36.0 contains static data only
+libicu36: shared-lib-without-dependency-information
+libicu36: shlib-without-PT_GNU_STACK-section usr/lib/libicudata.so.36.0

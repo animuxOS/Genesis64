@@ -1,0 +1,178 @@
+#!/bin/bash
+#    jigl2slideshow
+#    Copyright 2003 Scott Merrill <skippy at skippy.net>
+#    adapted from gallery2slideshow by Scott Dylewski  <scott at dylewski.com>
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program; if not, write to the Free Software
+#    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
+version='0.4'
+changes ()
+{
+echo ' Changes:
+0.4	-i switch not required for input file
+0.3	Added fadein before first picture and fadeout at the end  
+0.2	Scott <scott at dylewski.com>  Changed typo [ -n $output_dir ]  
+	to [ -z $output_dir ] 
+0.1	Initial release'
+}
+
+# set defaults
+duration="10";
+output_dir="";
+gallery_path="";
+crossfade=0
+
+help ()
+{
+echo "jigl2slideshow $version"
+echo "jigl2slideshow is part of the dvd-slideshow set of tools."
+echo 'http://freshmeat.net/dvdslideshow'
+echo 'Copyright 2003 Scott Merrill <skippy at skippy.net>'
+echo 'Copyright 2003 Scott Dylewski <scott at dylewski.com>'
+echo
+echo  '
+jigl2slideshow description: 
+ Generates a text file listing of the pictures visible in a given 
+ jigl (http://xome.net/projects/jigl/) photo album
+ in order to easily pass the information to dvd_slideshow
+
+Usage: jigl2slideshow -o <output_file> -t <time_per_picture> <path_to_album>
+	
+Options: 
+ path_to_album 
+	  Path to the gallery.dat that you want to generate a slideshow for.
+ 
+ -o output_directory
+	  Path to the directory where you want to output file written.
+ 
+ -t time_per_picture
+	  Integer number of seconds for each picture to be displayed.
+ 		
+ -h or -help 
+   Prints this help.'
+}
+
+if [ $# -lt 1 ]; then
+	help
+	exit 1
+fi
+
+
+## setup initial variables:
+debug=0  # 1 or 0
+
+for arg
+do
+	case "$arg" in
+	-i) shift ; gallery_path="$1" ; shift ;;
+	-o) shift; output_dir="$1"; shift ;;
+        -t) shift; duration="$1"; shift ;; 
+# need to do more work to get this working:
+#        -c) shift; crossfade=1; crossfade_duration="$1"; shift ;;
+	-h) help ; exit 0 ; shift ;;
+	-?) help ; exit 0 ; shift ;;
+	-help) help ; exit 0 ; shift ;;
+	esac
+done
+if [ -z "$gallery_path" ] ; then
+        gallery_path="$1"
+fi
+if [ -z "$gallery_path" ] ; then
+        echo "[jigl2slideshow] Error: No album specified"
+        exit 1
+fi
+
+
+# sanity checking
+# did the user give us a valid input file to work with?
+if [ ! -f $gallery_path ]; then
+# it's not a regular file
+        if [ ! -d $gallery_path ]; then
+        # it's not a directory!
+                echo "Bogus input file (-i $gallery_path)!"
+                exit 1;
+        else
+        # it is a directory, so use gallery.dat
+		echo "*** Using gallery.dat in $gallery_path";
+                gallery="gallery.dat";
+		if [ ! -f $gallery_path/$gallery ]; then
+		# there's no gallery.dat file there!
+			echo "No such file $gallery_path/$gallery!";
+			echo "Aborting!";
+			exit 1;
+		fi
+        fi
+else
+# it is a regular file!
+        gallery=`basename "${gallery_path}"`;
+        gallery_path=`echo $gallery_path | sed -e "s/$gallery//"`;
+fi
+
+# make sure $gallery_path has no trailing slash
+gallery_path=`echo $gallery_path | sed -e 's/\/$//'`;
+
+# did the user give us a valid destination directory?
+# if I was really good, I'd check permissions to ensure we can _write_ there
+# but I suck and should be destroyed
+if [ -z $output_dir ]; then
+	# no output directory specified!
+	echo "Invalid output destination (-o $output_dir)!";
+	echo "*** Using $gallery_path instead.";
+	output_dir=$gallery_path;
+fi
+if [ ! -d $output_dir ]; then
+	# I'm sure it was a simple typo.
+        echo "Invalid output destination (-o $output_dir)!";
+        echo "*** Using $gallery_path instead.";
+        output_dir=$gallery_path;
+fi
+
+# make sure $output_dir has no trailing slash
+output_dir=`echo $output_dir | sed -e 's/\/$//'`;
+
+cleanup ()
+{
+	## clean up temporary files
+	echo "All done!";
+	echo "Enjoy your new $output_dir/pictures_list.txt!";
+}
+
+forcequit () ## function gets run when we have some sort of forcequit...
+{
+	## clean up temporary files
+	cleanup
+}
+
+trap 'forcequit' INT
+trap 'forcequit' KILL
+trap 'forcequit' TERM
+
+## snag the title from the gallery.dat file
+title_bit="INDEX-TITLE ---- ";
+title=`grep "$title_bit" $gallery_path/$gallery | sed -e "s/$title_bit//"`;
+echo title:$duration:$title > $output_dir/picture_list.txt;
+
+## fade in after title:
+echo "background:1" >> "${output_dir}/picture_list.txt"
+echo "fadein:1" >> "${output_dir}/picture_list.txt"
+
+`grep -i .jpg $gallery_path/$gallery | sed -e "s/ ---- /:$duration:/" -e "s#^#$gallery_path/#" >> $output_dir/picture_list.txt`;
+
+## fade out at end
+echo "fadeout:1" >> "${output_dir}/picture_list.txt"
+echo "background:1" >> "${output_dir}/picture_list.txt"
+
+cleanup
+

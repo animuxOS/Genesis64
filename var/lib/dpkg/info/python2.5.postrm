@@ -1,0 +1,22 @@
+#! /bin/sh
+
+set -e
+
+if [ "$1" = remove ]; then
+    ldconfig
+fi
+
+# Automatically added by dh_installmenu
+if [ -x "`which update-menus 2>/dev/null`" ]; then update-menus ; fi
+# End automatically added section
+
+#! /bin/sh -e
+
+if [ "$1" = "remove" ]; then
+    ldconfig
+fi
+
+# Automatically added by dh_installmenu
+if [ -x "`which update-menus 2>/dev/null`" ]; then update-menus ; fi
+# End automatically added section
+

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+  install)
+  	if [ "$(dpkg --print-architecture)" = "ia64" ] ; then
+	  dpkg-divert --divert /usr/bin/ldd.ia32-libs --quiet --rename --package ia32-libs --add /usr/bin/ldd
+        fi;;
+  upgrade)
+    if [ "$(dpkg --print-architecture)" = "ia64" ]; then
+        dpkg-divert --divert /usr/bin/ldd.ia32-libs --quiet --rename --package ia32-libs --add /usr/bin/ldd
+    fi;;
+esac
+
+

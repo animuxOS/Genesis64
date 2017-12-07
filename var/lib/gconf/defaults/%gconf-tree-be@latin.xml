@@ -1,0 +1,641 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="Ci ŭklučać kampanent PKCS#11 dla klučnika.">
+                                                        <longdesc>Hetaja opcyja ŭklučaje kampanent PKCS#11 dla demana gnome-keyring. Opcyja ŭździejničaje tolki pry ŭruchamleńni demana gnome-keyring-daemon, h.zn. kali karystalnik uvachodzić u systemu. Hetaja nałada moža być źmieniena z dapamohaj peŭnych arhumentaŭ zahadnaha radka, pieradadzienych demanu.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="Ci ŭklučać agenta SSH dla klučnika.">
+                                                        <longdesc>Hetaja opcyja ŭklučaje agenta SSH dla demana gnome-keyring. Opcyja ŭździejničaje tolki pry ŭruchamleńni demana gnome-keyring-daemon, h.zn. kali karystalnik uvachodzić u systemu. Hetaja nałada moža być źmieniena z dapamohaj peŭnych arhumentaŭ zahadnaha radka, pieradadzienych demanu.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Šyrynia vakna">
+                                                        <longdesc>Šyrynia pakazvanaha vakna</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Vyšynia vakna">
+                                                        <longdesc>Vyšynia pakazvanaha vakna</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Zahady, uklučanyja ŭ adkaz na ŭžyćcio klavišnych skarotaŭ">
+                                                        <longdesc>Klučy /apps/metacity/global_keybindings/run_command_N akreślivajuć klavišnyja skaroty, jakija adpaviadajuć hetym zahadam. Užyćcio skarotu, zapisanaha ŭ run_command_N pryčynicca da vykanańnia zahadu, zapisanaha ŭ command_N.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Zahad zrabić zdymak vakna">
+                                                        <longdesc>Kluč /apps/metacity/global_keybindings/run_command_window_screenshot akreślivaje klavišny skarot, jaki vyklikaje zahady, akreślenyja hetaj naładaj.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Zahad zrabić zdymak ekranu">
+                                                        <longdesc>Kluč /apps/metacity/global_keybindings/run_command_screenshot akreślivaje klavišny skarot, jaki vyklikaje zahad, akreśleny hetaj naładaj.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Uruchamleńnie aznačanaha zahadu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Uruchamleńnie terminału">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Zrabi zdymak vakna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Zrabi zdymak ekranu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Pakažy vakno ŭruchamleńnia paneli">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Pakažy menu paneli">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Pieraklučeńnie na nižejšy rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Pieraklučeńnie na vyšejšy rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Pieraklučeńnie na pravy rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Pieraklučeńnie na levy rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Pieraklučeńnie na 12-ty rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Pieraklučeńnie na 11-ty rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Pieraklučeńnie na 10-ty rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Pieraklučeńnie na 9-ty rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Pieraklučeńnie na 8-my rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Pieraklučeńnie na 7-my rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Pieraklučeńnie na 6-ty rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Pieraklučeńnie na 5-ty rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Pieraklučeńnie na 4-ty rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Pieraklučeńnie na 3-ci rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Pieraklučeńnie na 2-hi rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Pieraklučeńnie na 1-šy rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Ukryćcio ŭsich voknaŭ i pieradača fokusu na stoł">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Pierachod nazad pamiž panelami i stałom">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Nieadkładny prachod pamiž panelami j stałom">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Nieadkładny prachod nazad pamiž voknami">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Nieadkładny prachod pamiž voknami">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Pierachod nazad pamiž voknami aplikacyjaŭ z vykarystańniem vypłyŭnoha vakna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Prachod pamiž voknami aplikacyjaŭ z vykarystańniem vypłyŭnoha vakna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Nieadkładny prachod nazad pamiž voknami aplikacyjaŭ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Nieadkładny prachod pamiž voknami aplikacyjaŭ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Pierachod nazad pamiž panelami i stałom z vykarystańniem vypłyŭnoha vakna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Pierachod pamiž panelami j stałom z vykarystańniem vypłyŭnoha vakna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Pieranos fokusu nazad pamiž voknami z vykarystańniem vypłyŭnoha vakna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Pierachod pamiž voknami z vykarystańniem vypłyŭnoha vakna">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Pieranos vakna na zachodni bok ekranu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Pieranos vakna na ŭschodni bok ekranu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Pieranos vakna na paŭdniovy bok ekranu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Pieranos vakna na paŭnočny bok ekranu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Pieranos vakna na paŭdniova-ŭschodni roh ekranu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Pieranos vakna na paŭdniova-zachodni roh ekranu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Pieranos vakna na paŭnočna-ŭschodni roh ekranu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Pieranos vakna na paŭnočna-zachodni roh ekranu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Haryzantalnaja maksymalizacyja vakna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Vertykalnaja maksymalizacyja vakna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Pieraniasieńnie vakna pad astatnija">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Vysoŭvańnie vakna pierad astatnimi">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Vysoŭvańnie vakna, kali jano zasłonienaje, u advarotnym vypadku adsoŭvańnie.">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Pieranos vakna na rabočy abšar uniz">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Pieranos vakna na rabočy abšar uvierch">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Pieranos vakna na rabočy abšar uprava">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Pieranos vakna na rabočy abšar uleva">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Pieranos vakna na 12-ty rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Pieranos vakna na 11-ty rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Pieranos vakna na 10-ty rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Pieranos vakna na 9-ty rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Pieranos vakna na 8-my rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Pieranos vakna na 7-my rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Pieranos vakna na 6-ty rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Pieranos vakna na 5-ty rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Pieranos vakna na 4-ty rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Pieranos vakna na 3-ci rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Pieranos vakna na 2-hi rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Pieranos vakna na pieršy rabočy abšar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Pieraklučeńnie prysutnaści vakna na ŭsich rabočych abšarach">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Źmiena pamieru vakna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Pieranos vakna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Minimalizacyja vakna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Začynieńnie vakna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Pieraklučeńnie režymu zhortvańnia">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Viartańnie maksymalizavanaha vakna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Maksymalizacyja vakna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Pieraklučeńnie režymu maksymalizacyi">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Pieraklučeńnie režymu zaŭždy naviersie">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Pieraklučeńnie poŭnaekrannaha režymu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Aktyvizacyja menu vakna">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Nazva rabočaha abšaru">
+                                                        <longdesc>Nazva rabočaha abšaru.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Uklučaje ŭłasnaści, vymahanyja starymi i nieadpaviedna zaimplementavymi aplikacyjami.">
+                                                        <longdesc>Niekatoryja aplikacyi nie prytrymlivajucca specyfikacyi, i kiraŭnik voknaŭ moža pavodzić siabie niapravilna. Hetaja opcyja pierastaŭlaje Metacity ŭ pravilny režym, u jakim interfejs karystalnika bolš dahledžany, kali nie ŭklučać aplikacyjaŭ, jakija parušajuć specyfikacyju.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Nie zaimplementavanaje) Aperacyi navihacyi pa aplikacyjach, a nie pa voknach">
+                                                        <longdesc>Abrańnie hetaj opcyi prymušaje kiraŭnika Metacity pracavać u katehoryjach aplikacyjaŭ, a nia voknaŭ. Heta krychu abstraktny paniatak, ale naohuł nałady, abapiertyja na aplikacyjach nahadvajuć chutčej dziejańnie systemy Mac OS, čym Windows. Kali kiraŭnik pracuje ŭ režymie aplikacyi, paśla zasiarodžańnia ŭvahi na vaknie, usie vokny dadzienaj aplikacyi buduć vysunutyja. U režymie aplikacyi kliki, jakija pieraklučajuć fokus, nie pieradajucca voknam inšych aplikacyjaŭ. Režym aplikacyi na siońnia ŭ značnaj miery niezaimplementavany.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Kali abrana, źmianšaje užyćcio resursaŭ koštam funkcyjanalnaści">
+                                                        <longdesc>Pry abrańni hetaj opcyi, kiraŭnik Metacity abmiažoŭvaje zvarotnuju suviaź karystalnika i adčuvańnie im &quot;niepasrednaj manipulacyi&quot;, pry vykarystańni ramak padčas źmieny pamieru voknaŭ, vyklučeńnia animacyi itp. Mnohija karystalniki mohuć adčuć heta jak značnaje źmianšeńnie funkcyjanalnaści, ale starejšym aplikacyjam i terminałam heta moža dazvolić narmalna pracavać. Nie zvažajučy na heta, ramki źmieny pamieraŭ voknaŭ buduć vyklučanyja, kali vyklučanyja buduć technalohii padtrymki.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="Kiraŭnik kampazycyjaŭ">
+                                                        <longdesc>Akreślivaje, ci Metacity maje być kiraŭnikom kampazycyjaŭ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Typ vizualnaha hukavoha syhnału">
+                                                        <longdesc>Opcyja kaža Metacity, jakim čynam treba vizualna zrealizavać rekamendacyju, što systemny zvanočak albo inšaja aplikacyja, jakaja jaho ŭžyvaje, vydała huk. Dziejna absłuhoŭvajucca dźvie vartaści &quot;fullscreen&quot;, jakaja dazvalaje mirhnuć cełym ekranam, i &quot;frame_flash&quot;, jakaja prymušaje tytulnuju panel mirhnuć padčas zvanočka. Kali aplikacyja, jakaja vysłała hukavy syhnał, nieviadomaja (jak heta zvyčajna adbyvajecca pry zmoŭčanym &quot;systemnym znanočku&quot;) mirhaje tytulnaja panel vakna, na jakim znachodzicca fokus.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Systemny zvanok čutny">
+                                                        <longdesc>Akreślivaje, ci aplikacyi albo systema mohuć hieneravać čutnyja hukavyja syhnały; opcyju možna ŭžyvać razam z opcyjaj &quot;bačnyja hukavyja syhnały&quot;, jakaja dapuščaje cichija &quot;zvanočki&quot;.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Uklučaje vizualnyja hukavyja syhnały">
+                                                        <longdesc>Hetaja opcyja ŭklučaje bačnuju indykacyju, kali aplikacyja albo systema vyklikaje &quot;zvanočak&quot; albo &quot;pik&quot;; jana prydatnaja ŭ šumnych asiarodździach, albo taksama kali &quot;čutnyja hukavyja syhnały&quot; vyklučanyja.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Kolkaść rabočych abšaraŭ">
+                                                        <longdesc>Kolkaść rabočych abšaraŭ. Musić być bolšaj za nul, i maje zafiksavany maksymum, kab papiaredzić vypadkovy zator asiarodździa ad praźmierna vialikaj kolkaści rabočych abšaraŭ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Šryft zahałoŭku vakna">
+                                                        <longdesc>Apisańnie šryftu, užyvanaha na zahałovačnych panelach voknaŭ. Pamier z hetaha apisańnia budzie vykarystany, tolki kali opcyja &quot;titlebar_font_size&quot; maje vartaść 0. Hetaja opcyja vyklučanaja, kali opcyja &quot;titlebar_uses_desktop_font&quot; maje vartaść PRAŬDA. </longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Vykarystańnie ŭ zahałovačnych panelach voknaŭ standartnaha systemnaha šryftu">
+                                                        <longdesc>Abrańnie opcyi vyklikaje ihnaravańnie opcyi &quot;titlebar_font&quot; i ŭžyvańnie zamiest hetaha standartnaha systemnaha šryftu na zahałovačnych panelach.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Dziejny matyŭ">
+                                                        <longdesc>Matyŭ akreślivaje vyhlad krajoŭ voknaŭ, zahałovačnych panelaŭ i h.d.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Spaźnieńnie ŭ milisekundach, užyvanaje opcyjaj aŭtamatyčnaha vydaleńnia">
+                                                        <longdesc>Spaźnieńnie pa časie pierad razhortvańniem vakna, kali opcyja aŭtamatyčnaha razhortvańnia (auto_rise) abranaja. Spaźnieńnie padajuć u tysiačnych častkach sekundy.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Aŭtamatyčnaje vysoŭvańnie voknaŭ, jakija źbirajuć fokus">
+                                                        <longdesc>Kali hetaja ŭłaścivaść abranaja i sposab pieraklučeńnia fokusu abrali jak &quot;sloppy&quot; albo &quot;mouse&quot; (anh. myš), vakno z fokusam budzie aŭtamatyčna vydalacca paśla spaźnieńnia, akreślenaha klučom &quot;auto_raise_delay&quot;. Heta nie datyčyć klikańnia ŭ vakno z metaj razhortvańnia ci z pierachodam na vakno padčas pierasoŭvańia.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="Aperacyja pry pravym kliku zahałovačnaj paneli">
+                                                        <longdesc>Hetaja opcyja akreślivaje vynik pravaha kliku ŭ zahałoŭnuju panel vakna. Dziejna pravilnyja opcyi takija: &quot;toggle_shade&quot; (zhortvaje/razhortvaje vakno) dy &quot;toggle_maximize&quot; (maksymalizuje/viartaje pamier vakna), &quot;minimize&quot; (minimalizuje vakno), a taksama &quot;none&quot; (bieź nijakich nastupstvaŭ).</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="Aperacyja pry kliku centralnaj knopkaj pa zahałovačnaj paneli">
+                                                        <longdesc>Hetaja opcyja akreślivaje vynik kliku centralnaj knopkaj u zahałoŭnuju panel vakna. Dziejna pravilnyja opcyi takija: &quot;toggle_shade&quot; (zhortvaje/razhortvaje vakno) dy &quot;toggle_maximize&quot; (maksymalizuje/viartaje pamier vakna), &quot;minimize&quot; (minimalizuje vakno), a taksama &quot;none&quot; (bieź nijakich nastupstvaŭ).</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Aperacyja pry padvojnym kliku zahałovačnaj paneli">
+                                                        <longdesc>Hetaja opcyja akreślivaje vynik padvojnaha kliku ŭ zahałoŭnuju panel vakna. Dziejna pravilnyja opcyi takija: &quot;toggle_shade&quot; (zhortvaje/razhortvaje vakno) dy &quot;toggle_maximize&quot; (maksymalizuje/viartaje pamier vakna), &quot;minimize&quot; (minimalizuje vakno), a taksama &quot;none&quot; (bieź nijakich nastupstvaŭ).</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Akreślivaje, ci pieranos vakna pavinien być pabočnym nastupstvam inšych dziejańniaŭ">
+                                                        <longdesc>Mnohija dziejańni (napr. klik u klijencki abšar, pieranos albo źmiena pamieru vakna) zvyčajna majuć pabočnyja nastupstvy ŭ vyhladzie pieranosu vakna navierch. Vyklučeńnie hetaj opcyi, zusim nie rekamendavanaje, viadzie da taho, što pieranos navierch nia budzie źviazany ź inšymi dziejańniami karystalnika, a taksama buduć ihnaravacca zapyty na pieranos navierch ad aplikacyj. Hladzi http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Akreślivaje, jak fokus pieradajecca novym voknam">
+                                                        <longdesc>Hetaja opcyja daje dadatkovyja mahčymaści kanfihuracyi sposabu, pry dapamozie jakoha novastvoranyja vokny hrupujucca. Dastupnyja dźvie vartaści: &quot;smart&quot; – typowy režym pieradačy fokusu pavodle naładaŭ karystalnika, i &quot;strict&quot; – voknam, adčynienym z uzroŭniu terminału, fokus nie pieradajecca.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Režym fokusu vakna">
+                                                        <longdesc>Sposab pieradačy fokusu akreślivaje, jakim čynam aktyvujucca vokny. Hetaja opcyja moža pryjmać try vartaści; &quot;click&quot; (anh. klik) aznačaje, što ŭ vakno treba kliknuć, kab pieradać na jaho fokus, &quot;sloppy&quot; aznačaje, što fokus piarojdzie na vakno, kali na jahony abšar budzie pierasunuty kursor myšy, a &quot;mouse&quot; (anh. myš) aznačaje, što vakno atrymaje fokus, kali kursor myšy budzie pierasunuty na jahony abšar, i kali hety abšar pakinuć, fokus źniknie.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Raźmiaščeńnie knopak na zahałovačnaj paneli">
+                                                        <longdesc>Raźmiaščeńnie knopak na zahałovačnaj paneli. Vartaść pavinna być tekstam kštałtu &quot;menu:minimize,maximize,close&quot;. Dvukropje padzialaje levy roh vakna ad pravaha, a nazvy knopak padzielenyja koskami. Nie dazvalajecca šmatrazovaje pajaŭleńnie knopki. Nieviadomyja nazvy knopak ihnarujucca, tamu ŭ budučych versijach prahramy mohuć być dadadzienyja novyja knopki biez stvareńnia niazhodnaśći.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Madyfikatar, užyvany dziela vykonvańnia aperacyi pry dapamozie kliku vakna">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Ci ŭžyvać hety profil">
+                                                                        <longdesc>Ci pakazvać i ŭžyvać hety profil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Zmoŭčanaje pašyreńnie fajłu dla hetaha profilu">
+                                                                        <longdesc>Pašyreńnie nazvy fajłu, užyvanaje pry zapisie fajłaŭ, kadavanych pry ŭžyćci hetaha profilu.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Častkovaja płyń GStreamer">
+                                                                        <longdesc>Častkovaja płyń GStreamer, užyvanaja z hetym profilem.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="Apisańnie hukavoha profilu">
+                                                                        <longdesc>Apisańnie hukavoha profilu, jakoje ŭtrymlivaje dadatkovuju infarmacyju adnosna taho, kali hety profil pavinien być užyty.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Karotkaja nazva hukavoha profilu">
+                                                                        <longdesc>Karotkaja nazva hukavoha profilu, užyvanaja pry vybary, jakaja identyfikuje profil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Ci ŭžyvać hety profil">
+                                                                                <longdesc>Ci pakazvać i ŭžyvać hety profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Zmoŭčanaje pašyreńnie fajłu dla hetaha profilu">
+                                                                                <longdesc>Pašyreńnie nazvy fajłu, užyvanaje pry zapisie fajłaŭ, kadavanych pry ŭžyćci hetaha profilu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Častkovaja płyń GStreamer">
+                                                                                <longdesc>Častkovaja płyń GStreamer, užyvanaja z hetym profilem.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Apisańnie hukavoha profilu">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Karotkaja nazva hukavoha profilu">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Zmoŭčanaje pašyreńnie fajłu dla hetaha profilu">
+                                                                                <longdesc>Pašyreńnie nazvy fajłu, užyvanaje pry zapisie fajłaŭ, kadavanych pry ŭžyćci hetaha profilu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Častkovaja płyń GStreamer">
+                                                                                <longdesc>Častkovaja płyń GStreamer, užyvanaja z hetym profilem.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Apisańnie hukavoha profilu">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Karotkaja nazva hukavoha profilu">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Zmoŭčanaje pašyreńnie fajłu dla hetaha profilu">
+                                                                                <longdesc>Pašyreńnie nazvy fajłu, užyvanaje pry zapisie fajłaŭ, kadavanych pry ŭžyćci hetaha profilu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Častkovaja płyń GStreamer">
+                                                                                <longdesc>Častkovaja płyń GStreamer, užyvanaja z hetym profilem.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Apisańnie hukavoha profilu">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Karotkaja nazva hukavoha profilu">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Zmoŭčanaje pašyreńnie fajłu dla hetaha profilu">
+                                                                                <longdesc>Pašyreńnie nazvy fajłu, užyvanaje pry zapisie fajłaŭ, kadavanych pry ŭžyćci hetaha profilu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Častkovaja płyń GStreamer">
+                                                                                <longdesc>Častkovaja płyń GStreamer, užyvanaja z hetym profilem.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Apisańnie hukavoha profilu">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Karotkaja nazva hukavoha profilu">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Zmoŭčanaje pašyreńnie fajłu dla hetaha profilu">
+                                                                                <longdesc>Pašyreńnie nazvy fajłu, užyvanaje pry zapisie fajłaŭ, kadavanych pry ŭžyćci hetaha profilu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Častkovaja płyń GStreamer">
+                                                                                <longdesc>Častkovaja płyń GStreamer, užyvanaja z hetym profilem.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Apisańnie hukavoha profilu">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Karotkaja nazva hukavoha profilu">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Zmoŭčanaje pašyreńnie fajłu dla hetaha profilu">
+                                                                                <longdesc>Pašyreńnie nazvy fajłu, užyvanaje pry zapisie fajłaŭ, kadavanych pry ŭžyćci hetaha profilu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Častkovaja płyń GStreamer">
+                                                                                <longdesc>Častkovaja płyń GStreamer, užyvanaja z hetym profilem.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Apisańnie hukavoha profilu">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Karotkaja nazva hukavoha profilu">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Śpis profilaŭ">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

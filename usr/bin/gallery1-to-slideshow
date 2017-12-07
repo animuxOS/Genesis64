@@ -1,0 +1,345 @@
+#!/bin/bash
+#    gallery1-to-slideshow
+#    was gallery2slideshow
+#    Copyright 2003 Scott Dylewski  <scott at dylewski.com>
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program; if not, write to the Free Software
+#    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
+
+version='0.7.5'
+
+changes () 
+{
+echo 'Changes:
+0.7.5	
+	No changes
+0.7.4	
+	Fixed bug where no pictures were found with new version of gallery 1.5
+	Fixed bug near line 279	with a missing "fi" statement.
+0.7.3	
+	Changed name from gallery2slideshow to gallery1-to-slideshow to avoid
+	confusion...  it does not work on gallery v.2.x albums!
+	Add -b background image option
+	Fix for finding all images in album. Thanks Ivan Espinosa!
+	Added a few more quotes around variables to help with spaces in filenames.
+0.7.2	Another fix to allow newlines in gallery comments
+	These should correctly get translated into \n characters.
+	Strips out <a href=""> and </a> tags also.
+0.7.0	Fix to not show hidden pictures for gallery v1.4.3-pl1
+	( thanks Frederic! )
+	Fixed bug when passing html links in subtitle field
+	dvd-slideshow supports duration in fractional seconds.
+	Allow for "." as the album path
+0.5.2	-i switch not required for album path
+0.5.0	Added option (-c duration) to do a crossfade between every picture.
+	This script automatically removes ":" and <return> characters 
+		from the comment field.
+0.4	Added default fade in at beginning and out at end
+0.3	Added extra file checking before processing for better stability
+	from Scott Merrill <skippy at skippy.net>  Thanks!!!
+0.2	Initial release'
+}
+
+help ()
+{
+echo "gallery1-to-slideshow $version"
+echo "gallery1-to-slideshow is part of the dvd-slideshow set of tools."
+echo 'Copyright 2003 Scott Dylewski <scott at dylewski.com>'
+echo 'http://freshmeat.net/dvdslideshow'
+echo  '
+gallery1-to-slideshow description: 
+ Generates a text file listing of the pictures visible in a given 
+ "Gallery" (http://gallery.sourceforge.net) photo album
+ in order to easily pass the information to dvd_slideshow
+
+Usage: gallery1-to-slideshow [-o <output_directory>] [-t <time_per_picture>]
+		[-b <background image>] [-c duration] <path_to_album>
+	
+Options: 
+ path_to_album
+	  Path to the album that you want to generate a slideshow for.
+ 
+ [-o output_directory]
+	  Path to the directory where you want to output file written.
+	  Default is the current working directory.
+ 
+ [-t time_per_picture]
+	  Number of seconds that the picture will be visible
+	  on the dvd movie. You can edit the output file to make
+	  changes to specific lines.
+	  Default is 5 seconds.
+
+ [-b <background image>]
+	  Specify background image to use for slideshow.
+ 		
+ [-c duration]
+	  Add a crossfade between every picture for duration seconds.
+ 		
+ -h or -help 
+   Prints this help. 
+'
+}
+
+if [ $# -lt 1 ]; then
+	help
+	exit 1
+fi
+
+
+## setup initial variables:
+debug=0  # 1 or 0
+crossfade=0
+
+for arg
+do
+	case "$arg" in
+	-i) shift ; album_path="$1" ; shift ;;
+	-o) shift; output_dir="$1"; shift ;;
+        -t) shift; duration="$1"; shift ;; 
+        -c) shift; crossfade=1; crossfade_duration="$1"; shift ;; 
+	-h) help ; exit 0 ; shift ;;
+	-?) help ; exit 0 ; shift ;;
+	-help) help ; exit 0 ; shift ;;
+	esac
+done
+
+if [ -z "$album_path" ] ; then
+	album_path="$1"
+fi
+if [ -z "$album_path" ] ; then
+	echo "[gallery1-to-slideshow] Error: No album specified"
+	exit 1
+fi
+if [ -z "$output_dir" ] ; then
+	output_dir="`pwd`"
+fi
+if [ -z "$duration" ] ; then
+	duration="5"
+fi
+
+## check_rm checks to see if the file exists before it's deleted:
+check_rm ()
+{
+	if [ -f $1 ] ; then
+		rm $1
+	fi
+}
+
+cleanup ()
+{
+	## clean up temporary files
+	echo "done"
+}
+
+forcequit () ## function gets run when we have some sort of forcequit...
+{
+	## clean up temporary files
+	cleanup
+	exit 0
+}
+
+trap 'forcequit' INT
+trap 'forcequit' KILL
+trap 'forcequit' TERM
+
+# sanity checking 
+# did the user give us a valid input file to work with?
+if [ ! -f "$album_path" ]; then
+	# it's not a regular file
+        if [ ! -d "$album_path" ]; then
+        	# it's not a directory!
+                echo "[gallery1-to-slideshow] Bad input file (-i $album_path)!"
+                exit 1;
+        else
+		# check for '.' path
+		if [ "$album_path" == '.' ]; then
+		        # use current directory
+		        album_path="`pwd`"
+		fi
+	        # it is a directory, so use album.dat
+                echo "[gallery1-to-slideshow] Using album.dat in $album_path";
+                album_file="album.dat";
+                if [ ! -f "$album_path/$album_file" ]; then
+                # there's no album.dat file there!
+                        echo "[gallery1-to-slideshow] No such file $album_path/$album_file!";
+                        echo "[gallery1-to-slideshow] Aborting!";
+                        exit 1;
+                fi
+        fi
+else
+	# it is a regular file!
+	echo "[gallery1-to-slideshow] ERROR: you must specify a directory name!"
+	exit 1
+#        album=`basename "${album_path}"`;
+#        album_path=`echo $album_path | sed -e "s/$album//"`;
+fi
+
+# make sure $album_path has no trailing slash
+album_path=`echo "$album_path" | sed -e 's/\/$//'`;
+album=`basename "${album_path}"`;
+
+if [ -z "$output_dir" ]; then
+        # no output directory specified!
+        echo "[gallery1-to-slideshow] Invalid output destination (-o $output_dir)!";
+        echo "[gallery1-to-slideshow] *** Using $album_path instead.";
+        output_dir=$album_path;
+fi
+if [ ! -d "$output_dir" ]; then
+        # I'm sure it was a simple typo.
+        echo "[gallery1-to-slideshow] Invalid output destination (-o $output_dir)!";
+        echo "[gallery1-to-slideshow] *** Using $album_path instead.";
+        output_dir=$album_path;
+fi
+                                                                                
+# make sure $output_dir has no trailing slash
+output_dir=`echo $output_dir | sed -e 's/\/$//'`;
+
+## now let's do some checking to see if the user put in the full path?
+
+echo "[gallery1-to-slideshow] path=$album_path"
+echo "[gallery1-to-slideshow] album=$album"
+echo "[gallery1-to-slideshow] album_file=$album_file"
+echo "[gallery1-to-slideshow] output_dir=$output_dir"
+
+outfile="$output_dir/$album".txt
+echo "[gallery1-to-slideshow] output file=$output_dir/$album".txt
+
+## if title is wanted:
+summary=`awk -F'"title"' '{print $2}' "${album_path}"/album.dat | awk -F'"' '{print $2}'`
+#gallery_version=`awk -F'"version"' '{print $2}' "${album_path}"/album.dat | awk -F'"' '{print $2}'`
+pictures=`awk -F'albumitem' '{print NF}' "${album_path}"/photos.dat`
+echo "#background:1::black" > "$outfile"
+echo "#background:0::background.jpg" >> "$outfile"
+echo "fadein:1" >> "$outfile"
+echo "title:$duration:$album:$summary" >> "$outfile"
+echo "[gallery1-to-slideshow] title:$duration:$album:$summary" 
+echo "#background:0::black" >> "$outfile"
+## else do not make a title.
+
+## fade in after title:
+echo "fadeout:2" >> "$outfile"
+echo "background:1" >> "$outfile"
+
+# add music?  this makes it easier to just un-comment stuff
+echo '# remember format is:' >> "$outfile"
+echo '# musicfile.mp3:audio_track:[fadein:fadein_time:fadeout:fadeout_time]' >> "$outfile"
+echo "#musicfile.mp3:1:fadein:1:fadeout:5" >> "$outfile"
+
+echo 'fadein:1' >> "$outfile"
+
+## get the total number of pictures:
+# anybody know a better way to get rid of potential returns?
+pictures=`awk -F'albumitem' '{print NF}' "${album_path}"/photos.dat`
+pictures=`echo $pictures | tr [:space:] ' '`
+# sometimes the pictures string now has a space in-between
+# this is from someone entering return (^M) characters in their 
+# comments fields
+total_pictures=0
+total_lines=0
+for i in $pictures ; do
+	total_pictures=$(( $total_pictures + $i ))
+	total_lines=$(( $total_lines + 1 ))
+done
+total_pictures=$(( $total_pictures - 1 ))
+
+pictures2=`awk -F'AlbumItem' '{print NF}' "${album_path}"/photos.dat`
+pictures2=`echo $pictures2 | tr [:space:] ' '`
+# sometimes the pictures string now has a space in-between
+# this is from someone entering return (^M) characters in their 
+# comments fields
+total_pictures2=0
+total_lines=0
+for i in $pictures2 ; do
+	total_pictures2=$(( $total_pictures2 + $i ))
+	total_lines=$(( $total_lines + 1 ))
+done
+total_pictures2=$(( $total_pictures2 - 1 ))
+
+#echo "total_pictures=$total_pictures total_pictures2=$total_pictures2"
+
+# pick the greater of the two methods:
+if [ "$total_pictures2" -gt "$total_pictures" ] ; then
+	## Newer versions of gallery use "AlbumItem" instead of "albumitem"
+	newgallery=1
+#	pictures=`awk -F'AlbumItem' '{print NF}' "${album_path}"/photos.dat`
+	total_pictures="$total_pictures2"
+	echo "[gallery1-to-slideshow] new gallery version"
+else
+	newgallery=0
+	echo "[gallery1-to-slideshow] old gallery version"
+fi
+echo "[gallery1-to-slideshow] total pictures=$total_pictures"
+
+#pictures=$(( $pictures + 1 ))
+
+## yeah, this is slow, but not as slow as typing in everything
+## from the gallery yourself...
+j=1
+for i in `seq 2 $total_pictures`; do
+	## get rid of potential newlines in comments sections first:
+	if [ "$newgallery" -eq 1 ] ; then	
+		albumitem=`cat "$album_path/photos.dat" | tr '\n' '\a' | awk -F'AlbumItem' '{print $'"$i"'}'`
+	else
+		albumitem=`cat "$album_path/photos.dat" | tr '\n' '\a' | awk -F'albumitem' '{print $'"$i"'}'`
+	fi
+	filename[$j]=`echo "${albumitem}" | awk -F'"name"' '{print $2}' | awk -F'"' '{print $2}'`
+	comment[$j]=`echo "${albumitem}" | awk -F'"caption"' '{print $2}' | awk -F':"' '{print $2}' | awk -F'";' '{print $1}' | tr '\a' ' ' | sed -e 's/\r/\\\\n/' | sed -e 's/<a href.*">//' | sed -e 's/<\/a>//'`
+	hidden[$j]=`echo "${albumitem}" | awk -F'"hidden"' '{print $2}' | awk -F';' '{print $2}'`
+	if [ "${hidden[$j]}" == 'N' ] || [ -z "${hidden[$j]}" ] ; then  ## only include this picture if it's shown in the gallery
+		new_filename="${album_path}/${filename[$j]}.jpg"
+		echo "[gallery1-to-slideshow] picture $j of $total_pictures"
+		echo "[gallery1-to-slideshow] filename=${new_filename}   comment=${comment[$j]}"
+		## write to file:
+		## Fix by Ivan Espinosa 1/2006
+                if [ -r "${new_filename}" ] ; then
+                  if [ "$j" -ne 1  ] ; then
+                    if [ "$crossfade" -eq 1 ] ; then
+                      echo "crossfade:$crossfade_duration:" >> "$outfile"
+                    fi
+                  fi
+		  echo "${new_filename}:$duration:${comment[$j]}" >> "$outfile"
+		fi
+#		if [ "$crossfade" -eq 1 ] && [ "$(($i+1))" -lt "$total_pictures" ] ; then
+#		echo "crossfade:$crossfade_duration:" >> "$outfile"
+#		fi
+		let j=$j+1
+	else
+		echo "[gallery1-to-slideshow] picture $j of $total_pictures Hidden in Gallery"
+		let j=$j+1
+	fi
+done
+
+echo ' ' >> "$outfile"
+echo '# to insert a title slide in the middle of the slideshow, use this:' >> "$outfile"
+echo '#fadeout:1' >> "$outfile"
+echo '#background:1' >> "$outfile"
+echo '#background:1::background.jpg' >> "$outfile"
+echo '#title:5::Title Text' >> "$outfile"
+echo '#background:0::black' >> "$outfile"
+echo '#fadeout:1' >> "$outfile"
+echo '#fadein:1' >> "$outfile"
+echo ' ' >> "$outfile"
+
+## fade out at end
+echo "fadeout:1" >> "$outfile"
+## stop the music before the final fadeout to the background:
+echo "silence:1:" >> "$outfile"
+echo "background:1" >> "$outfile"
+echo '#fadein:1' >> "$outfile"
+echo '#background.jpg:1' >> "$outfile"
+
+
+cleanup
+

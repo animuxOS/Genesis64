@@ -1,0 +1,1301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema>
+<section>
+	<sec_name>Effects</sec_name>
+	<subsection>
+		<sub_sec_name>Zoom</sub_sec_name>
+		<sub_sec_name xml:lang="ja">ズーム</sub_sec_name>
+		<option>
+			<name>zoom_enable</name>
+			<title>Enable</title>
+			<title xml:lang="bg">Пускане</title>
+			<title xml:lang="de">Aktivieren</title>
+			<title xml:lang="es">Activar</title>
+			<title xml:lang="fr">Activer</title>
+			<title xml:lang="it">Abilita</title>
+			<title xml:lang="ja">有効</title>
+			<title xml:lang="pt">Habilitar</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable the Zoom plugin</description>
+			<description xml:lang="ja">ズームプラグインの有効化/無効化</description>
+		</option>
+		<option>
+			<name>zoom_mode</name>
+			<title>Mode</title>
+			<title xml:lang="ja">モード</title>
+			<type>char</type>
+			<range>simple,parabolic</range>
+			<default>simple</default>
+			<description>Mode</description>
+			<description xml:lang="ja">モード</description>
+		</option>
+		<option>
+			<name>zoom_factor</name>
+			<title>Factor</title>
+			<title xml:lang="ja">強度</title>
+			<type>double</type>
+			<range>1.0-3.0</range>
+			<default>1.5</default>
+			<description>Factor</description>
+			<description xml:lang="ja">強度</description>
+		</option>
+		<option>
+			<name>zoom_step</name>
+			<title>Step</title>
+			<title xml:lang="ja">ステップ</title>
+			<type>double</type>
+			<range>0.01-0.15</range>
+			<default>0.08</default>
+			<description>Step</description>
+			<description xml:lang="ja">ステップ</description>
+		</option>
+	</subsection>
+	<subsection>
+		<sub_sec_name>Pulse</sub_sec_name>
+		<sub_sec_name xml:lang="ja">パルス</sub_sec_name>
+		<option>
+			<name>pulse_enable</name>
+			<title>Enable</title>
+			<title xml:lang="bg">Пускане</title>
+			<title xml:lang="de">Aktivieren</title>
+			<title xml:lang="es">Activar</title>
+			<title xml:lang="fr">Activer</title>
+			<title xml:lang="it">Abilita</title>
+			<title xml:lang="ja">有効</title>
+			<title xml:lang="pt">Habilitar</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable the Pulse plugin</description>
+			<description xml:lang="ja">パルスプラグインの有効化/無効化</description>
+		</option>
+		<option>
+			<name>pulse_hovering</name>
+			<title>Hover</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Pulse icons when they are hovered</description>
+		</option>
+		<option>
+			<name>pulse_triggering</name>
+			<title>Trigger</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Pulse icons when they are clicked</description>
+		</option>
+		<option>
+			<name>pulse_urgent</name>
+			<title>Urgent</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Activate this plugin on windows requesting attention</description>
+		</option>
+		<option>
+			<name>pulse_factor</name>
+			<title>Factor</title>
+			<title xml:lang="ja">強度</title>
+			<type>double</type>
+			<range>1.0-3.0</range>
+			<default>2.0</default>
+			<description>Factor</description>
+			<description xml:lang="ja">強度</description>
+		</option>
+		<option>
+			<name>pulse_exec_factor</name>
+			<title>Exec Factor</title>
+			<title xml:lang="ja">実行時の強度</title>
+			<type>double</type>
+			<range>1.0-3.0</range>
+			<default>2.5</default>
+			<description>Exec Factor</description>
+			<description xml:lang="ja">実行時の強度</description>
+		</option>
+		<option>
+			<name>pulse_speed</name>
+			<title>Speed</title>
+			<title xml:lang="ja">スピード</title>
+			<type>int</type>
+			<range>1-50</range>
+			<default>30</default>
+			<description>Speed</description>
+			<description xml:lang="ja">スピード</description>
+		</option>
+	</subsection>
+	<subsection>
+		<sub_sec_name>Bounce</sub_sec_name>
+		<sub_sec_name xml:lang="ja">バウンス</sub_sec_name>
+		<option>
+			<name>bounce_enable</name>
+			<title>Enable</title>
+			<title xml:lang="bg">Пускане</title>
+			<title xml:lang="de">Aktivieren</title>
+			<title xml:lang="es">Activar</title>
+			<title xml:lang="fr">Activer</title>
+			<title xml:lang="it">Abilita</title>
+			<title xml:lang="ja">有効</title>
+			<title xml:lang="pt">Habilitar</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Enable/Disable Bounce Plugin</description>
+			<description xml:lang="ja">バウンスプラグインの有効化/無効化</description>
+		</option>
+		<option>
+			<name>bounce_hovering</name>
+			<title>Hover</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Bounce icons when they are hovered</description>
+		</option>
+		<option>
+			<name>bounce_triggering</name>
+			<title>Trigger</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Bounce icons when they are clicked</description>
+		</option>
+		<option>
+			<name>bounce_urgent</name>
+			<title>Urgent</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Activate this plugin on windows requesting attention</description>
+		</option>
+		<option>
+			<name>bounce_scale</name>
+			<title>Scale</title>
+			<title xml:lang="ja">スケール</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Scale</description>
+			<description xml:lang="ja">スケール</description>
+		</option>
+		<option>
+			<name>bounce_height</name>
+			<title>Height</title>
+			<title xml:lang="ja">高さ</title>
+			<type>int</type>
+			<range>0-100</range>
+			<default>0</default>
+			<description>Height</description>
+			<description xml:lang="ja">高さ</description>
+		</option>
+		<option>
+			<name>bounce_exec_height</name>
+			<title>Launch height</title>
+			<title xml:lang="ja">ランチャ実行時の高さ</title>
+			<type>int</type>
+			<range>0-100</range>
+			<default>20</default>
+			<description>Launch height</description>
+			<description xml:lang="ja">ランチャ実行時の高さ</description>
+		</option>
+		<option>
+			<name>bounce_speed</name>
+			<title>Speed</title>
+			<title xml:lang="ja">スピード</title>
+			<type>int</type>
+			<range>1-50</range>
+			<default>30</default>
+			<description>Speed</description>
+			<description xml:lang="ja">スピード</description>
+		</option>
+	</subsection>
+	<subsection>
+		<sub_sec_name>Rotate</sub_sec_name>
+		<sub_sec_name xml:lang="ja">回転</sub_sec_name>
+		<option>
+			<name>rotate_enable</name>
+			<title>Enable</title>
+			<title xml:lang="bg">Пускане</title>
+			<title xml:lang="de">Aktivieren</title>
+			<title xml:lang="es">Activar</title>
+			<title xml:lang="fr">Activer</title>
+			<title xml:lang="it">Abilita</title>
+			<title xml:lang="ja">有効</title>
+			<title xml:lang="pt">Habilitar</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable Rotate Plugin</description>
+			<description xml:lang="ja">回転プラグインの有効化/無効化</description>
+		</option>
+		<option>
+			<name>rotate_hovering</name>
+			<title>Hover</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Rotate icons when they are hovered</description>
+		</option>
+		<option>
+			<name>rotate_triggering</name>
+			<title>Trigger</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Rotate icons when they are clicked</description>
+		</option>
+		<option>
+			<name>rotate_urgent</name>
+			<title>Urgent</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Activate this plugin on windows requesting attention</description>
+		</option>
+		<option>
+			<name>rotate_speed</name>
+			<title>Speed</title>
+			<title xml:lang="ja">スピード</title>
+			<type>int</type>
+			<range>0-50</range>
+			<default>30</default>
+			<description>Speed</description>
+			<description xml:lang="ja">スピード</description>
+		</option>
+		<option>
+			<name>rotate_exec_speed</name>
+			<title>Exec Speed</title>
+			<title xml:lang="ja">実行スピード</title>
+			<type>int</type>
+			<range>0-50</range>
+			<default>40</default>
+			<description>Exec Speed</description>
+			<description xml:lang="ja">実行スピード</description>
+		</option>
+	</subsection>
+	<subsection>
+		<sub_sec_name>Switch</sub_sec_name>
+		<sub_sec_name xml:lang="ja">スイッチ</sub_sec_name>
+		<option>
+			<name>switch_enable</name>
+			<title>Enable</title>
+			<title xml:lang="bg">Пускане</title>
+			<title xml:lang="de">Aktivieren</title>
+			<title xml:lang="es">Activar</title>
+			<title xml:lang="fr">Activer</title>
+			<title xml:lang="it">Abilita</title>
+			<title xml:lang="ja">有効</title>
+			<title xml:lang="pt">Habilitar</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Enable/Disable Switch Plugin</description>
+			<description xml:lang="ja">スイッチプラグインの有効化/無効化</description>
+		</option>
+		<option>
+			<name>switch_3d_objects</name>
+			<title>3D Objects</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable 3D Objects</description>
+		</option>
+		<option>
+			<name>switch_orientation</name>
+			<title>Orientation</title>
+			<title xml:lang="bg">Ориентация</title>
+			<title xml:lang="de">Orientation</title>
+			<title xml:lang="ja">方向</title>
+			<type>char</type>
+			<range>horizontal,vertical,both</range>
+			<default>horizontal</default>
+			<description>Orientation</description>
+			<description xml:lang="bg">Ориентация</description>
+			<description xml:lang="de">Orientation</description>
+			<description xml:lang="ja">方向</description>
+		</option>
+		<option>
+			<name>switch_step</name>
+			<title>Speed</title>
+			<title xml:lang="ja">スピード</title>
+			<type>double</type>
+			<range>0.01-0.5</range>
+			<default>0.1</default>
+			<description>Speed</description>
+			<description xml:lang="ja">スピード</description>
+		</option>
+	</subsection>
+</section>
+<section>
+	<sec_name>Taskbar</sec_name>
+	<sec_name xml:lang="bg">Списък със задачите</sec_name>
+	<sec_name xml:lang="de">Fensterleiste</sec_name>
+	<sec_name xml:lang="es">Barra de Tareas</sec_name>
+	<sec_name xml:lang="it">Barra della applicazioni</sec_name>
+	<sec_name xml:lang="ja">タスクバー</sec_name>
+	<sec_name xml:lang="pt">Barra de tarefas</sec_name>
+	<sec_desc>Manage opened Windows in multiple Kiba Icons.</sec_desc>
+	<sec_desc xml:lang="bg">Управление на отворените прозорци в множество киба икони</sec_desc>
+	<sec_desc xml:lang="de">Verwalte geöffnete Fenster in mehreren Kiba Symbolen.</sec_desc>
+	<sec_desc xml:lang="es">Gestionar ventanas abiertas en múltiples Iconos Kiba</sec_desc>
+	<sec_desc xml:lang="it">Gestisci finestre aperte in Icone Kiba multiple.</sec_desc>
+	<sec_desc xml:lang="ja">開かれたウィンドウを複数の Kiba アイコンで管理</sec_desc>
+	<sec_desc xml:lang="pt">Gerencie janelas abertas em múltiplos ícones do Kiba.</sec_desc>
+	<sec_icon>[/usr/share/kiba-dock/icons/taskbar.svg,taskbar]</sec_icon>
+	<subsection>
+		<sub_sec_name>General</sub_sec_name>
+		<sub_sec_name xml:lang="bg">Общи</sub_sec_name>
+		<sub_sec_name xml:lang="de">Generell</sub_sec_name>
+		<sub_sec_name xml:lang="es">General</sub_sec_name>
+		<sub_sec_name xml:lang="fr">Général</sub_sec_name>
+		<sub_sec_name xml:lang="it">Generale</sub_sec_name>
+		<sub_sec_name xml:lang="ja">全般</sub_sec_name>
+		<sub_sec_name xml:lang="pt">Geral</sub_sec_name>
+		<option>
+			<name>taskbar_enable</name>
+			<title>Enable</title>
+			<title xml:lang="bg">Пускане</title>
+			<title xml:lang="de">Aktivieren</title>
+			<title xml:lang="es">Activar</title>
+			<title xml:lang="fr">Activer</title>
+			<title xml:lang="it">Abilita</title>
+			<title xml:lang="ja">有効</title>
+			<title xml:lang="pt">Habilitar</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Enable/Disable the taskbar plugin</description>
+			<description xml:lang="bg">Пускане/спиране на плъгина за управление на задачите</description>
+			<description xml:lang="de">Aktiviere/Deaktiviere das Taskbar Plugin</description>
+			<description xml:lang="es">Activar/Desactivar el plugin de la barra de tareas</description>
+			<description xml:lang="it">Abilita/Disabilita il plugin per la barra delle applicazioni</description>
+			<description xml:lang="ja">タスクバープラグインの有効化/無効化</description>
+			<description xml:lang="pt">Habilitar/desabilitar o plugin da barra de tarefas</description>
+		</option>
+		<option>
+			<name>taskbar_draw_miniature</name>
+			<title>Window miniatures</title>
+			<title xml:lang="bg">Рисуване на мини изображения на прозорците</title>
+			<title xml:lang="de">Fenster Miniaturen</title>
+			<title xml:lang="ja">ウィンドウサムネイル</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable window miniatures</description>
+			<description xml:lang="bg">Пуска/спира рисуването на миниатюрни изображение на прозорците</description>
+			<description xml:lang="de">Aktiviere/Deaktiviere Fenster Miniaturen</description>
+			<description xml:lang="ja">ウィンドウサムネイルの描画の有効化/無効化</description>
+		</option>
+		<option>
+			<name>taskbar_grouping</name>
+			<title>Group icons</title>
+			<title xml:lang="bg">Групиране на иконите</title>
+			<title xml:lang="de">Gruppiere Symbole</title>
+			<title xml:lang="ja">アイコンのグループ化</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Group icons by class</description>
+			<description xml:lang="bg">Групиране на иконите по class</description>
+			<description xml:lang="de">Gruppiere Starter</description>
+			<description xml:lang="ja">アイコンをクラスでグループ化</description>
+		</option>
+		<option>
+			<name>taskbar_show_desktop</name>
+			<title>Desktop icon</title>
+			<title xml:lang="bg">Икона "покажи десктопа"</title>
+			<title xml:lang="de">Desktop Symbol</title>
+			<title xml:lang="ja">デスクトップアイコン</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable the desktop icon</description>
+			<description xml:lang="bg">Пуска/Спира плъгина за икона за десктопа</description>
+			<description xml:lang="de">Aktiviere/Deaktiviere das Desktop Symbol</description>
+			<description xml:lang="ja">デスクトップアイコンの有効化/無効化</description>
+		</option>
+		<option>
+			<name>taskbar_viewport_desktop</name>
+			<title>Viewport Desktop</title>
+			<title xml:lang="ja">ビューポートデスクトップ</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Using a Viewport Desktop</description>
+			<description xml:lang="ja">ビューポートデスクトップを使う</description>
+		</option>
+		<option>
+			<name>taskbar_size_factor</name>
+			<title>Size factor</title>
+			<title xml:lang="bg">Степен на оразмеряване</title>
+			<title xml:lang="de">Größen Faktor</title>
+			<title xml:lang="ja">アイコンの大きさ</title>
+			<type>double</type>
+			<range>0.1-2.0</range>
+			<default>1.0</default>
+			<description>Size factor for taskbar icons</description>
+			<description xml:lang="bg">Степен на оразмеряване на иконите в списъка със задачи</description>
+			<description xml:lang="ja">タスクバーアイコンの大きさ</description>
+		</option>
+		<option>
+			<name>taskbar_miniature_size_factor</name>
+			<title>Miniature size factor</title>
+			<title xml:lang="bg">Размер на миниатюрите</title>
+			<title xml:lang="ja">サムネイルの大きさ</title>
+			<type>double</type>
+			<range>0.1-2.0</range>
+			<default>1.3</default>
+			<description>The size factor for the window miniatures</description>
+			<description xml:lang="bg">Степен на оразмеравяне на миниатюрите</description>
+			<description xml:lang="ja">タスクバーサムネイルの大きさ</description>
+		</option>
+		<option>
+			<name>taskbar_skip_app</name>
+			<title>Skip Applications</title>
+			<title xml:lang="bg">Пропуска приложения</title>
+			<title xml:lang="de">Überspringe Programme</title>
+			<title xml:lang="ja">アプリケーションのスキップ</title>
+			<type>list</type>
+			<range/>
+			<default>[cairo-clock]</default>
+			<description>List of skipped applications</description>
+			<description xml:lang="bg">Списък с приложения, който да бъдат пропускани</description>
+			<description xml:lang="de">Überspringe Programme</description>
+			<description xml:lang="ja">スキップされるアプリケーションの一覧</description>
+		</option>
+		<option>
+			<name>taskbar_custom_icon</name>
+			<title>Custom icons</title>
+			<title xml:lang="bg">Лични икони</title>
+			<title xml:lang="de">Eigene Symbole</title>
+			<title xml:lang="ja">カスタムアイコン</title>
+			<type>list</type>
+			<range/>
+			<default>[URxvt;terminal]</default>
+			<description>Custom icons for application classes</description>
+			<description xml:lang="bg">Лично избрани икони за класове приложения</description>
+			<description xml:lang="de">Eigene Symbole für Programm Klassen</description>
+			<description xml:lang="ja">アプリケーションクラスのためのカスタムアイコン</description>
+		</option>
+	</subsection>
+	<subsection>
+		<sub_sec_name>Style</sub_sec_name>
+		<sub_sec_name xml:lang="bg">Стил</sub_sec_name>
+		<sub_sec_name xml:lang="de">Stil</sub_sec_name>
+		<sub_sec_name xml:lang="es">Estilo</sub_sec_name>
+		<sub_sec_name xml:lang="fr">Style</sub_sec_name>
+		<sub_sec_name xml:lang="it">Stile</sub_sec_name>
+		<sub_sec_name xml:lang="ja">スタイル</sub_sec_name>
+		<sub_sec_name xml:lang="pt">Estilo</sub_sec_name>
+		<option>
+			<name>taskbar_alpha</name>
+			<title>Alpha</title>
+			<title xml:lang="bg">Прозрачност</title>
+			<title xml:lang="de">Transparenz</title>
+			<title xml:lang="es">Transparencia</title>
+			<title xml:lang="it">Alpha</title>
+			<title xml:lang="ja">透明度</title>
+			<title xml:lang="pt">Transparência</title>
+			<type>double</type>
+			<range>0.0-1.0</range>
+			<default>1.0</default>
+			<description>Amount of icon alpha</description>
+			<description xml:lang="bg">Прозрачност на иконата</description>
+			<description xml:lang="de">Wert der Symbol Transparenz</description>
+			<description xml:lang="ja">アイコンの透明度</description>
+		</option>
+		<option>
+			<name>taskbar_border_rgba</name>
+			<title>Border Color</title>
+			<title xml:lang="bg">Цвят на границата</title>
+			<title xml:lang="de">Rahmen Farbe</title>
+			<title xml:lang="es">Color del Borde</title>
+			<title xml:lang="fr">Couleur du bord</title>
+			<title xml:lang="it">Colore del Bordo</title>
+			<title xml:lang="ja">境界の色</title>
+			<title xml:lang="pt">Cor da borda</title>
+			<type>char</type>
+			<range>rgba</range>
+			<default>#FFFFFFFF</default>
+			<description>Border Color</description>
+			<description xml:lang="bg">Цвят на границата</description>
+			<description xml:lang="de">Rahmen Farbe</description>
+			<description xml:lang="es">Color del Borde</description>
+			<description xml:lang="fr">Couleur du bord</description>
+			<description xml:lang="it">Colore del Bordo</description>
+			<description xml:lang="ja">境界の色</description>
+			<description xml:lang="pt">Cor da borda</description>
+		</option>
+		<option>
+			<name>taskbar_desktop_text_rgba</name>
+			<title>Desktop text color</title>
+			<title xml:lang="bg">Цвят на текста за декстопа</title>
+			<title xml:lang="de">Desktop Text Farbe</title>
+			<title xml:lang="ja">デスクトップの文字の色</title>
+			<type>char</type>
+			<range>rgba</range>
+			<default>#FFFFFFFF</default>
+			<description>Desktop text color</description>
+			<description xml:lang="bg">Цвят на текста за декстопа</description>
+			<description xml:lang="de">Desktop Text Farbe</description>
+			<description xml:lang="ja">デスクトップの文字の色</description>
+		</option>
+		<option>
+			<name>taskbar_border_radius</name>
+			<title>Border radius</title>
+			<title xml:lang="bg">Радиус за границата</title>
+			<title xml:lang="de">Rahmen Radius</title>
+			<title xml:lang="es">Radio del Borde</title>
+			<title xml:lang="it">Raggio del bordo</title>
+			<title xml:lang="ja">境界の半径</title>
+			<title xml:lang="pt">Raio da borda</title>
+			<type>double</type>
+			<range>1.0-20.0</range>
+			<default>4.5</default>
+			<description>Border radius</description>
+			<description xml:lang="bg">Радиус за границата</description>
+			<description xml:lang="de">Rahmen Radius</description>
+			<description xml:lang="es">Radio del Borde</description>
+			<description xml:lang="it">Raggio del bordo</description>
+			<description xml:lang="ja">境界の半径</description>
+			<description xml:lang="pt">Raio da borda</description>
+		</option>
+		<option>
+			<name>taskbar_border_width</name>
+			<title>Border width</title>
+			<title xml:lang="bg">Ширина на границата</title>
+			<title xml:lang="de">Rahmen breite</title>
+			<title xml:lang="es">Ancho del Borde</title>
+			<title xml:lang="it">Altezza bordo</title>
+			<title xml:lang="ja">境界の太さ</title>
+			<title xml:lang="pt">Largura da borda</title>
+			<type>double</type>
+			<range>0.1-5.0</range>
+			<default>2.0</default>
+			<description>Border width</description>
+			<description xml:lang="bg">Ширина на границата</description>
+			<description xml:lang="de">Rahmen breite</description>
+			<description xml:lang="es">Ancho del Borde</description>
+			<description xml:lang="it">Altezza bordo</description>
+			<description xml:lang="ja">境界の太さ</description>
+			<description xml:lang="pt">Largura da borda</description>
+		</option>
+	</subsection>
+</section>
+<section>
+	<sec_name>Winlist</sec_name>
+	<sec_name xml:lang="bg">Списък с прозорци</sec_name>
+	<sec_name xml:lang="de">Fensterliste</sec_name>
+	<sec_name xml:lang="es">Lista de Ventanas</sec_name>
+	<sec_name xml:lang="it">Lista Finestre</sec_name>
+	<sec_name xml:lang="ja">ウィンドウ一覧</sec_name>
+	<sec_name xml:lang="pt">Lista de janelas</sec_name>
+	<sec_desc>Manage opened Windows in a Kiba Icon.</sec_desc>
+	<sec_desc xml:lang="bg">Управление на отворените прозорци с една икона в Киба</sec_desc>
+	<sec_desc xml:lang="de">Verwalte geäffnete Fenster in einem Kiba Symbol.</sec_desc>
+	<sec_desc xml:lang="es">Gestionar ventanas abiertas en un Icono de Kiba</sec_desc>
+	<sec_desc xml:lang="it">Gestisci finestre aperte in un'Icona Kiba.</sec_desc>
+	<sec_desc xml:lang="ja">開かれたウィンドウを1つの Kiba アイコンで管理</sec_desc>
+	<sec_desc xml:lang="pt">Gerenciar janelas abertas em um ícone do Kiba.</sec_desc>
+	<sec_icon>[/usr/share/kiba-dock/icons/taskbar.svg,taskbar]</sec_icon>
+	<subsection>
+		<sub_sec_name>General</sub_sec_name>
+		<sub_sec_name xml:lang="bg">Общи</sub_sec_name>
+		<sub_sec_name xml:lang="de">Generell</sub_sec_name>
+		<sub_sec_name xml:lang="es">General</sub_sec_name>
+		<sub_sec_name xml:lang="fr">Général</sub_sec_name>
+		<sub_sec_name xml:lang="it">Generale</sub_sec_name>
+		<sub_sec_name xml:lang="ja">全般</sub_sec_name>
+		<sub_sec_name xml:lang="pt">Geral</sub_sec_name>
+		<option>
+			<name>winlist_enable</name>
+			<title>Enable</title>
+			<title xml:lang="bg">Пускане</title>
+			<title xml:lang="de">Aktivieren</title>
+			<title xml:lang="es">Activar</title>
+			<title xml:lang="fr">Activer</title>
+			<title xml:lang="it">Abilita</title>
+			<title xml:lang="ja">有効</title>
+			<title xml:lang="pt">Habilitar</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable the winlist plugin</description>
+			<description xml:lang="bg">Пускане/спиране на плъгина</description>
+			<description xml:lang="de">Aktiviere/Deaktiviere das Fensterlisten Plugin</description>
+			<description xml:lang="es">Activar/Desactivar el plugin de lista de ventanas</description>
+			<description xml:lang="it">Abilita/Disabilita il plugin lista finestre.</description>
+			<description xml:lang="ja">ウィンドウ一覧プラグインの有効化/無効化</description>
+			<description xml:lang="pt">Habilitar/desabilitar o plugin da lista de janelas</description>
+		</option>
+		<option>
+			<name>winlist_size_factor</name>
+			<title>Size factor</title>
+			<title xml:lang="bg">Степен на оразмеряване</title>
+			<title xml:lang="de">Größen Faktor</title>
+			<title xml:lang="ja">アイコンの大きさ</title>
+			<type>double</type>
+			<range>0.1-2.0</range>
+			<default>1.0</default>
+			<description>The size factor of the winlist icons</description>
+			<description xml:lang="bg">Размер на иконите в плъгин списък с прозорци</description>
+			<description xml:lang="es">Factor de Tamaño para los Iconos de la Lista de Ventanas</description>
+			<description xml:lang="it">Il fattore di dimensione dell'icona elenco finestre.</description>
+			<description xml:lang="ja">ウィンドウ一覧アイコンの大きさ</description>
+			<description xml:lang="pt">A escala dos ícones da lista de janelas</description>
+		</option>
+		<option>
+			<name>winlist_alpha</name>
+			<title>Icon alpha</title>
+			<title xml:lang="bg">Прозрачност на иконата</title>
+			<title xml:lang="de">Symbol Transparenz</title>
+			<title xml:lang="ja">アイコンの透明度</title>
+			<type>double</type>
+			<range>0.0-1.0</range>
+			<default>1.0</default>
+			<description>Icon alpha</description>
+			<description xml:lang="bg">Прозрачност на иконата</description>
+			<description xml:lang="de">Symbol Transparenz</description>
+			<description xml:lang="ja">アイコンの透明度</description>
+		</option>
+		<option>
+			<name>winlist_skip_app</name>
+			<title>Skip Applications</title>
+			<title xml:lang="bg">Пропуска приложения</title>
+			<title xml:lang="de">Überspringe Programme</title>
+			<title xml:lang="ja">アプリケーションのスキップ</title>
+			<type>list</type>
+			<range/>
+			<default>[cairo-clock]</default>
+			<description>List of skipped applications</description>
+			<description xml:lang="bg">Списък с приложения, който да бъдат пропускани</description>
+			<description xml:lang="de">Überspringe Programme</description>
+			<description xml:lang="ja">スキップされるアプリケーションの一覧</description>
+		</option>
+	</subsection>
+</section>
+<section>
+	<sec_name>Launchers</sec_name>
+	<sec_name xml:lang="bg">Стартери</sec_name>
+	<sec_name xml:lang="de">Starter</sec_name>
+	<sec_name xml:lang="es">Lanzadores</sec_name>
+	<sec_name xml:lang="it">Icone d'avvio</sec_name>
+	<sec_name xml:lang="ja">ランチャ</sec_name>
+	<sec_name xml:lang="pt">Lançadores</sec_name>
+	<sec_desc>Launch your favourite Applications from Kiba Icons.</sec_desc>
+	<sec_desc xml:lang="bg">Пускане на приложения от икона в Киба-док</sec_desc>
+	<sec_desc xml:lang="de">Starte deine lieblings Programme mit Kiba Symbolen.</sec_desc>
+	<sec_desc xml:lang="es">Lanzar las aplicaciones favoritas desde Iconos Kiba</sec_desc>
+	<sec_desc xml:lang="it">Esegui le tue Applicazioni preferite da Icone Kiba.</sec_desc>
+	<sec_desc xml:lang="ja">Kiba アイコンからお気に入りのアプリケーションの起動</sec_desc>
+	<sec_desc xml:lang="pt">Lance seus aplicativos favoritos através de ícones do Kiba.</sec_desc>
+	<sec_icon>[launcher-program]</sec_icon>
+	<subsection>
+		<sub_sec_name>Misc.</sub_sec_name>
+		<sub_sec_name xml:lang="bg">Разни</sub_sec_name>
+		<sub_sec_name xml:lang="de">Generell</sub_sec_name>
+		<sub_sec_name xml:lang="es">Misc.</sub_sec_name>
+		<sub_sec_name xml:lang="it">Varie</sub_sec_name>
+		<sub_sec_name xml:lang="ja">その他</sub_sec_name>
+		<sub_sec_name xml:lang="pt">Misc.</sub_sec_name>
+		<option>
+			<name>launcher_enable</name>
+			<title>Enable</title>
+			<title xml:lang="bg">Пускане</title>
+			<title xml:lang="de">Aktivieren</title>
+			<title xml:lang="es">Activar</title>
+			<title xml:lang="fr">Activer</title>
+			<title xml:lang="it">Abilita</title>
+			<title xml:lang="ja">有効</title>
+			<title xml:lang="pt">Habilitar</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Enable launchers</description>
+			<description xml:lang="bg">Пускане на стартерите</description>
+			<description xml:lang="de">Aktiviere Starter</description>
+			<description xml:lang="es">Habilitar lanzadores</description>
+			<description xml:lang="it">Abilita icone d'avvio</description>
+			<description xml:lang="ja">ランチャの有効化</description>
+			<description xml:lang="pt">Habilitar lançadores</description>
+		</option>
+		<option>
+			<name>launcher_grouping</name>
+			<title>Grouping</title>
+			<title xml:lang="bg">Групиране</title>
+			<title xml:lang="de">Gruppierung</title>
+			<title xml:lang="ja">グループ化</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable grouping of launcher icons</description>
+			<description xml:lang="bg">Пуска/спира групирането на иконите на стартерите</description>
+			<description xml:lang="de">Aktiviere/Deaktiviere das Gruppieren der Starter Symbole</description>
+			<description xml:lang="ja">ランチャアイコンのグループ化の有効化/無効化</description>
+		</option>
+		<option>
+			<name>launcher_size_factor</name>
+			<title>Size factor</title>
+			<title xml:lang="bg">Степен на оразмеряване</title>
+			<title xml:lang="de">Größen Faktor</title>
+			<title xml:lang="ja">アイコンの大きさ</title>
+			<type>double</type>
+			<range>0.1-2.0</range>
+			<default>1.0</default>
+			<description>Size factor</description>
+			<description xml:lang="bg">Степен на оразмеряване</description>
+			<description xml:lang="de">Größen Faktor</description>
+			<description xml:lang="ja">アイコンの大きさ</description>
+		</option>
+		<option>
+			<name>launcher_alpha</name>
+			<title>Alpha</title>
+			<title xml:lang="bg">Прозрачност</title>
+			<title xml:lang="de">Transparenz</title>
+			<title xml:lang="es">Transparencia</title>
+			<title xml:lang="it">Alpha</title>
+			<title xml:lang="ja">透明度</title>
+			<title xml:lang="pt">Transparência</title>
+			<type>double</type>
+			<range>0.0-1.0</range>
+			<default>1.0</default>
+			<description>Alpha</description>
+			<description xml:lang="bg">Прозрачност</description>
+			<description xml:lang="de">Transparenz</description>
+			<description xml:lang="es">Transparencia</description>
+			<description xml:lang="it">Alpha</description>
+			<description xml:lang="ja">透明度</description>
+			<description xml:lang="pt">Transparência</description>
+		</option>
+	</subsection>
+</section>
+<section>
+	<sec_name>Tray</sec_name>
+	<sec_name xml:lang="bg">област за уведомение</sec_name>
+	<sec_name xml:lang="es">Bandeja</sec_name>
+	<sec_name xml:lang="ja">トレイ</sec_name>
+	<sec_name xml:lang="pt">Bandeja</sec_name>
+	<sec_desc>A Tray Object in kiba.</sec_desc>
+	<sec_desc xml:lang="bg">Обект предлагащ област за уведомение </sec_desc>
+	<sec_desc xml:lang="es">Un objeto de Bandeja en kiba</sec_desc>
+	<sec_desc xml:lang="it">Un Oggetto Tray in kiba</sec_desc>
+	<sec_desc xml:lang="ja">トレイオブジェクト</sec_desc>
+	<sec_desc xml:lang="pt">Uma bandeja de objetos no Kiba.</sec_desc>
+	<sec_icon>[info]</sec_icon>
+	<subsection>
+		<sub_sec_name>General</sub_sec_name>
+		<sub_sec_name xml:lang="bg">Общи</sub_sec_name>
+		<sub_sec_name xml:lang="de">Generell</sub_sec_name>
+		<sub_sec_name xml:lang="es">General</sub_sec_name>
+		<sub_sec_name xml:lang="fr">Général</sub_sec_name>
+		<sub_sec_name xml:lang="it">Generale</sub_sec_name>
+		<sub_sec_name xml:lang="ja">全般</sub_sec_name>
+		<sub_sec_name xml:lang="pt">Geral</sub_sec_name>
+		<option>
+			<name>tray_enable</name>
+			<title>Enable</title>
+			<title xml:lang="bg">Пускане</title>
+			<title xml:lang="de">Aktivieren</title>
+			<title xml:lang="es">Activar</title>
+			<title xml:lang="fr">Activer</title>
+			<title xml:lang="it">Abilita</title>
+			<title xml:lang="ja">有効</title>
+			<title xml:lang="pt">Habilitar</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable the Tray Plugin</description>
+			<description xml:lang="bg">Пускане/спиране на областта за уведомение</description>
+			<description xml:lang="de">Aktiviere/Deaktiviere das Tray Plugin</description>
+			<description xml:lang="es">Activa/Desactivar le plugin de Bandeja</description>
+			<description xml:lang="it">Abilita/Disabilita il Plugin Tray</description>
+			<description xml:lang="ja">トレイプラグインの有効化/無効化</description>
+			<description xml:lang="pt">Habilitar/desabilitar o plugin da bandeja</description>
+		</option>
+	</subsection>
+</section>
+<section>
+	<sec_name>GMenu</sec_name>
+	<sec_name xml:lang="bg">Гменю</sec_name>
+	<sec_name xml:lang="de">GMenu</sec_name>
+	<sec_name xml:lang="es">GMenu</sec_name>
+	<sec_name xml:lang="fr">GMenu</sec_name>
+	<sec_name xml:lang="it">Menu GNOME</sec_name>
+	<sec_name xml:lang="ja">GMenu</sec_name>
+	<sec_name xml:lang="pt">GMenu</sec_name>
+	<sec_desc>The GNOME Main Menu.</sec_desc>
+	<sec_desc xml:lang="bg">Главното меню на ГНОМ</sec_desc>
+	<sec_desc xml:lang="de">Das GNOME Hauptmenu</sec_desc>
+	<sec_desc xml:lang="es">Menú principal de GNOME</sec_desc>
+	<sec_desc xml:lang="fr">Le menu principal GNOME</sec_desc>
+	<sec_desc xml:lang="it">Il Menu Principale di GNOME.</sec_desc>
+	<sec_desc xml:lang="ja">Gnome メインメニュー</sec_desc>
+	<sec_desc xml:lang="pt">O menu principal do Gnome.</sec_desc>
+	<sec_icon>[gnome-logo-icon-transparent]</sec_icon>
+	<subsection>
+		<sub_sec_name>General</sub_sec_name>
+		<sub_sec_name xml:lang="bg">Общи</sub_sec_name>
+		<sub_sec_name xml:lang="de">Generell</sub_sec_name>
+		<sub_sec_name xml:lang="es">General</sub_sec_name>
+		<sub_sec_name xml:lang="fr">Général</sub_sec_name>
+		<sub_sec_name xml:lang="it">Generale</sub_sec_name>
+		<sub_sec_name xml:lang="ja">全般</sub_sec_name>
+		<sub_sec_name xml:lang="pt">Geral</sub_sec_name>
+		<option>
+			<name>gmenu_enable</name>
+			<title>Enable</title>
+			<title xml:lang="bg">Пускане</title>
+			<title xml:lang="de">Aktivieren</title>
+			<title xml:lang="es">Activar</title>
+			<title xml:lang="fr">Activer</title>
+			<title xml:lang="it">Abilita</title>
+			<title xml:lang="ja">有効</title>
+			<title xml:lang="pt">Habilitar</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable the GMenu plugin</description>
+			<description xml:lang="bg">Пускане/спиране на Гменю плъгина</description>
+			<description xml:lang="de">Aktiviere/Deaktiviere das GMenu Plugin</description>
+			<description xml:lang="es">Activar/Desactivar el plugin de GMenu</description>
+			<description xml:lang="fr">Activer/Désactiver le plugin GMenu</description>
+			<description xml:lang="it">Abilita/Disabilita il plugin Menu GNOME</description>
+			<description xml:lang="ja">GMenu プラグインの有効化/無効化</description>
+			<description xml:lang="pt">Habilitar/desabilitar o plugin do GMenu</description>
+		</option>
+		<option>
+			<name>gmenu_size_factor</name>
+			<title>Size factor</title>
+			<title xml:lang="bg">Степен на оразмеряване</title>
+			<title xml:lang="de">Größen Faktor</title>
+			<title xml:lang="ja">アイコンの大きさ</title>
+			<type>double</type>
+			<range>0.1-2.0</range>
+			<default>1.0</default>
+			<description>Size factor</description>
+			<description xml:lang="bg">Степен на оразмеряване</description>
+			<description xml:lang="de">Größen Faktor</description>
+			<description xml:lang="ja">アイコンの大きさ</description>
+		</option>
+		<option>
+			<name>gmenu_alpha</name>
+			<title>Alpha</title>
+			<title xml:lang="bg">Прозрачност</title>
+			<title xml:lang="de">Transparenz</title>
+			<title xml:lang="es">Transparencia</title>
+			<title xml:lang="it">Alpha</title>
+			<title xml:lang="ja">透明度</title>
+			<title xml:lang="pt">Transparência</title>
+			<type>double</type>
+			<range>0.0-1.0</range>
+			<default>1.0</default>
+			<description>Alpha</description>
+			<description xml:lang="bg">Прозрачност</description>
+			<description xml:lang="de">Transparenz</description>
+			<description xml:lang="es">Transparencia</description>
+			<description xml:lang="it">Alpha</description>
+			<description xml:lang="ja">透明度</description>
+			<description xml:lang="pt">Transparência</description>
+		</option>
+	</subsection>
+</section>
+<section>
+	<sec_name>Clipman</sec_name>
+	<sec_name xml:lang="bg">Клипман</sec_name>
+	<sec_name xml:lang="es">Clipman</sec_name>
+	<sec_name xml:lang="it">Appunti</sec_name>
+	<sec_name xml:lang="ja">クリップマン</sec_name>
+	<sec_name xml:lang="pt">Clipman</sec_name>
+	<sec_desc>Clipboard Manager in a Kiba Icon.</sec_desc>
+	<sec_desc xml:lang="bg">Управление на клипбора в Киба-док</sec_desc>
+	<sec_desc xml:lang="de">Zwischenablagen Verwalter in einem Kiba Symbol.</sec_desc>
+	<sec_desc xml:lang="es">Gestro del Portapapeles en un Icono Kiba</sec_desc>
+	<sec_desc xml:lang="it">Gestore Appunti in un'Icona Kiba</sec_desc>
+	<sec_desc xml:lang="ja">Kiba アイコンでクリップボードの管理</sec_desc>
+	<sec_desc xml:lang="pt">Gerenciador da área de transferência em um ícone do Kiba.</sec_desc>
+	<sec_icon>[gtk-paste]</sec_icon>
+	<subsection>
+		<sub_sec_name>General</sub_sec_name>
+		<sub_sec_name xml:lang="bg">Общи</sub_sec_name>
+		<sub_sec_name xml:lang="de">Generell</sub_sec_name>
+		<sub_sec_name xml:lang="es">General</sub_sec_name>
+		<sub_sec_name xml:lang="fr">Général</sub_sec_name>
+		<sub_sec_name xml:lang="it">Generale</sub_sec_name>
+		<sub_sec_name xml:lang="ja">全般</sub_sec_name>
+		<sub_sec_name xml:lang="pt">Geral</sub_sec_name>
+		<option>
+			<name>clipman_enable</name>
+			<title>Enable</title>
+			<title xml:lang="bg">Пускане</title>
+			<title xml:lang="de">Aktivieren</title>
+			<title xml:lang="es">Activar</title>
+			<title xml:lang="fr">Activer</title>
+			<title xml:lang="it">Abilita</title>
+			<title xml:lang="ja">有効</title>
+			<title xml:lang="pt">Habilitar</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable the Clipman plugin</description>
+			<description xml:lang="bg">Пускане/спиране на Клипман плъгина</description>
+			<description xml:lang="de">Aktiviere/Deaktiviere das Clipman Plugin</description>
+			<description xml:lang="es">Activar/Desactivar el plugin Clipman</description>
+			<description xml:lang="it">Abilita/Disabilita il plugin Appunti</description>
+			<description xml:lang="ja">クリップマンプラグインの有効化/無効化</description>
+			<description xml:lang="pt">Habilitar/desabilitar o plugin do Clipman</description>
+		</option>
+		<option>
+			<name>clipman_ignore_select</name>
+			<title>Ignore Select</title>
+			<title xml:lang="bg">Игнориране на избраното</title>
+			<title xml:lang="es">Ignorar Selección</title>
+			<title xml:lang="fr">Ignorer la sélection</title>
+			<title xml:lang="it">Ignora Selezione</title>
+			<title xml:lang="ja">選択を無視</title>
+			<title xml:lang="pt">Ignorar seleção</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Ignore Select</description>
+			<description xml:lang="bg">Игнориране на избраното</description>
+			<description xml:lang="es">Ignorar Selección</description>
+			<description xml:lang="fr">Ignorer la sélection</description>
+			<description xml:lang="it">Ignora Selezione</description>
+			<description xml:lang="ja">選択を無視</description>
+			<description xml:lang="pt">Ignorar seleção</description>
+			</option>
+		<option>
+			<name>clipman_prevent_empty</name>
+			<title>Prevent Empty</title>
+			<title xml:lang="bg">Възпрепядства изпразване</title>
+			<title xml:lang="es">Prevenir Vacio</title>
+			<title xml:lang="ja">空にしない</title>
+			<title xml:lang="pt">Prevenir esvaziamento</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Prevent Empty</description>
+			<description xml:lang="bg">Възпрепядства изпразване</description>
+			<description xml:lang="es">Prevenir Vacio</description>
+			<description xml:lang="ja">空にしない</description>
+			<description xml:lang="pt">Prevenir esvaziamento</description>
+		</option>
+		<option>
+			<name>clipman_separate_menu</name>
+			<title>Separate Menu</title>
+			<title xml:lang="bg">Отделно меню</title>
+			<title xml:lang="de">Trenne Menu</title>
+			<title xml:lang="es">Separar Menú</title>
+			<title xml:lang="fr">Menu séparé</title>
+			<title xml:lang="it">Separa Menu</title>
+			<title xml:lang="ja">メニューの分割</title>
+			<title xml:lang="pt">Menu separado</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Separate Menu</description>
+			<description xml:lang="bg">Отделно меню</description>
+			<description xml:lang="de">Trenne Menu</description>
+			<description xml:lang="es">Separar Menú</description>
+			<description xml:lang="fr">Menu séparé</description>
+			<description xml:lang="it">Separa Menu</description>
+			<description xml:lang="ja">メニューの分割</description>
+			<description xml:lang="pt">Menu separado</description>
+		</option>
+		<option>
+			<name>clipman_item_numbers</name>
+			<title>Item Numbers</title>
+			<title xml:lang="bg">Номериране на списъка</title>
+			<title xml:lang="de">Nummerierung</title>
+			<title xml:lang="es">Elementos Numéricos</title>
+			<title xml:lang="it">Numeri Elemento</title>
+			<title xml:lang="ja">アイテムの数</title>
+			<title xml:lang="pt">Números dos itens</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Item Numbers</description>
+			<description xml:lang="bg">Номериране на списъка</description>
+			<description xml:lang="de">Nummerierung</description>
+			<description xml:lang="es">Elementos Numéricos</description>
+			<description xml:lang="it">Numeri Elemento</description>
+			<description xml:lang="ja">アイテムの数</description>
+			<description xml:lang="pt">Números dos itens</description>
+		</option>
+		<option>
+			<name>clipman_behaviour</name>
+			<title>Behaviour</title>
+			<title xml:lang="bg">Поведение</title>
+			<title xml:lang="de">Verhalten</title>
+			<title xml:lang="es">Comportamiento</title>
+			<title xml:lang="it">Comportamento</title>
+			<title xml:lang="ja">振る舞い</title>
+			<title xml:lang="pt">Comportamento</title>
+			<type>char</type>
+			<range>normal,strictly</range>
+			<default>normal</default>
+			<description>Behaviour</description>
+			<description xml:lang="bg">Поведение</description>
+			<description xml:lang="de">Verhalten</description>
+			<description xml:lang="es">Comportamiento</description>
+			<description xml:lang="it">Comportamento</description>
+			<description xml:lang="ja">振る舞い</description>
+			<description xml:lang="pt">Comportamento</description>
+		</option>
+		<option>
+			<name>clipman_menu_characters</name>
+			<title>Menu Characters</title>
+			<title xml:lang="bg">Букви на менюто</title>
+			<title xml:lang="de">Menu Buchstaben</title>
+			<title xml:lang="es">Caracteres del Menú</title>
+			<title xml:lang="it">Caratteri Menu</title>
+			<title xml:lang="ja">メニューの文字数</title>
+			<title xml:lang="pt">Caracteres do menu</title>
+			<type>int</type>
+			<range>10-100</range>
+			<default>30</default>
+			<description>Menu Characters</description>
+			<description xml:lang="bg">Букви на менюто</description>
+			<description xml:lang="de">Menu Buchstaben</description>
+			<description xml:lang="es">Caracteres del Menú</description>
+			<description xml:lang="it">Caratteri Menu</description>
+			<description xml:lang="ja">メニューの文字数</description>
+			<description xml:lang="pt">Caracteres do menu</description>
+		</option>
+		<option>
+			<name>clipman_history_items</name>
+			<title>History Items</title>
+			<title xml:lang="bg">История</title>
+			<title xml:lang="de">Chronik Objekte</title>
+			<title xml:lang="es">Elementos de Historial</title>
+			<title xml:lang="it">Elementi Cronologia</title>
+			<title xml:lang="ja">履歴のアイテム数</title>
+			<title xml:lang="pt">Itens do histórico</title>
+			<type>int</type>
+			<range>1-50</range>
+			<default>20</default>
+			<description>History Items</description>
+			<description xml:lang="bg">История</description>
+			<description xml:lang="de">Chronik Objekte</description>
+			<description xml:lang="es">Elementos de Historial</description>
+			<description xml:lang="it">Elementi Cronologia</description>
+			<description xml:lang="ja">履歴のアイテム数</description>
+			<description xml:lang="pt">Itens do histórico</description>
+		</option>
+		<option>
+			<name>clipman_size_factor</name>
+			<title>Size factor</title>
+			<title xml:lang="bg">Степен на оразмеряване</title>
+			<title xml:lang="de">Größen Faktor</title>
+			<title xml:lang="ja">アイコンの大きさ</title>
+			<type>double</type>
+			<range>0.1-2.0</range>
+			<default>1.0</default>
+			<description>Size factor</description>
+			<description xml:lang="bg">Степен на оразмеряване</description>
+			<description xml:lang="de">Größen Faktor</description>
+			<description xml:lang="ja">アイコンの大きさ</description>
+		</option>
+		<option>
+			<name>clipman_alpha</name>
+			<title>Alpha</title>
+			<title xml:lang="bg">Прозрачност</title>
+			<title xml:lang="de">Transparenz</title>
+			<title xml:lang="es">Transparencia</title>
+			<title xml:lang="it">Alpha</title>
+			<title xml:lang="ja">透明度</title>
+			<title xml:lang="pt">Transparência</title>
+			<type>double</type>
+			<range>0.0-1.0</range>
+			<default>1.0</default>
+			<description>Alpha</description>
+			<description xml:lang="bg">Прозрачност</description>
+			<description xml:lang="de">Transparenz</description>
+			<description xml:lang="es">Transparencia</description>
+			<description xml:lang="it">Alpha</description>
+			<description xml:lang="ja">透明度</description>
+			<description xml:lang="pt">Transparência</description>
+		</option>
+	</subsection>
+</section>
+<section>
+	<sec_name>Clock</sec_name>
+	<sec_name xml:lang="bg">Часовник</sec_name>
+	<sec_name xml:lang="de">Uhr</sec_name>
+	<sec_name xml:lang="es">Reloj</sec_name>
+	<sec_name xml:lang="fr">Horloge</sec_name>
+	<sec_name xml:lang="it">Orologio</sec_name>
+	<sec_name xml:lang="ja">時計</sec_name>
+	<sec_name xml:lang="pt">Relógio</sec_name>
+	<sec_desc>Display Time and Date in a Kiba Icon.</sec_desc>
+	<sec_desc xml:lang="bg">Показва времето и датата в Киба-док</sec_desc>
+	<sec_desc xml:lang="de">Zeigt Zeit und Datum in einem kiba Symbol.</sec_desc>
+	<sec_desc xml:lang="es">Mostrar Fecha y Hora en un Icono Kiba</sec_desc>
+	<sec_desc xml:lang="fr">Afficher la date et l'heure dans une icône Kiba</sec_desc>
+	<sec_desc xml:lang="it">Mostra Ora e Data in un'icona Kiba.</sec_desc>
+	<sec_desc xml:lang="ja">Kiba アイコンで日時を表示</sec_desc>
+	<sec_desc xml:lang="pt">Mostrar a hora e a data em um ícone do Kiba.</sec_desc>
+	<sec_icon>[gnome-panel-clock]</sec_icon>
+	<subsection>
+		<sub_sec_name>General</sub_sec_name>
+		<sub_sec_name xml:lang="bg">Общи</sub_sec_name>
+		<sub_sec_name xml:lang="de">Generell</sub_sec_name>
+		<sub_sec_name xml:lang="es">General</sub_sec_name>
+		<sub_sec_name xml:lang="fr">Général</sub_sec_name>
+		<sub_sec_name xml:lang="it">Generale</sub_sec_name>
+		<sub_sec_name xml:lang="ja">全般</sub_sec_name>
+		<sub_sec_name xml:lang="pt">Geral</sub_sec_name>
+		<option>
+			<name>clock_enable</name>
+			<title>Enable</title>
+			<title xml:lang="bg">Пускане</title>
+			<title xml:lang="de">Aktivieren</title>
+			<title xml:lang="es">Activar</title>
+			<title xml:lang="fr">Activer</title>
+			<title xml:lang="it">Abilita</title>
+			<title xml:lang="ja">有効</title>
+			<title xml:lang="pt">Habilitar</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Enable/Disable the Clock plugin</description>
+			<description xml:lang="bg">Пуска/спира плъгина "Часовник"</description>
+			<description xml:lang="de">Aktiviere/Deaktiviere das Uhr Plugin</description>
+			<description xml:lang="ja">時計プラグインの有効化/無効化</description>
+		</option>
+		<option>
+			<name>clock_show_seconds</name>
+			<title>Show Seconds</title>
+			<title xml:lang="bg">Показва секундите</title>
+			<title xml:lang="de">Zeige Sekunden</title>
+			<title xml:lang="es">Mostrar segundos</title>
+			<title xml:lang="fr">Afficher les secondes</title>
+			<title xml:lang="it">Mostra i secondi</title>
+			<title xml:lang="ja">秒を表示</title>
+			<title xml:lang="pt">Mostrar segundos</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable clock second hand</description>
+			<description xml:lang="bg">Пускане/спиране на стрелката за секунди</description>
+			<description xml:lang="de">Aktiviere/Deaktiviere den Sekunden Zeiger der Uhr</description>
+			<description xml:lang="ja">秒を表示の有効化/無効化</description>
+		</option>
+		<option>
+			<name>clock_24mode</name>
+			<title>24h Mode</title>
+			<title xml:lang="bg">Показва 24 часов циферблат</title>
+			<title xml:lang="de">24 Stunden Modus</title>
+			<title xml:lang="es">Modo 24h</title>
+			<title xml:lang="fr">Mode 24h</title>
+			<title xml:lang="it">Modalità 24 ore</title>
+			<title xml:lang="ja">24時間制</title>
+			<title xml:lang="pt">Modo 24h</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable 24 hour Mode</description>
+			<description xml:lang="bg">Пуска/спира 24 часов циферблат</description>
+			<description xml:lang="de">Aktiviere/Deaktiviere 24 Stunden Modus.</description>
+			<description xml:lang="es">Activar/Desactivar modo horario de 24 horas</description>
+			<description xml:lang="fr">Activer/Désactiver le mode 24 heures</description>
+			<description xml:lang="it">Abilita/Disabilita Modalità 24 ore</description>
+			<description xml:lang="ja">24時間制の有効化/無効化</description>
+			<description xml:lang="pt">Habilitar/desabilitar o modo 24h</description>
+		</option>
+		<option>
+			<name>clock_digital</name>
+			<title>Digital</title>
+			<title xml:lang="bg">Цифров</title>
+			<title xml:lang="de">Digital</title>
+			<title xml:lang="ja">デジタル</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Enable/Disable digital clock</description>
+			<description xml:lang="bg">Пуска/спира плъгина "Часовник"</description>
+			<description xml:lang="de">Aktiviere/Deaktiviere die digitale Uhr</description>
+			<description xml:lang="ja">デジタル時計の有効化/無効化</description>
+		</option>
+		<option>
+			<name>clock_text_rgba</name>
+			<title>Text color</title>
+			<title xml:lang="bg">Свят на текста</title>
+			<title xml:lang="de">Text Farbe</title>
+			<title xml:lang="ja">文字の色</title>
+			<type>char</type>
+			<range>rgba</range>
+			<default>#FFFFFFFF</default>
+			<description>Text color</description>
+			<description xml:lang="bg">Свят на текста</description>
+			<description xml:lang="de">Text Farbe</description>
+			<description xml:lang="ja">文字の色</description>
+		</option>
+		<option>
+			<name>clock_text_shadow_rgba</name>
+			<title>Text shadow color</title>
+			<title xml:lang="bg">Цвят на сенките под текста</title>
+			<title xml:lang="de">Text Schatten Farbe</title>
+			<title xml:lang="ja">文字の影の色</title>
+			<type>char</type>
+			<range>rgba</range>
+			<default>#000000FF</default>
+			<description>Text shadow color</description>
+			<description xml:lang="bg">Цвят на сенките под текста</description>
+			<description xml:lang="de">Text Schatten Farbe</description>
+			<description xml:lang="ja">文字の影の色</description>
+		</option>
+		<option>
+			<name>clock_text_font</name>
+			<title>Text font</title>
+			<title xml:lang="bg">Шрифт на текста</title>
+			<title xml:lang="de">Text Font</title>
+			<title xml:lang="ja">文字のフォント</title>
+			<type>char</type>
+			<range>text</range>
+			<default>Sans Regular 12</default>
+			<description>Text font</description>
+			<description xml:lang="bg">Шрифт на текста</description>
+			<description xml:lang="de">Text Font</description>
+			<description xml:lang="ja">文字のフォント</description>
+		</option>
+		<option>
+			<name>clock_theme</name>
+			<title>Theme</title>
+			<title xml:lang="bg">Тема</title>
+			<title xml:lang="de">Thema</title>
+			<title xml:lang="es">Tema</title>
+			<title xml:lang="fr">Thème</title>
+			<title xml:lang="it">Tema</title>
+			<title xml:lang="ja">テーマ</title>
+			<title xml:lang="pt">Tema</title>
+			<type>char</type>
+			<range/>
+			<default>none</default>
+			<description>Theme</description>
+			<description xml:lang="bg">Тема</description>
+			<description xml:lang="de">Thema</description>
+			<description xml:lang="es">Tema</description>
+			<description xml:lang="fr">Thème</description>
+			<description xml:lang="it">Tema</description>
+			<description xml:lang="ja">テーマ</description>
+			<description xml:lang="pt">Tema</description>
+		</option>
+		<option>
+			<name>clock_size_factor</name>
+			<title>Size factor</title>
+			<title xml:lang="bg">Степен на оразмеряване</title>
+			<title xml:lang="de">Größen Faktor</title>
+			<title xml:lang="ja">アイコンの大きさ</title>
+			<type>double</type>
+			<range>0.1-2.0</range>
+			<default>1.3</default>
+			<description>Size factor</description>
+			<description xml:lang="bg">Степен на оразмеряване</description>
+			<description xml:lang="de">Größen Faktor</description>
+			<description xml:lang="ja">アイコンの大きさ</description>
+		</option>
+	</subsection>
+</section>
+</schema>

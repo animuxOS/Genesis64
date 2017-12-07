@@ -1,0 +1,15 @@
+!!ARBfp1.0
+TEMP output, tmp;
+TEX output, fragment.texcoord[0], texture[0], RECT;
+
+MAX tmp.r, output.r, output.g;
+MAX tmp.r, tmp.r, output.b;
+MIN tmp.g, output.r, output.g;
+MIN tmp.g, tmp.g, output.b;
+SUB output.rgb, output, tmp.y;
+SUB tmp.b, tmp.r, tmp.g;
+ABS tmp.b, tmp.b;
+MUL output.a, output.a, tmp.b;
+
+MOV result.color, output;
+END

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+rm -f /usr/share/scrollkeeper/configured
+
+# Automatically added by dh_installxmlcatalogs
+if [ "$1" = "remove" ] || [ "$1" = "upgrade" ]; then
+	update-xmlcatalog --del --type uri --id "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/" --root || true
+
+	update-xmlcatalog --del --type uri --id "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/" --package scrollkeeper || true
+
+fi
+# End automatically added section
+
+

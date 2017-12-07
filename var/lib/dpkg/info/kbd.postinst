@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installinit
+if [ -x "/etc/init.d/console-screen.kbd.sh" ]; then
+	update-rc.d console-screen.kbd.sh start 48 S . >/dev/null
+	if [ -x "`which invoke-rc.d 2>/dev/null`" ]; then
+		invoke-rc.d console-screen.kbd.sh start || exit $?
+	else
+		/etc/init.d/console-screen.kbd.sh start || exit $?
+	fi
+fi
+# End automatically added section

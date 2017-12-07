@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>GdlDockLayout</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="GDL Reference Manual">
+<link rel="up" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+<link rel="prev" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+<link rel="next" href="GdlDockMaster.html" title="GdlDockMaster">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="gdl-main.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="gdl-main.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GDL Reference Manual</th>
+<td><a accesskey="n" href="GdlDockMaster.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2571435" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2575003" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2533087" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2533111" class="shortcut">Properties</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="GdlDockLayout"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2571435"></a><span class="refentrytitle">GdlDockLayout</span>
+</h2>
+<p>GdlDockLayout</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+                    <a href="GdlDockLayout.html#GdlDockLayoutPrivate">GdlDockLayoutPrivate</a>;
+                    <a href="GdlDockLayout.html#GdlDockLayout-struct">GdlDockLayout</a>;
+<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a>*      <a href="GdlDockLayout.html#gdl-dock-layout-new">gdl_dock_layout_new</a>                 (<a href="GdlDock.html" title="GdlDock">GdlDock</a> *dock);
+void                <a href="GdlDockLayout.html#gdl-dock-layout-attach">gdl_dock_layout_attach</a>              (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout,
+                                                         <a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master);
+gboolean            <a href="GdlDockLayout.html#gdl-dock-layout-load-layout">gdl_dock_layout_load_layout</a>         (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout,
+                                                         const gchar *name);
+void                <a href="GdlDockLayout.html#gdl-dock-layout-save-layout">gdl_dock_layout_save_layout</a>         (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout,
+                                                         const gchar *name);
+void                <a href="GdlDockLayout.html#gdl-dock-layout-delete-layout">gdl_dock_layout_delete_layout</a>       (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout,
+                                                         const gchar *name);
+GList*              <a href="GdlDockLayout.html#gdl-dock-layout-get-layouts">gdl_dock_layout_get_layouts</a>         (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout,
+                                                         gboolean include_default);
+void                <a href="GdlDockLayout.html#gdl-dock-layout-run-manager">gdl_dock_layout_run_manager</a>         (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout);
+gboolean            <a href="GdlDockLayout.html#gdl-dock-layout-load-from-file">gdl_dock_layout_load_from_file</a>      (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout,
+                                                         const gchar *filename);
+gboolean            <a href="GdlDockLayout.html#gdl-dock-layout-save-to-file">gdl_dock_layout_save_to_file</a>        (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout,
+                                                         const gchar *filename);
+gboolean            <a href="GdlDockLayout.html#gdl-dock-layout-is-dirty">gdl_dock_layout_is_dirty</a>            (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout);
+GtkWidget*          <a href="GdlDockLayout.html#gdl-dock-layout-get-ui">gdl_dock_layout_get_ui</a>              (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout);
+GtkWidget*          <a href="GdlDockLayout.html#gdl-dock-layout-get-items-ui">gdl_dock_layout_get_items_ui</a>        (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout);
+GtkWidget*          <a href="GdlDockLayout.html#gdl-dock-layout-get-layouts-ui">gdl_dock_layout_get_layouts_ui</a>      (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2533087"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GdlDockLayout
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2533111"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="GdlDockLayout.html#GdlDockLayout--dirty">dirty</a>"                    gboolean              : Read
+  "<a href="GdlDockLayout.html#GdlDockLayout--master">master</a>"                   <a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a>         : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2575003"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2575018"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2575029"></a><h3>
+<a name="GdlDockLayoutPrivate"></a>GdlDockLayoutPrivate</h3>
+<a class="indexterm" name="id2575040"></a><pre class="programlisting">typedef struct _GdlDockLayoutPrivate GdlDockLayoutPrivate;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2575056"></a><h3>
+<a name="GdlDockLayout-struct"></a>GdlDockLayout</h3>
+<a class="indexterm" name="id2575068"></a><pre class="programlisting">typedef struct _GdlDockLayout GdlDockLayout;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2575084"></a><h3>
+<a name="gdl-dock-layout-new"></a>gdl_dock_layout_new ()</h3>
+<a class="indexterm" name="id2575097"></a><pre class="programlisting"><a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a>*      gdl_dock_layout_new                 (<a href="GdlDock.html" title="GdlDock">GdlDock</a> *dock);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>dock</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2575153"></a><h3>
+<a name="gdl-dock-layout-attach"></a>gdl_dock_layout_attach ()</h3>
+<a class="indexterm" name="id2575165"></a><pre class="programlisting">void                gdl_dock_layout_attach              (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout,
+                                                         <a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>layout</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>master</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2510480"></a><h3>
+<a name="gdl-dock-layout-load-layout"></a>gdl_dock_layout_load_layout ()</h3>
+<a class="indexterm" name="id2510491"></a><pre class="programlisting">gboolean            gdl_dock_layout_load_layout         (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout,
+                                                         const gchar *name);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>layout</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>name</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2510569"></a><h3>
+<a name="gdl-dock-layout-save-layout"></a>gdl_dock_layout_save_layout ()</h3>
+<a class="indexterm" name="id2510580"></a><pre class="programlisting">void                gdl_dock_layout_save_layout         (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout,
+                                                         const gchar *name);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>layout</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>name</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2510647"></a><h3>
+<a name="gdl-dock-layout-delete-layout"></a>gdl_dock_layout_delete_layout ()</h3>
+<a class="indexterm" name="id2510659"></a><pre class="programlisting">void                gdl_dock_layout_delete_layout       (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout,
+                                                         const gchar *name);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>layout</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>name</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2510727"></a><h3>
+<a name="gdl-dock-layout-get-layouts"></a>gdl_dock_layout_get_layouts ()</h3>
+<a class="indexterm" name="id2510739"></a><pre class="programlisting">GList*              gdl_dock_layout_get_layouts         (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout,
+                                                         gboolean include_default);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>layout</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>include_default</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2598294"></a><h3>
+<a name="gdl-dock-layout-run-manager"></a>gdl_dock_layout_run_manager ()</h3>
+<a class="indexterm" name="id2598304"></a><pre class="programlisting">void                gdl_dock_layout_run_manager         (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>layout</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2598345"></a><h3>
+<a name="gdl-dock-layout-load-from-file"></a>gdl_dock_layout_load_from_file ()</h3>
+<a class="indexterm" name="id2598358"></a><pre class="programlisting">gboolean            gdl_dock_layout_load_from_file      (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout,
+                                                         const gchar *filename);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>layout</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>filename</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2598437"></a><h3>
+<a name="gdl-dock-layout-save-to-file"></a>gdl_dock_layout_save_to_file ()</h3>
+<a class="indexterm" name="id2598450"></a><pre class="programlisting">gboolean            gdl_dock_layout_save_to_file        (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout,
+                                                         const gchar *filename);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>layout</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>filename</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2598529"></a><h3>
+<a name="gdl-dock-layout-is-dirty"></a>gdl_dock_layout_is_dirty ()</h3>
+<a class="indexterm" name="id2598540"></a><pre class="programlisting">gboolean            gdl_dock_layout_is_dirty            (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>layout</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2598596"></a><h3>
+<a name="gdl-dock-layout-get-ui"></a>gdl_dock_layout_get_ui ()</h3>
+<a class="indexterm" name="id2598608"></a><pre class="programlisting">GtkWidget*          gdl_dock_layout_get_ui              (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>layout</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2598664"></a><h3>
+<a name="gdl-dock-layout-get-items-ui"></a>gdl_dock_layout_get_items_ui ()</h3>
+<a class="indexterm" name="id2598677"></a><pre class="programlisting">GtkWidget*          gdl_dock_layout_get_items_ui        (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>layout</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2598735"></a><h3>
+<a name="gdl-dock-layout-get-layouts-ui"></a>gdl_dock_layout_get_layouts_ui ()</h3>
+<a class="indexterm" name="id2598748"></a><pre class="programlisting">GtkWidget*          gdl_dock_layout_get_layouts_ui      (<a href="GdlDockLayout.html" title="GdlDockLayout">GdlDockLayout</a> *layout);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>layout</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2598806"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2598817"></a><h3>
+<a name="GdlDockLayout--dirty"></a>The "<code class="literal">dirty</code>" property</h3>
+<a class="indexterm" name="id2598831"></a><pre class="programlisting">  "dirty"                    gboolean              : Read</pre>
+<p>True if the layouts have changed and need to be saved to a file.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2598857"></a><h3>
+<a name="GdlDockLayout--master"></a>The "<code class="literal">master</code>" property</h3>
+<a class="indexterm" name="id2598871"></a><pre class="programlisting">  "master"                   <a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a>         : Read / Write</pre>
+<p>GdlDockMaster object which the layout object is attached to.</p>
+</div>
+</div>
+</div>
+</body>
+</html>

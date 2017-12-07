@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -e
+
+test -d /etc/kernel/postinst.d && run-parts --arg="2.6.24-rt1" /etc/kernel/postinst.d
+exit 0

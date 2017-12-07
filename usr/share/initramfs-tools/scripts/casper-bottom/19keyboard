@@ -1,0 +1,73 @@
+#!/bin/sh
+
+PREREQ=""
+DESCRIPTION="Setting up console keyboard..."
+
+. /scripts/casper-functions
+
+prereqs()
+{
+       echo "$PREREQ"
+}
+
+case $1 in
+# get pre-requisites
+prereqs)
+       prereqs
+       exit 0
+       ;;
+esac
+
+log_begin_msg "$DESCRIPTION"
+
+kbd=
+cslayout=
+csvariant=
+csmodel=
+
+# commandline
+if [ -n "${KBD}" ]; then
+    kbd="${KBD}"
+else
+    kbd=us
+fi
+
+really_export kbd
+
+if [ -n "${KLAYOUT}" ]; then
+    cslayout="${KLAYOUT}"
+fi
+if [ -n "${KVARIANT}" ]; then
+    csvariant="${KVARIANT}"
+fi
+if [ -n "${KMODEL}" ]; then
+    csmodel="${KMODEL}"
+fi
+
+if [ -x /root/bin/setupcon ] && [ -f /root/etc/default/console-setup ]; then
+        if [ "$cslayout" ]; then
+                chroot /root sed -i "s/^XKBLAYOUT=.*/XKBLAYOUT=\"$cslayout\"/" \
+                        /etc/default/console-setup
+                if [ "$csvariant" ]; then
+                        chroot /root sed -i "s/^XKBVARIANT=.*/XKBVARIANT=\"$csvariant\"/" \
+                                /etc/default/console-setup
+                else
+                        casper-preseed /root console-setup/variantcode '' false
+                fi
+                if [ "$csmodel" ]; then
+                        chroot /root sed -i "s/^XKBMODEL=.*/XKBMODEL=\"$csmodel\"/" \
+                                /etc/default/console-setup
+                else
+                        casper-preseed /root console-setup/modelcode '' false
+                fi
+        else
+                casper-preseed /root console-setup/layoutcode '' false
+                casper-preseed /root console-setup/variantcode '' false
+                casper-preseed /root console-setup/modelcode '' false
+        fi
+else
+        chroot /root /usr/sbin/install-keymap $kbd
+        casper-preseed /root debian-installer/keymap "$kbd"
+        casper-preseed /root kbd-chooser/method "$kbd"
+fi
+log_end_msg

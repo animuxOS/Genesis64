@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdefoma
+case "$1" in
+	upgrade)
+		test -x /usr/bin/defoma-app && \
+			/usr/bin/defoma-app clean libwmf0.2-7
+		;;
+	remove)
+		test -x /usr/bin/defoma-app && \
+			/usr/bin/defoma-app purge libwmf0.2-7
+		;;
+esac
+# End automatically added section

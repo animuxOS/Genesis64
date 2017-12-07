@@ -1,0 +1,19 @@
+#! /bin/sh
+
+# Clean up old conffiles
+if [ -f /etc/mtools.ref ]; then
+	rm /etc/mtools.ref
+fi
+
+# Convert floppy devices in mtools.conf if devfs is used
+if [ -e /dev/.devfsd -a -f /etc/mtools.conf ]; then
+    sed 's_/dev/fd_/dev/floppy/_g' < /etc/mtools.conf > /etc/mtools.conf.dpkg-tmp
+    mv -fb /etc/mtools.conf.dpkg-tmp /etc/mtools.conf
+fi
+
+# Automatically added by dh_installinfo
+if [ "$1" = "configure" ]; then
+	install-info --quiet /usr/share/info/mtools.info
+fi
+# End automatically added section
+

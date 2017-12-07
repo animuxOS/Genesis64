@@ -1,0 +1,921 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="是否啟用 gnome-keyring PKCS#11 元件。">
+                                                        <longdesc>這個選項會啟用 gnome-keyring 伺服程式中的 PKCS#11 元件。它只會在 gnome-keyring-daemon 啟動時生效，(例如使用者登入時)。這個設定值在傳送某些命令列引數給伺服程式時可能會被覆蓋。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="是否啟用 gnome-keyring SSH 代理程式。">
+                                                        <longdesc>這個選項會啟用 gnome-keyring 伺服程式中的 SSH 代理程式。它只會在 gnome-keyring-daemon 啟動時生效，(例如使用者登入時)。這個設定值在傳送某些命令列引數給伺服程式時可能會被覆蓋。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="視窗闊度">
+                                                        <longdesc>顯示的視窗的闊度</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="視窗高度">
+                                                        <longdesc>顯示的視窗的高度</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="按下按鍵組合後執行相關的指令">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_N 設定鍵中定義了相應指令所使用的按鍵組合。按下 run_command_N 的按鍵組合會執行 command_N。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="視窗畫面快照指令">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_window_screenshot 設定鍵中定義了相應指令所使用的按鍵組合。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="桌面畫面快照指令">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_screenshot 設定鍵中定義了相應指令所使用的按鍵組合。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="執行指定的指令">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="執行終端機">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="拍下視窗的畫面快照">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="擷取畫面快照">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="顯示面板的「執行程式」對話視窗">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="顯示面板選單">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="切換至下方的工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="切換至上方的工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="切換至右方的工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="切換至左方的工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="切換至第 12 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="切換至第 11 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="切換至第 10 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="切換至第 9 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="切換至第 8 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="切換至第 7 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="切換至第 6 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="切換至第 5 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="切換至第 4 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="切換至第 3 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="切換至第 2 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="切換至第 1 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="隱藏所有視窗及顯示桌面">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="將輸入焦點在面板及桌面之間以相反次序切換（立即模式）">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="將輸入焦點在面板及桌面之間切換（立即模式）">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="將輸入焦點在各視窗之間以相反次序切換（立即模式）">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="將輸入焦點在各視窗之間切換（立即模式）">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="在視窗及程式之間相反次序切換（提示模式）">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="在視窗及程式之間切換（提示模式）">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="在視窗及程式之間相反次序切換（立即模式）">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="在視窗及程式之間切換（立即模式）">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="將輸入焦點在面板及桌面之間以相反次序切換（提示模式）">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="將輸入焦點在面板及桌面之間切換（提示模式）">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="將輸入焦點在各視窗之間以相反次序切換（提示模式）">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="將輸入焦點在各視窗之間切換（提示模式）">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="將視窗移至畫面的左方">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="將視窗移至畫面的右方">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="將視窗移至畫面的下方">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="將視窗移至畫面的上方">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="將視窗移至右下角">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="將視窗移至左下角">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="將視窗移至右上角">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="將視窗移至左上角">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="將視窗橫向最大化">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="將視窗縱向最大化">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="遮蔽某個視窗">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="令某個視窗覆蓋其它視窗">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="完全顯示被遮蔽的視窗，否則將視窗遮蔽">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="將視窗移至下方的工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="將視窗移至上方的工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="將視窗移至右方的工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="將視窗移至左方的工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="將視窗移至第 12 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="將視窗移至第 11 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="將視窗移至第 10 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="將視窗移至第 9 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="將視窗移至第 8 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="將視窗移至第 7 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="將視窗移至第 6 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="將視窗移至第 5 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="將視窗移至第 4 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="將視窗移至第 3 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="將視窗移至第 2 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="將視窗移至第 1 個工作區">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="切換視窗是否在所有工作區顯示">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="調整視窗大小">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="移動視窗">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="視窗最小化">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="關閉視窗">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="切換視窗捲起/放下狀態">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="視窗從最大化還原">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="視窗最大化">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="切換最大化狀態">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="切換是否在「最上層」顯示">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="切換全螢幕模式">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="啟用視窗選單">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="工作區名稱">
+                                                        <longdesc>工作區的名稱。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="關閉舊式或不合規格的程式所需的功能">
+                                                        <longdesc>某些應用程式不符合規定，導致令視窗管理員要加入某些不應該有的功能。本選項會關閉對這些不合規格的程式的支援，如果你不需要執行任何不合規格的程式，這樣的使用者界面會較好。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="（未完成）使用桌面時以應用程式為主的方式運作，並非以視窗為主">
+                                                        <longdesc>如設定為‘true’，Metacity 會以應用程式而不是以視窗為主的方式運作。它的概念是比較抽象，但大致上，以應用程式為主的設定會類似 Mac 多於 Windows。在應用程式為主的模式中，當視窗獲得輸入焦點時，所有該程式的視窗都會完全顯示出來。另外，在應用程式為主的模式中，若在輸入焦點以外的視窗按滑鼠按鈕，只會令輸入焦點轉移，按該下按鈕不會令程式帶來其它變化。另外，應用程式為主的設定目前大致上仍未編寫完成。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="如設定為‘true’，以改變可用性來換取使用更少的資源">
+                                                        <longdesc>如設定為‘true’，metacity 會給使用者更少的回饋：會使用線框、防止動畫或使用其它方法的使用。這很明顯會減低很多給使用者的可用性。但可能會使到在啟用此項前不能使用的舊程式及終端服務可以運作。但是，如果使用了無障礙環境，線框功能將會停用，以防止捆綁的桌面破損。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="視窗管理程式">
+                                                        <longdesc>決定 Metacity 是否視窗管理程式。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="鈴聲視覺效果類型">
+                                                        <longdesc>讓 Metacity 知道當系統或程式發出「鈴聲」時，如何顯示該「鈴聲」的視覺效果。目前可接受的值有兩個：
+“fullscreen”令整個畫面以黑白方式閃爍
+“frame_flash”令發出鈴聲的程式的視窗標題列閃動。如果不知道發出鈴聲的是哪一個視窗（主要的例子為預設的「系統聲響」），則會令目前輸入焦點所在的視窗閃動標題列。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="系統聲響可發出聲音">
+                                                        <longdesc>決定程式或系統可否發出可聽見的「聲響」；配合「鈴聲視覺效果」後，就可以產生不發出聲音的「聲響」。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="啟用鈴聲視覺效果">
+                                                        <longdesc>當程式系統發出「聲響」或「鈴聲」時，以視覺方式表示。對於聽障人士、在嘈雜的環境中時，這個設定會比較有用。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="工作區數目">
+                                                        <longdesc>工作區數目。必須大於 0，並有固定的最大值（防止因工作區數目過多而破壞桌面）。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="視窗標題列字型">
+                                                        <longdesc>視窗標題所使用的字型的描述字串。可是只有當 titlebar_font_size option 設定為 0 時才會採用本設定值中的字型大小。另外，當 titlebar_uses_desktop_font 設定為‘true’時本設定值不會生效。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="在視窗標題中使用標準系統字型">
+                                                        <longdesc>如設定為‘true’，則忽略 titlebar_font 選項，並在視窗標題中使用標準的程式字型。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="目前的佈景主題">
+                                                        <longdesc>佈景主題可指定視窗邊框、標題列等的外觀。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="某視窗自動覆蓋其它視窗前延遲的時間">
+                                                        <longdesc>如果選用 auto_raise 選項時，令視窗不被遮蔽的延遲時間。延遲的時間會以 1/1000 秒為單位來表示。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="輸入焦點所在的視窗自動地覆蓋其它視窗">
+                                                        <longdesc>如設定為‘true’，而且焦點模式是“sloppy”或“mouse”的時候，輸入焦點所在的視窗經過某段時間後會自動完全顯示（auto_raise_delay 設定鍵指定了延遲的時間）。這跟按下視窗將視窗升起，及以在拖曳時進入視窗無關。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="雙擊標題列所表示的操作程序">
+                                                        <longdesc>本選項決定在標題列上雙擊滑鼠按鈕的效果。目前有效的選項為：‘toggle_shade’會捲起/放下視窗，‘toggle_maximize’會切換是否將視窗最大化。‘minimize‘會將視窗最小化，及‘nome’則不會作出任何反應。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="由於其他使用的動作，提升視窗取得焦點應否是一個副作用">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="控制視窗如何取得焦點">
+                                                        <longdesc>本選項會在新建視窗取得焦點上提供符加的控制。它有兩個可用的值“smart”會套用使用者平常使用的焦點模式，及“strick”會導致在終端中執行的視窗在開始時不會取得焦點。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="視窗焦點模式">
+                                                        <longdesc>「視窗焦點模式」表示視窗如何對輸入產生反應。它有 3 個可接受的值：
+“click”表示必須在視窗按滑鼠按鈕才會令視窗獲取輸入焦點，
+“sloppy”表示當鼠標在某視窗上時會令該視窗獲取輸入焦點，最後
+“mouse”表示當鼠標在某視窗上時會令該視窗獲取輸入焦點，而且當鼠標移離視窗時輸入焦點也會脫離該視窗。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="標題列上的按鈕排列">
+                                                        <longdesc>標題列上的按鈕排列。設定值必須為字串，例如“menu:minimize,maximize,close”；冒號表示將視窗左上角及右上角分開，而按鈕名稱則以逗號分開。不會接受重複的按鈕名稱。不明的按鈕會忽略不理，使得在日後的 metacity 版本增加新的按鈕時也不會令舊版本無法使用。</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="按下指定的特殊按鍵後，點擊動作會代表不同的操作程序">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="預設的元件檢視程式">
+                                                                <longdesc>有些檔案需要有一個元件來檢視它們，這裏指定檢視所用的程式。參數 %s 會被檔案的 URI 所取代，參數 %c 會被元件 IID 所取代。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="預設終端機的 Exec 參數">
+                                                                <longdesc>預設終端機所使用的 exec 參數。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="預設的終端機">
+                                                                <longdesc>應用程式需要使用終端機時，預設執行的終端機。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="在終端機中執行指令">
+                                                                <longdesc>如設定為‘TRUE’，處理此 URL 的程式必須在終端機中執行。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="處理“h323”URL 的處理程序">
+                                                                <longdesc>若有啟用，用來處理“h323”URL 的指令。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定的指令應否處理“h323”URL">
+                                                                <longdesc>如設定為“TRUE”，在「指令」欄中的指令為處理“h323”URL 的程式。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="在終端機中執行指令">
+                                                                <longdesc>如設定為‘TRUE’，處理此 URL 的程式必須在終端機中執行。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="處理“callto”URL 的處理程序">
+                                                                <longdesc>若有啟用，用來處理“callto”URL 的指令。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定的指令應否處理“callto”URL">
+                                                                <longdesc>如設定為“TRUE”，在「指令」欄中的指令為處理“callto”URL 的程式。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="在終端機中執行指令">
+                                                                <longdesc>如設定為‘TRUE’，處理此 URL 的程式必須在終端機中執行。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="處理“mailto”URL 的處理程序">
+                                                                <longdesc>若有啟用，用來處理“mailto”URL 的指令。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定的指令應否處理“mailto”URL">
+                                                                <longdesc>如設定為“TRUE”，在「指令」欄中的指令為處理“mailto”URL 的程式。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="在終端機中執行指令">
+                                                                <longdesc>如設定為‘TRUE’，處理此 URL 的程式必須在終端機中執行。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="處理“https”URL 的處理程序">
+                                                                <longdesc>若有啟用，用來處理“https”URL 的指令。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定的指令應否處理“https”URL">
+                                                                <longdesc>如設定為“TRUE”，在「指令」欄中的指令為處理“https”URL 的程式。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="在終端機中執行指令">
+                                                                <longdesc>如設定為‘TRUE’，處理此 URL 的程式必須在終端機中執行。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="在終端機中執行指令">
+                                                                <longdesc>如設定為‘TRUE’，處理此 URL 的程式必須在終端機中執行。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="處理“http”URL 的處理程序">
+                                                                <longdesc>若有啟用，用來處理“http”URL 的指令。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定的指令應否處理“http”URL">
+                                                                <longdesc>如設定為“TRUE”，在「指令」欄中的指令為處理“http”URL 的程式。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="在終端機中執行指令">
+                                                                <longdesc>如設定為‘TRUE’，處理此 URL 的程式必須在終端機中執行。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="處理“man”URL 的處理程序">
+                                                                <longdesc>若有啟用，用來處理“man”URL 的指令。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定的指令應否處理“man”URL">
+                                                                <longdesc>如設定為“TRUE”，在「指令」欄中的指令為處理“man”URL 的程式。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="在終端機中執行指令">
+                                                                <longdesc>如設定為‘TRUE’，處理此 URL 的程式必須在終端機中執行。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="處理“info”URL 的處理程序">
+                                                                <longdesc>若有啟用，用來處理“info”URL 的指令。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定的指令應否處理“info”URL">
+                                                                <longdesc>如設定為“TRUE”，在「指令」欄中的指令為處理“info”URL 的程式。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="在終端機中執行指令">
+                                                                <longdesc>如設定為‘TRUE’，處理此 URL 的程式必須在終端機中執行。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="處理“ghelp”URL 的處理程序">
+                                                                <longdesc>若有啟用，用來處理“ghelp”URL 的指令。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定的指令應否處理“ghelp”URL">
+                                                                <longdesc>如設定為“TRUE”，在「指令」欄中的指令為處理“ghelp”URL 的程式。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="在終端機中執行指令">
+                                                                <longdesc>如設定為‘TRUE’，處理此 URL 的程式必須在終端機中執行。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="處理“trash”URL 的處理程序">
+                                                                <longdesc>若有啟用，用來處理“trash”URL 的指令。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="指定的指令應否處理“trash”URL">
+                                                                <longdesc>如設定為“TRUE”，在「指令」欄中的指令為處理“trash”URL 的程式。</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="是否使用此設定組合">
+                                                                        <longdesc>是否使用及顯示此設定組合</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="這設定組合的預設延伸檔名">
+                                                                        <longdesc>使用此設定組合來進行編碼時，儲存檔案所使用的延伸檔名。</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="所使用的部份 GStreamer 管線">
+                                                                        <longdesc>這設定組合所使用的部份 GStreamer 管線。</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="設定組合的描述">
+                                                                        <longdesc>設定組合的描述。包含更多在甚麼時候使用這設定組合的資料與描述。</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="音效設定組合的簡稱">
+                                                                        <longdesc>音效設定組合的簡稱，在選取及確認該設定組合時使用。</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="是否使用此設定組合">
+                                                                                <longdesc>是否使用及顯示此設定組合</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="這設定組合的預設延伸檔名">
+                                                                                <longdesc>使用此設定組合來進行編碼時，儲存檔案所使用的延伸檔名。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="所使用的部份 GStreamer 管線">
+                                                                                <longdesc>這設定組合所使用的部份 GStreamer 管線。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="設定組合的描述">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="音效設定組合的簡稱">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="這設定組合的預設延伸檔名">
+                                                                                <longdesc>使用此設定組合來進行編碼時，儲存檔案所使用的延伸檔名。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="所使用的部份 GStreamer 管線">
+                                                                                <longdesc>這設定組合所使用的部份 GStreamer 管線。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="設定組合的描述">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="音效設定組合的簡稱">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="這設定組合的預設延伸檔名">
+                                                                                <longdesc>使用此設定組合來進行編碼時，儲存檔案所使用的延伸檔名。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="所使用的部份 GStreamer 管線">
+                                                                                <longdesc>這設定組合所使用的部份 GStreamer 管線。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="設定組合的描述">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="音效設定組合的簡稱">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="這設定組合的預設延伸檔名">
+                                                                                <longdesc>使用此設定組合來進行編碼時，儲存檔案所使用的延伸檔名。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="所使用的部份 GStreamer 管線">
+                                                                                <longdesc>這設定組合所使用的部份 GStreamer 管線。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="設定組合的描述">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="音效設定組合的簡稱">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="這設定組合的預設延伸檔名">
+                                                                                <longdesc>使用此設定組合來進行編碼時，儲存檔案所使用的延伸檔名。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="所使用的部份 GStreamer 管線">
+                                                                                <longdesc>這設定組合所使用的部份 GStreamer 管線。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="設定組合的描述">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="音效設定組合的簡稱">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="這設定組合的預設延伸檔名">
+                                                                                <longdesc>使用此設定組合來進行編碼時，儲存檔案所使用的延伸檔名。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="所使用的部份 GStreamer 管線">
+                                                                                <longdesc>這設定組合所使用的部份 GStreamer 管線。</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="設定組合的描述">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="音效設定組合的簡稱">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="設定組合清單">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="代表自動代理伺服器設定的 URL">
+                                                <longdesc>提供代理伺服器設置值的 URL</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="SOCKS 代理伺服器埠號">
+                                                <longdesc>在“/system/proxy/socks_host’中定義的代理伺服器的埠號。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="SOCKS 代理伺服器主機名稱">
+                                                <longdesc>socks 代理伺服器主機名稱。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="FTP 代理伺服器埠號">
+                                                <longdesc>在“/system/proxy/ftp_host’中定義的代理伺服器的埠號。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="FTP 代理伺服器主機名稱">
+                                                <longdesc>FTP 代理伺服器主機名稱。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="安全 HTTP 代理伺服器埠號">
+                                                <longdesc>在“/system/proxy/secure_host’中定義的代理伺服器的埠號。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="安全 HTTP 代理伺服器主機名稱">
+                                                <longdesc>安全 HTTP 代理伺服器主機名稱。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="代理伺服器設置模式">
+                                                <longdesc>選擇代理伺服器設置模式。支援的值有“none”、“manual”、“auto”。</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="不使用代理伺服器的主機">
+                                                <longdesc>這設定鍵中包含了不是通過代理伺服器（如果它有啟用），而是使用直接連線的主機清單。設定值可以是主機名稱，網域名稱（使用萬用字元如 *.foo.com），主機 IP 地址（IPv4 及 IPV6 亦可）和包括網絡遮罩的網絡地址（如 192.168.0.0/24）。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="HTTP 代理伺服器密碼">
+                                                <longdesc>當進行 HTTP 代理時進行認證的密碼。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="HTTP 代理伺服器使用者名稱">
+                                                <longdesc>當進行 HTTP 代理時通過認證的使用者名稱。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="代理伺服器連線是否需要認證">
+                                                <longdesc>如設定為“true”，那麼連接到代理伺服器時需要認證。使用者/密碼的組合在
+“/system/http_proxy/authentication_user”和“/system/http_proxy/authentication_password”中設定。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="HTTP 代理伺服器埠號">
+                                                <longdesc>在“/system/http_proxy/host’中定義的代理伺服器的埠號。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="HTTP 代理伺服器主機名稱">
+                                                <longdesc>HTTP 代理伺服器主機名稱。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="使用 HTTP 代理伺服器">
+                                                <longdesc>經互聯網存取 HTTP 時啟用代理伺服器設定。</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="找尋 DNS-SD 服務的額外網域">
+                                                <longdesc>在“network:///”位置中顯示的 DNS-SD 網域清單，以逗號隔開。</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="如何顯示本地端的 DNS-SD 服務">
+                                                <longdesc>可能值為“merged”,“separate”以及“disabled”。</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="SMB 群組">
+                                                <longdesc>使用者所屬的 Windows 網絡群組或網域。新的群組可能要等使用者再登入後才能完全生效，</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

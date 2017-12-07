@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+	<plugin useBcop="true" name="showmouse">
+		<short>Show mouse</short>
+		<short xml:lang="en_GB">Show mouse</short>
+		<short xml:lang="fr">Montrer le pointeur</short>
+		<short xml:lang="gl">Mostrar rato</short>
+		<short xml:lang="it">Mostra il mouse</short>
+		<short xml:lang="ja">マウス表示</short>
+		<short xml:lang="nb">Vis mus</short>
+		<short xml:lang="pt">Mostrar cursor do rato</short>
+		<long>Increases the visibility of the mouse pointer</long>
+		<long xml:lang="en_GB">Increases the visibility of the mouse pointer</long>
+		<long xml:lang="fr">Augmente la visibilité du pointeur</long>
+		<long xml:lang="gl">Incrementa a visibildade do punteiro do rato</long>
+		<long xml:lang="it">Aumenta la visibilità del puntatore del mouse</long>
+		<long xml:lang="ja">マウスポインタの視認性の向上</long>
+		<long xml:lang="nb">Øker musepekerens synlighet</long>
+		<long xml:lang="pt">Aumenta a visibilidade do cursor do rato</long>
+		<category>Accessibility</category>
+		<deps>
+			<relation type="after">
+				<plugin>cube</plugin>
+			</relation>
+			<requirement>
+				<plugin>mousepoll</plugin>
+			</requirement>
+		</deps>
+		<display>
+			<group>
+				<short>General</short>
+				<short xml:lang="de">Allgemein</short>
+				<short xml:lang="el">Γενικά</short>
+				<short xml:lang="en_GB">General</short>
+				<short xml:lang="es">General</short>
+				<short xml:lang="fi">Yleiset</short>
+				<short xml:lang="fr">Général</short>
+				<short xml:lang="gl">Xeral</short>
+				<short xml:lang="gu">સામાન્ય</short>
+				<short xml:lang="hi">सामान्य</short>
+				<short xml:lang="it">Generale</short>
+				<short xml:lang="ja">一般</short>
+				<short xml:lang="nb">Generelt</short>
+				<short xml:lang="nl">Algemeen</short>
+				<short xml:lang="pl">Ogólne</short>
+				<short xml:lang="pt">Geral</short>
+				<short xml:lang="pt_BR">Geral</short>
+				<short xml:lang="sv">Allmänt</short>
+				<short xml:lang="tr">Genel</short>
+				<short xml:lang="zh_CN">一般</short>
+				<option type="key" name="initiate">
+					<short>Initiate</short>
+					<short xml:lang="ca">Inicia</short>
+					<short xml:lang="de">Auslösen</short>
+					<short xml:lang="el">Εισαγωγή</short>
+					<short xml:lang="en_GB">Initiate</short>
+					<short xml:lang="es">Iniciar</short>
+					<short xml:lang="eu">Hasi</short>
+					<short xml:lang="fi">Aloita</short>
+					<short xml:lang="fr">Initialiser</short>
+					<short xml:lang="gl">Iniciar</short>
+					<short xml:lang="gu">આરંભ કરો</short>
+					<short xml:lang="hi">आरंभ करें</short>
+					<short xml:lang="it">Avvia</short>
+					<short xml:lang="ja">開始</short>
+					<short xml:lang="nb">Start</short>
+					<short xml:lang="nl">Initiëer</short>
+					<short xml:lang="pl">Rozpocznij</short>
+					<short xml:lang="pt">Iniciar</short>
+					<short xml:lang="pt_BR">Iniciar</short>
+					<short xml:lang="sv">Initiera</short>
+					<short xml:lang="tr">Başlat</short>
+					<short xml:lang="zh_CN">启动</short>
+				    <long>Toggle the mouse pointer trail.</long>
+				    <long xml:lang="en_GB">Toggle the mouse pointer trail.</long>
+				    <long xml:lang="fr">Basculer la traînée du pointeur</long>
+				    <long xml:lang="gl">Activar/Desactivar rastro do punteiro do rato.</long>
+				    <long xml:lang="it">Commuta la traccia del puntatore del mouse.</long>
+				    <long xml:lang="ja">マウスポインタのたなびきのオンオフ</long>
+				    <long xml:lang="nb">Slå av/på musepeker-sporet.</long>
+				    <long xml:lang="pt">Activa o rasto do cursor do rato.</long>
+					<default>&lt;Super&gt;k</default>
+				</option>
+			</group>
+		</display>
+		<screen>
+			<group>
+				<short>Particle Options</short>
+				<short xml:lang="en_GB">Particle Options</short>
+				<short xml:lang="fr">Options des particules</short>
+				<short xml:lang="gl">Opcións das Particulas</short>
+				<short xml:lang="it">Opzioni particella</short>
+				<short xml:lang="ja">粒子のオプション</short>
+				<short xml:lang="nb">Partikkelvalg</short>
+				<short xml:lang="pt">Opções Partículas</short>
+				<option type="int" name="num_particles">
+					<short>Number Of Particles</short>
+					<short xml:lang="en_GB">Number Of Particles</short>
+					<short xml:lang="fi">Partikkelien lukumäärä</short>
+					<short xml:lang="fr">Nombre de particules</short>
+					<short xml:lang="gl">Número De Partículas</short>
+					<short xml:lang="it">Numero di particelle</short>
+					<short xml:lang="ja">粒子の数</short>
+					<short xml:lang="nb">Antall partikler</short>
+					<short xml:lang="pt">Número De Partículas</short>
+					<long>Number of particles.</long>
+					<long xml:lang="en_GB">Number of particles.</long>
+					<long xml:lang="fi">Partikkelien lukumäärä.</long>
+					<long xml:lang="fr">Nombre de particules.</long>
+					<long xml:lang="gl">Número de partículas</long>
+					<long xml:lang="it">Numero di particelle.</long>
+					<long xml:lang="ja">粒子の数</long>
+					<long xml:lang="nb">Antall partikler</long>
+					<long xml:lang="pt">Número de partículas.</long>
+					<default>500</default>
+					<min>10</min>
+					<max>2000</max>
+				</option>
+				<option type="float" name="size">
+					<short>Particle Size</short>
+					<short xml:lang="en_GB">Particle Size</short>
+					<short xml:lang="fi">Partikkelin koko</short>
+					<short xml:lang="fr">Taille des particules</short>
+					<short xml:lang="gl">Tamaño das partículas</short>
+					<short xml:lang="it">Dimensione particella</short>
+					<short xml:lang="ja">粒子の大きさ</short>
+					<short xml:lang="nb">Partikkelstørrelse</short>
+					<short xml:lang="pt">Tamanho Partículas</short>
+					<long>Particle size.</long>
+					<long xml:lang="en_GB">Particle size.</long>
+					<long xml:lang="fi">Partikkelin koko.</long>
+					<long xml:lang="fr">Taille des particules.</long>
+					<long xml:lang="gl">Tamaño das partículas.</long>
+					<long xml:lang="it">Dimensione della particella.</long>
+					<long xml:lang="ja">粒子の大きさ</long>
+					<long xml:lang="nb">Partikkelstørrelse.</long>
+					<long xml:lang="pt">Tamanho das partículas.</long>
+					<default>10.0</default>
+					<min>0.1</min>
+					<max>20</max>
+					<precision>0.1</precision>
+				</option>
+				<option type="float" name="slowdown">
+					<short>Particle Slowdown</short>
+					<short xml:lang="en_GB">Particle Slowdown</short>
+					<short xml:lang="fi">Partikkelin hidastuvuus</short>
+					<short xml:lang="fr">Ralentissement des particules</short>
+					<short xml:lang="gl">Disminución de Partículas</short>
+					<short xml:lang="it">Rallentamento particella</short>
+					<short xml:lang="ja">粒子の減速</short>
+					<short xml:lang="nb">Partikkelbremsing</short>
+					<short xml:lang="pt">Abrandamento Partículas</short>
+					<long>Particle slowdown.</long>
+					<long xml:lang="en_GB">Particle slowdown.</long>
+					<long xml:lang="fi">Partikkelin hidastuvuus.</long>
+					<long xml:lang="fr">Ralentissement des particules.</long>
+					<long xml:lang="gl">Disminución das partículas</long>
+					<long xml:lang="it">Rallentamento della particella.</long>
+					<long xml:lang="ja">粒子の減速</long>
+					<long xml:lang="nb">Partikkelbremsing</long>
+					<long xml:lang="pt">Abrandamento das partículas.</long>
+					<default>1.0</default>
+					<min>0.1</min>
+					<max>10</max>
+					<precision>0.1</precision>
+				</option>
+				<option type="float" name="life">
+					<short>Particle Life</short>
+					<short xml:lang="en_GB">Particle Life</short>
+					<short xml:lang="fi">Partikkelin elinikä</short>
+					<short xml:lang="fr">Longévité des particules</short>
+					<short xml:lang="gl">Vida das partículas</short>
+					<short xml:lang="it">Durata particella</short>
+					<short xml:lang="ja">粒子の寿命</short>
+					<short xml:lang="nb">Partiklenes levetid</short>
+					<short xml:lang="pt">Vida Partículas</short>
+					<long>Particle life.</long>
+					<long xml:lang="en_GB">Particle life.</long>
+					<long xml:lang="fi">Partikkelin elinikä.</long>
+					<long xml:lang="fr">Longévité des particules.</long>
+					<long xml:lang="gl">Vida das partículas.</long>
+					<long xml:lang="it">Durata della particella.</long>
+					<long xml:lang="ja">粒子の寿命</long>
+					<long xml:lang="nb">Levetid for partikkel</long>
+					<long xml:lang="pt">Tempo de vida das partículas.</long>
+					<default>0.7</default>
+					<min>0.1</min>
+					<max>1</max>
+					<precision>0.1</precision>
+				</option>
+				<option type="float" name="darken">
+					<short>Darken backgound</short>
+					<short xml:lang="en_GB">Darken backgound</short>
+					<short xml:lang="fi">Tummenna taustakuva</short>
+					<short xml:lang="fr">Arrière-plan assombri</short>
+					<short xml:lang="gl">Fondo máis escuro</short>
+					<short xml:lang="it">Oscurare lo sfondo</short>
+					<short xml:lang="ja">背景の暗さ</short>
+					<short xml:lang="nb">Gjør bakgrunn mørkere</short>
+					<short xml:lang="pt">Escurecer fundo</short>
+					<long>Darken background under particles</long>
+					<long xml:lang="en_GB">Darken background under particles</long>
+					<long xml:lang="fi">Tummenna taustakuva partikkelien alla</long>
+					<long xml:lang="fr">Arrière-plan assombri sous les particules</long>
+					<long xml:lang="gl">Fondo de escritorio máis escuro baixo as partículas</long>
+					<long xml:lang="it">Oscura lo sfondo sotto le particelle</long>
+					<long xml:lang="ja">粒子の下の背景を暗くする</long>
+					<long xml:lang="nb">Gjør bakgrunn mørkere under partiklene</long>
+					<long xml:lang="pt">Escurecer fundo debaixo de partículas</long>
+					<default>0.9</default>
+					<min>0.0</min>
+					<max>1.0</max>
+					<precision>0.1</precision>
+				</option>
+				<option type="bool" name="blend">
+					<short>Additive blending</short>
+					<short xml:lang="en_GB">Additive blending</short>
+					<short xml:lang="fr">Mélange additif</short>
+					<short xml:lang="gl">Mistura aditiva</short>
+					<short xml:lang="it">Trasformazione additiva</short>
+					<short xml:lang="ja">加色合成</short>
+					<short xml:lang="nb">Tilleggsblanding</short>
+					<short xml:lang="pt">Mistura aditiva</short>
+					<long>Additive blending of particles</long>
+					<long xml:lang="en_GB">Additive blending of particles</long>
+					<long xml:lang="fr">Mélange additif des particules</long>
+					<long xml:lang="gl">Mistura aditiva de partículas</long>
+					<long xml:lang="it">Trasformazione additiva delle particelle</long>
+					<long xml:lang="ja">粒子の加色合成</long>
+					<long xml:lang="nb">Tilleggsblanding av partikler</long>
+					<long xml:lang="pt">Mistura aditiva de partículas</long>
+					<default>true</default>
+				</option>
+				<option type="color" name="color">
+					<short>Particle Color</short>
+					<short xml:lang="en_GB">Particle Colour</short>
+					<short xml:lang="fi">Partikkelin väri</short>
+					<short xml:lang="fr">Couleur des particules</short>
+					<short xml:lang="gl">Cor das Partículas</short>
+					<short xml:lang="it">Colore particella</short>
+					<short xml:lang="ja">粒子の色</short>
+					<short xml:lang="nb">Partikkelfarge</short>
+					<short xml:lang="pt">Cor Partículas</short>
+					<long>Particle color.</long>
+					<long xml:lang="en_GB">Particle colour.</long>
+					<long xml:lang="fi">Partikkelin väri.</long>
+					<long xml:lang="fr">Couleur des particules.</long>
+					<long xml:lang="gl">Cor das partículas.</long>
+					<long xml:lang="it">Colore della particella.</long>
+					<long xml:lang="ja">粒子の色</long>
+					<long xml:lang="nb">Partikkelfarge</long>
+					<long xml:lang="pt">Cor das partículas.</long>
+					<default>
+					<red>0xffff</red>
+					<green>0xdfff</green>
+					<blue>0x3fff</blue>
+					<alpha>0xffff</alpha>
+					</default>
+				</option>
+				<option type="bool" name="random">
+					<short>Randomly Colored Particles</short>
+					<short xml:lang="en_GB">Randomly Coloured Particles</short>
+					<short xml:lang="fr">Particules multicolore</short>
+					<short xml:lang="gl">Fondo con cor aleatoria</short>
+					<short xml:lang="it">Colori casuali delle particelle</short>
+					<short xml:lang="ja">ランダム色の粒子</short>
+					<short xml:lang="nb">Tilfeldig fargede partikler</short>
+					<short xml:lang="pt">Partículas Cores Aleatórias</short>
+					<long>Have random colors for the particles</long>
+					<long xml:lang="en_GB">Have random colours for the particles</long>
+					<long xml:lang="fr">Utiliser des couleurs aléatoires pour les particules</long>
+					<long xml:lang="gl">Cores aleatorias para partículas</long>
+					<long xml:lang="it">Colori casuali per le particelle</long>
+					<long xml:lang="ja">粒子をランダムな色で色付け</long>
+					<long xml:lang="nb">Ha tilfeldige farger for partiklene</long>
+					<long xml:lang="pt">Cores aleatórias para as partículas</long>
+					<default>false</default>
+				</option>
+			    </group>
+			    <group>
+				<short>General</short>
+				<short xml:lang="de">Allgemein</short>
+				<short xml:lang="el">Γενικά</short>
+				<short xml:lang="en_GB">General</short>
+				<short xml:lang="es">General</short>
+				<short xml:lang="fi">Yleiset</short>
+				<short xml:lang="fr">Général</short>
+				<short xml:lang="gl">Xeral</short>
+				<short xml:lang="gu">સામાન્ય</short>
+				<short xml:lang="hi">सामान्य</short>
+				<short xml:lang="it">Generale</short>
+				<short xml:lang="ja">一般</short>
+				<short xml:lang="nb">Generelt</short>
+				<short xml:lang="nl">Algemeen</short>
+				<short xml:lang="pl">Ogólne</short>
+				<short xml:lang="pt">Geral</short>
+				<short xml:lang="pt_BR">Geral</short>
+				<short xml:lang="sv">Allmänt</short>
+				<short xml:lang="tr">Genel</short>
+				<short xml:lang="zh_CN">一般</short>
+				<option type="float" name="rotation_speed">
+					<short>Rotation speed</short>
+					<short xml:lang="en_GB">Rotation speed</short>
+					<short xml:lang="fr">Vitesse de rotation</short>
+					<short xml:lang="gl">Velocidade da Rotación</short>
+					<short xml:lang="it">Velocità rotazione</short>
+					<short xml:lang="ja">回転速度</short>
+					<short xml:lang="nb">Rotasjonshastighet</short>
+					<short xml:lang="pt">Velocidade da rotação</short>
+					<long>Rotation speed.</long>
+					<long xml:lang="en_GB">Rotation speed.</long>
+					<long xml:lang="fr">Vitesse de rotation.</long>
+					<long xml:lang="gl">Velocidade de Rotación.</long>
+					<long xml:lang="it">Velocità di rotazione.</long>
+					<long xml:lang="ja">回転速度</long>
+					<long xml:lang="nb">Rotasjonshastighet.</long>
+					<long xml:lang="pt">Velocidade da rotação.</long>
+					<default>0.5</default>
+					<min>0.1</min>
+					<max>10.0</max>
+					<precision>0.1</precision>
+				</option>
+				<option type="int" name="radius">
+					<short>Radius</short>
+					<short xml:lang="en_GB">Radius</short>
+					<short xml:lang="fi">Säde</short>
+					<short xml:lang="fr">Rayon</short>
+					<short xml:lang="gl">Radio</short>
+					<short xml:lang="it">Raggio</short>
+					<short xml:lang="ja">半径</short>
+					<short xml:lang="nb">Radius</short>
+					<short xml:lang="pt">Raio</short>
+					<long>Ring radius</long>
+					<long xml:lang="en_GB">Ring radius</long>
+					<long xml:lang="fr">Rayon de l'anneau</long>
+					<long xml:lang="gl">Raio Atómico</long>
+					<long xml:lang="it">Raggio anello</long>
+					<long xml:lang="ja">リングの半径</long>
+					<long xml:lang="nb">Ringradius</long>
+					<long xml:lang="pt">Raio do Anel</long>
+					<default>100</default>
+					<min>10</min>
+					<max>1000</max>
+				</option>
+				<option type="int" name="emiters">
+					<short>Emiters</short>
+					<short xml:lang="en_GB">Emiters</short>
+					<short xml:lang="fr">Émetteurs</short>
+					<short xml:lang="gl">Emisores</short>
+					<short xml:lang="it">Emettitori</short>
+					<short xml:lang="ja">放出体</short>
+					<short xml:lang="nb">Utsendere</short>
+					<short xml:lang="pt">Emissores</short>
+					<long>Number of particle emiters.</long>
+					<long xml:lang="en_GB">Number of particle emiters.</long>
+					<long xml:lang="fr">Nombre d'émetteurs de particules.</long>
+					<long xml:lang="gl">Número de emisores de partículas.</long>
+					<long xml:lang="it">Numero di emettitori di particelle.</long>
+					<long xml:lang="ja">粒子放出体の数</long>
+					<long xml:lang="nb">Antall partikkelutsendere</long>
+					<long xml:lang="pt">Número de emissores de partículas.</long>
+					<default>3</default>
+					<min>1</min>
+					<max>10</max>
+				</option>
+			</group>
+		</screen>
+	</plugin>
+</compiz>

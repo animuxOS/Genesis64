@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+	<plugin useBcop="true" name="3d">
+		<short>3D Windows</short>
+		<short xml:lang="ar">نوافذ ثلاثية الأبعاد</short>
+		<short xml:lang="bn">ত্রিমাত্রিক উইন্ডো</short>
+		<short xml:lang="ca">Finestres 3D</short>
+		<short xml:lang="de">3D-Fenster</short>
+		<short xml:lang="el">Τρισδιάστατα Παράθυρα</short>
+		<short xml:lang="en_GB">3D Windows</short>
+		<short xml:lang="es">Ventanas 3D</short>
+		<short xml:lang="eu">3D leihoak</short>
+		<short xml:lang="fa">پنجره‌های ۳بعدی</short>
+		<short xml:lang="fi">3D-ikkunat</short>
+		<short xml:lang="fr">Fenêtres 3D</short>
+		<short xml:lang="gl">Fiestras 3D</short>
+		<short xml:lang="gu">3D વિન્ડો</short>
+		<short xml:lang="hi">3D विंडोज़</short>
+		<short xml:lang="it">Finestre 3D</short>
+		<short xml:lang="ja">3D ウィンドウ</short>
+		<short xml:lang="nb">3D-vinduer</short>
+		<short xml:lang="nl">3D vensters</short>
+		<short xml:lang="pl">Okna 3D</short>
+		<short xml:lang="pt">Janelas 3D</short>
+		<short xml:lang="pt_BR">Janelas 3D</short>
+		<short xml:lang="ru">3D Окна</short>
+		<short xml:lang="sv">3D-fönster</short>
+		<short xml:lang="tr">3B Pencereler</short>
+		<short xml:lang="zh_CN">3D 窗口</short>
+		<long>Elevates windows while rotating the cube</long>
+		<long xml:lang="ar">إرفع النوافذ عند دوران المكعب</long>
+		<long xml:lang="bn">ঘনকটি ঘোরানোর সময় উইন্ডো উত্তোলন করে</long>
+		<long xml:lang="ca">Eleva les finestres quan girem el cub</long>
+		<long xml:lang="de">Hebt die Fenster während des Rotierens des Würfels an</long>
+		<long xml:lang="el">Ανυψώνει τα παράθυρα όταν γυρίζει ο κύβος</long>
+		<long xml:lang="en_GB">Elevates windows while rotating the cube</long>
+		<long xml:lang="es">Elevar las ventanas al rotar el cubo</long>
+		<long xml:lang="eu">leihoa altzatu kuboa biratzean</long>
+		<long xml:lang="fa">پنجره‌ها را هنگام چرخش مکعب، بالا ببر</long>
+		<long xml:lang="fi">Nostaa ikkunoita kuutiota pyörittäessä</long>
+		<long xml:lang="fr">Surélever les fenêtres lors de la rotation</long>
+		<long xml:lang="gl">Elevar as fiestras durante a rotación do cubo</long>
+		<long xml:lang="gu">ઘનને ફેરવતી વખતે વિન્ડોને ઉપર લાવે છે</long>
+		<long xml:lang="hi">घन घुमाने के दौरान विंडो उठाता है</long>
+		<long xml:lang="it">Eleva le finestre alla rotazione del cubo</long>
+		<long xml:lang="ja">キューブ回転時にウィンドウを上昇</long>
+		<long xml:lang="nb">Hever vinduer mens kuben roterer</long>
+		<long xml:lang="nl">Verhef vensters tĳdens het draaien van de kubus</long>
+		<long xml:lang="pl">Podnosi okna podczas obracania kostki</long>
+		<long xml:lang="pt">Elevar as janelas durante a rotação do cubo</long>
+		<long xml:lang="pt_BR">Elevar as janelas durante a rotação do cubo</long>
+		<long xml:lang="ru">Подъем окон при вращении куба</long>
+		<long xml:lang="sv">Höjer upp fönstren när kuben roterar</long>
+		<long xml:lang="tr">Küp döndürülürken pencereleri yükseltir</long>
+		<long xml:lang="zh_CN">立方体转面时浮起的窗口</long>
+		<category>Effects</category>
+		<deps>
+			<requirement>
+				<plugin>cube</plugin>
+			</requirement>
+			<relation type="after">
+				<plugin>cube</plugin>
+			</relation>
+		</deps>
+		<screen>
+			<group>
+				<short>Misc. Options</short>
+				<short xml:lang="ar">خيارات أخرى</short>
+				<short xml:lang="bn">বিবিধ বিকল্প</short>
+				<short xml:lang="ca">Altres opcions</short>
+				<short xml:lang="de">Sonstige Optionen</short>
+				<short xml:lang="el">Διάφορες Επιλογές</short>
+				<short xml:lang="en_GB">Misc. Options</short>
+				<short xml:lang="es">Opciones varias</short>
+				<short xml:lang="eu">Hainbat aukera</short>
+				<short xml:lang="fi">Sekalaiset valinnat</short>
+				<short xml:lang="fr">Options Diverses</short>
+				<short xml:lang="gl">Opcións diversas</short>
+				<short xml:lang="gu">મિશ્રિત વિકલ્પો</short>
+				<short xml:lang="hi">विविध विकल्प</short>
+				<short xml:lang="it">Altre opzioni</short>
+				<short xml:lang="ja">その他オプション</short>
+				<short xml:lang="nb">Diverse valg</short>
+				<short xml:lang="nl">Diverse optie's</short>
+				<short xml:lang="pl">Pozostałe opcje</short>
+				<short xml:lang="pt">Opções diversas</short>
+				<short xml:lang="pt_BR">Opções diversas</short>
+				<short xml:lang="ru">Разные опции</short>
+				<short xml:lang="sv">Diverse inställningar</short>
+				<short xml:lang="tr">Diğer Seçenekler</short>
+				<short xml:lang="zh_CN">杂项设置</short>
+				<option type="match" name="window_match">
+					<short>Window Match</short>
+					<short xml:lang="ar">تطابق النافذة</short>
+					<short xml:lang="bn">উইন্ডো মেলানো</short>
+					<short xml:lang="de">Betroffene Fenster</short>
+					<short xml:lang="el">Ταίριασμα Παραθύρου</short>
+					<short xml:lang="en_GB">Window Match</short>
+					<short xml:lang="es">Coincidir ventanas</short>
+					<short xml:lang="eu">Leiho parekatzea</short>
+					<short xml:lang="fi">Ikkunan sovitus</short>
+					<short xml:lang="fr">Types de fenêtres</short>
+					<short xml:lang="gl">Tipos de fiestras</short>
+					<short xml:lang="gu">વિન્ડો જોડણી</short>
+					<short xml:lang="hi">विंडो मिलान</short>
+					<short xml:lang="it">Finestre corrispondenti</short>
+					<short xml:lang="ja">対象ウィンドウ</short>
+					<short xml:lang="nb">Samsvar mellom vinduer</short>
+					<short xml:lang="nl">Venster match</short>
+					<short xml:lang="pl">Układ okna</short>
+					<short xml:lang="pt">Tipos Janelas</short>
+					<short xml:lang="pt_BR">Tipos de janelas</short>
+					<short xml:lang="ru">Соответствие окна</short>
+					<short xml:lang="sv">Fönstermatchning</short>
+					<short xml:lang="tr">Pencere Eşlemesi</short>
+					<short xml:lang="zh_CN">窗口匹配</short>
+					<long>Windows that should be handled by 3D</long>
+					<long xml:lang="ar">النوافذ التي يجب أن تعالج بثلاثة أبعاد</long>
+					<long xml:lang="bn">যে উইন্ডোগুলি 3D দ্বারা পরিচালিত হবে</long>
+					<long xml:lang="ca">Finestres que han de ser tractades pel 3D</long>
+					<long xml:lang="de">Fenster, die vom 3D-Modus betroffen sein sollen</long>
+					<long xml:lang="el">Παράθυρα που πρέπει να διαχειριστούν ως τρισδιάστατα</long>
+					<long xml:lang="en_GB">Windows that should be handled by 3D</long>
+					<long xml:lang="es">Ventanas que deberían ser procesadas por 3D</long>
+					<long xml:lang="eu">3Dn landu beharko liratekeen leihoak</long>
+					<long xml:lang="fi">Ikkunat, joihin tulisi soveltaa 3D tekniikka</long>
+					<long xml:lang="fr">Fenêtres qui doivent être prises en charge par la 3D</long>
+					<long xml:lang="gl">Fiestras que deben ser mostradas en 3D</long>
+					<long xml:lang="gu">વિન્ડો કે જે 3D દ્વારા સંભાળવામાં આવવી જોઈએ</long>
+					<long xml:lang="hi">विंडोज़ जिसे 3D के द्वारा नियंत्रित किया जाना है</long>
+					<long xml:lang="it">Finestre da gestire col 3D</long>
+					<long xml:lang="ja">3D が扱う対象ウィンドウ</long>
+					<long xml:lang="nb">Vinduer som skal bli håndtert av 3D</long>
+					<long xml:lang="nl">Vensters die behandeld moeten worden door 3D</long>
+					<long xml:lang="pl">Okna, które powinny być podniesione przez wtyczkę 3D</long>
+					<long xml:lang="pt">Janelas que devem ser mostradas em 3D</long>
+					<long xml:lang="pt_BR">Janelas que devem ser mostradas em 3D</long>
+					<long xml:lang="ru">Окна, которые должны восприниматься как 3D</long>
+					<long xml:lang="sv">Fönster som ska hanteras av 3D</long>
+					<long xml:lang="tr">3D uygulanacak pencereler</long>
+					<long xml:lang="zh_CN">使用 3D 的窗口</long>
+					<default>Toolbar | Utility | Dialog | Normal | Unknown</default>
+				</option>
+				<option type="int" name="min_cube_size">
+					<short>Minimum Cube Size</short>
+					<short xml:lang="ar">حجم المكعب الأدني</short>
+					<short xml:lang="bn">ঘনকের সর্বনিম্ন আকার</short>
+					<short xml:lang="de">Minimale Größe des Würfels</short>
+					<short xml:lang="el">Ελάχιστο Μέγεθος Κύβου</short>
+					<short xml:lang="en_GB">Minimum Cube Size</short>
+					<short xml:lang="es">Tamaño Minimo del Cubo</short>
+					<short xml:lang="eu">Kuboaren tamaina minimoa</short>
+					<short xml:lang="fi">Kuution vähimmäiskoko</short>
+					<short xml:lang="fr">Taille minimale du cube</short>
+					<short xml:lang="gl">Tamaño mínimo do cubo</short>
+					<short xml:lang="gu">ન્યૂનતમ ઘન માપ</short>
+					<short xml:lang="hi">न्यूनतम घन आकार</short>
+					<short xml:lang="it">Dimensione minima cubo</short>
+					<short xml:lang="ja">キューブの最小の大きさ</short>
+					<short xml:lang="nb">Minimum kubestørrelse</short>
+					<short xml:lang="nl">Minimale kubus grootte</short>
+					<short xml:lang="pl">Minimalny rozmiar kostki</short>
+					<short xml:lang="pt">Tamanho Mínimo Cubo</short>
+					<short xml:lang="pt_BR">Tamanho Mínimo Cubo</short>
+					<short xml:lang="ru">Минимальный размер куба</short>
+					<short xml:lang="sv">Minsta storlek på kuben</short>
+					<short xml:lang="tr">En Küçük Küp Boyutu</short>
+					<short xml:lang="zh_CN">最小立方体大小</short>
+					<long>Minimum cube size (in percent).</long>
+					<long xml:lang="ar">حجم المكعب الأدنى (بالنسبة المىٔوية). </long>
+					<long xml:lang="bn">ঘনকের সর্বনিম্ন আকার (শতকরায়).</long>
+					<long xml:lang="de">Minimale Größe des Würfels (in Prozent).</long>
+					<long xml:lang="el">Ελάχιστο μέγεθος κύβου (σε ποσοστό επι της εκατό)</long>
+					<long xml:lang="en_GB">Minimum cube size (in percent).</long>
+					<long xml:lang="es">Tamaño Minimo del Cubo (porcentual)</long>
+					<long xml:lang="eu">Kuboaren tamaina minimoa (ehunekoan)</long>
+					<long xml:lang="fi">Kuution vähimmäiskoko (%).</long>
+					<long xml:lang="fr">Taille minimale du cube (En pourcentage)</long>
+					<long xml:lang="gl">Tamaño mínimo do cubo (en porcentaxe).</long>
+					<long xml:lang="gu">ન્યૂનતમ ઘન માપ (ટકામાં).</long>
+					<long xml:lang="hi">न्यूनतम घन आकार ( प्रतिशत में)</long>
+					<long xml:lang="it">Dimensione minima del cubo (in percentuale).</long>
+					<long xml:lang="ja">キューブの最小の大きさ（％）</long>
+					<long xml:lang="nb">Minimum kubestørrelse (i prosent)</long>
+					<long xml:lang="nl">Minimale kubus grootte (in procenten).</long>
+					<long xml:lang="pl">Minimalny rozmiar kostki (w procentach)</long>
+					<long xml:lang="pt">Tamanho mínimo do cubo (em percentagem).</long>
+					<long xml:lang="pt_BR">Tamanho mínimo do cubo (em percentagem).</long>
+					<long xml:lang="ru">Минимальный размер куба (в процентах).</long>
+					<long xml:lang="sv">Minsta storlek på kub (i procent).</long>
+					<long xml:lang="tr">En küçük küp boyutu (yüzde olarak).</long>
+					<default>60</default>
+					<min>10</min>
+					<max>100</max>
+				</option>
+				<option type="int" name="max_window_space">
+					<short>Window Space</short>
+					<short xml:lang="ar">مسافة النافذة</short>
+					<short xml:lang="bn">উইন্ডোর ব্যবধান</short>
+					<short xml:lang="ca">Espai de finestra</short>
+					<short xml:lang="de">Fensterabstand</short>
+					<short xml:lang="el">Χώρος Παραθύρου</short>
+					<short xml:lang="en_GB">Window Space</short>
+					<short xml:lang="es">Espacio de las ventanas</short>
+					<short xml:lang="eu">Leiho kokapena</short>
+					<short xml:lang="fr">Espace entre les fenêtres</short>
+					<short xml:lang="gl">Espazo entre fiestras.</short>
+					<short xml:lang="gu">વિન્ડો જગ્યા</short>
+					<short xml:lang="hi">विंडो स्थान</short>
+					<short xml:lang="it">Spazio tra le finestre</short>
+					<short xml:lang="ja">ウィンドウの間隔</short>
+					<short xml:lang="nb">Avstand mellom vinduer</short>
+					<short xml:lang="nl">Venster ruimte</short>
+					<short xml:lang="pl">Przestrzeń pomiędzy oknami</short>
+					<short xml:lang="pt">Espaçamento Janelas</short>
+					<short xml:lang="pt_BR">Espaçamento entre janelas.</short>
+					<short xml:lang="ru">Место окна</short>
+					<short xml:lang="sv">Fönster-mellanrum</short>
+					<short xml:lang="tr">Pencere Alanı</short>
+					<short xml:lang="zh_CN">窗口间隔</short>
+					<long>Change the amount of space between the windows (in percent of the cube size).</long>
+					<long xml:lang="ar">غيّر قدر المسافة الفاصلة بين النوافذ (بالنسبة المىٔوية من حجم المكعب).</long>
+					<long xml:lang="bn">উইন্ডোর মধ্যবর্তী ব্যবধান পরিবর্তন কর (ঘনকের শতকরা আকার).</long>
+					<long xml:lang="el">Αλλαγή του ποσού του χώρου μεταξύ των παραθύρων (σε ποσοστό του μεγέθους του κύβου).</long>
+					<long xml:lang="en_GB">Change the amount of space between the windows (in percent of the cube size).</long>
+					<long xml:lang="es">Cambiar el espacio entre las ventanas (en porcentaje del tamaño del cubo).</long>
+					<long xml:lang="eu">Leiho arteko tamaina aldatu (kubo tamainaren ehunekoan)</long>
+					<long xml:lang="fa">میزان فضای خالی میان پنجره‌ها را (به میزان درصدی از اندازه مکعب) تغییر بده.</long>
+					<long xml:lang="fi">Säädä ikkunoiden välissä olevaa tilaa (prosentteina kuution koosta)</long>
+					<long xml:lang="fr">Modifier la distance entre les fenêtres (en pourcentage de la taille du cube)</long>
+					<long xml:lang="gl">Trocar a cantidade de espazo entre as fiestras (en porcentaxe do tamaño do cubo).</long>
+					<long xml:lang="gu">વિન્ડો વચ્ચેની જગ્યાનો જથ્થો બદલો (ઘન માપના ટકામાં).</long>
+					<long xml:lang="hi">विंडो के बीच स्थान की मात्रा बदलें (घन आकार के प्रतिशत में).</long>
+					<long xml:lang="it">Modifica la quantità di spazio tra le finestre (in percentuale della dimensione del cubo).</long>
+					<long xml:lang="ja">ウィンドウ間の間隙の大きさを変更(キューブサイズに対する割合）</long>
+					<long xml:lang="nb">Endre mengden mellomrom mellom vinduene (i prosent av kubestørrelse).</long>
+					<long xml:lang="nl">Pas de ruimte tussen de vensters aan (in procenten van de kubus grootte).</long>
+					<long xml:lang="pl">Zmiana odstępu między oknami (w procentach rozmiaru kostki).</long>
+					<long xml:lang="pt">Alterar o espaçamento entre janelas (em percentagem do tamanho do cubo).</long>
+					<long xml:lang="pt_BR">Alterar o espaçamento entre janelas (em percentagem do tamanho do cubo).</long>
+					<long xml:lang="ru">Изменить расстояние между окнами (в процентах от размера куба).</long>
+					<long xml:lang="sv">Ändra avståndet mellan fönster (procentuellt av storlek på kub).</long>
+					<long xml:lang="tr">Pencereler arasında bırakılacak alan miktarını değiştir (küp boyutunun yüzdesine göre).</long>
+					<default>10</default>
+					<min>0</min>
+					<max>50</max>
+				</option>
+				<option type="bool" name="manual_only">
+					<short>3D Only On Mouse Rotate</short>
+					<short xml:lang="ar">ثلاثة أبعاد فقط عند دوران الفأرة</short>
+					<short xml:lang="bn">শুধুমাত্র মাউস ঘোরানোর সময় 3D</short>
+					<short xml:lang="ca">3D Només quan es gira amb el ratolí</short>
+					<short xml:lang="de">3D-Modus nur bei manueller Rotation mit der Maus</short>
+					<short xml:lang="el">Τρισδιάστατη Περιστροφή Μόνο Με το Ποντίκι</short>
+					<short xml:lang="en_GB">3D Only On Mouse Rotate</short>
+					<short xml:lang="es">3D sólo con rotación con el ratón</short>
+					<short xml:lang="eu">3D xagua biratzean bakarrik</short>
+					<short xml:lang="fa">سه بعدی فقط روی چرخش موس</short>
+					<short xml:lang="fi">3D vain pyörittäessä hiirellä</short>
+					<short xml:lang="fr">Activer la 3D uniquement lors d'une rotation initiée avec la souris</short>
+					<short xml:lang="gl">3D só coa rotación do rato</short>
+					<short xml:lang="gu">માત્ર માઉસ ફેરવવા પર 3D</short>
+					<short xml:lang="hi">3D सिर्फ माउस घुमाव पर</short>
+					<short xml:lang="it">3D solo con la rotazione del mouse</short>
+					<short xml:lang="ja">マウスによる回転時のみ立体表示</short>
+					<short xml:lang="nb">3D bare ved muserotasjon</short>
+					<short xml:lang="nl">3D alleen bĳ muisrotatie</short>
+					<short xml:lang="pl">3D tylko podczas obrotu kostki myszką</short>
+					<short xml:lang="pt">3D Apenas com rotação através do rato</short>
+					<short xml:lang="pt_BR">3D Apenas com rotação através do mouse</short>
+					<short xml:lang="ru">3D только при вращении мышкой</short>
+					<short xml:lang="sv">Endast 3D vid musrotation</short>
+					<short xml:lang="tr">Sadece Fare ile Döndürüldüğünde 3D</short>
+					<short xml:lang="zh_CN">仅鼠标转面时开启 3D 窗口</short>
+					<long>Initiates the 3D display only if rotate is mouse driven. (Ex. You rotate the cube via the mouse)</long>
+					<long xml:lang="ar">شغل الرؤية الثلاثية الأبعاد فقط إذا كانت متأتية من الفأرة ( إنّك مثلا قمت  ببرم المكعب بواسطة الفأرة)</long>
+					<long xml:lang="bn">শুধুমাত্র যদি মাউসের সাহায্যে ঘোরানো হয় তাহলে 3D প্রদর্শন আরম্ভ করা হবে (যেমন, আপনি মাউসের সাহায্যে ঘনকটি ঘোরাতে পারবেন)</long>
+					<long xml:lang="ca">Mostra en 3D només si el gir està dirigit pel mouse.</long>
+					<long xml:lang="de">Aktiviert 3D-Modus nur, wenn die Rotation per Maus gestartet wird. (Das heißt manuell durchgeführt wird)</long>
+					<long xml:lang="el">Εκκινεί την τρισδιάστατη απεικόνιση μόνο αν κινηθεί με το ποντίκι.  (Πχ. Γυρίζετε τον κύβο με το ποντίκι)</long>
+					<long xml:lang="en_GB">Initiates the 3D display only if rotate is mouse driven. (Ex. You rotate the cube via the mouse)</long>
+					<long xml:lang="es">Inicia la visualizacion 3D solamente si la rotación se dirige con el ratón. (Por ejemplo: Usted gira el cubo con el ratón.)</long>
+					<long xml:lang="eu">Hasi 3D eran biratzea xaguaz egiten bada bakarrik. (adib. kubo biratzea xaguaz egiten bada)</long>
+					<long xml:lang="fi">Käynnistää 3D tilan vain jos pyöritys on hiirellä ohjattu. (Esimerkiksi jos pyörität kuutiota hiiren kautta)</long>
+					<long xml:lang="fr">Initialiser l'affichage 3D seulement si la rotation se fait à partir de la souris. (Ex. Vous faites pivoter le cube à l'aide de la souris</long>
+					<long xml:lang="gl">Activar o deseño en 3D só cando a rotación é iniciada através do rato (Ex. cando roda o cubo através do rato)</long>
+					<long xml:lang="gu">3D ડિસ્પ્લેનો આરંભ કરે છે માત્ર ત્યારે જ જ્યારે ફેરવવાનું માઉસ અનુલક્ષી હોય. (દાત. તમે ઘનને માઉસ વડે ફેરવો)</long>
+					<long xml:lang="hi">3D डिसप्ले को आरंभ करता है सिर्फ तभी जब घुमाव माउस परिचालित हो. (उदा. आप माउस के द्वारा घन घुमाते हैं)</long>
+					<long xml:lang="it">Inizializza la visualizzazione 3D solo se la rotazione è gestita dal mouse (per esempio, il cubo viene ruotato con il mouse).</long>
+					<long xml:lang="ja">回転がマウスによって呼び出されたときのみ立体表示を開始(つまり、マウスでキューブを回転させているとき)</long>
+					<long xml:lang="nb">Initierer 3D-visning kun hvis rotasjon er styrt av mus.</long>
+					<long xml:lang="nl">Initiëert de 3D display alleen als de rotatie wordt gedaan met de muis (Bijv. Je roteert de kubus met de muis)</long>
+					<long xml:lang="pl">Inicjuje podniesienie okien wyłącznie wtedy, gdy obrót jest sterowany myszą (np. gdy obracasz kostkę myszą)</long>
+					<long xml:lang="pt">Activar o desenho em 3D apenas quando a rotação é iniciada através do rato (Ex. Quando roda o cubo através do rato)</long>
+					<long xml:lang="pt_BR">Ativar a exibição em 3D apenas quando a rotação é iniciada através do mouse(Ex. Quando rodar o cubo através do mouse)</long>
+					<long xml:lang="ru">Инициировать 3D-дисплей только если вращение производится мышью. (Например: Вы вращаете куб мышью)</long>
+					<long xml:lang="sv">Initierar 3D-skärmen endast om rotationen är musstyrd. (T.ex. Du roterar kuben med musen</long>
+					<long xml:lang="tr">3B görünüm sadece döndürme işlemi fare ile yapılıyorsa başlatılır.</long>
+					<long xml:lang="zh_CN">仅仅在用鼠标转动桌面的时候显示 3D 效果。(例，您通过鼠标进行转面操作)</long>
+					<default>true</default>
+				</option>
+			</group>
+			<group>
+				<short>Window Depth</short>
+				<short xml:lang="ar">عمق النافذة</short>
+				<short xml:lang="bn">উইন্ডোর গভীরতা</short>
+				<short xml:lang="de">Fenstertiefe</short>
+				<short xml:lang="el">Βάθος Παραθύρου</short>
+				<short xml:lang="en_GB">Window Depth</short>
+				<short xml:lang="eu">Leiho sakonera</short>
+				<short xml:lang="fi">Ikkunan syvyys</short>
+				<short xml:lang="fr">Épaisseur de fenêtre</short>
+				<short xml:lang="gl">Profundidade da fiestra</short>
+				<short xml:lang="gu">વિન્ડો ઊંડાઈ</short>
+				<short xml:lang="hi">विंडो गहराई</short>
+				<short xml:lang="it">Profondità finestre</short>
+				<short xml:lang="ja">ウィンドウの厚み</short>
+				<short xml:lang="nb">Vindusdybde</short>
+				<short xml:lang="nl">Venster diepte</short>
+				<short xml:lang="pl">Głębia okna</short>
+				<short xml:lang="pt">Profundidade Janela</short>
+				<short xml:lang="pt_BR">Profundidade da janela</short>
+				<short xml:lang="ru">Глубина окна</short>
+				<short xml:lang="sv">Fönsterdjup</short>
+				<short xml:lang="tr">Pencere Derinliği</short>
+				<short xml:lang="zh_CN">窗口深度</short>
+				<option type="float" name="width">
+					<short>Window Depth</short>
+					<short xml:lang="ar">عمق النافذة</short>
+					<short xml:lang="bn">উইন্ডোর গভীরতা</short>
+					<short xml:lang="de">Fenstertiefe</short>
+					<short xml:lang="el">Βάθος Παραθύρου</short>
+					<short xml:lang="en_GB">Window Depth</short>
+					<short xml:lang="eu">Leiho sakonera</short>
+					<short xml:lang="fi">Ikkunan syvyys</short>
+					<short xml:lang="fr">Épaisseur de fenêtre</short>
+					<short xml:lang="gl">Profundidade da fiestra</short>
+					<short xml:lang="gu">વિન્ડો ઊંડાઈ</short>
+					<short xml:lang="hi">विंडो गहराई</short>
+					<short xml:lang="it">Profondità finestre</short>
+					<short xml:lang="ja">ウィンドウの厚み</short>
+					<short xml:lang="nb">Vindusdybde</short>
+					<short xml:lang="nl">Venster diepte</short>
+					<short xml:lang="pl">Głębia okna</short>
+					<short xml:lang="pt">Profundidade Janela</short>
+					<short xml:lang="pt_BR">Profundidade da janela</short>
+					<short xml:lang="ru">Глубина окна</short>
+					<short xml:lang="sv">Fönsterdjup</short>
+					<short xml:lang="tr">Pencere Derinliği</short>
+					<short xml:lang="zh_CN">窗口深度</short>
+					<long>Window depth</long>
+					<long xml:lang="ar">عمق النافذة</long>
+					<long xml:lang="bn">উইন্ডোর গভীরতা</long>
+					<long xml:lang="de">Fenstertiefe</long>
+					<long xml:lang="el">Βάθος παραθύρου</long>
+					<long xml:lang="en_GB">Window depth</long>
+					<long xml:lang="eu">Leiho sakonera</long>
+					<long xml:lang="fi">Ikkunan syvyys</long>
+					<long xml:lang="fr">Épaisseur des fenêtres</long>
+					<long xml:lang="gl">Profundidade da fiestra</long>
+					<long xml:lang="gu">વિન્ડો ઊંડાઈ</long>
+					<long xml:lang="hi">विंडो गहराई</long>
+					<long xml:lang="it">Profondità delle finestre</long>
+					<long xml:lang="ja">ウィンドウの厚み</long>
+					<long xml:lang="nb">Vindusdybde</long>
+					<long xml:lang="nl">Venster diepte</long>
+					<long xml:lang="pl">Głębia okna</long>
+					<long xml:lang="pt">Profundidade da janela</long>
+					<long xml:lang="pt_BR">Profundidade da janela</long>
+					<long xml:lang="ru">Глубина окна</long>
+					<long xml:lang="sv">Fönsterdjup</long>
+					<long xml:lang="tr">Pencere derinliği</long>
+					<long xml:lang="zh_CN">窗口深度</long>
+					<default>0.3</default>
+					<min>0.0</min>
+					<max>1.0</max>
+					<precision>0.001</precision>
+				</option>
+				<option type="int" name="bevel">
+					<short>Bevel Corners</short>
+					<short xml:lang="ar">ميول الزوايا</short>
+					<short xml:lang="bn">কোণাগুলি উচু কর</short>
+					<short xml:lang="ca">Escapça els cantons</short>
+					<short xml:lang="de">Ecken abrunden</short>
+					<short xml:lang="el">Στρογγύλεμα Γωνίων</short>
+					<short xml:lang="en_GB">Bevel Corners</short>
+					<short xml:lang="es">Biselar las esquinas</short>
+					<short xml:lang="eu">Ertz konikoak</short>
+					<short xml:lang="fi">Viistota kulmat</short>
+					<short xml:lang="fr">Biseauter les coins</short>
+					<short xml:lang="gl">Bisel nos cantos</short>
+					<short xml:lang="gu">કોણ ખૂણાઓ</short>
+					<short xml:lang="hi">बेभेल कोना</short>
+					<short xml:lang="it">Smussa gli angoli</short>
+					<short xml:lang="ja">角の面取り</short>
+					<short xml:lang="nb">Skråstill hjørner</short>
+					<short xml:lang="nl">Afschuining hoeken</short>
+					<short xml:lang="pl">Zetnij narożniki</short>
+					<short xml:lang="pt">Bevel nos cantos</short>
+					<short xml:lang="pt_BR">Chanfrar nos cantos</short>
+					<short xml:lang="ru">Скос углов</short>
+					<short xml:lang="sv">Runda hörn</short>
+					<short xml:lang="tr">Köşelere Eğim Ver</short>
+					<short xml:lang="zh_CN">圆角</short>
+					<long>Roundoff corners for consistency with rounded decorations</long>
+					<long xml:lang="ar">دوّر الزوايا لتتناسب مع الزينة المدوّرة</long>
+					<long xml:lang="bn">বৃত্তাকার অলঙ্করণের সঙ্গে সামঞ্জস্য রেখে কোণাগুলি গোলাকার করা</long>
+					<long xml:lang="ca">Arrodoneix els cantons per mantenir la consistència amb les decoracions arrodonides</long>
+					<long xml:lang="de">Runde die Ecken ab, um konsistent mit abgerundeten Fensterrahmen zu bleiben</long>
+					<long xml:lang="el">Στρογγύλεμμα των γωνιών για συνοχή με τις στρογγυλεμένες διακοσμήσεις</long>
+					<long xml:lang="en_GB">Roundoff corners for consistency with rounded decorations</long>
+					<long xml:lang="es">Redondear esquinas para mayor consistencia con decoraciones redondeadas.</long>
+					<long xml:lang="eu">Borobildu ertzak, itxura borobilduen dekorazioekin parekotasuna izateko </long>
+					<long xml:lang="fi">Pyöristä kulmat säilyttääkseen yhtenäisyyden pyöristettyjen koristeiden kanssa</long>
+					<long xml:lang="fr">Arrondir les coins pour aller avec les décorations arrondies</long>
+					<long xml:lang="gl">Reondear os cantos para manter a consistencia con decoracións con efectos arredondados.</long>
+					<long xml:lang="gu">ગોળીય શણગારો સાથે અચળતા જાળવી રાખવા માટે ખૂણાઓ ગોળ કરો</long>
+					<long xml:lang="hi">गोल सजावट के साथ एकरूपता के लिए कोने को राउंड ऑफ करें</long>
+					<long xml:lang="it">Smussa gli angoli per coerenza con le decorazioni arrotondate</long>
+					<long xml:lang="ja">角の丸い装飾と調和させるために立体の角を丸める</long>
+					<long xml:lang="nb">Rund av hjørner for overensstemmelse med avrundede dekorasjoner</long>
+					<long xml:lang="nl">Afgeronde hoeken voor consistentie met afgeronde decoratie's</long>
+					<long xml:lang="pl">Zaokrągla narożniki okna dla zgodności z zaokrąglonymi dekoracjami</long>
+					<long xml:lang="pt">Arredondar os cantos para manter a consistência com decorações com efeitos arredondados</long>
+					<long xml:lang="pt_BR">Arredondar os cantos para manter a consistência com decorações com efeitos arredondados.</long>
+					<long xml:lang="ru">Скруглять углы для соответствия округлому оформлению</long>
+					<long xml:lang="sv">Runda av kanter för kompatibilitet med rundade ramar</long>
+					<long xml:lang="tr">Köşeleri yuvarlanmış dekorasyonlar ile tutarlı olması için pencere köşelerini yuvarla</long>
+					<long xml:lang="zh_CN">与圆形窗口装饰协调的圆角</long>
+					<default>0</default>
+					<min>0</min>
+					<max>20</max>
+				</option>
+				<option type="color" name="width_color">
+	    				<short>Window Color (Active)</short>
+	    				<short xml:lang="de">Farbe des aktiven Fensters</short>
+	    				<short xml:lang="el">Χρώμα Παραθύρου (Ενεργού)</short>
+	    				<short xml:lang="en_GB">Window Colour (Active)</short>
+	    				<short xml:lang="eu">Leiho kolorea (aktiboa)</short>
+	    				<short xml:lang="fi">Ikkunan väri (aktiivinen)</short>
+	    				<short xml:lang="fr">Couleur de fenêtre (Active)</short>
+	    				<short xml:lang="gl">Color da fiestra (activa)</short>
+	    				<short xml:lang="it">Colore finestra (Attiva)</short>
+	    				<short xml:lang="ja">ウィンドウ色（アクティブ）</short>
+	    				<short xml:lang="nb">Vindusfarge (aktivt)</short>
+	    				<short xml:lang="nl">Venster kleur (actief)</short>
+	    				<short xml:lang="pl">Kolor okna (aktywne)</short>
+	    				<short xml:lang="pt">Cor Janela (Activa)</short>
+	    				<short xml:lang="ru">Цвет окна (активного)</short>
+	    				<short xml:lang="sv">Fönsterfärg (Aktiv)</short>
+	    				<long>Color of the active window's depth</long>
+	    				<long xml:lang="el">Χρώμα βάθους του ενεργού παραθύρου</long>
+	    				<long xml:lang="en_GB">Colour of the active window's depth</long>
+	    				<long xml:lang="eu">Leiho aktiboaren sakontasun kolorea</long>
+	    				<long xml:lang="fa">رنگ ژرفای پنجره فعال</long>
+	    				<long xml:lang="fr">Couleur du fond de la fenêtre active</long>
+	    				<long xml:lang="gl">Color da profundidade da fiestra activa</long>
+	    				<long xml:lang="it">Colore profondità finestra attiva</long>
+	    				<long xml:lang="ja">アクティブ・ウィンドウの厚みの色</long>
+	    				<long xml:lang="nb">Farge på det aktive vinduets dybde</long>
+	    				<long xml:lang="nl">Kleur van diepte van een actief venster</long>
+	    				<long xml:lang="pl">Kolor głębi aktywnych okien</long>
+	    				<long xml:lang="pt">Cor em profundidade de uma janela activa</long>
+	    				<long xml:lang="ru">Цвет глубины активных окон</long>
+	    				<default>
+	      					<red>0x3333</red>
+	      					<green>0x3333</green>
+	      					<blue>0x3333</blue>
+	      					<alpha>0xffff</alpha>
+	    				</default>
+	  			</option>
+	  			<option type="color" name="width_color_inactive">
+	  				<short>Window Color (Inactive)</short>
+	  				<short xml:lang="el">Χρώμα Παραθύρου (Ανενεργού)</short>
+	  				<short xml:lang="en_GB">Window Colour (Inactive)</short>
+	  				<short xml:lang="eu">Leiho kolorea (ez aktiboa)</short>
+	  				<short xml:lang="fi">Ikkunan väri (inaktiivinen)</short>
+	  				<short xml:lang="fr">Couleur de fenêtre (Inactive)</short>
+	  				<short xml:lang="gl">Color da fiestra (inactiva)</short>
+	  				<short xml:lang="it">Colore finestra (Inattiva)</short>
+	  				<short xml:lang="ja">ウィンドウ色（非アクティブ）</short>
+	  				<short xml:lang="nb">Vindusfarge (inaktivt)</short>
+	  				<short xml:lang="nl">Venster kleur (niet actief)</short>
+	  				<short xml:lang="pl">Kolor okna (nieaktywne)</short>
+	  				<short xml:lang="pt">Cor Janela (Inactiva)</short>
+	  				<short xml:lang="ru">Цвет окна (неактивного)</short>
+	  				<short xml:lang="sv">Fönsterfärg (Inaktiv)</short>
+	  				<long>Color of an inactive window's depth</long>
+	  				<long xml:lang="de">Farbe der Abrundung inaktiver Fenster</long>
+	  				<long xml:lang="el">Χρώμα βάθους ενός ανενεργού παραθύρου</long>
+	  				<long xml:lang="en_GB">Colour of an inactive window's depth</long>
+	  				<long xml:lang="es">Color de la profundidad de una ventana inactiva</long>
+	  				<long xml:lang="eu">Leiho ez aktiboaren sakontasun kolorea</long>
+	  				<long xml:lang="fa">رنگ ژرفای پنجره غیر فعال</long>
+	  				<long xml:lang="fr">Couleur du fond d'une fenêtre inactive</long>
+	  				<long xml:lang="gl">Color da profundidade da fiestra inactiva</long>
+	  				<long xml:lang="it">Colore profondità finestra non attiva</long>
+	  				<long xml:lang="ja">非アクティブ・ウィンドウの厚みの色</long>
+	  				<long xml:lang="nb">Farge på et inaktivt vindus dybde</long>
+	  				<long xml:lang="nl">Kleur van diepte van inactief venster</long>
+	  				<long xml:lang="pl">Kolor głębi nieaktywnych okien</long>
+	  				<long xml:lang="pt">Cor em profundidade de uma janela inactiva</long>
+	  				<long xml:lang="ru">Цвет глубины неактивных окон</long>
+	  				<default>
+	      					<red>0x3333</red>
+	      					<green>0x3333</green>
+	      					<blue>0x3333</blue>
+	      					<alpha>0xffff</alpha>
+	    				</default>
+	  			</option>
+				<subgroup>
+					<short>Bevel Corners</short>
+					<short xml:lang="ar">ميول الزوايا</short>
+					<short xml:lang="bn">কোণাগুলি উচু কর</short>
+					<short xml:lang="ca">Escapça els cantons</short>
+					<short xml:lang="de">Ecken abrunden</short>
+					<short xml:lang="el">Στρογγύλεμα Γωνίων</short>
+					<short xml:lang="en_GB">Bevel Corners</short>
+					<short xml:lang="es">Biselar las esquinas</short>
+					<short xml:lang="eu">Ertz konikoak</short>
+					<short xml:lang="fi">Viistota kulmat</short>
+					<short xml:lang="fr">Biseauter les coins</short>
+					<short xml:lang="gl">Bisel nos cantos</short>
+					<short xml:lang="gu">કોણ ખૂણાઓ</short>
+					<short xml:lang="hi">बेभेल कोना</short>
+					<short xml:lang="it">Smussa gli angoli</short>
+					<short xml:lang="ja">角の面取り</short>
+					<short xml:lang="nb">Skråstill hjørner</short>
+					<short xml:lang="nl">Afschuining hoeken</short>
+					<short xml:lang="pl">Zetnij narożniki</short>
+					<short xml:lang="pt">Bevel nos cantos</short>
+					<short xml:lang="pt_BR">Chanfrar nos cantos</short>
+					<short xml:lang="ru">Скос углов</short>
+					<short xml:lang="sv">Runda hörn</short>
+					<short xml:lang="tr">Köşelere Eğim Ver</short>
+					<short xml:lang="zh_CN">圆角</short>
+					<option type="bool" name="bevel_topleft">
+						<short>Bevel Top Left</short>
+						<short xml:lang="ar">ميل أعلى اليسار</short>
+						<short xml:lang="bn">ওপরের বাঁদিকে উচু কর</short>
+						<short xml:lang="ca">Escapça a dalt a l'esquerra</short>
+						<short xml:lang="de">Oben links abrunden</short>
+						<short xml:lang="el">Στρογγύλεμα Πάνω Αριστερά</short>
+						<short xml:lang="en_GB">Bevel Top Left</short>
+						<short xml:lang="es">Biselar la esquina superior izquierda</short>
+						<short xml:lang="eu">Goiko ezkerra konikoa</short>
+						<short xml:lang="fi">Viistota vasen yläkulma</short>
+						<short xml:lang="fr">Biseauter en haut à gauche</short>
+						<short xml:lang="gl">Bisel enriba á esquerda</short>
+						<short xml:lang="gu">ટોચે ડાબો કોણ</short>
+						<short xml:lang="hi">बेभेल ऊपर बायाँ</short>
+						<short xml:lang="it">Smussa in alto a sinistra</short>
+						<short xml:lang="ja">左上の面取り</short>
+						<short xml:lang="nb">Skråstill øverst, venstre</short>
+						<short xml:lang="nl">Afschuining linksboven</short>
+						<short xml:lang="pl">Zetnij lewy górny narożnik</short>
+						<short xml:lang="pt">Bevel em cima à esquerda</short>
+						<short xml:lang="pt_BR">Chanfrar em cima à esquerda</short>
+						<short xml:lang="ru">Скос верхнего левого</short>
+						<short xml:lang="sv">Runda övre vänster</short>
+						<short xml:lang="tr">Sol Üst Eğim</short>
+						<short xml:lang="zh_CN">圆滑左顶角</short>
+						<long>Bevel top left corner</long>
+						<long xml:lang="ar">ميل الزاوية العليا اليسرى</long>
+						<long xml:lang="bn">ওপরের বাঁদিকের কোণা উচু কর</long>
+						<long xml:lang="ca">Arrodoneix el cantó de dalt a l'esquerra</long>
+						<long xml:lang="de">Ecke oben links abrunden</long>
+						<long xml:lang="el">Στρογγύλεμα της πάνω αριστερής γωνίας</long>
+						<long xml:lang="en_GB">Bevel top left corner</long>
+						<long xml:lang="es">Biselar la esquina superior izquierda</long>
+						<long xml:lang="eu">Goiko ezker ertza konikotu</long>
+						<long xml:lang="fi">Viistota vasen yläkulma</long>
+						<long xml:lang="fr">Biseauter le coin supérieur gauche</long>
+						<long xml:lang="gl">Bisel no canto superior esquerdo</long>
+						<long xml:lang="gu">કોણવાળો ટોચે ડાબો ખૂણો</long>
+						<long xml:lang="hi">बेभेल ऊपर बायाँ कोना</long>
+						<long xml:lang="it">Smussa l'angolo in alto a sinistra</long>
+						<long xml:lang="ja">左上の角の面取り</long>
+						<long xml:lang="nb">Skråstill øverst, venstre hjørne</long>
+						<long xml:lang="nl">Afschuining hoek linksboven</long>
+						<long xml:lang="pl">Zetnij lewy górny narożnik</long>
+						<long xml:lang="pt">Bevel no canto superior esquerdo</long>
+						<long xml:lang="pt_BR">Chanfrar no canto superior esquerdo</long>
+						<long xml:lang="ru">Скос верхнего левого угла</long>
+						<long xml:lang="sv">Runda det övre vänstra hörnet</long>
+						<long xml:lang="tr">Sol üst köşe eğimi</long>
+						<long xml:lang="zh_CN">圆滑左顶角</long>
+						<default>true</default>
+					</option>
+					<option type="bool" name="bevel_topright">
+						<short>Bevel Top Right</short>
+						<short xml:lang="ar">ميل أعلى اليمين</short>
+						<short xml:lang="bn">ওপরের ডানদিকে উচু কর</short>
+						<short xml:lang="ca">Escapça a dalt a la dreta</short>
+						<short xml:lang="de">Oben rechts abrunden</short>
+						<short xml:lang="el">Στρογγύλεμα Πάνω Δεξιά</short>
+						<short xml:lang="en_GB">Bevel Top Right</short>
+						<short xml:lang="es">Biselar la esquina superior derecha</short>
+						<short xml:lang="eu">Goiko eskuina konikoa</short>
+						<short xml:lang="fi">Viistota oikea yläkulma</short>
+						<short xml:lang="fr">Biseauter en haut à droite</short>
+						<short xml:lang="gl">Bisel enriba á dereita</short>
+						<short xml:lang="gu">ટોચે જમણો કોણ</short>
+						<short xml:lang="hi">बेभेल ऊपर दाहिना</short>
+						<short xml:lang="it">Smussa in alto a destra</short>
+						<short xml:lang="ja">右上の面取り</short>
+						<short xml:lang="nb">Skråstill øverst, høyre</short>
+						<short xml:lang="nl">Afschuining rechtsboven</short>
+						<short xml:lang="pl">Zetnij prawy górny narożnik</short>
+						<short xml:lang="pt">Bevel em cima à direita</short>
+						<short xml:lang="pt_BR">Chanfrar em cima à direita</short>
+						<short xml:lang="ru">Скос верхнего правого</short>
+						<short xml:lang="sv">Runda övre höger</short>
+						<short xml:lang="tr">Sağ Üst Eğim</short>
+						<short xml:lang="zh_CN">圆滑右顶角</short>
+						<long>Bevel top right corner</long>
+						<long xml:lang="ar">ميل الزاوية العليا اليمنى</long>
+						<long xml:lang="bn">ওপরের ডানদিকের কোণা উচু কর</long>
+						<long xml:lang="ca">Arrodoneix el cantó de dalt a la dreta</long>
+						<long xml:lang="de">Ecke oben rechts abrunden</long>
+						<long xml:lang="el">Στρογγύλεμα της πάνω δεξιάς γωνίας</long>
+						<long xml:lang="en_GB">Bevel top right corner</long>
+						<long xml:lang="es">Biselar la esquina superior derecha</long>
+						<long xml:lang="eu">Goiko eskuin ertza konikotu</long>
+						<long xml:lang="fi">Viistota vasen yläkulma</long>
+						<long xml:lang="fr">Biseauter le coin supérieur droit</long>
+						<long xml:lang="gl">Bisel no canto superior dereito</long>
+						<long xml:lang="gu">કોણવાળો ટોચે જમણો ખૂણો</long>
+						<long xml:lang="hi">बेभेल ऊपर दायाँ कोना</long>
+						<long xml:lang="it">Smussa l'angolo in alto a destra</long>
+						<long xml:lang="ja">右上の角の面取り</long>
+						<long xml:lang="nb">Skråstill øverst, høyre hjørne</long>
+						<long xml:lang="nl">Afschuining hoek rechtsboven</long>
+						<long xml:lang="pl">Zetnij prawy górny narożnik</long>
+						<long xml:lang="pt">Bevel no canto superior direito</long>
+						<long xml:lang="pt_BR">Chanfrar no canto superior direito</long>
+						<long xml:lang="ru">Скос верхнего правого угла</long>
+						<long xml:lang="sv">Runda det övre högra hörnet</long>
+						<long xml:lang="tr">Sağ üst köşe eğimi</long>
+						<long xml:lang="zh_CN">圆滑右顶角</long>
+						<default>true</default>
+					</option>
+					<option type="bool" name="bevel_bottomleft">
+						<short>Bevel Bottom Left</short>
+						<short xml:lang="ar">ميل أسفل اليسار</short>
+						<short xml:lang="bn">নিচের বাঁদিকে উচু কর</short>
+						<short xml:lang="ca">Escapça a baix a l'esquerra</short>
+						<short xml:lang="de">Unten links abrunden</short>
+						<short xml:lang="el">Στρογγύλεμα Κάτω Αριστερά</short>
+						<short xml:lang="en_GB">Bevel Bottom Left</short>
+						<short xml:lang="es">Biselar la esquina inferior izquierda</short>
+						<short xml:lang="eu">Azpiko Ezkerra konikoa</short>
+						<short xml:lang="fi">Viistota vasen alakulma</short>
+						<short xml:lang="fr">Biseauter en bas à gauche</short>
+						<short xml:lang="gl">Bisel abaixo á esquerda</short>
+						<short xml:lang="gu">તળિયે ડાબો કોણ</short>
+						<short xml:lang="hi">बेभेल नीचे बायाँ</short>
+						<short xml:lang="it">Smussa in basso a sinistra</short>
+						<short xml:lang="ja">左下の面取り</short>
+						<short xml:lang="nb">Skråstill nederst, venstre</short>
+						<short xml:lang="nl">Afschuining linksonder</short>
+						<short xml:lang="pl">Zetnij lewy dolny narożnik</short>
+						<short xml:lang="pt">Bevel em baixo à esquerda</short>
+						<short xml:lang="pt_BR">Chanfrar em baixo à esquerda</short>
+						<short xml:lang="ru">Скос нижнего левого</short>
+						<short xml:lang="sv">Runda nedre vänster</short>
+						<short xml:lang="tr">Sol Alt Eğim</short>
+						<short xml:lang="zh_CN">圆滑左底角</short>
+						<long>Bevel bottom left corner</long>
+						<long xml:lang="ar">ميل الزاوية السفلى اليسرى</long>
+						<long xml:lang="bn">নিচের বাঁদিকের কোণা উচু কর</long>
+						<long xml:lang="ca">Arrodoneix el cantó de baix a l'esquerra</long>
+						<long xml:lang="de">Ecke unten links abrunden</long>
+						<long xml:lang="el">Στρογγύλεμα της κάτω αριστερής γωνίας</long>
+						<long xml:lang="en_GB">Bevel bottom left corner</long>
+						<long xml:lang="es">Biselar la esquina inferior izquierda</long>
+						<long xml:lang="eu">Azpiko ezker ertza konikotu</long>
+						<long xml:lang="fi">Viistota vasen alakulma</long>
+						<long xml:lang="fr">Biseauter le coin inférieur gauche</long>
+						<long xml:lang="gl">Bisel no canto inferior esquerdo</long>
+						<long xml:lang="gu">કોણવાળો તળિયે ડાબે ખૂણો</long>
+						<long xml:lang="hi">बेभेल नीचला बायाँ कोना</long>
+						<long xml:lang="it">Smussa l'angolo in basso a sinistra</long>
+						<long xml:lang="ja">左下の角の面取り</long>
+						<long xml:lang="nb">Skråstill nederst, venstre hjørne</long>
+						<long xml:lang="nl">Afschuining hoek linksonder</long>
+						<long xml:lang="pl">Zetnij lewy dolny narożnik</long>
+						<long xml:lang="pt">Bevel no canto inferior esquerdo</long>
+						<long xml:lang="pt_BR">Chanfrar no canto inferior esquerdo</long>
+						<long xml:lang="ru">Скос нижнего левого угла</long>
+						<long xml:lang="sv">Runda det nedre vänstra hörnet</long>
+						<long xml:lang="tr">Sol alt köşe eğimi</long>
+						<long xml:lang="zh_CN">圆滑左底角</long>
+						<default>false</default>
+					</option>
+					<option type="bool" name="bevel_bottomright">
+						<short>Bevel Bottom Right</short>
+						<short xml:lang="ar">ميل أسفل اليمين</short>
+						<short xml:lang="bn">নিচের ডানদিকে উচু কর</short>
+						<short xml:lang="ca">Escapça a baix a la dreta</short>
+						<short xml:lang="de">Unten rechts abrunden</short>
+						<short xml:lang="el">Στρογγύλεμα Κάτω Δεξιά</short>
+						<short xml:lang="en_GB">Bevel Bottom Right</short>
+						<short xml:lang="es">Biselar la esquina inferior derecha</short>
+						<short xml:lang="eu">Azpiko eskuina konikoa</short>
+						<short xml:lang="fi">Viistota oikea alakulma</short>
+						<short xml:lang="fr">Biseauter en bas à droite</short>
+						<short xml:lang="gl">Bisel abaixo á dereita</short>
+						<short xml:lang="gu">તળિયે જમણો કોણ</short>
+						<short xml:lang="hi">बेभेल नीचे दाहिना</short>
+						<short xml:lang="it">Smussa in basso a destra</short>
+						<short xml:lang="ja">右下の面取り</short>
+						<short xml:lang="nb">Skråstill nederst, høyre</short>
+						<short xml:lang="nl">Afschuining rechtsonder</short>
+						<short xml:lang="pl">Zetnij prawy dolny narożnik</short>
+						<short xml:lang="pt">Bevel em baixo à direita</short>
+						<short xml:lang="pt_BR">Chanfrar em baixo à direita</short>
+						<short xml:lang="ru">Скос нижнего правого</short>
+						<short xml:lang="sv">Runda nedre höger</short>
+						<short xml:lang="tr">Sağ Alt Eğim</short>
+						<short xml:lang="zh_CN">圆滑右底角</short>
+						<long>Bevel bottom right corner</long>
+						<long xml:lang="ar">ميل الزاوية السفلى اليمنى</long>
+						<long xml:lang="bn">ওপরের ডানদিকের কোণা উচু কর</long>
+						<long xml:lang="ca">Arrodoneix el cantó de baix a la dreta</long>
+						<long xml:lang="de">Ecke unten rechts abrunden</long>
+						<long xml:lang="el">Στρογγύλεμα της κάτω δεξιάς γωνίας</long>
+						<long xml:lang="en_GB">Bevel bottom right corner</long>
+						<long xml:lang="es">Biselar la esquina inferior derecha</long>
+						<long xml:lang="eu">Azpiko eskuin ertza konikotu </long>
+						<long xml:lang="fi">Viistota oikea alakulma</long>
+						<long xml:lang="fr">Biseauter le coin inférieur droit</long>
+						<long xml:lang="gl">Bisel do canto inferior dereito</long>
+						<long xml:lang="gu">કોણવાળો તળિયે જમણો ખૂણો</long>
+						<long xml:lang="hi">बेभेल नीचला दायाँ कोना</long>
+						<long xml:lang="it">Smussa l'angolo in basso a destra</long>
+						<long xml:lang="ja">右下の角の面取り</long>
+						<long xml:lang="nb">Skråstill nederst, høyre hjørne</long>
+						<long xml:lang="nl">Afschuining hoek rechtsonder</long>
+						<long xml:lang="pl">Zetnij prawy dolny narożnik</long>
+						<long xml:lang="pt">Bevel do canto inferior direito</long>
+						<long xml:lang="pt_BR">Chanfrar do canto inferior direito</long>
+						<long xml:lang="ru">Скос нижнего правого угла</long>
+						<long xml:lang="sv">Runda det nedre högra hörnet</long>
+						<long xml:lang="tr">Sağ alt köşe eğimi</long>
+						<long xml:lang="zh_CN">圆滑右底角</long>
+						<default>false</default>
+					</option>
+				</subgroup>
+			</group>
+		</screen>
+	</plugin>
+</compiz>

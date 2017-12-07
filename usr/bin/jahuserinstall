@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+
+set -x
+
+prefix=$1
+target=$2
+
+[ ! -d "$prefix" -o "$target" = "" ] && echo "Usage: jahinstall /usr $HOME/jahstorage" && exit 1
+
+cpflags="-u --no-preserve=ownership"
+[ "`uname -s`" = "Darwin" ] && cpflags=
+
+if [ ! -d "$target" ]
+then
+mkdir "$target" || exit 1
+fi
+
+media=$prefix/share/jahshaka/media
+[ -d "$media" ] && cp -r $cpflags $media $target
+
+database=$prefix/share/jahshaka/database
+[ -d "$database" ] && cp -r $cpflags $database $target
+
+scenes=$prefix/share/jahshaka/scenes
+[ -d "$scenes" ] && cp -r $cpflags $scenes $target
+

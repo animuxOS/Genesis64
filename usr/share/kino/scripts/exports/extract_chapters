@@ -1,0 +1,194 @@
+#!/usr/bin/perl -wT
+
+####################################################################################
+# A Kino script that generates a dvdauthor chapters attribute value from a SMIL file
+# Copyright (C) 2004 Greg Hookey <g@deadly.ca>
+# Copyright (C) 2006-2007 Dan Dennedy <dan@dennedy.org>
+####################################################################################
+
+use strict;
+
+sub main() {
+
+	my $chapter_index = 0;
+	my @chapters;
+	my $last_start = 1;
+
+	my $filename = '';
+	my $fps = 0;
+
+	if( $#ARGV == 3 )
+	{
+		if( $ARGV[0] eq "-f" && $ARGV[2] eq "-x" )
+		{
+			$fps = $ARGV[1];
+			$filename = $ARGV[3];
+		} else {
+			print_usage();
+		}
+
+	} elsif ( $#ARGV == -1 ) {
+		exit 1;
+	} else {
+		print_usage();
+	}
+
+	open( XML, "< $filename" ) ||
+		die "unable to open $filename for reading: $!";
+
+	while( my $line = <XML> )
+	{
+		# The idea here is to skip along the xml file,
+		# determining where chapters (seq) begin and
+		# and (number of frames)
+		
+		if( grep( /<seq/, $line ) )
+		{
+			#print "open chapter\n";
+
+			my $label = sprintf( "chapter%02d", $chapter_index );
+
+			#print "$label\n";
+
+			my $frame_accum = 0;
+
+			while( $line = <XML> )
+			{
+
+				$_ = $line;
+
+				if( m/\s*<video/ )
+				{
+					/\s*<video\ssrc=\"(.*)\"\sclipBegin=\"(.*)\"\sclipEnd=\"(.*)\"\/>/;
+					#print "$1 $2 $3\n";
+
+					$frame_accum += ( ( parse_clockvalue( $3, $fps ) - parse_clockvalue( $2, $fps ) ) + 1 );		
+				}
+		
+				# we've reached the end of the chapter
+				if( grep( /<\/seq>/, $line ) )
+				{
+					#print "close chapter\n";
+					last;
+				}
+			}
+
+			if( $chapter_index == 0 )
+			{
+				$chapters[ $chapter_index ] = 1;
+			} else {
+				$chapters[ $chapter_index ] = $last_start;
+			}
+	
+			$last_start += $frame_accum;
+
+			$chapter_index++;
+		}
+		
+	}
+
+	close( XML );
+
+	my $size = scalar( @chapters );
+	my $timecode;
+
+	for( my $i = 0; $i < $size; $i++ )
+	{
+		#print "Start frame: $frame_num\n";
+		if( $i == 0 )
+		{
+			$timecode .= "0,";
+		} elsif( $i == ( $size - 1 ) ) {
+			$timecode = $timecode . make_timecode( $chapters[ $i ] - 1, $fps );
+		} else {
+			$timecode = $timecode . make_timecode( $chapters[ $i ] - 1, $fps ) . ',';
+		}
+	}	
+
+	print "$timecode\n";
+}
+
+sub parse_clockvalue() {
+	return "error" if ! @_;
+	( my $clock, my $fps ) = @_;
+	$fps = 29.97 if ( $fps == 30 );
+	$_ = $clock;
+	/^(.*)\:(.*)\:(.*)\.(.*)$/;
+	my $ms = ($1 * 3600.0 + $2 * 60.0 + $3) * 1000.0 + $4;
+	return int( $fps * $ms / 1000.0 + 0.5 );
+}
+
+sub make_timecode() {
+
+	return "error" if ! @_;
+
+	( my $frame_no, my $fps ) = @_;
+
+	my $timecode;
+        my $hours = 0;
+	my $mins = 0;
+	my $secs = 0;
+        my $cur = $frame_no;
+	my $user_frame_rate = $fps;
+
+        if ( $fps == 29 || $fps == 29.97 )
+	{
+                $fps = 30;
+	}
+
+        if ( $frame_no == 0 )
+        {
+                $hours = 0;
+                $mins = 0;
+                $secs = 0;
+        }
+        else
+        {
+		use integer;
+		{
+                	# NTSC drop-frame 
+                	if ( $fps == 30 )
+                	{
+                        	my $max_frames = $cur;
+                        	for ( my $j = 1800; $j <= $max_frames; $j += 1800 )
+                        	{
+                                	if ( $j % 18000 )
+                                	{
+                                        	$max_frames += 2;
+                                        	$cur += 2;
+                                	}
+                        	}
+                	}
+
+                	$hours = $cur / ( $fps * 3600 );
+                	$cur -= $hours * ( $fps * 3600 );
+                	$mins = $cur / ( $fps * 60 );
+                	$cur -= $mins * ( $fps * 60 );
+                	$secs = $cur / $fps;
+                	$cur -= $secs * $fps;
+        	}
+	}
+
+	# compute fractional component this has to be done in floating point mode
+	# so I've wrapped the integer math above in an anonymous block
+
+	if( $fps == 30 ) 
+	{
+		$cur = $cur / $user_frame_rate * 100;
+	} else {
+		$cur = $cur / 25 * 100;
+	}
+
+	#print "hours: $hours mins: $mins secs: $secs frac: $cur\n";
+
+        $timecode = sprintf( "%d:%2.2d:%2.2d%s%2.2d", $hours, $mins, $secs, ".", $cur );
+
+        return $timecode;
+}
+
+sub print_usage() {
+	print "usage: extract_chapters -f <fps> -x <file>\n";
+	exit 1;
+}
+
+main();

@@ -1,0 +1,14 @@
+if which pycentral >/dev/null 2>&1 && pycentral --help 2>/dev/null | grep -q '^ *version'; then
+	pycentral pkgprepare #PACKAGE# <<PYEOF
+[python-package]
+format = #FORMAT#
+python-version = #PYVERSIONS#
+[pycentral]
+version = #PYCENTRAL_VERSION#
+[files]
+#PYFILES#
+PYEOF
+else
+	mkdir -p /var/lib/pycentral
+	echo #PACKAGE# >> /var/lib/pycentral/delayed-pkgs
+fi

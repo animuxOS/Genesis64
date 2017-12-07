@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema>
+	<section>
+		<sec_name>General</sec_name>
+		<sec_name xml:lang="bg">Общи</sec_name>
+		<sec_name xml:lang="de">Allgemein</sec_name>
+		<sec_name xml:lang="es">General</sec_name>
+		<sec_name xml:lang="fr">Général</sec_name>
+		<sec_name xml:lang="it">Generale</sec_name>
+		<sec_name xml:lang="ja">全般</sec_name>
+		<sec_name xml:lang="pt">Geral</sec_name>
+		<sec_desc>Modify the general aspect and behavior of kiba-dock.</sec_desc>
+		<sec_icon>kiba-dock</sec_icon>
+		<subsection>
+			<sub_sec_name>Dock</sub_sec_name>
+			<sub_sec_name xml:lang="bg">Док</sub_sec_name>
+			<sub_sec_name xml:lang="de">Dock</sub_sec_name>
+			<sub_sec_name xml:lang="es">Dock</sub_sec_name>
+			<sub_sec_name xml:lang="fr">Dock</sub_sec_name>
+			<sub_sec_name xml:lang="it">Barra</sub_sec_name>
+			<sub_sec_name xml:lang="ja">ドック</sub_sec_name>
+			<sub_sec_name xml:lang="pt">Painel</sub_sec_name>
+			<option>
+				<name>monitor_number</name>
+				<title>Monitor</title>
+				<title xml:lang="bg">Монитор</title>
+				<title xml:lang="de">Monitor</title>
+				<title xml:lang="es">Monitor</title>
+				<title xml:lang="fr">Moniteur</title>
+				<title xml:lang="it">Monitor</title>
+				<title xml:lang="ja">画面</title>
+				<title xml:lang="pt">Monitor</title>
+				<type>int</type>
+				<range>0-20</range>
+				<default>0</default>
+				<description>Monitor number for multi Monitor Screens</description>
+				<description xml:lang="bg">Номер на монитор който да се ползва при използването на няколко</description>
+				<description xml:lang="de">Monitor Nummer bei multi Monitor Screens</description>
+				<description xml:lang="es">Número de monitor para monitores múltiples</description>
+				<description xml:lang="fr">Numéro du moniteur (pour les écrans multi-moniteurs)</description>
+				<description xml:lang="it">Numero di monitor per schermi multipli</description>
+				<description xml:lang="ja">マルチ画面スクリーンに対する画面番号</description>
+				<description xml:lang="pt">Número do monitor para múltiplas telas</description>
+			</option>
+		</subsection>
+		<subsection>
+			<sub_sec_name>Title</sub_sec_name>
+			<sub_sec_name xml:lang="bg">Заглавие</sub_sec_name>
+			<sub_sec_name xml:lang="de">Titel</sub_sec_name>
+			<sub_sec_name xml:lang="es">Titulo</sub_sec_name>
+			<sub_sec_name xml:lang="fr">Titre</sub_sec_name>
+			<sub_sec_name xml:lang="it">Titolo</sub_sec_name>
+			<sub_sec_name xml:lang="ja">タイトル</sub_sec_name>
+			<sub_sec_name xml:lang="pt">Título</sub_sec_name>
+			<option>
+				<name>title_enable</name>
+				<title>Enable</title>
+				<title xml:lang="bg">Пускане</title>
+				<title xml:lang="de">Aktivieren</title>
+				<title xml:lang="es">Activar</title>
+				<title xml:lang="fr">Activer</title>
+				<title xml:lang="it">Abilita</title>
+				<title xml:lang="ja">有効</title>
+				<title xml:lang="pt">Habilitar</title>
+				<type>bool</type>
+				<range/>
+				<default>TRUE</default>
+				<description>Enable/Disable title for dock objects</description>
+				<description xml:lang="bg">Пуска/Спира показване на заглавие над обектите</description>
+				<description xml:lang="de">Aktiviert/Deaktiviert Titel für Dock Objekte</description>
+				<description xml:lang="ja">オブジェクト上のタイトルの有効化/無効化</description>
+			</option>
+			<option>
+				<name>title_hide_delay</name>
+				<title>Hide delay</title>
+				<title xml:lang="bg">Забавяне на скриването</title>
+				<title xml:lang="de">Versteck Verzögerung</title>
+				<title xml:lang="ja">遅延時間</title>
+				<type>double</type>
+				<range>1-100</range>
+				<default>50</default>
+				<description>Hide delay</description>
+				<description xml:lang="bg">Забавяне на скриването</description>
+				<description xml:lang="de">Versteck Verzögerung</description>
+				<description xml:lang="ja">遅延時間</description>
+			</option>
+			<option>
+				<name>title_scale_enable</name>
+				<title>Scaling</title>
+				<title xml:lang="bg">Промяна на размера</title>
+				<title xml:lang="de">Skalierung</title>
+				<title xml:lang="es">Escalado</title>
+				<title xml:lang="fr">Mise à l'échelle</title>
+				<title xml:lang="it">Scaling</title>
+				<title xml:lang="ja">スケーリング</title>
+				<title xml:lang="pt">Ajuste de escala</title>
+				<type>bool</type>
+				<range/>
+				<default>FALSE</default>
+				<description>Enable/Disable scaling of the title</description>
+				<description xml:lang="bg">Пуска/Спира промяната на размера на заглавията</description>
+				<description xml:lang="de">Aktiviert/Deaktiviert Skalierung des Titels</description>
+				<description xml:lang="ja">タイトルのスケーリングの有効化/無効化</description>
+			</option>
+			<option>
+				<name>title_highlighting</name>
+				<title>Highlight</title>
+				<type>bool</type>
+				<range/>
+				<default>FALSE</default>
+				<description>Enable/Disable highlighting of the title</description>
+			</option>
+			<option>
+				<name>title_highlighting_color</name>
+				<title>Highlight color</title>
+				<type>char</type>
+				<range>rgba</range>
+				<default>#000000AA</default>
+				<description>Highlight color</description>
+			</option>
+			<option>
+				<name>title_font</name>
+				<title>Text font</title>
+				<title xml:lang="bg">Шрифт на текста</title>
+				<title xml:lang="de">Schriftart</title>
+				<title xml:lang="ja">文字のフォント</title>
+				<type>char</type>
+				<range>text</range>
+				<default>Sans Bold 14</default>
+				<description>Text font</description>
+				<description xml:lang="bg">Шрифт на текста</description>
+				<description xml:lang="de">Schriftart</description>
+				<description xml:lang="ja">文字のフォント</description>
+			</option>
+			<option>
+				<name>title_text_rgba</name>
+				<title>Text color</title>
+				<title xml:lang="bg">Цвят на текста</title>
+				<title xml:lang="de">Text Farbe</title>
+				<title xml:lang="ja">文字の色</title>
+				<type>char</type>
+				<range>rgba</range>
+				<default>#FFFFFFFF</default>
+				<description>Text color</description>
+				<description xml:lang="bg">Цвят на текста</description>
+				<description xml:lang="de">Text Farbe</description>
+				<description xml:lang="ja">文字の色</description>
+			</option>
+			<option>
+				<name>title_shadow_rgba</name>
+				<title>Text shadow color</title>
+				<title xml:lang="bg">Цвят на сянката на текста</title>
+				<title xml:lang="de">Text Schattenfarbe</title>
+				<title xml:lang="ja">文字の影の色</title>
+				<type>char</type>
+				<range>rgba</range>
+				<default>#00000088</default>
+				<description>Text shadow color</description>
+				<description xml:lang="bg">Цвят на сянката на текста</description>
+				<description xml:lang="de">Text Schattenfarbe</description>
+				<description xml:lang="ja">文字の影の色</description>
+			</option>
+			<option>
+				<name>title_background</name>
+				<title>Background</title>
+				<title xml:lang="bg">Фонов цвят</title>
+				<title xml:lang="de">Hintegrund</title>
+				<title xml:lang="es">Fondo</title>
+				<title xml:lang="fr">Arrière plan</title>
+				<title xml:lang="it">Sfondo</title>
+				<title xml:lang="ja">背景</title>
+				<title xml:lang="pt">Fundo</title>
+				<type>char</type>
+				<range>gradient,pngfile</range>
+				<default>gradient</default>
+				<description>Background style</description>
+				<description xml:lang="bg">Стил на фона</description>
+				<description xml:lang="de">Hintergrund Stil</description>
+				<description xml:lang="ja">背景のスタイル</description>
+			</option>
+			<option>
+				<name>title_gradient</name>
+				<title>Gradient</title>
+				<type>list</type>
+				<range>rgba</range>
+				<default>[#FFFFFF00]</default>
+				<description>Gradient</description>
+			</option>
+			<option>
+				<name>title_border_style</name>
+				<title>Border style</title>
+				<title xml:lang="bg">Стил на границите</title>
+				<title xml:lang="de">Rahmen Stil</title>
+				<title xml:lang="ja">境界のスタイル</title>
+				<type>char</type>
+				<range>squared,rounded,mitered,notched</range>
+				<default>rounded</default>
+				<description>Shape style</description>
+				<description xml:lang="bg">Стил на формата</description>
+				<description xml:lang="de">Form</description>
+				<description xml:lang="ja">タイトルの形状のスタイル</description>
+			</option>
+			<option>
+				<name>title_border_rgba</name>
+				<title>Border color</title>
+				<title xml:lang="bg">Цвят на ръба</title>
+				<title xml:lang="de">Rahmen Farbe</title>
+				<title xml:lang="ja">境界の色</title>
+				<type>char</type>
+				<range>rgba</range>
+				<default>#00000000</default>
+				<description>Border color</description>
+				<description xml:lang="bg">Цвят на ръба</description>
+				<description xml:lang="de">Rahmen Farbe</description>
+				<description xml:lang="ja">境界の色</description>
+			</option>
+			<option>
+				<name>title_border_width</name>
+				<title>Border width</title>
+				<title xml:lang="bg">Размер на границата</title>
+				<title xml:lang="de">Rahmen Breite</title>
+				<title xml:lang="es">Ancho del borde</title>
+				<title xml:lang="fr">Épaisseur de la bordure</title>
+				<title xml:lang="it">Ampiezza bordo</title>
+				<title xml:lang="ja">境界の太さ</title>
+				<title xml:lang="pt">Largura da borda</title>
+				<type>double</type>
+				<range>0.1-10.0</range>
+				<default>2.0</default>
+				<description>Border width</description>
+				<description xml:lang="bg">Размер на границата</description>
+				<description xml:lang="de">Rahmen Breite</description>
+				<description xml:lang="es">Ancho del borde</description>
+				<description xml:lang="fr">Épaisseur de la bordure</description>
+				<description xml:lang="it">Ampiezza bordo</description>
+				<description xml:lang="ja">境界の太さ</description>
+				<description xml:lang="pt">Largura da borda</description>
+			</option>
+		</subsection>
+		<subsection>
+			<sub_sec_name>Popup</sub_sec_name>
+			<sub_sec_name xml:lang="bg">Изскачащи прозорци</sub_sec_name>
+			<sub_sec_name xml:lang="de">Popup</sub_sec_name>
+			<sub_sec_name xml:lang="ja">ポップアップ</sub_sec_name>
+			<option>
+				<name>popup_draw</name>
+				<title>Draw</title>
+				<title xml:lang="bg">Изрисуване</title>
+				<title xml:lang="de">Zeichnen</title>
+				<title xml:lang="es">Dibujar</title>
+				<title xml:lang="fr">Dessiner</title>
+				<title xml:lang="it">Disegna</title>
+				<title xml:lang="ja">描画</title>
+				<title xml:lang="pt">Desenho</title>
+				<type>bool</type>
+				<range/>
+				<default>TRUE</default>
+				<description>Enable/Disable Popup drawing</description>
+				<description xml:lang="bg">Пуска/Спира изскачащите прозорци</description>
+				<description xml:lang="de">Aktiviert/Deaktiviert Zeichnen der Popups</description>
+				<description xml:lang="ja">ポップアップの描画の有効化/無効化</description>
+			</option>
+			<option>
+				<name>popup_background</name>
+				<title>Background</title>
+				<title xml:lang="bg">Фонов цвят</title>
+				<title xml:lang="de">Hintegrund</title>
+				<title xml:lang="es">Fondo</title>
+				<title xml:lang="fr">Arrière plan</title>
+				<title xml:lang="it">Sfondo</title>
+				<title xml:lang="ja">背景</title>
+				<title xml:lang="pt">Fundo</title>
+				<type>char</type>
+				<range>gradient,linear,radial,pngfile</range>
+				<default>gradient</default>
+				<description>Style of the Popup background</description>
+				<description xml:lang="bg">Стил на фона на изскачащите прозорци</description>
+				<description xml:lang="de">Stil des Popup Hintergrunds</description>
+				<description xml:lang="ja">ポップアップの背景のスタイル</description>
+			</option>
+			<option>
+				<name>popup_gradient</name>
+				<title>Gradient</title>
+				<type>list</type>
+				<range>rgba</range>
+				<default>[#FEFEFEEE]</default>
+				<description>Gradient</description>
+			</option>
+			<option>
+				<name>popup_topleft</name>
+				<title>Top-left corner</title>
+				<title xml:lang="bg">Горен ляв ъгъл</title>
+				<title xml:lang="de">Ecke oben-links</title>
+				<title xml:lang="ja">左上角の形状</title>
+				<type>char</type>
+				<range>squared,rounded,mitered,notched</range>
+				<default>rounded</default>
+				<description>Shape of the top-left corner of the Popup</description>
+				<description xml:lang="bg">Форма на горния ляв ъгъл на изскачащите прозорци</description>
+				<description xml:lang="de">Form der Dock Ecke unten-links</description>
+				<description xml:lang="ja">ポップアップの左上角の形状</description>
+			</option>
+			<option>
+				<name>popup_topright</name>
+				<title>Top-right corner</title>
+				<title xml:lang="bg">Горен десен ъгъл</title>
+				<title xml:lang="de">Ecke oben rechts</title>
+				<title xml:lang="ja">右上角の形状</title>
+				<type>char</type>
+				<range>squared,rounded,mitered,notched</range>
+				<default>squared</default>
+				<description>Shape of the top-right corner of the Popup</description>
+				<description xml:lang="bg">Форма на горния десен ъгъл на изскачащия прозорец</description>
+				<description xml:lang="de">Form der Dock Ecke unten-rechts</description>
+				<description xml:lang="ja">ポップアップの右上角の形状</description>
+			</option>
+			<option>
+				<name>popup_bottomleft</name>
+				<title>Bottom-left corner</title>
+				<title xml:lang="bg">Долен ляв ъгъл</title>
+				<title xml:lang="de">Ecke unten-links</title>
+				<title xml:lang="ja">左下角の形状</title>
+				<type>char</type>
+				<range>squared,rounded,mitered,notched</range>
+				<default>rounded</default>
+				<description>Shape of the bottom-left corner of the Popup</description>
+				<description xml:lang="bg">Форма на долния ляв ъгъл на изскачащите прозорци</description>
+				<description xml:lang="de">Form der Dock Ecke unten-links</description>
+				<description xml:lang="ja">ポップアップの左下角の形状</description>
+			</option>
+			<option>
+				<name>popup_bottomright</name>
+				<title>Bottom-right corner</title>
+				<title xml:lang="bg">Долен десен ъгъл</title>
+				<title xml:lang="de">Ecke unten-rechts</title>
+				<title xml:lang="ja">右下角の形状</title>
+				<type>char</type>
+				<range>squared,rounded,mitered,notched</range>
+				<default>rounded</default>
+				<description>Shape of the bottom-right corner of the Popup</description>
+				<description xml:lang="bg">Форма на долния десен ъгъл на изскачащите прозорци</description>
+				<description xml:lang="de">Form der Dock Ecke unten-rechts</description>
+				<description xml:lang="ja">ポップアップの右下角の形状</description>
+			</option>
+			<option>
+				<name>popup_border_color</name>
+				<title>Border color</title>
+				<title xml:lang="bg">Цвят на ръба</title>
+				<title xml:lang="de">Rahmen Farbe</title>
+				<title xml:lang="ja">境界の色</title>
+				<type>char</type>
+				<range>rgba</range>
+				<default>#000000AA</default>
+				<description>Border color</description>
+				<description xml:lang="bg">Цвят на ръба</description>
+				<description xml:lang="de">Rahmen Farbe</description>
+				<description xml:lang="ja">境界の色</description>
+			</option>
+			<option>
+				<name>popup_corner_radius</name>
+				<title>Corner radius</title>
+				<title xml:lang="bg">Радиус при ъглите</title>
+				<title xml:lang="de">Ecken Radius</title>
+				<title xml:lang="ja">角の半径</title>
+				<type>double</type>
+				<range>0.0-20.0</range>
+				<default>8.0</default>
+				<description>Corner radius</description>
+				<description xml:lang="bg">Радиус при ъглите</description>
+				<description xml:lang="de">Ecken Radius</description>
+				<description xml:lang="ja">角の半径</description>
+			</option>
+			<option>
+				<name>popup_border_width</name>
+				<title>Border width</title>
+				<title xml:lang="bg">Размер на границата</title>
+				<title xml:lang="de">Rahmen Breite</title>
+				<title xml:lang="es">Ancho del borde</title>
+				<title xml:lang="fr">Épaisseur de la bordure</title>
+				<title xml:lang="it">Ampiezza bordo</title>
+				<title xml:lang="ja">境界の太さ</title>
+				<title xml:lang="pt">Largura da borda</title>
+				<type>int</type>
+				<range>0-10</range>
+				<default>3</default>
+				<description>Border width</description>
+				<description xml:lang="bg">Размер на границата</description>
+				<description xml:lang="de">Rahmen Breite</description>
+				<description xml:lang="es">Ancho del borde</description>
+				<description xml:lang="fr">Épaisseur de la bordure</description>
+				<description xml:lang="it">Ampiezza bordo</description>
+				<description xml:lang="ja">境界の太さ</description>
+				<description xml:lang="pt">Largura da borda</description>
+			</option>
+		</subsection>
+		<subsection>
+			<sub_sec_name>Tooltip</sub_sec_name>
+			<option>
+				<name>tooltip_background</name>
+				<title>Background</title>
+				<title xml:lang="bg">Фонов цвят</title>
+				<title xml:lang="de">Hintegrund</title>
+				<title xml:lang="es">Fondo</title>
+				<title xml:lang="fr">Arrière plan</title>
+				<title xml:lang="it">Sfondo</title>
+				<title xml:lang="ja">背景</title>
+				<title xml:lang="pt">Fundo</title>
+				<type>char</type>
+				<range>gradient,pngfile</range>
+				<default>gradient</default>
+				<description>Style of the bubble background</description>
+				<description xml:lang="bg">Стил на фона на балончетата</description>
+				<description xml:lang="de">Stil des Bubble Hintergrunds</description>
+				<description xml:lang="ja">バブルの背景のスタイル</description>
+			</option>
+			<option>
+				<name>tooltip_font</name>
+				<title>Text font</title>
+				<title xml:lang="bg">Шрифт на текста</title>
+				<title xml:lang="de">Schriftart</title>
+				<title xml:lang="ja">文字のフォント</title>
+				<type>char</type>
+				<range>text</range>
+				<default>Sans Regular 12</default>
+				<description>Text font</description>
+				<description xml:lang="bg">Шрифт на текста</description>
+				<description xml:lang="de">Schriftart</description>
+				<description xml:lang="ja">文字のフォント</description>
+			</option>
+			<option>
+				<name>tooltip_border_style</name>
+				<title>Border style</title>
+				<title xml:lang="bg">Стил на границите</title>
+				<title xml:lang="de">Rahmen Stil</title>
+				<title xml:lang="ja">境界のスタイル</title>
+				<type>char</type>
+				<range>squared,rounded,mitered,notched</range>
+				<default>rounded</default>
+				<description>Border style</description>
+				<description xml:lang="bg">Стил на границите</description>
+				<description xml:lang="de">Rahmen Stil</description>
+				<description xml:lang="ja">境界のスタイル</description>
+			</option>
+			<option>
+				<name>tooltip_gradient</name>
+				<title>Gradient</title>
+				<type>list</type>
+				<range>rgba</range>
+				<default>[#87878766]</default>
+				<description>Gradient</description>
+			</option>
+			<option>
+				<name>tooltip_border_rgba</name>
+				<title>Border color</title>
+				<title xml:lang="bg">Цвят на ръба</title>
+				<title xml:lang="de">Rahmen Farbe</title>
+				<title xml:lang="ja">境界の色</title>
+				<type>char</type>
+				<range>rgba</range>
+				<default>#000000AA</default>
+				<description>Border color</description>
+				<description xml:lang="bg">Цвят на ръба</description>
+				<description xml:lang="de">Rahmen Farbe</description>
+				<description xml:lang="ja">境界の色</description>
+			</option>
+			<option>
+				<name>tooltip_text_rgba</name>
+				<title>Text color</title>
+				<title xml:lang="bg">Цвят на текста</title>
+				<title xml:lang="de">Text Farbe</title>
+				<title xml:lang="ja">文字の色</title>
+				<type>char</type>
+				<range>rgba</range>
+				<default>#000000FF</default>
+				<description>Text color</description>
+				<description xml:lang="bg">Цвят на текста</description>
+				<description xml:lang="de">Text Farbe</description>
+				<description xml:lang="ja">文字の色</description>
+			</option>
+			<option>
+				<name>tooltip_border_width</name>
+				<title>Border width</title>
+				<title xml:lang="bg">Размер на границата</title>
+				<title xml:lang="de">Rahmen Breite</title>
+				<title xml:lang="es">Ancho del borde</title>
+				<title xml:lang="fr">Épaisseur de la bordure</title>
+				<title xml:lang="it">Ampiezza bordo</title>
+				<title xml:lang="ja">境界の太さ</title>
+				<title xml:lang="pt">Largura da borda</title>
+				<type>int</type>
+				<range>0-10</range>
+				<default>4</default>
+				<description>Border width</description>
+				<description xml:lang="bg">Размер на границата</description>
+				<description xml:lang="de">Rahmen Breite</description>
+				<description xml:lang="es">Ancho del borde</description>
+				<description xml:lang="fr">Épaisseur de la bordure</description>
+				<description xml:lang="it">Ampiezza bordo</description>
+				<description xml:lang="ja">境界の太さ</description>
+				<description xml:lang="pt">Largura da borda</description>
+			</option>
+		</subsection>
+	</section>
+</schema>

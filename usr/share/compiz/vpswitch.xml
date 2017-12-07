@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+	<plugin useBcop="true" name="vpswitch">
+		<short>Viewport Switcher</short>
+		<short xml:lang="ca">Canviador de vista</short>
+		<short xml:lang="de">Arbeitsflächenumschalter</short>
+		<short xml:lang="el">Επιλογέας Εικονικής Επιφάνειας Εργασίας</short>
+		<short xml:lang="en_GB">Viewport Switcher</short>
+		<short xml:lang="fi">Työtilan vaihdin</short>
+		<short xml:lang="fr">Changeur de Bureau</short>
+		<short xml:lang="gl">Trocador de escritorio</short>
+		<short xml:lang="gu">દૃશ્યપોર્ટ બદલનાર</short>
+		<short xml:lang="hi">व्यूपोर्ट स्विचर</short>
+		<short xml:lang="it">Selettore area di lavoro</short>
+		<short xml:lang="ja">ビューポート・スイッチャー</short>
+		<short xml:lang="nb">Arbeidsområde-bytter</short>
+		<short xml:lang="nl">Viewport wisselaar</short>
+		<short xml:lang="pt">Alternador de Viewport</short>
+		<short xml:lang="pt_BR">Alternador de janelas de visualização</short>
+		<short xml:lang="sv">Arbetsytväxlare</short>
+		<short xml:lang="tr">Masaüstü Değiştirici</short>
+		<long>Initiate viewport changes through several events</long>
+		<long xml:lang="de">Arbeitsflächenwechsel durch verschiedene Ereignisse starten</long>
+		<long xml:lang="el">Εκκίνηση αλλαγών εικονικών επιφανειών εργασίας στα διάφορα γεγονότα</long>
+		<long xml:lang="en_GB">Initiate viewport changes through several events</long>
+		<long xml:lang="fr">Démarrer le changement de bureau en utilisant différents événements</long>
+		<long xml:lang="gl">Iniciar alteracións de escritorio através de varios eventos</long>
+		<long xml:lang="gu">દૃશ્યપોર્ટ ફેરફારોનો ઘણી ઘટનાઓ મારફતે આરંભ કરે છે</long>
+		<long xml:lang="hi">व्यूपोर्ट बदलाव को कई घटना से आरंभ करें</long>
+		<long xml:lang="it">Inizializza cambio area di lavoro attraverso diversi eventi</long>
+		<long xml:lang="ja">いくつかのイベントを通じたビューポート変更の開始</long>
+		<long xml:lang="nb">Begynn endringer for arbeidsområde gjennom flere hendelser</long>
+		<long xml:lang="nl">Initiëer viewport veranderingen door verschillende gebeurtenissen</long>
+		<long xml:lang="pl">Inicjuj zmianę pulpitów poprzez pewne konkretne zdarzenia</long>
+		<long xml:lang="pt">Iniciar alterações de viewport através de vários eventos</long>
+		<long xml:lang="pt_BR">Iniciar alterações da janela de visualização através de vários eventos</long>
+		<long xml:lang="sv">Initiera ändring av arbetsyta genom flera händelser</long>
+		<category>Desktop</category>
+		<display>
+			<group>
+				<short>Number-Based Viewport Switching</short>
+				<short xml:lang="ca">Commuta entre vistes usant el número corresponent</short>
+				<short xml:lang="de">Arbeitsflächenumschaltung durch Nummerneingabe</short>
+				<short xml:lang="el">Αλλαγή Βασισμένη στον Αριθμό Εικονικής Επιφάνειας Εργασίας</short>
+				<short xml:lang="en_GB">Number-Based Viewport Switching</short>
+				<short xml:lang="fi">Työtilan vaihto numeroilla</short>
+				<short xml:lang="fr">Sélection de bureau basée sur le numéro</short>
+				<short xml:lang="gl">Trocador de escritorio baseado en Números</short>
+				<short xml:lang="gu">નંબર-આધારિત દૃશ્યપોર્ટ બદલવાનું</short>
+				<short xml:lang="hi">संख्या आधारित व्यूपोर्ट स्विचिंग</short>
+				<short xml:lang="it">Selezione area di lavoro in base al numero</short>
+				<short xml:lang="ja">番号によるビューポート切り替え</short>
+				<short xml:lang="nb">Nummerbasert skifte av arbeidsområde</short>
+				<short xml:lang="nl">Nummer gebaseerde viewport wisseling</short>
+				<short xml:lang="pt">Troca de Viewport baseada em Números</short>
+				<short xml:lang="pt_BR">Troca de janela de visualização baseada em Números</short>
+				<short xml:lang="sv">Nummerbaserat byte av arbetsyta</short>
+				<short xml:lang="tr">Numaraya Göre Masaüstü Değiştirme</short>
+				<option type="key" name="begin_key">
+					<short>Begin Viewport Switch</short>
+					<short xml:lang="ca">Inicia el commutador de vistes</short>
+					<short xml:lang="de">Arbeitsflächenwechsel beginnen</short>
+					<short xml:lang="el">Ξεκίνημα Αλλαγής Εικονικής Επιφάνειας Εργασίας</short>
+					<short xml:lang="en_GB">Begin Viewport Switch</short>
+					<short xml:lang="fr">Commencer le changement de bureau</short>
+					<short xml:lang="gl">Iniciar Trocaescritorio</short>
+					<short xml:lang="gu">દૃશ્યપોર્ટ બદલવાનું શરૂ કરો</short>
+					<short xml:lang="hi">व्यूपोर्ट स्विच शुरू करें</short>
+					<short xml:lang="it">Inizia selettore area di lavoro</short>
+					<short xml:lang="ja">ビューポート切り替えの開始</short>
+					<short xml:lang="nb">Begynn btting av arbeidsområde</short>
+					<short xml:lang="nl">Begin met viewport wissel</short>
+					<short xml:lang="pl">Rozpocznij zmianę wirtualnych pulpitów</short>
+					<short xml:lang="pt">Iniciar Troca Viewport</short>
+					<short xml:lang="pt_BR">Iniciar troca da janela de visualização</short>
+					<short xml:lang="sv">Börja byte av arbetsyta</short>
+					<long>Begin entering viewport number</long>
+					<long xml:lang="de">Arbeitsflächennummer-Eingabe starten</long>
+					<long xml:lang="el">Ξεκίνημα εισαγωγής αριθμού εικονικής επιφάνειας εργασίας</long>
+					<long xml:lang="en_GB">Begin entering viewport number</long>
+					<long xml:lang="fr">Commencer le changement à partir du numéro</long>
+					<long xml:lang="gl">Comece a dixitar o número do escritorio</long>
+					<long xml:lang="gu">દૃશ્યપોર્ટ નંબર દાખલ કરવાનું શરૂ કરો</long>
+					<long xml:lang="hi">व्यूपोर्ट संख्या दाखिल करना शुरू करें</long>
+					<long xml:lang="it">Inizia a entrare nell'area di lavoro</long>
+					<long xml:lang="ja">ビューポート番号の入力開始</long>
+					<long xml:lang="nb">Begynn ved å gå til arbeidsområde nummer</long>
+					<long xml:lang="nl">Begin met invoeren viewport nummer</long>
+					<long xml:lang="pl">Rozpoczij wpisywanie numeru wirtualnego pulpitu</long>
+					<long xml:lang="pt">Começe a digitar o número do viewport</long>
+					<long xml:lang="pt_BR">Começe a digitar o número da janela de visualização</long>
+					<long xml:lang="sv">Börja skriva nummer på arbetsyta</long>
+				</option>
+			</group>
+			<group>
+				<short>Go to specific viewport</short>
+				<short xml:lang="ca">Vés a una vista determinada</short>
+				<short xml:lang="de">Zu bestimmter Arbeitsfläche bewegen</short>
+				<short xml:lang="el">Πήγαινε στην συγκεκριμένη εικονική επιφάνεια εργασίας</short>
+				<short xml:lang="en_GB">Go to specific viewport</short>
+				<short xml:lang="fr">Aller sur un bureau spécifique</short>
+				<short xml:lang="gl">Ir para un escritorio específico</short>
+				<short xml:lang="gu">ચોક્કસ દૃશ્યપોર્ટ પર જાવ</short>
+				<short xml:lang="hi">विशेष व्यूपोर्ट में जाएं</short>
+				<short xml:lang="it">Vai a un'area di lavoro specifica</short>
+				<short xml:lang="ja">特定ビューポートに移動</short>
+				<short xml:lang="nb">Gå til spesifikt arbeidsområde</short>
+				<short xml:lang="nl">Ga naar specifieke viewport</short>
+				<short xml:lang="pl">Idź do konkretnego wirtualnego pulpitu</short>
+				<short xml:lang="pt">Ir para um viewport específico</short>
+				<short xml:lang="pt_BR">Ir para uma janela de visualização específica</short>
+				<short xml:lang="sv">Gå till specifik arbetsyta</short>
+				<short xml:lang="tr">Belirli bir masaüstüne git</short>
+				<option type="key" name="switch_to_1_key">
+					<short>Switch to Viewport 1</short>
+					<short xml:lang="ca">Canvia a la vista 1</short>
+					<short xml:lang="de">Zu Arbeitsfläche 1 bewegen</short>
+					<short xml:lang="el">Αλλαγή στην Εικονική Επιφάνεια Εργασίας 1</short>
+					<short xml:lang="en_GB">Switch to Viewport 1</short>
+					<short xml:lang="fi">Vaihda työtilaan 1</short>
+					<short xml:lang="fr">Aller au Bureau 1</short>
+					<short xml:lang="gl">Trocar cara o escritorio 1</short>
+					<short xml:lang="gu">દૃશ્યપોર્ટ ૧ માં બદલો</short>
+					<short xml:lang="hi">व्यूपोर्ट 1 में बदलें</short>
+					<short xml:lang="it">Passa all'area di lavoro 1</short>
+					<short xml:lang="ja">ビューポート 1 に切り替え</short>
+					<short xml:lang="nb">Bytt til arbeidsområde 1</short>
+					<short xml:lang="nl">Wissel naar viewport 1</short>
+					<short xml:lang="pl">Zmień na pulpit wirtualny %d</short>
+					<short xml:lang="pt">Mudar para Viewport 1</short>
+					<short xml:lang="pt_BR">Mudar para a janela de visualização 1</short>
+					<short xml:lang="sv">Byt till arbetsyta 1</short>
+					<short xml:lang="tr">1. Masaüstüne Geç</short>
+					<long>Switch to viewport 1</long>
+					<long xml:lang="ca">Canvia a la vista 1</long>
+					<long xml:lang="de">Zu Arbeitsfläche 1 wechseln</long>
+					<long xml:lang="el">Αλλαγή στην εικονική επιφάνεια εργασίας 1</long>
+					<long xml:lang="en_GB">Switch to viewport 1</long>
+					<long xml:lang="fi">Vaihda työtilaan 1</long>
+					<long xml:lang="fr">Aller au bureau 1</long>
+					<long xml:lang="gl">Trocar cara o escritorio 1</long>
+					<long xml:lang="gu">દૃશ્યપોર્ટ ૧ માં બદલો</long>
+					<long xml:lang="hi">व्यूपोर्ट 1 में बदलें</long>
+					<long xml:lang="it">Passa all'area di lavoro 1</long>
+					<long xml:lang="ja">ビューポート 1 に切り替え</long>
+					<long xml:lang="nb">Bytt til arbeidsområde 1</long>
+					<long xml:lang="nl">Wissel naar viewport 1</long>
+					<long xml:lang="pl">Zmień na pulpit wirtualny %d</long>
+					<long xml:lang="pt">Mudar para o viewport 1</long>
+					<long xml:lang="pt_BR">Mudar para a janela de visualização 1</long>
+					<long xml:lang="sv">Byt till arbetsyta 1</long>
+					<long xml:lang="tr">1. Masaüstüne Geç</long>
+				</option>
+				<option type="key" name="switch_to_2_key">
+					<short>Switch to Viewport 2</short>
+					<short xml:lang="ca">Canvia a la vista 2</short>
+					<short xml:lang="de">Zu Arbeitsfläche 2 bewegen</short>
+					<short xml:lang="el">Αλλαγή στην Εικονική Επιφάνεια Εργασίας 2</short>
+					<short xml:lang="en_GB">Switch to Viewport 2</short>
+					<short xml:lang="fi">Vaihda työtilaan 2</short>
+					<short xml:lang="fr">Aller au Bureau 2</short>
+					<short xml:lang="gl">Trocar paraescritorio 2</short>
+					<short xml:lang="gu">દૃશ્યપોર્ટ ૨ માં બદલો</short>
+					<short xml:lang="hi">व्यूपोर्ट 2 में बदलें</short>
+					<short xml:lang="it">Passa all'area di lavoro 2</short>
+					<short xml:lang="ja">ビューポート 2 に切り替え</short>
+					<short xml:lang="nb">Bytt til arbeidsområde 2</short>
+					<short xml:lang="nl">Wissel naar viewport 2</short>
+					<short xml:lang="pl">Zmień na pulpit wirtualny %d</short>
+					<short xml:lang="pt">Mudar para Viewport 2</short>
+					<short xml:lang="pt_BR">Mudar para a janela de visualização 2</short>
+					<short xml:lang="sv">Byt till arbetsyta 2</short>
+					<short xml:lang="tr">2. Masaüstüne Geç</short>
+					<long>Switch to viewport 2</long>
+					<long xml:lang="ca">Canvia a la vista 2</long>
+					<long xml:lang="de">Zu Arbeitsfläche 2 wechseln</long>
+					<long xml:lang="el">Αλλαγή στην εικονική επιφάνεια εργασίας 2</long>
+					<long xml:lang="en_GB">Switch to viewport 2</long>
+					<long xml:lang="fi">Vaihda työtilaan 2</long>
+					<long xml:lang="fr">Aller au bureau 2</long>
+					<long xml:lang="gl">Trocar cara o escritorio 2</long>
+					<long xml:lang="gu">દૃશ્યપોર્ટ ૨ માં બદલો</long>
+					<long xml:lang="hi">व्यूपोर्ट 2 में बदलें</long>
+					<long xml:lang="it">Passa all'area di lavoro 2</long>
+					<long xml:lang="ja">ビューポート 2 に切り替え</long>
+					<long xml:lang="nb">Bytt til arbeidsområde 2</long>
+					<long xml:lang="nl">Wissel naar viewport 2</long>
+					<long xml:lang="pl">Zmień na pulpit wirtualny %d</long>
+					<long xml:lang="pt">Mudar para o viewport 2</long>
+					<long xml:lang="pt_BR">Mudar para a janela de visualização 2</long>
+					<long xml:lang="sv">Byt till arbetsyta 2</long>
+					<long xml:lang="tr">2. Masaüstüne Geç</long>
+				</option>
+				<option type="key" name="switch_to_3_key">
+					<short>Switch to Viewport 3</short>
+					<short xml:lang="ca">Canvia a la vista 3</short>
+					<short xml:lang="de">Zu Arbeitsfläche 3 bewegen</short>
+					<short xml:lang="el">Αλλαγή στην Εικονική Επιφάνεια Εργασίας 3</short>
+					<short xml:lang="en_GB">Switch to Viewport 3</short>
+					<short xml:lang="fi">Vaihda työtilaan 3</short>
+					<short xml:lang="fr">Aller au Bureau 3</short>
+					<short xml:lang="gl">Trocar paraescritorio 3</short>
+					<short xml:lang="gu">દૃશ્યપોર્ટ ૩ માં બદલો</short>
+					<short xml:lang="hi">व्यूपोर्ट 3 में बदलें</short>
+					<short xml:lang="it">Passa all'area di lavoro 3</short>
+					<short xml:lang="ja">ビューポート 3 に切り替え</short>
+					<short xml:lang="nb">Bytt til arbeidsområde 3</short>
+					<short xml:lang="nl">Wissel naar viewport 3</short>
+					<short xml:lang="pl">Zmień na pulpit wirtualny %d</short>
+					<short xml:lang="pt">Mudar para Viewport 3</short>
+					<short xml:lang="pt_BR">Mudar para a janela de visualização 3</short>
+					<short xml:lang="sv">Byt till arbetsyta 3</short>
+					<short xml:lang="tr">3. Masaüstüne Geç</short>
+					<long>Switch to viewport 3</long>
+					<long xml:lang="ca">Canvia a la vista 3</long>
+					<long xml:lang="de">Zu Arbeitsfläche 3 wechseln</long>
+					<long xml:lang="el">Αλλαγή στην εικονική επιφάνεια εργασίας 3</long>
+					<long xml:lang="en_GB">Switch to viewport 3</long>
+					<long xml:lang="fi">Vaihda työtilaan 3</long>
+					<long xml:lang="fr">Aller au bureau 3</long>
+					<long xml:lang="gl">Trocar cara o escritorio 3</long>
+					<long xml:lang="gu">દૃશ્યપોર્ટ ૩ માં બદલો</long>
+					<long xml:lang="hi">व्यूपोर्ट 3 में बदलें</long>
+					<long xml:lang="it">Passa all'area di lavoro 3</long>
+					<long xml:lang="ja">ビューポート 3 に切り替え</long>
+					<long xml:lang="nb">Bytt til arbeidsområde 3</long>
+					<long xml:lang="nl">Wissel naar viewport 3</long>
+					<long xml:lang="pl">Zmień na pulpit wirtualny %d</long>
+					<long xml:lang="pt">Mudar para o viewport 3</long>
+					<long xml:lang="pt_BR">Mudar para a janela de visualização 3</long>
+					<long xml:lang="sv">Byt till arbetsyta 3</long>
+					<long xml:lang="tr">3. Masaüstüne Geç</long>
+				</option>
+				<option type="key" name="switch_to_4_key">
+					<short>Switch to Viewport 4</short>
+					<short xml:lang="ca">Canvia a la vista 4</short>
+					<short xml:lang="de">Zu Arbeitsfläche 4 bewegen</short>
+					<short xml:lang="el">Αλλαγή στην Εικονική Επιφάνεια Εργασίας 4</short>
+					<short xml:lang="en_GB">Switch to Viewport 4</short>
+					<short xml:lang="fi">Vaihda työtilaan 4</short>
+					<short xml:lang="fr">Aller au Bureau 4</short>
+					<short xml:lang="gl">Trocar paraescritorio 4</short>
+					<short xml:lang="gu">દૃશ્યપોર્ટ ૪ માં બદલો</short>
+					<short xml:lang="hi">व्यूपोर्ट 4 में बदलें</short>
+					<short xml:lang="it">Passa all'area di lavoro 4</short>
+					<short xml:lang="ja">ビューポート 4 に切り替え</short>
+					<short xml:lang="nb">Bytt til arbeidsområde 4</short>
+					<short xml:lang="nl">Wissel naar viewport 4</short>
+					<short xml:lang="pl">Zmień na pulpit wirtualny %d</short>
+					<short xml:lang="pt">Mudar para Viewport 4</short>
+					<short xml:lang="pt_BR">Mudar para a janela de visualização 4</short>
+					<short xml:lang="sv">Byt till arbetsyta 4</short>
+					<short xml:lang="tr">4. Masaüstüne Geç</short>
+					<long>Switch to viewport 4</long>
+					<long xml:lang="ca">Canvia a la vista 4</long>
+					<long xml:lang="de">Zu Arbeitsfläche 4 wechseln</long>
+					<long xml:lang="el">Αλλαγή στην εικονική επιφάνεια εργασίας 4</long>
+					<long xml:lang="en_GB">Switch to viewport 4</long>
+					<long xml:lang="fi">Vaihda työtilaan 4</long>
+					<long xml:lang="fr">Aller au bureau 4</long>
+					<long xml:lang="gl">Trocar cara o escritorio 4</long>
+					<long xml:lang="gu">દૃશ્યપોર્ટ ૪ માં બદલો</long>
+					<long xml:lang="hi">व्यूपोर्ट 4 में बदलें</long>
+					<long xml:lang="it">Passa all'area di lavoro 4</long>
+					<long xml:lang="ja">ビューポート 4 に切り替え</long>
+					<long xml:lang="nb">Bytt til arbeidsområde 4</long>
+					<long xml:lang="nl">Wissel naar viewport 4</long>
+					<long xml:lang="pl">Zmień na pulpit wirtualny %d</long>
+					<long xml:lang="pt">Mudar para o viewport 4</long>
+					<long xml:lang="pt_BR">Mudar para a janela de visualização 4</long>
+					<long xml:lang="sv">Byt till arbetsyta 4</long>
+					<long xml:lang="tr">4. Masaüstüne Geç</long>
+				</option>
+				<option type="key" name="switch_to_5_key">
+					<short>Switch to Viewport 5</short>
+					<short xml:lang="ca">Canvia a la vista 5</short>
+					<short xml:lang="de">Zu Arbeitsfläche 5 bewegen</short>
+					<short xml:lang="el">Αλλαγή στην Εικονική Επιφάνεια Εργασίας 5</short>
+					<short xml:lang="en_GB">Switch to Viewport 5</short>
+					<short xml:lang="fi">Vaihda työtilaan 5</short>
+					<short xml:lang="fr">Aller au Bureau 5</short>
+					<short xml:lang="gl">Trocar paraescritorio 5</short>
+					<short xml:lang="gu">દૃશ્યપોર્ટ ૫ માં બદલો</short>
+					<short xml:lang="hi">व्यूपोर्ट 5 में बदलें</short>
+					<short xml:lang="it">Passa all'area di lavoro 5</short>
+					<short xml:lang="ja">ビューポート 5 に切り替え</short>
+					<short xml:lang="nb">Bytt til arbeidsområde 5</short>
+					<short xml:lang="nl">Wissel naar viewport 5</short>
+					<short xml:lang="pl">Zmień na pulpit wirtualny %d</short>
+					<short xml:lang="pt">Mudar para Viewport 5</short>
+					<short xml:lang="pt_BR">Mudar para a janela de visualização 5</short>
+					<short xml:lang="sv">Byt till arbetsyta 5</short>
+					<short xml:lang="tr">5. Masaüstüne Geç</short>
+					<long>Switch to viewport 5</long>
+					<long xml:lang="ca">Canvia a la vista 5</long>
+					<long xml:lang="de">Zu Arbeitsfläche 5 wechseln</long>
+					<long xml:lang="el">Αλλαγή στην εικονική επιφάνεια εργασίας 5</long>
+					<long xml:lang="en_GB">Switch to viewport 5</long>
+					<long xml:lang="fi">Vaihda työtilaan 5</long>
+					<long xml:lang="fr">Aller au bureau 5</long>
+					<long xml:lang="gl">Trocar cara o escritorio 5</long>
+					<long xml:lang="gu">દૃશ્યપોર્ટ ૫ માં બદલો</long>
+					<long xml:lang="hi">व्यूपोर्ट 5 में बदलें</long>
+					<long xml:lang="it">Passa all'area di lavoro 5</long>
+					<long xml:lang="ja">ビューポート 5 に切り替え</long>
+					<long xml:lang="nb">Bytt til arbeidsområde 5</long>
+					<long xml:lang="nl">Wissel naar viewport 5</long>
+					<long xml:lang="pl">Zmień na pulpit wirtualny %d</long>
+					<long xml:lang="pt">Mudar para o viewport 5</long>
+					<long xml:lang="pt_BR">Mudar para a janela de visualização 5</long>
+					<long xml:lang="sv">Byt till arbetsyta 5</long>
+					<long xml:lang="tr">5. Masaüstüne Geç</long>
+				</option>
+				<option type="key" name="switch_to_6_key">
+					<short>Switch to Viewport 6</short>
+					<short xml:lang="ca">Canvia a la vista 6</short>
+					<short xml:lang="de">Zu Arbeitsfläche 6 bewegen</short>
+					<short xml:lang="el">Αλλαγή στην Εικονική Επιφάνεια Εργασίας 6</short>
+					<short xml:lang="en_GB">Switch to Viewport 6</short>
+					<short xml:lang="fi">Vaihda työtilaan 6</short>
+					<short xml:lang="fr">Aller au Bureau 6</short>
+					<short xml:lang="gl">Trocar paraescritorio 6</short>
+					<short xml:lang="gu">દૃશ્યપોર્ટ ૬ માં બદલો</short>
+					<short xml:lang="hi">व्यूपोर्ट 6 में बदलें</short>
+					<short xml:lang="it">Passa all'area di lavoro 6</short>
+					<short xml:lang="ja">ビューポート 6 に切り替え</short>
+					<short xml:lang="nb">Bytt til arbeidsområde 6</short>
+					<short xml:lang="nl">Wissel naar viewport 6</short>
+					<short xml:lang="pl">Zmień na pulpit wirtualny %d</short>
+					<short xml:lang="pt">Mudar para Viewport 6</short>
+					<short xml:lang="pt_BR">Mudar para a janela de visualização 6</short>
+					<short xml:lang="sv">Byt till arbetsyta 6</short>
+					<short xml:lang="tr">6. Masaüstüne Geç</short>
+					<long>Switch to viewport 6</long>
+					<long xml:lang="ca">Canvia a la vista 6</long>
+					<long xml:lang="de">Zu Arbeitsfläche 6 wechseln</long>
+					<long xml:lang="el">Αλλαγή στην εικονική επιφάνεια εργασίας 6</long>
+					<long xml:lang="en_GB">Switch to viewport 6</long>
+					<long xml:lang="fi">Vaihda työtilaan 6</long>
+					<long xml:lang="fr">Aller au bureau 6</long>
+					<long xml:lang="gl">Trocar cara o escritorio 6</long>
+					<long xml:lang="gu">દૃશ્યપોર્ટ ૬ માં બદલો</long>
+					<long xml:lang="hi">व्यूपोर्ट 6 में बदलें</long>
+					<long xml:lang="it">Passa all'area di lavoro 6</long>
+					<long xml:lang="ja">ビューポート 6 に切り替え</long>
+					<long xml:lang="nb">Bytt til arbeidsområde 6</long>
+					<long xml:lang="nl">Wissel naar viewport 6</long>
+					<long xml:lang="pl">Zmień na pulpit wirtualny %d</long>
+					<long xml:lang="pt">Mudar para viewport 6</long>
+					<long xml:lang="pt_BR">Mudar para a janela de visualização 6</long>
+					<long xml:lang="sv">Byt till arbetsyta 6</long>
+					<long xml:lang="tr">6. Masaüstüne Geç</long>
+				</option>
+				<option type="key" name="switch_to_7_key">
+					<short>Switch to Viewport 7</short>
+					<short xml:lang="ca">Canvia a la vista 7</short>
+					<short xml:lang="de">Zu Arbeitsfläche 7 bewegen</short>
+					<short xml:lang="el">Αλλαγή στην Εικονική Επιφάνεια Εργασίας 7</short>
+					<short xml:lang="en_GB">Switch to Viewport 7</short>
+					<short xml:lang="fi">Vaihda työtilaan 7</short>
+					<short xml:lang="fr">Aller au Bureau 7</short>
+					<short xml:lang="gl">Trocar paraescritorio 7</short>
+					<short xml:lang="gu">દૃશ્યપોર્ટ ૭ માં બદલો</short>
+					<short xml:lang="hi">व्यूपोर्ट 7 में बदलें</short>
+					<short xml:lang="it">Passa all'area di lavoro 7</short>
+					<short xml:lang="ja">ビューポート 7 に切り替え</short>
+					<short xml:lang="nb">Bytt til arbeidsområde 7</short>
+					<short xml:lang="nl">Wissel naar viewport 7</short>
+					<short xml:lang="pl">Zmień na pulpit wirtualny %d</short>
+					<short xml:lang="pt">Mudar para Viewport 7</short>
+					<short xml:lang="pt_BR">Mudar para a janela de visualização 7</short>
+					<short xml:lang="sv">Byt till arbetsyta 7</short>
+					<short xml:lang="tr">7. Masaüstüne Geç</short>
+					<long>Switch to viewport 7</long>
+					<long xml:lang="ca">Canvia a la vista 7</long>
+					<long xml:lang="de">Zu Arbeitsfläche 7 wechseln</long>
+					<long xml:lang="el">Αλλαγή στην εικονική επιφάνεια εργασίας 7</long>
+					<long xml:lang="en_GB">Switch to viewport 7</long>
+					<long xml:lang="fi">Vaihda työtilaan 7</long>
+					<long xml:lang="fr">Aller au bureau 7</long>
+					<long xml:lang="gl">Trocar cara o escritorio 7</long>
+					<long xml:lang="gu">દૃશ્યપોર્ટ ૭ માં બદલો</long>
+					<long xml:lang="hi">व्यूपोर्ट 7 में बदलें</long>
+					<long xml:lang="it">Passa all'area di lavoro 7</long>
+					<long xml:lang="ja">ビューポート 7 に切り替え</long>
+					<long xml:lang="nb">Bytt til arbeidsområde 7</long>
+					<long xml:lang="nl">Wissel naar viewport 7</long>
+					<long xml:lang="pl">Zmień na pulpit wirtualny %d</long>
+					<long xml:lang="pt">Mudar para viewport 7</long>
+					<long xml:lang="pt_BR">Mudar para a janela de visualização 7</long>
+					<long xml:lang="sv">Byt till arbetsyta 7</long>
+					<long xml:lang="tr">7. Masaüstüne Geç</long>
+				</option>
+				<option type="key" name="switch_to_8_key">
+					<short>Switch to Viewport 8</short>
+					<short xml:lang="ca">Canvia a la vista 8</short>
+					<short xml:lang="de">Zu Arbeitsfläche 8 bewegen</short>
+					<short xml:lang="el">Αλλαγή στην Εικονική Επιφάνεια Εργασίας 8</short>
+					<short xml:lang="en_GB">Switch to Viewport 8</short>
+					<short xml:lang="fi">Vaihda työtilaan 8</short>
+					<short xml:lang="fr">Aller au Bureau 8</short>
+					<short xml:lang="gl">Trocar paraescritorio 8</short>
+					<short xml:lang="gu">દૃશ્યપોર્ટ ૮ માં બદલો</short>
+					<short xml:lang="hi">व्यूपोर्ट 8 में बदलें</short>
+					<short xml:lang="it">Passa all'area di lavoro 8</short>
+					<short xml:lang="ja">ビューポート 8 に切り替え</short>
+					<short xml:lang="nb">Bytt til arbeidsområde 8</short>
+					<short xml:lang="nl">Wissel naar viewport 8</short>
+					<short xml:lang="pl">Zmień na pulpit wirtualny %d</short>
+					<short xml:lang="pt">Mudar para Viewport 8</short>
+					<short xml:lang="pt_BR">Mudar para a janela de visualização 8</short>
+					<short xml:lang="sv">Byt till arbetsyta 8</short>
+					<short xml:lang="tr">8. Masaüstüne Geç</short>
+					<long>Switch to viewport 8</long>
+					<long xml:lang="ca">Canvia a la vista 8</long>
+					<long xml:lang="de">Zu Arbeitsfläche 8 wechseln</long>
+					<long xml:lang="el">Αλλαγή στην εικονική επιφάνεια εργασίας 8</long>
+					<long xml:lang="en_GB">Switch to viewport 8</long>
+					<long xml:lang="fi">Vaihda työtilaan 8</long>
+					<long xml:lang="fr">Aller au bureau 8</long>
+					<long xml:lang="gl">Trocar cara o escritorio 8</long>
+					<long xml:lang="gu">દૃશ્યપોર્ટ ૮ માં બદલો</long>
+					<long xml:lang="hi">व्यूपोर्ट 8 में बदलें</long>
+					<long xml:lang="it">Passa all'area di lavoro 8</long>
+					<long xml:lang="ja">ビューポート 8 に切り替え</long>
+					<long xml:lang="nb">Bytt til arbeidsområde 8</long>
+					<long xml:lang="nl">Wissel naar viewport 8</long>
+					<long xml:lang="pl">Zmień na pulpit wirtualny %d</long>
+					<long xml:lang="pt">Mudar para viewport 8</long>
+					<long xml:lang="pt_BR">Mudar para a janela de visualização 8</long>
+					<long xml:lang="sv">Byt till arbetsyta 8</long>
+					<long xml:lang="tr">8. Masaüstüne Geç</long>
+				</option>
+				<option type="key" name="switch_to_9_key">
+					<short>Switch to Viewport 9</short>
+					<short xml:lang="ca">Canvia a la vista 9</short>
+					<short xml:lang="de">Zu Arbeitsfläche 9 bewegen</short>
+					<short xml:lang="el">Αλλαγή στην Εικονική Επιφάνεια Εργασίας 9</short>
+					<short xml:lang="en_GB">Switch to Viewport 9</short>
+					<short xml:lang="fi">Vaihda työtilaan 9</short>
+					<short xml:lang="fr">Aller au Bureau 9</short>
+					<short xml:lang="gl">Trocar cara o escritorio 9</short>
+					<short xml:lang="gu">દૃશ્યપોર્ટ ૯ માં બદલો</short>
+					<short xml:lang="hi">व्यूपोर्ट 9 में बदलें</short>
+					<short xml:lang="it">Passa all'area di lavoro 9</short>
+					<short xml:lang="ja">ビューポート 9 に切り替え</short>
+					<short xml:lang="nb">Bytt til arbeidsområde 9</short>
+					<short xml:lang="nl">Wissel naar viewport 9</short>
+					<short xml:lang="pl">Zmień na pulpit wirtualny %d</short>
+					<short xml:lang="pt">Mudar para Viewport 9</short>
+					<short xml:lang="pt_BR">Mudar para a janela de visualização 9</short>
+					<short xml:lang="sv">Byt till arbetsyta 9</short>
+					<short xml:lang="tr">9. Masaüstüne Geç</short>
+					<long>Switch to viewport 9</long>
+					<long xml:lang="ca">Canvia a la vista 9</long>
+					<long xml:lang="de">Zu Arbeitsfläche 9 wechseln</long>
+					<long xml:lang="el">Αλλαγή στην εικονική επιφάνεια εργασίας 9</long>
+					<long xml:lang="en_GB">Switch to viewport 9</long>
+					<long xml:lang="fi">Vaihda työtilaan 9</long>
+					<long xml:lang="fr">Aller au bureau 9</long>
+					<long xml:lang="gl">Trocar cara o escritorio 9</long>
+					<long xml:lang="gu">દૃશ્યપોર્ટ ૯ માં બદલો</long>
+					<long xml:lang="hi">व्यूपोर्ट 9 में बदलें</long>
+					<long xml:lang="it">Passa all'area di lavoro 9</long>
+					<long xml:lang="ja">ビューポート 9 に切り替え</long>
+					<long xml:lang="nb">Bytt til arbeidsområde 9</long>
+					<long xml:lang="nl">Wissel naar viewport 9</long>
+					<long xml:lang="pl">Zmień na pulpit wirtualny %d</long>
+					<long xml:lang="pt">Mudar para viewport 9</long>
+					<long xml:lang="pt_BR">Mudar para a janela de visualização 9</long>
+					<long xml:lang="sv">Byt till arbetsyta 9</long>
+					<long xml:lang="tr">9. Masaüstüne Geç</long>
+				</option>
+				<option type="key" name="switch_to_10_key">
+					<short>Switch to Viewport 10</short>
+					<short xml:lang="ca">Canvia a la vista 10</short>
+					<short xml:lang="de">Zu Arbeitsfläche 10 bewegen</short>
+					<short xml:lang="el">Αλλαγή στην Εικονική Επιφάνεια Εργασίας 10</short>
+					<short xml:lang="en_GB">Switch to Viewport 10</short>
+					<short xml:lang="fi">Vaihda työtilaan 10</short>
+					<short xml:lang="fr">Aller au Bureau 10</short>
+					<short xml:lang="gl">Trocar cara o escritorio 10</short>
+					<short xml:lang="gu">દૃશ્યપોર્ટ ૧૦ માં બદલો</short>
+					<short xml:lang="hi">व्यूपोर्ट 10 में बदलें</short>
+					<short xml:lang="it">Passa all'area di lavoro 10</short>
+					<short xml:lang="ja">ビューポート 10 に切り替え</short>
+					<short xml:lang="nb">Bytt til arbeidsområde 10</short>
+					<short xml:lang="nl">Wissel naar viewport 10</short>
+					<short xml:lang="pl">Zmień na pulpit wirtualny %d</short>
+					<short xml:lang="pt">Mudar para Viewport 10</short>
+					<short xml:lang="pt_BR">Mudar para a janela de visualização 10</short>
+					<short xml:lang="sv">Byt till arbetsyta 10</short>
+					<short xml:lang="tr">10. Masaüstüne Geç</short>
+					<long>Switch to viewport 10</long>
+					<long xml:lang="ca">Canvia a la vista 10</long>
+					<long xml:lang="de">Zu Arbeitsfläche 10 wechseln</long>
+					<long xml:lang="el">Αλλαγή στην εικονική επιφάνεια εργασίας 10</long>
+					<long xml:lang="en_GB">Switch to viewport 10</long>
+					<long xml:lang="fi">Vaihda työtilaan 10</long>
+					<long xml:lang="fr">Aller au bureau 10</long>
+					<long xml:lang="gl">Trocar cara o escritorio 10</long>
+					<long xml:lang="gu">દૃશ્યપોર્ટ ૧૦ માં બદલો</long>
+					<long xml:lang="hi">व्यूपोर्ट 10 में बदलें</long>
+					<long xml:lang="it">Passa all'area di lavoro 10</long>
+					<long xml:lang="ja">ビューポート 10 に切り替え</long>
+					<long xml:lang="nb">Bytt til arbeidsområde 10</long>
+					<long xml:lang="nl">Wissel naar viewport 10</long>
+					<long xml:lang="pl">Zmień na pulpit wirtualny %d</long>
+					<long xml:lang="pt">Mudar para o viewport 10</long>
+					<long xml:lang="pt_BR">Mudar para a janela de visualização 10</long>
+					<long xml:lang="sv">Byt till arbetsyta 10</long>
+					<long xml:lang="tr">10. Masaüstüne Geç</long>
+				</option>
+				<option type="key" name="switch_to_11_key">
+					<short>Switch to Viewport 11</short>
+					<short xml:lang="ca">Canvia a la vista 11</short>
+					<short xml:lang="de">Zu Arbeitsfläche 11 bewegen</short>
+					<short xml:lang="el">Αλλαγή στην Εικονική Επιφάνεια Εργασίας 11</short>
+					<short xml:lang="en_GB">Switch to Viewport 11</short>
+					<short xml:lang="fi">Vaihda työtilaan 11</short>
+					<short xml:lang="fr">Aller au Bureau 11</short>
+					<short xml:lang="gl">Trocarcara o escritorio 11</short>
+					<short xml:lang="gu">દૃશ્યપોર્ટ ૧૧ માં બદલો</short>
+					<short xml:lang="hi">व्यूपोर्ट 11 में बदलें</short>
+					<short xml:lang="it">Passa all'area di lavoro 11</short>
+					<short xml:lang="ja">ビューポート 11 に切り替え</short>
+					<short xml:lang="nb">Bytt til arbeidsområde 11</short>
+					<short xml:lang="nl">Wissel naar viewport 11</short>
+					<short xml:lang="pl">Zmień na pulpit wirtualny %d</short>
+					<short xml:lang="pt">Mudar para Viewport 11</short>
+					<short xml:lang="pt_BR">Mudar para a janela de visualização 11</short>
+					<short xml:lang="sv">Byt till arbetsyta 11</short>
+					<short xml:lang="tr">11. Masaüstüne Geç</short>
+					<long>Switch to viewport 11</long>
+					<long xml:lang="ca">Canvia a la vista 11</long>
+					<long xml:lang="de">Zu Arbeitsfläche 11 wechseln</long>
+					<long xml:lang="el">Αλλαγή στην εικονική επιφάνεια εργασίας 11</long>
+					<long xml:lang="en_GB">Switch to viewport 11</long>
+					<long xml:lang="fi">Vaihda työtilaan 11</long>
+					<long xml:lang="fr">Aller au bureau 11</long>
+					<long xml:lang="gl">Trocar cara o escritorio 11</long>
+					<long xml:lang="gu">દૃશ્યપોર્ટ ૧૧ માં બદલો</long>
+					<long xml:lang="hi">व्यूपोर्ट 11 में बदलें</long>
+					<long xml:lang="it">Passa all'area di lavoro 11</long>
+					<long xml:lang="ja">ビューポート 11 に切り替え</long>
+					<long xml:lang="nb">Bytt til arbeidsområde 11</long>
+					<long xml:lang="nl">Wissel naar viewport 11</long>
+					<long xml:lang="pl">Zmień na pulpit wirtualny %d</long>
+					<long xml:lang="pt">Mudar para o viewport 11</long>
+					<long xml:lang="pt_BR">Mudar para a janela de visualização 11</long>
+					<long xml:lang="sv">Byt till arbetsyta 11</long>
+					<long xml:lang="tr">11. Masaüstüne Geç</long>
+				</option>
+				<option type="key" name="switch_to_12_key">
+					<short>Switch to Viewport 12</short>
+					<short xml:lang="ca">Canvia a la vista 12</short>
+					<short xml:lang="de">Zu Arbeitsfläche 12 bewegen</short>
+					<short xml:lang="el">Αλλαγή στην Εικονική Επιφάνεια Εργασίας 12</short>
+					<short xml:lang="en_GB">Switch to Viewport 12</short>
+					<short xml:lang="fi">Vaihda työtilaan 12</short>
+					<short xml:lang="fr">Aller au bureau 12</short>
+					<short xml:lang="gl">Trocar paraescritorio 12</short>
+					<short xml:lang="gu">દૃશ્યપોર્ટ ૧૨ માં બદલો</short>
+					<short xml:lang="hi">व्यूपोर्ट 12 में बदलें</short>
+					<short xml:lang="it">Passa all'area di lavoro 12</short>
+					<short xml:lang="ja">ビューポート 12 に切り替え</short>
+					<short xml:lang="nb">Bytt til arbeidsområde 12</short>
+					<short xml:lang="nl">Wissel naar viewport 12</short>
+					<short xml:lang="pl">Zmień na pulpit wirtualny %d</short>
+					<short xml:lang="pt">Mudar para Viewport 12</short>
+					<short xml:lang="pt_BR">Mudar para a janela de visualização 12</short>
+					<short xml:lang="sv">Byt till arbetsyta 12</short>
+					<short xml:lang="tr">12. Masaüstüne Geç</short>
+					<long>Switch to viewport 12</long>
+					<long xml:lang="ca">Canvia a la vista 12</long>
+					<long xml:lang="de">Zu Arbeitsfläche 12 wechseln</long>
+					<long xml:lang="el">Αλλαγή στην εικονική επιφάνεια εργασίας 12</long>
+					<long xml:lang="en_GB">Switch to viewport 12</long>
+					<long xml:lang="fi">Vaihda työtilaan 12</long>
+					<long xml:lang="fr">Aller au bureau 12</long>
+					<long xml:lang="gl">Trocar cara o escritorio 12</long>
+					<long xml:lang="gu">દૃશ્યપોર્ટ ૧૨ માં બદલો</long>
+					<long xml:lang="hi">व्यूपोर्ट 12 में बदलें</long>
+					<long xml:lang="it">Passa all'area di lavoro 12</long>
+					<long xml:lang="ja">ビューポート 12 に切り替え</long>
+					<long xml:lang="nb">Bytt til arbeidsområde 12</long>
+					<long xml:lang="nl">Wissel naar viewport 12</long>
+					<long xml:lang="pl">Zmień na pulpit wirtualny %d</long>
+					<long xml:lang="pt">Mudar para o viewport 12</long>
+					<long xml:lang="pt_BR">Mudar para a janela de visualização 12</long>
+					<long xml:lang="sv">Byt till arbetsyta 12</long>
+					<long xml:lang="tr">12. Masaüstüne Geç</long>
+				</option>
+			</group>
+			<group>
+				<short>Desktop-based Viewport Switching</short>
+				<short xml:lang="de">Arbeitsflächenumschaltung auf dem Desktop</short>
+				<short xml:lang="el">Αλλαγή Επιφάνειας Εργασίας βασισμένη στις Εικονικές Επιφάνειες Εργασίας</short>
+				<short xml:lang="en_GB">Desktop-based Viewport Switching</short>
+				<short xml:lang="fr">Changement de bureau basé sur le bureau courant</short>
+				<short xml:lang="gl">Troco deescritorio segundo o escritorio</short>
+				<short xml:lang="gu">ડેસ્કટોપ-આધારિત દૃશ્યપોર્ટ બદલવાનું</short>
+				<short xml:lang="hi">डेस्कटॉप आधारित व्यूपोर्ट स्विचिंग</short>
+				<short xml:lang="it">Selezione area di lavoro in base alla scrivania</short>
+				<short xml:lang="ja">デスクトップ上でのビューポート切り替え</short>
+				<short xml:lang="nb">Skrivebordsbasert bytting av arbeidsområde</short>
+				<short xml:lang="nl">Bureaublad-gebaseerde viewport wisseling</short>
+				<short xml:lang="pt">Troca de Viewport Baseado no Ambiente de Trabalho</short>
+				<short xml:lang="pt_BR">Troca da janela de visualização baseada na Área de Trabalho</short>
+				<short xml:lang="sv">Skrivbordsbaserad växling av arbetsyta</short>
+				<option type="button" name="left_button">
+					<short>Move Left</short>
+					<short xml:lang="ca">Mou esquerra</short>
+					<short xml:lang="de">Nach links</short>
+					<short xml:lang="el">Μετακίνηση Αριστερά</short>
+					<short xml:lang="en_GB">Move Left</short>
+					<short xml:lang="fi">Siirry vasemmalle</short>
+					<short xml:lang="fr">Bureau de Gauche</short>
+					<short xml:lang="gl">Mover á esquerda</short>
+					<short xml:lang="gu">ડાબે ખસેડો</short>
+					<short xml:lang="hi">बायीं ओर खिसकाइये</short>
+					<short xml:lang="it">Muovi a sinistra</short>
+					<short xml:lang="ja">左へ移動</short>
+					<short xml:lang="nb">Flytt venstre</short>
+					<short xml:lang="nl">Verplaats naar links</short>
+					<short xml:lang="pl">W lewo</short>
+					<short xml:lang="pt">Mover Esquerda</short>
+					<short xml:lang="pt_BR">Mover para Esquerda</short>
+					<short xml:lang="sv">Flytta vänster</short>
+					<short xml:lang="tr">Sola Taşı</short>
+					<long>Move to the left</long>
+					<long xml:lang="ca">Mou a l'esquerra</long>
+					<long xml:lang="de">Nach links bewegen</long>
+					<long xml:lang="el">Μετακίνηση προς τα αριστερά</long>
+					<long xml:lang="en_GB">Move to the left</long>
+					<long xml:lang="fr">Aller au bureau de gauche</long>
+					<long xml:lang="gl">Mover cara a esquerda</long>
+					<long xml:lang="gu">ડાબે ખસો</long>
+					<long xml:lang="hi">बायाँ खिसकाएं</long>
+					<long xml:lang="it">Muove verso sinistra</long>
+					<long xml:lang="ja">左へ移動</long>
+					<long xml:lang="nb">Flytt til venstre</long>
+					<long xml:lang="nl">Verplaats naar links</long>
+					<long xml:lang="pt">Mover para a esquerda</long>
+					<long xml:lang="pt_BR">Mover para a esquerda</long>
+					<long xml:lang="sv">Flytta till vänster</long>
+					<long xml:lang="tr">Sola taşı</long>
+					<internal/>
+				</option>
+				<option type="button" name="right_button">
+					<short>Move Right</short>
+					<short xml:lang="ca">Mou dreta</short>
+					<short xml:lang="de">Nach rechts</short>
+					<short xml:lang="el">Μετακίνηση Δεξιά</short>
+					<short xml:lang="en_GB">Move Right</short>
+					<short xml:lang="fi">Siirry oikealle</short>
+					<short xml:lang="fr">Bureau de Droite</short>
+					<short xml:lang="gl">Mover á dereita</short>
+					<short xml:lang="gu">જમણે ખસેડો</short>
+					<short xml:lang="hi">दाहिनी ओर खिसकाइये</short>
+					<short xml:lang="it">Muovi a destra</short>
+					<short xml:lang="ja">右へ移動</short>
+					<short xml:lang="nb">Flytt høyre</short>
+					<short xml:lang="nl">Verplaats naar rechts</short>
+					<short xml:lang="pl">W prawo</short>
+					<short xml:lang="pt">Mover Direita</short>
+					<short xml:lang="pt_BR">Mover para Direita</short>
+					<short xml:lang="sv">Flytta höger</short>
+					<short xml:lang="tr">Sağa taşı</short>
+					<long>Move to the right</long>
+					<long xml:lang="ca">Mou a la dreta</long>
+					<long xml:lang="de">Nach rechts bewegen</long>
+					<long xml:lang="el">Μετακίνηση προς τα δεξιά</long>
+					<long xml:lang="en_GB">Move to the right</long>
+					<long xml:lang="fi">Siirrä oikealle</long>
+					<long xml:lang="fr">Aller au bureau de droite</long>
+					<long xml:lang="gl">Mover cara a dereita</long>
+					<long xml:lang="gu">જમણે ખસો</long>
+					<long xml:lang="hi">दाहिने में खिसकाएं</long>
+					<long xml:lang="it">Muove a sinistra</long>
+					<long xml:lang="ja">右へ移動</long>
+					<long xml:lang="nb">Flytt til høyre</long>
+					<long xml:lang="nl">Verplaats naar rechts</long>
+					<long xml:lang="pl">Z lewej do prawej</long>
+					<long xml:lang="pt">Mover para a direita</long>
+					<long xml:lang="pt_BR">Mover para a direita</long>
+					<long xml:lang="sv">Flytta till höger</long>
+					<long xml:lang="tr">Sağa taşı</long>
+					<internal/>
+				</option>
+				<option type="button" name="up_button">
+					<short>Move Up</short>
+					<short xml:lang="ca">Mou amunt</short>
+					<short xml:lang="de">Nach oben</short>
+					<short xml:lang="el">Μετακίνηση Πάνω</short>
+					<short xml:lang="en_GB">Move Up</short>
+					<short xml:lang="fi">Siirrä ylös</short>
+					<short xml:lang="fr">Bureau Supérieur</short>
+					<short xml:lang="gl">Mover arriba</short>
+					<short xml:lang="gu">ઉપર ખસેડો</short>
+					<short xml:lang="hi">ऊपर जायें</short>
+					<short xml:lang="it">Muovi in su</short>
+					<short xml:lang="ja">上へ移動</short>
+					<short xml:lang="nb">Flytt opp</short>
+					<short xml:lang="nl">Verplaats omhoog</short>
+					<short xml:lang="pl">W górę</short>
+					<short xml:lang="pt">Mover Cima</short>
+					<short xml:lang="pt_BR">Mover para Cima</short>
+					<short xml:lang="sv">Flytta upp</short>
+					<short xml:lang="tr">Yukarı taşı</short>
+					<long>Move up</long>
+					<long xml:lang="ca">Mou cap amunt</long>
+					<long xml:lang="de">Nach oben bewegen</long>
+					<long xml:lang="el">Μετακίνηση πάνω</long>
+					<long xml:lang="en_GB">Move up</long>
+					<long xml:lang="fi">Siirrä ylös</long>
+					<long xml:lang="fr">Aller au bureau supérieur</long>
+					<long xml:lang="gl">Mover cara arriba</long>
+					<long xml:lang="gu">ઉપર ખસો</long>
+					<long xml:lang="hi">ऊपर जाएँ</long>
+					<long xml:lang="it">Muove in alto</long>
+					<long xml:lang="ja">上へ移動</long>
+					<long xml:lang="nb">Flytt opp</long>
+					<long xml:lang="nl">Verplaats omhoog</long>
+					<long xml:lang="pt">Mover para cima</long>
+					<long xml:lang="pt_BR">Mover para cima</long>
+					<long xml:lang="sv">Flytta upp</long>
+					<long xml:lang="tr">Yukarı taşı</long>
+					<internal/>
+				</option>
+				<option type="button" name="down_button">
+					<short>Move Down</short>
+					<short xml:lang="ca">Mou avall</short>
+					<short xml:lang="de">Nach unten</short>
+					<short xml:lang="el">Μετακίνηση Κάτω</short>
+					<short xml:lang="en_GB">Move Down</short>
+					<short xml:lang="fi">Siirrä alas</short>
+					<short xml:lang="fr">Bureau Inférieur</short>
+					<short xml:lang="gl">Mover abaixo</short>
+					<short xml:lang="gu">નીચે ખસેડો</short>
+					<short xml:lang="hi">नीचे जायें</short>
+					<short xml:lang="it">Muovi giù</short>
+					<short xml:lang="ja">下へ移動</short>
+					<short xml:lang="nb">Flytt ned</short>
+					<short xml:lang="nl">Verplaats omlaag</short>
+					<short xml:lang="pl">W dół</short>
+					<short xml:lang="pt">Mover Baixo</short>
+					<short xml:lang="pt_BR">Mover para Baixo</short>
+					<short xml:lang="sv">Flytta ner</short>
+					<short xml:lang="tr">Aşağı Taşı</short>
+					<long>Move down</long>
+					<long xml:lang="ca">Mou avall</long>
+					<long xml:lang="de">Nach unten</long>
+					<long xml:lang="el">Μετακίνηση κάτω</long>
+					<long xml:lang="en_GB">Move down</long>
+					<long xml:lang="fi">Siirrä alas</long>
+					<long xml:lang="fr">Aller au bureau inférieur</long>
+					<long xml:lang="gl">Mover cara abaixo</long>
+					<long xml:lang="gu">નીચે ખસો</long>
+					<long xml:lang="hi">नीचे जाएँ</long>
+					<long xml:lang="it">Muove in giù</long>
+					<long xml:lang="ja">下へ移動</long>
+					<long xml:lang="nb">Flytt ned</long>
+					<long xml:lang="nl">Verplaats omlaag</long>
+					<long xml:lang="pl">W dół</long>
+					<long xml:lang="pt">Mover para baixo</long>
+					<long xml:lang="pt_BR">Mover para baixo</long>
+					<long xml:lang="sv">Flytta ner</long>
+					<long xml:lang="tr">aşağı taşı</long>
+					<internal/>
+				</option>
+				<option type="button" name="next_button">
+					<short>Move Next</short>
+					<short xml:lang="ca">Mou següent</short>
+					<short xml:lang="de">Nächste</short>
+					<short xml:lang="el">Μετακίνηση Επόμενου</short>
+					<short xml:lang="en_GB">Move Next</short>
+					<short xml:lang="fr">Bureau Suivant</short>
+					<short xml:lang="gl">Mover ó seguinte</short>
+					<short xml:lang="gu">આગળ ખસેડો</short>
+					<short xml:lang="hi">अगला हटाएं</short>
+					<short xml:lang="it">Muovi alla successiva</short>
+					<short xml:lang="ja">次へ移動</short>
+					<short xml:lang="nb">Flytt neste</short>
+					<short xml:lang="nl">Verplaats naar volgende</short>
+					<short xml:lang="pt">Mover Seguinte</short>
+					<short xml:lang="pt_BR">Mover para Próxima</short>
+					<short xml:lang="sv">Flytta nästa</short>
+					<short xml:lang="tr">Sonrakine Taşı</short>
+					<long>Move to the next viewport</long>
+					<long xml:lang="ca">Mou a la següent vista</long>
+					<long xml:lang="de">Zur nächsten Arbeitsfläche wechseln</long>
+					<long xml:lang="el">Μετακίνηση προς την επόμενη εικονική επιφάνεια εργασίας</long>
+					<long xml:lang="en_GB">Move to the next viewport</long>
+					<long xml:lang="fr">Aller au bureau suivant</long>
+					<long xml:lang="gl">Mover cara o escritorio seguinte</long>
+					<long xml:lang="gu">આગળના દૃશ્યપોર્ટ પર ખસેડો</long>
+					<long xml:lang="hi">अगला व्यूपोर्ट में खिसकाएं</long>
+					<long xml:lang="it">Muove all'area di lavoro successiva</long>
+					<long xml:lang="ja">次のビューポートに移動</long>
+					<long xml:lang="nb">Flytt til neste arbeidsområde</long>
+					<long xml:lang="nl">Verplaats naar volgende viewport</long>
+					<long xml:lang="pl">Idź do następnego pulpitu</long>
+					<long xml:lang="pt">Mover para o viewport seguinte</long>
+					<long xml:lang="pt_BR">Mover para a próxima janela de visualização</long>
+					<long xml:lang="sv">Flytta till nästa arbetsyta</long>
+					<long xml:lang="tr">Sonraki masaüstüne taşı</long>
+					<default>Button5</default>
+					<internal/>
+				</option>
+				<option type="button" name="prev_button">
+					<short>Move Prev</short>
+					<short xml:lang="ca">Mou anterior</short>
+					<short xml:lang="de">Vorherige</short>
+					<short xml:lang="el">Μετακίνηση Προηγούμενου</short>
+					<short xml:lang="en_GB">Move Prev</short>
+					<short xml:lang="fr">Bureau Précédent</short>
+					<short xml:lang="gl">Mover ó anterior</short>
+					<short xml:lang="gu">પાછળ ખસેડો</short>
+					<short xml:lang="hi">पिछला हटाएं</short>
+					<short xml:lang="it">Muovi alla precedente</short>
+					<short xml:lang="ja">前へ移動</short>
+					<short xml:lang="nb">Flytt forrige</short>
+					<short xml:lang="nl">Verplaats naar vorige</short>
+					<short xml:lang="pt">Mover Anterior</short>
+					<short xml:lang="pt_BR">Mover para Anterior</short>
+					<short xml:lang="sv">Flytta föreg</short>
+					<short xml:lang="tr">Öncekine Taşı</short>
+					<long>Move to the previous viewport</long>
+					<long xml:lang="ca">Mou a la vista anterior</long>
+					<long xml:lang="de">Zur vorherigen Arbeitsfläche wechseln</long>
+					<long xml:lang="el">Μετακίνηση προς την προηγούμενη εικονική επιφάνεια εργασίας</long>
+					<long xml:lang="en_GB">Move to the previous viewport</long>
+					<long xml:lang="fi">Siirrä edelliseen työtilaan</long>
+					<long xml:lang="fr">Aller au bureau précédent</long>
+					<long xml:lang="gl">Mover cara o escritorio anterior</long>
+					<long xml:lang="gu">પાછળના દૃશ્યપોર્ટ પર ખસેડો</long>
+					<long xml:lang="hi">पिछले व्यूपोर्ट में खिसकाएं</long>
+					<long xml:lang="it">Muove all'area di lavoro precedente</long>
+					<long xml:lang="ja">前のビューポートに移動</long>
+					<long xml:lang="nb">Flytt til forrige arbeidsområde</long>
+					<long xml:lang="nl">Verplaats naar vorige viewport</long>
+					<long xml:lang="pl">Idź do poprzedniego pulpitu</long>
+					<long xml:lang="pt">Mover para o viewport anterior</long>
+					<long xml:lang="pt_BR">Mover para a janela de visualização anterior</long>
+					<long xml:lang="sv">Flytta till föregående arbetsyta</long>
+					<long xml:lang="tr">Önceki masaüstüne taşı</long>
+					<default>Button4</default>
+					<internal/>
+				</option>
+				<option type="button" name="initiate_button">
+					<short>Initiate plugin action</short>
+					<short xml:lang="ca">Inicia l'acció del connector</short>
+					<short xml:lang="de">Plugin-Aktion initiieren</short>
+					<short xml:lang="el">Εκκίνηση ενέργειας πρόσθετου</short>
+					<short xml:lang="en_GB">Initiate plugin action</short>
+					<short xml:lang="fr">Action de l'extension pour démarrer</short>
+					<short xml:lang="gl">Plugin para acción iniciar</short>
+					<short xml:lang="gu">પ્લગઈન ક્રિયાનો આરંભ કરો</short>
+					<short xml:lang="hi">प्लगिन क्रिया आरंभ करें</short>
+					<short xml:lang="it">Azione inizializzazione plug-in</short>
+					<short xml:lang="ja">プラグインアクションの開始</short>
+					<short xml:lang="nb">Begynn hendelse for tillegg</short>
+					<short xml:lang="nl">Initiëer plugin actie</short>
+					<short xml:lang="pl">Inicjuj działanie wtyczki</short>
+					<short xml:lang="pt">Plugin para acção iniciar</short>
+					<short xml:lang="pt_BR">Iniciar a ação do plugin</short>
+					<short xml:lang="sv">Initiera händelse för insticksmodul</short>
+					<short xml:lang="tr">Eklenti eylemini başlat</short>
+					<long>Initiate/Terminate the selected plugin action</long>
+					<long xml:lang="el">Εκκίνηση/Τερματισμός της επιλεγμένης ενέργειας πρόσθετου</long>
+					<long xml:lang="en_GB">Initiate/Terminate the selected plugin action</long>
+					<long xml:lang="fr">Démarrer/Terminer l'action de l'extension sélectonnée</long>
+					<long xml:lang="gl">Iniciar/Terminar a acción do plugin seleccionado</long>
+					<long xml:lang="gu">પસંદિત પ્લગઈન ક્રિયાનો આરંભ કરો/બંધ કરો</long>
+					<long xml:lang="hi">चयनित प्लगिन क्रिया आरंभ/खत्म करें</long>
+					<long xml:lang="it">Inizializza/Termina l'azione del plug-in selezionato</long>
+					<long xml:lang="ja">選択プラグインアクションの開始および停止</long>
+					<long xml:lang="nb">Start/avslutt den valgte hendelsen for tillegg</long>
+					<long xml:lang="nl">Initiëren/Afbreken van de geselecteerde plugin actie</long>
+					<long xml:lang="pl">Inicjuj/Przerwij działanie wybranej wtyczki</long>
+					<long xml:lang="pt">Iniciar/Terminar a acção do plugin seleccionado</long>
+					<long xml:lang="pt_BR">Iniciar/Terminar a ação do plugin selecionado</long>
+					<long xml:lang="sv">Initiera/Terminera den valda händelsen för insticksmodul</long>
+					<default>Button2</default>
+					<internal/>
+				</option>
+				<option type="string" name="init_plugin">
+					<short>Plugin for initiate action</short>
+					<short xml:lang="ca">Connector per iniciar l'acció</short>
+					<short xml:lang="el">Πρόσθετο για εκκίνηση ενέργειας</short>
+					<short xml:lang="en_GB">Plugin for initiate action</short>
+					<short xml:lang="fr">Extension fournissant l'action de démarrage</short>
+					<short xml:lang="gl">Plugin para acción iniciar</short>
+					<short xml:lang="gu">આરંભ ક્રિયા માટેનું પ્લગઈન</short>
+					<short xml:lang="hi">क्रिया आरंभ करने के लिए प्लगिन</short>
+					<short xml:lang="it">Plug-in per azione inizializzazione</short>
+					<short xml:lang="ja">開始アクション実行プラグイン</short>
+					<short xml:lang="nb">Tillegg for start-hendelse</short>
+					<short xml:lang="nl">Plugin voor initiëer actie</short>
+					<short xml:lang="pl">Wtyczka dla inicjacji akcji</short>
+					<short xml:lang="pt">Plugin para acção iniciar</short>
+					<short xml:lang="pt_BR">Plugin para iniciar a ação</short>
+					<short xml:lang="sv">Insticksmodul för initiera händelse</short>
+					<short xml:lang="tr">Eylemi başlatmak için gereken eklenti</short>
+					<long>Plugin for initiate/action action</long>
+					<long xml:lang="el">Πρόσθετο για ενέργεια εκκίνηση/ενέργειας</long>
+					<long xml:lang="en_GB">Plugin for initiate/action action</long>
+					<long xml:lang="fr">Extension fournissant l'action démarrer/terminer. Par ex. : Rotation du Cube, Bureaux sur un Plan...</long>
+					<long xml:lang="gl">Plugin que executa a acción de iniciar</long>
+					<long xml:lang="gu">આરંભ/ક્રિયા ક્રિયા માટેનું પ્લગઈન</long>
+					<long xml:lang="hi">आरंभ/क्रिया करने के लिए प्लगिन</long>
+					<long xml:lang="it">Plug-in per attivare l'azione</long>
+					<long xml:lang="ja">開始/停止（initiate/terminate）アクションを実行するプラグイン</long>
+					<long xml:lang="nb">Tillegg for start-/avslutt-hendelse</long>
+					<long xml:lang="nl">Plugin voor initiëer/actie </long>
+					<long xml:lang="pl">Wtyczka dla inicjacji/akcji akcji</long>
+					<long xml:lang="pt">Plugin que executa a acção de iniciar</long>
+					<long xml:lang="pt_BR">Plugin para iniciar a ação</long>
+					<long xml:lang="sv">Insticksmodul för initiera/terminera händelse</long>
+					<default>rotate</default>
+				</option>
+				<option type="string" name="init_action">
+					<short>Action name for initiate</short>
+					<short xml:lang="el">Όνομα ενέργειας για εκκίνηση</short>
+					<short xml:lang="en_GB">Action name for initiate</short>
+					<short xml:lang="fr">Nom de l'action pour démarrer</short>
+					<short xml:lang="gl">Nome da acción para iniciar</short>
+					<short xml:lang="gu">આરંભ માટે ક્રિયા નામ</short>
+					<short xml:lang="hi">आरंभ के लिए क्रिया नाम</short>
+					<short xml:lang="it">Nome azione per inizia</short>
+					<short xml:lang="ja">開始（initiate）のアクション名</short>
+					<short xml:lang="nb">Hendelsesnavn for start</short>
+					<short xml:lang="nl">Actie naam voor initiëer</short>
+					<short xml:lang="pt">Nome da acção para iniciar</short>
+					<short xml:lang="pt_BR">Nome da ação para iniciar</short>
+					<short xml:lang="sv">Händelsenamn för initiera</short>
+					<short xml:lang="tr">Başlatılacak eylemin adı</short>
+					<long>Action name for initiate/terminate</long>
+					<long xml:lang="el">Όνομα ενέργειας για εκκίνηση/τερματισμό</long>
+					<long xml:lang="en_GB">Action name for initiate/terminate</long>
+					<long xml:lang="fr">Nom de l'action pour démarrer/terminer</long>
+					<long xml:lang="gl">Nome da acción para iniciar/terminar.</long>
+					<long xml:lang="gu">આરંભ કરવા/બંધ કરવા માટેની ક્રિયાનું નામ</long>
+					<long xml:lang="hi">आरंभ/समाप्त के लिए क्रिया नाम</long>
+					<long xml:lang="it">Nome azione per inizia/termina</long>
+					<long xml:lang="ja">開始/停止（initiate/terminate）のアクション名</long>
+					<long xml:lang="nb">Hendelsesnavn for start/avslutt</long>
+					<long xml:lang="nl">Actie naam voor initiëer/afbreken</long>
+					<long xml:lang="pl">Nazwa akcji dla inicjacji/przerwania</long>
+					<long xml:lang="pt">Nome da acção para iniciar/terminar</long>
+					<long xml:lang="pt_BR">Nome da ação para iniciar/terminar.</long>
+					<long xml:lang="sv">Händelsenamn för initiera/terminera</long>
+					<default>initiate_button</default>
+				</option>
+			</group>
+		</display>
+	</plugin>
+</compiz>

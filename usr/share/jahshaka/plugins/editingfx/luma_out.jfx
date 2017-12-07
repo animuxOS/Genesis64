@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<westley title="luma_out">
+  <producer in="0" out="49">
+    <property name="resource">luma_out.jpg</property>
+    <property name="meta.fx_cut">1</property>
+	<filter mlt_service="shape" jah_title="luma_out">
+      <property name="resource">%luma01.pgm</property>
+      <property name="use_luminance">1</property>
+	  <property name="softness">0.1</property>
+	  <property name="mix">0=100;-25=100;-1=0</property>
+	</filter>
+  </producer>
+</westley>

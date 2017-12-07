@@ -1,0 +1,227 @@
+#!/bin/sh
+
+# Deleting all locale files and localized man pages installed 
+# on system which are *not* listed in /etc/locale.nopurge
+
+set -e
+
+# Do nothing and report why if no valid configuration file exists:
+
+if [ ! -f /etc/locale.nopurge ]
+    then
+        echo " No /etc/locale.nopurge file present, exiting ..."
+        exit 0
+    else
+        if [ "$(grep -x ^NEEDSCONFIGFIRST /etc/locale.nopurge)" ]
+            then
+                echo
+                echo "    You have to configure \"localepurge\" with the command"
+                echo
+                echo "        dpkg-reconfigure localepurge"
+                echo
+                echo "    to make $0 actually start to function."
+                echo
+                echo "    Nothing to be done, exiting ..."
+                echo
+                exit 0
+        fi
+fi
+
+# Make sure to exclude running under any locale other than C:
+export LANG=C
+
+if [ "$1" = "-debug" ] || [ "$1" = "-d" ] \
+    || [ "$2" = "-debug" ] || [ "$2" = "-d" ]; then
+set -x
+fi
+
+if [ "$(grep -x ^SHOWFREEDSPACE /etc/locale.nopurge)" ]; then
+    SHOWFREEDSPACE=enabled
+fi
+
+if [ "$(grep -x ^DONTBOTHERNEWLOCALE /etc/locale.nopurge)" ]; then
+    DONTBOTHERNEWLOCALE=enabled
+fi
+
+if [ "$(grep -x ^VERBOSE /etc/locale.nopurge)" ] \
+    || [ "$1" = "-verbose" ] || [ "$1" = "-v" ] \
+    || [ "$2" = "-verbose" ] || [ "$2" = "-v" ]; then
+    VERBOSE=enabled
+fi
+
+# Define a function for disk space calculation:
+
+if [ "$(grep -x ^QUICKNDIRTYCALC /etc/locale.nopurge)" ]; then
+    get_used_space() # Usage: get_used_space <dirname>
+    {
+    [ -d "$1" ] || return 1 # bail out if there's no such dir
+    set - $(df -P $1); shift $(($# - 6)); echo $3
+    }
+else
+    get_used_space() # Usage: get_used_space <dirname>
+    {
+    [ -d "$1" ] || return 1 # bail out if there's no such dir
+    set - $(du -ks $1)
+    echo $1
+    }
+fi
+
+# first update $LOCALELIST with newly introduced locales if wanted
+
+LOCALELIST=/var/cache/localepurge/localelist
+NEWLOCALELIST="$LOCALELIST"-new
+
+if [ "$VERBOSE" = "enabled" ]; then
+    echo "localepurge: checking system for new locale ..."
+fi
+
+for NEWLOCALE in $(cd /usr/share/locale; ls .)
+do 
+ if [ -d /usr/share/locale/$NEWLOCALE/LC_MESSAGES ]; then
+    if [ ! "$(grep -cx $NEWLOCALE $LOCALELIST)" = "1" ]; then
+        echo "$NEWLOCALE" >> "$NEWLOCALELIST"
+    fi
+ fi
+done
+
+if [ -f $NEWLOCALELIST ]; then
+  if [ "$DONTBOTHERNEWLOCALE" = "enabled" ]; then
+    mv "$NEWLOCALELIST" "$NEWLOCALELIST".temp
+    sort -u "$NEWLOCALELIST".temp "$LOCALELIST"> "$NEWLOCALELIST"
+    mv "$NEWLOCALELIST" "$LOCALELIST"
+    rm "$NEWLOCALELIST".temp
+   else
+    mv "$NEWLOCALELIST" "$NEWLOCALELIST".temp
+    sort -u "$NEWLOCALELIST".temp > "$NEWLOCALELIST"
+    rm "$NEWLOCALELIST".temp
+  fi
+fi
+
+if [ -f "$NEWLOCALELIST" ] && [ ! "$DONTBOTHERNEWLOCALE" = "enabled" ]; then
+    echo "Some new locales have appeared on your system:"
+    echo
+    tr '\n' ' ' < "$NEWLOCALELIST" 
+    echo
+    echo
+    echo "They will not be touched until you reconfigure localepurge"
+    echo "with the following command:"
+    echo
+    echo "    dpkg-reconfigure localepurge"
+    echo
+fi
+
+# Getting rid of superfluous locale files in $LOCALEDIR:
+
+LOCALEDIR=/usr/share/locale
+
+if [ -d $LOCALEDIR ]; then
+
+    if [ "$SHOWFREEDSPACE" = "enabled" ]; then
+        LOCALEBEFORE=$(get_used_space $LOCALEDIR)
+    fi
+
+    if [ "$VERBOSE" = "enabled" ]; then
+        echo "localepurge: processing locale files ..."
+        for LOCALE in $(cd $LOCALEDIR; echo *) 
+         do
+          if [ ! "$(grep -x ^$LOCALE /etc/locale.nopurge)" ] && \
+             [ "$(grep -x ^$LOCALE $LOCALELIST)" ]; then
+            if [ -d $LOCALEDIR/$LOCALE/LC_MESSAGES ]; then
+                for file in "$LOCALEDIR/$LOCALE"/*/*
+                 do
+                  if [ -f "$file" ] || [ -h "$file" ]; then 
+                      /bin/rm -v "$file"
+                  fi
+                 done
+            fi
+          fi
+         done
+    else
+        for LOCALE in $(cd $LOCALEDIR; echo *)
+         do
+          if [ ! "$(grep -x ^$LOCALE /etc/locale.nopurge)" ] && \
+             [ "$(grep -x ^$LOCALE $LOCALELIST)" ]; then
+            if [ -d $LOCALEDIR/$LOCALE/LC_MESSAGES ]; then
+                for file in "$LOCALEDIR/$LOCALE"/*/*
+                 do
+                  if [ -f "$file" ] || [ -h "$file" ]; then 
+                      /bin/rm "$file"
+                  fi
+                 done
+            fi
+          fi
+         done
+    fi
+
+    if [ "$SHOWFREEDSPACE" = "enabled" ]; then
+        LOCALEAFTER=$(get_used_space $LOCALEDIR)
+        LOCALETOTAL=$(($LOCALEBEFORE - $LOCALEAFTER))
+        if [ ! $LOCALEBEFORE = $LOCALEAFTER ]; then
+            echo "localepurge: Disk space freed in $LOCALEDIR: "$LOCALETOTAL"K"
+        fi
+    fi
+fi
+
+# Getting rid of localized man pages in $MANPAGEDIR
+
+MANPAGEDIR=/usr/share/man
+
+if [ -d $MANPAGEDIR ] && [ "$(grep -x ^MANDELETE /etc/locale.nopurge)" ]; then
+
+    if [ "$SHOWFREEDSPACE" = "enabled" ]; then
+        MANBEFORE=$(get_used_space $MANPAGEDIR)
+    fi
+
+    if [ "$VERBOSE" = "enabled" ]; then
+        echo "localepurge: processing man pages ..."
+        for LOCALE in $(ls --ignore="man[1-9]*" $MANPAGEDIR)
+         do
+          if [ ! "$(grep -x ^$LOCALE /etc/locale.nopurge)" ] && \
+             [ "$(grep -x ^$LOCALE $LOCALELIST)" ]; then
+              if [ -d $MANPAGEDIR/$LOCALE ]; then
+                  for file in "$MANPAGEDIR/$LOCALE"/man[1-9]/*
+                   do
+                    if [ -f "$file" ] || [ -h "$file" ]; then 
+                        /bin/rm -v "$file"
+                    fi
+                   done
+              fi
+          fi
+         done
+    else
+        for LOCALE in $(ls --ignore="man[1-9]*" $MANPAGEDIR)
+         do
+          if [ ! "$(grep -x ^$LOCALE /etc/locale.nopurge)" ] && \
+             [ "$(grep -x ^$LOCALE $LOCALELIST)" ]; then
+              if [ -d $MANPAGEDIR/$LOCALE ]; then
+                for file in "$MANPAGEDIR/$LOCALE"/man[1-9]/*
+                 do
+                    if [ -f "$file" ] || [ -h "$file" ]; then 
+                        /bin/rm "$file"
+                    fi
+                 done
+              fi
+          fi
+         done
+    fi
+
+    if [ "$SHOWFREEDSPACE" = "enabled" ]; then
+        MANAFTER=$(get_used_space $MANPAGEDIR)
+        MANTOTAL=$(($MANBEFORE - $MANAFTER))
+        if [ ! $MANBEFORE = $MANAFTER ]; then
+            echo "localepurge: Disk space freed in $MANPAGEDIR: "$MANTOTAL"K"
+        fi
+    fi
+fi
+
+# Calculating and reporting total disk space freed:
+
+if [ "$SHOWFREEDSPACE" = "enabled" ]; then
+    if [ $MANTOTAL ] && [ $LOCALETOTAL ]; then
+        if [ ! $MANBEFORE = $MANAFTER ] && [ ! $LOCALEBEFORE = $LOCALEAFTER ]; then
+            echo
+            echo "Total disk space freed by localepurge: "$(($LOCALETOTAL + $MANTOTAL))"K"
+            echo
+        fi
+    fi
+fi

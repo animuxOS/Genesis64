@@ -1,0 +1,23 @@
+#!/bin/sh -e
+
+kill_old_libraries() {
+	local base lib
+	base="$1"
+	
+	for lib in /usr/lib/lib$base.so.2.0.[0-9][0-9]; do
+		rm -f $lib
+	done
+}
+
+if [ "$1" = "configure" ]; then
+	for l in ldap ldap_r lber; do 
+		kill_old_libraries $l
+	done
+fi
+
+# Automatically added by dh_makeshlibs
+if [ "$1" = "configure" ]; then
+	ldconfig
+fi
+# End automatically added section
+

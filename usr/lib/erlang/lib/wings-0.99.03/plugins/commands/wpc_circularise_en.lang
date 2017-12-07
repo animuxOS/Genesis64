@@ -1,0 +1,47 @@
+%% -*- mode:erlang; erlang-indent-level: 2 -*-
+{wpc_circularise,
+ [
+  {check_selection,
+   [
+    {1,"Nothing selected"},
+    {2,"Vertex must be from the original edge loop"},
+    {3,"Edge must be from the original edge loop"},
+    {4,"Only a single vertex or edge may be selected"}
+   ]},
+  {circularise,
+   [
+    {1,"Circularise"},
+    {2,"Flatten, equalise, and inflate selected edge loop making it circular"},
+    {3,"Pick Center, Plane, and Vertex or Edge marking Stable Ray from center"}
+   ]},
+  {mode_help,
+   [
+    {1,"[+] or [-] Adjust Diameter"}
+   ]},
+  {mode_help_1,
+   [
+    {1,"  [1] Reverse Plane Normal"},
+    {2,"  [1] Original Plane Normal"}
+   ]},
+  {secondary_sel_ask,
+   [
+    {1,"Select a single vertex or edge from the original edge loop designating a stable ray from the center point"}
+   ]},
+  {sel_error,
+   [
+    {1,"Selection must form a single closed edge loop"}
+   ]},
+  {sel_error_1,
+   [
+    {1,"Selected edge loops may not share vertices"}
+   ]},
+  {sel_error_2,
+   [
+    {1,"Selection must consist of closed edge loops"}
+   ]},
+  {selection_ask,
+   [
+    {1,"Pick Center"},
+    {2,"Pick Plane"}
+   ]}
+ ]}.

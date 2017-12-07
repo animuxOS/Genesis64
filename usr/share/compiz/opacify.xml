@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+  <plugin useBcop="true" name="opacify">
+    <short>Opacify</short>
+    <short xml:lang="ca">Fer opac</short>
+    <short xml:lang="de">Sichtbarkeit</short>
+    <short xml:lang="el">Εφαρμογή Αδιαφάνειας</short>
+    <short xml:lang="en_GB">Opacify</short>
+    <short xml:lang="es">Opacidad</short>
+    <short xml:lang="fr">Opacifier</short>
+    <short xml:lang="gl">Opacidade</short>
+    <short xml:lang="gu">અપારદર્શક બનાવો</short>
+    <short xml:lang="hi">अपारदर्शी बनाएं</short>
+    <short xml:lang="it">Opacizza</short>
+    <short xml:lang="ja">半透明</short>
+    <short xml:lang="nb">Dekk</short>
+    <short xml:lang="nl">Opacificeer</short>
+    <short xml:lang="pt">Tornar opaco</short>
+    <short xml:lang="pt_BR">Tornar opaco</short>
+    <short xml:lang="sv">Opacifiera</short>
+    <short xml:lang="tr">Matlaştır</short>
+	<long>Make windows easily visible by hovering the mouse over them</long>
+	<long xml:lang="el">Κάνε τα παράθυρα ευδιάκριτα όταν το ποντίκι παραμένει απο πάνω τους</long>
+	<long xml:lang="en_GB">Make windows easily visible by hovering the mouse over them</long>
+	<long xml:lang="fi">Tee ikkunat hyvin näkyviksi siirtämällä hiiri niiden päälle</long>
+	<long xml:lang="fr">Rendre les fenêtres facilement visibles en les survolant avec le pointeur</long>
+	<long xml:lang="gl">Torna as fiestras visibles parando co cursor sobre elas</long>
+	<long xml:lang="gu">વિન્ડો પર માઉસ ફેરવીને તેમને સરળતાથી દૃશ્યમાન બનાવો</long>
+	<long xml:lang="hi">विंडो को आसानी से दृश्य बनाता है उनपर माउस आगे पीछे करते हुए</long>
+	<long xml:lang="it">Rende le finestre facilmente visibili passandoci sopra col puntatore del mouse</long>
+	<long xml:lang="ja">ウィンドウをマウスのホバーで見やすくする</long>
+	<long xml:lang="nb">Gjør vinduer lett synlige ved å sveve musen over dem</long>
+	<long xml:lang="nl">Maak vensters makkelijk zichtbaar door er met de muis overheen te zweven</long>
+	<long xml:lang="pl">Powoduj, że okna będą łatwo widzialne poprzez najechanie na nie kursorem</long>
+	<long xml:lang="pt">Torna janelas facilmente visíveis pairando com o cursor sobre elas</long>
+	<long xml:lang="pt_BR">Torna as janelas facilmente visíveis ao pairar o cursor do mouse sobre elas</long>
+	<long xml:lang="sv">Gör fönster lätt synliga genom att hålla musen över dem</long>
+	<category>Accessibility</category>
+	<deps>
+		<relation type="after">
+			<plugin>fade</plugin>
+		</relation>
+	</deps>
+    <display>
+      <group>
+        <short>Bindings</short>
+        <short xml:lang="ar">الأغلفة</short>
+        <short xml:lang="bn">সীমাবদ্ধতা</short>
+        <short xml:lang="ca">Vinculacions</short>
+        <short xml:lang="de">Tastenkombinationen</short>
+        <short xml:lang="el">Συνδυασμοί</short>
+        <short xml:lang="en_GB">Bindings</short>
+        <short xml:lang="es">Combinación de Teclas</short>
+        <short xml:lang="fi">Näppäinyhdistelmät</short>
+        <short xml:lang="fr">Raccourcis</short>
+        <short xml:lang="gl">Atallos</short>
+        <short xml:lang="gu">બાઈન્ડીંગો</short>
+        <short xml:lang="hi">बाइंडिंग</short>
+        <short xml:lang="it">Scorciatoie</short>
+        <short xml:lang="ja">割り当て</short>
+        <short xml:lang="nb">Hurtigtast</short>
+        <short xml:lang="nl">Bindingen</short>
+        <short xml:lang="pl">Skróty klawiszowe</short>
+        <short xml:lang="pt">Atalhos</short>
+        <short xml:lang="pt_BR">Atalhos</short>
+        <short xml:lang="ru">Горячие клавиши</short>
+        <short xml:lang="sv">Bindningar</short>
+        <short xml:lang="tr">Bağlayıcılar</short>
+        <short xml:lang="zh_CN">按键组合</short>
+        <option type="key" name="toggle_key">
+          <short>Toggle Opacify</short>
+          <short xml:lang="de">Trübheit umschalten</short>
+          <short xml:lang="el">Ενεργοποίηση της Εφαρμογής Αδιαφάνειας</short>
+          <short xml:lang="en_GB">Toggle Opacify</short>
+          <short xml:lang="fr">Basculer Opacifier</short>
+          <short xml:lang="gl">Trocar Opacidade</short>
+          <short xml:lang="gu">અપારદર્શકતા બદલો</short>
+          <short xml:lang="hi">ओपासिफाई टॉगल करें</short>
+          <short xml:lang="it">Commuta «Opacizza»</short>
+          <short xml:lang="ja">半透明のオンオフ</short>
+          <short xml:lang="nb">Skru av/på Dekk</short>
+          <short xml:lang="nl">Schakel opacificatie in/uit</short>
+          <short xml:lang="pl">Przełączanie nieprzezroczystości</short>
+          <short xml:lang="pt">Alternar Opacificar</short>
+          <short xml:lang="pt_BR">Ativar/desativar o plugin "Tornar Opaco"</short>
+          <short xml:lang="sv">Växla opacifiera</short>
+          <short xml:lang="tr">Matlaştırmayı Aç / Kapat</short>
+          <long>Use this to enable/disable Opacify on the fly. Previously opacified windows will not be reset once you disable it like this.</long>
+          <long xml:lang="el">Χρησιμοποιήστε αυτό για να ενεργοποιήσετε/απενεργοποιήσετε την Εφαρμογή Αδιαφάνειας κατευθείαν. Τα προηγουμένως αδιαφανή παράθυρα δεν θα επανέλθουν εκτός αν το απενεργοποιήσετε κατ αυτήν την έννοια.</long>
+          <long xml:lang="en_GB">Use this to enable/disable Opacify on the fly. Previously opacified windows will not be reset once you disable it like this.</long>
+          <long xml:lang="fr">Utilisez cette option pour activer/désactiver Opacifier à la volée. Les fenêtres précédemment opacifiées ne seront pas remises à zéro si désactivé.</long>
+          <long xml:lang="gl">Use isto para (des)activar Opacidade instantaneamente. Fiestras opacidadas previamente non volverán aos estados iniciais unha vez se desactive.</long>
+          <long xml:lang="gu">જરૂરીયાત મુજબ અપારદર્શક બનાવવા માટે સક્રિય કરવા/નિષ્ક્રિય કરવા માટે આ વાપરો. પહેલાં અપારદર્શક બનાવાયેલ વિન્ડો પુનઃસુયોજીત થશે નહિં એકવાર તમે તેને આની જેમ નિષ્ક્રિય કરો પછી.</long>
+          <long xml:lang="hi">चलायमान स्थिति में ओपासिफाई सक्रिय/निष्क्रिय करें. पहले अपारदर्शी किया विंडो फिर रिसेट नहीं किया जायेगा जब आप इसे इस प्रकार निष्क्रिय करते हैं.</long>
+          <long xml:lang="it">Usare questo per attivare/disattivare «Opacizza» al volo. Le finestre precedentemente opacizzate non saranno ripristinate una volta disabilitato in questo modo.</long>
+          <long xml:lang="ja">これを使用して’半透明’の即時オンオフ。すでに不透明度が変更されたウィンドウは、この方法で ’半透明’をオフにしただけでは、リセットされません。</long>
+          <long xml:lang="nb">Bruk dette for å slå av/på Dekk mens du arbeider. Tidligere Dekk-ede vinduer vil ikke bli tilbakestil når du slår det av på denne måten.</long>
+          <long xml:lang="nl">Gebruik dit voor het tussendoor in- en uitschakelen van Opacificeer. Eerder geopacificeerde vensters zullen geen reset krijgen als je het op deze manier uitschakelt.</long>
+          <long xml:lang="pt">Use isto para activar/desactivar Opacificar instantaneamente. Janelas opacificadas previamente não voltarão aos estados iniciais assim que desactivar o plugin assim.</long>
+          <long xml:lang="pt_BR">Use isto para ativar/desativar o plugin "Tornar Opaco" instantaneamente.  Janelas que foram tornadas opacas previamente não voltarão aos estados iniciais uma vez que desative este plugin.</long>
+          <long xml:lang="sv">Använd detta för att aktivera/inaktivera opacifiera i realtid. Tidigare opacifierade fönster kommer inte återställas till normalt läge när du inaktiverar på det här sättet.</long>
+          <default>&lt;Super&gt;o</default>
+        </option>
+      </group>
+      <group>
+        <short>Misc. Options</short>
+        <short xml:lang="ar">خيارات أخرى</short>
+        <short xml:lang="bn">বিবিধ বিকল্প</short>
+        <short xml:lang="ca">Altres opcions</short>
+        <short xml:lang="de">Sonstige Optionen</short>
+        <short xml:lang="el">Διάφορες Επιλογές</short>
+        <short xml:lang="en_GB">Misc. Options</short>
+        <short xml:lang="es">Opciones varias</short>
+        <short xml:lang="eu">Hainbat aukera</short>
+        <short xml:lang="fi">Sekalaiset valinnat</short>
+        <short xml:lang="fr">Options Diverses</short>
+        <short xml:lang="gl">Opcións diversas</short>
+        <short xml:lang="gu">મિશ્રિત વિકલ્પો</short>
+        <short xml:lang="hi">विविध विकल्प</short>
+        <short xml:lang="it">Altre opzioni</short>
+        <short xml:lang="ja">その他オプション</short>
+        <short xml:lang="nb">Diverse valg</short>
+        <short xml:lang="nl">Diverse optie's</short>
+        <short xml:lang="pl">Pozostałe opcje</short>
+        <short xml:lang="pt">Opções diversas</short>
+        <short xml:lang="pt_BR">Opções diversas</short>
+        <short xml:lang="ru">Разные опции</short>
+        <short xml:lang="sv">Diverse inställningar</short>
+        <short xml:lang="tr">Diğer Seçenekler</short>
+        <short xml:lang="zh_CN">杂项设置</short>
+        <option type="bool" name="toggle_reset">
+          <short>Reset opacity to original values when toggling</short>
+          <short xml:lang="de">Sichtbarkeit bei Aus-/Einschalten auf den ursprünglischen Wert zurücksetzen</short>
+          <short xml:lang="el">Επαναφέρει την αδιαφάνεια στις αρχικές τιμές όταν ενεργοποιείται</short>
+          <short xml:lang="en_GB">Reset opacity to original values when toggling</short>
+          <short xml:lang="fr">Remettre l'opacité à sa valeur originale en basculant</short>
+          <short xml:lang="gl">Retonar a opacidade aos valores orixinais cando se cambia o estado</short>
+          <short xml:lang="gu">અપારદર્શકતાને મૂળ કિંમતોમાં પુનઃસુયોજીત કરો જ્યારે બદલી રહ્યા હોય</short>
+          <short xml:lang="hi">मूल मान में अपारदर्शिता फिर सेट करें जब टॉगल कर रहा है</short>
+          <short xml:lang="it">Impostare l'opacità al valore originale alla commutazione</short>
+          <short xml:lang="ja">オンオフ切り替えで不透明度を元の値に戻す</short>
+          <short xml:lang="nb">Tilbakestill dekkevne til utgangsverider ved å slå av/på</short>
+          <short xml:lang="nl">Reset ondoorzichtigheid naar originele waarden bij schakelen</short>
+          <short xml:lang="pl">Przywróć nieprzezroczystość do domyślnych wartości podczas przełączania</short>
+          <short xml:lang="pt">Retonar opacidade aos valores originais quando alternar o estado</short>
+          <short xml:lang="pt_BR">Restaurar a opacidade aos valores originais quando alternar o estado</short>
+          <short xml:lang="sv">Återställ opacitet till orginalvärden under växling</short>
+          <long>Reset the opacity of all windows modified by opacify when toggling Opacify with the defined key-combination.</long>
+          <long xml:lang="de">Die Sichtbarkeit aller von Opacify veränderter Fenster beim Aus-/Einschalten auf den ürsprünglischen Wert zurücksetzen.</long>
+          <long xml:lang="el">Επαναφέρει τον βαθμό αδιαφάνειας όλων των πειραγμένων παραθύρων όταν ενεργοποιείται η Εφαρμογή Αδιαφάνειας με τον επιλεγμένο συνδυασμό-πλήκτρων.</long>
+          <long xml:lang="en_GB">Reset the opacity of all windows modified by opacify when toggling Opacify with the defined key-combination.</long>
+          <long xml:lang="fr">Remettre l'opacité à sa valeur originale en basculant Opacifier avec la combinaison de touches spécifiée.</long>
+          <long xml:lang="gl">Retonar opacidade de todas as fiestras modificadas (por este plugin) aosvalores orixinais cando alternar o estado do plugin Opacidade coa combinación de tecras definida.</long>
+          <long xml:lang="gu">સુધારાયેલ બધી વિન્ડોની અપારદર્શકતા પુનઃસુયોજીત કરો જ્યારે વ્યાખ્યાયિત કી-જોડાણ સાથે અપારદર્શકતા બદલી રહ્યા હોય.</long>
+          <long xml:lang="hi">सभी विंडो की अपारदर्शिता को फिर सेट करता है ओपासिफाई के द्वारा रूपांतरित किया गया जब परिभाषित कुंजी युग्म के साथ ओपासिफाई को टॉगल कर रहा होता है.</long>
+          <long xml:lang="it">Ripristina l'opacità di tutte le finestre opacizzate alla commutazione di «Opacizza» con la combinazione di tasti definita.</long>
+          <long xml:lang="ja">定義されたキー組み合わせで’半透明’のオンオフが切り替えられたとき、’半透明’で変更されたすべてのウィンドウの不透明度をリセット</long>
+          <long xml:lang="nb">Tilbakestill dekkevnen til alle vinduer som er modifisert av Dekk når du slår av/på Dekk med den definerte tastekombinasjonen.</long>
+          <long xml:lang="nl">Reset de ondoorzichtigheid van alle vensters die zijn veranderd door Opacificeer als Opacificeer wordt geschakeld met de gedefiniëerde toets-combinatie.</long>
+          <long xml:lang="pl">Przywróć nieprzezroczystość wszystkich okien zmodyfikowanych przez Powodowanie Nieprzezroczystości podczas przełączania Powodowania Nieprzezroczystości ustaloną kombinacją klawiszy.</long>
+          <long xml:lang="pt">Retonar opacidade de todas as janelas modificadas por este plugin aos valores originais quando alternar o estado do plugin Opacificar com a combinação de teclas definida.</long>
+          <long xml:lang="pt_BR">Restaurar a opacidade de todas as janelas modificadas (por este plugin) aos valores originais quando alternar o estado do plugin (Tornar Opaco) através dacombinação de teclas.</long>
+          <long xml:lang="sv">Återställ opacitet på alla fönster modifierade av opacifiera under växling av opacifiera med definerad tangentkombination.</long>
+          <default>true</default>
+        </option>
+        <option type="int" name="timeout">
+          <short>Delay until Opacification</short>
+          <short xml:lang="el">Καθυστέρηση μέχρι την Αρχή της Αδιαφάνειας</short>
+          <short xml:lang="en_GB">Delay until Opacification</short>
+          <short xml:lang="fi">Läpinäkyvyyden viive</short>
+          <short xml:lang="fr">Délai jusqu'à l'opacification</short>
+          <short xml:lang="gl">Atraso ata Opacidade</short>
+          <short xml:lang="gu">જ્યાં સુધી અપારદર્શકતા નહિં આવે ત્યાં સુધી વિલંબ</short>
+          <short xml:lang="hi">अपारदर्शन तक विलंब</short>
+          <short xml:lang="it">Intervallo prima dell'opacizzazione</short>
+          <short xml:lang="ja">半透明化の遅延時間</short>
+          <short xml:lang="nb">Forsink til Dekning</short>
+          <short xml:lang="nl">Delay voor Opacificatie</short>
+          <short xml:lang="pl">Opóźnienie przed rozpoczęciem zmiany nieprzezroczystości</short>
+          <short xml:lang="pt">Atraso até Opacificar</short>
+          <short xml:lang="pt_BR">Atraso até tornar opaco</short>
+          <short xml:lang="sv">Fördröj till opacifiering</short>
+          <short xml:lang="tr">Matlaştırma Gecikmesi</short>
+          <long>The delay (in ms) before Opacify changes opacity after the active window has changed.</long>
+          <long xml:lang="el">Καθυστέρηση (σε ms) πριν η Εφαρμογή Αδιαφάνειας αλλάξει την αδιαφάνεια μετα την αλλαγή του ενεργού παραθύρου.</long>
+          <long xml:lang="en_GB">The delay (in ms) before Opacify changes opacity after the active window has changed.</long>
+          <long xml:lang="fr">Le délai (en ms) avant d'opacifier change l'opacité après que la fenêtre active ait changé.</long>
+          <long xml:lang="gl">O atraso (en ms) antes de que Opacidade troque a opacidade despois cambiar da fiestra activa.</long>
+          <long xml:lang="gu">સક્રિય વિન્ડો બદલાય પછી સક્રિય વિન્ડોની અપારદર્શકતા બદલવા પહેલાંનો વિલંબ (મિલિસેકન્ડોમાં).</long>
+          <long xml:lang="hi">सक्रिय विंडो के बदलने के बाद ओपासिफाई के अपारदर्शिता को बदलने के पहले विलंब (एमएस में).</long>
+          <long xml:lang="it">Ritardo (in millisecondi) prima della variazione di opacità dopo che la finestra attiva è cambiata.</long>
+          <long xml:lang="ja">アクティブ・ウィンドウが変更された後（別のウィンドウにマウスを置いた後）、’半透明’が不透明度を変更するまでの遅延時間（ミリ秒）</long>
+          <long xml:lang="nb">Forsinkelsen (i ms) før Dekk endrer dekkevne etter at det aktive vinduet har blitt endret.</long>
+          <long xml:lang="nl">De vertraging (in ms) voordat Opacificeer de ondoorzichtigheid veranderd nadat het actieve venster is veranderd.</long>
+          <long xml:lang="pl">Opóźnienie (w milisekundach), zanim Powodowanie Nieprzezroczystości zmienia nieprzezroczystość, po tym jak aktywne okno się zmieniło.</long>
+          <long xml:lang="pt">O atraso (em ms) antes de Opacificar mudar a opacidade após mudança da janela activa.</long>
+          <long xml:lang="pt_BR">O atraso (em ms) para alterar a opacidade depois que a janela ativa tenha mudado.</long>
+          <long xml:lang="sv">Fördröjning (i ms) innan opacifiera ändrar opacitet efter det aktiva fönstret har ändrats.</long>
+          <default>700</default>
+          <min>0</min>
+          <max>10000</max>
+        </option>
+        <option type="bool" name="init_toggle">
+          <short>Toggle Opacify on by default</short>
+          <short xml:lang="el">Ενεργοποίηση της Εφαρμογής Αδιαφάνειας απο προεπιλογή</short>
+          <short xml:lang="en_GB">Toggle Opacify on by default</short>
+          <short xml:lang="fr">Activer Opacifier par défaut</short>
+          <short xml:lang="gl">Ligar Opacidade por omisión</short>
+          <short xml:lang="gu">મૂળભૂત રીતે અપારદર્શકતા બદલો</short>
+          <short xml:lang="hi">मूलभूत रूप से ओपासिफाई टॉगल करें</short>
+          <short xml:lang="it">Attiva «Opacizza» in modo predefinito</short>
+          <short xml:lang="ja">デフォルトで半透明をオン</short>
+          <short xml:lang="nb">Skru på Dekk som standard</short>
+          <short xml:lang="nl">Schakel opacificeer standaard in</short>
+          <short xml:lang="pl">Domyślnie włącz nieprzezroczystość</short>
+          <short xml:lang="pt">Ligar Opacidade por omissão</short>
+          <short xml:lang="pt_BR">Ativar o Tornar Opaco por padrão</short>
+          <short xml:lang="sv">Växla opacifiera på som standard</short>
+          <short xml:lang="tr">Öntanımlı olarak Matlaştırmayı Aç</short>
+          <long>With this enabled, opacify will be on when you load Opacify, which is usually when you start Compiz.</long>
+          <long xml:lang="el">Με αυτό ενεργοποιημένο, η αδιαφάνεια θα εφαρμόζεται όταν φορτώνετε την Εφαρμογή Αδιαφάνειας, που γίνεται συνήθως όταν ξεκινά το Compiz</long>
+          <long xml:lang="en_GB">With this enabled, opacify will be on when you load Opacify, which is usually when you start Compiz.</long>
+          <long xml:lang="fr">Avec cette option activée, l'opacité sera active quand vous chargerez l'extension Opacifier, en particulier au démarrage de compiz.</long>
+          <long xml:lang="gl">Con esta opción activada, a opacidade será ligada cando cargar Opacidade, o que ocorre normalmente cando inicía Compiz.</long>
+          <long xml:lang="gu">આ સક્રિય કરીને, અપારદર્શક બનાવવાનું ચાલુ રહેશે જ્યારે તમે અપારદર્શક બનાવવાનું લાવો, કે જે સામાન્ય રીતે જ્યારે તમે Compiz શરૂ કરો.</long>
+          <long xml:lang="hi">इसे सक्रिय रूप में, ओपासिफाई चालू होगा जब आप ओपासिफाई लोड करते हैं, यह प्रायः जब आप कोंपिज आरंभ करते हैं.</long>
+          <long xml:lang="it">Con questo abilitato, l'opacizzazione sarà abilitata al caricamento dell'effetto «Opacizza», che avviene solitamente all'avvio di Compiz.</long>
+          <long xml:lang="ja">有効にすると、Compiz のスタートなどで’半透明’が読み込まれた時点で’半透明’がオンに</long>
+          <long xml:lang="nb">Med denne slått på, vil dekkevnen bli slått på når du laster Dekk, normalt når du starter Compiz.</long>
+          <long xml:lang="nl">Met dit ingeschakeld is opacificeer standaard ingeschakeld als Opacificeer geladen word, gewoonlĳk is dat als Compiz gestart wordt.</long>
+          <long xml:lang="pt">Com esta opção activada, a opacidade irá estar ligada quando carregar Opacificar, o que ocorre normalmente quando inicia Compiz.</long>
+          <long xml:lang="pt_BR">Com esta opção ativa, a opacidade estará ativa sempre ao carregar o plugin "Tornar Opaco", o que ocorre normalmente quando Compiz é iniciado.</long>
+          <long xml:lang="sv">Med detta aktiverat så kommer opacifiera vara på när du laddar "Opacifiera", vilket vanligtvis är när du startar Compiz.</long>
+          <default>true</default>
+        </option>
+      </group>
+    </display>
+    <screen>
+      <group>
+        <short>Misc. Options</short>
+        <short xml:lang="ar">خيارات أخرى</short>
+        <short xml:lang="bn">বিবিধ বিকল্প</short>
+        <short xml:lang="ca">Altres opcions</short>
+        <short xml:lang="de">Sonstige Optionen</short>
+        <short xml:lang="el">Διάφορες Επιλογές</short>
+        <short xml:lang="en_GB">Misc. Options</short>
+        <short xml:lang="es">Opciones varias</short>
+        <short xml:lang="eu">Hainbat aukera</short>
+        <short xml:lang="fi">Sekalaiset valinnat</short>
+        <short xml:lang="fr">Options Diverses</short>
+        <short xml:lang="gl">Opcións diversas</short>
+        <short xml:lang="gu">મિશ્રિત વિકલ્પો</short>
+        <short xml:lang="hi">विविध विकल्प</short>
+        <short xml:lang="it">Altre opzioni</short>
+        <short xml:lang="ja">その他オプション</short>
+        <short xml:lang="nb">Diverse valg</short>
+        <short xml:lang="nl">Diverse optie's</short>
+        <short xml:lang="pl">Pozostałe opcje</short>
+        <short xml:lang="pt">Opções diversas</short>
+        <short xml:lang="pt_BR">Opções diversas</short>
+        <short xml:lang="ru">Разные опции</short>
+        <short xml:lang="sv">Diverse inställningar</short>
+        <short xml:lang="tr">Diğer Seçenekler</short>
+        <short xml:lang="zh_CN">杂项设置</short>
+        <option type="bool" name="only_if_block">
+          <short>Only increase opacity if a window is blocking</short>
+          <short xml:lang="el">Αυξάνει την αδιαφάνεια μόνο αν ενα παράθυρο μπλοκάρει τα άλλα</short>
+          <short xml:lang="en_GB">Only increase opacity if a window is blocking</short>
+          <short xml:lang="fr">Augmenter l'opacité seulement si une fenêtre masque.</short>
+          <short xml:lang="gl">Só aumentar a opacidadese unha fiestra estivera a bloquear</short>
+          <short xml:lang="gu">જો વિન્ડો અટકાવી રહી હોય તો માત્ર અપારદર્શકતા વધારો</short>
+          <short xml:lang="hi">सिर्फ अपारदर्शिता बढ़ाता है यदि एक विंडो रूक रहा है</short>
+          <short xml:lang="it">Incrementare l'opacità se una finestra si sta bloccando</short>
+          <short xml:lang="ja">ウィンドウが覆い隠している場合は不透明度の上昇のみ</short>
+          <short xml:lang="nb">Bare øk dekkevne hvis et vindu blokkerer</short>
+          <short xml:lang="nl">Verhoog ondoorzichtigheid alleen als een venster blokkeert</short>
+          <short xml:lang="pl">Tylko zwiększaj nieprzezroczystość jesli okno blokuje</short>
+          <short xml:lang="pt">Só aumentar a opacidade se uma janela estivar a bloquear</short>
+          <short xml:lang="pt_BR">Só aumentar a opacidade se uma janela estiver bloqueando a sua visão</short>
+          <short xml:lang="sv">Öka ändast opacitet om ett fönster blockerar</short>
+          <long>Only increase the opacity on the targeted window if it has one or more windows blocking it from view.</long>
+          <long xml:lang="el">Αυξάνει την αδιαφάνεια μόνο στο παράθυρο-στόχο αν μπλοκάρεται η θέαση του απο ένα ή περισσότερα παράθυρα</long>
+          <long xml:lang="en_GB">Only increase the opacity on the targeted window if it has one or more windows blocking it from view.</long>
+          <long xml:lang="fr">Augmenter l'opacité sur la fenêtre ciblée seulement si une ou plusieurs fenêtres la masquent.</long>
+          <long xml:lang="gl">Só aumentar a opacidade da fiestra pretendida se unha ou máis fiestras estiveren a bloquer a súa visibilidade.</long>
+          <long xml:lang="gu">માત્ર લક્ષ્યાંકિત વિન્ડો પર અપારદર્શકતા વધારો જો તેની પાસે એક અથવા વધુ વિન્ડો તેને દેખાવાથી અટકાવી રહી હોય.</long>
+          <long xml:lang="hi">सिर्फ अपारदर्शिता लक्षित विंडो पर बढ़ाता है यदि दृश्य से एक या अधिक विंडो इसे रोक रहा है.</long>
+          <long xml:lang="it">Incrementa l'opacità della finestra selezionata solo se una o più finestre ne ostruiscono la vista.</long>
+          <long xml:lang="ja">アクティブ・ウィンドウが1つ以上のウィンドウに覆われている場合は不透明度の上昇のみ</long>
+          <long xml:lang="nb">Bare øk dekkevnen til det siktede vinduet hvis det har ett eller flere vinduer som blokkerer det.</long>
+          <long xml:lang="nl">Maak vensters minder doorzichtig als een ander venster het zicht erop belemmerd.</long>
+          <long xml:lang="pl">Tylko zwiększaj nieprzezroczystośc jeśli docelowe okno ma jedno lub więcej okien blokujących je przed widokiem.</long>
+          <long xml:lang="pt">Só aumentar a opacidade da janela pretendida se uma ou mais janelas estiverem a bloquer a sua visibilidade.</long>
+          <long xml:lang="pt_BR">Somente aumentar a opacidade da janela pretendida se uma ou mais janelas estiverem bloqueando a sua visão.</long>
+          <long xml:lang="sv">Öka ändast opaciteten på valt fönster om det har en eller flera fönster som blockerar det.</long>
+          <default>false</default>
+        </option>
+        <option type="bool" name="focus_instant">
+          <short>Bypass delay when the new active window is the focused window.</short>
+          <short xml:lang="el">Χωρίς καθυστέρηση όταν το νέο ενεργό παράθυρο είναι το εστιασμένο.</short>
+          <short xml:lang="en_GB">Bypass delay when the new active window is the focused window.</short>
+          <short xml:lang="fi">Ohita viive kun uusi aktiivinen ikkuna on kohdistettuna</short>
+          <short xml:lang="fr">Passer outre le délai quand la nouvelle fenêtre active est la fenêtre qui a le focus.</short>
+          <short xml:lang="gl">Ignorar atraso cando a nova fiestra activa é a fiestra enfocada.</short>
+          <short xml:lang="gu">જ્યારે નવી સક્રિય વિન્ડો એ ફોકસ થયેલ વિન્ડો હોય ત્યારે વિલંબ જવા દો.</short>
+          <short xml:lang="hi">विलंब बायपास करता है जब नया सक्रिय विंडो फोकस किया विंडो है.</short>
+          <short xml:lang="it">Eliminare ritardo quando la nuova finestra attiva è selezionata</short>
+          <short xml:lang="ja">新しいアクティブ・ウィンドウがフォーカスされたときは遅延を無視</short>
+          <short xml:lang="nb">Gå forbi forsinkelse når det nye aktive vinduet er vinduet med fokus.</short>
+          <short xml:lang="nl">Bypass delay als het nieuwe actieve venster het venster met focus is.</short>
+          <short xml:lang="pl">Pomiń opóźnienie jeśli nowe aktywne okno jest skupionym oknem.</short>
+          <short xml:lang="pt">Ignorar atraso quando a nova janela activa é a janela focada.</short>
+          <short xml:lang="pt_BR">Ignorar atraso quando a nova janela ativa é a janela com foco.</short>
+          <short xml:lang="sv">Hoppa över fördröjningen när det nya aktiva fönstret är det fokuserade.</short>
+          <long>Do not wait if the window we are hovering is the focused window. This allows us to instantly see the focused window. You probably want to disable this if you are not using 'Click to Focus'.</long>
+          <long xml:lang="el">Δεν περιμένει αν το παράθυρο στο οποίο βρίσκεται πάνω του το ποντίκι είναι το εστιασμένο. Αυτό μας επιτρέπει άμεσα να δούμε το εστιασμένο παράθυρο. Πιθανώς να θέλετε να το απενεργοποιήσετε αν δεν χρησιμοποιείτε το 'Κλικ για Εστίαση'.</long>
+          <long xml:lang="en_GB">Do not wait if the window we are hovering is the focused window. This allows us to instantly see the focused window. You probably want to disable this if you are not using 'Click to Focus'.</long>
+          <long xml:lang="fr">Ne pas attendre si la fenêtre survolée est la fenêtre ayant le focus. Cela permet de voir instantanément cette fenêtre. Vous préférerez probablement désactiver cette option si vous n'utilisez pas le clic pour avoir le focus.</long>
+          <long xml:lang="gl">Non esperar se a fiestra sobre a cal se ten o cursor do rato é a fiestrafocada. Isto permite ver imediatamente a fiestra enfocada. Provavelmente desexa desactivar esta opción se non estivera a usar 'Clicar para Enfocar'.</long>
+          <long xml:lang="gu">જો વિન્ડો કે જેના ઉપર આપણે ફરી રહ્યા છીએ એ ફોકસ થયેલ વિન્ડો હોય તો રાહ જોશો નહિં. આ આપણને ફોકસ થયેલ વિન્ડો તુરંત જ જોવા દેશે. તમે કદાચ આને નિષ્ક્રિય કરવા માંગશો જો તમે 'ફોકસ કરવા માટે ક્લિક કરો' વાપરી રહ્યા હોય.</long>
+          <long xml:lang="hi">प्रतीक्षा नहीं करें यदि विंडो जिसमें हम आगे पीछे कर रहे हैं वह फोकस किया विंडो है. यह हमें तत्काल फोकस किए विंडो को देखने की छूट देता है. आप संभवतः इसे निष्क्रिय करना चाहते हैं यदि आप 'फोकस करने के लिए क्लिक करें' का प्रयोग नहीं कर रहे हैं.</long>
+          <long xml:lang="it">Se la finestra sulla quale si trova il mouse è quella che detiene il focus, viene mostrata subito. Questa funzionalità permette di vedere immediatamente la finestra col focus. Probabilmente è da disabilitare se non si sta utilizzando «Fare clic per il focus».</long>
+          <long xml:lang="ja">マウスを置いているウィンドウがフォーカス・ウィンドウの場合は遅延をなくし、直ちにフォーカス・ウィンドウを見えるようにします。'クリックでフォーカス' を使用している場合は無効にするほうがよいかもしれません。</long>
+          <long xml:lang="nb">Ikke vent til vinduet det sveves over er det fokuserte vinduet. Dette tillater å se et fokuserte vinduet med én gang. Du vil antakelig slå av dette hvis du ikke bruker 'Klikk for å fokusere'.</long>
+          <long xml:lang="nl">Wacht niet tot het venster waarover heen gezweefd wordt de focus heeft. Dit maakt het mogelĳk om het venster met focus onmiddelĳk te zien. Je wilt dit mogelĳk uitschakelen als je geen gebruik maakt van 'Klik voor focus'.</long>
+          <long xml:lang="pt">Não esperar se a janela sobre a qual se tem o cursor do rato é a janela focada. Isto permite ver imediatamente a janela focada. Provavelmente deseja desactivar esta opção se não estivar a usar 'Clicar para Focar'.</long>
+          <long xml:lang="pt_BR">Não esperar se a janela sobre a qual se tem o cursor do mouse é a janela focada. Isto permite ver imediatamente a janela focada. Você provavelmente deseja desativar esta opção no caso de não estar usando 'Clicar para Focar'.</long>
+          <long xml:lang="sv">Vänta inte om det fönster vi har musen över är det fokuserade. Detta tillåter oss att genast se det fokuserade fönstret. Du vill nog inaktivera detta om du inte använder 'Klicka för att fokusera'.</long>
+          <default>false</default>
+        </option>
+        <option type="bool" name="no_delay_change">
+          <short>Bypass delay when Opacify is reducing the opacity on one or more windows already.</short>
+          <short xml:lang="el">Χωρίς καθυστέρηση όταν η Εφαρμογή Αδιαφάνειας μειώνει ήδη την αδιαφάνεια σε ένα ή περισσότερα παράθυρα.</short>
+          <short xml:lang="en_GB">Bypass delay when Opacify is reducing the opacity on one or more windows already.</short>
+          <short xml:lang="fi">Ohita viive kun jotkut ikkunat ovat jo läpinäkyviä</short>
+          <short xml:lang="fr">Passer outre le délai quand l'extension Opacifier réduit déjà l'opacité sur une ou plusieurs fenêtres.</short>
+          <short xml:lang="gl">Ignorar atraso cando Opacidade xa está a reducir a opacidade dunha ou máis fiestras.</short>
+          <short xml:lang="gu">જ્યારે અપારદર્શકતા એ એક અથવા વધુ વિન્ડોની અપારદર્શકતા પહેલાથી જ ઘટાડી રહી હોય ત્યારે વિલંબ જવા દો.</short>
+          <short xml:lang="hi">विलंब को बायपास करता है जब ओपासिफाई अपारदर्शिता को एक या अधिक विंडो पर पहले से कम कर रहा है.</short>
+          <short xml:lang="it">Ignorare ritardo quando «Opacizza» sta già riducendo l'opacità di una o più finestre</short>
+          <short xml:lang="ja">’半透明’がすでに１つ以上のウィンドウの不透明度を減少させているときは遅延を無視</short>
+          <short xml:lang="nb">Gå forbi forsinkelse når Dekk allerede reduserer dekkevnen til ett eller flere vinduer.</short>
+          <short xml:lang="nl">Bypass delay als opacificeer al de ondoorzichtigheid aan het verlagen is op een of meer vensters.</short>
+          <short xml:lang="pl">Pomiń opóźnienie jeśli Powodowanie Nieprzezroczystości już zmniejsza nieprzezroczystość jednego lub więcej okien.</short>
+          <short xml:lang="pt">Ignorar atraso quando Opacificar já está a reduzir a opacidade de uma ou mais janelas.</short>
+          <short xml:lang="pt_BR">Ignorar atraso quando já estiver reduzindo a opacidade de uma ou mais janelas.</short>
+          <short xml:lang="sv">Hoppa över försening när opacifiera redan minskar opaciteten på ett eller flera fönster.</short>
+          <long>This enables you to let Opacify instantly opacify new windows when you're already making one or more windows invisible. Makes for faster behavior while looking through layers of hidden windows.</long>
+          <long xml:lang="el">Αυτο σας δίνει τη δυνατότητα να επιτρέπετε στην Εφαρμογή Αδιαφάνειας να κάνει αδιαφανή τα νέα παράθυρα όταν εσείς κάνετε ένα ή περισσότερα παράθυρα διάφανα. Κανει γρηγορότερη την συμπεριφορά όταν κοιτάτε μέσα απο στρώματα κρυμμένων παραθύρων.</long>
+          <long xml:lang="en_GB">This enables you to let Opacify instantly opacify new windows when you're already making one or more windows invisible. Makes for faster behavior while looking through layers of hidden windows.</long>
+          <long xml:lang="fr">Cette option vous permet de laisser cette extension opacifier instantanément les nouvelle fenêtres, quand vous êtes déjà en train de rendre une ou plusieurs fenêtres invisibles. Rend le comportement plus rapide lorsque que vous regardez à travers plusieurs couches de fenêtres cachées.</long>
+          <long xml:lang="gl">Isto permítelle deixar Opacidade opacificar instantaneamente novas fiestrascando xa está a tornar unha ou máis fiestras invisibles. Permite uncomportamento máis rápido cando se olla por varias camadas de fiestras escondidas.</long>
+          <long xml:lang="gu">જ્યારે તમે પહેલાથી એક અથવા વધુ વિન્ડો અદૃશ્ય બનાવી રહ્યા હોય ત્યારે આ તમને તુરંત જ નવી વિન્ડો અપારદર્શક બનાવવા માટે પરવાનગી આપવા સક્રિય કરે છે. ઝડપી વર્તણૂક માટે બનાવે છે જ્યારે છુપી વિન્ડોના સ્તરોમાં જોઈ રહ્યા હોય.</long>
+          <long xml:lang="hi">यह ओपासिफाई को तत्काल नये विंडो को ओपासिफाई करने के लिए सक्रिय करता है जब आप पहले ही एक या अधिक विंडो को अदृश्य बना रहे हैं. तेज व्यवहार के लिए बनाता है जबकि छिपे विंडो के स्तरों से होकर देख रहा हो.</long>
+          <long xml:lang="it">Consente di lasciare che «Opacizza» opacizzi istantaneamente le nuove finestre quando una o più finestre sono rese invisibili. Fa in modo che questo comportamento sia più rapido quando si guarda attraverso i livelli delle finestre nascoste.</long>
+          <long xml:lang="ja">有効にすると、すでに1つ以上のウィンドウを半透明にしているとき、新しいウィンドウに’半透明’による不透明度を直ちに適用します。半透明で隠したウィンドウ層を通して見ながら素早い動作ができます。</long>
+          <long xml:lang="nb">Dette tillater deg å la Dekk umiddelbart redusere metningen på nye vinduer når du allerede gjør ett eller flere vinduer usynlige. Dette gjør oppførselen raskere når du ser gjennom lag av skjulte vinduer</long>
+          <long xml:lang="nl">Dit maakt het mogelijk om opacificeer direct vensters doorzichtig te laten maken als je al andere vensters aan het doorzichtig maken bent. Zorgt voor sneller gedrag als je door lagen van verborgen vensters kijkt.</long>
+          <long xml:lang="pt">Isto permite-lhe deixar opacificar instantaneamente usando o plugin Opacificar novas janelas quando já está a tornar uma ou mais janelas invisíveis. Permite um comportamento mais rápido quando se olha por várias camadas de janelas escondidas.</long>
+          <long xml:lang="pt_BR">Isto lhe permite tornar opaco instantaneamente novas janelas quando você já estiver tornando uma ou mais janelas invisíveis. Permite um comportamento mais rápido quando se olha por várias camadas de janelas escondidas.</long>
+          <long xml:lang="sv">Detta tillåter dig att omedelbart opacifiera nya fönster när du redan gör en eller flera fönster osynliga. Ger dig ett snabbare beteende medans du tittar igenom lager av dolda fönster.</long>
+          <default>false</default>
+        </option>
+        <option type="match" name="window_match">
+          <short>Window Match</short>
+          <short xml:lang="ar">تطابق النافذة</short>
+          <short xml:lang="bn">উইন্ডো মেলানো</short>
+          <short xml:lang="de">Betroffene Fenster</short>
+          <short xml:lang="el">Ταίριασμα Παραθύρου</short>
+          <short xml:lang="en_GB">Window Match</short>
+          <short xml:lang="es">Coincidir ventanas</short>
+          <short xml:lang="eu">Leiho parekatzea</short>
+          <short xml:lang="fi">Ikkunan sovitus</short>
+          <short xml:lang="fr">Types de fenêtres</short>
+          <short xml:lang="gl">Tipos de fiestras</short>
+          <short xml:lang="gu">વિન્ડો જોડણી</short>
+          <short xml:lang="hi">विंडो मिलान</short>
+          <short xml:lang="it">Finestre corrispondenti</short>
+          <short xml:lang="ja">対象ウィンドウ</short>
+          <short xml:lang="nb">Samsvar mellom vinduer</short>
+          <short xml:lang="nl">Venster match</short>
+          <short xml:lang="pl">Układ okna</short>
+          <short xml:lang="pt">Tipos Janelas</short>
+          <short xml:lang="pt_BR">Tipos de janelas</short>
+          <short xml:lang="ru">Соответствие окна</short>
+          <short xml:lang="sv">Fönstermatchning</short>
+          <short xml:lang="tr">Pencere Eşlemesi</short>
+          <short xml:lang="zh_CN">窗口匹配</short>
+          <long>Windows that should be opacified.</long>
+          <long xml:lang="el">Είδη παραθύρων που πρέπει να γίνουν αδιαφανή.</long>
+          <long xml:lang="en_GB">Windows that should be opacified.</long>
+          <long xml:lang="fr">Fenêtres devant être opacifiées.</long>
+          <long xml:lang="gl">Fiestras que deben ser opacificadas.</long>
+          <long xml:lang="gu">વિન્ડો કે જે અપારદર્શક થવી જોઈએ.</long>
+          <long xml:lang="hi">विंडोज जिसे ओपासिफाई किया जाना चाहिए.</long>
+          <long xml:lang="it">Finestre da opacizzare.</long>
+          <long xml:lang="ja">’半透明’が対象にするウィンドウ</long>
+          <long xml:lang="nb">Vinduer som skal bli Dekk-et</long>
+          <long xml:lang="nl">Vensters die moeten worden geopacificeerd.</long>
+          <long xml:lang="pt">Janelas que devem ser opacificadas.</long>
+          <long xml:lang="pt_BR">Janelas que devem tornar-se opacas.</long>
+          <long xml:lang="sv">Fönster som ska bli opacifierade.</long>
+          <long xml:lang="tr">Matlaştırılması gereken pencereler.</long>
+          <default>Normal | Dialog | ModalDialog | Utility | Toolbar | Fullscreen</default>
+        </option>
+        <subgroup>
+          <short>Opacity Levels</short>
+          <short xml:lang="ca">Nivells d'opacitat</short>
+          <short xml:lang="el">Επίπεδα Αδιαφάνειας</short>
+          <short xml:lang="en_GB">Opacity Levels</short>
+          <short xml:lang="es">Niveles de opacidad</short>
+          <short xml:lang="fi">Läpinäkyvyysasteet</short>
+          <short xml:lang="fr">Niveaux d'opacité</short>
+          <short xml:lang="gl">Niveis de Opacidade</short>
+          <short xml:lang="gu">અપારદર્શકતા સ્તરો</short>
+          <short xml:lang="hi">अपारदर्शिता स्तर</short>
+          <short xml:lang="it">Livelli di opacità</short>
+          <short xml:lang="ja">不透明度</short>
+          <short xml:lang="nb">Dekkevnenivåer</short>
+          <short xml:lang="nl">Ondoorzichtigheids niveau's</short>
+          <short xml:lang="pt">Níveis de Opacidade</short>
+          <short xml:lang="pt_BR">Níveis de Opacidade</short>
+          <short xml:lang="sv">Opacitetsnivåer</short>
+          <short xml:lang="tr">Matlaştırma Basamakları</short>
+          <option type="int" name="active_opacity">
+            <short>Active Opacity</short>
+            <short xml:lang="ca">Activa opacitat</short>
+            <short xml:lang="de">Sichtbarkeit für aktives Fenster</short>
+            <short xml:lang="el">Ενεργή Αδιαφάνεια</short>
+            <short xml:lang="en_GB">Active Opacity</short>
+            <short xml:lang="fi">Läpinäkyvyys aktiivisena</short>
+            <short xml:lang="fr">Opacité Active</short>
+            <short xml:lang="gl">Opacidade Activa</short>
+            <short xml:lang="gu">સક્રિય અપારદર્શકતા</short>
+            <short xml:lang="hi">सक्रिय अपारदर्शिता</short>
+            <short xml:lang="it">Opacità attiva</short>
+            <short xml:lang="ja">アクティブの不透明度</short>
+            <short xml:lang="nb">Aktiv dekkevne</short>
+            <short xml:lang="nl">Actieve Ondoorzichtigheid</short>
+            <short xml:lang="pt">Opacidade Activa</short>
+            <short xml:lang="pt_BR">Opacidade Ativa</short>
+            <short xml:lang="sv">Aktiv opacitet</short>
+            <short xml:lang="tr">Etkin Matlık</short>
+            <long>The minimum opacity percentage to ensure a targeted window has. A target window will have either this opacity or the preset opacity, whichever is higher.</long>
+            <long xml:lang="el">Το μικρότερο ποσοστό αδιαφάνειας που διασφαλίζεται για το παράθυρο-στόχο. Ενα παράθυρο-στόχος θα έχει είτε αυτό το ποσοστό αδιαφάνειας είτε το προκαθορισμένο, όποιο είναι υψηλότερο.</long>
+            <long xml:lang="en_GB">The minimum opacity percentage to ensure a targeted window has. A target window will have either this opacity or the preset opacity, whichever is higher.</long>
+            <long xml:lang="fr">Le pourcentage minimum d'opacité à assurer pour une fenêtre ciblée. Une fenêtre ciblée aura soit cette opacité, soit l'opacité présélectionnée, selon laquelle est la plus haute.</long>
+            <long xml:lang="gl">A percentaxe mínima de opacidade que a fiestra pretendida pode ter. A fiestra terá o maior valor entre este valor ou o valor prédefinido.</long>
+            <long xml:lang="gu">લક્ષ્યાંકિત વિન્ડો પાસે ન્યૂનતમ અપારદર્શકતા ટકા છે તેની ખાતરી કરો. લક્ષ્ય વિન્ડો પાસે ક્યાં તો આ અપારદર્શકતા હશે અથવા પૂર્વસુયોજીત અપારદર્શકતા હશે, જે કંઈપણ ઊંચી હોય.</long>
+            <long xml:lang="hi">न्यूनतमतम अपारदर्शिता प्रतिशत जो एक लक्षित विंडो को सुनिश्चित करने के लिए होता है. एक लक्षित विंडो के पास या तो यह अपारदर्शिता होगा या पूर्वसेट अपारदर्शिता, जो कुछ भी ऊपर है.</long>
+            <long xml:lang="it">La minima percentuale di opacità che può avere la finestra corrente. La finestra può avere questa opacità o quella predefinita, qualunque abbia un valore più alto.</long>
+            <long xml:lang="ja">アクティブ・ウィンドウ（マウスを置いているウィンドウ）に保持させる最低限の不透明度。このウィンドウには、この不透明度またはプリセットの不透明度（一般オプションで設定しているマウスボタンによって変更した不透明度）のどちらか高いほうが割り当てられます。</long>
+            <long xml:lang="nb">Minimum prosentandel dekkevne et siktet vindu har. Et målvindu vil enten ha denne dekkevnen eller den forhåndsinnstilte, etter hvilken som er høyest.</long>
+            <long xml:lang="nl">Het minimale percentage opaciteit een doel venster zal behouden. Een doelvenster heeft óf deze ondoorzichtigheid, óf de vooringestelde opaciteit welke van de twee hoger is.</long>
+            <long xml:lang="pt">A percentagem mínima de opacidade que a janela pretendida pode ter. A janela irá ter o maior valor entre este valor ou o valor prédefinido.</long>
+            <long xml:lang="pt_BR">A percentagem mínima de opacidade que a janela pretendida pode ter. A janela terá o valor mais alto dentre este e o valor pré-definido.</long>
+            <long xml:lang="sv">Den minst procentuella opacitet att se till att ett valt fönster har. Ett valt fönster kommer antingen ha denna opacitet eller den förinställda opaciteten, beroende på vad som är störst.</long>
+            <default>100</default>
+            <min>1</min>
+            <max>100</max>
+          </option>
+          <option type="int" name="passive_opacity">
+            <short>Passive Opacity</short>
+            <short xml:lang="ca">Opacitat passiva</short>
+            <short xml:lang="el">Παθητική Αδιαφάνεια</short>
+            <short xml:lang="en_GB">Passive Opacity</short>
+            <short xml:lang="fr">Opacité Passive</short>
+            <short xml:lang="gl">Opacidade Pasiva</short>
+            <short xml:lang="gu">સક્રિય અપારદર્શકતા</short>
+            <short xml:lang="hi">निष्क्रिय अपारदर्शिता</short>
+            <short xml:lang="it">Opacità passiva</short>
+            <short xml:lang="ja">パッシブの不透明度</short>
+            <short xml:lang="nb">Passiv dekkevne</short>
+            <short xml:lang="nl">Passieve Doorzichtigheid</short>
+            <short xml:lang="pt">Opacidade Passiva</short>
+            <short xml:lang="pt_BR">Opacidade Passiva</short>
+            <short xml:lang="sv">Passiv opacitet</short>
+            <short xml:lang="tr">Pasif Matlık</short>
+            <long>The maximum opacity percentage a window blocking the current targeted window can have. A blocking window will have either this opacity or the preset opacity, whichever is lower.</long>
+            <long xml:lang="el">Το μέγιστο ποσοστό αδιαφάνειας που μπορεί να έχει ένα παράθυρο που μπλοκάρει το τρέχων παράθυρο-στόχο. Ένα παράθυρο που μπλοκάρει θα έχει είτε αυτό το ποσοστό αδιαφάνειας είτε το προκαθορισμένο, όποιο είναι μικρότερο.</long>
+            <long xml:lang="en_GB">The maximum opacity percentage a window blocking the current targeted window can have. A blocking window will have either this opacity or the preset opacity, whichever is lower.</long>
+            <long xml:lang="fr">Le pourcentage maximum d'opacité qu'une fenêtre masquant la fenêtre ciblée peut avoir. Une fenêtre masquante aura soit cette opacité, soit l'opacité présélectionnée, selon laquelle est la plus basse.</long>
+            <long xml:lang="gl">A percentaxe máxima de opacidade que unha fiestra a bloquear a fiestrapretendida actualmente pode ter. unha fiestra que estea a bloquer terá o menor valor entre este valor ou o valor prédefinido.</long>
+            <long xml:lang="gu">વર્તમાનમાં લક્ષ્યાંકિત થયેલ વિન્ડોને અટકાવી રહેલ વિન્ડોની મહત્તમ અપારદર્શકતા આટલી હોઈ શકે. અટકાવતી વિન્ડોને ક્યાં તો આ અપારદર્શકતા હોઈ શકે અથવા પૂર્વસુયોજીત અપારદર્સકતા હશે, કે જે કંઈપણ નીચું હોય.</long>
+            <long xml:lang="hi">अधिकतम अपारदर्शिता प्रतिशत जो एक विंडो मौजूदा लक्षित विंडो को रोकने में रखता है. एक अवरोधित विंडो के पास या तो यह अपारदर्शिता होगा या पूर्वसेट अपारदर्शिता, जो कुछ भी नीचे है.</long>
+            <long xml:lang="it">La massima percentuale di opacità che può avere la finestra bloccante quella a cui ci si sposta. Una finestra bloccante può avere questa opacità o quella predefinita, qualunque abbia un valore più basso.</long>
+            <long xml:lang="ja">現在のアクティブ・ウィンドウを覆い隠しているウィンドウが持てる最大の不透明度。覆っているウィンドウには、この不透明度またはプリセットの不透明度のどちらかより低いほうが割り当てられます。</long>
+            <long xml:lang="nb">Maksimum prosentandel dekkevne et vindu som blokkerer det nåværende siktede vinduet kan ha. Et blokkerende vindu vil enten ha denne dekkevnen eller den forhåndsinnstilte, etter hvilken som er lavest.</long>
+            <long xml:lang="nl">De maximale opaciteit die een venster, dat het huidige venster overlapt, kan hebben. Een overlappend venster heeft deze ondoorzichtigheid, of die vooringestelde opaciteit, welke van de twee minder is.</long>
+            <long xml:lang="pt">A percentagem máxima de opacidade que uma janela a bloquear a janela pretendida actualmente pode ter. Uma janela que esteja a bloquer irá ter o menor valor entre este valor ou o valor prédefinido.</long>
+            <long xml:lang="pt_BR">O percentual máximo para a opacidade de uma janela que bloqueia a visão da janela pretendida pode ter. Uma janela que bloquear a visão assumirá o menor valor dentre este e o valor pré-definido.</long>
+            <long xml:lang="sv">Den maximalt procentuella opacitet som ett fönster blockerande det nuvarande valda fönster kan ha. Ett blockerande fönster kommer antingen ha denna opacitet eller den förinställda opaciteten, beroende på vad som är lägst.</long>
+            <default>10</default>
+            <min>1</min>
+            <max>100</max>
+          </option>
+        </subgroup>
+      </group>
+    </screen>
+  </plugin>
+</compiz>

@@ -1,0 +1,135 @@
+#!/usr/bin/python2.5
+# -*- mode: python -*-
+
+# This comes first.  Seriously.
+from miro.platform import xlibhelper
+if xlibhelper.XInitThreads() == 0:
+    print "WARNING: XInitThreads() failed!"
+
+import os.path
+import sys
+import optparse
+
+import pygtk
+pygtk.require('2.0')
+
+from miro.platform import upgrade
+upgrade.upgrade()
+
+# Set up gettext before everything else
+from miro import gtcache
+gtcache.init()
+
+from miro import config
+from miro import platform
+from miro.platform import options
+from miro import prefs
+from miro import singleclick
+
+def startup():
+    if parsed_options.frontend == 'html':
+        from miro.platform.frontends.html.Application import Application
+        Application().run()
+    elif parsed_options.frontend == 'cli':
+        from miro.frontends import cli
+        cli.run(parsed_options.theme)
+    else:
+        raise ValueError("Unknown frontend: %s" % parsed_options.frontend)
+
+
+if '--unittest' in sys.argv:
+    # handle this outside optparse, because unittest has its own option set
+    sys.argv.remove('--unittest')
+    import unittest
+    from miro import test
+    unittest.main(module=test)
+
+usage = "usage: %prog [options] [torrent files] [video files]"
+parser = optparse.OptionParser(usage=usage)
+parser.add_option('--unittest', dest='unittest', default=False,
+    action='store_true', 
+    help='run unittests instead of launching the program')
+parser.add_option('-v', '--version', dest='version', default=False,
+    action='store_true', help='print version info')
+parser.add_option('--profile', metavar='<file>', help='write profiling information to FILE')
+parser.add_option('--bias', metavar='<bias>', help='set profiling bias to BIAS', type=float, default=None)
+parser.add_option('--sync', help='Use X Syncronously (for debugging)', default=False, action="store_true")
+parser.add_option("--xine-driver", metavar="<driver>",
+                  action="store", type="string", dest="xine_driver", help="Xine driver (xv, xshm, opengl, sdl, dxr3, aadxr3, aa, caca, or xxmc)")
+parser.add_option('--enable-xine-hack', dest="use_xv_hack", action="store_true", help='Enable the Xine XV Hack (default)')
+parser.add_option('--disable-xine-hack', dest="use_xv_hack", action="store_false", help='Disable the Xine XV Hack')
+parser.add_option('--theme', dest='theme', metavar='<theme>', help='Theme to use')
+parser.add_option('--frontend', dest='frontend', metavar='<frontend>',
+        default='html', help='Frontend to use (html, cli)')
+(parsed_options, args) = parser.parse_args()
+
+def startapp():
+    platform.utils.initializeLocale()
+    # Create miro directories in the user's home
+    support_dir = config.get(prefs.SUPPORT_DIRECTORY)
+    if not os.path.exists(support_dir):
+        os.makedirs(support_dir)
+
+
+    # These aren't in config because we can override them with the
+    # command line, so config.get() wouldn't return the correct value
+    # anyway.  Maybe, eventually, we should integrate command line
+    # config support into prefs.py and config.py.
+    if parsed_options.use_xv_hack is None:
+        parsed_options.use_xv_hack = config.get(prefs.USE_XINE_XV_HACK)
+    if parsed_options.xine_driver is None:
+        parsed_options.xine_driver = config.get(prefs.DEFAULT_XINE_DRIVER)
+    options.shouldSyncX = parsed_options.sync
+    options.useXineHack = parsed_options.use_xv_hack
+    options.defaultXineDriver = parsed_options.xine_driver
+    options.frontend = parsed_options.frontend
+    if parsed_options.theme:
+        options.themeName = parsed_options.theme
+        print 'Theme is %s' % parsed_options.theme
+
+    for i in xrange(len(args)):
+        if args[i].startswith('file://'):
+            args[i] = args[i][len('file://'):]
+    singleclick.setCommandLineArgs(args)
+
+    startup()
+if parsed_options.version:
+    print "Miro"
+    print "Version: %s" % config.get(prefs.APP_VERSION)
+    print ""
+    print "Miro comes with ABSOLUTELY NO WARRANTY."
+    print "This is free software, and you are welcome to redistribute it"
+    print "under certain conditions.  See license.txt for details."
+elif parsed_options.profile:
+    import profile
+    import eventloop
+    def main():
+        startup()
+    if (parsed_options.bias):
+        profile.Profile.bias = parsed_options.bias
+    eventloop.profile_file = parsed_options.profile
+    profile.run ('main()', parsed_options.profile)
+else:
+    try:
+        import dbus
+        from miro.platform import onetime
+        try:
+            onetime.OneTime()
+            startapp()
+        except onetime.NameExistsException:
+            # This onetime.NameExistsException is either dbus.NameExistsException 
+            # or an exception we created ourselves.  Change it to 
+            # dbus.NameExistsException when we get rid of code that allows Miro to
+            # run on platforms with the older dbus-python bindings.
+            bus = dbus.SessionBus()
+            proxy_obj = bus.get_object('org.participatoryculture.dtv.onetime', '/org/participatoryculture/dtv/OneTime')
+            iface = dbus.Interface(proxy_obj, 'org.participatoryculture.dtv.OneTimeIface')
+            for i in xrange(len(args)):
+                args[i] = args[i].decode('latin1')
+            dbusargs = dbus.Array(args, signature="s")
+    
+            iface.HandleArgs(dbusargs)
+        except dbus.DBusException:
+            startapp()
+    except ImportError:
+        startapp()

@@ -1,0 +1,110 @@
+#! /bin/sh -e
+
+if [ -h /usr/share/doc/python-twisted-conch ]; then
+    rm -f /usr/share/doc/python-twisted-conch
+fi
+
+# Automatically added by dh_pycentral
+if which pycentral >/dev/null 2>&1 && pycentral --help 2>/dev/null | grep -q '^ *version'; then
+	pycentral pkgprepare python-twisted-conch <<PYEOF
+[python-package]
+format = 1
+python-version = all
+[pycentral]
+version = 0.6.7
+[files]
+/usr/share/pyshared/twisted=d
+/usr/share/pyshared/twisted/plugins=d
+/usr/share/pyshared/twisted/plugins/twisted_conch.py=f
+/usr/share/pyshared/twisted/conch=d
+/usr/share/pyshared/twisted/conch/test=d
+/usr/share/pyshared/twisted/conch/test/test_transport.py=f
+/usr/share/pyshared/twisted/conch/test/test_conch.py=f
+/usr/share/pyshared/twisted/conch/test/test_telnet.py=f
+/usr/share/pyshared/twisted/conch/test/test_cftp.py=f
+/usr/share/pyshared/twisted/conch/test/test_userauth.py=f
+/usr/share/pyshared/twisted/conch/test/test_ssh.py=f
+/usr/share/pyshared/twisted/conch/test/test_connection.py=f
+/usr/share/pyshared/twisted/conch/test/__init__.py=f
+/usr/share/pyshared/twisted/conch/test/test_insults.py=f
+/usr/share/pyshared/twisted/conch/test/test_window.py=f
+/usr/share/pyshared/twisted/conch/test/test_recvline.py=f
+/usr/share/pyshared/twisted/conch/test/test_channel.py=f
+/usr/share/pyshared/twisted/conch/test/test_keys.py=f
+/usr/share/pyshared/twisted/conch/test/test_helper.py=f
+/usr/share/pyshared/twisted/conch/test/test_manhole.py=f
+/usr/share/pyshared/twisted/conch/test/keydata.py=f
+/usr/share/pyshared/twisted/conch/test/test_text.py=f
+/usr/share/pyshared/twisted/conch/test/test_mixin.py=f
+/usr/share/pyshared/twisted/conch/test/test_filetransfer.py=f
+/usr/share/pyshared/twisted/conch/openssh_compat=d
+/usr/share/pyshared/twisted/conch/openssh_compat/primes.py=f
+/usr/share/pyshared/twisted/conch/openssh_compat/__init__.py=f
+/usr/share/pyshared/twisted/conch/openssh_compat/factory.py=f
+/usr/share/pyshared/twisted/conch/scripts=d
+/usr/share/pyshared/twisted/conch/scripts/tkconch.py=f
+/usr/share/pyshared/twisted/conch/scripts/conch.py=f
+/usr/share/pyshared/twisted/conch/scripts/cftp.py=f
+/usr/share/pyshared/twisted/conch/scripts/__init__.py=f
+/usr/share/pyshared/twisted/conch/scripts/ckeygen.py=f
+/usr/share/pyshared/twisted/conch/ssh=d
+/usr/share/pyshared/twisted/conch/ssh/connection.py=f
+/usr/share/pyshared/twisted/conch/ssh/common.py=f
+/usr/share/pyshared/twisted/conch/ssh/transport.py=f
+/usr/share/pyshared/twisted/conch/ssh/agent.py=f
+/usr/share/pyshared/twisted/conch/ssh/forwarding.py=f
+/usr/share/pyshared/twisted/conch/ssh/__init__.py=f
+/usr/share/pyshared/twisted/conch/ssh/service.py=f
+/usr/share/pyshared/twisted/conch/ssh/userauth.py=f
+/usr/share/pyshared/twisted/conch/ssh/asn1.py=f
+/usr/share/pyshared/twisted/conch/ssh/filetransfer.py=f
+/usr/share/pyshared/twisted/conch/ssh/factory.py=f
+/usr/share/pyshared/twisted/conch/ssh/channel.py=f
+/usr/share/pyshared/twisted/conch/ssh/sexpy.py=f
+/usr/share/pyshared/twisted/conch/ssh/keys.py=f
+/usr/share/pyshared/twisted/conch/ssh/session.py=f
+/usr/share/pyshared/twisted/conch/insults=d
+/usr/share/pyshared/twisted/conch/insults/client.py=f
+/usr/share/pyshared/twisted/conch/insults/helper.py=f
+/usr/share/pyshared/twisted/conch/insults/__init__.py=f
+/usr/share/pyshared/twisted/conch/insults/colors.py=f
+/usr/share/pyshared/twisted/conch/insults/insults.py=f
+/usr/share/pyshared/twisted/conch/insults/text.py=f
+/usr/share/pyshared/twisted/conch/insults/window.py=f
+/usr/share/pyshared/twisted/conch/ui=d
+/usr/share/pyshared/twisted/conch/ui/tkvt100.py=f
+/usr/share/pyshared/twisted/conch/ui/ansi.py=f
+/usr/share/pyshared/twisted/conch/ui/__init__.py=f
+/usr/share/pyshared/twisted/conch/client=d
+/usr/share/pyshared/twisted/conch/client/connect.py=f
+/usr/share/pyshared/twisted/conch/client/direct.py=f
+/usr/share/pyshared/twisted/conch/client/options.py=f
+/usr/share/pyshared/twisted/conch/client/agent.py=f
+/usr/share/pyshared/twisted/conch/client/__init__.py=f
+/usr/share/pyshared/twisted/conch/client/unix.py=f
+/usr/share/pyshared/twisted/conch/client/default.py=f
+/usr/share/pyshared/twisted/conch/telnet.py=f
+/usr/share/pyshared/twisted/conch/error.py=f
+/usr/share/pyshared/twisted/conch/__init__.py=f
+/usr/share/pyshared/twisted/conch/manhole_ssh.py=f
+/usr/share/pyshared/twisted/conch/interfaces.py=f
+/usr/share/pyshared/twisted/conch/recvline.py=f
+/usr/share/pyshared/twisted/conch/ttymodes.py=f
+/usr/share/pyshared/twisted/conch/avatar.py=f
+/usr/share/pyshared/twisted/conch/ls.py=f
+/usr/share/pyshared/twisted/conch/stdio.py=f
+/usr/share/pyshared/twisted/conch/manhole.py=f
+/usr/share/pyshared/twisted/conch/unix.py=f
+/usr/share/pyshared/twisted/conch/_version.py=f
+/usr/share/pyshared/twisted/conch/tap.py=f
+/usr/share/pyshared/twisted/conch/mixin.py=f
+/usr/share/pyshared/twisted/conch/manhole_tap.py=f
+/usr/share/pyshared/twisted/conch/checkers.py=f
+/usr/share/pyshared/Conch-8.1.0.egg-info=f
+PYEOF
+else
+	mkdir -p /var/lib/pycentral
+	echo python-twisted-conch >> /var/lib/pycentral/delayed-pkgs
+fi
+# End automatically added section
+

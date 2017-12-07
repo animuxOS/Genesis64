@@ -1,0 +1,18 @@
+#!/bin/sh -e
+
+# When stuff has been installed in /usr/lib/xfce4/mcs-plugin, do the refresh
+if [ "$1" = "triggered" ]; then
+	echo -n "Refreshing xfce-mcs-manager to update plugins visibility ..." >&2
+	kill -s USR1 `pidof xfce-mcs-manager` > /dev/null 2>&1 || true
+	echo " done." >&2
+fi
+
+# menu stuff
+if [ -x /usr/bin/update-menus ] ; then update-menus ; fi
+
+# Automatically added by dh_installmenu
+if [ "$1" = "configure" ] && [ -x "`which update-menus 2>/dev/null`" ]; then
+	update-menus
+fi
+# End automatically added section
+

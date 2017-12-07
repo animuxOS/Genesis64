@@ -1,0 +1,1475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+    <plugin name="ezoom">
+	<deps>
+	    <relation type="after">
+		<plugin>expo</plugin>
+	    </relation>
+	    <relation type="before">
+		<plugin>switcher</plugin>
+	    </relation>
+	    <requirement>
+		<plugin>mousepoll</plugin>
+	    </requirement>
+	</deps>
+	<short>Enhanced Zoom Desktop</short>
+	<short xml:lang="ca">Zoom d'escriptori millorat</short>
+	<short xml:lang="el">Βελτιωμένο Ζουμ Επιφάνειας Εργασίας</short>
+	<short xml:lang="en_GB">Enhanced Zoom Desktop</short>
+	<short xml:lang="fi">Parannettu zoomaustyökalu</short>
+	<short xml:lang="fr">Zoom du Bureau Amélioré</short>
+	<short xml:lang="gl">Zoom Mellorado</short>
+	<short xml:lang="gu">ઉન્નત બનાવાયેલ નાનીમોટી ડેસ્કટોપ</short>
+	<short xml:lang="hi">संवर्द्धित ज़ूम डेस्कटॉप</short>
+	<short xml:lang="it">Ingrandimento desktop avanzato</short>
+	<short xml:lang="ja">デスクトップのズーム機能強化版</short>
+	<short xml:lang="nb">Utvidet forstørret skrivebord</short>
+	<short xml:lang="nl">Verbeterde bureablad zoom</short>
+	<short xml:lang="pl">Zaawansowane powiększanie pulpitu</short>
+	<short xml:lang="pt">Zoom Melhorado</short>
+	<short xml:lang="pt_BR">Zoom Melhorado</short>
+	<short xml:lang="sv">Förbättrad skrivbordszoom</short>
+	<short xml:lang="tr">Gelişmiş Masaüstü Büyütücü</short>
+	<long>Enhanced zoom functions for the visually impaired and other users</long>
+	<long xml:lang="el">Λειτουργίες βελτιωμένου ζουμ για οπτικά ανύμπορους κ άλλους χρήστες</long>
+	<long xml:lang="en_GB">Enhanced zoom functions for the visually impaired and other users</long>
+	<long xml:lang="fi">Laajennetut zoom-toiminnot esim. näköesteisille</long>
+	<long xml:lang="fr">Fonctions de zoom améliorées pour les malvoyants et les autres utilisateurs</long>
+	<long xml:lang="gl">Funcións de zoom mellorado para persoas con deficiencias visuais e outros usuarios</long>
+	<long xml:lang="it">Funzioni di ingrandimento migliorato per ipovedenti e altri utenti</long>
+	<long xml:lang="ja">視覚障害者等向けの機能強化版ズーム</long>
+	<long xml:lang="nb">Utvidede forstørrelsesfunksjoner for synshemmede og andre brukere</long>
+	<long xml:lang="nl">Verbeterde zoom functie's voor visueel beperkten en andere gebruikers</long>
+	<long xml:lang="pt">Zoom optimizado para pessoas com deficiências visuais e outros utilizadores</long>
+	<long xml:lang="sv">Förbättrad skrivbordszoom för de med dålig syn och andra användare</long>
+	<category>Accessibility</category>
+	<display>
+	    <group>
+		<short>Zoom In/Out</short>
+		<short xml:lang="el">Ζουμ Μέσα/Έξω</short>
+		<short xml:lang="en_GB">Zoom In/Out</short>
+		<short xml:lang="fi">Lähennä/loitonna</short>
+		<short xml:lang="fr">Zoomer/Dézoomer</short>
+		<short xml:lang="gl">Achegar/Afastar</short>
+		<short xml:lang="it">Ingrandisci/Rimpicciolisci</short>
+		<short xml:lang="ja">ズーム イン/アウト</short>
+		<short xml:lang="nb">Forstørr/forminsk</short>
+		<short xml:lang="nl">In/Uit zoomen</short>
+		<short xml:lang="pt">Zoom Dentro/Fora</short>
+		<short xml:lang="sv">Zooma in/ut</short>
+		<option type="button" name="zoom_in">
+		    <short>Zoom In</short>
+		    <short xml:lang="ca">Apropar</short>
+		    <short xml:lang="el">Ζουμ Μέσα</short>
+		    <short xml:lang="en_GB">Zoom In</short>
+		    <short xml:lang="fi">Lähennä</short>
+		    <short xml:lang="fr">Zoomer</short>
+		    <short xml:lang="gl">Aumentar o zoom</short>
+		    <short xml:lang="gu">મોટુ કરો</short>
+		    <short xml:lang="hi">ज़ूम इन</short>
+		    <short xml:lang="it">Ingrandisci</short>
+		    <short xml:lang="ja">ズームイン</short>
+		    <short xml:lang="nb">Forstørr</short>
+		    <short xml:lang="nl">Inzoomen</short>
+		    <short xml:lang="pt">Aumentar o zoom</short>
+		    <short xml:lang="pt_BR">Aumentar o zoom</short>
+		    <short xml:lang="sv">Zooma in</short>
+		    <short xml:lang="tr">Büyüt</short>
+		    <long>Zoom In</long>
+		    <long xml:lang="ca">Apropar</long>
+		    <long xml:lang="el">Ζουμ Μέσα</long>
+		    <long xml:lang="en_GB">Zoom In</long>
+		    <long xml:lang="fi">Lähennä</long>
+		    <long xml:lang="fr">Zoomer</long>
+		    <long xml:lang="gl">Aumentar o zoom</long>
+		    <long xml:lang="gu">મોટુ કરો</long>
+		    <long xml:lang="hi">ज़ूम इन</long>
+		    <long xml:lang="it">Ingrandisci</long>
+		    <long xml:lang="ja">ズームイン</long>
+		    <long xml:lang="nb">Forstørr</long>
+		    <long xml:lang="nl">Inzoomen</long>
+		    <long xml:lang="pt">Aumentar o zoom</long>
+		    <long xml:lang="pt_BR">Aumentar o zoom</long>
+		    <long xml:lang="sv">Zooma in</long>
+		    <long xml:lang="tr">Büyüt</long>
+		    <default>&lt;Super&gt;Button4</default>
+		</option>
+		<option type="key" name="zoom_in_key">
+		    <short>Zoom In</short>
+		    <short xml:lang="ca">Apropar</short>
+		    <short xml:lang="el">Ζουμ Μέσα</short>
+		    <short xml:lang="en_GB">Zoom In</short>
+		    <short xml:lang="fi">Lähennä</short>
+		    <short xml:lang="fr">Zoomer</short>
+		    <short xml:lang="gl">Aumentar o zoom</short>
+		    <short xml:lang="gu">મોટુ કરો</short>
+		    <short xml:lang="hi">ज़ूम इन</short>
+		    <short xml:lang="it">Ingrandisci</short>
+		    <short xml:lang="ja">ズームイン</short>
+		    <short xml:lang="nb">Forstørr</short>
+		    <short xml:lang="nl">Inzoomen</short>
+		    <short xml:lang="pt">Aumentar o zoom</short>
+		    <short xml:lang="pt_BR">Aumentar o zoom</short>
+		    <short xml:lang="sv">Zooma in</short>
+		    <short xml:lang="tr">Büyüt</short>
+		    <long>Zoom In</long>
+		    <long xml:lang="ca">Apropar</long>
+		    <long xml:lang="el">Ζουμ Μέσα</long>
+		    <long xml:lang="en_GB">Zoom In</long>
+		    <long xml:lang="fi">Lähennä</long>
+		    <long xml:lang="fr">Zoomer</long>
+		    <long xml:lang="gl">Aumentar o zoom</long>
+		    <long xml:lang="gu">મોટુ કરો</long>
+		    <long xml:lang="hi">ज़ूम इन</long>
+		    <long xml:lang="it">Ingrandisci</long>
+		    <long xml:lang="ja">ズームイン</long>
+		    <long xml:lang="nb">Forstørr</long>
+		    <long xml:lang="nl">Inzoomen</long>
+		    <long xml:lang="pt">Aumentar o zoom</long>
+		    <long xml:lang="pt_BR">Aumentar o zoom</long>
+		    <long xml:lang="sv">Zooma in</long>
+		    <long xml:lang="tr">Büyüt</long>
+		</option>
+		<option type="button" name="zoom_out">
+		    <short>Zoom Out</short>
+		    <short xml:lang="ca">Allunyar</short>
+		    <short xml:lang="el">Ζουμ Εξω</short>
+		    <short xml:lang="en_GB">Zoom Out</short>
+		    <short xml:lang="fi">Loitonna</short>
+		    <short xml:lang="fr">Dézoomer</short>
+		    <short xml:lang="gl">Diminuír o zoom</short>
+		    <short xml:lang="gu">નાનુ કરો</short>
+		    <short xml:lang="hi">ज़ूम आउट</short>
+		    <short xml:lang="it">Rimpicciolisci</short>
+		    <short xml:lang="ja">ズームアウト</short>
+		    <short xml:lang="nb">Forminsk</short>
+		    <short xml:lang="nl">Uitzoomen</short>
+		    <short xml:lang="pt">Diminuir o zoom</short>
+		    <short xml:lang="pt_BR">Diminuir o zoom</short>
+		    <short xml:lang="sv">Zooma ut</short>
+		    <short xml:lang="tr">Küçült</short>
+		    <long>Zoom Out</long>
+		    <long xml:lang="ca">Allunyar</long>
+		    <long xml:lang="el">Ζουμ Εξω</long>
+		    <long xml:lang="en_GB">Zoom Out</long>
+		    <long xml:lang="fi">Loitonna</long>
+		    <long xml:lang="fr">Dézoomer</long>
+		    <long xml:lang="gl">Diminuír o zoom</long>
+		    <long xml:lang="gu">નાનુ કરો</long>
+		    <long xml:lang="hi">ज़ूम आउट</long>
+		    <long xml:lang="it">Rimpicciolisci</long>
+		    <long xml:lang="ja">ズームアウト</long>
+		    <long xml:lang="nb">Forminsk</long>
+		    <long xml:lang="nl">Uitzoomen</long>
+		    <long xml:lang="pt">Diminuir o zoom</long>
+		    <long xml:lang="pt_BR">Diminuir o zoom</long>
+		    <long xml:lang="sv">Zooma ut</long>
+		    <long xml:lang="tr">Küçült</long>
+		    <default>&lt;Super&gt;Button5</default>
+		</option>
+		<option type="key" name="zoom_out_key">
+		    <short>Zoom Out</short>
+		    <short xml:lang="ca">Allunyar</short>
+		    <short xml:lang="el">Ζουμ Εξω</short>
+		    <short xml:lang="en_GB">Zoom Out</short>
+		    <short xml:lang="fi">Loitonna</short>
+		    <short xml:lang="fr">Dézoomer</short>
+		    <short xml:lang="gl">Diminuír o zoom</short>
+		    <short xml:lang="gu">નાનુ કરો</short>
+		    <short xml:lang="hi">ज़ूम आउट</short>
+		    <short xml:lang="it">Rimpicciolisci</short>
+		    <short xml:lang="ja">ズームアウト</short>
+		    <short xml:lang="nb">Forminsk</short>
+		    <short xml:lang="nl">Uitzoomen</short>
+		    <short xml:lang="pt">Diminuir o zoom</short>
+		    <short xml:lang="pt_BR">Diminuir o zoom</short>
+		    <short xml:lang="sv">Zooma ut</short>
+		    <short xml:lang="tr">Küçült</short>
+		    <long>Zoom Out</long>
+		    <long xml:lang="ca">Allunyar</long>
+		    <long xml:lang="el">Ζουμ Εξω</long>
+		    <long xml:lang="en_GB">Zoom Out</long>
+		    <long xml:lang="fi">Loitonna</long>
+		    <long xml:lang="fr">Dézoomer</long>
+		    <long xml:lang="gl">Diminuír o zoom</long>
+		    <long xml:lang="gu">નાનુ કરો</long>
+		    <long xml:lang="hi">ज़ूम आउट</long>
+		    <long xml:lang="it">Rimpicciolisci</long>
+		    <long xml:lang="ja">ズームアウト</long>
+		    <long xml:lang="nb">Forminsk</long>
+		    <long xml:lang="nl">Uitzoomen</long>
+		    <long xml:lang="pt">Diminuir o zoom</long>
+		    <long xml:lang="pt_BR">Diminuir o zoom</long>
+		    <long xml:lang="sv">Zooma ut</long>
+		    <long xml:lang="tr">Küçült</long>
+		</option>
+		<option type="button" name="zoom_box">
+		    <short>Zoom Box</short>
+		    <long>Zoom in on a boxed area</long>
+		    <default>&lt;Super&gt;Button2</default>
+		</option>
+	    </group>
+	    <group>
+		<short>Mouse Behaviour</short>
+		<short xml:lang="el">Συμπεριφορά Ποντικιού</short>
+		<short xml:lang="en_GB">Mouse Behaviour</short>
+		<short xml:lang="fi">Hiiren käytös</short>
+		<short xml:lang="fr">Comportement du pointeur</short>
+		<short xml:lang="gl">Comportamento do Rato</short>
+		<short xml:lang="it">Comportamento mouse</short>
+		<short xml:lang="ja">マウス動作</short>
+		<short xml:lang="nb">Oppførsel for mus</short>
+		<short xml:lang="nl">Muis gedrag</short>
+		<short xml:lang="pt">Comportamento do Rato</short>
+		<short xml:lang="sv">Musbeteende</short>
+		<option type="key" name="center_mouse">
+		    <short>Center the mouse</short>
+		    <short xml:lang="ca">Centre el ratolí</short>
+		    <short xml:lang="el">Κεντράρισμα ποντικιού</short>
+		    <short xml:lang="en_GB">Centre the mouse</short>
+		    <short xml:lang="es">Centrar el raton</short>
+		    <short xml:lang="fi">Keskitä hiiri</short>
+		    <short xml:lang="fr">Centrer le pointeur</short>
+		    <short xml:lang="gl">Centrar o rato</short>
+		    <short xml:lang="gu">માઉસને કેન્દ્રમાં રાખો</short>
+		    <short xml:lang="hi">माउस को केंद्रित करें</short>
+		    <short xml:lang="it">Mouse al centro</short>
+		    <short xml:lang="ja">マウスを中央に</short>
+		    <short xml:lang="nb">Sentrer musen</short>
+		    <short xml:lang="nl">Centreer de muis</short>
+		    <short xml:lang="pl">Wyśrodkuj mysz</short>
+		    <short xml:lang="pt">Centrar o rato</short>
+		    <short xml:lang="pt_BR">Centralizar o mouse</short>
+		    <short xml:lang="sv">Centrera musen</short>
+		    <long>Puts the mouse in the middle of the screen (Regardless of zoom level)</long>
+		    <long xml:lang="ca">Posa el ratolí al mig de la pantalla (independentment del nivell de zoom)</long>
+		    <long xml:lang="el">Τοποθετεί το ποντίκι στο κέντρο της οθόνης (Ασχετα απ το επίπεδο ζουμ)</long>
+		    <long xml:lang="en_GB">Puts the mouse in the middle of the screen (Regardless of zoom level)</long>
+		    <long xml:lang="fi">Keskittää hiiren näytöllä riippumatta zoomaustasosta</long>
+		    <long xml:lang="fr">Place le pointeur au milieu de l'écran (en fonction du niveau de zoom)</long>
+		    <long xml:lang="gl">Coloca o cursor do rato no medio da pantalla (Independetemente do nivel de magnificación)</long>
+		    <long xml:lang="gu">માઉસને સ્ક્રીનની મધ્યમાં મૂકે છે (નાનામોટાપણાના સ્તરને અનુલક્ષીને)</long>
+		    <long xml:lang="hi">माउस को स्क्रीन के बीच में रखता है (जूम स्तर के निरपेक्ष)</long>
+		    <long xml:lang="it">Posiziona il mouse al centro dello schermo (indipendentemente dal livello di ingrandimento).</long>
+		    <long xml:lang="ja">マウスを画面中央に配置（ズーム率に関係なく）</long>
+		    <long xml:lang="nb">Plasserer musen i midten av skjermen (uansett forstørrelsesnivå)</long>
+		    <long xml:lang="nl">Plaatst de muis in het midden van het scherm (Ongeacht zoom niveau)</long>
+		    <long xml:lang="pt">Coloca o cursor do rato no meio do ecrã (Independetemente do nível de magnificação)</long>
+		    <long xml:lang="pt_BR">Coloca o cursor do mouse no meio da tela (Independetemente do nível de zoom)</long>
+		    <long xml:lang="sv">Flyttar musen till mitten av skärmen (oavsett zoomnivå)</long>
+		    <default>&lt;Super&gt;c</default>
+		</option>
+	    </group>
+	    <group>
+		<short>Specific Zoom</short>
+		<short xml:lang="el">Συγκεκριμένο Ζουμ</short>
+		<short xml:lang="en_GB">Specific Zoom</short>
+		<short xml:lang="fi">Määritetty zoom</short>
+		<short xml:lang="fr">Zoom spécifique</short>
+		<short xml:lang="gl">Zoom Específico</short>
+		<short xml:lang="it">Ingrandimento specifico</short>
+		<short xml:lang="ja">指定ズーム</short>
+		<short xml:lang="nb">Spesifikk forstørrelse</short>
+		<short xml:lang="nl">Specifieke zoom</short>
+		<short xml:lang="pl">Specyficzny Zoom</short>
+		<short xml:lang="pt">Zoom Específico</short>
+		<short xml:lang="sv">Specifik zoom</short>
+		<option type="key" name="zoom_specific_1">
+		    <short>Zoom Specific Level 1</short>
+		    <short xml:lang="ca">Nivell específic de zoom 1</short>
+		    <short xml:lang="el">Συγκεκριμένο Επίπεδο Ζουμ 1</short>
+		    <short xml:lang="en_GB">Zoom Specific Level 1</short>
+		    <short xml:lang="es">Zoom especifico 1</short>
+		    <short xml:lang="fi">Määritetty zoomaustaso 1</short>
+		    <short xml:lang="fr">Zoom spécifique niveau 1</short>
+		    <short xml:lang="gl">Nivel de Magnificación Específico 1</short>
+		    <short xml:lang="gu">ચોક્કસ સ્તર ૧ નાનુંમોટું કરો</short>
+		    <short xml:lang="hi">ज़ूम विशेष स्तर 1</short>
+		    <short xml:lang="it">Livello ingrandimento specifico 1</short>
+		    <short xml:lang="ja">指定ズーム率 1</short>
+		    <short xml:lang="nb">Forstørrelsesspesifikt nivå 1</short>
+		    <short xml:lang="nl">Zoom specifiek niveau 1</short>
+		    <short xml:lang="pl">Konkretny poziom zbliżenia 1</short>
+		    <short xml:lang="pt">Nível de Magnificação Específico 1</short>
+		    <short xml:lang="pt_BR">Nível de Ampliação Específico 1</short>
+		    <short xml:lang="sv">Specifik zoomnivå 1</short>
+		    <short xml:lang="tr">Belirli Bir Düzeye Büyüt 1</short>
+		    <long>Zoom to the specific zoom level 1</long>
+		    <long xml:lang="ca">Zoom al nivell específic de zoom 1</long>
+		    <long xml:lang="el">Ζουμάρισμα στο συγκεκριμένο επίπεδο ζουμ 1</long>
+		    <long xml:lang="en_GB">Zoom to the specific zoom level 1</long>
+		    <long xml:lang="fi">Zoomaa määritettyyn tasoon 1</long>
+		    <long xml:lang="fr">Zoomer au niveau spécifique 1</long>
+		    <long xml:lang="gl">Ir para nivel de magnificación específico 1</long>
+		    <long xml:lang="gu">ચોક્કસ નાનામોટાપણાના સ્તર ૧ માં નાનુંમોટું કરો</long>
+		    <long xml:lang="hi">विशेष जूम स्तर 1 में जूम</long>
+		    <long xml:lang="it">Ingrandisci al livello di ingrandimento specifico 1</long>
+		    <long xml:lang="ja">指定ズーム率 1 までズーム</long>
+		    <long xml:lang="nb">Skaler til spesifikt forstørrelsesnivå 1</long>
+		    <long xml:lang="nl">Zoom naar het specifieke zoom niveau 1</long>
+		    <long xml:lang="pl">Przybliż do konkretnego poziomu zbliżenia 1</long>
+		    <long xml:lang="pt">Ir para nível de magnificação específico 1</long>
+		    <long xml:lang="pt_BR">Ir para nível de ampliação específico 1</long>
+		    <long xml:lang="sv">Zooma till specifik zoomnivå 1</long>
+		    <long xml:lang="tr">Belirli bir büyütme düzeyine büyüt 1</long>
+		    <default>&lt;Super&gt;1</default>
+		</option>
+		<option type="float" name="zoom_spec1">
+		    <short>Specific zoom factor 1</short>
+		    <short xml:lang="ca">Factor de zoom específic 1</short>
+		    <short xml:lang="el">Εξειδικευμένο ζουμ παράγοντας 1</short>
+		    <short xml:lang="en_GB">Specific zoom factor 1</short>
+		    <short xml:lang="fi">Määritetty zoomauskerroin 1</short>
+		    <short xml:lang="fr">Facteur de zoom spécifique 1</short>
+		    <short xml:lang="gl">Factor de magnificación específico 1</short>
+		    <short xml:lang="gu">ચોક્કસ નાનામોટાપણાનો અવયવ ૧</short>
+		    <short xml:lang="hi">विशेष जूम कारक 1</short>
+		    <short xml:lang="it">Fattore di ingrandimento specifico 1</short>
+		    <short xml:lang="ja">指定ズーム係数 1</short>
+		    <short xml:lang="nb">Spesifikk forstørrelsesfaktor 1</short>
+		    <short xml:lang="nl">Specifieke zoom factor 1</short>
+		    <short xml:lang="pl">Specyficzny współczynnik przybliżenia 1</short>
+		    <short xml:lang="pt">Factor de magnificação específico 1</short>
+		    <short xml:lang="pt_BR">Fator de zoom específico 1</short>
+		    <short xml:lang="sv">Specifik zoomfaktor 1</short>
+		    <short xml:lang="tr">Belirli bir büyütme basamağı 1</short>
+		    <long>Zoom level to go to when triggering hotkey 1</long>
+		    <long xml:lang="ca">Nivell de zoom quan es polsa la drecera 1</long>
+		    <long xml:lang="el">Χρήση επιπέδου ζουμ όταν ενεργοποιείται το hotkey 1</long>
+		    <long xml:lang="en_GB">Zoom level to go to when triggering hotkey 1</long>
+		    <long xml:lang="fi">Zoomaustaso pikanäppäimellä 1</long>
+		    <long xml:lang="fr">Niveau de zoom à utiliser en pressant le raccourci 1</long>
+		    <long xml:lang="gl">Nivel de magnificación cando presionar tecla de atallo 1</long>
+		    <long xml:lang="gu">જ્યારે હોટકી ૧ બદલી રહ્યા હોય ત્યારે જવાનું નાનામોટાપણાનું સ્તર</long>
+		    <long xml:lang="hi">करने के लिए जूम स्तर जब हॉटकी 1 को ट्रिगर किया जा रहा है</long>
+		    <long xml:lang="it">Livello di ingrandimento da usare con il tasto di scelta rapida 1</long>
+		    <long xml:lang="ja">ホットキー 1 が呼び出されたときのズーム率</long>
+		    <long xml:lang="nb">Forstørrelsesnivå å gå til når hurtigtast 1 brukes</long>
+		    <long xml:lang="nl">Zoom niveau om naar toe te gaan wanneer sneltoets 1 wordt geactiveerd</long>
+		    <long xml:lang="pl">Poziom przybliżenia dla przycisku 1</long>
+		    <long xml:lang="pt">Nível de magnificação quando pressionar tecla de atalho 1</long>
+		    <long xml:lang="pt_BR">Nível de ampliação quando pressionar tecla de atalho 1</long>
+		    <long xml:lang="sv">Zoomnivå som används när snabbtangent 1 trycks ner</long>
+		    <default>1.0</default>
+		    <min>0.1</min>
+		    <max>1.0</max>
+		    <precision>0.01</precision>
+		</option>
+		<option type="key" name="zoom_specific_2">
+		    <short>Zoom Specific Level 2</short>
+		    <short xml:lang="ca">Nivell específic de zoom 2</short>
+		    <short xml:lang="el">Συγκεκριμένο Επίπεδο Ζουμ 2</short>
+		    <short xml:lang="en_GB">Zoom Specific Level 2</short>
+		    <short xml:lang="es">Zoom especifico 2</short>
+		    <short xml:lang="fi">Määritetty zoomaustaso 2</short>
+		    <short xml:lang="fr">Zoom spécifique niveau 2</short>
+		    <short xml:lang="gl">Nivel de Magnificación Específico 2</short>
+		    <short xml:lang="gu">ચોક્કસ સ્તર ૨ નાનુંમોટું કરો</short>
+		    <short xml:lang="hi">ज़ूम विशेष स्तर 2</short>
+		    <short xml:lang="it">Livello ingrandimento specifico 2</short>
+		    <short xml:lang="ja">指定ズーム率 2</short>
+		    <short xml:lang="nb">Forstørrelsesspesifikt nivå 2</short>
+		    <short xml:lang="nl">Zoom specifiek niveau 2</short>
+		    <short xml:lang="pl">Konkretny poziom zbliżenia 2</short>
+		    <short xml:lang="pt">Nível de Magnificação Específico 2</short>
+		    <short xml:lang="pt_BR">Nível de Ampliação Específico 2</short>
+		    <short xml:lang="sv">Specifik zoomnivå 2</short>
+		    <short xml:lang="tr">Belirli Bir Düzeye Büyüt 2</short>
+		    <long>Zoom to the specific zoom level 2</long>
+		    <long xml:lang="ca">Zoom al nivell específic de zoom 2</long>
+		    <long xml:lang="el">Ζουμάρισμα στο συγκεκριμένο επίπεδο ζουμ 2</long>
+		    <long xml:lang="en_GB">Zoom to the specific zoom level 2</long>
+		    <long xml:lang="fi">Zoomaa määritettyyn tasoon 2</long>
+		    <long xml:lang="fr">Zoomer au niveau spécifique 2</long>
+		    <long xml:lang="gl">Ir para nivel de magnificación específico 2</long>
+		    <long xml:lang="gu">ચોક્કસ નાનામોટાપણાના સ્તર ૨ માં નાનુંમોટું કરો</long>
+		    <long xml:lang="hi">विशेष जूम स्तर 2 में जूम</long>
+		    <long xml:lang="it">Ingrandisci al livello di ingrandimento specifico 2</long>
+		    <long xml:lang="ja">指定ズーム率 2 までズーム</long>
+		    <long xml:lang="nb">Skaler til spesifikt forstørrelsesnivå 2</long>
+		    <long xml:lang="nl">Zoom naar het specifieke zoom niveau 2</long>
+		    <long xml:lang="pl">Przybliż do konkretnego poziomu zbliżenia 2</long>
+		    <long xml:lang="pt">Ir para nível de magnificação específico 2</long>
+		    <long xml:lang="pt_BR">Ir para nível de ampliação específico 2</long>
+		    <long xml:lang="sv">Zooma till specifik zoomnivå 2</long>
+		    <long xml:lang="tr">Belirli bir büyütme düzeyine büyüt 2</long>
+		    <default>&lt;Super&gt;2</default>
+		</option>
+		<option type="float" name="zoom_spec2">
+		    <short>Specific zoom factor 2</short>
+		    <short xml:lang="ca">Factor de zoom específic 2</short>
+		    <short xml:lang="el">Εξειδικευμένο ζουμ παράγοντας 2</short>
+		    <short xml:lang="en_GB">Specific zoom factor 2</short>
+		    <short xml:lang="fi">Määritetty zoomauskerroin 2</short>
+		    <short xml:lang="fr">Facteur de zoom spécifique 2</short>
+		    <short xml:lang="gl">Factor de magnificación específico 2</short>
+		    <short xml:lang="gu">ચોક્કસ નાનામોટાપણાનો અવયવ ૨</short>
+		    <short xml:lang="hi">विशेष जूम कारक 2</short>
+		    <short xml:lang="it">Fattore di ingrandimento specifico 2</short>
+		    <short xml:lang="ja">指定ズーム係数 2</short>
+		    <short xml:lang="nb">Spesifikk forstørrelsesfaktor 2</short>
+		    <short xml:lang="nl">Specifieke zoom factor 2</short>
+		    <short xml:lang="pl">Specyficzny współczynnik przybliżenia 2</short>
+		    <short xml:lang="pt">Factor de magnificação específico 2</short>
+		    <short xml:lang="pt_BR">Fator de zoom específico 2</short>
+		    <short xml:lang="sv">Specifik zoomfaktor 2</short>
+		    <short xml:lang="tr">Belirli bir büyütme basamağı 2</short>
+		    <long>Zoom level to go to when triggering hotkey 2</long>
+		    <long xml:lang="ca">Nivell de zoom quan es polsa la drecera 2</long>
+		    <long xml:lang="el">Χρήση επιπέδου ζουμ όταν ενεργοποιείται το hotkey 2</long>
+		    <long xml:lang="en_GB">Zoom level to go to when triggering hotkey 2</long>
+		    <long xml:lang="fi">Zoomaustaso pikanäppäimellä 2</long>
+		    <long xml:lang="fr">Niveau de zoom à utiliser en pressant le raccourci 2</long>
+		    <long xml:lang="gl">Nivel de magnificación cando presionar tecla de atallo 2</long>
+		    <long xml:lang="gu">જ્યારે હોટકી ૨ બદલી રહ્યા હોય ત્યારે જવાનું નાનામોટાપણાનું સ્તર</long>
+		    <long xml:lang="hi">करने के लिए जूम स्तर जब हॉटकी 2 को ट्रिगर किया जा रहा है</long>
+		    <long xml:lang="it">Livello di ingrandimento da usare con il tasto di scelta rapida 2</long>
+		    <long xml:lang="ja">ホットキー 2 が呼び出されたときのズーム率</long>
+		    <long xml:lang="nb">Forstørrelsesnivå å gå til når hurtigtast 2 brukes</long>
+		    <long xml:lang="nl">Zoom niveau om naar toe te gaan wanneer sneltoets 2 wordt geactiveerd</long>
+		    <long xml:lang="pl">Poziom przybliżenia dla przycisku 2</long>
+		    <long xml:lang="pt">Nível de magnificação quando pressionar tecla de atalho 2</long>
+		    <long xml:lang="pt_BR">Nível de ampliação quando pressionar tecla de atalho 2</long>
+		    <long xml:lang="sv">Zoomnivå som används när snabbtangent 2 trycks ner</long>
+		    <default>0.5</default>
+		    <min>0.1</min>
+		    <max>1.0</max>
+		    <precision>0.01</precision>
+		</option>
+		<option type="key" name="zoom_specific_3">
+		    <short>Zoom Specific Level 3</short>
+		    <short xml:lang="ca">Nivell específic de zoom 3</short>
+		    <short xml:lang="el">Συγκεκριμένο Επίπεδο Ζουμ 3</short>
+		    <short xml:lang="en_GB">Zoom Specific Level 3</short>
+		    <short xml:lang="es">Zoom especifico 3</short>
+		    <short xml:lang="fi">Määritetty zoomaustaso 3</short>
+		    <short xml:lang="fr">Zoom spécifique niveau 3</short>
+		    <short xml:lang="gl">Nivel de Magnificación Específico 3</short>
+		    <short xml:lang="gu">ચોક્કસ સ્તર ૩ નાનુંમોટું કરો</short>
+		    <short xml:lang="hi">ज़ूम विशेष स्तर 3</short>
+		    <short xml:lang="it">Livello ingrandimento specifico 3</short>
+		    <short xml:lang="ja">指定ズーム率 3</short>
+		    <short xml:lang="nb">Forstørrelsesspesifikt nivå 3</short>
+		    <short xml:lang="nl">Zoom specifiek niveau 3</short>
+		    <short xml:lang="pl">Konkretny poziom zbliżenia 3</short>
+		    <short xml:lang="pt">Nível de Magnificação Específico 3</short>
+		    <short xml:lang="pt_BR">Nível de Ampliação Específico 3</short>
+		    <short xml:lang="sv">Specifik zoomnivå 3</short>
+		    <short xml:lang="tr">Belirli Bir Düzeye Büyüt 3</short>
+		    <long>Zoom to the specific zoom level 3</long>
+		    <long xml:lang="ca">Zoom al nivell específic de zoom 3</long>
+		    <long xml:lang="el">Ζουμάρισμα στο συγκεκριμένο επίπεδο ζουμ 3</long>
+		    <long xml:lang="en_GB">Zoom to the specific zoom level 3</long>
+		    <long xml:lang="fi">Zoomaa määritettyyn tasoon 3</long>
+		    <long xml:lang="fr">Zoomer au niveau spécifique 3</long>
+		    <long xml:lang="gl">Ir para nivel de magnificación específico 3</long>
+		    <long xml:lang="gu">ચોક્કસ નાનામોટાપણાના સ્તર ૩ માં નાનુંમોટું કરો</long>
+		    <long xml:lang="hi">विशेष जूम स्तर 3 में जूम</long>
+		    <long xml:lang="it">Ingrandisci al livello di ingrandimento specifico 3</long>
+		    <long xml:lang="ja">指定ズーム率 3 までズーム</long>
+		    <long xml:lang="nb">Skaler til spesifikt forstørrelsesnivå 3</long>
+		    <long xml:lang="nl">Zoom naar het specifieke zoom niveau 3</long>
+		    <long xml:lang="pl">Przybliż do konkretnego poziomu zbliżenia 3</long>
+		    <long xml:lang="pt">Ir para nível de magnificação específico 3</long>
+		    <long xml:lang="pt_BR">Ir para nível de ampliação específico 3</long>
+		    <long xml:lang="sv">Zooma till specifik zoomnivå 3</long>
+		    <long xml:lang="tr">Belirli bir büyütme düzeyine büyüt 3</long>
+		    <default>&lt;Super&gt;3</default>
+		</option>
+		<option type="float" name="zoom_spec3">
+		    <short>Specific zoom factor 3</short>
+		    <short xml:lang="ca">Factor de zoom específic 3</short>
+		    <short xml:lang="el">Εξειδικευμένο ζουμ παράγοντας 3</short>
+		    <short xml:lang="en_GB">Specific zoom factor 3</short>
+		    <short xml:lang="fi">Määritetty zoomauskerroin 3</short>
+		    <short xml:lang="fr">Facteur de zoom spécifique 3</short>
+		    <short xml:lang="gl">Factor de magnificación específico 3</short>
+		    <short xml:lang="gu">ચોક્કસ નાનામોટાપણાનો અવયવ ૩</short>
+		    <short xml:lang="hi">विशेष जूम कारक 3</short>
+		    <short xml:lang="it">Fattore di ingrandimento specifico 3</short>
+		    <short xml:lang="ja">指定ズーム係数 3</short>
+		    <short xml:lang="nb">Spesifikk forstørrelsesfaktor 3</short>
+		    <short xml:lang="nl">Specifieke zoom factor 3</short>
+		    <short xml:lang="pl">Specyficzny współczynnik przybliżenia 3</short>
+		    <short xml:lang="pt">Factor de magnificação específico 3</short>
+		    <short xml:lang="pt_BR">Fator de zoom específico 3</short>
+		    <short xml:lang="sv">Specifik zoomfaktor 3</short>
+		    <short xml:lang="tr">Belirli bir büyütme basamağı 3</short>
+		    <long>Zoom level to go to when triggering hotkey 3</long>
+		    <long xml:lang="ca">Nivell de zoom quan es polsa la drecera 3</long>
+		    <long xml:lang="el">Χρήση επιπέδου ζουμ όταν ενεργοποιείται το hotkey 3</long>
+		    <long xml:lang="en_GB">Zoom level to go to when triggering hotkey 3</long>
+		    <long xml:lang="fi">Zoomaustaso pikanäppäimellä 3</long>
+		    <long xml:lang="fr">Niveau de zoom à utiliser en pressant le raccourci 3</long>
+		    <long xml:lang="gl">Nivel de magnificación cando presionar tecla de atallo 3</long>
+		    <long xml:lang="gu">જ્યારે હોટકી ૩ બદલી રહ્યા હોય ત્યારે જવાનું નાનામોટાપણાનું સ્તર</long>
+		    <long xml:lang="hi">करने के लिए जूम स्तर जब हॉटकी 3 को ट्रिगर किया जा रहा है</long>
+		    <long xml:lang="it">Livello di ingrandimento da usare con il tasto di scelta rapida 3</long>
+		    <long xml:lang="ja">ホットキー 3 が呼び出されたときのズーム率</long>
+		    <long xml:lang="nb">Forstørrelsesnivå å gå til når hurtigtast 3 brukes</long>
+		    <long xml:lang="nl">Zoom niveau om naar toe te gaan wanneer sneltoets 3 wordt geactiveerd</long>
+		    <long xml:lang="pl">Poziom przybliżenia dla przycisku 3 </long>
+		    <long xml:lang="pt">Nível de magnificação quando pressionar tecla de atalho 3</long>
+		    <long xml:lang="pt_BR">Nível de ampliação quando pressionar tecla de atalho 3</long>
+		    <long xml:lang="sv">Zoomnivå som används när snabbtangent 3 trycks ner</long>
+		    <default>0.2</default>
+		    <min>0.1</min>
+		    <max>1.0</max>
+		    <precision>0.01</precision>
+		</option>
+		<option type="bool" name="spec_target_focus">
+		    <short>Target Focused Window on Specific level</short>
+		    <short xml:lang="el">Στόχευση Εστιασμένου Παραθύρου σε Συγκεκριμένο Επίπεδο</short>
+		    <short xml:lang="en_GB">Target Focused Window on Specific level</short>
+		    <short xml:lang="fr">Cible la fenêtre ayant le focus à un niveau spécifique</short>
+		    <short xml:lang="gl">Mostrar a fiestra Focada nun Nivel Específico</short>
+		    <short xml:lang="gu">ફોકસ થયેલ વિન્ડોને ચોક્કસ સ્તર પર લક્ષ્યાંકિત કરો</short>
+		    <short xml:lang="hi">विशेष स्तर पर फोकस विंडो लक्षित करें</short>
+		    <short xml:lang="it">Applicare il livello specifico alla finestra col focus</short>
+		    <short xml:lang="ja">指定ズーム率使用時はフォーカス・ウィンドウを対象</short>
+		    <short xml:lang="nb">Sikt fokusert vindu på spesifikt nivå</short>
+		    <short xml:lang="nl">Zet venster met focus als doel op specifiek niveau</short>
+		    <short xml:lang="pt">Mostrar a Janela Focada num Nível Específico</short>
+		    <short xml:lang="pt_BR">Mostrar a janela focada em um nível específico</short>
+		    <short xml:lang="sv">Välj ett fokuserat fönster på en specifik nivå</short>
+		    <long>Enable this to target the focused window when jumping to a specific zoom level. Disable to target mouse.</long>
+		    <long xml:lang="ca">Usa la finestra activa com a objectiu del zoom. Si es desactiva s'utilitza el ratolí.</long>
+		    <long xml:lang="el">Ενεργοποιήστε το για να στοχεύσετε το εστιασμένο παράθυρο όταν πετάγεστε σε ένα συγκεκριμένο επίπεδο ζουμαρίσματος. Απενεργοποιήστε το για να στοχεύσετε το ποντίκι.</long>
+		    <long xml:lang="en_GB">Enable this to target the focused window when jumping to a specific zoom level. Disable to target mouse.</long>
+		    <long xml:lang="fr">Activer cette option pour cibler la fenêtre ayant le focus lors d'un saut vers un niveau de zoom spécifique. Désactiver pour cibler le pointeur.</long>
+		    <long xml:lang="gl">Active esta opción para focar a fiestra enfocada cando salta para un nivel de magnificación específico. Desactive para manter o foco no cursor do rato.</long>
+		    <long xml:lang="gu">જ્યારે ચોક્કસ નાનામોટાપણાના વિસ્તારમાં ઝંપલાવી રહ્યા હોય ત્યારે ફોકસ થયેલ વિન્ડોને લક્ષ્ય બનાવવા માટે આ સક્રિય કરો. માઉસને લક્ષ્ય બનાવવા માટે નિષ્ક્રિય કરો.</long>
+		    <long xml:lang="hi">इसे फोकस किए विंडो पर लक्षित करने के लिए सक्रिय करें जब एक विशेष जूम स्तर पर जंप करता है. लक्ष्य माउस पर निष्क्रिय करें.</long>
+		    <long xml:lang="it">Attivare questo per mantenere la finestra col focus passando a un livello di ingrandimento specifico. Disabilitarlo per seguire il mouse.</long>
+		    <long xml:lang="ja">指定ズーム率に移行した際、フォーカス・ウィンドウをズーム域の対象にするには有効に。マウス位置を対象にするには無効に。</long>
+		    <long xml:lang="nb">Bruk dette for å sikte mot vinduet med fokus når du hopper til en spesifikk forstørring. Deaktiver for å sikte mot musen.</long>
+		    <long xml:lang="nl">Schakel dit in om het venster met focus als doel te nemen bĳ de overgang naar een specifiek zoom niveau.Uitschakelen om de muis als doel te nemen.</long>
+		    <long xml:lang="pt">Active esta opção para focar a janela focada quando salta para um nível de magnificação específico. Desactive para manter o foco no cursor do rato.</long>
+		    <long xml:lang="pt_BR">Ative esta opção para direcionar à janela focada quando salta para um nível dezoom específico. Desative para manter o foco no cursor do mouse.</long>
+		    <long xml:lang="sv">Aktivera detta för att fokusera det valda fönstret när man hoppar till en specifik zoomnivå. Inaktivera för att välja musen.</long>
+		    <default>true</default>
+		</option>
+	    </group>
+	    <group>
+		<short>Zoom Area Movement</short>
+		<short xml:lang="el">Περιοχή Κίνησης Ζουμ</short>
+		<short xml:lang="en_GB">Zoom Area Movement</short>
+		<short xml:lang="fi">Zoomausalueen liike</short>
+		<short xml:lang="fr">Mouvement de la zone de zoom</short>
+		<short xml:lang="gl">Movemento da Área de Zoom</short>
+		<short xml:lang="it">Movimento zoom</short>
+		<short xml:lang="ja">ズーム域の移動</short>
+		<short xml:lang="nb">Bevegelse for forstørrelsesområde</short>
+		<short xml:lang="nl">Zoom gebied beweging</short>
+		<short xml:lang="pt">Movimento Zoom Área</short>
+		<short xml:lang="sv">Zoomrörelse</short>
+		<option type="key" name="lock_zoom">
+		    <short>Toggle zoom area lock</short>
+		    <short xml:lang="el">Εκκίνηση κλειδώματος ζουμαρισμένης περιοχής</short>
+		    <short xml:lang="en_GB">Toggle zoom area lock</short>
+		    <short xml:lang="fi">Zoomausalueen lukitus</short>
+		    <short xml:lang="fr">Activer le verrouillage de la zone du zoom</short>
+		    <short xml:lang="gl">Alternar bloqueamento da área de zoom</short>
+		    <short xml:lang="gu">નાનામોટાપણાના વિસ્તારનું તાળું બદલો</short>
+		    <short xml:lang="hi">जूम क्षेत्र लॉक टॉगल करें</short>
+		    <short xml:lang="it">Commuta il blocco sull'area ingrandita</short>
+		    <short xml:lang="ja">ズーム域ロックのオンオフ</short>
+		    <short xml:lang="nb">Slå på/av låsing av forstørret område</short>
+		    <short xml:lang="nl">Wissel zoomgebied slot</short>
+		    <short xml:lang="pt">Alternar bloqueamento da área de zoom</short>
+		    <short xml:lang="pt_BR">Alternar o travamento da área de zoom</short>
+		    <short xml:lang="sv">Växla lås på zoomområde</short>
+		    <long>Toggles a lock on the zoom area so it doesn't change on various events</long>
+		    <long xml:lang="el">Εκκινεί ένα κλείδωμα στη ζουμαρισμένη περιοχή ωστε να μην αλλάζει στα διάφορα γεγονότα</long>
+		    <long xml:lang="en_GB">Toggles a lock on the zoom area so it doesn't change on various events</long>
+		    <long xml:lang="fr">Activer le verrouillage de la zone du zoom pour qu'elle ne bouge pas lors d'événements divers</long>
+		    <long xml:lang="gl">Activa/desactiva o bloqueamento na área magnificada de modo a que non mude nos varios eventos.</long>
+		    <long xml:lang="gu">નાનામોટાપણાના વિસ્તારનું તાળું બદલે છે કે જેથી તે વિવિધ ઘટનાઓ પર બદલાતું નથી</long>
+		    <long xml:lang="hi">जूम क्षेत्र में लॉक टॉगल करें ताकि यह विभिन्न घटना पर नहीं बदलता है</long>
+		    <long xml:lang="it">Commuta un blocco sull'area ingrandita in modo che non vari con diversi eventi</long>
+		    <long xml:lang="ja">ズーム域を固定して、様々なイベントによりズーム域が変更されるのを防ぐロックのオンオフ</long>
+		    <long xml:lang="nb">Slår på/av en lås på det forstørrede området slik at det ikke endres ved diverse hendelser</long>
+		    <long xml:lang="nl">Schakelt een slot op het zoomgebied zodat het niet veranderd bĳ diverse gebeurtenissen</long>
+		    <long xml:lang="pt">Activa/desactiva o bloqueamento na área magnificada de modo a que não mude nos vários eventos</long>
+		    <long xml:lang="pt_BR">Ativa/desativa o travamento na área de zoom de modo que não mude nos vários eventos</long>
+		    <long xml:lang="sv">Växlar ett lås på det zoomade ömrådet så det inte ändras på olika händelser</long>
+		    <default>&lt;Super&gt;l</default>
+		</option>
+		<subgroup>
+		    <short>Panning</short>
+		    <short xml:lang="el">Επικάλυψη</short>
+		    <short xml:lang="en_GB">Panning</short>
+		    <short xml:lang="fr">Panoramique</short>
+		    <short xml:lang="gl">Movemento</short>
+		    <short xml:lang="it">Spostamento panoramico</short>
+		    <short xml:lang="ja">移動</short>
+		    <short xml:lang="nb">Panorering</short>
+		    <short xml:lang="nl">Verschuiven</short>
+		    <short xml:lang="pt">Seguimento</short>
+		    <short xml:lang="sv">Panorering</short>
+		    <option type="key" name="pan_left">
+			<short>Pan Zoom Left</short>
+			<short xml:lang="ca">Mou zoom a l'esquerra</short>
+			<short xml:lang="el">Pan του Ζουμ Αριστερά</short>
+			<short xml:lang="en_GB">Pan Zoom Left</short>
+			<short xml:lang="fi">Panoroi ja zoomaa vasemmalle</short>
+			<short xml:lang="fr">Déplacer le zoom à gauche</short>
+			<short xml:lang="gl">Percorrer (mover) a área magnificada cara a esquerda</short>
+			<short xml:lang="gu">પેન નાનુંમોટું ડાબે કરો</short>
+			<short xml:lang="hi">ज़ूम बायें पैन करें</short>
+			<short xml:lang="it">Sposta l'ingrandimento a sinistra</short>
+			<short xml:lang="ja">ズーム域を左に移動</short>
+			<short xml:lang="nb">Panorer mot venstre</short>
+			<short xml:lang="nl">Verschuif zoom links</short>
+			<short xml:lang="pt">Percorrer a área magnificada para a esquerda</short>
+			<short xml:lang="pt_BR">Percorrer (mover) a área ampliada para a esquerda</short>
+			<short xml:lang="sv">Panorera vänster</short>
+			<long>Pan (move) the zoom area left</long>
+			<long xml:lang="ca">Mou l'àrea de zoom a l'esquerra</long>
+			<long xml:lang="el">Pan (μετακίνηση) της ζουμαρισμένης περιοχής αριστερά</long>
+			<long xml:lang="en_GB">Pan (move) the zoom area left</long>
+			<long xml:lang="fi">Panoroi (siirrä) zoomausaluetta vasemmalle</long>
+			<long xml:lang="fr">Déplacer la zone de zoom vers la gauche</long>
+			<long xml:lang="gl">Percorrer (mover) a área magnificada cara a esquerda</long>
+			<long xml:lang="gu">નાનામોટાપણાના વિસ્તારને ડાબે પેન કરો (ખસેડો)</long>
+			<long xml:lang="hi">जूम क्षेत्र को बायें खिसकाएं</long>
+			<long xml:lang="it">Muovi l'area di ingrandimento verso sinistra</long>
+			<long xml:lang="ja">ズーム域を左に移動</long>
+			<long xml:lang="nb">Panorer (flytt) det forstørrede området til venstre</long>
+			<long xml:lang="nl">Verschuif (beweeg) het zoomgebied naar links</long>
+			<long xml:lang="pt">Percorrer (mover) a área magnificada para a esquerda</long>
+			<long xml:lang="pt_BR">Percorrer (mover) a área ampliada para a esquerda</long>
+			<long xml:lang="sv">Panorera (flytta) det zoomade området åt vänster</long>
+		    </option>
+		    <option type="key" name="pan_right">
+			<short>Pan Zoom Right</short>
+			<short xml:lang="ca">Mou zoom a la dreta</short>
+			<short xml:lang="el">Pan του Ζουμ Δεξιά</short>
+			<short xml:lang="en_GB">Pan Zoom Right</short>
+			<short xml:lang="fi">Panoroi ja zoomaa oikealle</short>
+			<short xml:lang="fr">Déplacer le zoom à droite</short>
+			<short xml:lang="gl">Percorrer (mover) a área magnificada cara a dereita</short>
+			<short xml:lang="gu">પેન નાનુંમોટું જમણે કરો</short>
+			<short xml:lang="hi">ज़ूम दाहिने पैन करें</short>
+			<short xml:lang="it">Sposta l'ingrandimento a destra</short>
+			<short xml:lang="ja">ズーム域を右に移動</short>
+			<short xml:lang="nb">Panorer mot høyre</short>
+			<short xml:lang="nl">Verschuif zoom rechts</short>
+			<short xml:lang="pt">Percorrer a área magnificada para a direita</short>
+			<short xml:lang="pt_BR">Percorrer (mover) a área ampliada para a direita</short>
+			<short xml:lang="sv">Panorera höger</short>
+			<long>Pan (move) the zoom area right</long>
+			<long xml:lang="ca">Mou l'àrea de zoom a la dreta</long>
+			<long xml:lang="el">Pan (μετακίνηση) της ζουμαρισμένης περιοχής δεξιά</long>
+			<long xml:lang="en_GB">Pan (move) the zoom area right</long>
+			<long xml:lang="fi">Panoroi (siirrä) zoomausaluetta oikealle</long>
+			<long xml:lang="fr">Déplacer la zone de zoom vers la droite</long>
+			<long xml:lang="gl">Percorrer (mover) a área magnificada cara a dereita</long>
+			<long xml:lang="gu">નાનામોટાપણાના વિસ્તારને જમણે પેન કરો (ખસેડો)</long>
+			<long xml:lang="hi">जूम क्षेत्र को दाहिने खिसकाएं</long>
+			<long xml:lang="it">Muovi l'area di ingrandimento verso destra</long>
+			<long xml:lang="ja">ズーム域を右に移動</long>
+			<long xml:lang="nb">Panorer (flytt) det forstørrede området til høyre</long>
+			<long xml:lang="nl">Verschuif (beweeg) het zoomgebied naar rechts</long>
+			<long xml:lang="pt">Percorrer (mover) a área magnificada para a direita</long>
+			<long xml:lang="pt_BR">Percorrer (mover) a área ampliada para a direita</long>
+			<long xml:lang="sv">Panorera (flytta) det zoomade området åt vänster</long>
+		    </option>
+		    <option type="key" name="pan_up">
+			<short>Pan Zoom Up</short>
+			<short xml:lang="ca">Mou zoom amunt</short>
+			<short xml:lang="el">Pan του Ζουμ Πάνω</short>
+			<short xml:lang="en_GB">Pan Zoom Up</short>
+			<short xml:lang="fi">Panoroi ja zoomaa ylös</short>
+			<short xml:lang="fr">Déplacer le zoom en haut</short>
+			<short xml:lang="gl">Percorrer (mover) a área magnificada para arriba</short>
+			<short xml:lang="gu">પેન નાનુંમોટું ઉપર કરો</short>
+			<short xml:lang="hi">ज़ूम ऊपर पैन करें</short>
+			<short xml:lang="it">Sposta l'ingrandimento in alto</short>
+			<short xml:lang="ja">ズーム域を上に移動</short>
+			<short xml:lang="nb">Panorer oppover</short>
+			<short xml:lang="nl">Verschuif zoom omhoog</short>
+			<short xml:lang="pt">Percorrer a área magnificada para cima</short>
+			<short xml:lang="pt_BR">Percorrer (mover) a área ampliada para cima</short>
+			<short xml:lang="sv">Panorera upp</short>
+			<long>Pan (move) the zoom area up</long>
+			<long xml:lang="ca">Mou l'àrea de zoom cap amunt</long>
+			<long xml:lang="el">Pan (μετακίνηση) της ζουμαρισμένης περιοχής πάνω</long>
+			<long xml:lang="en_GB">Pan (move) the zoom area up</long>
+			<long xml:lang="fi">Panoroi (siirrä) zoomausaluetta ylös</long>
+			<long xml:lang="fr">Déplacer la zone de zoom vers le haut</long>
+			<long xml:lang="gl">Percorrer (mover) a área magnificada cara arriba</long>
+			<long xml:lang="gu">નાનામોટાપણાના વિસ્તારને ઉપર પેન કરો (ખસેડો)</long>
+			<long xml:lang="hi">जूम क्षेत्र को ऊपर खिसकाएं</long>
+			<long xml:lang="it">Muovi l'area di ingrandimento verso l'alto</long>
+			<long xml:lang="ja">ズーム域を上に移動</long>
+			<long xml:lang="nb">Panorer (flytt) det forstørrede området oppover</long>
+			<long xml:lang="nl">Verschuif (beweeg) het zoomgebied omhoog</long>
+			<long xml:lang="pt">Percorrer (mover) a área magnificada para cima</long>
+			<long xml:lang="pt_BR">Percorrer (mover) a área ampliada para cima</long>
+			<long xml:lang="sv">Panorera (flytta) det zoomade området uppåt</long>
+		    </option>
+		    <option type="key" name="pan_down">
+			<short>Pan Zoom Down</short>
+			<short xml:lang="ca">Mou zoom avall</short>
+			<short xml:lang="el">Pan του Ζουμ Κάτω</short>
+			<short xml:lang="en_GB">Pan Zoom Down</short>
+			<short xml:lang="fi">Panoroi ja zoomaa alas</short>
+			<short xml:lang="fr">Déplacer le zoom en bas</short>
+			<short xml:lang="gl">Percorrer (mover) a área magnificada cara abaixo</short>
+			<short xml:lang="gu">પેન નાનુંમોટું નીચે કરો</short>
+			<short xml:lang="hi">ज़ूम नीचे पैन करें</short>
+			<short xml:lang="it">Sposta l'ingrandimento in basso</short>
+			<short xml:lang="ja">ズーム域を下に移動</short>
+			<short xml:lang="nb">Panorer nedover</short>
+			<short xml:lang="nl">Verschuif zoom omlaag</short>
+			<short xml:lang="pt">Percorrer a área magnificada para baixo</short>
+			<short xml:lang="pt_BR">Percorrer (mover) a área ampliada para baixo</short>
+			<short xml:lang="sv">Panorera ner</short>
+			<long>Pan (move) the zoom area down</long>
+			<long xml:lang="ca">Mou l'àrea de zoom cap avall</long>
+			<long xml:lang="el">Pan (μετακίνηση) της ζουμαρισμένης περιοχής κάτω</long>
+			<long xml:lang="en_GB">Pan (move) the zoom area down</long>
+			<long xml:lang="fi">Panoroi (siirrä) zoomausaluetta alas</long>
+			<long xml:lang="fr">Déplacer la zone de zoom vers le bas</long>
+			<long xml:lang="gl">Percorrer (mover) a área magnificada cara abaixo</long>
+			<long xml:lang="gu">નાનામોટાપણાના વિસ્તારને નીચે પેન કરો (ખસેડો)</long>
+			<long xml:lang="hi">जूम क्षेत्र को नीचे खिसकाएं</long>
+			<long xml:lang="it">Muovi l'area di ingrandimento verso il basso</long>
+			<long xml:lang="ja">ズーム域を下に移動</long>
+			<long xml:lang="nb">Panorer (flytt) det forstørrede området nedover</long>
+			<long xml:lang="nl">Verschuif (beweeg) het zoomgebied naar beneden</long>
+			<long xml:lang="pt">Percorrer (mover) a área magnificada para baixo</long>
+			<long xml:lang="pt_BR">Percorrer (mover) a área ampliada para baixo</long>
+			<long xml:lang="sv">Panorera (flytta) det zoomade området nedåt</long>
+		    </option>
+		</subgroup>
+		<subgroup>
+		    <short>Fitting</short>
+		    <short xml:lang="el">Ταίριαγμα</short>
+		    <short xml:lang="en_GB">Fitting</short>
+		    <short xml:lang="fi">Sovitus</short>
+		    <short xml:lang="fr">Ajustement</short>
+		    <short xml:lang="it">Adattamento</short>
+		    <short xml:lang="ja">調整</short>
+		    <short xml:lang="nb">Tilpasning</short>
+		    <short xml:lang="nl">Passen</short>
+		    <short xml:lang="pt">Encaixe</short>
+		    <short xml:lang="sv">Inpassning</short>
+		    <option type="key" name="fit_to_zoom">
+			<short>Fit the window to the zoom level</short>
+			<short xml:lang="ca">Ajusta la finestra al nivell de zoom</short>
+			<short xml:lang="el">Ταίριαγμα του παραθύρου στο επίπεδο ζουμ</short>
+			<short xml:lang="en_GB">Fit the window to the zoom level</short>
+			<short xml:lang="fi">Sovita ikkuna zoomaustasoon</short>
+			<short xml:lang="fr">Ajuster la fenêtre au niveau de zoom</short>
+			<short xml:lang="gl">Adequar dimensión da fiestra para o nivel de zoom</short>
+			<short xml:lang="gu">વિન્ડોને નાનામોટાપણાના સ્તરમાં બંધબેસાડો</short>
+			<short xml:lang="hi">जूम स्तर के अनुरूप विंडो में फिट करें</short>
+			<short xml:lang="it">Adatta la finestra al livello di ingrandimento</short>
+			<short xml:lang="ja">ウィンドウをズーム率に合わせる</short>
+			<short xml:lang="nb">Tilpass vinduet til forstørrelsesnivået</short>
+			<short xml:lang="nl">Pas het venster in in het zoom niveau</short>
+			<short xml:lang="pt">Adequar dimensão da janela para o nível de zoom</short>
+			<short xml:lang="pt_BR">Ajustar a janela ao nível do zoom</short>
+			<short xml:lang="sv">Anpassa fönstret till zoomnivån </short>
+			<long>Resize the window so it matches the current zoom level.</long>
+			<long xml:lang="ca">Redimensiona la finestra de manera que concordi amb el nivell de zoom actual.</long>
+			<long xml:lang="el">Μορφοποίηση παραθύρου για να ταιριάξει στο τρέχον επίπεδο ζουμ.</long>
+			<long xml:lang="en_GB">Resize the window so it matches the current zoom level.</long>
+			<long xml:lang="fi">Sovita ikkuna nykyiseen zoomaustasoon.</long>
+			<long xml:lang="fr">Redimensionner la fenêtre pour qu'elle coresponde au niveau de zoom courant.</long>
+			<long xml:lang="gl">Redimensiona a fiestra de modo que coincida co nivel de magnificación actual</long>
+			<long xml:lang="gu">વિન્ડોનું માપ બદલો કે જેથી તે વર્તમાન નાનામોટાપણાના સ્તર સાથે બંધબેસે.</long>
+			<long xml:lang="hi">विंडो का आकार बदलें ताकि यह मौजूदा जूम स्तर को मेल खाएं</long>
+			<long xml:lang="it">Ridimensiona la finestra in modo che corrisponda al livello di ingrandimento corrente.</long>
+			<long xml:lang="ja">現在のズーム率に合わせてウィンドウをサイズ変更</long>
+			<long xml:lang="nb">Gjør om størrelse på vinduet slik at det passer til nåværende forstørrelsesnivå.</long>
+			<long xml:lang="nl">Past de grootte aan van het venster zodat het past bĳ het huidige zoom niveau.</long>
+			<long xml:lang="pt">Redimensiona a janela de modo a que coincida com o nível de magnificação actual.</long>
+			<long xml:lang="pt_BR">Redimensiona a janela de modo a que coincida com o nível atual de zoom</long>
+			<long xml:lang="sv">Anpassa fönster så att det passar med den nuvarande zoomnivån.</long>
+			<default>&lt;Super&gt;v</default>
+		    </option>
+		    <option type="key" name="fit_to_window">
+			<short>Fit zoomed area to window</short>
+			<short xml:lang="ca">Ajusta l'àrea de zoom a la finestra</short>
+			<short xml:lang="el">Ταίριαγμα ζουμαρισμένης περιοχής στο παράθυρο</short>
+			<short xml:lang="en_GB">Fit zoomed area to window</short>
+			<short xml:lang="fi">Sovita zoomattu alue ikkunaan</short>
+			<short xml:lang="fr">Ajuster la zone zoomée à la fenêtre</short>
+			<short xml:lang="gl">Adequar área de zoom para a fiestra</short>
+			<short xml:lang="gu">નાનામોટા થયેલ વિસ્તારને વિન્ડોમાં બંધબેસાડો</short>
+			<short xml:lang="hi">विंडो में जूम किया क्षेत्र फिट करें</short>
+			<short xml:lang="it">Adatta area ingrandita alla finestra</short>
+			<short xml:lang="ja">ズーム域をウィンドウに合わせる</short>
+			<short xml:lang="nb">Tilpass forstørret område til vindu</short>
+			<short xml:lang="nl">Pas ingezoomd gebied in venster</short>
+			<short xml:lang="pt">Adequar área de zoom para a janela</short>
+			<short xml:lang="pt_BR">Ajustar a área ampliada para a janela</short>
+			<short xml:lang="sv">Anpassa zoomat område till fönster</short>
+			<long>Zooms in/out so the focused window is zoomed to the maximum while still being fully visible.</long>
+			<long xml:lang="el">Ζουμάρει μέσα/έξω ωστε το εστιασμένο παράθυρο να ζουμάρεται στο μέγιστο ενώ είναι ακόμα πλήρως ορατό.</long>
+			<long xml:lang="en_GB">Zooms in/out so the focused window is zoomed to the maximum while still being fully visible.</long>
+			<long xml:lang="fi">Lähennä/loitonna valittu ikkuna suurimpaan mahdolliseen näkyvään kokoonsa.</long>
+			<long xml:lang="fr">Zoomer/dézoomer de manière à ce que la fenêtre ayant le focus soit zoomée au maximum tout en étant complètement visible.</long>
+			<long xml:lang="gl">Zoom in/out de modo á fiestra enfocada ser magnificada para o valor máximo manténdoa totalmente visíbel.</long>
+			<long xml:lang="gu">મોટું/નાનું કરે છે કે જેથી ફોકસ થયેલ વિન્ડો મહત્તમે બિંદુએ નાનીમોટી થાય છે જ્યારે હજુ પણ સંપૂર્ણપણે દૃશ્યમાન હોય.</long>
+			<long xml:lang="hi">जूम इन/आउट ताकि फोकस किया विंडो को अधिकतम पर जूम किया जाता है जबकि अभी भी पूरी तरह से दृश्य है.</long>
+			<long xml:lang="it">Ingrandisce/Rimpicciolisce in modo che la finestra col focus sia ingrandita al massimo ma completamente visibile.</long>
+			<long xml:lang="ja">フォーカス・ウィンドウをズームインやアウトして、その全体が見える範囲内で最大限にズーム</long>
+			<long xml:lang="nb">Forstørr/forminsk slik at det fokuserte vinduet er forstørret til det maksimale, mens det er fullt synlig.</long>
+			<long xml:lang="nl">Zoomed in/uit zodat het venster met focus volledig zichtbaar is.</long>
+			<long xml:lang="pl">Przybliża/oddala tak, aby aktywne okno było maksymalnie przybliżone, pozostając całkowicie widoczne.</long>
+			<long xml:lang="pt">Zoom in/out de modo à janela focada ser magnificada para o valor máximo mantendo-a totalmente visível.</long>
+			<long xml:lang="pt_BR">Aumentar/diminuir o zoom de forma que a janela focada seja ampliada para o valor máximo mantendo esta janela totalmente visível.</long>
+			<long xml:lang="sv">Zoomar in/ut så att det fokuserade fönstret är maximalt zoomat medan det fortfarande är fullt synligt</long>
+			<default>&lt;Super&gt;r</default>
+		    </option>
+		</subgroup>
+	    </group>
+	</display>
+	<screen>
+	    <group>
+		<short>Zoom In/Out</short>
+		<short xml:lang="el">Ζουμ Μέσα/Έξω</short>
+		<short xml:lang="en_GB">Zoom In/Out</short>
+		<short xml:lang="fi">Lähennä/loitonna</short>
+		<short xml:lang="fr">Zoomer/Dézoomer</short>
+		<short xml:lang="gl">Achegar/Afastar</short>
+		<short xml:lang="it">Ingrandisci/Rimpicciolisci</short>
+		<short xml:lang="ja">ズーム イン/アウト</short>
+		<short xml:lang="nb">Forstørr/forminsk</short>
+		<short xml:lang="nl">In/Uit zoomen</short>
+		<short xml:lang="pt">Zoom Dentro/Fora</short>
+		<short xml:lang="sv">Zooma in/ut</short>
+		<option type="float" name="zoom_factor">
+		    <short>Zoom factor</short>
+		    <short xml:lang="ca">Factor de zoom</short>
+		    <short xml:lang="el">Παράγοντας Ζουμ</short>
+		    <short xml:lang="en_GB">Zoom factor</short>
+		    <short xml:lang="fi">Suurennuskerroin</short>
+		    <short xml:lang="fr">Facteur de zoom</short>
+		    <short xml:lang="gl">Factor de zoom</short>
+		    <short xml:lang="gu">નાનામોટાપણાનો અવયવ</short>
+		    <short xml:lang="hi">जूम कारक</short>
+		    <short xml:lang="it">Fattore ingrandimento</short>
+		    <short xml:lang="ja">ズーム係数</short>
+		    <short xml:lang="nb">Forstørrelsesfaktor</short>
+		    <short xml:lang="nl">Zoom factor</short>
+		    <short xml:lang="pl">Współczynnik zbliżenia</short>
+		    <short xml:lang="pt">Factor de zoom</short>
+		    <short xml:lang="pt_BR">Fator de zoom</short>
+		    <short xml:lang="sv">Zoomfaktor</short>
+		    <short xml:lang="tr">Büyütme basamağı</short>
+		    <long>Zoom in/out by this factor. Higher value means quicker zooming.</long>
+		    <long xml:lang="ca">Apropa/allunya segons aquest factor. Un valor gran provoca un zoom més ràpid.</long>
+		    <long xml:lang="el">Ζουμάρισμα μέσα/έξω βάση αυτού του παράγοντα. Υψηλότερη τιμή σημαίνει γρηγορότερο ζουμάρισμα.</long>
+		    <long xml:lang="en_GB">Zoom in/out by this factor. Higher value means quicker zooming.</long>
+		    <long xml:lang="fi">Lähennä/loitonna tällä kertoimella. Suurempi arvo zoomaa nopeammin.</long>
+		    <long xml:lang="fr">Zoomer/dézoomer avec ce facteur. Une plus grande valeur signifie un zoom plus rapide.</long>
+		    <long xml:lang="gl">Zoom in/out por este factor. Valor máis altos significan magnificacións máis rápidas.</long>
+		    <long xml:lang="gu">આ અવયવ પ્રમાણે મોટું/નાનું કરો. ઊંચી કિંમત એટલે ઝડપી નાનામોટાપણું.</long>
+		    <long xml:lang="hi">इस कारक के द्वारा जूम इन/आउट. उच्चतर मान का अर्थ है तेज जूमिंग.</long>
+		    <long xml:lang="it">Ingrandisce/Rimpicciolisce di questo fattore. Valori grandi, ingrandimenti veloci.</long>
+		    <long xml:lang="ja">ズームインやアウトの分量、より素早いズームには高い値を</long>
+		    <long xml:lang="nb">Forstørr/forminsk med denne faktoren. Høyerer verdi betyr raskere forstørring/forminsking.</long>
+		    <long xml:lang="nl">Zoom in/uit met deze factor. Hogere waarde betekent sneller zoomen.</long>
+		    <long xml:lang="pl">Przybliż/oddal o ten współczynnik. Wyższe wartości oznaczają szybsze przybliżanie.</long>
+		    <long xml:lang="pt">Zoom in/out por este factor. Valor mais altos significam magnificações mais rápidas.</long>
+		    <long xml:lang="pt_BR">Aumentar/diminuir zoom de acordo com este fator. Valores mais altos significam ampliações mais rápidas.</long>
+		    <long xml:lang="sv">Zooma in/ut med denna faktor. Högre värde innebär snabbare zoomning</long>
+		    <default>1.150</default>
+		    <min>1.01</min>
+		    <max>3</max>
+		    <precision>0.01</precision>
+		</option>
+	    </group>
+	    <group>
+		<short>Mouse Behaviour</short>
+		<short xml:lang="el">Συμπεριφορά Ποντικιού</short>
+		<short xml:lang="en_GB">Mouse Behaviour</short>
+		<short xml:lang="fi">Hiiren käytös</short>
+		<short xml:lang="fr">Comportement du pointeur</short>
+		<short xml:lang="gl">Comportamento do Rato</short>
+		<short xml:lang="it">Comportamento mouse</short>
+		<short xml:lang="ja">マウス動作</short>
+		<short xml:lang="nb">Oppførsel for mus</short>
+		<short xml:lang="nl">Muis gedrag</short>
+		<short xml:lang="pt">Comportamento do Rato</short>
+		<short xml:lang="sv">Musbeteende</short>
+		<option type="bool" name="sync_mouse">
+		    <short>Sync Mouse</short>
+		    <short xml:lang="ca">Sincronitza el ratolí</short>
+		    <short xml:lang="el">Συγχρονισμός Ποντικιού</short>
+		    <short xml:lang="en_GB">Synchronise Mouse</short>
+		    <short xml:lang="fi">Synkronoi hiiri</short>
+		    <short xml:lang="fr">Souris synchronisée</short>
+		    <short xml:lang="gl">Sincronizar Rato</short>
+		    <short xml:lang="gu">માઉસ સુમેળ કરો</short>
+		    <short xml:lang="hi">माउस तुल्यकालित करें</short>
+		    <short xml:lang="it">Sincronizzare il mouse</short>
+		    <short xml:lang="ja">マウスに追従</short>
+		    <short xml:lang="nb">Synkroniser mus</short>
+		    <short xml:lang="nl">Synchroniseer muis</short>
+		    <short xml:lang="pl">Synchronizuj Mysz</short>
+		    <short xml:lang="pt">Sincronizar Rato</short>
+		    <short xml:lang="pt_BR">Sincronizar Mouse</short>
+		    <short xml:lang="sv">Synkronisera musen</short>
+		    <long>Always keep the zoomed area in sync with where the mouse is, and vice versa. Use this if you don't intend to draw a scaled pointer or hide the original pointer. The zoomed area will move as you move your mouse.</long>
+		    <long xml:lang="el">Πάντα διατήρηση της ζουμαρισμένης περιοχής σε συγχρονισμό με το που είναι το ποντίκι, και αντίστροφα. Χρησιμοποιήστε το αν δεν έχετε σκοπό να σχεδιάσετε ένα κλιμακούμενο δείκτη ή να αποκρύψετε τον πραγματικό δείκτη. Η ζουμαρισμένη περιοχή θα κινείται καθώς κινείτε το ποντίκι σας.</long>
+		    <long xml:lang="en_GB">Always keep the zoomed area synchronised with where the mouse is, and vice versa. Use this if you don't intend to draw a scaled pointer or hide the original pointer. The zoomed area will move as you move your mouse.</long>
+		    <long xml:lang="fr">Toujour garder la zone zoomée synchronisée avec la position de la souris. Utilisez cela si vous ne désirez pas que le pointeur soit mis à l'échelle, ou cacher le pointeur d'origine. la zone zoomée bougera en même temps que votre souris.</long>
+		    <long xml:lang="gl"> Mostrar sempre a área magnificada en sincronía coa posición do rato, e vice-versa. Use isto no caso de non pretender mostrar un cursor escalado ou esconder o cursor orixinal. A área magnificada seguirá o cursor do rato.</long>
+		    <long xml:lang="gu">હંમેશા નાનોમોટો થયેલ વિસ્તારને સુમેળમાં રાખો કે જ્યાં માઉસ હોય, અને તેનાથી ઉલટું પણ. આને વાપરો જો તમારે ખેંચાયેલ નિર્દેશક દોરવાનો કોઈ હેતુ ના હોય કે મૂળ નિર્દેશક છુપાવવાનો હેતુ ના હોય. નાનોમોટો થયેલ વિસ્તાર તમને જેમ તમે માઉસ ખસેડે તેમ ખસેડશે.</long>
+		    <long xml:lang="hi">हमेशा जूम क्षेत्र को तुल्यकालन में रखें जहां माउस है, और इसके उलट भी सही है. इसे प्रयोग करें यदि आप एक मापक संकेतक खीचने की इच्छा नहीं रखते हैं या मौलिक संकेतक को छिपाएं. जूम क्षेत्र को खिसकाया जायेगा जैसे ही आप माउस को खिसकाते हैं.</long>
+		    <long xml:lang="it">Mantiene sempre l'area ingrandita in sincronia con la posizione del mouse e viceversa. Usare questa opzione per non nascondere il puntatore originale o disegnarne uno scalato. L'area ingrandita si sposta allo spostamento del mouse.</long>
+		    <long xml:lang="ja">ズーム域をマウスの場所と常に同期、その逆も同様。拡大されたポインタを描画したくない場合、または元ポインタを隠したくない場合に使用してください。ズーム域はマウスの移動に合わせて移動します。</long>
+		    <long xml:lang="nb">Hold alltid det forstørrede området synkronisert med hvor musepekeren er, og vice versa. Bruk dette hvis du ikke har planer om å tegne en skalert peker eller gjemme den originale pekeren. Det forstørrede området vil bevege seg i takt med musen.</long>
+		    <long xml:lang="nl">Altĳd het ingezoomde gebied synchroniseren met waar de muis is, en vice versa. Gebruik dit als het niet je bedoeling is om een geschaalde aanwĳzer te gebruiken of om de originele aanwĳzer te verbergen. Het ingezoomde gebied zal bewegen als je de muis beweegt.</long>
+		    <long xml:lang="pt">Mostrar sempre a área magnificada em sincronia com a posição do rato, e vice-versa. Use isto no caso de não pretender mostrar um cursor escalado ou esconder o cursor original. A área magnificada irá seguir o cursor do rato.</long>
+		    <long xml:lang="pt_BR">Sempre manter a área ampliada em sincronia com a posição do mouse, e vice-versa. Use isto no caso de não pretender mostrar um cursor dimensionado ou esconder o cursor original. A área ampliada irá seguir o cursor do mouse.</long>
+		    <long xml:lang="sv">Håll alltid det zoomade området i sync med var musen befinner sig och viceversa. Använd detta om du inte tänker använda en skalad pekare eller gömma orginalpekaren. Det zoomade området kommer röra sig med musen.</long>
+		    <default>true</default>
+		</option>
+		<option type="bool" name="scale_mouse">
+		    <short>Scale the mouse pointer</short>
+		    <short xml:lang="ca">Escala el punter del ratolí</short>
+		    <short xml:lang="el">Κλιμάκωση του δείκτη ποντικιού</short>
+		    <short xml:lang="en_GB">Scale the mouse pointer</short>
+		    <short xml:lang="fi">Sovita kohdistin</short>
+		    <short xml:lang="fr">Mettre le pointeur à l'échelle</short>
+		    <short xml:lang="gl">Escalar o punteiro do rato</short>
+		    <short xml:lang="gu">માઉસ નિર્દેશક ખેંચો</short>
+		    <short xml:lang="hi">माउस संकेतक को मापें</short>
+		    <short xml:lang="it">Scalare il puntatore del mouse</short>
+		    <short xml:lang="ja">マウスポインタを拡大</short>
+		    <short xml:lang="nb">Skaler musepekeren</short>
+		    <short xml:lang="nl">Schaal de muis aanwĳzer</short>
+		    <short xml:lang="pl">Skaluj kursor myszy</short>
+		    <short xml:lang="pt">Escalar o ponteiro do rato</short>
+		    <short xml:lang="pt_BR">Tornar o cursor do mouse dimensionável</short>
+		    <short xml:lang="sv">Skala muspekaren</short>
+		    <long>Enable this to get a gradually larger mouse pointer as you zoom in</long>
+		    <long xml:lang="ca">Activa per obtenir un punter del mouse cada cop més gran a mida que augmenta el zoom</long>
+		    <long xml:lang="el">Ενεργοποιήστε το για να έχετε ένα βαθμιαία μεγαλύτερο δείκτη ποντικιού καθώςζουμάρετε μέσα</long>
+		    <long xml:lang="en_GB">Enable this to get a gradually larger mouse pointer as you zoom in</long>
+		    <long xml:lang="fi">Ota käyttöön saadaksesi suuremman osoittimen zoomatessasi sisään</long>
+		    <long xml:lang="fr">Activer cette option pour avoir un pointeur de plus en plus grand en zoomant</long>
+		    <long xml:lang="gl">Active esta opción para ter un cursor cada vez maior á medida que magnifica a pantalla</long>
+		    <long xml:lang="gu">તમે જેમ મોટું કરો તેમ માઉસ નિર્દેશક મોટું મેળવવા માટે આને સક્રિય કરો</long>
+		    <long xml:lang="hi">इसे सक्रिय करें एक क्रमशः बड़ा माउस संकेतक पाने के लिए जैसे ही आप जूम इन करते हो</long>
+		    <long xml:lang="it">Attivare questo per ottenere un puntatore del mouse sempre più grande durante l'ingrandimento</long>
+		    <long xml:lang="ja">ズームインに合わせてマウスポインタを拡大させる場合に有効に</long>
+		    <long xml:lang="nb">Bruk denne for å få en gradvis større musepeker etter hvert som du forstørrer</long>
+		    <long xml:lang="nl">Schakel dit in om de muis aanwĳzer gradueel te vergroten als je inzoomt</long>
+		    <long xml:lang="pt">Active esta opção para ter um cursor cada vez maior à medida que magnifica o ecrã</long>
+		    <long xml:lang="pt_BR">Ative esta opção para ter um cursor cada vez maior a medida que você aumenta o zoom</long>
+		    <long xml:lang="sv">Aktivera detta för att gradvis få större muspekare när du zoomar in</long>
+		    <default>false</default>
+		</option>
+		<option type="bool" name="hide_original_mouse">
+		    <short>Hide original mouse pointer</short>
+		    <short xml:lang="ca">Amaga el punter original del ratolí</short>
+		    <short xml:lang="el">Απόκρυψη πραγματικού δείκτη ποντικιού</short>
+		    <short xml:lang="en_GB">Hide original mouse pointer</short>
+		    <short xml:lang="es">Ocultar el puntero por defecto del raton </short>
+		    <short xml:lang="fi">Piilota alkuperäinen kohdistin</short>
+		    <short xml:lang="fr">Cacher le pointeur d'origine</short>
+		    <short xml:lang="gl">Esconder o cursor orixinal do rato</short>
+		    <short xml:lang="gu">મૂળ માઉસ નિર્દેશક છુપાવો</short>
+		    <short xml:lang="hi">मौलिक माउस संकेतक छिपाएं</short>
+		    <short xml:lang="it">Nascondere puntatore originale del mouse</short>
+		    <short xml:lang="ja">元マウスポインタを隠す</short>
+		    <short xml:lang="nb">Skjul original musepeker</short>
+		    <short xml:lang="nl">Verberg originele muis aanwĳzer</short>
+		    <short xml:lang="pt">Esconder o cursor original do rato</short>
+		    <short xml:lang="pt_BR">Ocultar o cursor original do mouse</short>
+		    <short xml:lang="sv">Dölj orginalmuspekare</short>
+		    <long>Hides the original mouse pointer when zoomed in and scaling the mouse</long>
+		    <long xml:lang="el">Αποκρύπτει τον πραγματικό δείκτη ποντικιού όταν ζουμάρεται μέσα και κλιμακώνει το ποντίκι</long>
+		    <long xml:lang="en_GB">Hides the original mouse pointer when zoomed in and scaling the mouse</long>
+		    <long xml:lang="fi">Piilottaa alkuperäisen hiiren osoittimen zoomauksen aikana</long>
+		    <long xml:lang="fr">Cache le pointeur d'origine de la souris lors du zoom et lors de la mise à l'échelle du pointeur</long>
+		    <long xml:lang="gl">Esconde o cursor orixinal do rato cando ten magnificación activa e escala do rato</long>
+		    <long xml:lang="gu">જ્યારે માઉસ મોટું થયેલ હોય અને ખેંચાયેલ હોય ત્યારે મૂળ માઉસ નિર્દેશકને છુપાવે છે</long>
+		    <long xml:lang="hi">मौलिक माउस संकेतक छिपाएं जब जूम इन होता है और माउस स्केल किया जाता है</long>
+		    <long xml:lang="it">Nasconde il puntatore originale del mouse negli ingrandimenti e nella scalatura del mouse</long>
+		    <long xml:lang="ja">ズームイン時に元マウスポインタを隠してマウスを拡大</long>
+		    <long xml:lang="nb">Skjuler den originale musepekeren når forstørret og musen skalert</long>
+		    <long xml:lang="nl">Verbergt de originele muis aanwĳzer tĳdens inzoomen en schalen van de muis</long>
+		    <long xml:lang="pt">Esconde o cursor original do rato quando tem magnificação activa e escalamento do rato</long>
+		    <long xml:lang="pt_BR">Oculta o cursor original do mouse quando estiver ampliando</long>
+		    <long xml:lang="sv">Döljer orginalmuspekaren vid inzoomning och musen är skalad</long>
+		    <default>false</default>
+		</option>
+		<option type="bool" name="restrain_mouse">
+		    <short>Restrain the mouse to the zoom area</short>
+		    <short xml:lang="el">Συγκράτηση ποντικιού στη ζουμαρισμένη περιοχή</short>
+		    <short xml:lang="en_GB">Restrain the mouse to the zoom area</short>
+		    <short xml:lang="fi">Pidä kohdistin zoomausalueella</short>
+		    <short xml:lang="fr">Restraindre le pointeur à la zone du zoom</short>
+		    <short xml:lang="gl">Restrinxe o cursor do rato á área magnificada</short>
+		    <short xml:lang="gu">નાનામોટાપણાના વિસ્તારમાં માઉસને પુનઃખેંચો</short>
+		    <short xml:lang="hi">जूम क्षेत्र में माउस सीमित रखें</short>
+		    <short xml:lang="it">Limitare il mouse all'area ingrandita</short>
+		    <short xml:lang="ja">マウスをズーム域に制限</short>
+		    <short xml:lang="nb">Hold musen innefor det forstørrede området</short>
+		    <short xml:lang="nl">Beperk de muis tot het zoom gebied</short>
+		    <short xml:lang="pt">Restringe o cursor do rato à área magnificada</short>
+		    <short xml:lang="pt_BR">Restringe o cursor do mouse à área ampliada</short>
+		    <short xml:lang="sv">Hindra musen att lämna zoomområdet</short>
+		    <long>Attempt to keep the zoomed mouse visible by warping it when it is moved outside the zoom area.</long>
+		    <long xml:lang="el">Προσπάθεια να διατηρηθεί το ζουμαρισμένο ποντίκι ορατό τυλίγοντας το όταν κινείται εκτός της ζουμαρισμένης περιοχης.</long>
+		    <long xml:lang="en_GB">Attempt to keep the zoomed mouse visible by warping it when it is moved outside the zoom area.</long>
+		    <long xml:lang="fr">Essayer de garder le pointeur zoomé visible, en se déplacant vers lui quand il est déplacé en dehors de la zone de zoom.</long>
+		    <long xml:lang="gl">Tentar manter o cursor do rato visíbel ao teleportalo cando o cursor tenta saír da área magnificada.</long>
+		    <long xml:lang="gu">જ્યારે માઉસ નાનોમોટાપણાના વિસ્તારની બહાર હોય ત્યારે તેને લપેટીને નાનુંમોટું થયેલ માઉસ દૃશ્યમાન રાખવાનો પ્રયાસ.</long>
+		    <long xml:lang="hi">लपेटकर जूम किए माउस को रखने का प्रयास जब यह जूम क्षेत्र के बाहर खिसकाया जाता है.</long>
+		    <long xml:lang="it">Cerca di mantenere il mouse visibile facendolo rientrare quando si sposta al di fuori dell'area ingrandita.</long>
+		    <long xml:lang="ja">拡大されたマウスがズーム域外へ移動したときはワープさせて、常に見えるようにする。</long>
+		    <long xml:lang="nb">Prøv å holde den forstørrede musen synlig ved å kaste den tilbake når den beveges utenfor det forstørrede området.</long>
+		    <long xml:lang="nl">Probeer om de ingezoomde muis zichtbaar te houden door hem te warpen wanneer hĳ buiten het gezoomde gebied bewogen wordt.</long>
+		    <long xml:lang="pt">Tentar manter o cursor do rato visível ao teleportá-lo quando o cursor tenta sair da área magnificada.</long>
+		    <long xml:lang="pt_BR">Tentar manter o cursor do mouse visível quando ele é movido para fora daárea ampliada.</long>
+		    <long xml:lang="sv">Försök att hålla den zoomade musen synlig genom att dra tillbaka den när den lämnar det inzoomade området.</long>
+		    <default>false</default>
+		</option>
+		<option type="bool" name="mouse_pan">
+		    <short>Mouse panning</short>
+		    <short xml:lang="ca">Moviment amb el ratolí</short>
+		    <short xml:lang="el">Panning ποντικιού</short>
+		    <short xml:lang="en_GB">Mouse panning</short>
+		    <short xml:lang="fr">Suivre le pointeur</short>
+		    <short xml:lang="gl">Seguemento do rato</short>
+		    <short xml:lang="gu">માઉસ પેનીંગ</short>
+		    <short xml:lang="hi">माउस पैनिंग</short>
+		    <short xml:lang="it">Panoramica col mouse</short>
+		    <short xml:lang="ja">マウスによる移動</short>
+		    <short xml:lang="nb">Musepanorering</short>
+		    <short xml:lang="nl">Muis schuiven</short>
+		    <short xml:lang="pl">Przesuwanie za pomocą myszy</short>
+		    <short xml:lang="pt">Seguimento do rato</short>
+		    <short xml:lang="pt_BR">Mouse panning</short>
+		    <short xml:lang="sv">Muspanorering</short>
+		    <long>Pan the zoom area when the mouse cursor moves outside the visible area.</long>
+		    <long xml:lang="ca">Mou l'àrea de zoom quan el cursor del ratolí surt de l'àrea visible.</long>
+		    <long xml:lang="el">Pan της ζουμαρισμένης περιοχής όταν ο δείκτης του ποντικιού κινηθεί εκτός ορατής περιοχής</long>
+		    <long xml:lang="en_GB">Pan the zoom area when the mouse cursor moves outside the visible area.</long>
+		    <long xml:lang="fi">Panoroi ja zoomaa alue kun kohdistin siirtyy näkyvän alueen ulkopuolelle.</long>
+		    <long xml:lang="fr">Déplacer la zone du zoom quand le curseur de la souris bouge hors de la zone visible.</long>
+		    <long xml:lang="gl">Percorre a área magnificada cando o cursor do rato se move para fora da área visíbel.</long>
+		    <long xml:lang="gu">જ્યારે માઉસ કર્સર દૃશ્યમાન વિસ્તારની બહાર ખસે છે ત્યારે નાનામોટાપણાના વિસ્તારને પેન કરો.</long>
+		    <long xml:lang="hi">जूम क्षेत्र पैन करें जब माउस कर्सर दृश्य क्षेत्र के बाहर गति करता है.</long>
+		    <long xml:lang="it">Sposta l'area di ingrandimento quando il cursore del mouse si sposta al di fuori dell'area visibile.</long>
+		    <long xml:lang="ja">マウスカーソルが表示域の外へ移動したときズーム域を移動</long>
+		    <long xml:lang="nb">Panorer det skalerte området når musepekeren beveger seg utenfor det synlige området.</long>
+		    <long xml:lang="nl">Verschuif het zoomgebied als de muis cursor buiten het zichtbare gebied beweegt.</long>
+		    <long xml:lang="pt">Percorre a área magnificada quando o cursor do rato se move para fora da área visível.</long>
+		    <long xml:lang="pt_BR">Percorre a área ampliada quando o cursor do mouse se mover para fora da área visível.</long>
+		    <long xml:lang="sv">Panorera det zoomade området när musen lämnar det synliga området.</long>
+		    <default>false</default>
+		</option>
+		<option type="int" name="restrain_margin">
+		    <short>Mouse Restrain Margin</short>
+		    <short xml:lang="ca">Marge de restricció del ratolí</short>
+		    <short xml:lang="el">Όριο Συγκράτησης Ποντικιού</short>
+		    <short xml:lang="en_GB">Mouse Restrain Margin</short>
+		    <short xml:lang="fr">Marge de restriction du pointeur</short>
+		    <short xml:lang="gl">Marxe Restrinxemento Rato</short>
+		    <short xml:lang="gu">માઉસ પુનઃમેળવવાનો દર</short>
+		    <short xml:lang="hi">माउस प्रतिबंध हाशिया</short>
+		    <short xml:lang="it">Margine limite del mouse</short>
+		    <short xml:lang="ja">マウス制限域マージン</short>
+		    <short xml:lang="nb">Tilbakeholdingsmargin for mus</short>
+		    <short xml:lang="nl">Muis inperking marge</short>
+		    <short xml:lang="pl">Margines przytrzymywania myszy</short>
+		    <short xml:lang="pt">Margem Restringimento Rato</short>
+		    <short xml:lang="pt_BR">Margem de restrição do mouse</short>
+		    <short xml:lang="sv">Musrestriktionsmarginal</short>
+		    <long>The size of the margin to add when attempting to restrain the mouse.</long>
+		    <long xml:lang="ca">La mida del marge a afegir quan volem restringir el ratolí.</long>
+		    <long xml:lang="el">Το μέγεθος του ορίου που προστείθεται όταν επιχειρείται συγκράτηση του ποντικιού.</long>
+		    <long xml:lang="en_GB">The size of the margin to add when attempting to restrain the mouse.</long>
+		    <long xml:lang="fi">Hiiren rajoitusmarginaalin leveys</long>
+		    <long xml:lang="fr">Taille de la marge à ajouter en essayant de restraindre la souris.</long>
+		    <long xml:lang="gl">Tamaño da marxe a Engadir cando se tentar restrinxir o movemento do  rato.</long>
+		    <long xml:lang="gu">જ્યારે માઉસ પુનઃખેંચવાનો પ્રયાસ કરી રહ્યા હોય ત્યારે ઉમેરવાના હાંસિયાનું માપ</long>
+		    <long xml:lang="hi">जोड़ने के लिए हाशिया का आकार जब माउस को रोकने का प्रयास कर रहा है.</long>
+		    <long xml:lang="it">La dimensione del margine da aggiungere quando si cerca di limitare il mouse.</long>
+		    <long xml:lang="ja">マウスを制限している場合の制限域のマージンの大きさ</long>
+		    <long xml:lang="nb">Størrelsen på margen som legges til når musen forsøkes holdt tilbake.</long>
+		    <long xml:lang="nl">De grootte van de marge om toe te voegen als geprobeerd wordt de muis te beperken.</long>
+		    <long xml:lang="pt">Tamanho da margem a adicionar quando se tentar restringir o movimento do rato.</long>
+		    <long xml:lang="pt_BR">Tamanho da margem a ser adicionado quando tentar restringir o movimento do mouse.</long>
+		    <long xml:lang="sv">Välj storleksmarginal att lägga till vid försök att hålla kvar musen.</long>
+		    <default>5</default>
+		    <min>0</min>
+		    <max>50</max>
+		</option>
+	    </group>
+	    <group>
+		<short>Zoom Area Movement</short>
+		<short xml:lang="el">Περιοχή Κίνησης Ζουμ</short>
+		<short xml:lang="en_GB">Zoom Area Movement</short>
+		<short xml:lang="fi">Zoomausalueen liike</short>
+		<short xml:lang="fr">Mouvement de la zone de zoom</short>
+		<short xml:lang="gl">Movemento da Área de Zoom</short>
+		<short xml:lang="it">Movimento zoom</short>
+		<short xml:lang="ja">ズーム域の移動</short>
+		<short xml:lang="nb">Bevegelse for forstørrelsesområde</short>
+		<short xml:lang="nl">Zoom gebied beweging</short>
+		<short xml:lang="pt">Movimento Zoom Área</short>
+		<short xml:lang="sv">Zoomrörelse</short>
+		<subgroup>
+		    <short>Panning</short>
+		    <short xml:lang="el">Επικάλυψη</short>
+		    <short xml:lang="en_GB">Panning</short>
+		    <short xml:lang="fr">Panoramique</short>
+		    <short xml:lang="gl">Movemento</short>
+		    <short xml:lang="it">Spostamento panoramico</short>
+		    <short xml:lang="ja">移動</short>
+		    <short xml:lang="nb">Panorering</short>
+		    <short xml:lang="nl">Verschuiven</short>
+		    <short xml:lang="pt">Seguimento</short>
+		    <short xml:lang="sv">Panorering</short>
+		    <option type="float" name="pan_factor">
+			<short>Pan Factor</short>
+			<short xml:lang="ca">Factor de moviment</short>
+			<short xml:lang="el">Παράγοντας Pan</short>
+			<short xml:lang="en_GB">Pan Factor</short>
+			<short xml:lang="fi">Panorointikerroin</short>
+			<short xml:lang="fr">Facteur de déplacement</short>
+			<short xml:lang="gl">Factor de seguimento</short>
+			<short xml:lang="gu">પેન અવયવ</short>
+			<short xml:lang="hi">पैन कारक</short>
+			<short xml:lang="it">Fattore di spostamento</short>
+			<short xml:lang="ja">移動量</short>
+			<short xml:lang="nb">Panoreringsfaktor</short>
+			<short xml:lang="nl">Verschuif factor</short>
+			<short xml:lang="pt">Factor de seguimento</short>
+			<short xml:lang="pt_BR">Pan Factor</short>
+			<short xml:lang="sv">Panoreringsfaktor</short>
+			<long>Move the zoomed area this much whenever you pan the zoomed area with keys.</long>
+			<long xml:lang="el">Μετακίνηση της ζουμαρισμένης περιοχής τοσο όποτε κοιλωποιείται η ζουμαρισμένη περιοχή με τα πλήκτρα.</long>
+			<long xml:lang="en_GB">Move the zoomed area this much whenever you pan the zoomed area with keys.</long>
+			<long xml:lang="fi">Siirrä zoomausaluetta tämän verran kun liikut alueella näppäimillä.</long>
+			<long xml:lang="fr">Distance de déplacement de la zone zoomée quand les touches du clavier sont utilisées.</long>
+			<long xml:lang="gl">Mover a área magnificada este valor sempre que se percorre a área magnificada con tecras.</long>
+			<long xml:lang="gu">જ્યારેપણ તમે નાનામોટા થયેલ વિસ્તારને કીઓ સાથે પેન કરો ત્યારે નાનામોટા થયેલ વિસ્તારને આટલું ખસેડો.</long>
+			<long xml:lang="hi">जूम किया क्षेत्र इतना खिसकाएं जबकभी आप जूम क्षेत्र को कुंजी के साथ पैन करना चाहते हैं.</long>
+			<long xml:lang="it">Muove l'area ingrandita di questo valore quando ci si sposta nell'ingrandimento con i tasti.</long>
+			<long xml:lang="ja">キーによるズーム域移動の際のズーム域移動量</long>
+			<long xml:lang="nb">Flytt det forstørrede området med så mye når når du panorerer det forstørrede området med taster.</long>
+			<long xml:lang="nl">Verplaats het ingezoomde gebied zoveel als je het ingezoomde gebied verschuift met de toetsen.</long>
+			<long xml:lang="pl">Przemieść powiększony obszar o taką wartość przy przesuwaniu tego obszaru klawiszami</long>
+			<long xml:lang="pt">Mover a área magnificada este valor sempre que se percorre a área magnificada com teclas.</long>
+			<long xml:lang="pt_BR">Mover a área ampliada enquanto percorre a área ampliada usando as teclas.</long>
+			<long xml:lang="sv">Flytta det zoomade området så här mycket när du panorerar den zoomade området med tangenter</long>
+			<default>0.1</default>
+			<min>0.001</min>
+			<max>1.0</max>
+			<precision>0.001</precision>
+		    </option>
+		</subgroup>
+	    </group>
+	    <group>
+		<short>Focus Tracking</short>
+		<short xml:lang="ca">Seguiment del focus</short>
+		<short xml:lang="el">Εντοπισμός Εστίασης</short>
+		<short xml:lang="en_GB">Focus Tracking</short>
+		<short xml:lang="fr">Suivi du Focus</short>
+		<short xml:lang="gl">Seguemento do Foco</short>
+		<short xml:lang="gu">ફોકસ ટ્રેકીંગ</short>
+		<short xml:lang="hi">फोकस ट्रैकिंग</short>
+		<short xml:lang="it">Inseguimento focus</short>
+		<short xml:lang="ja">フォーカス追従</short>
+		<short xml:lang="nb">Fokussporing</short>
+		<short xml:lang="pt">Seguimento do Foco</short>
+		<short xml:lang="pt_BR">Rastreamento do foco</short>
+		<short xml:lang="sv">Fokusspårning</short>
+		<short xml:lang="tr">Odaklama İzlemesi</short>
+		<option type="bool" name="follow_focus">
+		    <short>Enable focus tracking</short>
+		    <short xml:lang="ca">Activa el seguiment del focus</short>
+		    <short xml:lang="el">Ενεργοποίηση εντοπισμού εστίασης</short>
+		    <short xml:lang="en_GB">Enable focus tracking</short>
+		    <short xml:lang="es">Activar seguimiento del foco</short>
+		    <short xml:lang="fi">Ota kohdistusseuranta käyttöön</short>
+		    <short xml:lang="fr">Activer le suivi du focus</short>
+		    <short xml:lang="gl">Activar seguimento de foco</short>
+		    <short xml:lang="gu">ફોકસ ટ્રેકિંગ સક્રિય કરો</short>
+		    <short xml:lang="hi">फोकस ट्रैकिंग सक्रिय करें</short>
+		    <short xml:lang="it">Attivare inseguimento del focus</short>
+		    <short xml:lang="ja">フォーカス追従を有効化</short>
+		    <short xml:lang="nb">Bruk fokussporing</short>
+		    <short xml:lang="nl">Focus tracking inschakelen</short>
+		    <short xml:lang="pt">Activar seguimento de foco</short>
+		    <short xml:lang="pt_BR">Ativar o rastreamento do foco</short>
+		    <short xml:lang="sv">Aktivera fokusspårning</short>
+		    <short xml:lang="tr">Odaklama izlemesini etkinleştir</short>
+		    <long>Move the zoom area when focus changes.</long>
+		    <long xml:lang="ca">Mou l'àrea de zoom quan canvia el focus</long>
+		    <long xml:lang="el">Μετακίνηση της ζουμαρισμένης περιοχής στις αλλαγές εστίασης.</long>
+		    <long xml:lang="en_GB">Move the zoom area when focus changes.</long>
+		    <long xml:lang="fi">Siirrä zoomausalue kun kohdistus vaihtuu</long>
+		    <long xml:lang="fr">Déplacer la zone de zoom quand le focus change.</long>
+		    <long xml:lang="gl">Mover a área magnificada cando troca o foco.</long>
+		    <long xml:lang="gu">જ્યારે ફોકસ બદલાય છે ત્યારે નાનામોટાપણાના વિસ્તારને ખસેડો.</long>
+		    <long xml:lang="hi">जूम क्षेत्र खिसकाएं जब फोकस बदलता है.</long>
+		    <long xml:lang="it">Sposta l'area ingrandita al cambiamento di focus.</long>
+		    <long xml:lang="ja">フォーカス変更の際にズーム域を移動</long>
+		    <long xml:lang="nb">Flytt det forstørrede området når fokus endres</long>
+		    <long xml:lang="nl">Verplaats het zoom gebied als de focus veranderd.</long>
+		    <long xml:lang="pl">Przesuń powiększony obszar przy zmianie skupienia</long>
+		    <long xml:lang="pt">Mover a área magnificada quando o foco muda.</long>
+		    <long xml:lang="pt_BR">Mover a área de zoom quando o foco muda.</long>
+		    <long xml:lang="sv">Flytta det zoomade området när fokus ändras</long>
+		    <default>true</default>
+		</option>
+		<option type="bool" name="focus_fit_window">
+		    <short>Fit zoom level to window on focus change</short>
+		    <short xml:lang="el">Ταίριαγμα επίπεδου ζουμ στο παράθυρο σε αλλαγή εστίασης</short>
+		    <short xml:lang="en_GB">Fit zoom level to window on focus change</short>
+		    <short xml:lang="fi">Sovita zoomaustaso ikkunaan vaihdettaessa kohdistusta</short>
+		    <short xml:lang="fr">Ajuster le niveau de zoom à la fenêtre lors du changement de focus</short>
+		    <short xml:lang="gl">Definir nivel de magnificación para o tamaño da fiestra cando se troca de foco</short>
+		    <short xml:lang="gu">ફોકસ બદલવા પર નાનામોટાપણાના સ્તરને વિન્ડોમાં બંધબેસાડો</short>
+		    <short xml:lang="hi">फोकस बदलाव पर विंडो में जूम स्तर फिट करें</short>
+		    <short xml:lang="it">Adattare livello di ingrandimento alla finestra al cambio di focus</short>
+		    <short xml:lang="ja">フォーカス変更時にズーム率をウィンドウに合わせる</short>
+		    <short xml:lang="nb">Tilpass forstørrelsesnivå til vindu ved fokusendring</short>
+		    <short xml:lang="nl">Pas zoom niveau in venster bĳ focus verandering</short>
+		    <short xml:lang="pt">Definir nível de magnificação para o tamanho da janela quando se muda de foco</short>
+		    <short xml:lang="pt_BR">Ajustar o nível de zoom para a janela na mudança de foco</short>
+		    <short xml:lang="sv">Anpassa zoomnivå till fönster vid fokusändring</short>
+		    <long>Fit the zoomed area to the window when the zoomed area moves as a result of focus tracking.</long>
+		    <long xml:lang="el">Ταίριαγμα της ζουμαρισμένης περιοχής στο παράθυρο όταν η ζουμαρισμένη περιοχή κινείται σαν αποτέλεσμα του εντοπισμού εστίασης.</long>
+		    <long xml:lang="en_GB">Fit the zoomed area to the window when the zoomed area moves as a result of focus tracking.</long>
+		    <long xml:lang="fr">Ajuster la zone zoomée à la fenêtre quand la zone zoomée bouge en fonction du suivi de focus.</long>
+		    <long xml:lang="gl">Encaixar a área magnificada na fiestra cando a área magnificada se move como resultado de seguir o foco.</long>
+		    <long xml:lang="gu">ફોકસ ટ્રેકીંગના પરિણામો જ્યારે નાનામોટા થયેલ વિસ્તાર ચાલો થાય ત્યારે નાનામોટા વિસ્તારને વિન્ડોમાં બંધબેસાડો.</long>
+		    <long xml:lang="hi">विंडो में जूम क्षेत्र फिट करें जब जूम क्षेत्र फोकस ट्रैकिंग के परिणाम के रूप में खिसकता है.</long>
+		    <long xml:lang="it">Adatta l'area ingrandita alla finestra quando l'area si sposta per il risultato dell'inseguimento del focus.</long>
+		    <long xml:lang="ja">フォーカス追従によりズーム域が移動する際に、ズーム域をそのウィンドウの大きさに合わせる。</long>
+		    <long xml:lang="nb">Tilpass the forstørrede området til vinduet når det forstørrede området beveger seg som et resultat av fokussporing.</long>
+		    <long xml:lang="nl">Pas het ingezoomde gebied in het venster als het ingezoomde gebied beweegt als gevolg van focus tracking.</long>
+		    <long xml:lang="pt">Encaixar a área magnificada na janela quando a área magnificada se move como resultado de seguir o foco.</long>
+		    <long xml:lang="pt_BR">Ajustar a área ampliada para a janela quando essa área é movida em função de um rastreamento de foco.</long>
+		    <long xml:lang="sv">Anpassa det zoomade området till fönster när den rör sig med anledning av fokusspårning.</long>
+		    <default>false</default>
+		</option>
+		<option type="bool" name="always_focus_fit_window">
+		    <short>Always fit to window on focus track</short>
+		    <short xml:lang="el">Πάντα ταίριαγμα στο παράθυρο κατα το καθάρισμα εστίασης</short>
+		    <short xml:lang="en_GB">Always fit to window on focus track</short>
+		    <short xml:lang="fr">Toujours ajuster à la fenêtre au passage du focus</short>
+		    <short xml:lang="gl">Mostrar sempre fiestra no seguimento do foco</short>
+		    <short xml:lang="gu">ફોકસ ટ્રેક પર હંમેશા વિન્ડો સાથે બંધબેસાડો</short>
+		    <short xml:lang="hi">फोकस ट्रैक पर विंडो में हमेशा फिट करें</short>
+		    <short xml:lang="it">Adattare sempre la finestra all'inseguimento del focus</short>
+		    <short xml:lang="ja">フォーカス追従時は常にウィンドウに合わせる</short>
+		    <short xml:lang="nb">Tilpass alltid til vindu på fokuseringsspor</short>
+		    <short xml:lang="nl">Altĳd inpassen in venster bĳ focus track</short>
+		    <short xml:lang="pt">Mostrar sempre janela no seguimento do foco</short>
+		    <short xml:lang="pt_BR">Sempre ajustar para a janela no rastro do foco</short>
+		    <short xml:lang="sv">Passa alltid in i fönster under fokusspårning</short>
+		    <long>Fit the zoomed area to the window when the zoomed area moves as a result of focus tracking. Even when not initially zoomed in.</long>
+		    <long xml:lang="el">Ταίριαγμα της ζουμαρισμένης περιοχής στο παράθυρο όταν η ζουμαρισμένη περιοχή κινείται σαν αποτέλεσμα του εντοπισμού εστίασης. Ακόμη κ όταν δεν ζουμάρεται μέσα αρχικά.</long>
+		    <long xml:lang="en_GB">Fit the zoomed area to the window when the zoomed area moves as a result of focus tracking. Even when not initially zoomed in.</long>
+		    <long xml:lang="fr">Ajuster la zone zoomée à la fenêtre quand la zone zoomée bouge en fonction du suivi de focus, même sans zoom initial.</long>
+		    <long xml:lang="gl">Encaixar a área magnificada na fiestra cando a área magnificada se move como resultado de seguir o foco. Mesmo cando non magnificada inicialmente.</long>
+		    <long xml:lang="gu">ફોકસ ટ્રેકીંગના પરિણામો જ્યારે નાનામોટા થયેલ વિસ્તાર ચાલો થાય ત્યારે નાનામોટા વિસ્તારને વિન્ડોમાં બંધબેસાડો. જ્યારે શરૂઆતમાં મોટું થયેલ નહિં હોય ત્યારે પણ.</long>
+		    <long xml:lang="hi">विंडो में जूम क्षेत्र फिट करें जब जूम क्षेत्र फोकस ट्रैकिंग के परिणाम के रूप में खिसकता है. हालांकि तब भी जब आरंभ में जूम इन नहीं है.</long>
+		    <long xml:lang="it">Adatta l'area ingrandita alla finestra quando l'area si sposta per il risultato dell'inseguimento del focus. Anche se non è inizialmente ingrandita.</long>
+		    <long xml:lang="ja">フォーカス追従によりズーム域が移動する際に、ズームインしていない状態からも含めて、ズーム域をそのウィンドウの大きさに合わせる。</long>
+		    <long xml:lang="nb">Tilpass the forstørrede området til vinduet når det forstørrede området beveger seg som et resultat av fokussporing. Til og med når det ikke er forstørret i utgangspunktet.</long>
+		    <long xml:lang="nl">Pas het ingezoomde gebied in het venster als het ingezoomde gebied beweegt als gevolg van focus tracking. Zelfs als er niet eerst al ingezoomd was.</long>
+		    <long xml:lang="pt">Encaixar a área magnificada na janela quando a área magnificada se move como resultado de seguir o foco. Mesmo quando não magnificada inicialmente.</long>
+		    <long xml:lang="pt_BR">Ajustar a área ampliada para a janela quando essa área é movida em função de um rastreamento de foco. Mesmo se não ampliada inicialmente.</long>
+		    <long xml:lang="sv">Passa in det zoomade området till fönstret när det zoomade området rör sig med anledning av fokusspårning. Även när det från början inte är inzoomat.</long>
+		    <default>false</default>
+		</option>
+		<option type="int" name="follow_focus_delay">
+		    <short>Follow Focus Delay</short>
+		    <short xml:lang="ca">Retard en el seguiment del focus</short>
+		    <short xml:lang="el">Ακολούθηση Καθυστέρησης Εστίασης</short>
+		    <short xml:lang="en_GB">Follow Focus Delay</short>
+		    <short xml:lang="fi">Kohdistuksenseurannan viive</short>
+		    <short xml:lang="fr">Délai de suivi du Focus</short>
+		    <short xml:lang="gl">Seguir Atraso Foco</short>
+		    <short xml:lang="gu">ફોકસ વિલંબને અનુસરો</short>
+		    <short xml:lang="hi">फोकस विलंब का पालन करें</short>
+		    <short xml:lang="it">Ritardo inseguimento focus</short>
+		    <short xml:lang="ja">フォーカス追従遅延時間</short>
+		    <short xml:lang="nb">Forsinkelse for fokusfølging</short>
+		    <short xml:lang="nl">Volg focus vertraging</short>
+		    <short xml:lang="pt">Seguir Atraso Foco</short>
+		    <short xml:lang="pt_BR">Atraso no rastreamento do foco</short>
+		    <short xml:lang="sv">Fördröjning på fokusföljning</short>
+		    <short xml:lang="tr">Odakla Gecikmesini Takip Et</short>
+		    <long>Only attempt to center newly focused windows if the mouse hasn't moved in this amount of seconds. Use this to avoid jumping when using sloppy focus.</long>
+		    <long xml:lang="el">Μόνο προσπάθεια για κεντράρισμα των νέων εστιασμένων παραθύρων αν το ποντίκι δεν εχει μετακινηθεί για αυτό το ποσό δευτερολέπτων. Χρησιμοποιήστε το για να αποφευχθεί το πήδημα όταν χρησιμοποιείται η ατιμέλητη εστίαση.</long>
+		    <long xml:lang="en_GB">Only attempt to centre newly focused windows if the mouse hasn't moved in this amount of seconds. Use this to avoid jumping when using sloppy focus.</long>
+		    <long xml:lang="fi">Yritä keskittää vain juuri valittu ikkuna jos hiirtä ei ole liikutettu näin moneen sekuntiin. Käytä tätä välttääksesi hypyt käyttäessäsi väljää kohdistusta.</long>
+		    <long xml:lang="fr">Tenter seulement de centrer les fenêtres venant d'avoir le focus, si la souris n'a pas bougé pendant cette durée (en secondes). Utilisez cela pour éviter les sauts du focus.</long>
+		    <long xml:lang="gl">Só tentar centrar novas fiestras enfocadas se o rato non se mexeu durante estes segundos. Use esta opción para evitar saltos cando estivera a empregar un foco desaxeitado.</long>
+		    <long xml:lang="gu">જો માઉસ આટલી સેકન્ડોમાં ખસ્યું નહિં હોય તો માત્ર નવી ફોકસ થયેલ વિન્ડો કેન્દ્રિત કરવાનો પ્રયાસ કરો. જ્યારે સ્લોપી ફોકસ વાપરી રહ્યા હોય ત્યારે કૂદવાનું ટાળવા માટે આ વાપરો.</long>
+		    <long xml:lang="hi">नये फोकस किये विंडो को केंद्रित करने की सिर्फ कोशिश करें यदि माउस सेकेंड की इस मात्रा में खिसकाया नहीं गया है. ,स्लोपी फोकस के दौरान जंपिंग से बचने के लिए इसे प्रयोग करें.</long>
+		    <long xml:lang="it">Cerca di centrare la nuova finestra col focus se il mouse non si è mosso per questi secondi. Usare questo per evitare di saltare con il focus lento.</long>
+		    <long xml:lang="ja">この指定秒数の間マウスが動かない場合にのみ、新しくフォーカスされたウィンドウを画面中央に表示。スロッピー・フォーカス使用時に画面がジャンプしがちになるのを避けるため利用してください。</long>
+		    <long xml:lang="nb">Prøv kun å sentrere nylig fokuserte vinduer hvis musen ikke har beveget seg i løpet av så mange sekunder. Bruk dette for å unngå hopping når du bruker slurvete fokus.</long>
+		    <long xml:lang="nl">Alleen proberen nieuw gefocuste vensters te centreren als de muis niet heeft bewogen in dit aantal seconden. Gebruik dit om springerigheid te voorkomen bĳ gebruik van sloppy focus.</long>
+		    <long xml:lang="pt">Apenas tentar centrar novas janelas focadas se o rato não se mexeu durante estes segundos. Use esta opção para evitar saltos quando estiver a usar foco desajeitado.</long>
+		    <long xml:lang="pt_BR">Tentar centralizar apenas novas janelas focadas se o mouse não foi movidodurante estes segundos. Use esta opção para evitar saltos quando estiver usando o foco desajeitado.</long>
+		    <long xml:lang="sv">Försök att endast centrera fönster som fokuserats nyligen om musen inte har rört sig under så här många sekunder. Använd detta för att unvika hoppande med slö fokus</long>
+		    <default>1</default>
+		    <min>0</min>
+		    <max>15</max>
+		</option>
+	    </group>
+	    <group>
+		<short>Animation</short>
+		<short xml:lang="ca">Animació</short>
+		<short xml:lang="de">Animation</short>
+		<short xml:lang="el">Γραφική Απεικόνιση</short>
+		<short xml:lang="en_GB">Animation</short>
+		<short xml:lang="fi">Animaatio</short>
+		<short xml:lang="fr">Animation</short>
+		<short xml:lang="gl">Animación</short>
+		<short xml:lang="gu">એનીમેશન</short>
+		<short xml:lang="hi">संजीवन</short>
+		<short xml:lang="it">Animazione</short>
+		<short xml:lang="ja">アニメーション</short>
+		<short xml:lang="nb">Animasjon</short>
+		<short xml:lang="nl">Animatie</short>
+		<short xml:lang="pt">Animação</short>
+		<short xml:lang="pt_BR">Animação</short>
+		<short xml:lang="sv">Animation</short>
+		<short xml:lang="tr">Canlandırma</short>
+		<option type="float" name="speed">
+		    <short>Speed</short>
+		    <short xml:lang="ca">Velocitat</short>
+		    <short xml:lang="de">Geschwindigkeit</short>
+		    <short xml:lang="el">Ταχύτητα</short>
+		    <short xml:lang="en_GB">Speed</short>
+		    <short xml:lang="es">Velocidad</short>
+		    <short xml:lang="fi">Nopeus</short>
+		    <short xml:lang="fr">Vitesse</short>
+		    <short xml:lang="gl">Velocidade</short>
+		    <short xml:lang="gu">ઝડપ</short>
+		    <short xml:lang="hi">गति</short>
+		    <short xml:lang="it">Velocità</short>
+		    <short xml:lang="ja">速度</short>
+		    <short xml:lang="nb">Hastighet</short>
+		    <short xml:lang="nl">Snelheid</short>
+		    <short xml:lang="pl">Szybkość</short>
+		    <short xml:lang="pt">Velocidade</short>
+		    <short xml:lang="pt_BR">Velocidade</short>
+		    <short xml:lang="sv">Hastighet</short>
+		    <short xml:lang="tr">Hız</short>
+		    <short xml:lang="zh_CN">速度</short>
+		    <long>Zoom Speed</long>
+		    <long xml:lang="ca">Velocitat del zoom</long>
+		    <long xml:lang="el">Ταχύτητα Ζουμ</long>
+		    <long xml:lang="en_GB">Zoom Speed</long>
+		    <long xml:lang="fi">Zoomausnopeus</long>
+		    <long xml:lang="fr">Vitesse de zoom</long>
+		    <long xml:lang="gl">Velocidade do Zoom</long>
+		    <long xml:lang="gu">નાનામોટાપણાની ઝડપ</long>
+		    <long xml:lang="hi">ज़ूम गति</long>
+		    <long xml:lang="it">Velocità ingrandimento</long>
+		    <long xml:lang="ja">ズーム速度</long>
+		    <long xml:lang="nb">Forstørrelseshastighet</long>
+		    <long xml:lang="nl">Zoom snelheid</long>
+		    <long xml:lang="pt">Velocidade do Zoom</long>
+		    <long xml:lang="pt_BR">Velocidade do Zoom</long>
+		    <long xml:lang="sv">Zoomhastighet</long>
+		    <long xml:lang="tr">Büyütme Hızı</long>
+		    <default>25</default>
+		    <min>0.1</min>
+		    <max>100</max>
+		    <precision>0.1</precision>
+		</option>
+		<option type="float" name="timestep">
+		    <short>Timestep</short>
+		    <short xml:lang="de">Zeitschritt</short>
+		    <short xml:lang="el">Χρονικό Βήμα</short>
+		    <short xml:lang="en_GB">Timestep</short>
+		    <short xml:lang="fi">Aikaviive</short>
+		    <short xml:lang="fr">Intervalle</short>
+		    <short xml:lang="gl">Espazo de tempo</short>
+		    <short xml:lang="gu">સમયપગલું</short>
+		    <short xml:lang="hi">टाइमस्टैंप</short>
+		    <short xml:lang="it">Intervallo</short>
+		    <short xml:lang="ja">刻み時間</short>
+		    <short xml:lang="nb">Tidsskritt</short>
+		    <short xml:lang="nl">Tijdstap</short>
+		    <short xml:lang="pl">Krok czasu</short>
+		    <short xml:lang="pt">Espaço de tempo</short>
+		    <short xml:lang="pt_BR">Espaço de tempo</short>
+		    <short xml:lang="sv">Tidssteg</short>
+		    <short xml:lang="tr">Zaman aralığı</short>
+		    <short xml:lang="zh_CN">步长</short>
+		    <long>Zoom Timestep</long>
+		    <long xml:lang="el">Χρονικό Βήμα Ζουμ</long>
+		    <long xml:lang="en_GB">Zoom Timestep</long>
+		    <long xml:lang="fi">Zoomauksen viive</long>
+		    <long xml:lang="fr">Délai de zoom</long>
+		    <long xml:lang="gl">Espazo de tempo de alteración entre níbeis de zoom</long>
+		    <long xml:lang="gu">નાનામોટાપણાનું સમયપગલું</long>
+		    <long xml:lang="hi">ज़ूम टाइमस्टैंप</long>
+		    <long xml:lang="it">Intervallo ingrandimento</long>
+		    <long xml:lang="ja">ズーム描画の刻み時間</long>
+		    <long xml:lang="nb">Tidsskritt for forstørrelse</long>
+		    <long xml:lang="nl">Zoom tijdstap</long>
+		    <long xml:lang="pt">Espaço de tempo de alteração entre níveis de zoom</long>
+		    <long xml:lang="pt_BR">Espaço de tempo de alteração entre níveis de zoom</long>
+		    <long xml:lang="sv">Zoomtidssteg</long>
+		    <long xml:lang="tr">Büyütme Zaman Aralığı</long>
+		    <default>1.2</default>
+		    <min>0.1</min>
+		    <max>50</max>
+		    <precision>0.1</precision>
+		</option>
+		<option type="bool" name="filter_linear">
+		    <short>Filter Linear</short>
+		    <short xml:lang="ca">Filtre lineal</short>
+		    <short xml:lang="el">Γραμμικό Φιλτράρισμα</short>
+		    <short xml:lang="en_GB">Filter Linear</short>
+		    <short xml:lang="es">Filtro lineal</short>
+		    <short xml:lang="fi">Tasasuodatus</short>
+		    <short xml:lang="fr">Filtre Linéaire</short>
+		    <short xml:lang="gl">Filtro Linear</short>
+		    <short xml:lang="gu">ગાળક રેખીય</short>
+		    <short xml:lang="hi">रैखिक फिल्टर करें</short>
+		    <short xml:lang="it">Filtro lineare</short>
+		    <short xml:lang="ja">線形フィルタ</short>
+		    <short xml:lang="nb">Filtrer lineært</short>
+		    <short xml:lang="nl">Filter lineair</short>
+		    <short xml:lang="pl">Filtruj liniowo</short>
+		    <short xml:lang="pt">Filtro Linear</short>
+		    <short xml:lang="pt_BR">Filtro Linear</short>
+		    <short xml:lang="sv">Linjärtfilter</short>
+		    <long>Use linear filter when zoomed in</long>
+		    <long xml:lang="el">Χρήση γραμμικού φίλτραρίσματος όταν ζουμάρετε μέσα</long>
+		    <long xml:lang="en_GB">Use linear filter when zoomed in</long>
+		    <long xml:lang="fi">Käytä tasasuodatusta zoomattaessa sisään</long>
+		    <long xml:lang="fr">Utiliser un filtre linéaire lors du zoom</long>
+		    <long xml:lang="gl">Empregar filtro linear cando magnificar.</long>
+		    <long xml:lang="gu">જ્યારે મોટું થયેલ હોય ત્યારે રેખીય ગાળક વાપરો</long>
+		    <long xml:lang="hi">जूम इन करने के दौरान रैखिक फिल्टर का प्रयोग करें</long>
+		    <long xml:lang="it">Usa il filtro lineare nell'ingrandimento</long>
+		    <long xml:lang="ja">ズームインの際に線形フィルタを使用</long>
+		    <long xml:lang="nb">Bruk lineært filter når forstørret</long>
+		    <long xml:lang="nl">Gebruik lineair filter zodra ingezoomd</long>
+		    <long xml:lang="pl">Używaj filtrowania liniowego podczas przybliżania</long>
+		    <long xml:lang="pt">Usar filtro linear quando magnificar</long>
+		    <long xml:lang="pt_BR">Usar filtro linear quando ampliar</long>
+		    <long xml:lang="sv">Använd linjärfilter vid inzoomning</long>
+		    <default>true</default>
+		</option>
+	    </group>
+	</screen>
+    </plugin>
+</compiz>

@@ -1,0 +1,764 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="Kas gnome võtmerõnga PKCS#11 komponent on lubatud või mitte.">
+                                                        <longdesc>Selle võtme abil on võimalik lubada või keelata GNOME võtmerõnga deemonis PKCS#11 komponenti. See mõjub ainult gnome-keyring-daemon&apos;i käivitamisel, (ehk siis, kui kasutaja sisse logib). Seda sätet on võimalik mõnede deemonile antud käsureaargumentidega eirata.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="Kas gnome võtmerõnga SSH komponent on lubatud või mitte.">
+                                                        <longdesc>Selle võtme abil on võimalik lubada või keelata GNOME võtmerõnga deemonis SSH komponenti. See mõjub ainult gnome-keyring-daemon&apos;i käivitamisel, (ehk siis, kui kasutaja sisse logib). Seda sätet on võimalik mõnede deemonile antud käsureaargumentidega eirata.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Akna laius">
+                                                        <longdesc>Kuvatava akna laius</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Akna kõrgus">
+                                                        <longdesc>Kuvatava akna kõrgus</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Akna ekraanitõmmise käsk">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Ekraanitõmmise võtmise käsk">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Käivita defineeritud käsk">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Terminali käivitamine">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Kuvatõmmise võtmine aknast">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Kuvatõmmise võtmine">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Paneeli rakenduste käivitamise dialoogi näitamine">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Paneelimenüü näitamine">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Lülitumine selle tööala all olevale tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Lülitumine selle tööala kohal olevale tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Lülitumine sellest tööalast paremal olevale tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Lülitumine sellest tööalast vasakul olevale tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Lülitumine 12. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Lülitumine 11. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Lülitumine 10. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Lülitumine 9. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Lülitumine 8. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Lülitumine 7. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Lülitumine 6. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Lülitumine 5. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Lülitumine 4. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Lülitumine 3. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Lülitumine 2. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Lülitumine 1. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Peida kõik aknad ja fokusseeri töölaud">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Akna tõstmine ekraani läänepoolsesse serva">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Akna tõstmine ekraani idapoolsesse serva">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Akna tõstmine ekraani lõunapoolsesse serva">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Akna tõstmine ekraani põhjapoolsesse serva">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Akna tõstmine ekraani kagupoolsesse nurka">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Akna tõstmine ekraani edelapoolsesse nurka">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Akna tõstmine ekraani kirdepoolsesse nurka">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Akna tõstmine ekraani loodepoolsesse nurka">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Maksimeeri aken horisontaalselt">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Maksimeeri aken vertikaalselt">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Akna tõstmine teiste akende kohale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Akna tõstmine ühe tööala võrra allapoole">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Akna tõstmine ühe tööala võrra ülespoole">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Akna tõstmine ühe tööala võrra paremale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Akna tõstmine ühe tööala võrra vasakule">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Akna tõstmine 12. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Akna tõstmine 11. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Akna tõstmine 10. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Akna tõstmine 9. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Akna tõstmine 8. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Akna tõstmine 7. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Akna tõstmine 6. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Akna tõstmine 5. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Akna tõstmine 4. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Akna tõstmine 3. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Akna tõstmine 2. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Akna tõstmine 1. tööalale">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Muuda akna suurust">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Teisalda aken">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Akna minimeerimine">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Akna sulgemine">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Taasta akna suurus">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Akna maksimeerimine">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Maksimeeritud oleku sisse- ja väljalülitamine">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Täisekraanivaate sisse- ja väljalülitamine">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Aknamenüü aktiveerimine">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Tööala nimi">
+                                                        <longdesc>Tööala nimi.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Tööalade arv">
+                                                        <longdesc>Tööalade arv. Peab olema suurem kui null ja omab fikseeritud maksimaalsuurust, et ära hoida kogemata töölaua rikkumist liiga paljude tööalade eraldamise tagajärjel.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Akna pealkirja kirjatüüp">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Praegune teema">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Pealkirjariba topeltklõpsamisel tehtav tegevus">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Vaikimisi komponentide vaatamise rakendus">
+                                                                <longdesc>Rakendus, mida kasutada failide puhul, mille vaatamiseks on vaja kasutada komponenti. Parameeter %s asendatakse faili URI&apos;ga, parameeter %c komponendi IID&apos;ga.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Vaikimisi terminalikäivitusargument">
+                                                                <longdesc>Vaikimisi terminalirakenduse käivitusargument.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Vaikimisi terminalirakendus">
+                                                                <longdesc>Vaikimisi terminalirakendus kasutamiseks terminali vajavate rakenduste jaoks.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Käivita käsk terminalis">
+                                                                <longdesc>Tõene, kui käsku, mis määratud seda tüüpi URLide käsitlemiseks, tuleks käivitada terminalis .</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;h323&quot; URLi käsitleja">
+                                                                <longdesc>Käsk &quot;h323&quot; URLide käsitlemiseks, kui lubatud.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Kas määratud käsk peaks käsitlema &quot;h323&quot; URLe">
+                                                                <longdesc>Tõene, kui &quot;käsk&quot; võtmes määratud käsk käsitleb &quot;h323&quot; URLe.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Käivita käsk terminalis">
+                                                                <longdesc>Tõene, kui käsku, mis määratud seda tüüpi URLide käsitlemiseks, tuleks käivitada terminalis .</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;callto&quot; URLi käsitleja">
+                                                                <longdesc>Käsk &quot;callto&quot; URLide  käsitlemiseks, kui lubatud.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Kas määratud käsk peaks käsitlema &quot;callto&quot; URLe">
+                                                                <longdesc>Tõene, kui &quot;käsk&quot; võtmes määratud käsk käsitleb &quot;callto&quot; URLe.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Käivita käsk terminalis">
+                                                                <longdesc>Tõene, kui käsku, mis määratud seda tüüpi URLide käsitlemiseks, tuleks käivitada terminalis .</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;mailto&quot; URLi käsitleja">
+                                                                <longdesc>Käsk &quot;mailto&quot; URLide käsitlemiseks, kui lubatud.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Kas määratud käsk peaks käsitlema &quot;mailto&quot; URLe">
+                                                                <longdesc>Tõene, kui &quot;käsk&quot; võtmes määratud käsk käsitleb &quot;mailto&quot; URLe.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Käivita käsk terminalis">
+                                                                <longdesc>Tõene, kui käsku, mis määratud seda tüüpi URLide käsitlemiseks, tuleks käivitada terminalis .</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;https&quot; URLi käsitleja">
+                                                                <longdesc>Käsk &quot;https&quot; URLide käsitlemiseks, kui lubatud.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Kas määratud käsk peaks käsitlema &quot;https&quot; URLe">
+                                                                <longdesc>Tõene, kui &quot;käsk&quot; võtmes määratud käsk käsitleb &quot;https&quot; URLe.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Käivita käsk terminalis">
+                                                                <longdesc>Tõene, kui käsku, mis määratud seda tüüpi URLide käsitlemiseks, tuleks käivitada terminalis .</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Käivita käsk terminalis">
+                                                                <longdesc>Tõene, kui käsku, mis määratud seda tüüpi URLide käsitlemiseks, tuleks käivitada terminalis .</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;http&quot; URLi käsitleja">
+                                                                <longdesc>Käsk &quot;http&quot; URLide käsitlemiseks, kui lubatud.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Kas määratud käsk peaks käsitlema &quot;http&quot; URLe">
+                                                                <longdesc>Tõene, kui &quot;käsk&quot; võtmes määratud käsk käsitleb &quot;http&quot; URLe.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Käivita käsk terminalis">
+                                                                <longdesc>Tõene, kui käsku, mis määratud seda tüüpi URLide käsitlemiseks, tuleks käivitada terminalis .</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;man&quot; URLi käsitleja">
+                                                                <longdesc>Käsk &quot;man&quot; URLide käsitlemiseks, kui lubatud.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Kas määratud käsk peaks käsitlema &quot;man&quot; URLe">
+                                                                <longdesc>Tõene, kui &quot;käsk&quot; võtmes määratud käsk käsitleb &quot;man&quot; URLe.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Käivita käsk terminalis">
+                                                                <longdesc>Tõene, kui käsku, mis määratud seda tüüpi URLide käsitlemiseks, tuleks käivitada terminalis .</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;info&quot; URLi käsitleja">
+                                                                <longdesc>Käsk &quot;info&quot; URLide käsitlemiseks, kui lubatud.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Kas määratud käsk peaks käsitlema &quot;info&quot; URLe">
+                                                                <longdesc>Tõene, kui &quot;käsk&quot; võtmes määratud käsk käsitleb &quot;info&quot; URLe.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Käivita käsk terminalis">
+                                                                <longdesc>Tõene, kui käsku, mis määratud seda tüüpi URLide käsitlemiseks, tuleks käivitada terminalis .</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ghelp&quot; URLi käsitleja">
+                                                                <longdesc>Käsk &quot;ghelp&quot; URLide käsitlemiseks, kui lubatud.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Kas määratud käsk peaks käsitlema &quot;ghelp&quot; URLe">
+                                                                <longdesc>Tõene, kui &quot;käsk&quot; võtmes määratud käsk käsitleb &quot;ghelp&quot; URLe.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Käivita käsk terminalis">
+                                                                <longdesc>Tõene, kui käsku, mis määratud seda tüüpi URLide käsitlemiseks, tuleks käivitada terminalis .</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;trash&quot; URLi käsitleja">
+                                                                <longdesc>Käsk &quot;trash&quot; URLide käsitlemiseks, kui lubatud.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Kas määratud käsk peaks käsitlema &quot;trash&quot; URLe">
+                                                                <longdesc>Tõene, kui &quot;käsk&quot; võtmes määratud käsk käsitleb &quot;trash&quot; URLe.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Millal seda profiili kasutama peaks">
+                                                                        <longdesc>Millal seda profiili kasutama ja kuvama peaks</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Vaikimisi faililaiend selle profiili jaoks">
+                                                                        <longdesc>Failinime laiend, mida kasutatakse selle profiili abil kodeeritud failide salvestamisel.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Osaline GStreamer&apos;i toru, mida kasutada">
+                                                                        <longdesc>Osaline GStreamer&apos;i toru, mida selle profiilis kasutatakse.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="Audioprofiili kirjeldus">
+                                                                        <longdesc>Profiili kirjeldus, mis sisaldab lähemaid andmeid selle profiili kohta.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Audioprofiili lühinimetus">
+                                                                        <longdesc>Audioprofiili lühinimetus, mida kasutatakse valikutes kuvamiseks ja profiilide unikaalseks nimetamiseks.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Millal seda profiili kasutama peaks">
+                                                                                <longdesc>Millal seda profiili kasutama ja kuvama peaks</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Vaikimisi faililaiend selle profiili jaoks">
+                                                                                <longdesc>Failinime laiend, mida kasutatakse selle profiili abil kodeeritud failide salvestamisel.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Osaline GStreamer&apos;i toru, mida kasutada">
+                                                                                <longdesc>Osaline GStreamer&apos;i toru, mida selle profiilis kasutatakse.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audioprofiili kirjeldus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Audioprofiili lühinimetus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Vaikimisi faililaiend selle profiili jaoks">
+                                                                                <longdesc>Failinime laiend, mida kasutatakse selle profiili abil kodeeritud failide salvestamisel.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Osaline GStreamer&apos;i toru, mida kasutada">
+                                                                                <longdesc>Osaline GStreamer&apos;i toru, mida selle profiilis kasutatakse.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audioprofiili kirjeldus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Audioprofiili lühinimetus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Vaikimisi faililaiend selle profiili jaoks">
+                                                                                <longdesc>Failinime laiend, mida kasutatakse selle profiili abil kodeeritud failide salvestamisel.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Osaline GStreamer&apos;i toru, mida kasutada">
+                                                                                <longdesc>Osaline GStreamer&apos;i toru, mida selle profiilis kasutatakse.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audioprofiili kirjeldus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Audioprofiili lühinimetus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Vaikimisi faililaiend selle profiili jaoks">
+                                                                                <longdesc>Failinime laiend, mida kasutatakse selle profiili abil kodeeritud failide salvestamisel.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Osaline GStreamer&apos;i toru, mida kasutada">
+                                                                                <longdesc>Osaline GStreamer&apos;i toru, mida selle profiilis kasutatakse.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audioprofiili kirjeldus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Audioprofiili lühinimetus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Vaikimisi faililaiend selle profiili jaoks">
+                                                                                <longdesc>Failinime laiend, mida kasutatakse selle profiili abil kodeeritud failide salvestamisel.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Osaline GStreamer&apos;i toru, mida kasutada">
+                                                                                <longdesc>Osaline GStreamer&apos;i toru, mida selle profiilis kasutatakse.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audioprofiili kirjeldus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Audioprofiili lühinimetus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Vaikimisi faililaiend selle profiili jaoks">
+                                                                                <longdesc>Failinime laiend, mida kasutatakse selle profiili abil kodeeritud failide salvestamisel.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Osaline GStreamer&apos;i toru, mida kasutada">
+                                                                                <longdesc>Osaline GStreamer&apos;i toru, mida selle profiilis kasutatakse.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Audioprofiili kirjeldus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Audioprofiili lühinimetus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Omaduste loend">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="Automaatne proksi seadistamise URL">
+                                                <longdesc>URL, mis tagab proxi seadistuste väärtused.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="SOCKS proksi port">
+                                                <longdesc>Port, defineeritud &quot;/system/proxy/socks_host&quot; poolt, mille kaudu proxyt kasutatakse.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="SOCKS proksiserveri aadress">
+                                                <longdesc>Socks proxi masina nimi</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="FTP proksi port">
+                                                <longdesc>Port, defineeritud &quot;/system/proxy/ftp_host&quot; poolt, mille kaudu proxyt kasutatakse.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="FTP proksiserveri aadress">
+                                                <longdesc>FTP proxi masina nimi</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Turvalise HTTP proksi port">
+                                                <longdesc>Port, defineeritud &quot;/system/proxy/secure_host&quot; poolt, mille kaudu proxyt kasutatakse.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Turvalise HTTP proksiserveri aadress">
+                                                <longdesc>Turvalise HTTP proxi masina nimi</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Proksi seadistusrežiim">
+                                                <longdesc>Vali proksi konfiguratsiooni mood. Toetatud väärtused on &quot;pole&quot;, &quot;käsitsi&quot;, &quot;automaatne&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Proksi kasutamiskeeluga serverid">
+                                                <longdesc>See võti sisaldab nimekirja hostidest kuhu ühendutakse otse, ilma et kasutataks proxyt (isegi kui see on aktiivne). Väärtused võivad olla hostinimed, domeenid (kasutades vormi *.foo.com), IP-aadressid (nii IPv6 kui IPv6) ja võrguaadressid koos võrgumaskiga (näiteks 192.168.0.0/24).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="HTTP proksi salasõna">
+                                                <longdesc>Parool, mida HTTP proxile autentimiseks saata.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="HTTP proksi kasutajanimi">
+                                                <longdesc>Kasutajanimi mida saadetakse autentimiseks HTTP proxile.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Proksiserveri ühenduste autentimine">
+                                                <longdesc>Kui tõene, siis ühendused proxy-serverisse vajavad autentimist. Kasutajanimi/salasõna on defineeritud võtmetega &quot;/system/http_proxy/authentication_user&quot; ja &quot;/system/http_proxy/authentication_password&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="HTTP proksi port">
+                                                <longdesc>Port, defineeritud &quot;/system/http_proxy/host&quot; poolt, mille kaudu proxyt kasutatakse.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="HTTP proksiserveri aadress">
+                                                <longdesc>HTTP proxi masina nimi</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="HTTP proksi kasutamine">
+                                                <longdesc>Lubab proksi seaded, kui HTTP-le pääsetakse ligi Interneti kaudu.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Lisadomeenid DNS-SD teenuste otsimiseks">
+                                                <longdesc>Komadega eraldatud rida DNS-SD domeenidest, mis peaksid olema nähtavad võrgukohas &quot;network:///&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Kuidas kuvada kohalikku DNS-SD teenust">
+                                                <longdesc>Võimalikud väärtused on &quot;kokkupandud&quot;, &quot;eraldatud&quot; ja &quot;keelatud&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="SMB töögrupp">
+                                                <longdesc>Windows&apos;i võrgunduse töögrupi või domeeni nimi, kuhu see kasutaja kuulub. Selleks et kasutaja saaks täielikult ära kasutada uue töögrupi privileege, peaks ta kõigepealt välja ja seejärel uuesti sisse logima.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

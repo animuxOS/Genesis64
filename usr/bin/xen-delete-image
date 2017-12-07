@@ -1,0 +1,632 @@
+#!/usr/bin/perl -w
+
+=head1 NAME
+
+xen-delete-image - Delete previously created Xen instances.
+
+=head1 SYNOPSIS
+
+  xen-delete-image [options] [--hostname=]imageName1 [--hostname=]imageName2
+
+  Help Options:
+   --help     Show help information.
+   --manual   Read the manual for this script.
+   --version  Show the version information and exit.
+   --verbose  Show diagnostic output.
+
+  General options:
+   --dir      Specify the output directory where images were previously saved.
+   --lvm      Specify the LVM volume to use.
+   --evms     Specify the EVMS container to use.
+
+  Specifying hosts:
+   --hostname Specify the image name to delete.
+
+  Testing options:
+   --test     Don't complain if we're not invoked by root.
+
+=cut
+
+
+=head1 OPTIONS
+
+=over 8
+
+=item B<--dir>
+Specify the output directory where images were previously saved.
+
+=item B<--evms>
+Specify the EVMS container where images were previously saved.
+
+=item B<--help>
+Show help information.
+
+=item B<--hostname>
+Specify the hostname to delete.
+
+=item B<--lvm>
+Specify the LVM volume group where images were previously saved.
+
+=item B<--manual>
+Read the manual for this script.
+
+=item B<--test>
+Don not complain, or exit, if the script is not executed by the root user.
+
+=item B<--version>
+Show the version number and exit.
+
+
+=back
+
+=cut
+
+
+=head1 DESCRIPTION
+
+  xen-delete-image is a simple script which allows you to delete
+ Xen instances which have previously been created by xen-create-image.
+
+  You must be root to run this script as it removes the Xen configuration
+ file from /etc/xen and potentially removes LVM and EVMS volumes.
+
+  (When invoked with the '--test' flag the script will continue running,
+ but will fail to remove anything which the user does not have permission
+ to delete.)
+
+=cut
+
+
+=head1 LOOPBACK EXAMPLE
+
+  Assuming that you have three images 'foo', 'bar', and 'baz', stored
+ beneath /home/xen the first two may be deleted via:
+
+    xen-delete-image --dir=/home/xen foo bar
+
+  You may also delete them by running:
+
+    xen-delete-image --dir=/home/xen --hostname=foo --hostname=bar
+
+  (The matching Xen configuration files beneath /etc/xen will also be
+ removed.)
+
+=cut
+
+
+=head1 LVM EXAMPLE
+
+  Assuming that you have the volume group 'skx-vol' containing three
+ Xen instances 'foo', 'bar', and 'baz' the first two may be deleted via:
+
+    xen-delete-image --lvm=skx-vol foo bar
+
+  This will remove the volumes 'foo-disk', 'foo-swap', 'bar-disk',
+ and 'bar-swap'.
+
+  Note that if the images were created with "--noswap" then the swap
+ volumes will not be present, so will not need to be deleted.
+
+  The Xen configuration files will also be removed from beneath /etc/xen.
+
+=cut
+
+
+=head1 EVMS EXAMPLE
+
+  Assuming that you have the container 'mycontainer' containing three
+ Xen instances 'foo', 'bar', and 'baz' the first two may be deleted via:
+
+    xen-delete-image --evms=lvm2/mycontainer --hostname=foo --hostname=bar
+
+  This will remove the volumes 'foo-disk', 'foo-swap', 'bar-disk',
+ and 'bar-swap'.
+
+  Note that if the images were created with "--noswap" then the swap
+ volumes will not be present, so will not need to be deleted.
+
+  The Xen configuration files will also be removed.
+
+=cut
+
+
+=head1 AUTHOR
+
+ Steve
+ --
+ http://www.steve.org.uk/
+
+=cut
+
+
+=head1 LICENSE
+
+Copyright (c) 2005-2007 by Steve Kemp.  All rights reserved.
+
+This module is free software;
+you can redistribute it and/or modify it under
+the same terms as Perl itself.
+The LICENSE file contains the full text of the license.
+
+
+=cut
+
+
+use strict;
+use English;
+use Getopt::Long;
+use Pod::Usage;
+
+
+#
+#  Configuration options, initially read from the configuration files
+# but may be overridden by the command line.
+#
+#  Command line flags *always* take precedence over the configuration file.
+#
+my %CONFIG;
+
+#
+# Release number.
+#
+my $RELEASE = '3.9';
+
+
+
+
+#
+# Read the global configuration file if it exists.
+#
+if ( -e "/etc/xen-tools/xen-tools.conf" )
+{
+    readConfigurationFile( "/etc/xen-tools/xen-tools.conf" );
+}
+
+
+#
+#  Parse command line arguments, these override the values from the
+# configuration file.
+#
+parseCommandLineArguments();
+
+
+#
+#  Check that we got valid arguments.
+#
+checkArguments();
+
+
+#
+#  Abort if non-root user.
+#
+if ( (!$CONFIG{'test'}) && ( $EFFECTIVE_USER_ID != 0 ) )
+{
+    print <<E_O_ROOT;
+
+  This script is not running with root privileges, so the configuration
+ file(s) beneath /etc/xen will not be removed.
+
+E_O_ROOT
+
+    exit 127;
+}
+
+
+
+#
+#  Loop over the supplied arguments, and attempt to delete each
+# image.
+#
+while( my $name = shift )
+{
+    if ( !xenRunning( $name ) )
+    {
+        deleteXenImage( $name );
+    }
+    else
+    {
+        print "Skipping xen guest '$name' - it appears to be running.\n";
+    }
+}
+
+#
+#  Also delete any which were specified using the --hostname flag
+#
+my $hosts = $CONFIG{'hostname'};
+foreach my $name ( @$hosts )
+{
+    if ( !xenRunning( $name ) )
+    {
+        deleteXenImage( $name );
+    }
+    else
+    {
+        print "Skipping xen guest '$name' - it appears to be running.\n";
+    }
+}
+
+#
+#  All done.
+#
+exit 0;
+
+
+
+
+=begin doc
+
+  Read the configuration file specified.
+
+=end doc
+
+=cut
+
+sub readConfigurationFile
+{
+    my ($file) = ( @_ );
+
+    open( FILE, "<", $file ) or die "Cannot read file '$file' - $!";
+
+    my $line       = "";
+
+    while (defined($line = <FILE>) )
+    {
+        chomp $line;
+        if ($line =~ s/\\$//)
+        {
+            $line .= <FILE>;
+            redo unless eof(FILE);
+        }
+
+        # Skip lines beginning with comments
+        next if ( $line =~ /^([ \t]*)\#/ );
+
+        # Skip blank lines
+        next if ( length( $line ) < 1 );
+
+        # Strip trailing comments.
+        if ( $line =~ /(.*)\#(.*)/ )
+        {
+            $line = $1;
+        }
+
+        # Find variable settings
+        if ( $line =~ /([^=]+)=([^\n]+)/ )
+        {
+            my $key = $1;
+            my $val = $2;
+
+            # Strip leading and trailing whitespace.
+            $key =~ s/^\s+//;
+            $key =~ s/\s+$//;
+            $val =~ s/^\s+//;
+            $val =~ s/\s+$//;
+
+            # command expansion?
+            if ( $val =~ /(.*)`([^`]+)`(.*)/ )
+            {
+                # store
+                my $pre  = $1;
+                my $cmd  = $2;
+                my $post = $3;
+
+                # get output
+                my $output = `$cmd`;
+                chomp( $output );
+
+                # build up replacement.
+                $val = $pre . $output . $post;
+            }
+
+            # Store value.
+            $CONFIG{ $key } = $val;
+        }
+    }
+
+    close( FILE );
+}
+
+
+
+
+=begin doc
+
+  Parse the arguments specified upon the command line.
+
+=end doc
+
+=cut
+
+sub parseCommandLineArguments
+{
+    my $HELP    = 0;
+    my $MANUAL  = 0;
+    my $VERSION = 0;
+
+    #  Parse options.
+    #
+    GetOptions(
+              "dir=s",       \$CONFIG{'dir'},
+              "lvm=s",       \$CONFIG{'lvm'},
+              "evms=s",      \$CONFIG{'evms'},
+              "hostname=s@", \$CONFIG{'hostname'},
+              "test",        \$CONFIG{'test'},
+              "verbose",     \$CONFIG{'verbose'},
+              "help",        \$HELP,
+              "manual",      \$MANUAL,
+              "version",     \$VERSION
+             );
+
+    pod2usage(1) if $HELP;
+    pod2usage(-verbose => 2 ) if $MANUAL;
+
+
+    if ( $VERSION )
+    {
+       my $REVISION      = '$Revision: 1.41 $';
+
+       if ( $REVISION =~ /1.([0-9.]+) / )
+       {
+           $REVISION = $1;
+       }
+
+       print "xen-delete-image release $RELEASE - CVS: $REVISION\n";
+       exit;
+
+    }
+}
+
+
+
+=begin doc
+
+  Check that we received the arguments we expected.
+
+=end doc
+
+=cut
+
+sub checkArguments
+{
+    #
+    #  When testing we only care about loopback images, not disk images.
+    #
+    if ( $CONFIG{'test'} )
+    {
+        $CONFIG{'lvm'}  = undef;
+        $CONFIG{'evms'} = undef;
+    }
+
+    #
+    #  Make sure we got one and only one installation method.
+    #
+    my $count = 0;
+    foreach my $type ( qw/dir lvm evms/ )
+    {
+        $count += 1 if defined( $CONFIG{$type} );
+    }
+
+    #
+    #  Show a decent error for when either zero or more than one options
+    # were selected.
+    #
+    if ( $count != 1 )
+    {
+       print "Please select one and only one of the installation methods:\n";
+       print " --dir\n";
+       print " --evms\n";
+       print " --lvm\n";
+       exit;
+    }
+}
+
+
+
+
+=begin doc
+
+  Test to see if the given instance is running.
+
+=end doc
+
+=cut
+
+sub xenRunning
+{
+    my( $hostname ) =  (@_ );
+
+    my $running = 0;
+
+    open( CMD, "xm list $hostname 2>/dev/null |")
+      or die "Failed to run 'xm list $hostname'";
+    while( <CMD> )
+    {
+        my $line = $_;
+        $running = 1 if ( $line =~ /\Q$hostname\E/ )
+    }
+    close( CMD );
+
+    return( $running );
+}
+
+
+=begin doc
+
+  Delete the named image, and the corresponding configuration file
+ from /etc/xen.
+
+=end doc
+
+=cut
+
+sub deleteXenImage
+{
+    my ($hostname) = ( @_ );
+
+    #
+    #  Collect the names of files to delete.
+    #
+    my @delete;
+
+    #
+    #  Delete the Xen auto-start file if it exists.
+    #
+    if ( -e "/etc/xen/auto/$hostname.cfg" )
+    {
+        push( @delete, "/etc/xen/auto/$hostname.cfg" );
+    }
+
+    #
+    #  Delete the Xen configuration file if it exists.
+    #
+    if ( -e "/etc/xen/$hostname.cfg" )
+    {
+        push( @delete, "/etc/xen/$hostname.cfg" );
+    }
+
+    #
+    #  If we're working on disk images remove them.
+    #
+    foreach my $file ( @delete )
+    {
+        if ( -e $file )
+        {
+            print "Deleting: $file\n";
+            unlink( $file );
+        }
+        else
+        {
+            print "Ignoring missing file: $file\n";
+        }
+    }
+
+
+    if ( defined( $CONFIG{'dir'} ) )
+    {
+       my $prefix = $CONFIG{'dir'} . "/domains/";
+
+       #
+       #  Now remove the directory.
+       #
+       if ( -d $prefix . $hostname )
+       {
+           print "Removing: " . $prefix . $hostname . "\n";
+           rmdir ( $prefix . $hostname );
+       }
+    }
+    elsif ( defined( $CONFIG{'lvm'} ) )
+    {
+       #
+       #  LVM volumes
+       #
+       #
+       #  TODO: Check we're not mounted.
+       #
+
+       if ( -e "/dev/$CONFIG{'lvm'}/$hostname-swap" )
+       {
+           print "Removing swap volume\n";
+           runCommand( "lvremove /dev/$CONFIG{'lvm'}/$hostname-swap --force" );
+       }
+
+       if ( -e "/dev/$CONFIG{'lvm'}/$hostname-disk" )
+       {
+           print "Removing LVM disk volume\n";
+           runCommand( "lvremove /dev/$CONFIG{'lvm'}/$hostname-disk --force" );
+       }
+
+    }
+    elsif ( defined( $CONFIG{'evms'} ) )
+    {
+       #
+       #  EVMS volumes
+       #
+       #
+       #  TODO: Check we're not mounted.
+       #
+
+       if ( -e "/dev/evms/$hostname-swap" )
+       {
+           print "Removing EVMS swap volume\n";
+           runCommand( "echo Delete : /dev/evms/$hostname-swap | evms" );
+           runCommand( "echo Delete : $CONFIG{'evms'}/$hostname-swap | evms" );
+       }
+
+       if ( -e "/dev/evms/$hostname-disk" )
+       {
+           print "Removing EVMS disk volume\n";
+           runCommand( "echo Delete : /dev/evms/$hostname-disk | evms" );
+           runCommand( "echo Delete : $CONFIG{'evms'}/$hostname-disk | evms" );
+       }
+
+    }
+    else
+    {
+       print "Error:  No installation type specified\n";
+       print "Can't happen!\n";
+       print "Hostname : $hostname\n";
+       exit 127;
+    }
+}
+
+
+
+=begin doc
+
+  A utility method to run a system command.  We will capture the return
+ value and exit if the command files.
+
+  When running verbosely we will also display any command output.
+
+=end doc
+
+=cut
+
+sub runCommand
+{
+    my ( $cmd ) = (@_ );
+
+    #
+    #  Header.
+    #
+    $CONFIG{'verbose'} && print "Executing : $cmd\n";
+
+    #
+    #  Hide output unless running with --debug.
+    #
+    if ( $CONFIG{'verbose'} )
+    {
+       #
+       #  Copy stderr to stdout, so we can see it.
+       #
+       $cmd .= " 2>&1";
+    }
+    else
+    {
+       $cmd .= " >/dev/null 2>/dev/null" ;
+    }
+
+
+    #
+    #  Run it.
+    #
+    my $output = `$cmd`;
+
+    if ( $? != 0 )
+    {
+       print "Running command '$cmd' failed.\n";
+       print "Aborting\n";
+       exit;
+    }
+
+
+    #
+    # All done.
+    #
+    $CONFIG{'verbose'} && print "Output\n";
+    $CONFIG{'verbose'} && print "======\n";
+    $CONFIG{'verbose'} && print $output . "\n";
+    $CONFIG{'verbose'} && print "Finished : $cmd\n";
+
+    return( $output );
+}

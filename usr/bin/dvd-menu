@@ -1,0 +1,1997 @@
+#!/bin/bash
+#    dvd-menu
+#    Copyright 2003-2006 Scott Dylewski  <scott at dylewski.com>
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program; if not, write to the Free Software
+#    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
+
+name='dvd-menu'
+version='0.8.0'
+
+echo "[dvd-menu]            dvd-menu $version"
+echo "[dvd-menu]            Licensed under the GNU GPL"
+echo "[dvd-menu]            Copyright 2003-2006 by Scott Dylewski"
+echo "[dvd-menu]            "
+
+## TODO:
+# read in variables from ~/.dvd-menurc and local .dvd-menurc
+# relative paths in xine output suggestion
+
+## Known bugs:
+
+LANG=C
+
+changes () 
+{
+echo 'Changes:
+0.8.0
+	pre9:
+	Added 6image layout option.  It can also read the title and icon from
+	  the .xml file output from dvd-slideshow.  more testing is needed.
+	Added many more variables to control the layout of the menu also.
+	pre8:
+	Added -vcd and -svcd modes.  Works!  tested -vcd a little.
+	Audio automatically fades in/out for 2 seconds
+	Reads variables correctly from ~/.dvd-slideshow/dvd-slideshowrc	
+	Updated variables.  See dvd-slideshowrc example file
+	Better control of fonts and variables.
+	Deletes temp directory when finished.
+	-nocleanup works
+	Reads -theme files
+	Added -fadein and -fadeout for menus.
+	Remove seq calls for compatibility with FreeBSD (Thanks David Mulcahy)
+	Remove wc --chars calls for compatibility with FreeBSD
+0.7.5	
+	Allow embedded .png to keep transparency	
+	Fix error message quotes when looking for XML file existing.
+0.7.4	no changes
+0.7.3	
+	** Changed output directory option to be the same as dvd-slideshow
+	Spaces in filenames should work now.
+	Checks that xml files exist before proceeding.
+	Added option to pass an embedded image (-e image.jpg). Thanks Marcus Brown
+	Added "upAction" option for use with dvd-bakery. Thanks Marcus Brown!
+	Fixed bug in pal mode variable passing.	 (thanks Marcus Brown)
+	Changed head 4 to head -n 4
+	Added variable "mpeg2enc_params" for easier changing of mpeg2enc parameters.	
+	Get rid of rpm checks.
+	Added low quality mode -L for use with dvd-slideshow.
+	Added -nocleanup option to save files in temp directory for debugging.
+	Added "-compose src-over" to all composite lines for compatibility with Debian Etch.
+	Added -H high-quality option as a placeholder for future use
+	Added -smp option as a dummy option for compatibility with dvd-slideshow
+0.7.2	
+	Better checking for correct versions of required programs.
+	Logfile output to dvd-menu.log
+	Reads default variables from ~/.dvd-slideshowrc	
+	Obeys "autocrop" option	
+	Pixel aspect ratio should be correct now.
+0.7.1	Automatically creates output directory if it does not exist.
+	Added option -nomenu if you do not want to create a menu
+	AC3 is default audio type now.  Pass -mp2 if you want to 
+	force mp2 audio.
+0.7.0	Added option -iso option to create the iso image
+	(requires mkisofs)
+0.6.2	Removed -c and -R 2 options from mpeg2enc because some versions
+	do not have those switches.
+	Works with toolame 0.2m now.
+	Got rid of calls to NetPBM functions, so it is no longer required...
+0.6.0	Added AC3 audio option (requires ffmpeg > 0.4.8).
+	Mplexed files are now correctly labeled with the .vob extension.
+        Better font searching (thanks Jim Crumley)
+0.5.4	No changes.
+0.5.2	Fixed audio bug when no audio was used. (re-mplex error)
+	Added -c continuous play option (<post> jumps to next title).
+	Added -D do not run dvdauthor option.
+	Added -W do not create a 50% white background under menu text.
+	dvdauthor xml structure changed slightly
+	DVD Title (-n) is now optional.
+	Added man page.
+	Checks for nice fonts.
+0.5.0	Changed name to "dvd-menu"
+	Only requires lame or oggdec if you are using that file format.
+	Fixed some audio bugs (sampling) so it should work better.
+	Will automatically delete AUDIO_TS and VIDEO_TS directories
+	in your output directory if they already exist.
+0.4.6	Fixed bug when checking for toolame (thanks Scott Merrill)
+	Removed -t option from toolame for better compatibility with old versions.	
+0.4.2	Changed location of main title slightly lower.
+	Fixed one hardcoded 720x480 image so PAL option should work better.
+	Added -depth 8 to ImageMagick calls to fix ppmtoy4m errors. 
+	Upgraded main menu background when no background is passed.
+0.4	Fixed bug when no background file was passed. Works now.
+	Ogg audio format supported now.
+	Uses toolame for mp2 audio encoding when available.
+	-p (PAL format option) added.  Not tested, but should work.
+	Menu button white background is now 50% transparent.
+0.3	Added section to check for required programs
+	If no background passed, a black one will be used.
+0.2	Initial release'
+}
+
+help ()
+{
+echo "dvd-menu is part of dvd-slideshow $version"
+echo "`basename $0`"
+echo "http://freshmeat.net/dvdslideshow/"
+echo 'Copyright 2003 Scott Dylewski <scott at dylewski.com>
+ 
+Usage: 
+  dvd-menu -t <titleset1> ... -t <titlesetN>
+  -f <xmlfile1> ... -f <xmlfileN> [-o output_directory]
+  [-n "menu title"] [-e <embed image>] [-L]
+  [-b <background jpeg>] [ -a <menu audio file> ] [-p]
+  [-c] [-D] [-W] [-mp2] [-iso] [-w] [-theme <themefile>]  [-nomenu] 
+
+Description: 
+	Creates a simple vmgm menu with buttons that
+	link to the mpeg files in the specified 
+	dvdauthor-compatible xml files. 
+	
+Options: 
+ -t <titleset1> -t <titleset2> ... -t <titlesetN>
+	Name of each title.  Each string will be used for 
+	the button menu corresponding to each xmlfile.
+	This sets the order of the menu buttons!
+
+ -f <xmlfile1> <xmlfile2> ...
+	Name of each titleset xml file.  You can use
+	dvd_slideshow to generate one for each slideshow
+	or you can create your own for a simple mpeg2
+	file.
+
+ [-o <output directory>]
+	Directory where the output dvd file system resides
+
+ [-n "dvd_title"]
+        This string will be placed on the top of the
+        menu page.
+
+ [-b <background jpeg>]
+	Image to put in the background of the menu.
+
+ [-e <embedded image>]
+	Embed a jpeg image in the middle of the screen.
+	If one image is passed for each button text, 
+	That image will be shown as each button is active.
+
+ [-a <audiofile>]
+	Audio file to use in the background of the
+	menu.  The full audio file will keep looping.
+	Supports mp3, ogg, or wav.
+
+ [-mp2]
+        Use MP2 audio by default.  AC3 seems to be more stable
+	in hardware players, but requires ffmpeg.
+
+ [-p]
+        Use PAL format instead of NTSC (untested initial support)
+
+ [-c]
+        Use continuous method.  Each video plays one after another.
+
+ [-W]
+        Do not generate 50% white background behind menu text.
+
+ [-w]
+        Use widescreen mode (16:9) instead of default 4:3 aspect ratio.
+
+ [-L]
+        Use low quality mode for compatibility with the same option
+	in dvd-slideshow.  This renders half-resolution menus.
+
+ [-D]
+        Do not call dvdauthor at the end.  Useful when you want
+	to edit your own xml file and pass it to dvdauthor by hand.
+
+ [-theme themename]
+	Use the given theme when setting variables/colors/etc.  Themes are
+	installed in /opt/dvd-slideshow/themes or in a local directory
+	~/.dvd-slideshow/themes
+ 
+ [-vcd]|[-svcd]  [ALPHA!]
+        Create vcd .cue and .bin files (requires vcdimager)
+
+ [-iso]
+        Create iso image with mkisofs when finished.
+
+ [-nomenu]
+        Do not create a menu.  Useful for just finishing the 
+	dvdauthor xml file from one video that you want to just
+	start playing when the user puts it into a dvd player.
+
+ [-nocleanup]
+        Save files in temp directory for debugging.
+
+ -h or -help 
+   Prints this help. 
+
+Requires:
+	dvdauthor 0.6.11
+	sox
+	mjpegtools  (mp2enc, mpeg2enc, ppmtoy4m)
+	ImageMagick (convert)
+
+Variables:
+	dvd-menu will read the following variables out of your ~/.dvd-slideshow/dvd-slideshowrc file.
+	The default values are shown
+
+	menu_bg_color='steelblue'  # imagemagick colors or a hex #rrggbb value.
+	menu_title_font_size=40
+	menu_title_white_height=125
+	menu_title_location_x=80
+	menu_title_location_y=50
+	menu_panel_height=28  # height of each button.  Default is slightly bigger than font size
+	menu_panel_width=400  # goes all the way to the right of the screen
+	menu_panel_location_x=360
+	menu_panel_location_y=175  # distance of the top of the first menu item to the top of the screen
+	menu_button_font_size=21
+	menu_title_justify=left
+
+ '
+}
+
+if [ $# -lt 1 ]; then
+	help
+	exit 1
+fi
+
+# [-button <button image.jpg>]
+#	Use image.jpg for a highlight image button.
+#	The text from -t <titleset> will be placed underneath.
+#	Pass one -b <image.jpg> for each titleset xml file.
+#
+
+
+##################################################################
+## Functions:
+
+myecho ()
+{
+	## use this version of echo to write to screen and to the logfile:
+	echo "$*"
+	echo "$*" >> "$logfile"
+}
+
+logecho ()
+{
+	## use this version of echo to write to the logfile:
+	echo "$*" >> "$logfile"
+}
+
+myechon ()
+{
+	## use this version of echo to write to screen and to the logfile:
+	echo -n "$*"
+	echo -n "$*" >> "$logfile"
+}
+
+
+check_rm () # check_rm checks to see if the file exists before it's deleted:
+{
+	if [ -f "${1}" ] ; then
+		rm "${1}"
+	fi
+}
+
+cleanup ()
+{
+if [ "$nocleanup" -eq 0 ] ; then
+	## clean up temporary files
+	myecho "[dvd-menu] cleanup..."
+	check_rm "$tmpdir/slideshow_background.ppm"
+#	check_rm "$tmpdir/silence.mp2"
+	check_rm "$tmpdir/title_background_mask.png"
+	check_rm "$tmpdir/button_background_mask.png"
+	check_rm "$tmpdir/button_text.png"
+	check_rm "$tmpdir/button_mask.png"
+	check_rm "$tmpdir/button_mask_trans.png"
+	check_rm "$tmpdir/menu.ppm"
+	check_rm "$tmpdir/fadein.mpg"
+	check_rm "$tmpdir/bg_fade.ppm"
+	check_rm "$tmpdir/fadeout.mpg"
+	check_rm "$tmpdir/menu.mpg"
+	check_rm "$tmpdir/menu.spumux"
+	check_rm "$tmpdir/menu_mask.png"
+	check_rm "$tmpdir/menu_t.vob"
+	check_rm "$tmpdir/menu_audio.wav"
+	check_rm "$tmpdir/fade_audio.wav"
+	check_rm "$tmpdir/fade_audio.ac3"
+	check_rm "$tmpdir/fade_audio.mp2"
+	check_rm "$tmpdir/audio.mp2"
+	check_rm "$tmpdir/audio.wav"
+	check_rm "$tmpdir/audio.ac3"
+	check_rm "$tmpdir/embed.jpg"
+	check_rm "$tmpdir/dvd_title.png"
+	check_rm "$tmpdir/titles_vmgm.xml"
+	check_rm "$tmpdir/embed.png"
+	check_rm "$tmpdir/black.ppm"
+	[ -f "$tmpdir"/fade_0001.ppm ] && rm "$tmpdir"/fade_*.ppm
+        k=0
+        dk=0
+        for file in "${title[@]}"; do
+                [ $k -lt 10 ] && dk="0$k" || dk=$k
+#              	echo "k=$k  dk=$dk"
+                check_rm "$tmpdir"/title_"$dk"_mask.png
+                check_rm "$tmpdir"/title_"$k"_mask.png
+                check_rm "$tmpdir/title_$dk.ppm"
+                check_rm "$tmpdir/title_$k.ppm"
+                let k=$k+1
+        done
+	rmdir "$tmpdir"
+fi
+}
+
+forcequit () ## function gets run when we have some sort of forcequit...
+{
+	## clean up temporary files
+	cleanup
+	exit 1
+}
+
+trap 'forcequit' INT
+trap 'forcequit' KILL
+trap 'forcequit' TERM
+
+## check for the necessary programs:
+checkforprog ()
+{
+        it=`which $1`
+        if [ -z "$it" ] ; then
+                myecho "[dvd-menu] ERROR:  $1 not found! "
+                myecho "[dvd-menu] Check the dependencies and make sure everything is installed."
+                exit 1
+        fi
+}
+
+rpmversion ()
+## don't use this since most machines don't have rpm!
+{
+        if [ -z `which rpm 2> /dev/null` ] ; then
+                ver=''
+        else
+                ver=`rpm -q $1`
+        fi
+        if [ `echo $ver | awk -F- '{print $1}'` == "$1" ] ; then
+                # rpm returned version of program
+                version=`echo $ver | awk -F- '{print $2}'`
+#                myecho "[dvd-menu] Found $1 version $version"
+        else
+                # no rpm, try other methods
+                version=0  # no version found (yet)
+#                myecho "[dvd-menu] Found $1"
+        fi
+        echo "$version"  # returns 0 if no version found, but executable exists
+}
+
+hms ()
+{
+        ## pass a number in hundreths of seconds and get back a
+        ## time code of the form HR:MM:SS:HU
+        hours=$(( $1 / 360000 ))
+        it=$(( $1 - $hours * 360000 ))
+        minutes=$(( $it / 6000 ))
+        it=$(( $1 - $minutes * 6000 ))
+        seconds=$(( $it / 100 ))
+        hundreths=$(( $it - $seconds * 100 ))
+        it="$hours:$minutes:$seconds.$hundreths"
+        echo "${it}"
+}
+
+white_title_mask ()
+{
+	convert -size "$dvd_width"x600 -quality 100 xc:transparent -depth 8 -fill white -draw "Rectangle 0,0,$dvd_width,$title_white_height" -background none -blur 0x4 -crop $resolution-0-0 "$1"
+}
+
+white_button_mask ()
+{
+	# white_button_mask outfile
+#	convert -size "$dvd_width"x$menuh -quality 100 xc:transparent -depth 8 -fill white -draw "roundRectangle $menu_panel_location_x,$menu_panel_location_y,$menuright,$menubottom $radius,$radius" -draw "Rectangle 0,0,$dvd_width,$title_white_height" -crop $resolution-0-0 "$1"
+	convert -size "$dvd_width"x$menuh -quality 100 xc:transparent -depth 8 -fill white -draw "roundRectangle $menu_panel_location_x,$menu_panel_location_y,$menuright,$menubottom $radius,$radius" -background none -blur 0x4 -crop $resolution-0-0 "$1"
+}
+
+title_text ()
+{
+	# title_text outfile
+	echo "[dvd-menu] Creating title: $dvd_title"
+	[ "$title_justify" == 'left' ] && title_justify=NorthWest
+	[ "$title_justify" == 'right' ] && title_justify=NorthEast
+	[ "$title_justify" == 'center' ] && title_justify=North
+	echo "[dvd-menu] title justified $title_justify"
+	convert -depth 8 -size $resolution xc:transparent -fill "$title_font_color" -pointsize $title_font_size -gravity $title_justify -font "$title_font" -draw "text $title_location_x,$title_location_y \"${dvd_title}\"" "$1" 
+}
+
+imagewidth ()  # IMAGEWIDTH
+{
+        it="`identify -format %w "$1"`"
+        it="$(( $it * $sq_pixel_multiplier / 1000 ))"
+        echo "$it"
+}
+
+imagewidth_sq ()  # IMAGEWIDTH_SQ
+{
+        it="`identify -format %w "$1"`"
+        echo "$it"
+}
+
+
+imageheight ()
+{
+        it="`identify -format %h "$1"`"
+        echo "$it"
+}
+
+
+checkforautocrop ()
+{
+	if [ "$autocrop" == 1 ] ; then
+		# figure out whether to autocrop the image or not
+	        image_width=`imagewidth "$1"`
+	        image_height=`imageheight "$1"`
+	        ratio="$(( 100* $image_width / $image_height ))"
+	        out_ratio="$(( 100* $dvd_width / $dvd_height ))"
+		do_autocrop_w=0 ; do_autocrop_h=0
+		if [ "$ratio" -lt "$(( $out_ratio ))" ] ; then
+			do_autocrop_h=1 # image too wide, crop height
+		elif [ "$ratio" -gt "$(( $out_ratio ))" ] ; then
+			do_autocrop_w=1 # image too tall, crop width
+		fi
+		[ $debug -ge 2 ] && myecho "[dvd-menu:checkforautocrop] image_width=$image_width image_height=$image_height ratio=$ratio out_ratio=$out_ratio"
+		[ $debug -ge 2 ] && myecho "[dvd-menu:checkforautocrop] do_autocrop_w=$do_autocrop_w  do_autocrop_h=$do_autocrop_h"
+	else
+		do_autocrop_h=0 ; do_autocrop_w=0
+	fi
+}
+
+background ()
+{
+		## input is:  $1 = effect/image
+		# output is written to "$tmpdir"/slideshow_background.ppm 
+		bg="$1"
+		if [ -z "$2" ] ; then
+			local outfile_bg="$tmpdir"/slideshow_background.ppm
+		else
+			local outfile_bg="$2"
+		fi
+		if [ -f "$bg" ] ; then # if effect is a background file
+			myecho "[dvd-menu] Creating background image $( truncate_filename "$bg")"
+			checkforautocrop "$bg"
+                       if [ "$do_autocrop_w" -eq 1 ]; then   
+                               # autocrop background image width (width too large)
+                               convert "${bg}" -resize "$sq_to_dvd_pixels" -resize x"$dvd_height" \
+                               -gravity center -crop "$dvd_width"x"$dvd_height"'+0!+0!' -type TrueColor -depth 8 "$outfile_bg"
+                       elif [ "$do_autocrop_h" -eq 1 ]; then
+                               # autocrop background image height (height too large)
+                               convert "${bg}" -resize "$sq_to_dvd_pixels" -resize "$dvd_width"x \
+                               -gravity center -crop "$dvd_width"x"$dvd_height"'+0!+0!'  -type TrueColor -depth 8 "$outfile_bg"
+                       else
+echo "no autocrop background"
+                               #don't autorop
+                               convert "${bg}" -resize "$sq_to_dvd_pixels" -resize x"$dvd_height" -bordercolor black -border "$dvd_width"x240 \
+                               -gravity center -crop "$dvd_width"x"$dvd_height"'+0!+0!' -type TrueColor -depth 8 "$outfile_bg"
+                       fi
+			bgfile="$bg"
+		elif [ "$bg" == 'black' ] ; then  # I guess we could add other types of backgrounds here!
+			## use plain black background with no picture
+			myecho "[dvd-menu] Creating black background"
+			convert -size "$dvd_width"'x'"$dvd_height" xc:black -type TrueColor -depth 8 "$outfile_bg"
+			bgfile="black"
+		elif [ "$bg" == 'white' ] ; then  # I guess we could add other types of backgrounds here!
+			## use plain white background with no picture
+			myecho "[dvd-menu] Creating white background"
+			convert -size "$dvd_width"'x'"$dvd_height" xc:white -type TrueColor -depth 8 "$outfile_bg"
+			bgfile="white"
+		elif [ "${bg:0:1}" == '#' ] ; then  # user passed a #RRGGBB hex color
+			myecho "[dvd-menu] Creating $bg color background"
+			convert -size "$dvd_width"'x'"$dvd_height" xc:"$bg" -type TrueColor -depth 8 "$outfile_bg"
+			bgfile="hex"
+		fi
+}
+
+set_variables ()
+{
+        ## check for config variables:
+        config1=`echo "$1" | cut -d= -f1 | tr -d [:blank:]`
+#        config2=`echo "$1" | awk -F' #' '{print $2}' | cut -d= -f2 | tr -d '\047' | tr -d '\042' | tr -d [:blank:]`
+        config2=`echo "$1" | tr '\t' ' ' | cut -d= -f2 | awk -F' #' '{print $1}' | tr -d '\047' | tr -d '\042'`
+        [ -n "$2" -a "$2" == 1 ] && noecho=1 || noecho=0
+        ## check for global configuration variables:
+        case "$config1" in
+                debug) debug="$config2" ; [ "$noecho" -eq 0 ] && echo "debug=$debug" ;;
+                pal) pal="$config2" ; [ "$noecho" -eq 0 ] && echo "pal=$pal" ;;
+                ac3) ac3="$config2" ; [ "$noecho" -eq 0 ] && echo "ac3=$ac3" ;;
+# menus always autocrop?                 autocrop) autocrop="$config2" ; [ "$noecho" -eq 0 ] && echo "autocrop=$autocrop" ;;
+                font) font="$config2" ; [ "$noecho" -eq 0 ] && echo "font=$font" ;;  #global font
+                menu_font) font="$config2" ; [ "$noecho" -eq 0 ] && echo "font=$font" ;;  #global font
+                # title
+                menu_background) bgfile="$config2" ; [ "$noecho" -eq 0 ] && echo "bgfile=$bgfile" ;;
+                menu_bg_color) bg_color="$config2" ; [ "$noecho" -eq 0 ] && echo "bg_color=$bg_color" ;;
+                menu_panel_height) panel_height="$config2" ; [ "$noecho" -eq 0 ] && echo "panel_height=$panel_height" ;;
+                menu_panel_width) panel_width="$config2" ; [ "$noecho" -eq 0 ] && echo "panel_width=$panel_width" ;;
+                menu_panel_location_x) menu_panel_location_x="$config2" ; [ "$noecho" -eq 0 ] && echo "menu_panel_location_x=$menu_panel_location_x" ;;
+                menu_panel_location_y) menu_panel_location_y="$config2" ; [ "$noecho" -eq 0 ] && echo "menu_panel_location_y=$menu_panel_location_y" ;;
+                menu_button_font) button_font="$config2" ; [ "$noecho" -eq 0 ] && echo "button_font=$button_font" ;;
+                menu_button_font_size) button_font_size="$config2" ; [ "$noecho" -eq 0 ] && echo "button_font_size=$button_font_size" ;;
+                menu_button_font_color) button_font_color="$config2" ; [ "$noecho" -eq 0 ] && echo "button_font_color=$button_font_color" ;;
+                menu_button_hilight_color) button_hilight_color="$config2" ; [ "$noecho" -eq 0 ] && echo "button_hilight_color=$button_hilight_color" ;;
+                menu_title_font) title_font="$config2" ; [ "$noecho" -eq 0 ] && echo "title_font=$title_font" ;;
+                menu_title_font_size) title_font_size="$config2" ; [ "$noecho" -eq 0 ] && echo "title_font_size=$title_font_size" ;;
+                menu_title_font_color) title_font_color="$config2" ; [ "$noecho" -eq 0 ] && echo "title_font_color=$title_font_color" ;;
+                menu_title_white_height) title_white_height="$config2" ; [ "$noecho" -eq 0 ] && echo "title_white_height=$title_white_height" ;;
+                menu_title_location_x) title_location_x="$config2" ; [ "$noecho" -eq 0 ] && echo "title_location_x=$title_location_x" ;;
+                menu_title_location_y) title_location_y="$config2" ; [ "$noecho" -eq 0 ] && echo "title_location_y=$title_location_y" ;;
+                menu_title_justify) title_justify="$config2" ; [ "$noecho" -eq 0 ] && echo "title_justify=$title_justify" ;;
+		theme) theme="$config2" ; [ "$noecho" -eq 0 ] && echo "theme=$theme" ;;  
+		theme_designed_for) theme_designed_for="$config2" ; [ "$noecho" -eq 0 ] && echo "theme_designed_for=$theme_designed_for" ;;
+                menu_type) menu_type="$config2" ; [ "$noecho" -eq 0 ] && echo "menu_type=$menu_type" ;;
+                menu_audio) audiofile="$config2" ; [ "$noecho" -eq 0 ] && echo "audiofile=$audiofile" ;;
+                menu_continuous_play) continuous="$config2"; continuous_method="$config2" ; [ "$noecho" -eq 0 ] && echo "continuous=$continuous" ;;
+                menu_fadein) fadein="$config2" ; [ "$noecho" -eq 0 ] && echo "menu_fadein=$menu_fadein" ;;
+                menu_fadeout) fadeout="$config2" ; [ "$noecho" -eq 0 ] && echo "menu_fadeout=$menu_fadeout" ;;
+                menu_fade_to_image) fade_to_image="$config2" ; [ "$noecho" -eq 0 ] && echo "fade_to_image=$fade_to_image" ;;
+                menu_panel_mask) panel_mask="$config2" ; [ "$noecho" -eq 0 ] && echo "panel_mask=$panel_mask" ;;
+
+
+        esac
+}
+
+set_theme ()
+{
+        ## check for config variables: only specified once per menu
+        config=`echo "$1" | cut -d= -f1 | tr -d [:blank:]`
+        config2=`echo "$1" | tr '\t' ' ' | tr -d '\047' | tr -d '\042' | cut -d= -f2 | awk -F' #' '{print $1}' | tr -d [:blank:]`
+#       config2=`echo "$1" | cut -d= -f2 | awk -F' #' '{print $1}' | tr -d [:blank:]`
+        [ -n "$2" -a "$2" == 1 ] && local noecho=1 || local noecho=0
+        ## check for global configuration variables:
+        case "$config" in
+                theme) theme="$config2" ; [ "$noecho" -eq 0 ] && echo "$theme" ;;  #global font
+        esac
+}
+
+
+read_theme ()
+# read_theme $theme
+{
+local theme=$1
+[ -n "$2" -a "$2" == 1 ] && local noecho=1 || local noecho=0
+## read in theme file if it exists:
+if [ -n "$theme" ] ; then
+        # check if directory
+        if [ -d "$theme" ] ; then
+                themedir="$theme"
+                themefile="`ls -1 "$theme"/*.theme 2> /dev/null | tail -n 1`"
+                [ "$noecho" == '0' ] && myecho "[dvd-menu] Using theme file to $(truncate_filename "$themefile")"
+        elif [ -f "$theme" ] ; then
+                themefile="`full_path "$theme"`"
+                themedir="`dirname "$theme"`"
+                [ "$noecho" == '0' ] && myecho "[dvd-menu] Using theme file to $(truncate_filename "$themefile")"
+                [ "$noecho" == '0' ] && myecho "[dvd-menu] Using theme file $theme"
+        else
+                # check in default theme directory:
+                if [ -d "$themedir"/"$theme" ] ; then
+                        themedir="$themedir"/"$theme"
+                        themefile="`ls -1 "$themedir"/*.theme 2> /dev/null | tail -n 1`"
+                	[ "$noecho" == '0' ] && myecho "[dvd-menu] Using theme file to $(truncate_filename "$themefile")"
+                # check in local theme directory:
+                elif [ -d "$local_themedir"/"$theme" ] ; then
+                        themedir="$local_themedir"/"$theme"
+                        themefile="`ls -1 "$themedir"/*.theme 2> /dev/null | tail -n 1`"
+                	[ "$noecho" == '0' ] && myecho "[dvd-menu] Using theme file to $(truncate_filename "$themefile")"
+                else
+                        [ "$noecho" == '0' ] && myecho "[dvd-menu] ERROR!  Bad theme name (not found)"
+                        exit 1
+                fi
+        fi
+        [ "$noecho" == '0' ] && myecho "[dvd-menu] Reading theme file..."
+        while read thisline
+        do
+          set_variables "${thisline}" 1
+          it=`set_variables "${thisline}" 0`
+          if [ -n "$it" ] ; then
+                [ "$noecho" == '0' ] && myecho "[dvd-menu] Set variable $it"
+          fi
+        done < "$themefile"
+	## now, fix paths to background files and such if they were local paths:
+	if [ -n "$bgfile" ] ; then
+		if [ ! -f "$bgfile" ] ; then	
+			bgfile2="$themedir"/"$bgfile"
+			if [ -f "$bgfile2" ] ; then
+				bgfile="$bgfile2"
+			else
+				# try hex color.
+				if [ "${bgfile:0:1}" == '#' ] ; then  # user passed a #RRGGBB hex color
+					bgfile="$bgfile"
+				else
+					echo "[dvd-menu] Error:  bad background filename in theme."
+					echo "[dvd-menu] Using default background instead."
+					bgfile=''
+				fi
+			fi
+		fi
+	fi
+	if [ -n "$fade_to_image" ] ; then
+		# add color option
+		if [ ! -f "$fade_to_image" ] ; then	
+			fade_to_image="$themedir"/"$fade_to_image"
+			if [ ! -f "$fade_to_image" ] ; then
+				echo "Error:  bad fade_to_image filename in theme."
+			fi
+		fi
+	fi
+	if [ -n "$audiofile" ] ; then
+		if [ ! -f "$audiofile" ] ; then	
+			audiofile="$themedir"/"$audiofile"
+			if [ ! -f "$audiofile" ] ; then
+				echo "Error:  bad audio filename in theme"
+				audiofile=''
+			fi
+		fi
+	fi
+	if [ -n "$font" ] ; then
+		if [ ! -f "$font" ] ; then	
+			font="$themedir"/"$font"
+			if [ ! -f "$font" ] ; then
+				echo "Error:  bad font filename in theme"
+			fi
+		fi
+	fi
+	if [ -n "$button_font" ] ; then
+		if [ ! -f "$button_font" ] ; then	
+			button_font="$themedir"/"$button_font"
+			if [ ! -f "$button_font" ] ; then
+				echo "Error:  bad button_font filename in theme"
+			fi
+		fi
+	fi
+	if [ -n "$title_font" ] ; then
+		if [ ! -f "$title_font" ] ; then	
+			title_font="$themedir"/"$title_font"
+			if [ ! -f "$title_font" ] ; then
+				echo "Error:  bad title_font filename in theme"
+			fi
+		fi
+	fi
+fi
+}
+
+full_path ()   # from Shea Martin
+{
+if [ -f "$1" ]; then
+        DIR="$(dirname "$1")"
+        DIR=$(cd "$DIR" && pwd)
+        FILE="$(basename $1)"
+        RSLT=$?
+        echo "$DIR/$FILE"
+        return $RSLT
+
+elif [ -d "$1" ]; then
+        cd "$DIR" && pwd && cd $OLDPWD
+        return $?
+
+else
+        echo "unknown file: $1"
+        return 1
+fi
+}
+
+function fade ()
+# fade image1.jpg image2.jpg duration[s]
+{
+	local image1="$1"
+	local image2="$2"
+	local duration="$3"  # in seconds
+	local frames="$(( $frames_per_sec * $(seconds2ms $duration) / 1000 / 1000 ))"
+#	echo frames="$frames duration=$duration"
+#	for fr in `seq 1 1 $frames`; do  # fade from buttons to background
+	for (( fr=1 ; fr<=frames ; fr++ )) ; do
+		dj=`addzeros $fr`
+		percent=$(( 100 * $fr / $frames ))
+		(composite -compose src-over -gravity center -type TrueColor -depth 8 -dissolve $percent "$image1" "$image2" "$tmpdir/fade_$dj.ppm" )
+	done
+        find "$tmpdir" -name "fade*.ppm" -type f -print0 | sort -z -d | xargs -0 cat | ppmtoy4m -v 0 -n 0 -S "$subsample" -F $ppmtoy4m_frc -A $ppmtoy4m_aspect -I p | mpeg2enc $mpeg2enc_params -o "$tmpdir/fade.mpg" >> "$logfile" 2>&1
+	find "$tmpdir" -name "fade*.ppm" -type f -print0 | xargs -0 rm
+}
+
+function seconds2ms ()
+{
+        ## break up the duration into the integer seconds and ms:
+        out_duration=`echo $1 | awk '{ print $1 * 1000 }'`
+        echo "$out_duration"
+}
+
+addzeros ()
+{
+                        [ $1 -lt 1000 ] && dj2="0$1" || dj2=$1
+                        [ $1 -lt 100 ] && dj2="00$1" || dj2=$dj2
+                        [ $1 -lt 10 ] && dj2="000$1" || dj2=$dj2
+                        echo "$dj2"
+}
+
+
+hms ()
+{
+        ## pass a number in thousandths of seconds and get back a
+        ## time code of the form HR:MM:SS.XXX
+        if [ -z "$1" ] ; then
+                myecho "[dvd-slideshow] Error in hms function"
+                function_error=1
+        else
+                hours=$(( $1 / 3600000 )) ; [ $hours -eq 0 ] && hours="0"
+                it=$(( $1 - $hours * 3600000 ))
+                minutes=$(( $it / 60000 )) ; [ $minutes -eq 0 ] && minutes="0"
+                it=$(( $1 - $minutes * 60000 ))
+                seconds=$(( $it / 1000 )) ; [ $seconds -eq 0 ] && seconds="0"
+                thousandths=$(( $it - $seconds * 1000 )) ;
+#                characters=`echo "$thousandths" | wc --chars`
+		characters=${#thousandths}
+                if [ $characters -eq 1 ] ; then
+                        thousandths_out="000"  # empty string!
+                elif [ $characters -eq 2 ] ; then
+                        thousandths_out="00$thousandths"  # 1 decimal place
+                elif [ $characters -eq 3 ] ; then
+                        thousandths_out="0$thousandths"  # 2 decimal places
+                elif [ $characters -eq 4 ] ; then
+                        thousandths_out="$thousandths"  # 3 decimal places
+                else
+                        myecho "[dvd-slideshow] Error in hms function"
+                        function_error=1
+                fi
+                it="$hours:$minutes:$seconds.$thousandths_out"
+                echo "${it}"
+        fi
+}
+
+wavlength ()
+# wavlength $file
+# returns song length in ms
+{
+                sox "$1" -e stat 2> "$tmpdir"/trash.txt
+                song_length=`cat "$tmpdir"/trash.txt | grep 'Length (seconds):' | awk -F: '{print $2}' | tr -d [:blank:]`
+                song_length_seconds=`echo $song_length | awk -F. '{print $1}'`
+                if [ -z "$song_length_seconds" ] ; then song_length_seconds=0 ; fi
+                song_length_ms=`echo $song_length | awk -F. '{printf ("%3.3f",$0)}' | awk -F. '{print $2}'`
+                ## make sure we have two decimal places?
+                if [ -z "$song_length_ms" ] ; then song_length_ms=0 ; fi
+                song_length=$( echo "scale=0; 1000 * $song_length_seconds + $song_length_ms" | bc )
+                rm "$tmpdir"/trash.txt
+                echo "$song_length"
+}
+ 
+truncate_filename ()
+{
+        # truncate filenames so they're not longer than 40 characters:
+        local length="${#1}"
+        if [ $length -gt 40 ] ; then
+                local pos=$(( $length - 40 ))
+                echo "...${1:$pos}"
+        else
+                echo "$1"
+        fi
+}
+
+
+########################################### end of functions
+
+
+###################################################################
+# Default variables
+# order of perference:
+# program defaults --> ~/.dvd-slideshow/dvd-slideshowrc command-line options --> .txtfile settings
+
+## setup program default variables (user configurable)
+debug=0  # 1 or 0
+pal=0
+continuous=0 ; continuous_method=0
+no_dvdauthor=0
+ac3=1
+iso=0
+no_menu=0
+autocrop=1
+upAction=0
+nocleanup=0
+subtitle_code="EN"
+
+# define some possible fonts:
+font_dir="/usr/share/fonts/"
+default_font1='n019004l.pfb' # helvetica bold URW fonts
+default_font2='helb____.ttf' # helvetica bold truetype
+
+## other cool colors:  cadetblue cornflowerblue midnightblue
+bg_color='steelblue'  # imagemagick colors
+panel_width=400
+panel_height=''  # will be set later from the button_font_size
+button_font_size=21
+button_font_color="black"
+button_hilight_color="red"
+menu_panel_location_x=360
+menu_panel_location_y=175  # distance of the top of the first menu item to the top of the screen
+title_font_size=40
+title_font_color="black"
+title_white_height=125
+radius=20
+button_radius=10
+title_location_x=80
+title_location_y=50
+title_justify=NorthWest
+
+hilight_spacing_x=50
+hilight_spacing_y=50
+hilight_font_size=12
+
+embed_image_width=260
+embed_image_height=240
+
+menu_type='textbar'
+panel_mask=1
+
+frames=20 	# number of frames in the menu mpg file. 
+		# I guess this only really needs to be 1 frame
+		# but 30 is easier to debug so we can play it.
+		## don't forget that the audio is fixed at 1 second!
+
+# soon to be user configurable:
+logfilename='dvd-menu.log'
+low_quality=0
+high_quality=0
+vcd=0 ; svcd=0
+widescreen=0
+themedir='/opt/dvd-slideshow/themes'  # LSB/FHS compliant:  see http://www.pathname.com/fhs/pub/fhs-2.3.html#OPTADDONAPPLICATIONSOFTWAREPACKAGES
+local_themedir=~/.dvd-slideshow/themes  # local theme directory
+fadein=0
+fadeout=0
+fade_to_image=''
+
+# end of default  variables
+
+#####################################################################
+# read command-line options:
+
+let n=0
+let m=0
+let q=0
+let p=0
+for arg
+do
+	case "$arg" in
+	## config variables:
+	-p) shift; commandline_pal=1 ;;
+        -ac3) shift; commandline_ac3=1 ;;  # use ac3 audio
+        -mp2) shift; commandline_ac3=0 ;;  # use mp2 audio
+	## not config variables:
+	-t) shift ; title[$n]="${1}"; let n=$n+1; shift ;;  # each title
+	-f) shift ; xmlfile[$m]="$1"; let m=$m+1; shift ;;  # each titleset
+	-e) shift ; embedfile[$p]="${1}"; let p=$p+1; shift ;;  # the menu hilight images
+	-button) shift ; buttonfile[$q]="${1}"; let q=$q+1; shift ;;  # each button hilight images
+        -u) shift; upAction="1" ;;
+#        -action) shift; Action="1" ;;  # do manual button navigation later
+	-o) shift; outdir="${1%%/}"; shift ;;  # dvd directory
+	-b) shift; commandline_bgfile="$1"; shift ;;  # background jpeg
+	-theme) shift; commandline_theme="$1"; shift ;;  # 
+	-n) shift; dvd_title="$1"; shift ;; # name of DVD disk
+	-c) shift; continuous=1 ; continuous_method=1 ;;
+	-D) shift; no_dvdauthor=1 ;;
+#	-W) shift; no_white=1 ;;
+	-w) shift; widescreen=1 ;;  # not supported in dvdauthor
+	-L) shift; low_quality=1 ;;
+	-H) shift; high_quality=1 ;;  # not used yet...
+	-M) shift; high_quality=0 ; low_quality=0 ;;  # Force normal quality
+	-vcd) shift; vcd=1 ;;  # not used yet...
+	-svcd) shift; svcd=1 ;;  # not used yet...
+	-fadein) shift; commandline_fadein=1 ;;  # not used yet...
+	-fadeout) shift; commandline_fadeout=1 ;;  # not used yet...
+	-smp) shift ;;  # not used yet...
+	-nomenu) shift; no_menu=1 ;;
+	-nocleanup) shift; nocleanup=1 ;;
+	-a) shift; audiofile="$1"; shift;; # audio file playing during menu
+        -iso) shift; iso=1 ;;  # make iso image when finished
+	-h) help ; exit 0 ; shift ;;
+	-?) help ; exit 0 ; shift ;;
+	-help) help ; exit 0 ; shift ;;
+	esac
+done
+
+
+# verify output directory exists:
+if [ -z "$outdir" ] ; then
+        if [ -w "`pwd`" ] ; then
+                echo "[dvd-menu] Output directory not specified."
+                echo "[dvd-menu] Using `pwd`"
+                outdir="`pwd`"
+        else
+                echo '[dvd-menu] ERROR: Output directory not specified.'
+                exit 1
+        fi
+fi
+
+## dvdbaker doesn't use or need the autual xml or vob files!
+#if [ -z "$xmlfile" ] && [ -n "$1" ] ; then
+#	echo "using xml file $1".
+#	xmlfile="$1"
+#	if [ -z "$xmlfile" ] ; then
+#		echo "[dvd-menu] ERROR: No xml file passed."
+#		echo "[dvd-menu] use -f <filename> to pass a .xml, .vob, or .mpg file"
+#		exit 1
+#	fi
+#fi
+		
+#for it in "${xmlfile[@]}"; do
+#	# verify xml file exists:
+#	echo "xmlfile=$it"
+#	if [ -n "$it" ] && [ ! -r "$it" ] ; then
+#		echo "[dvd-menu] ERROR: XML file $it does not exist."
+#		exit 1
+#	fi
+#done
+
+# verify that the number of buttons (-t) is equal to the number of files (-f)
+#echo "xmlfiles=${#xmlfile[@]}"
+#echo "xmlfiles=${xmlfile[@]}"
+#if [ "${#xmlfile[@]}" -ge 1 ] ; then
+#	if [ ${#xmlfile[@]} -ne ${#title[@]} ] ; then
+#			echo "[dvd-menu] ERROR:  The number of buttons does not match the number of files!"
+#			echo "[dvd-menu] buttons=${title[@]}"
+#			echo "[dvd-menu] files=${xmlfile[@]}"
+#			exit 1
+#	fi
+#fi
+
+## initialize log file:
+logfile="$outdir/$logfilename"
+echo "[dvd-menu] `date`" > "$logfile"
+echo "[dvd-menu] dvd-menu version $version" >> "$logfile"
+echo "[dvd-menu] `uname -a`" >> "$logfile"
+echo "[dvd-menu] Output directory=$outdir" >> "$logfile"
+
+tmpdir="$outdir"/"dvd-menu_temp_$$"
+if [ ! -d "$tmpdir" ] ; then
+	mkdir -p "$tmpdir"
+fi
+dvd_dir="$outdir"/"dvd_fs"
+if [ -d "$dvd_dir" ] ; then	
+	## output directory already exists.  Delete old files
+#	echo "[dvd-menu] Output directory already exists. "
+	echo "[dvd-menu] Deleting existing AUDIO_TS and VIDEO_TS directories..."
+	if [ -d "$dvd_dir/AUDIO_TS" ] ; then rm -r "$dvd_dir/AUDIO_TS" ; fi
+	if [ -d "$dvd_dir/VIDEO_TS" ] ; then rm -r "$dvd_dir/VIDEO_TS" ; fi
+else
+	mkdir -p "$dvd_dir"
+fi
+
+############################################################# 
+## Now, read in the ~/.dvd-slideshow/dvd-slideshowrc file if it exists:
+if [ -f "${HOME}/.dvd-slideshow/dvd-slideshowrc" ] ; then         
+	echo "[dvd-menu] Reading default variables in ${HOME}/.dvd-slideshow/dvd-slideshowrc"
+        total_lines=`wc -l "${HOME}/.dvd-slideshow/dvd-slideshowrc" | awk '{print $1}'`         total_lines=$(( $total_lines + 1 ))
+        line=1
+        while [ $line -ne $total_lines -a $total_lines -ne 0 ];
+        do
+          thisline=`sed -n "$line"p "${HOME}/.dvd-slideshow/dvd-slideshowrc"`
+          set_variables "${thisline}" 1
+          it=`set_variables "${thisline}" 0`
+          if [ -n "$it" ] ; then
+                myecho "[dvd-menu] Set variable $it"           
+	  fi
+          line=$(( $line + 1 ))         
+	done
+fi
+
+
+################################################################
+## Now, set the variables that were passed on the command-line: 
+[ -n "$commandline_pal" ] && pal=$commandline_pal
+[ -n "$commandline_autocrop" ] && autocrop=$commandline_autocrop 
+[ -n "$commandline_ac3" ] && ac3=$commandline_ac3 
+[ -n "$commandline_debug" ] && debug=$commandline_debug
+[ -n "$commandline_theme" ] && theme=$commandline_theme
+[ -n "$commandline_fadein" ] && fadein=$commandline_fadein
+[ -n "$commandline_fadeout" ] && fadeout=$commandline_fadeout
+if [ -n "$commandline_bgfile" ] ; then
+	if [ -f "$commandline_bgfile" ] ; then
+		bgfile="$(full_path "$commandline_bgfile")"
+	else
+		bgfile="$commandline_bgfile"
+		myecho "[dvd-menu] WARNING: $bgfile is not a known file"
+		myecho "[dvd-menu] WARNING: If you pass a color on the command-line,"
+		myecho "[dvd-menu] WARNING: you'd better know what you're doing"
+		## must be a color or not exist?
+	fi
+fi
+
+## now, read the theme file if it was passed on the commandline:
+if [ -n "$theme" ] && [ "$theme" != 'default' ] ; then
+	read_theme "$theme" 0
+fi
+
+if [ -z "$panel_height" ] ; then
+	panel_height="$(( $button_font_size * 125 / 100 ))"
+fi
+
+# button_text_location=$(( $panel_height/2 + $button_font_size/2 ))
+menu_button_location_y=$(( $menu_panel_location_y + $button_font_size/2 ))  # y-location of first button
+
+if [ "$panel_mask" == "none" ] ; then
+	no_white=1
+elif [ "$panel_mask" == "default" ] ; then
+	no_white=0
+else
+	no_white=0  # this will change later to allow specific panel masks...
+fi	
+
+if [ "$vcd" -eq 1 ] ; then
+	# setup audio parameters
+	ac3=0
+	audio_bitrate=224
+	audio_sample_rate=44100
+	mplex_type=1
+	ffmpeg_target='vcd'
+elif [ "$svcd" -eq 1 ] ; then
+	# setup audio parameters
+	ac3=0
+	audio_bitrate=224
+	audio_sample_rate=44100
+	mplex_type=4
+	ffmpeg_target='svcd'
+else
+	audio_bitrate=128
+	audio_sample_rate=48000
+	mplex_type=8
+	ffmpeg_target='dvd'
+fi
+
+if [ "$pal" -eq 1 ] ; then
+        framerate='25'
+        frames_per_sec=25000  # in ms
+        sq_pixel_multiplier=$(( 1000 * 540 / 576 ))
+	ppmtoy4m_frc='25:1'
+	ppmtoy4m_aspect='59:54'
+        if [ "$low_quality" -eq 1 ] || [ "$vcd" -eq 1 ] ; then
+                dvd_width='352' ; dvd_height='288'
+                resolution='352x288'
+        elif [ "$svcd" -eq 1 ] ; then
+                dvd_width='480' ; dvd_height='576'
+                resolution='480x576'
+        elif [ "$high_quality" -eq 1 ] ; then
+                dvd_width='720' ; dvd_height='576'
+                resolution='720x576'
+        else
+                dvd_width='720' ; dvd_height='576'
+                resolution='720x576'
+        fi
+else  ## NTSC
+        framerate='29.97'
+        frames_per_sec=29970  # in ms
+        sq_pixel_multiplier=$(( 1000 * 540 / 480 ))
+	ppmtoy4m_frc='30000:1001'
+	ppmtoy4m_aspect='10:11'
+        if [ "$low_quality" -eq 1 ] || [ "$vcd" -eq 1 ] ; then
+                dvd_width='352' ; dvd_height='240'
+                resolution='352x240'
+        elif [ "$svcd" -eq 1 ] ; then
+                dvd_width='480' ; dvd_height='480'
+                resolution='480x480'
+        elif [ "$high_quality" -eq 1 ] ; then
+                dvd_width='720' ; dvd_height='480'
+                resolution='720x480'
+        else
+                dvd_width='720' ; dvd_height='480'
+                resolution='720x480'
+        fi
+fi
+
+#######################################################3
+# Summarize settings:
+myecho "[dvd-menu] Final dvd filesystem is in $dvd_dir"
+[ "$pal" -eq 1 ] && ntsc_or_pal="PAL" || ntsc_or_pal="NTSC"
+[ "$ac3" -eq 1 ] && mp2_or_ac3="AC3" || mp2_or_ac3="MP2"
+[ "$vcd" -eq 1 ] && myecho "[dvd-menu] Using VCD mode."
+[ "$svcd" -eq 1 ] && myecho "[dvd-menu] Using SVCD mode."
+myecho "[dvd-menu] Video: $ntsc_or_pal $resolution $framerate $aspect_ratio"
+myecho "[dvd-menu] Audio: $mp2_or_ac3 $audio_bitrate $audio_sample_rate"
+[ "$debug" -gt 0 ] && myecho "[dvd-menu] Debug=$debug"
+if [ "$nocleanup" == 1 ] ; then
+        myecho "[dvd-menu] Leaving all temporary files in temp directory"
+	myecho "[dvd-menu] Temporary directory is $tmpdir"
+fi
+myecho "[dvd-menu] buttons=${#title[@]}"
+#echo "[dvd-menu] audio files=$audiofile"
+#echo "[dvd-menu] menu titles:" 
+#echo "[dvd-menu] ${title[@]}" 
+
+if [ -z "${title[0]}" ] ; then  # arrays start at index 0
+	# no titles passed! assume user wants no menu
+	no_menu=1
+	echo "[dvd-menu] WARNING: No button titles passed! Not creating menu."
+fi
+
+#############################################################
+
+if [ "$vcd" -eq 1 ] || [ "$svcd" -eq 1 ] ; then
+        aspect_ratio="4:3"
+        mpeg2enc_params="-v 0 -a 2 -4 2 -2 1 -b 1150 -n n -s -f $mplex_type"
+elif [ "$widescreen" -eq 1 ] ; then
+        aspect_ratio="16:9"
+        mpeg2enc_params="-v 0 -a 3 -q 4 -4 2 -2 1 -s -M 0 -f $mplex_type -E -N -R 2"
+else
+        aspect_ratio="4:3"
+#       mpeg2enc_params="-v 0 -a 2 -q 4 -4 2 -2 1 -s -M 0 -f $mplex_type"
+        mpeg2enc_params="-v 0 -a 2 -q 4 -4 2 -2 1 -s -M 0 -f $mplex_type -E -N -R 2"
+fi
+
+resize_factor=`awk -vw=$dvd_width -vh=$dvd_height -var=$aspect_ratio 'BEGIN{if (ar=="4:3"){ar=4/3} else {ar=16/9};printf "%0.2f", (100/((h/w)*(ar)));exit;}'`
+sq_to_dvd_pixels="${resize_factor}x100%"
+
+hilight_height=$(( ( $dvd_height - $hilight_spacing_y -$title_location_y - $title_font_size - 2*$hilight_spacing_y - 2*$hilight_font_size)/2 ))
+hilight_width=$(( $hilight_height * $dvd_width / $dvd_height ))  # assume this aspect ratio.
+hilight_start_location_x=$(( ($dvd_width - 3*$hilight_width - 2*$hilight_spacing_x )/2 ))
+hilight_start_location_y=$(( $title_location_y + $title_font_size + $hilight_spacing_y ))
+
+if [ "$low_quality" -eq 1 ] || [ "$vcd" -eq 1 ] ; then
+	panel_height=$(( $panel_height / 2 ))
+	panel_width=$(( $panel_width / 2 ))
+	button_font_size=$(( $button_font_size / 2 ))
+#	button_text_location=$(( $panel_height/2 + $button_font_size/2 ))
+	menu_panel_location_x=$(( $menu_panel_location_x / 2 ))
+	menu_panel_location_y=$(( $menu_panel_location_y / 2 ))  
+	menu_button_location_y=$(( $menu_button_location_y / 2 ))  
+	title_font_size=$(( $title_font_size / 2 ))
+	title_white_height=$(( $title_white_height / 2 ))
+	radius=$(( $radius / 2 ))
+	button_radius=$(( $button_radius / 2 ))
+	title_location_x=$(( $title_location_x / 2 ))
+	title_location_y=$(( title_location_y / 2 ))
+	
+	embed_image_width=$(( $embed_image_width / 2 ))
+	embed_image_height=$(( $embed_image_height / 2 ))
+
+	hilight_spacing_x=$(( $hilight_spacing_x / 2 ))
+	hilight_spacing_y=$(( $hilight_spacing_y / 2 ))
+	hilight_font_size=$(( $hilight_font_size / 2 ))
+fi
+
+############################################################3
+## Check for required programs
+
+# ppmtoy4m
+checkforprog ppmtoy4m
+progver=`mplex 2>&1 | grep version | awk '{ print $4 }'`
+logecho "[dvd-menu] Found mjpegtools version $progver"
+if ppmtoy4m -S 420mpeg2 xxxxx 2>&1 | grep -q xxxxx; then
+        logecho "[dvd-menu] mjpegtools is >= 1.6.3-rc1"
+        subsample='420mpeg2'
+else
+        logecho "[dvd-menu] mjpegtools is <= 1.6.2"
+        # ppmtoy4m did not accept the -S 420mpeg2 option
+        # so it's probably a version older than 1.6.3
+        subsample='420_mpeg2'
+fi
+
+checkforprog sox
+checkforprog convert
+checkforprog dvdauthor
+if [ "$vcd" -eq 1 ] || [ "$svcd" -eq 1 ] ; then
+	checkforprog vcdimager
+	ac3=0; mp2=1
+fi
+
+# ffmpeg
+if [ "$ac3" -eq 1 ] ; then
+	it=`which ffmpeg`
+	       if [ -z "$it" ] ; then
+	               # no ffmpeg!  use mp2 audio instead:
+	               myecho "[dvd-menu] Warning:  no ffmpeg found for AC3 audio encoding."
+	               myecho "[dvd-menu]           Using MP2 audio instead."
+	               myecho "[dvd-menu]           MP2 audio is less compatible with DVD player hardware."
+	               ac3=0
+	fi
+fi
+
+# mkisofs
+checkforprog mkisofs
+
+################################################## done finding programs
+
+#Find the fonts
+default_font1=`find $font_dir -name $default_font1 | head -n 1`
+default_font2=`find $font_dir -name $default_font2 | head -n 1`
+
+# verify fonts exist:
+if [ -f "$default_font1" ] ; then
+        default_font="$default_font1"
+elif [ -f "$default_font2" ] ; then
+        default_font="$default_font2"
+else
+        echo "[dvd-menu] Cannot find required fonts.  Using default ImageMagick font."
+        default_font=""
+fi
+if [ -z "$font" ] ; then  # global font
+	font="$default_font"	
+else
+	if [ -f "$font" ] ; then
+		font="$font"
+	else
+		font="$default_font"
+	fi	
+fi
+if [ -z "$title_font" ] ; then
+	title_font="$font"	
+else
+	if [ -f "$title_font" ] ; then
+		title_font="$title_font"
+	else
+		title_font="$font"
+	fi	
+fi
+if [ -z "$button_font" ] ; then
+	button_font="$font"	
+else
+	if [ -f "$button_font" ] ; then
+		button_font="$button_font"
+	else
+		button_font="$default_font"
+	fi
+fi
+
+logecho "[dvd-menu] title_font=$title_font"
+logecho "[dvd-menu] button_font=$button_font"
+
+###############################
+
+myecho "[dvd-menu] ###################################"
+
+###########################################################
+# Start creating menus:
+if [ "$no_menu" -eq 0 ] ; then
+	myecho "[dvd-menu] Creating menu"
+	## first, do the background image, then do the alpha mask:
+	if [ -f "$bgfile" ] ; then
+	        echo "[dvd-menu] Using background image $( truncate_filename "$bgfile")"
+		background "$bgfile"
+#	        convert "${bgfile}" -resize x"$dvd_height" -bordercolor black -border "$dvd_width"x240 -gravity center -crop "$dvd_width"x"$dvd_height"'+0+0!' -depth 8 -quality 100 "$tmpdir"/slideshow_background.ppm
+	        mv "$tmpdir/slideshow_background.ppm" "$tmpdir/menu.ppm"
+	else
+		if [ -n "$bgfile" ] ; then
+			# assume user passed a color that imagemagick can understand
+			bg_color="$bgfile"  # over-rides internal setting
+		fi
+	        ## need to write out a blank image of the given size:
+	        echo "[dvd-menu] Creating background image gradient"
+	        convert -depth 16 -size "$dvd_width"'x'"$dvd_height" gradient:white-$bg_color -type TrueColor "$tmpdir/menu.ppm"
+	fi
+	## save this menu background as the "background" for fadin/fadeout:
+	cp "$tmpdir/menu.ppm" "$tmpdir/slideshow_background.ppm"
+	
+	## create overlay transparent image:
+	convert -depth 8 -colors 3 +antialias -size "$dvd_width"'x'"$dvd_height" xc:transparent "$tmpdir"/button_background_mask.png
+	cp "$tmpdir/button_background_mask.png" "$tmpdir/menu_mask.png"
+
+	if [ -n "$dvd_title" ] ; then
+	        echo "[dvd-menu] Creating white title mask"
+		white_title_mask "$tmpdir/title_background_mask.png"
+		composite -compose src-over -type TrueColor -depth 8 -dissolve 60 "$tmpdir/title_background_mask.png" "$tmpdir/menu.ppm" "$tmpdir/menu.ppm"
+		title_text "$tmpdir/dvd_title.png"
+		composite -compose src-over -depth 8 -type TrueColor "$tmpdir/dvd_title.png" "$tmpdir/menu.ppm" "$tmpdir/menu.ppm"
+	fi
+
+	## so, we have a few different layouts:
+	## 1.  straight text on the right side
+	## 2.  6 icon buttons with text underneath (not working)
+	## 3.  6 icon buttons per page, multiple pages (not working)
+	## 4.  15 icon buttons per page, no text?	 (not working)
+	
+#	if [ "${#buttonfile[@]}" -gt 1 ] ; then
+#		menu_type="6images"  ## don't use this yet!!!
+#	else
+#		menu_type="textbar"
+#	fi
+
+	if [ "${#xmlfile[@]}" == 0 ] ; then
+		echo "[dvd-menu] no xml files passed"
+		i=0
+		for it in "${title[@]}" ; do
+			total_titles[$i]="${title[$i]}"
+			i=$(( $i + 1 ))
+		done
+	else
+		i=0
+		for it in "${xmlfile[@]}" ; do
+			total_titles[$i]="${xmlfile[$i]}"
+			i=$(( $i + 1 ))
+		done
+	fi
+	## case 1:  old layout:
+	if [ "$menu_type" == 'textbar' ] ; then  # plain text on right side
+		menuright=$(( $menu_panel_location_x + $panel_width))
+		menubottom=$(( $dvd_height + 50 ))  ## add 50 so we can chop off the bottom later
+		menuh=$(( $dvd_height + 50 ))
+		if [ "$no_white" -eq 0 ] ; then
+		        echo "[dvd-menu] Creating white button mask"
+			white_button_mask "$tmpdir/button_background_mask.png"
+			composite -compose src-over -type TrueColor -depth 8 -dissolve 50 "$tmpdir/button_background_mask.png" "$tmpdir/menu.ppm" "$tmpdir/menu.ppm"
+		fi
+		## create embedded image if defined:
+	        if [ -f "${embedfile[0]}" ]; then  # only one embedfile possible
+	                echo "[dvd-menu] using image highlight ${embedfile[0]}"
+	                # Resize to 240x320 (max), keep aspect ratio.
+                        embed_height=$(identify -format %h "${embedfile[0]}")
+                        embed_width=$(identify -format %w "${embedfile[0]}")
+                        if [ $embed_width -gt $embed_height ]; then
+                                embed_resolution=$embed_image_width"x"$embed_image_height
+                        else
+                                embed_resolution=$embed_image_height"x"$embed_image_width
+                        fi
+#                        echo "[dvd-menu] running convert"
+	                convert "${embedfile[0]}" -resize "$sq_to_dvd_pixels" -resize "$embed_image_width"x"$embed_image_height" "$tmpdir"/embed.png
+	                # Add embed image to menu background
+	                embed_offset_y=$[ ( ($dvd_height-$menu_panel_location_y) - $(identify -format %h "$tmpdir"/embed.png) ) / 3 ]
+	                embed_offset_x=$[ ( ($dvd_width-$menu_panel_location_x) - $(identify -format %w "$tmpdir"/embed.png) ) /2 ]
+	                composite -compose src-over -geometry +$embed_offset_x+$[$menu_panel_location_y+$embed_offset_y] -type TrueColor -depth 8 -dissolve 100 "$tmpdir"/embed.png "$tmpdir"/menu.ppm "$tmpdir"/menu.ppm
+	        fi
+		## loop over each title:
+		let i=0
+		for this_title in "${total_titles[@]}"; do
+			echo "[dvd-menu] Title=${title[$i]}"
+			# make each individual button:
+			# to be fancy, let's add the button layers in two steps.  first the
+			# button background, then the text:
+			if [ "$vcd" -eq 1 ] || [ "$svcd" -eq 1 ] ; then
+				# add numbers to each line for VCD
+				convert -size "$panel_width"x"$panel_height" xc:transparent -quality 100 -font "$button_font" -pointsize $button_font_size -gravity West -fill "$button_font_color" -draw "text 20,0 \"$(( $i + 1 )). ${title[$i]}\"" "$tmpdir"/button_text.png
+			else
+				convert -size "$panel_width"x"$panel_height" xc:transparent -quality 100 -font "$button_font" -pointsize $button_font_size -gravity West -fill "$button_font_color" -draw "text 20,0 \"${title[$i]}\"" "$tmpdir"/button_text.png
+			fi
+			# make each individual button mask (for when it's selected)
+			convert -size "$panel_width"x"$panel_height" xc:transparent -quality 100 -font "$button_font" -pointsize $button_font_size -fill $button_hilight_color -gravity West +antialias -colors 3 -draw "text 20,0 \"${title[$i]}\"" "$tmpdir"/button_mask.png
+	
+			## add each button as necessary, and increment the location downward
+			echo "[dvd-menu] adding title button ${title[$i]} at $menu_panel_location_x , $menu_button_location_y"
+			composite -compose src-over -depth 8 -geometry +$menu_panel_location_x+$menu_button_location_y "$tmpdir/button_text.png" "$tmpdir/menu.ppm" "$tmpdir/menu.ppm"
+			## add each overlay mask for the selection of buttons:
+			composite -compose src-over -depth 8 -colors 3 -quality 100 -geometry +$menu_panel_location_x+$menu_button_location_y "$tmpdir/button_mask.png" "$tmpdir/menu_mask.png" "$tmpdir/menu_mask.png"
+		
+			## now record the button location:
+			right[$i]="$(( $menu_panel_location_x + $panel_width ))"
+			[ "${right[$i]}" -gt "$dvd_width" ] && right[$i]=$(( $dvd_width - 10 ))
+			left[$i]="$(( $menu_panel_location_x ))"
+			top[$i]="$(( $menu_button_location_y ))"
+			bottom[$i]="$(( $menu_button_location_y + $panel_height ))"
+			[ "${bottom[$i]}" -gt "$dvd_height" ] && bottom[$i]=$(( $dvd_height - 10 ))
+
+			echo "[dvd-menu] setting button mask l,r,t,b = ${left[$i]} ${right[$i]} ${top[$i]} ${bottom[$i]}"
+	
+			vts="$(( $i + 1 ))"
+#			echo "[dvd-menu] i=$i vts=$vts"
+				
+			let menu_button_location_y=$menu_button_location_y+$panel_height
+			let i=$i+1
+		done
+	elif [ "$menu_type" == '6images' ] ; then   ### don't use this yet!
+		## loop over each title:
+		let i=0
+		let embed=1  # embedfile is for normal menu type
+		let embed_row=1
+
+		# grab any info from .xml file comment lines:
+		for this_title in "${total_files[@]}"; do
+			suffix=`echo "${xmlfile[$i]}" | awk -F. '{print $NF}'`
+			if [ "$suffix" == 'xml' ] ; then
+				xml_button[$i]=$( grep '<!-- button=' "${xmlfile[$i]}" | awk -F= '{print $2}' | awk -F' -->' '{print $1}' | tr -d '\047' | tr -d '\042' )
+#echo "xml_button[$i]=${xml_button[$i]}"
+				[ -n "${xml_button[$i]}" ] && echo "[dvd-menu] xml_button $i = $( truncate_filename "${xml_button[$i]}" )"
+				xml_title[$i]=$( grep '<!-- title="' "${xmlfile[$i]}" | awk -F= '{print $2}' | awk -F'" -->' '{print $1}' | tr -d '\047' | tr -d '\042' )
+#echo "xml_title[$i]=${xml_title[$i]}"
+				[ -n "${xml_title[$i]}" ] && echo "[dvd-menu] xml_title $i = ${xml_title[$i]}"
+			fi
+			# make each individual button:
+			# to be fancy, let's add the button layers in two steps.  first the
+			# button background, then the text:
+		        ## create embedded image hilight if required:
+			dvd_width_scaled=$(( $dvd_width * $sq_pixel_multiplier / 1000 ))
+			hilight_height=90
+			hilight_width=135
+#			hilight_height=$(( ( $dvd_height - $title_white_height - 3 * $hilight_spacing_y - 2*$hilight_font_size)/2 ))
+#			hilight_width=$(( $hilight_height * $dvd_width / $dvd_height ))
+			buttons="${#xmlfile[@]}"
+			if [ "$buttons" -gt 6 ] ; then
+				echo "[dvd-menu] ERROR:  too many buttons for this menu type!"
+				exit 1
+			elif [ "$buttons" == 4 ] ; then
+				hilight_spacing_x=100
+				hilight_start_location_x=$(( ($dvd_width - 2*$hilight_width - 1*$hilight_spacing_x )/2 ))
+				hilight_start_location_y=$(( $title_white_height + $hilight_spacing_y / 2 ))
+			elif [ "$buttons" -gt 3 ] ; then
+				hilight_start_location_x=$(( ($dvd_width - 3*$hilight_width - 2*$hilight_spacing_x )/2 ))
+				hilight_start_location_y=$(( $title_white_height + $hilight_spacing_y / 2 ))
+			else
+				[ "$buttons" == 2 ] && hilight_spacing_x=100
+				hilight_start_location_x=$(( ($dvd_width - $buttons * $hilight_width - ( $buttons - 1 )*$hilight_spacing_x )/2 ))
+				hilight_start_location_y=$(( $title_white_height + $hilight_spacing_y ))
+			fi
+			## size constraint seems to be vertically when we have a title.
+			## so, eventually, we could have different situations, depending on whether or not
+			## a title exists, etc...  let's assume it does for now!
+
+			[ -z "${buttonfile[$i]}" ] && buttonfile[$i]="${xml_button[$i]}"
+			[ -z "${title[$i]}" ] && title[$i]="${xml_title[$i]}"
+			echo "[dvd-menu] Title=${title[$i]}"
+			echo "[dvd-menu] Image=${buttonfile[$i]}"
+			button_text_white=1
+			if [ "$button_text_white" == 1 ] ; then
+				text_height=$(( 3* $hilight_font_size ))
+				text_width=$(( $hilight_width + $hilight_spacing_x / 2 ))
+				convert -size "$text_width"x$text_height xc:transparent -depth 8 "$tmpdir"/button_mask_trans.png
+				convert -size "$text_width"x$text_height xc:transparent -depth 8 -fill white -draw "roundRectangle 0,0,$text_width,$text_height $button_radius,$button_radius" -background none -blur 0x3 "$tmpdir"/button_mask.png
+				composite -compose src-over -type TrueColor -depth 8 -dissolve 60 "$tmpdir"/button_mask.png "$tmpdir"/button_mask_trans.png "$tmpdir"/button_mask.png
+
+				convert -size ${text_width}x$text_height xc:transparent -quality 100 -font "$button_font" -fill "$button_font_color" -pointsize $button_font_size -gravity center -draw "text 0,0 \"${title[$i]}\"" "$tmpdir"/button_text.png
+				composite -compose src-over -type TrueColor -depth 8 "$tmpdir"/button_text.png "$tmpdir"/button_mask.png "$tmpdir"/button_text.png
+			fi
+#echo "buttonfile=${buttonfile[$i]}".
+		        if [ -e "${buttonfile[$i]}" ]; then
+		                echo "[dvd-menu] using image $( truncate_filename "${buttonfile[$i]}" )"
+#				echo "[dvd-menu] hilight_width=$hilight_width hilight_height=$hilight_height"
+		                convert "${buttonfile[$i]}" -resize "$hilight_width"x"$hilight_height" -quality 100 "$tmpdir/embed.jpg"
+				actual_hilight_width=$( imagewidth_sq "$tmpdir"/embed.jpg )
+				actual_hilight_height=$( imageheight "$tmpdir"/embed.jpg )
+				# make each individual button mask (for when it's selected)
+				convert -colors 3 +antialias -size "$actual_hilight_width"x"$actual_hilight_height" xc:transparent -fill transparent -stroke $button_hilight_color -strokewidth 5 -draw "rectangle 0,0 $actual_hilight_width,$actual_hilight_height" -quality 100 "$tmpdir/button_mask.png"
+	
+				## calculate location of this image:
+				if [ "$buttons" == "4" ] ; then
+					[ $embed -ge 3 ] && embed_row=2 || embed_row=1
+					[ $embed -ge 3 ] && embed_col=$(( $embed - 2 )) || embed_col=$embed
+				elif [ "$buttons" -gt 3 ] ; then
+					[ $embed -ge 4 ] && embed_row=2 || embed_row=1
+					[ $embed -ge 4 ] && embed_col=$(( $embed - 3 )) || embed_col=$embed
+				elif [ "$buttons" -le 3 ] ; then
+					embed_row=1
+					embed_col=$embed
+				fi
+				hilight_x=$(( $hilight_start_location_x + ($embed_col - 1)*($hilight_spacing_x + $hilight_width) ))
+				hilight_y=$(( $hilight_start_location_y + ($embed_row - 1)*($hilight_spacing_y + $hilight_height + $hilight_font_size ) ))
+				button_text_location_x=$(( $hilight_x - $hilight_spacing_x / 4 ))
+				button_text_location_y=$(( $hilight_y + $hilight_height ))
+				echo "[dvd-menu] r,c=$embed_row,$embed_col hilight_x_loc=$hilight_x hilight_y_loc=$hilight_y"
+				
+				## add each button as necessary, and increment the location 
+				composite -compose src-over -type TrueColor -depth 8 -geometry +$button_text_location_x+$button_text_location_y "$tmpdir/button_text.png" "$tmpdir/menu.ppm" "$tmpdir/menu.ppm"
+
+		                # Add embed image to menu background
+				difference_x=$(( ( $hilight_width - $actual_hilight_width )/2 ))
+				difference_y=$(( ( $hilight_height - $actual_hilight_height )/2 ))
+				## adjust hilight location:
+				hilight_x=$(( $hilight_x + $difference_x ))
+				hilight_y=$(( $hilight_y + $difference_y ))
+				composite -compose src-over -type TrueColor -depth 8 -geometry +$hilight_x+$hilight_y "$tmpdir/embed.jpg" "$tmpdir/menu.ppm" "$tmpdir/menu.ppm"
+				## add each overlay mask for the selection of buttons:
+				composite -compose src-over -depth 8 -colors 3 -quality 100 -geometry +$hilight_x+$hilight_y "$tmpdir/button_mask.png" "$tmpdir/menu_mask.png" "$tmpdir/menu_mask.png"
+	
+				## now record the button location:
+				right[$i]="$(( $hilight_x + $hilight_width ))"
+				left[$i]="$(( $hilight_x ))"
+				top[$i]="$(( $hilight_y ))"
+				bottom[$i]="$(( $hilight_y + $hilight_height ))"
+				let embed=$embed+1
+		        fi
+			##################################################################33
+			
+			vts="$(( $i + 1 ))"
+			echo "[dvd-menu] i=$i vts=$vts"
+				
+			let i=$i+1
+		done
+	fi	# end of different menu types
+
+	## now convert the menu background to a mpg
+	ppmtoy4m -v 0 -n "$frames" -r -S "$subsample" -F $ppmtoy4m_frc -A $ppmtoy4m_aspect -I p "$tmpdir/menu.ppm" | mpeg2enc $mpeg2enc_params -o "$tmpdir/menu.mpg" 
+
+
+	if [ "$fade_to_image" == 'black' ] ; then
+		background black "$tmpdir"/bg_fade.ppm
+	elif [ -f "$fade_to_image" ] ; then
+		background "$fade_to_image" "$tmpdir"/bg_fade.ppm
+	fi
+	if [ "$fadein" -eq 1 ] ; then
+		if [ "$fade_to_image" == 'black' ] ; then
+			echo "[dvd-menu] Creating fadein from black..."
+			fade "$tmpdir/menu.ppm" "$tmpdir"/bg_fade.ppm 2
+		elif [ -f "$fade_to_image" ] ; then
+			echo "[dvd-menu] Creating fadein from image..."
+			fade "$tmpdir/menu.ppm" "$tmpdir"/bg_fade.ppm 2
+		else
+			echo "[dvd-menu] Creating fadein from background..."
+			fade "$tmpdir/menu.ppm" "$tmpdir/slideshow_background.ppm" 2
+		fi
+		mv "$tmpdir/fade.mpg" "$tmpdir/fadein.mpg"
+	fi
+	if [ "$fadeout" -eq 1 ] ; then
+		if [ "$fade_to_image" == 'black' ] ; then
+			echo "[dvd-menu] Creating fadeout to black..."
+			fade "$tmpdir"/bg_fade.ppm "$tmpdir"/menu.ppm 2
+		elif [ -e "$fade_to_image" ] ; then
+			echo "[dvd-menu] Creating fadeout to image..."
+			fade "$tmpdir"/bg_fade.ppm "$tmpdir"/menu.ppm 2
+		else
+			echo "[dvd-menu] Creating fadeout to background..."
+			fade "$tmpdir/slideshow_background.ppm" "$tmpdir/menu.ppm" 2
+		fi
+		mv "$tmpdir/fade.mpg" "$tmpdir/fadeout.mpg"
+	fi
+	
+	# optionally fade out at a certain time?
+	if [ -n "$audiofile" ] ; then
+		## get type of file:  mp3, ogg, or wav
+		suffix=`echo "$audiofile" | awk -F. '{print $NF}'`
+		echo "[dvd-menu] Decoding $suffix audio file"
+		if [ "$suffix" == "mp3" ] ; then
+			checkforprog lame
+		        lame --decode "$audiofile" "$tmpdir/audio_tmp.wav" >> "$logfile" 2>&1
+			# convert it to 48khz:
+                        song_length_ms=`wavlength "$tmpdir/audio_tmp.wav"`
+                        song_length_hms=`hms $song_length_ms`
+			sox -v 0.90 "$tmpdir/audio_tmp.wav" -r $audio_sample_rate "$tmpdir/audio.wav" fade t 2 "$song_length_hms" 2
+			rm "$tmpdir/audio_tmp.wav"
+		elif [ "$suffix" == "ogg" ] ; then
+			checkforprog oggdec
+		        oggdec -o "$tmpdir/audio_tmp.wav" "$audiofile" >> "$logfile" 2>&1
+                        song_length_ms=`wavlength "$tmpdir/audio_tmp.wav"`
+                        song_length_hms=`hms $song_length_ms`
+echo "song=$audiofile"
+			# convert it to 48khz:
+			sox -v 0.90 "$tmpdir/audio_tmp.wav" -r $audio_sample_rate "$tmpdir/audio.wav" fade t 2 "$song_length_hms" 2
+			rm "$tmpdir/audio_tmp.wav"
+		elif [ "$suffix" == "wav" ] ; then
+			# convert it to 48khz:
+                        song_length_ms=`wavlength "$audiofile"`
+                        song_length_hms=`hms $song_length_ms`
+echo "song=$audiofile"
+			sox -v 0.90 "$audiofile" -r $audio_sample_rate "$tmpdir/audio.wav" fade t 2 "$song_length_hms" 2
+		else
+		        echo "[dvd-menu] ERROR:  Unknown audio file format.  Must be .mp3, .ogg, or .wav"
+		fi
+	else
+		## create silence:  
+		echo "[dvd-menu] creating silent audio track"
+		## create audio for 1 second:
+		sox -t raw -s -w -c 2 -r $audio_sample_rate /dev/zero -t wav - trim 0 0:01.000 > "$tmpdir/audio.wav" 
+	fi
+
+	if [ "$fadein" -eq 1 ] || [ "$fadeout" -eq 1 ] ; then
+		# create slience .wav file for 1 second for fadein/fadeout
+		sox -t raw -s -w -c 2 -r $audio_sample_rate /dev/zero -t wav - trim 0 0:02.000 > "$tmpdir/fade_audio.wav" 
+	fi
+	
+
+	if [ "$ac3" -eq 1 ] ; then
+	        checkforprog ffmpeg
+	        echo "[dvd-menu] Creating ac3 audio..."
+	        check_rm "$tmpdir/audio.ac3"
+	        ffmpeg -i "$tmpdir/audio.wav" -vn -y -ab 192k -acodec ac3 -ar $audio_sample_rate -ac 6 "$tmpdir/audio.ac3" >> "$logfile" 2>&1
+		if [ "$fadein" -eq 1 ] || [ "$fadeout" -eq 1 ] ; then
+	        	ffmpeg -i "$tmpdir/fade_audio.wav" -vn -y -ab 192k -acodec ac3 -ar $audio_sample_rate -ac 6 "$tmpdir/fade_audio.ac3" >> "$logfile" 2>&1
+		fi
+	else
+		## toolame is way faster! (3x in my test)
+		it=`which toolame`
+		if [ -n "$it" ] ; then
+		        toolame_version=`toolame -h | head -n 4 | grep version | awk '{ print $3 }'`
+		        echo "[dvd-menu] using toolame $toolame_version..."
+		        if [ "$toolame_version" == '0.2m' ] ; then
+		        	toolame -s $audio_sample_rate -b $audio_bitrate "$tmpdir/audio.wav" "$tmpdir/audio.mp2" >> "$logfile" 2>&1
+		        else
+				## need to hard code in the sample rate here because the syntax is bad
+		        	if [ "$vcd" -eq 1 ] || [ "$svcd" -eq 1 ] ; then
+		        		toolame -s 44.1 -b $audio_bitrate "$tmpdir/audio.wav" "$tmpdir/audio.mp2" >> "$logfile" 2>&1
+				else
+		        		toolame -s 48 -b $audio_bitrate "$tmpdir/audio.wav" "$tmpdir/audio.mp2" >> "$logfile" 2>&1
+				fi
+		        fi
+		else
+		        myecho "[dvd-menu] using mp2enc"
+		        mp2enc -v 0 -b $audio_bitrate -r $audio_sample_rate -s -o "$tmpdir/audio.mp2" < "$tmpdir/audio.wav" 
+		fi
+		if [ "$fadein" -eq 1 ] || [ "$fadeout" -eq 1 ] ; then
+		        mp2enc -v 0 -b $audio_bitrate -r $audio_sample_rate -s -o "$tmpdir/fade_audio.mp2" < "$tmpdir/fade_audio.wav" 
+		fi
+	fi
+
+	## now multiplex the audio and video:
+	myecho "[dvd-menu] mplexing the files............."
+	if [ "$ac3" -eq 1 ] ; then
+		mplex -v 0 -f $mplex_type -o "$tmpdir/menu_t.vob" "$tmpdir/menu.mpg" "$tmpdir"/audio.ac3 
+		if [ "$fadein" -eq 1 ] ; then
+			mplex -v 0 -f $mplex_type -o "$outdir/fadein.vob" "$tmpdir/fadein.mpg" "$tmpdir"/fade_audio.ac3 
+		fi
+		if [ "$fadeout" -eq 1 ] ; then
+			mplex -v 0 -f $mplex_type -o "$outdir/fadeout.vob" "$tmpdir/fadeout.mpg" "$tmpdir"/fade_audio.ac3 
+		fi
+	else
+		mplex -v 0 -f $mplex_type -o "$tmpdir/menu_t.vob" "$tmpdir/menu.mpg" "$tmpdir"/audio.mp2 
+		if [ "$fadein" -eq 1 ] ; then
+			mplex -v 0 -f $mplex_type -o "$outdir/fadein.vob" "$tmpdir/fadein.mpg" "$tmpdir"/fade_audio.mp2 
+		fi
+		if [ "$fadeout" -eq 1 ] ; then
+			mplex -v 0 -f $mplex_type -o "$outdir/fadeout.vob" "$tmpdir/fadeout.mpg" "$tmpdir"/fade_audio.mp2 
+		fi
+	fi
+
+	## start of button subpicture XML file creation for spumux:
+	## now define the buttons:
+	echo '<subpictures>' > "$tmpdir/menu.spumux"
+	echo '	<stream>' >> "$tmpdir/menu.spumux"
+	echo -n '		<spu start="00:00:00.00" end="00:00:00.00" highlight="' >> "$tmpdir/menu.spumux"
+	echo "$tmpdir/menu_mask.png"'" force="yes" >' >> "$tmpdir/menu.spumux"
+	## now loop over the buttons:
+	let i=0
+	for it in "${left[@]}"; do
+		echo -n '                       <button ' >> "$tmpdir/menu.spumux"
+		# insert an up link to the upAction for the first button
+		if [ $i -eq 0 ] && [ "$upAction" -eq 1 ]; then
+			echo -n ' up="upAction" ' >> "$tmpdir/menu.spumux"
+		fi
+		echo 'x0="'${left[$i]}'" y0="'${top[$i]}'" x1="'${right[$i]}'" y1="'${bottom[$i]}'" />' >> "$tmpdir/menu.spumux"
+
+		let i=$i+1
+	done
+        # append an up action to the button list
+        if [ "${upAction}" -eq 1 ] ; then
+                echo '                  <action name="upAction" />' >> "$tmpdir/menu.spumux"
+        fi
+	echo '		</spu>' >> "$tmpdir/menu.spumux"
+	echo '	</stream>' >> "$tmpdir/menu.spumux"
+	echo '</subpictures>' >> "$tmpdir/menu.spumux"
+
+	myecho "[dvd-menu] ###############################################"
+	myecho "[dvd-menu] spumuxing the files............."
+	## using spumux now:
+	if [ "$vcd" -eq 1 ] || [ "$svcd" -eq 1 ] ; then
+		mv "$tmpdir/menu_t.vob" "$outdir/menu.mpg"
+	else  # DVD
+#		spumux -v 0 -P "$tmpdir/menu.spumux" < "$tmpdir/menu_t.vob" > "$outdir/menu.vob" >> "$logfile" 2>&1
+		spumux -v 0 -P "$tmpdir/menu.spumux" < "$tmpdir/menu_t.vob" > "$outdir/menu.vob" 2>> "$logfile"
+		if [ $? -ne 0 ] ; then
+			## spumux errored
+			myecho "[dvd-menu] ERROR during spumux execution!"
+			myecho "[dvd-menu] see $logfile for details"
+			exit 1
+		fi
+	fi
+fi
+# end if we're actually making a menu.  otherwise, just to the stuff below
+
+#############################################################
+## menu part of .xml file:
+
+# write header:
+if [ "$vcd" -eq 1 ] || [ "$svcd" -eq 1 ] ; then
+	# vcd menus:
+	echo "[dvd-menu] Creating vcd menu"
+	echo '<?xml version="1.0"?>
+<!DOCTYPE videocd PUBLIC "-//GNU//DTD VideoCD//EN" "http://www.gnu.org/software/vcdimager/videocd.dtd">' > "$outdir/vmgm.xml"
+	if [ "$vcd" -eq 1 ] ; then
+		echo '<videocd xmlns="http://www.gnu.org/software/vcdimager/1.0/" class="vcd" version="2.0">' >> "$outdir/vmgm.xml"
+	elif [ "$svcd" -eq 1 ] ; then
+		echo '<videocd xmlns="http://www.gnu.org/software/vcdimager/1.0/" class="svcd" version="1.0">' >> "$outdir/vmgm.xml"
+	else
+		echo '[dvd-menu] ERROR: Bad vcd type' ; exit 1
+	fi
+	echo '<info>
+    <album-id>666</album-id>
+    <volume-count>1</volume-count>
+    <volume-number>1</volume-number>
+    <restriction>0</restriction>
+</info>
+<pvd>
+    <volume-id>VIDEOCD</volume-id>
+    <system-id>CD-RTOS CD-BRIDGE</system-id>
+    <preparer-id>scott_preparer</preparer-id>
+    <publisher-id></publisher-id>
+</pvd>' >> "$outdir/vmgm.xml"
+	echo '<sequence-items>' >> "$outdir/vmgm.xml"
+	echo '   <sequence-item src="'"$outdir/menu.mpg"'" id="seq-menu"/>' >> "$outdir/vmgm.xml"
+	total_files="${#xmlfile[*]}" ; i=0
+#	for it in `seq 1 1 $total_files` ; do
+	for (( it=1 ; it<=total_files ; it++ )) ; do
+		if [ "$(( $i + 1 ))" -eq "$total_files" ] ; then continuous=0 ; fi
+		myecho "[dvd-menu] sequencefile=${xmlfile[$i]}"
+		suffix=`echo "${xmlfile[$i]}" | awk -F. '{print $NF}'`
+		if [ "$suffix" == 'xml' ] ; then
+			file_base=`basename "${xmlfile[$i]}" .xml`
+			xml_button[$i]=$( grep '<!-- button=' "${xmlfile[$i]}" | awk -F= '{print $2}' | awk -F' -->' '{print $1}' )
+#			[ -n "${xml_button[$i]}" ] && echo "[dvd-menu] xml_button $i = ${xml_button[$i]}"
+			xml_title[$i]=$( grep '<!-- title=' "${xmlfile[$i]}" | awk -F= '{print $2}' | awk -F' -->' '{print $1}' )
+#			[ -n "${xml_title[$i]}" ] && echo "[dvd-menu] xml_title $i = ${xml_title[$i]}"
+		elif [ "$suffix" == 'mpg' ] ; then
+			file_base=`basename "${xmlfile[$i]}" .mpg`
+		elif [ "$suffix" == 'vob' ] ; then
+			file_base=`basename "${xmlfile[$i]}" .vob`
+		else
+			echo '[dvd-menu] error... filetype not supported!'
+			exit
+		fi
+#		myecho "[dvd-menu] file=${xmlfile[$i]} file_base=$file_base suffix=$suffix"
+		## create <sequence-items> at the same time:
+		echo '     <sequence-item src="'"$(cat ${xmlfile[$i]})"'" id="'"$file_base"_$(($i+1))'"/>' >> "$outdir/vmgm.xml"
+		i=$(($i+1))
+	done
+	echo '</sequence-items>' >> "$outdir/vmgm.xml"
+
+else	# dvd menus:
+	## now build the dvdauthor xml file:
+	## do we need "jumppad"?
+	echo '<dvdauthor dest="'$dvd_dir'" jumppad="0">' > "$outdir/vmgm.xml"
+	echo '        <vmgm>' >> "$outdir/vmgm.xml"
+	echo '           <menus>' >> "$outdir/vmgm.xml"
+fi
+
+# write menu
+if [ "$no_menu" -eq 0 ] ; then
+	if [ "$vcd" -eq 1 ] || [ "$svcd" -eq 1 ] ; then
+		echo "<pbc>" >> "$outdir/vmgm.xml"
+		echo '    <selection id="menu">' >> "$outdir/vmgm.xml"
+		echo '      <bsn>1</bsn>' >> "$outdir/vmgm.xml"
+		echo '      <loop jump-timing="immediate">0</loop>' >> "$outdir/vmgm.xml"
+		echo '      <play-item ref="seq-menu"/>' >> "$outdir/vmgm.xml"
+	else  # dvd
+		echo '               <pgc entry="title" >' >> "$outdir/vmgm.xml"
+		## put fadein before each menu:
+		if [ "$fadein" -eq 1 ] ; then
+		echo '                    <vob file="'$outdir/fadein.vob'"/>' >> "$outdir/vmgm.xml"
+		fi
+		echo '                    <vob file="'$outdir/menu.vob'" pause="inf"/>' >> "$outdir/vmgm.xml"
+	fi
+
+
+	## now loop over each title for select buttons:
+#	myecho "[dvd-menu] xmlfiles=${xmlfile[@]}"
+	let i=1   ## titles start from 1, not zero.
+	let m=1   ## menus start at 1
+	for it in "${xmlfile[@]}"; do
+		# verify xml file exists:
+		if [ ! -r "$it" ] ; then
+			echo "[dvd-menu] ERROR: XML file $it does not exist."
+			exit 1
+		fi
+		suffix=`echo "$it" | awk -F. '{print $NF}'`
+		if [ "$suffix" == 'xml' ] ; then
+			file_base=`basename "$it" .xml`
+		elif [ "$suffix" == 'mpg' ] ; then
+			file_base=`basename "$it" .mpg`
+		elif [ "$suffix" == 'vob' ] ; then
+			file_base=`basename "$it" .vob`
+		else
+			echo '[dvd-menu] error... filetype not supported!'
+			exit 1
+		fi
+		if [ "$vcd" -eq 1 ] || [ "$svcd" -eq 1 ] ; then
+			echo '      <select ref="'video$i'"/>' >> "$outdir/vmgm.xml"
+			select[$i]="$file_base"_$i
+		else  # dvd
+			if [ -f "$file_base"_submenu.xml ] ; then
+				echo '             		<button> jump menu '$m'; </button>' >> "$outdir/vmgm.xml"
+				let m=$m+1
+			else
+				echo '             		<button> jump title '$i'; </button>' >> "$outdir/vmgm.xml"
+			fi
+		fi
+		let i=$i+1
+		let m=$m+1
+	done
+
+
+
+	if [ "$vcd" -eq 1 ] || [ "$svcd" -eq 1 ] ; then
+		echo '    </selection>' >> "$outdir/vmgm.xml"
+	else  # dvd
+		echo '                    <post> jump vmgm menu 1; </post>' >> "$outdir/vmgm.xml"
+		echo '                </pgc>' >> "$outdir/vmgm.xml"
+	fi
+fi
+
+## close last section and open next one:
+if [ "$vcd" -eq 0 ] && [ "$svcd" -eq 0 ] ; then ## DVD
+	echo '           </menus>' >> "$outdir/vmgm.xml"
+	echo '        </vmgm>' >> "$outdir/vmgm.xml"
+	echo '        <titleset>' >> "$outdir/vmgm.xml"
+	## every dvd has at least one title!
+	echo '		<titles>' > "$tmpdir/titles_vmgm.xml"
+	echo '		<subpicture lang="'$subtitle_code'"/>' >> "$tmpdir/titles_vmgm.xml"
+fi	
+## now cat the other ones into this file...
+let i=0   
+let title=1   
+let m=1   
+
+## get rid of existing files:
+#check_rm "$tmpdir/menus_vmgm.xml"
+
+total_files="${#xmlfile[*]}"
+#for it in `seq 1 1 $total_files` ; do
+for (( it=1 ; it<=total_files ; it++ )) ; do
+	if [ "$(( $i + 1 ))" -eq "$total_files" ] ; then continuous=0 ; fi
+	let j=$i+2
+	myecho "[dvd-menu] sequencefile=${xmlfile[$i]}"
+	suffix=`echo "${xmlfile[$i]}" | awk -F. '{print $NF}'`
+	if [ "$suffix" == 'xml' ] ; then
+		file_base=`basename "${xmlfile[$i]}" .xml`
+	elif [ "$suffix" == 'mpg' ] ; then
+		file_base=`basename "${xmlfile[$i]}" .mpg`
+	elif [ "$suffix" == 'vob' ] ; then
+		file_base=`basename "${xmlfile[$i]}" .vob`
+	else
+		echo '[dvd-menu] error... filetype not supported!'
+		exit
+	fi
+
+	nextmenu=$(( $m + 1 ))
+	lastmenu=$(( $m - 1 ))
+#	myecho "[dvd-menu] file=${xmlfile[$i]} file_base=$file_base suffix=$suffix"
+	if [ "$vcd" -eq 1 ] || [ "$svcd" -eq 1 ] ; then  # VCD
+		echo '   <playlist id="video'$(($i+1))'">' >> "$tmpdir/titles_vmgm.xml"
+#		echo '      <select ref="'"$file_base"_$i'"/>' >> "$outdir/vmgm.xml"
+		if [ "$continuous" -eq 1 ] ; then
+			echo '     <next ref="'video$(($i+2))'"/>' >> "$tmpdir/titles_vmgm.xml"
+		elif [ "$no_menu" -eq 0 ] ; then
+			echo '     <next ref="menu"/>' >> "$tmpdir/titles_vmgm.xml"
+		fi
+		echo '     <wait>0</wait>' >> "$tmpdir/titles_vmgm.xml"
+		echo '     <play-item ref="'"$file_base"_$(($i+1))'"/>' >> "$tmpdir/titles_vmgm.xml"
+#		echo '     <sequence-item src="'"$(full_path ${xmlfile[$i]})"'" id="'"$file_base"_$(($i+1))'"/>' >> "$tmpdir/titles_seq.xml"
+		echo '   </playlist>' >> "$tmpdir/titles_vmgm.xml"
+	else # dvd
+		# make sure palette file exists:
+#		if [ -e "$outdir"/palette.rgb ] ; then
+#			echo '		<pgc palette="'$outdir/palette.rgb'">' >> "$tmpdir/titles_vmgm.xml"
+#		else
+			echo '		<pgc>' >> "$tmpdir/titles_vmgm.xml"
+#		fi
+		## fadeout from vmgm
+		if [ "$fadeout" -eq 1 ] && [ "$continuous_method" -ne 1 ] ; then
+			# non-continuous play means we want to fadeout from every menu
+			echo '                <vob file="'$outdir/fadeout.vob'"/>' >> "$tmpdir/titles_vmgm.xml"
+		elif [ "$fadeout" -eq 1 ] && [ "$continuous_method" -eq 1 ] && [ "$i" -eq 0 ] ; then
+			# continuous play means we only fadeout from the menu on the first .vob
+			echo '                <vob file="'$outdir/fadeout.vob'"/>' >> "$tmpdir/titles_vmgm.xml"
+		fi
+		## now, add in the .vob file:
+		if [ "$suffix" == 'mpg' ] || [ "$suffix" == 'vob' ]; then
+			echo '		<vob file="'${xmlfile[$i]}'"  />' >> "$tmpdir/titles_vmgm.xml"
+		else
+			cat "${xmlfile[$i]}" >> "$tmpdir/titles_vmgm.xml"
+		fi
+		if [ "$continuous" -eq 1 ] ; then
+			echo "		<post> jump title $j; </post>" >> "$tmpdir/titles_vmgm.xml"
+		elif [ "$no_menu" -eq 0 ] ; then
+			echo '		<post> call vmgm menu 1; </post>' >> "$tmpdir/titles_vmgm.xml"
+		fi
+		echo '		</pgc>' >> "$tmpdir/titles_vmgm.xml"
+	fi
+	let i=$i+1
+	let title=$title+1
+done
+
+## finish up menus tag:
+#if [ $m -gt 1 ] ; then  # only if we had submenus:
+#	echo '	</menus>' >> "$tmpdir/menus_vmgm.xml"
+#fi
+
+if [ "$vcd" -eq 1 ] || [ "$svcd" -eq 1 ] ; then  # VCD
+	echo '</pbc>' >> "$tmpdir/titles_vmgm.xml"
+#	echo '</sequence-items>' >> "$tmpdir/titles_seq.xml"
+	cat "$tmpdir/titles_vmgm.xml" >> "$outdir/vmgm.xml"
+#	cat "$tmpdir/titles_seq.xml" >> "$outdir/vmgm.xml"
+	echo '</videocd>' >> "$outdir/vmgm.xml"
+else
+	## finish up titles tag:
+	echo '	</titles>' >> "$tmpdir/titles_vmgm.xml"
+	## join the menus and titles with the vmgm menu:
+	#if [ -f "$tmpdir/menus_vmgm.xml" ] ; then # only if submenus exist!
+	#	cat "$tmpdir/menus_vmgm.xml" >> "$outdir/vmgm.xml"
+	#fi
+	cat "$tmpdir/titles_vmgm.xml" >> "$outdir/vmgm.xml"
+	echo '	</titleset>' >> "$outdir/vmgm.xml"
+	echo '</dvdauthor>' >> "$outdir/vmgm.xml"
+fi
+
+
+myecho "[dvd-menu] ##############################"
+
+## run dvdauthor?
+if [ "$no_dvdauthor" -eq 0 ] ; then
+	if [ "$vcd" -eq 1 ] || [ "$svcd" -eq 1 ] ; then  # VCD
+		myecho "[dvd-menu] Running vcdxbuild..."
+		vcdxbuild -c "$outdir"/videocd.cue -b "$outdir"/videocd.bin -p "$outdir/vmgm.xml" 
+		if [ $? -ne 0 ] ; then
+			## vcdxbuild errored
+			myecho "[dvd-menu] ERROR during vcdxbuild execution!"
+			myecho "[dvd-menu] see $logfile for details"
+			exit 1
+		else
+			myecho "[dvd-menu] vcdxbuild ran ok. See logfile for details."
+		fi
+	else
+		myecho "[dvd-menu] Running dvdauthor..."
+#		dvdauthor -o "$dvd_dir" -x "$outdir/vmgm.xml" >> "$logfile" 2>&1
+		dvdauthor -o "$dvd_dir" -x "$outdir/vmgm.xml" 
+		if [ $? -ne 0 ] ; then
+			## dvdauthor errored
+			myecho "[dvd-menu] ERROR during dvdauthor execution!"
+			myecho "[dvd-menu] see $logfile for details"
+			exit 1
+		else
+			myecho "[dvd-menu] dvdauthor ran ok. See logfile for details."
+		fi
+	fi
+	# create iso image?
+	if [ "$iso" -eq 1 ] ; then
+		## create iso image afterward:
+		if [ "$vcd" -eq 1 ] || [ "$svcd" -eq 1 ] ; then  # VCD
+			echo "supposed to create vcd image"
+		else
+			myecho "[dvd-menu] Creating iso image dvd.iso"
+			mkisofs -dvd-video -udf -o dvd.iso "$dvd_dir" 
+			if [ $? -ne 0 ] ; then
+				## mkisofs errored
+				myecho "[dvd-menu] ERROR during mkisofs execution!"
+				myecho "[dvd-menu] see $logfile for details"
+				exit 1
+			fi
+		fi
+	fi
+else
+	if [ "$vcd" -eq 1 ] || [ "$svcd" -eq 1 ] ; then  # VCD
+		myecho "[dvd-menu] Not running vcdimager.  Edit the vmgm.xml file"
+		myecho "[dvd-menu] if you wish, and then run vcdimager: "
+		myecho "[dvd-menu] vcdimager vmgm.xml"
+		echo " "
+	else
+		myecho "[dvd-menu] Not running dvdauthor.  Edit the vmgm.xml file"
+		myecho "[dvd-menu] if you wish, and then run dvdauthor: "
+		myecho "[dvd-menu] dvdauthor -x vmgm.xml"
+		echo " "
+	fi
+fi
+
+if [ "$nocleanup" -eq 0 ] ; then
+	cleanup
+fi
+# cleanup the logfile a little bit:
+sed -e '/ bytes of data written[[:cntrl:]]INFO/d' "$logfile" > "$outdir"/tmp.txt
+mv "$outdir"/tmp.txt "$logfile"
+
+echo "[dvd-menu] Output directory is $outdir"
+echo "[dvd-menu] Logfile output is at $logfile"
+
+if [ "$vcd" -eq 1 ] || [ "$svcd" -eq 1 ] ; then
+	echo "[dvd-menu] The vcd output is "
+	echo "[dvd-menu] "
+	echo "[dvd-menu] You can play this video using one of the following commands:"
+	echo "[dvd-menu] xine -g -u 0 dvd:\"$dvd_dir\""
+	echo "[dvd-menu] "
+	echo "[dvd-menu] or, if you just want to watch the videos without the menus:"
+	echo "[dvd-menu] mplayer -sid 0 dvd:// -dvd-device $dvd_dir"
+	echo "[dvd-menu] "
+	echo "[dvd-menu] Burn the video cd using:"
+	echo "[dvd-menu] cdrdao write --device ATA:1,0,0 videocd.cue"
+else
+	echo "[dvd-menu] The dvd filesystem is $dvd_dir"
+	echo "[dvd-menu] "
+	echo "[dvd-menu] You can play this video using one of the following commands:"
+	echo "[dvd-menu] xine -g -u 0 dvd:\"$dvd_dir\""
+	echo "[dvd-menu] "
+	echo "[dvd-menu] or, if you just want to watch the videos without the menus:"
+	echo "[dvd-menu] mplayer -sid 0 dvd:// -dvd-device $dvd_dir"
+fi
+myecho "[dvd-menu] Done!"
+echo

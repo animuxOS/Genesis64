@@ -1,0 +1,69 @@
+#!/bin/sh -e
+
+test $DEBIAN_SCRIPT_DEBUG && set -v -x
+  
+
+case "$1" in
+  configure|upgrade)
+  
+  # Create fuse group
+  echo "creating fuse group..."
+  getent group fuse >/dev/null || addgroup --system fuse
+ 
+  # Detect if udev is active
+  udev=0
+  if grep -qE '^udev /dev' /proc/mounts; then
+  	udev=1
+  elif [ -d /dev/.udevdb/ -o -d /dev/.udev/ ]; then
+  	udev=1
+  fi
+  # Create device node with the right perms
+  if [ ${udev} -eq 0 ]; then
+  	# Call makedev and fix perms
+	cd /dev; MAKEDEV fuse
+	chgrp fuse /dev/fuse
+  else
+  	# Udev is active, nothing to do.
+	echo "udev active, skipping device node creation."
+	# Debian bug #473545
+	# Udev rules says "fuse" group, however this group doesn't exist in
+	# base system, so the node is root:root.
+	# Once fuse-utils is installed the group exists and udev will set proper
+	# group. The bug may come from udev, or base system, which use a group
+	# that doens't exist. For now, let's workaround this issue here.
+	test -e /dev/fuse && chgrp fuse /dev/fuse
+  fi
+
+  test -f /etc/default/fuse-utils && rm -f /etc/default/fuse-utils
+  
+  if ! dpkg-statoverride --list /usr/bin/fusermount >/dev/null; then
+  	chown root:fuse /usr/bin/fusermount
+  	chmod 4754 /usr/bin/fusermount
+  fi
+  
+  chown root:fuse /etc/fuse.conf
+  chmod 0640 /etc/fuse.conf
+  ;;
+
+  abort-upgrade|abort-remove|abort-deconfigure)
+  ;;
+
+  *)
+    echo "postinst called with unknown argument \`$1'" >&2
+    exit 1
+  ;;
+esac
+
+# Automatically added by dh_installinit
+if [ -x "/etc/init.d/fuse" ]; then
+	update-rc.d fuse start 34 S . stop 41 0 6 . >/dev/null
+	if [ -x "`which invoke-rc.d 2>/dev/null`" ]; then
+		invoke-rc.d fuse start || exit $?
+	else
+		/etc/init.d/fuse start || exit $?
+	fi
+fi
+# End automatically added section
+
+
+exit 0

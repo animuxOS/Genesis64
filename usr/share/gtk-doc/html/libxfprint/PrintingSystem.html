@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>PrintingSystem</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.73.2">
+<link rel="start" href="index.html" title="libxfprint Reference Manual">
+<link rel="up" href="ch01.html" title="API Reference">
+<link rel="prev" href="libxfprint-Job.html" title="Job">
+<link rel="next" href="PrinterListWindow.html" title="PrinterListWindow">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="ch01.html" title="API Reference">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="libxfprint-Job.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">libxfprint Reference Manual</th>
+<td><a accesskey="n" href="PrinterListWindow.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2585494" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2594673" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2594619" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2594643" class="shortcut">Properties</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="PrintingSystem"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2585494"></a><span class="refentrytitle">PrintingSystem</span>
+</h2>
+<p>PrintingSystem</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+#include &lt;libxfprint/libxfprint.h&gt;
+
+
+struct              <a class="link" href="PrintingSystem.html#PrintingSystem-struct">PrintingSystem</a>;
+<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a>*     <a class="link" href="PrintingSystem.html#printing-system-new">printing_system_new</a>                 (const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *path);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"
+>GList</a>*              <a class="link" href="PrintingSystem.html#printing-system-get-printers">printing_system_get_printers</a>        (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps);
+<a class="link" href="libxfprint-Printer.html#Printer">Printer</a>*            <a class="link" href="PrintingSystem.html#printing-system-get-default-printer">printing_system_get_default_printer</a> (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="PrintingSystem.html#printing-system-get-printer-state">printing_system_get_printer_state</a>   (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *printer);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                <a class="link" href="PrintingSystem.html#printing-system-get-jobs-count">printing_system_get_jobs_count</a>      (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *printer);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="PrintingSystem.html#printing-system-remove-job">printing_system_remove_job</a>          (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *printer,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> id);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"
+>GList</a>*              <a class="link" href="PrintingSystem.html#printing-system-get-jobs">printing_system_get_jobs</a>            (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *printer);
+<a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            <a class="link" href="PrintingSystem.html#printing-system-print-file">printing_system_print_file</a>          (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *printer,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *original_name,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *file,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> remove_file);
+void                <a class="link" href="PrintingSystem.html#printing-system-customize-printer-list-window">printing_system_customize_printer_list_window</a>
+                                                        (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         <a class="link" href="PrinterListWindow.html" title="PrinterListWindow">PrinterListWindow</a> *win);
+void                <a class="link" href="PrintingSystem.html#printing-system-customize-printer-queue-window">printing_system_customize_printer_queue_window</a>
+                                                        (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         <a class="link" href="PrinterQueueWindow.html" title="PrinterQueueWindow">PrinterQueueWindow</a> *win);
+
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2594619"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  <a
+href="/usr/share/gtk-doc/html/gobject/gobject-The-Base-Object-Type.html#GObject"
+>GObject</a>
+   +----PrintingSystem
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2594643"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a class="link" href="PrintingSystem.html#PrintingSystem--ps-path">ps-path</a>"                  <a
+href="/usr/share/gtk-doc/html/gobject/gobject-Standard-Parameter-and-Value-Types.html#gchararray"
+>gchararray</a>            : Read / Write / Construct Only
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2594673"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2603329"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2603340"></a><h3>
+<a name="PrintingSystem-struct"></a>struct PrintingSystem</h3>
+<a class="indexterm" name="id2603351"></a><pre class="programlisting">struct PrintingSystem;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2603367"></a><h3>
+<a name="printing-system-new"></a>printing_system_new ()</h3>
+<a class="indexterm" name="id2603379"></a><pre class="programlisting"><a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a>*     printing_system_new                 (const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *path);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>path</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2603436"></a><h3>
+<a name="printing-system-get-printers"></a>printing_system_get_printers ()</h3>
+<a class="indexterm" name="id2603447"></a><pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"
+>GList</a>*              printing_system_get_printers        (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ps</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2603504"></a><h3>
+<a name="printing-system-get-default-printer"></a>printing_system_get_default_printer ()</h3>
+<a class="indexterm" name="id2603518"></a><pre class="programlisting"><a class="link" href="libxfprint-Printer.html#Printer">Printer</a>*            printing_system_get_default_printer (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ps</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2586486"></a><h3>
+<a name="printing-system-get-printer-state"></a>printing_system_get_printer_state ()</h3>
+<a class="indexterm" name="id2586499"></a><pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                printing_system_get_printer_state   (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *printer);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ps</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>printer</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2586576"></a><h3>
+<a name="printing-system-get-jobs-count"></a>printing_system_get_jobs_count ()</h3>
+<a class="indexterm" name="id2586590"></a><pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a>                printing_system_get_jobs_count      (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *printer);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ps</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>printer</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2586668"></a><h3>
+<a name="printing-system-remove-job"></a>printing_system_remove_job ()</h3>
+<a class="indexterm" name="id2586680"></a><pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            printing_system_remove_job          (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *printer,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gint"
+>gint</a> id);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ps</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>printer</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2614688"></a><h3>
+<a name="printing-system-get-jobs"></a>printing_system_get_jobs ()</h3>
+<a class="indexterm" name="id2614698"></a><pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Doubly-Linked-Lists.html#GList"
+>GList</a>*              printing_system_get_jobs            (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *printer);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ps</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>printer</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2614768"></a><h3>
+<a name="printing-system-print-file"></a>printing_system_print_file ()</h3>
+<a class="indexterm" name="id2614779"></a><pre class="programlisting"><a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a>            printing_system_print_file          (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *printer,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *original_name,
+                                                         const <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"
+>gchar</a> *file,
+                                                         <a
+href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gboolean"
+>gboolean</a> remove_file);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ps</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>printer</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>original_name</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>remove_file</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2614920"></a><h3>
+<a name="printing-system-customize-printer-list-window"></a>printing_system_customize_printer_list_window ()</h3>
+<a class="indexterm" name="id2614934"></a><pre class="programlisting">void                printing_system_customize_printer_list_window
+                                                        (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         <a class="link" href="PrinterListWindow.html" title="PrinterListWindow">PrinterListWindow</a> *win);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ps</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2615003"></a><h3>
+<a name="printing-system-customize-printer-queue-window"></a>printing_system_customize_printer_queue_window ()</h3>
+<a class="indexterm" name="id2615017"></a><pre class="programlisting">void                printing_system_customize_printer_queue_window
+                                                        (<a class="link" href="PrintingSystem.html" title="PrintingSystem">PrintingSystem</a> *ps,
+                                                         <a class="link" href="PrinterQueueWindow.html" title="PrinterQueueWindow">PrinterQueueWindow</a> *win);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ps</code></em>&#160;:</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em>&#160;:</span></p></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2615088"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2615099"></a><h3>
+<a name="PrintingSystem--ps-path"></a>The "<code class="literal">ps-path</code>" property</h3>
+<a class="indexterm" name="id2615113"></a><pre class="programlisting">  "ps-path"                  <a
+href="/usr/share/gtk-doc/html/gobject/gobject-Standard-Parameter-and-Value-Types.html#gchararray"
+>gchararray</a>            : Read / Write / Construct Only</pre>
+<p>set the printing system path.</p>
+<p>Default value: NULL</p>
+</div>
+</div>
+</div>
+</body>
+</html>

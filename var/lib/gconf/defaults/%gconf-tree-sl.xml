@@ -1,0 +1,926 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="Ali je gnome-keyring PKCS#11 enota omogočena.">
+                                                        <longdesc>Možnost omogoča zagon PKCS#11 enote v gnome-keyring demonu. Uporablja se le ob zagonu demona gnome-keyring-daemon, (primer: ko se uporabnik prijavi). Možnost lahko s posebnimi argumenti med zagonom demona prekličete.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="Ali je gnome-keyring SSH agent omogočen.">
+                                                        <longdesc>Možnost omogoča podporo SSH agenta v gnome-keyring demonu. Uporablja se le ob zagonu demona gnome-keyring-daemon, (primer: ko se uporabnik prijavi). Možnost lahko s posebnimi argumenti med zagonom demona prekličete.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Širina okna">
+                                                        <longdesc>Širina okna za prikaz</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Višina okna">
+                                                        <longdesc>Višina okna za prikaz</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Ukazi zagnani preko tipkovnih bližnjic">
+                                                        <longdesc>Ključi /apps/metacity/global_keybindings/run_command_N navajajo tipkovne povezave, ki ustrezajo tem ukazom. Pritisk tipke za run_command_N bo izvedel ukaz command_N.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Ukaz za zajem okna na zaslonu">
+                                                        <longdesc>Ključ /apps/metacity/global_keybindings/run_command_window_screenshot določa bližnjico tipk, ki povzroči izvajanje ukaza, določenega s temi nastavitvami.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Ukaz za zajem zaslona">
+                                                        <longdesc>Ključ /apps/metacity/global_keybindings/run_command_screenshot določa bližnjico tipk, ki povzroči izvajanje ukaza, določenega s temi nastavitvami.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Zaženi določen ukaz">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Zaženi terminal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Zajemi okna na zaslonu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Zajemi zaslon">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Prikaži pogovorno okno pulta za zagon programov">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Prikaži meni pulta">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Preklopi na delovno površino pod to">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Preklopi na delovno površino nad to">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Preklopi na delovno površino na desni">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Preklopi na delovno površino na levi">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Preklopi na delovno površino 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Preklopi na delovno površino 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Preklopi na delovno površino 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Preklopi na delovno površino 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Preklopi na delovno površino 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Preklopi na delovno površino 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Preklopi na delovno površino 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Preklopi na delovno površino 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Preklopi na delovno površino 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Preklopi na delovno površino 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Preklopi na delovno površino 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Preklopi na delovno površino 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Skrij vsa okna in pokaži namizje">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Med pulti in namizjem se pomakni nazaj takoj">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Premikaj se med pulti in namizjem takoj">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Nazaj med okna se pomakni takoj">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Med okni se premikaj takoj">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Med okni programa se premikaj nazaj s pojavnim oknom">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Med okni programa se premikaj s pojavnim oknom">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Takoj se premikaj nazaj med okni programa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Takoj se premikaj med okni programa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Med pulti in namizjem se pomakni nazaj s pojavnim oknom">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Med pulti in namizjem se premikaj s pojavnim oknom">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Premakni fokus nazaj med okni, ki uporabljajo prikaz pojavnih oken">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Med okni se premikaj s pojavnim oknom">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Premakni okno na levi del zaslona">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Premakni okno na desni del zaslona">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Premakni okno na spodnji del zaslona">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Premakni okno na zgornji del zaslona">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Premakni okno v spodnji desni kot">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Premakni okno v spodnji levi kot">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Premakni okno v zgornji desni kot">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Premakni okno v zgornji levi kot">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Razpri okno vodoravno">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Razpri okno navpično">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Spusti okno pod druga">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Dvigni okno nad druga okna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Dvigni obskurno okno, sicer spusti">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Prestavi okno eno delovno površino navzdol">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Premakni okno eno delovno površino navzgor">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Premakni okno eno delovno površino desno">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Premakni okno eno delovno površino levo">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Premakni okno na delovno površino 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Premakni okno na delovno površino 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Premakni okno na delovno površino 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Premakni okno na delovno površino 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Premakni okno na delovno površino 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Premakni okno na delovno površino 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Premakni okno na delovno površino 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Premakni okno na delovno površino 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Premakni okno na delovno površino 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Premakni okno na delovno površino 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Premakni okno na delovno površino 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Premakni okno na delovno površino 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Preklopi ali je okno na vseh delovnih površinah">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Spremeni velikost okna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Premakni okno">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Skrči okno">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Zapri okno">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Preklopi stanje senčenja">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Pomanjšaj okno">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Razpri okno">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Preklopi stanje razpetja">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Preklopi stanje vedno na vrhu">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Preklopi celozaslonski način">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Zaženi menu okna">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Ime delovne površine">
+                                                        <longdesc>Ime namizja.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Izklopi dodatke, ki so potrebni za stare ali pokvarjene programe">
+                                                        <longdesc>Nekateri programi prezirajo določila, tako da upravitelj oken ne deluje v celoti pravilno. Ta možnost postavi Metacity v pravilen način, ki daje bolj celovit uporabniški vmesnik, če uporabniku ni potrebno zaganjati programov, ki ne delujejo pravilno.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Ni vstavljeno) Navigacija deluje v smislu programov, ne oken">
+                                                        <longdesc>Če je resnično, potem Metacity deluje s konceptom programov namesto s konceptom oken. Ta koncept je nekoliko abstrakten, a je v splošnem značilen za Mace in manj za Windows. Ko okno dobi fokus v programskem konceptu, se vsa okna programa dvignejo. Prav tako se v programskem načinu kliki za fokus ne prenesejo na ostale programe. Programski način v veliki meri še ni implementiran.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Če je resnično, se zmanjšajo uporabnost in sistemske zahteve">
+                                                        <longdesc>Če je resnično, bo metacity uporabniku nudil manj povratnih z uporabo žičnih okvirjev, ukinitvijo animacij in na druge načine. Uporabnost za večino uporabnikov se bo zmanjšala, število delujočih programov se lahko poveča, izbira pa je primerna tudi za terminalske strežnike. Kljub temu je možnost žičnih okvirjev onemogočena pri uporabi možnosti dostopnosti.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="Upravitelj sestavljanja">
+                                                        <longdesc>Ugotovi, ali je Metacity upravitelj sestavljanja.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Vrsta vidnega zvonca">
+                                                        <longdesc>Ukaže Metacityju, kako izvesti vidno opozarjanje sistemskega zvonca ali zvonca drugega programa. Trenutno sta na voljo dve veljavni vrednosti, &quot;fullscreen&quot;, ki povzroči celozaslonsko črno belo utripanje in &quot;frame_flash&quot;, ki povzroči utripanje naslovne vrstice programa, ki je sprožil zvonec. Če je slednji neznan (npr. v primeru &quot;sistemskega zvonca&quot;), utripa naslovna vrstica okna, ki ima trenutno fokus.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Sistemski zvonec je zvočen">
+                                                        <longdesc>Ugotovi, ali lahko program ali sistem ustvari zvočne piske. Uporabno tudi skupaj z &apos;vidnimi zvonci&apos;, tako da nastanejo tihi &apos;piske&apos;.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Omogoči vidni zvonec">
+                                                        <longdesc>Vključi vidna opozorila, ko program ali sistem uporabi &apos;zvonec&apos; ali &apos;pisk&apos;. Uporabno v hrupnih okoljih.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Število delovnih površin">
+                                                        <longdesc>Število delovnih površin. Mora biti več kot nič in ima določeno najvišjo vrednost, da prepreči uničenje namizja z vnosom prevelikega števila delovnih površin.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Pisava naziva okna">
+                                                        <longdesc>Niz opisa pisave, ki opisuje pisavo za nazive oken. Velikost opisa bo uporabljena le, če je možnost titlebar_font_size nastavljena na 0. Poleg tega je ta možnost onemogočena, če je titlebar_uses_desktop_font nastavljena na true (resnično).</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="V nazivih oken uporabi običajno sistemsko pisavo">
+                                                        <longdesc>Če je true (resnično), prezri možnost titlebar_font in za naziv okna uporabi privzeto pisavo programov.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Trenutna tema">
+                                                        <longdesc>Tema določa videz robov oken, naziva oken itd.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Premor v milisekundah za možnost samodejnega dviga">
+                                                        <longdesc>Časovni premor preden se okno dvigne, kadar je auto_raise nastavljen na &quot;true&quot;. Premor je podan v tisočinkah sekunde.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Samodejno dvigne dejavno okno">
+                                                        <longdesc>Če je resnično in je način fokusa &quot;sloppy&quot; ali &quot;mouse&quot;, potem bo okno s fokusom po premoru, določenem v ključu auto_raise_delay, samodejno dvignjeno. To ni povezano s klikanjem za dviganje okna, niti z vstopom v okno z metodo povleci-spusti.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="Dejanje ob desnem kliku na naslov okna">
+                                                        <longdesc>Ta možnost določa učinek desnega klika miške na naslovno vrstico okna. Trenutno veljavne možnosti so &apos;preklop_senčenja&apos;, ki spremeni zasenčenost okna, &apos;preklop razpetosti&apos;, ki spremeni razpetost okna, &apos;pomanjšaj&apos;, ki pomanjša okno in &apos;brez&apos;, ki ne naredi ničesar.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="Dejanje ob dvojnem kliku na naslov okna">
+                                                        <longdesc>Ta možnost določa učinek srednjega klika miške na naslovno vrstico okna. Trenutno veljavne možnosti so &apos;preklop_senčenja&apos;, ki spremeni zasenčenost okna, &apos;preklop razpetosti&apos;, ki spremeni razpetost okna, &apos;pomanjšaj&apos;, ki pomanjša okno in &apos;brez&apos;, ki ne naredi ničesar.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Dejanje ob dvojnem kliku na naziv okna">
+                                                        <longdesc>Ta možnost določa učinek dvojnega klika na naslovno vrstico okna. Trenutno veljavne možnosti so &apos;toggle_shade&apos;, ki spremeni zasenčenost okna, &apos;toggle_maximize&apos;, ki spremeni razprtost okna, &apos;minimize&apos;, ki skrči okno in &apos;none&apos;, ki ne naredi ničesar.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Ali naj bo dvigovanje stranski učinek drugih dejanj uporabnikov">
+                                                        <longdesc>Več dejanj (na primer klikanje, premikanje, povečevanje okna in podobno) običajno dvignejo okno zaradi stranskega učinka. Nastavitev možnosti na nedejavno je močno odsvetovano, saj bo učinek onemogočen tudi pri drugih možnostih. Za več podrobnosti si oglejte http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Nadzor dejavnosti okna">
+                                                        <longdesc>Ta možnost omogoča dodaten nadzor o pridobivanju fokusa novih oken. Na voljo sta dve možnosti: &quot;pametno&quot; uveljavi običajen način fokusa, &quot;strogo&quot; pa ne dodeli fokusa oknom, ki jih zaženete iz terminala.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Način fokusiranja oken">
+                                                        <longdesc>Način prikaza oken določa kako se okna zaženejo. Možnosti so tri; &quot;click&quot; pomeni, da morajo biti okna za pridobitev fokusa kliknjena. &quot;sloppy&quot; pomeni, da se okna fokusiranja, ko gre v njih miška, in &quot;mouse&quot; pomeni, da se okna fokusirajo, ko gre v njih miška in odfokusirajo, ko jih ta zapusti.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Postavitev gumbov v nazivu okna">
+                                                        <longdesc>Postavitev gumbov v nazivni vrstici okna. Vrednost mora biti niz, kot je &quot;menu:minimize,maximize,close&quot;;  dvopičje loči levi kot okna od desnega in imena gumbov so ločena z vejico. Podvojeni gumbi niso dovoljeni. Neznana imena gumbov so tiho prezrta, tako, da se lahko v novih različicah Metacity doda nove gumbe brez, da bi se porušila kompatibilnost s starimi različicami</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Spremenilnik, ki naj se uporabi za dejanja klika na okno">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Privzet pregledovalnik komponent:">
+                                                                <longdesc>Program za pregledovanje datotek, ki za ogled zahtevajo komponento. Parameter %s bo zamenjan z URI-jem datoteke, parameter %c pa z IID komponente.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Argument ukaza za zagon privzetega terminala">
+                                                                <longdesc>Argument ukaza, ki bo uporabljen za zagon privzetega terminala.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Privzet terminal:">
+                                                                <longdesc>Privzet terminal za uporabo programov, ki potrebujejo terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Poženi ukaz v terminalu">
+                                                                <longdesc>Ali naj se ukaz za upravljanje z URL-ji te vrste zažene v terminalu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Upravljač URL-jev &quot;h323&quot;">
+                                                                <longdesc>Ukaz za upravljanje URI-jev &quot;h323&quot;, če je omogočeno.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ali naj naveden ukaz upravlja URL-je &quot;h323&quot;">
+                                                                <longdesc>Ali naj ukaz naveden v ključu &quot;command&quot; upravlja z URI-ji &quot;h323&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Poženi ukaz v terminalu">
+                                                                <longdesc>Ali naj se ukaz za upravljanje z URL-ji te vrste zažene v terminalu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Upravljač URL-jev &quot;callto&quot;">
+                                                                <longdesc>Ukaz za upravljanje URI-jev &quot;callto&quot;, če je omogočeno.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ali naj naveden ukaz upravlja URL-je &quot;callto&quot;">
+                                                                <longdesc>Ali naj ukaz naveden v ključu &quot;command&quot; upravlja z URI-ji &quot;callto&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Poženi ukaz v terminalu">
+                                                                <longdesc>Ali naj se ukaz za upravljanje z URL-ji te vrste zažene v terminalu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Upravljač URL-jev &quot;mailto&quot;">
+                                                                <longdesc>Ukaz za upravljanje URI-jev &quot;mailto&quot;, če je omogočeno.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ali naj naveden ukaz upravlja URL-je &quot;mailto&quot;">
+                                                                <longdesc>Ali naj ukaz naveden v ključu &quot;command&quot; upravlja z URI-ji &quot;mailto&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Poženi ukaz v terminalu">
+                                                                <longdesc>Ali naj se ukaz za upravljanje z URL-ji te vrste zažene v terminalu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Upravljač URL-jev &quot;https&quot;">
+                                                                <longdesc>Ukaz za upravljanje URI-jev &quot;https&quot;, če je omogočeno.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ali naj naveden ukaz upravlja URL-je &quot;https&quot;">
+                                                                <longdesc>Ali naj ukaz naveden v ključu &quot;command&quot; upravlja z URI-ji &quot;https&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Poženi ukaz v terminalu">
+                                                                <longdesc>Ali naj se ukaz za upravljanje z URL-ji te vrste zažene v terminalu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Poženi ukaz v terminalu">
+                                                                <longdesc>Ali naj se ukaz za upravljanje z URL-ji te vrste zažene v terminalu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Upravljač URL-jev &quot;http&quot;">
+                                                                <longdesc>Ukaz za upravljanje URI-jev &quot;http&quot;, če je omogočeno.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ali naj naveden ukaz upravlja URL-je &quot;http&quot;">
+                                                                <longdesc>Ali naj ukaz naveden v ključu &quot;command&quot; upravlja z URI-ji &quot;http&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Poženi ukaz v terminalu">
+                                                                <longdesc>Ali naj se ukaz za upravljanje z URL-ji te vrste zažene v terminalu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Upravljač URL-jev &quot;man&quot;">
+                                                                <longdesc>Ukaz za upravljanje URI-jev &quot;man&quot;, če je omogočeno.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ali naj naveden ukaz upravlja URL-je &quot;man&quot;">
+                                                                <longdesc>Ali naj ukaz naveden v ključu &quot;command&quot; upravlja z URI-ji &quot;man&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Poženi ukaz v terminalu">
+                                                                <longdesc>Ali naj se ukaz za upravljanje z URL-ji te vrste zažene v terminalu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Upravljač URL-jev &quot;info&quot;">
+                                                                <longdesc>Ukaz za upravljanje URI-jev &quot;info&quot;, če je omogočeno.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ali naj naveden ukaz upravlja URL-je &quot;info&quot;">
+                                                                <longdesc>Ali naj ukaz naveden v ključu &quot;command&quot; upravlja z URI-ji &quot;info&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Poženi ukaz v terminalu">
+                                                                <longdesc>Ali naj se ukaz za upravljanje z URL-ji te vrste zažene v terminalu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Upravljač URL-jev &quot;ghelp&quot;">
+                                                                <longdesc>Ukaz za upravljanje URI-jev &quot;ghelp&quot;, če je omogočeno.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ali naj naveden ukaz upravlja URL-je &quot;ghelp&quot;">
+                                                                <longdesc>Ali naj ukaz naveden v ključu &quot;command&quot; upravlja z URI-ji &quot;ghelp&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Poženi ukaz v terminalu">
+                                                                <longdesc>Ali naj se ukaz za upravljanje z URL-ji te vrste zažene v terminalu.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Upravljač URL-jev &quot;trash&quot;">
+                                                                <longdesc>Ukaz za upravljanje URI-jev &quot;trash&quot;, če je omogočeno.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Ali naj naveden ukaz upravlja URL-je &quot;trash&quot;">
+                                                                <longdesc>Ali naj ukaz naveden v ključu &quot;command&quot; upravlja z URI-ji &quot;trash&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Ali naj se uporabi ta profil">
+                                                                        <longdesc>Ali naj se uporabi in prikaže ta profil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Privzeta končnica datotek za ta profil">
+                                                                        <longdesc>Končnica imena datoteke, ki naj se uporabi za shranjevanje datotek, zakodiranih s tem profilom.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Uporabljen delni cevovod GStreamer">
+                                                                        <longdesc>Delni cevovod GStreamer za uporabo v tem profilu.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="Opis zvočnega profila">
+                                                                        <longdesc>Opis zvočnega profila, ki vsebuje več podatkov in opisuje, kdaj naj bo ta profil uporabljen.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Kratko ime zvočnega profila">
+                                                                        <longdesc>Kratko ime zvočnega profila, ki naj se uporabi v izbirah in za edinstveno predstavitev profila.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Ali naj se uporabi ta profil">
+                                                                                <longdesc>Ali naj se uporabi in prikaže ta profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Privzeta končnica datotek za ta profil">
+                                                                                <longdesc>Končnica imena datoteke, ki naj se uporabi za shranjevanje datotek, zakodiranih s tem profilom.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Uporabljen delni cevovod GStreamer">
+                                                                                <longdesc>Delni cevovod GStreamer za uporabo v tem profilu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Opis zvočnega profila">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Kratko ime zvočnega profila">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Privzeta končnica datotek za ta profil">
+                                                                                <longdesc>Končnica imena datoteke, ki naj se uporabi za shranjevanje datotek, zakodiranih s tem profilom.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Uporabljen delni cevovod GStreamer">
+                                                                                <longdesc>Delni cevovod GStreamer za uporabo v tem profilu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Opis zvočnega profila">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Kratko ime zvočnega profila">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Privzeta končnica datotek za ta profil">
+                                                                                <longdesc>Končnica imena datoteke, ki naj se uporabi za shranjevanje datotek, zakodiranih s tem profilom.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Uporabljen delni cevovod GStreamer">
+                                                                                <longdesc>Delni cevovod GStreamer za uporabo v tem profilu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Opis zvočnega profila">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Kratko ime zvočnega profila">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Privzeta končnica datotek za ta profil">
+                                                                                <longdesc>Končnica imena datoteke, ki naj se uporabi za shranjevanje datotek, zakodiranih s tem profilom.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Uporabljen delni cevovod GStreamer">
+                                                                                <longdesc>Delni cevovod GStreamer za uporabo v tem profilu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Opis zvočnega profila">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Kratko ime zvočnega profila">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Privzeta končnica datotek za ta profil">
+                                                                                <longdesc>Končnica imena datoteke, ki naj se uporabi za shranjevanje datotek, zakodiranih s tem profilom.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Uporabljen delni cevovod GStreamer">
+                                                                                <longdesc>Delni cevovod GStreamer za uporabo v tem profilu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Opis zvočnega profila">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Kratko ime zvočnega profila">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Privzeta končnica datotek za ta profil">
+                                                                                <longdesc>Končnica imena datoteke, ki naj se uporabi za shranjevanje datotek, zakodiranih s tem profilom.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Uporabljen delni cevovod GStreamer">
+                                                                                <longdesc>Delni cevovod GStreamer za uporabo v tem profilu.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Opis zvočnega profila">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Kratko ime zvočnega profila">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Seznam profilov">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="URL za samodejno nastavitev posredovalnega strežnika">
+                                                <longdesc>URL z vrednostmi za nastavitve posredovalnega strežnika.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="Vrata posredovalnega strežnika SOCKS">
+                                                <longdesc>Vrata računalnika, ki jih določa &quot;/system/proxy/socks_host&quot; posredovalnega strežnika.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="Ime gostitelja posredovalnega strežnika SOCKS">
+                                                <longdesc>Ime računalnika posredovalnega strežnika SOCKS.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="Vrata FTP posredovalnega strežnika">
+                                                <longdesc>Vrata računalnika, ki jih določa &quot;/system/proxy/ftp_host&quot; posredovalnega strežnika.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="Ime gostitelja FTP posredovalnega strežnika">
+                                                <longdesc>Ime računalnika FTP posredovalnega strežnika.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Vrata varnega posredovalnega strežnika HTTP">
+                                                <longdesc>Vrata računalnika, ki jih določa &quot;/system/proxy/secure_host&quot; posredovalnega strežnika.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Ime gostitelja varnega posredovalnega strežnika HTTP">
+                                                <longdesc>Ime računalnika varnega HTTP posredovalnega strežnika.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Način nastavitev posredovalnega strežnika">
+                                                <longdesc>Izberite način nastavitev posredovalnega strežnika. Podprte vrednosti so &quot;brez&quot;, &quot;ročno&quot;, &quot;samodejno&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Gostitelj brez posredovalnega strežnika">
+                                                <longdesc>Ta ključ vsebuje seznam gostiteljev, s katerimi se vzpostavi neposredna povezava in preko posredovalnega strežnika (če je dejaven). Vrednosti so lahko imena gostiteljev, domene (z nadomestnimi znaki kot je *.foo.com), naslovi IP gostitelja (tako IPv4 kot tudi IPv6) in omrežni naslovi z omrežno masko (npr. 192.168.0.0/24).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="Geslo HTTP posredovalnega strežnika">
+                                                <longdesc>Geslo za overitev HTTP posredovalnega strežnika.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="Uporabniško ime HTTP posredovalnega strežnika">
+                                                <longdesc>Uporabniško ime za overitev HTTP posredovalnega strežnika.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Overi povezave posredovalnih strežnikov">
+                                                <longdesc>Možnost določa zahtevo za overitev povezave na posredovalni strežnik. Spustno polje za uporabniško ime in geslo določata &quot;/system/http_proxy/authentication_user&quot; in &quot;/system/http_proxy/authentication_password&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="Vrata HTTP posredovalnega strežnika">
+                                                <longdesc>Vrata računalnika, ki jih določa &quot;/system/http_proxy/host&quot; posredovalnega strežnika.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="Ime gostitelja HTTP posredovalnega strežnika">
+                                                <longdesc>Ime računalnika HTTP posredovalnega strežnika.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="Uporabi HTTP posredovalni strežnik">
+                                                <longdesc>Omogoči nastavitve posredovalnega strežnika za dostop do HTTP preko interneta.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Dodatne domene za iskanje storitev DNS-SD">
+                                                <longdesc>Z vejico ločen seznam domen DNS-SD, ki naj bodo vidne na lokaciji &quot;network:///&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Kako naj se prikaže lokalna storitev DNS-SD">
+                                                <longdesc>Možne vrednosti so &quot;povezano&quot;, &quot;loči&quot; in &quot;onemogočeno&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="Delovna skupina SMB">
+                                                <longdesc>Delovna skupina ali domena omrežja Windows, katere del je uporabnik. Za uveljavitev nastavitev nove delovne skupine bo morda potrebna ponovna prijava.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

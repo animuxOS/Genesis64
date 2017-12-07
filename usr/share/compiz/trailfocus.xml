@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+  <plugin useBcop="true" name="trailfocus">
+    <short>Trailfocus</short>
+    <short xml:lang="de">Fokusverlauf</short>
+    <short xml:lang="el">Trailfocus</short>
+    <short xml:lang="en_GB">Trailfocus</short>
+    <short xml:lang="es">Trailfocus</short>
+    <short xml:lang="fr">Suivi du focus</short>
+    <short xml:lang="gl">Seguemento de foco</short>
+    <short xml:lang="gu">ટ્રેલફોકસ</short>
+    <short xml:lang="hi">ट्रैलफोकस</short>
+    <short xml:lang="it">Inseguimento focus</short>
+    <short xml:lang="ja">フォーカス追跡</short>
+    <short xml:lang="nb">Følgfokus</short>
+    <short xml:lang="nl">Focusspoor</short>
+    <short xml:lang="pl">Tropiciel aktywności</short>
+    <short xml:lang="pt">Seguimento de foco</short>
+    <short xml:lang="pt_BR">Rastro do foco</short>
+    <short xml:lang="sv">Spårfokus</short>
+    <short xml:lang="tr">Odaklama İzleyicisi</short>
+    <short xml:lang="zh_CN">焦点轨迹</short>
+    <long>Adjust the opacity, saturation and brightness of windows based on when they last had focus.</long>
+    <long xml:lang="de">Verändere die Sichtbarkeit, Sättigung und Helligkeit der Fenster, je nachdem wann sie das letzte mal fokusiert wurden.</long>
+    <long xml:lang="el">Ρύθμιση της αδιαφάνειας, κορεσμού και φωτεινότητας των παραθύρων βασισμένη στα δεδομένα αυτών όταν είχαν εστιαστεί τελευταία φορά.</long>
+    <long xml:lang="en_GB">Adjust the opacity, saturation and brightness of windows based on when they last had focus.</long>
+    <long xml:lang="es">Ajustar la opacidad, saturación y brillo de las ventanas, en base a la última vez que tuvieron el foco.</long>
+    <long xml:lang="fr">Ajustez l'opacité, la saturation et la luminosité des fenêtres en fonction deleurs derniers passages au premier plan.</long>
+    <long xml:lang="gl">Axustar a opacidade, saturación e brillo de fiestras con base na última vez que elas estiveron enfocadas.</long>
+    <long xml:lang="gu">વિન્ડોની અપારદર્શકતા, સંતુલન અને તેજસ્વીતા સંતુલિત કરો તેઓ પાસે છેલ્લે ક્યારે ફોકસ હતો તેના પર આધારિત રાખીને.</long>
+    <long xml:lang="hi">विंडो की अपारदर्शिता, संतृप्ति, और चमकीलापन समायोजित करता है इस आधार पर कि कब वे अंतिम फोकस रखे थे.</long>
+    <long xml:lang="it">Regola l'opacità, la saturazione e la luminosità delle finestre in base a quando sono state selezionate dall'ultima volta.</long>
+    <long xml:lang="ja">ウィンドウの不透明度や彩度、明度を最後にフォーカスがあった時点をベースに調節</long>
+    <long xml:lang="nb">Juster dekkevne, metning og skarphet for vinduer basert på når de sist hadde fokus.</long>
+    <long xml:lang="nl">Pas de ondoorzichtigheid, verzadiging en helderheid van vensters aan gebaseerd op wanneer ze voor het laatst focus hadden.</long>
+    <long xml:lang="pl">Ustawoa przezroczystość, nasycenie i jasność okien na podstawie czasu ich ostatniego używania.</long>
+    <long xml:lang="pt">Ajustar a opacidade, saturação e brilho de janelas com base na última vez que elas estiveram focadas.</long>
+    <long xml:lang="pt_BR">Ajustar a opacidade, saturação e brilho de janelas com base na última vez que elas estiveram focadas.</long>
+    <long xml:lang="sv">Justera opacitet, färgmättnad och ljusstyrka för fönster baserat på när de sist hade fokus.</long>
+    <long xml:lang="zh_CN">根据窗口上次聚焦时间调整其不透明度、饱和度和亮度。</long>
+	<category>Effects</category>
+	<deps>
+		<relation type="after">
+			<plugin>fade</plugin>
+		</relation>
+	</deps>
+    <screen>
+      <group>
+        <short>Behaviour</short>
+        <short xml:lang="ca">Comportament</short>
+        <short xml:lang="de">Verhalten</short>
+        <short xml:lang="el">Συμπεριφορά</short>
+        <short xml:lang="en_GB">Behaviour</short>
+        <short xml:lang="es">Comportamiento</short>
+        <short xml:lang="eu">Jokabidea</short>
+        <short xml:lang="fi">Toiminta</short>
+        <short xml:lang="fr">Comportement</short>
+        <short xml:lang="gl">Comportamento</short>
+        <short xml:lang="gu">વર્તણૂક</short>
+        <short xml:lang="hi">आचरण</short>
+        <short xml:lang="it">Comportamento</short>
+        <short xml:lang="ja">動作</short>
+        <short xml:lang="nb">Oppførsel</short>
+        <short xml:lang="nl">Gedrag</short>
+        <short xml:lang="pl">Zachowanie</short>
+        <short xml:lang="pt">Comportamento</short>
+        <short xml:lang="pt_BR">Comportamento</short>
+        <short xml:lang="sv">Beteende</short>
+        <short xml:lang="tr">Davranış</short>
+        <short xml:lang="zh_CN">行为</short>
+        <option type="match" name="window_match">
+          <short>Window Types</short>
+          <short xml:lang="ar">أنواع النوافذ</short>
+          <short xml:lang="bn">উইন্ডোর প্রকৃতি</short>
+          <short xml:lang="ca">Tipus de finestres</short>
+          <short xml:lang="de">Fenstertypen</short>
+          <short xml:lang="el">Είδη Παραθύρων</short>
+          <short xml:lang="en_GB">Window Types</short>
+          <short xml:lang="es">Tipos de ventana</short>
+          <short xml:lang="eu">leiho motak</short>
+          <short xml:lang="fi">Ikkunatyypit</short>
+          <short xml:lang="fr">Types de fenêtres</short>
+          <short xml:lang="gl">Tipos de fiestras</short>
+          <short xml:lang="gu">વિન્ડો પ્રકારો</short>
+          <short xml:lang="hi">विंडो प्रकार</short>
+          <short xml:lang="it">Tipi di finestre</short>
+          <short xml:lang="ja">ウィンドウの種類</short>
+          <short xml:lang="nb">Vindustyper</short>
+          <short xml:lang="nl">Venster typen</short>
+          <short xml:lang="pl">Typy okien</short>
+          <short xml:lang="pt">Tipos de janelas</short>
+          <short xml:lang="pt_BR">Tipos de janelas</short>
+          <short xml:lang="ru">Типы окон</short>
+          <short xml:lang="sv">Fönstertyper</short>
+          <short xml:lang="tr">Pencere Tipleri</short>
+          <short xml:lang="zh_CN">窗口类型</short>
+          <long>Window types that should be handled by Trailfocus</long>
+          <long xml:lang="de">Fenstertypen, die vom Fokusverlauf behandelt werden sollen.</long>
+          <long xml:lang="el">Είδη παραθύρων που πρέπει να χειριστούν απο το Trailfocus</long>
+          <long xml:lang="en_GB">Window types that should be handled by Trailfocus</long>
+          <long xml:lang="es">Tipos de ventana que manejará trailfocus</long>
+          <long xml:lang="fr">Types de fenêtres concernées par le Suivi de Focus</long>
+          <long xml:lang="gl">Tipos de fiestras que deberán ser consideradas polo Seguemento de foco.</long>
+          <long xml:lang="gu">વિન્ડો પ્રકારો કે જે ટ્રેલફોકસ દ્વારા નિયંત્રિત થવા જોઈએ</long>
+          <long xml:lang="hi">विंडो प्रकार जिसे ट्रैलफोकस के द्वारा नियंत्रित किया जाना है</long>
+          <long xml:lang="it">Tipi di finestre gestite da «Inseguimento focus»</long>
+          <long xml:lang="ja">フォーカス追跡で取り扱うウィンドウの種類</long>
+          <long xml:lang="nb">Vindustyper som skal håndteres av Følgfokus</long>
+          <long xml:lang="nl">Venster typen die moeten behandeld worden door VolgFocus</long>
+          <long xml:lang="pl">Typy okien obługiwane przez Tropiciela</long>
+          <long xml:lang="pt">Tipos de janelas que deverão ser consideradas pelo Seguimento de foco</long>
+          <long xml:lang="pt_BR">Tipos de janelas que deverão ser consideradas pelo Rastro do foco.</long>
+          <long xml:lang="sv">Fönstertyper som ska hanteras av Spårfokus</long>
+          <long xml:lang="zh_CN">使用焦点轨迹的窗口类型</long>
+          <default>(type=toolbar | type=utility | type=dialog | type=normal) &amp; !(state=skiptaskbar | state=skippager)</default>
+        </option>
+        <option type="int" name="windows_count">
+          <short>Number of Windows to Track</short>
+          <short xml:lang="de">Anzahl der Fenster, die berücksichtigt werden sollen</short>
+          <short xml:lang="el">Ο Αριθμός των Παραθύρων που θα Παρακολουθούνται</short>
+          <short xml:lang="en_GB">Number of Windows to Track</short>
+          <short xml:lang="es">Número de ventanas a memorizar</short>
+          <short xml:lang="fr">Nombre de fenêtres à suivre</short>
+          <short xml:lang="gl">Número de Fiestras a Acompañar</short>
+          <short xml:lang="gu">ટ્રેક કરવા માટેની વિન્ડોની સંખ્યા</short>
+          <short xml:lang="hi">ट्रैक करने के लिए विंडो की संख्या</short>
+          <short xml:lang="it">Numero di finestre</short>
+          <short xml:lang="ja">追跡するウィンドウの数</short>
+          <short xml:lang="nb">Antall vinduer å holde rede på</short>
+          <short xml:lang="nl">Aantal vensters om bij te houden</short>
+          <short xml:lang="pl">Ilość okien do śledzenia</short>
+          <short xml:lang="pt">Número de Janelas a Acompanhar</short>
+          <short xml:lang="pt_BR">Número de janelas a acompanhar</short>
+          <short xml:lang="sv">Antal fönster att spåra.</short>
+          <short xml:lang="zh_CN">保持窗口活动轨迹记录的窗口数目</short>
+          <long>Number of windows Trailfocus will keep track of. Windows that had focus this amount of windows ago or more will be considered completly unfocused.</long>
+          <long xml:lang="de">Anzahl der Fenster, die Trailfocus bei seinen Berechnungen einbeziehen wird. Alle Fenster mit einer niedrigeren Fokus-Anzahl werden nicht berücksichtigt.</long>
+          <long xml:lang="el">Αριθμός παραθύρων που θα παρακολουθούνται απ το Trailfocus. Τα παράθυρα που είχαν εστιάσει αυτο το σύνολο των παραθύρων παλαιότερα θα θεωρούνται μη εστιασμένα.</long>
+          <long xml:lang="en_GB">Number of windows Trailfocus will keep track of. Windows that had focus this amount of windows ago or more will be considered completly unfocused.</long>
+          <long xml:lang="es">El número de ventanas que recordará Trailfocus. Las ventanas que tuvieron el foco este número de cambios atrás o más serán consideradas completamente sin foco.</long>
+          <long xml:lang="fr">Nombre de fenêtre devant être suivies. Les fenêtres ayant dépassé cette valeur seront considérées comme complètement inactives</long>
+          <long xml:lang="gl">Número de fiestras que o plugin rexistrará. Fiestras que tiñan foco hai,  polo menos, este número serán consideradas completamente non enfocadas.</long>
+          <long xml:lang="gu">વિન્ડોની સંખ્યા કે જેના પર ટ્રેલફોકસ ટ્રેક જાળવી રાખશે. વિન્ડો કે જેને આટલા જથ્થાની વિન્ડો અગાઉ ફોકસ હતો અથવા વધુ સંપૂર્ણપણે ફોકસ નહિં સમજવામાં આવશે.</long>
+          <long xml:lang="hi">विंडो की संख्या जो ट्रैलफोकस का ट्रैक रखेगा. विंडो जो विंडो की इस मात्रा को पहले फोकस करेगा या अधिक को पूरी तरह से बिना फोकस किये विचार किया जायेगा.</long>
+          <long xml:lang="it">Numero di finestre di cui «Inseguimento focus» terrà traccia. Le finestre selezionate prima di questo numero di finestre, sono considerate non selezionate.</long>
+          <long xml:lang="ja">フォーカス追跡がフォーカス移動の順番を追跡するウィンドウの数。フォーカスが外れて以降、この数以上の他ウィンドウにフォーカスが渡されたウィンドウは、完全にフォーカスがないものとされます。</long>
+          <long xml:lang="nb">Antall vinduer Følgfokus vill holde rede på. Vinduer som hadde fokus dette antallet vinduer siden, eller flere, vil bli sett på som fullstendig avfokusert.</long>
+          <long xml:lang="nl">Aantal venster die VolgFocus bĳ houdt. Vensters die focus hadden dit aantal vensters geleden worden beschouwd als volledig zonder focus.</long>
+          <long xml:lang="pl">Ilosć okien które Tropiciel będzie śledził. Okna, które były wcześniej otworzone będą traktowane jako nieużywane.</long>
+          <long xml:lang="pt">Número de janelas que o plugin irá registar. Janelas que tinham foco há, pelo menos, este número serão consideradas completamente não focadas.</long>
+          <long xml:lang="pt_BR">Número de janelas que o plugin irá registar. Janelas que tinham foco há, pelo menos, este número serão consideradas completamente não focadas.</long>
+          <long xml:lang="sv">Antal fönster spårfokus kommer hålla reda på. Fönster som hade fokus för så här många fönster sedan kommer anses totalt ofokuserad.</long>
+          <long xml:lang="zh_CN">焦点轨迹活动记录的窗口数。窗口数超过此值则不在记录中的窗口被认为是完全未活动的窗口。</long>
+          <default>5</default>
+          <min>1</min>
+          <max>150</max>
+        </option>
+        <option type="int" name="windows_start">
+          <short>Window to Start Fading</short>
+          <short xml:lang="de">Vollfokusierte Fenster</short>
+          <short xml:lang="el">Παράθυρο Αρχης Ξεθωριάσματος</short>
+          <short xml:lang="en_GB">Window to Start Fading</short>
+          <short xml:lang="es">Ventana en la que empezar a desvanecer</short>
+          <short xml:lang="fr">Fenêtre pour démarrer le fondu</short>
+          <short xml:lang="gl">fiestra a Desvanecer</short>
+          <short xml:lang="gu">ધૂંધળી બનાવવાની શરૂઆત કરવા માટેની વિન્ડો</short>
+          <short xml:lang="hi">फीका करना आरंभ करने के लिए विंडो</short>
+          <short xml:lang="it">Finestra da iniziare a dissolvere</short>
+          <short xml:lang="ja">フェードを開始するウィンドウ</short>
+          <short xml:lang="nb">Vindu å begynne uttoning ved</short>
+          <short xml:lang="nl">Venster om te beginnen met uitvagen</short>
+          <short xml:lang="pl">Okna, które będą wygasać</short>
+          <short xml:lang="pt">Janela a Desvanecer</short>
+          <short xml:lang="pt_BR">Janela a Desvanecer</short>
+          <short xml:lang="sv">Fönster att börja tona</short>
+          <short xml:lang="tr">Soldurmaya Başlatılacak Pencere</short>
+          <short xml:lang="zh_CN">开始淡出的窗口</short>
+          <long>This defines when Trailfocus will start fading windows. This lets you set up trailfocus to treat the N first Windows as fully focused.</long>
+          <long xml:lang="de">Dies legt fest ab wann angefangen wird die Fenster auszublenden. Die ersten N Fenster werden dabei behandelt wie das momentan aktive Fenster.</long>
+          <long xml:lang="el">Αυτό ξεκαθαρίζει πότε το Trailfocus θα ξεκινήσει να ξεθωριάζει παράθυρα. Σας επιτρέπει να θέσετε το Trailfocus να χειριστεί τα (Ν) πρώτα Παράθυρα ως εντελώς εστιασμένα.</long>
+          <long xml:lang="en_GB">This defines when Trailfocus will start fading windows. This lets you set up trailfocus to treat the N first Windows as fully focused.</long>
+          <long xml:lang="es">Esto define cuándo empezará Trailfocus a desvanecer las ventanas. Esto permite configurar Trailfocus para que trate a las primeras N ventanas como completamente con el foco.</long>
+          <long xml:lang="fr">Ceci défini quand le Suivi de Focus commencera à estomper les fenêtre. Cela vous permet de régler les N premières fenêtres ciblées</long>
+          <long xml:lang="gl">Este valor define cando o plugin comezará a desvanecer fiestras. Isto permítelle considerar as primeiras N fiestras como completamente enfocadas.</long>
+          <long xml:lang="gu">આ વ્યાખ્યાયિત કરે છે જ્યારે ટ્રેલફોકસ વિન્ડોની ધૂંધળી કરવાનું શરૂ કરશે. આ તમને ટ્રેલફોકસ સુયોજીત કરવા માટે પરવાનગી આપશે N પ્રથમ વિન્ડોને સંપૂર્ણપણે ફોકસ થયેલ તરીકે સમજે.</long>
+          <long xml:lang="hi">यह परिभाषित करता है जब ट्रैलफोकस विंडो को फीका करना आरंभ करेगा. यह ट्रैलफोकस को पूरी तरह से फोकस के रूप में N को पहले विंडो के रूप में लेने के लिए सेट करेगा.</long>
+          <long xml:lang="it">Definisce quando «Inseguimento focus» inizia a influenzare le finestre. Permette di configurare «Inseguimento focus» in modo da trattare le prime N finestre come completamente selezionate.</long>
+          <long xml:lang="ja">フォーカス追跡がいつウィンドウのフェードを開始するかをこの値で定義します。最初のこの数のウィンドウまでが、完全にフォーカスされているものとして扱われます。</long>
+          <long xml:lang="nb">Dette definerer når Følgfokus vil begynne å tone ut vinduer. Dette lar deg sette opp Følgfokus til å behandle de første N vinduene som fullt fokusert.</long>
+          <long xml:lang="nl">Dit definieert wanneer VolgSpoor begint met het uitvagen van vensters. Dit stelt VolgSpoor zodanig in dat de N eerste vensters worden behandeld alsof ze 100% focus hebben.</long>
+          <long xml:lang="pl">Definiuje kiedy Tropiciel ma wygaszać okna. Pozwala Ci na ustawienie X pierwszych okien jako w pełni aktywnych.</long>
+          <long xml:lang="pt">Este valor define quando o plugin irá começar a desvanecer janelas. Isto permite-lhe considerar as primeiras N janelas como completamente focadas.</long>
+          <long xml:lang="pt_BR">Este valor define quando o plugin irá começar a desvanecer janelas. Isto permite-lhe considerar as primeiras N janelas como completamente focadas.</long>
+          <long xml:lang="sv">Detta definerar när Spårfokus börjar tona fönster. Detta låter dig ställa in spårfokus att behandla de N första fönster som fullt fokuserade.</long>
+          <long xml:lang="zh_CN">这项设置决定焦点轨迹在何时开始淡化窗口。你可以设置 N 为完全聚焦窗口。</long>
+          <default>2</default>
+          <min>1</min>
+          <max>20</max>
+        </option>
+      </group>
+      <group>
+        <short>Appearance</short>
+        <short xml:lang="ca">Aparença</short>
+        <short xml:lang="de">Aussehen</short>
+        <short xml:lang="el">Εμφάνιση</short>
+        <short xml:lang="en_GB">Appearance</short>
+        <short xml:lang="es">Apariencia</short>
+        <short xml:lang="eu">Itxura</short>
+        <short xml:lang="fi">Ulkoasu</short>
+        <short xml:lang="fr">Apparence</short>
+        <short xml:lang="gl">Aparencia</short>
+        <short xml:lang="gu">દેખાવ</short>
+        <short xml:lang="hi">प्रकटन</short>
+        <short xml:lang="it">Aspetto</short>
+        <short xml:lang="ja">外観</short>
+        <short xml:lang="nb">Utseende</short>
+        <short xml:lang="nl">Verschijning</short>
+        <short xml:lang="pl">Wygląd</short>
+        <short xml:lang="pt">Aparência</short>
+        <short xml:lang="pt_BR">Aparência</short>
+        <short xml:lang="sv">Utseende</short>
+        <short xml:lang="tr">Görünüm</short>
+        <short xml:lang="zh_CN">外观</short>
+        <subgroup>
+          <short>Opacity</short>
+          <short xml:lang="ar">اللاشفافية</short>
+          <short xml:lang="bn">অস্বচ্ছতা</short>
+          <short xml:lang="ca">Opacitat</short>
+          <short xml:lang="de">Sichtbarkeit</short>
+          <short xml:lang="el">Αδιαφάνεια</short>
+          <short xml:lang="en_GB">Opacity</short>
+          <short xml:lang="es">Transparencia</short>
+          <short xml:lang="eu">Opakutasun</short>
+          <short xml:lang="fi">Läpinäkyvyys</short>
+          <short xml:lang="fr">Opacité</short>
+          <short xml:lang="gl">Opacidade</short>
+          <short xml:lang="gu">અપારદર્શકતા</short>
+          <short xml:lang="hi">अपारदर्शिता</short>
+          <short xml:lang="it">Opacità</short>
+          <short xml:lang="ja">不透明度</short>
+          <short xml:lang="nb">Dekkevne</short>
+          <short xml:lang="nl">Ondoorzichtigheid</short>
+          <short xml:lang="pl">Nieprzezroczystość</short>
+          <short xml:lang="pt">Opacidade</short>
+          <short xml:lang="pt_BR">Opacidade</short>
+          <short xml:lang="ru">Непрозрачность</short>
+          <short xml:lang="sv">Opacitet</short>
+          <short xml:lang="tr">Matlık</short>
+          <short xml:lang="zh_CN">不透明度</short>
+          <option type="int" name="max_opacity">
+            <short>Opacity Level of Focused Windows</short>
+            <short xml:lang="de">Sichtbarkeit des fokusierten Fensters</short>
+            <short xml:lang="el">Επίπεδο Αδιαφάνειας Εστιασμένων Παραθύρων</short>
+            <short xml:lang="en_GB">Opacity Level of Focused Windows</short>
+            <short xml:lang="es">Nivel de opacidad de las ventanas con el foco</short>
+            <short xml:lang="fr">Niveau d'opacité de la fenêtre active</short>
+            <short xml:lang="gl">Nivel de Opacidade das fiestras enfocadas</short>
+            <short xml:lang="gu">ફોકસ થયેલ વિન્ડોની અપારદર્શકતાનું સ્તર</short>
+            <short xml:lang="hi">फोकस किये विंडो का अपारदर्शिता स्तर</short>
+            <short xml:lang="it">Opacità delle finestre selezionate</short>
+            <short xml:lang="ja">フォーカス・ウィンドウの不透明度</short>
+            <short xml:lang="nb">Dekkevnenivå for fokuserte vinduer</short>
+            <short xml:lang="nl">Ondoorzichtigheidsnivo van vensters met focus</short>
+            <short xml:lang="pl">Przezroczystość używanego okna</short>
+            <short xml:lang="pt">Nível de Opacidade das Janelas Focadas</short>
+            <short xml:lang="pt_BR">Nível de Opacidade das Janelas Focadas</short>
+            <short xml:lang="sv">Opacitetsnivån för fokuserade fönster</short>
+            <short xml:lang="zh_CN">聚焦窗口的不透明度级别</short>
+            <long>Opacity of the currently focused window. Windows will get opacity levels between the focused and minimum.</long>
+            <long xml:lang="de">Sichtbarkeit des momentan aktiven Fensters. Andere Fenster werden einen Wert zwischen diesem und dem unfokusiertem Fenster Wert bekommen.</long>
+            <long xml:lang="el">Αδιαφάνεια του τρέχοντος εστιασμένου παραθύρου. Τα παράθυρα θα έχουν επίπεδα αδιαφάνειας μεταξύ του εστιασμένου και του ελάχιστου.</long>
+            <long xml:lang="en_GB">Opacity of the currently focused window. Windows will get opacity levels between the focused and minimum.</long>
+            <long xml:lang="es">Nivel de opacidad de la ventana actualmente con el foco. Las ventanas obtendrán un nivel de opacidad entre la ventana con el foco y el mínimo.</long>
+            <long xml:lang="fr">Opacité de la fenêtre active. Les fenêtres auront un niveau d'opacité entre celui de la fenêtre active et le minimum.</long>
+            <long xml:lang="gl">Opacidade da fiestra enfocada actualmente. As fiestras terán níbeis de opacidade entre o da fiestra enfocada e o valor mínimo.</long>
+            <long xml:lang="gu">વર્તમાનમાં ફોકસ થયેલ વિન્ડોની અપારદર્શકતા. વિન્ડો ફોકસ થયેલ અને ન્યૂનતમ વચ્ચેનું અપારદર્શકતા સ્તરો મેળવશે.</long>
+            <long xml:lang="hi">अभी फोकस किये विंडो की अपारदर्शिता. विंडोज फोकस व न्यूनतम के बीच अपारदर्शिता स्तर को पायेगा.</long>
+            <long xml:lang="it">Opacità della finestra attualmente selezionata. Le finestre assumeranno un livello di opacità compreso tra quello di una finestra selezionata e il minimo.</long>
+            <long xml:lang="ja">現在フォーカスのあるウィンドウの不透明度。ウィンドウは、この値と追跡順番がもっとも古いフォーカス・ウィンドウの値との間の不透明度を得ます。</long>
+            <long xml:lang="nb">Dekkevne for det fokuserte vinduet. Vinduer vil få dekkevnenivåer mellom det fokuserte og det minimale.</long>
+            <long xml:lang="nl">Ondoorzichtigheid van het venster met de huidige focus. Vensters krĳgen een ondoorzichtigheidsniveau tussen dat van een venster met focus en minimum.</long>
+            <long xml:lang="pl">Przezroczystość używanego okna. Okna będą stopniowo robić się przezroczyste od ustawionego stopnia.</long>
+            <long xml:lang="pt">Opacidade da janela focada actualmente. As janelas irão ter níveis de opacidade entre o da janela focada e o valor mínimo.</long>
+            <long xml:lang="pt_BR">Opacidade da janela focada atualmente. As janelas terão níveis de opacidade entre o nível da janela focada e o valor mínimo.</long>
+            <long xml:lang="sv">Opacitet för det nuvarande fokuserade fönstret. Fönster kommer få opacitetsnivå mellan det fokuserade och minimum.</long>
+            <long xml:lang="zh_CN">当前活动窗口的不透明度。窗口不透明度等级将在聚焦窗口和最小值之间。</long>
+            <default>100</default>
+            <min>1</min>
+            <max>100</max>
+          </option>
+          <option type="int" name="min_opacity">
+            <short>Opacity Level of Unfocused Windows</short>
+            <short xml:lang="de">Sichtbarkeit des unfokusierten Fensters</short>
+            <short xml:lang="el">Επίπεδο Αδιαφάνειας μη Εστιασμένων Παραθύρων</short>
+            <short xml:lang="en_GB">Opacity Level of Unfocused Windows</short>
+            <short xml:lang="es">Nivel de opacidad de las ventanas sin el foco</short>
+            <short xml:lang="fr">Niveau d'opacité des fenêtres inactives</short>
+            <short xml:lang="gl">Nivel de Opacidade das fiestras non enfocadas</short>
+            <short xml:lang="gu">નહિં ફોકસ થયેલ વિન્ડોની અપારદર્શકતાનું સ્તર</short>
+            <short xml:lang="hi">बिना फोकस किये विंडो का अपारदर्शिता स्तर</short>
+            <short xml:lang="it">Opacità delle finestre non selezionate</short>
+            <short xml:lang="ja">非フォーカス・ウィンドウの不透明度</short>
+            <short xml:lang="nb">Dekkevnenivå for avfokuserte vinduer</short>
+            <short xml:lang="nl">Ondoorzichtigheidsnivo van vensters zonder focus</short>
+            <short xml:lang="pl">Przezroczystość nieużywanego okna</short>
+            <short xml:lang="pt">Nível de Opacidade das Janelas Não Focadas</short>
+            <short xml:lang="pt_BR">Nível de Opacidade das Janelas Não Focadas</short>
+            <short xml:lang="sv">Opacitetsnivån för ofokuserade fönster</short>
+            <short xml:lang="zh_CN">位聚焦窗口的不透明度级别</short>
+            <long>Opacity of the least focused window. Windows will get opacity levels between the focused and minimum.</long>
+            <long xml:lang="de">Sichtbarkeit des unfokusierten Fensters. Andere Fenster werden einen Wert zwischen diesem und dem momentan aktiven Fenster Wert bekommen.</long>
+            <long xml:lang="el">Αδιαφάνεια του λιγότερου εστιασμένου παραθύρου. Τα παράθυρα θα έχουν επίπεδα αδιαφάνειας μεταξύ του εστιασμένου και του ελάχιστου.</long>
+            <long xml:lang="en_GB">Opacity of the least focused window. Windows will get opacity levels between the focused and minimum.</long>
+            <long xml:lang="es">Nivel de opacidad de la ventana con el menor foco. Las ventanas obtendrán un nivel de opacidad entre la ventana con el foco y el mínimo.</long>
+            <long xml:lang="fr">Opacité de la dernière fenêtre ayant obtenu le focus. Les fenêtres auront le niveau d' opacité entre celui de la fenêtre active et celui-ci.</long>
+            <long xml:lang="gl"> Opacidade da fiestra a estar " menos enfocada". As fiestras terán níbeis de  opacidade entre o da fiestra enfocada e o valor mínimo.</long>
+            <long xml:lang="gu">ઓછી ફોકસ થયેલ વિન્ડોની અપારદર્શકતા. વિન્ડો ફોકસ થયેલ અને ન્યૂનતમ વચ્ચેનું અપારદર્શકતા સ્તરો મેળવશે.</long>
+            <long xml:lang="hi">कम से कम फोकस किये विंडो की अपारदर्शिता. विंडोज फोकस व न्यूनतम के बीच अपारदर्शिता स्तर को पायेगा.</long>
+            <long xml:lang="it">Opacità dell'ultima finestra selezionata. Le finestre assumeranno un livello di opacità compreso tra quello di una finestra selezionata e il minimo.</long>
+            <long xml:lang="ja">追跡順番のもっとも古いフォーカス・ウィンドウの不透明度。ウィンドウは、現在フォーカス・ウィンドウの値とこの値との間の不透明度を得ます。</long>
+            <long xml:lang="nb">Dekkevne for det minst fokuserte vinduet. Vinduer vil få dekkevnenivåer mellom det fokuserte og det minimale.</long>
+            <long xml:lang="nl">Ondoorzichtigheid van het venster met de minste focus. Vensters krĳgen een ondoorzichtigheidsniveau tussen dat van een venster met focus en minimum.</long>
+            <long xml:lang="pl">Przezroczystość najdawniej używanego okna. Okna będą stopniowo robić się przezroczyste aż do ustawionego stopnia.</long>
+            <long xml:lang="pt">Opacidade da janela a estar "menos focada". As janelas irão ter níveis de opacidade entre o da janela focada e o valor mínimo.</long>
+            <long xml:lang="pt_BR">Opacidade da janela "menos focada". As janelas terão níveis de opacidade entre o nível da janela focada e o valor mínimo.</long>
+            <long xml:lang="sv">Opacitet för det minst fokuserade fönstret. Fönster kommer få opacitetsnivå mellan det fokuserade och minimum.</long>
+            <long xml:lang="zh_CN">活动度最低窗口的不透明度。窗口不透明度等级将在聚焦窗口和最小值之间。</long>
+            <default>70</default>
+            <min>1</min>
+            <max>100</max>
+          </option>
+        </subgroup>
+        <subgroup>
+          <short>Brightness</short>
+          <short xml:lang="ar">النصوع</short>
+          <short xml:lang="bn">উজ্জ্বলতা</short>
+          <short xml:lang="ca">Brillantor</short>
+          <short xml:lang="de">Helligkeit</short>
+          <short xml:lang="el">Φωτεινότητα</short>
+          <short xml:lang="en_GB">Brightness</short>
+          <short xml:lang="es">Brillo</short>
+          <short xml:lang="eu">Disdira</short>
+          <short xml:lang="fi">Kirkkaus</short>
+          <short xml:lang="fr">Luminosité</short>
+          <short xml:lang="gl">Brillo</short>
+          <short xml:lang="gu">તેજસ્વીતા</short>
+          <short xml:lang="hi">चमकीलापन</short>
+          <short xml:lang="it">Luminosità</short>
+          <short xml:lang="ja">明度</short>
+          <short xml:lang="nb">Skarphet</short>
+          <short xml:lang="nl">Helderheid</short>
+          <short xml:lang="pl">Jasnosć</short>
+          <short xml:lang="pt">Brilho</short>
+          <short xml:lang="pt_BR">Brilho</short>
+          <short xml:lang="ru">Яркость</short>
+          <short xml:lang="sv">Ljusstyrka</short>
+          <short xml:lang="tr">Parlaklık</short>
+          <short xml:lang="zh_CN">亮度</short>
+          <option type="int" name="max_brightness">
+            <short>Brightness Level of Focused Windows</short>
+            <short xml:lang="ca">Nivell de brillantor de les finestres actives</short>
+            <short xml:lang="de">Helligkeit des fokusierten Fensters</short>
+            <short xml:lang="el">Επίπεδο Φωτεινότητας Εστιασμένων Παραθύρων</short>
+            <short xml:lang="en_GB">Brightness Level of Focused Windows</short>
+            <short xml:lang="es">Nivel de brillo de las ventanas con el foco</short>
+            <short xml:lang="fr">Luminosité de la fenêtre active</short>
+            <short xml:lang="gl">Nivel de Brillo das fiestras enfocadas</short>
+            <short xml:lang="gu">ફોકસ થયેલ વિન્ડોની તેજસ્વીતાનું સ્તર</short>
+            <short xml:lang="hi">फोकस किये विंडो का चमकीलापन स्तर</short>
+            <short xml:lang="it">Luminosità delle finestre selezionate</short>
+            <short xml:lang="ja">フォーカス・ウィンドウの明度</short>
+            <short xml:lang="nb">Skarphetsnivå for fokuserte vinduer</short>
+            <short xml:lang="nl">Helderheidsnivo van vensters met focus</short>
+            <short xml:lang="pl">Jasność używanego okna</short>
+            <short xml:lang="pt">Nível de Brilho das Janelas Focadas</short>
+            <short xml:lang="pt_BR">Nível de Brilho das Janelas Focadas</short>
+            <short xml:lang="sv">Ljusstyrkenivå för fokuserade fönster</short>
+            <short xml:lang="zh_CN">聚焦窗口的亮度级别</short>
+            <long>Brightness of the currently focused window. Windows will get brightness levels between the focused and minimum.</long>
+            <long xml:lang="ca">Brillantor de la finestra activa. Les finestres obtindran el seu nivell de brillantor entre el de l'activa i el mínim.</long>
+            <long xml:lang="de">Helligkeit des momentan aktiven Fensters. Andere Fenster werden einen Wert zwischen diesem und dem unfokusiertem Fenster Wert bekommen.</long>
+            <long xml:lang="el">Φωτεινότητα του τρέχοντος εστιασμένου παραθύρου. Τα παράθυρα θα αποκτήσουν επίπεδα φωτεινότητας μεταξύ της τιμής του εστιασμένου και της ελάχιστης τιμής.</long>
+            <long xml:lang="en_GB">Brightness of the currently focused window. Windows will get brightness levels between the focused and minimum.</long>
+            <long xml:lang="fr">Luminosité de la fenêtre active. Les fenêtres auront un niveau de luminositéentre celui de la fenêtre active et le minimum.</long>
+            <long xml:lang="gl">Brillo da fiestra enfocada actualmente. As fiestras terán níbeis de brillo entre o da fiestra enfocada e o valor mínimo.</long>
+            <long xml:lang="gu">વર્તમાનમાં ફોકસ થયેલ વિન્ડોની તેજસ્વીતા. વિન્ડો ફોકસ થયેલ અને ન્યૂનતમ વચ્ચેનું તેજસ્વીતાનું સ્તર પ્રાપ્ત કરશે.</long>
+            <long xml:lang="hi">अभी फोकस किये विंडो का चमकीलापन स्तर. विंडो चमकीलापन स्तर को पायेगा फोकस किये व न्यूनतम के बीच.</long>
+            <long xml:lang="it">Luminosità della finestra attualmente selezionata. Le finestre assumeranno un livello di luminosità tra quello della finestra selezionata e il minimo.</long>
+            <long xml:lang="ja">現在フォーカスのあるウィンドウの明るさ。ウィンドウは、この値と追跡順番がもっとも古いフォーカス・ウィンドウの値との間の明度を得ます。</long>
+            <long xml:lang="nb">Skarphet for vinduet som har fokus. Vinduer vil få skarphetnivåer mellom det fokuserte og det minimale.</long>
+            <long xml:lang="nl">Helderheid van het venster met de huidige focus. Venster krĳgen een helderheidsniveau tussen die van venster met focus en minimum.</long>
+            <long xml:lang="pl">Jasność aktualnie używanego okna. Okna będą stopniowo stawać się ciemniejsze od ustawionego stopnia.</long>
+            <long xml:lang="pt">Brilho da janela focada actualmente. As janelas irão ter níveis de brilho entre o da janela focada e o valor mínimo.</long>
+            <long xml:lang="pt_BR">Brilho da janela focada atualmente. As janelas terão níveis de brilho entre o nível da janela focada e o valor mínimo.</long>
+            <long xml:lang="sv">Ljusstyrkenivå för det nuvarande fokuserade fönstret. Fönster kommer få ljusstyrkenivå mellan det fokuserade och minimum.</long>
+            <default>100</default>
+            <min>1</min>
+            <max>100</max>
+          </option>
+          <option type="int" name="min_brightness">
+            <short>Brightness Level of Unfocused Windows</short>
+            <short xml:lang="ca">Nivell de brillantor de les finestres inactives</short>
+            <short xml:lang="de">Helligkeit des unfokusierten Fensters</short>
+            <short xml:lang="el">Επίπεδο Φωτεινότητας μη Εστιασμένων Παραθύρων</short>
+            <short xml:lang="en_GB">Brightness Level of Unfocused Windows</short>
+            <short xml:lang="es">Nivel de brillo en las ventanas sin el foco</short>
+            <short xml:lang="fr">Luminosité des fenêtres inactives</short>
+            <short xml:lang="gl">Nivel de brillo das fiestras non enfocadas</short>
+            <short xml:lang="gu">નહિં ફોકસ થયેલ વિન્ડોની તેજસ્વીતાનું સ્તર</short>
+            <short xml:lang="hi">नहीं फोकस किये विंडो का चमकीलापन स्तर</short>
+            <short xml:lang="it">Luminosità delle finestre non selezionate</short>
+            <short xml:lang="ja">非フォーカス・ウィンドウの明度</short>
+            <short xml:lang="nb">Skarphetsnivå for ikke-fokuserte vinduer</short>
+            <short xml:lang="nl">Helderheidsnivo van vensters zonder focus</short>
+            <short xml:lang="pl">Jasność nieużywanego okna</short>
+            <short xml:lang="pt">Nível de Brilho das Janelas Não Focadas</short>
+            <short xml:lang="pt_BR">Nível de Brilho das Janelas Não Focadas</short>
+            <short xml:lang="sv">Ljusstyrkenivå för ofokuserade fönster</short>
+            <short xml:lang="zh_CN">未聚焦窗口的亮度级别</short>
+            <long>Brightness of the least focused window. Windows will get brightness levels between the focused and minimum.</long>
+            <long xml:lang="de">Helligkeit des unfokusierten Fensters. Andere Fenster werden einen Wert zwischen diesem und dem momentan aktiven Fenster Wert bekommen.</long>
+            <long xml:lang="el">Η φωτεινότητα του λιγότερο εστιασμένου παραθύρου. Τα παράθυρα θα αποκτήσουν επίπεδα φωτεινότητας μεταξύ της τιμής του εστιασμένου και της ελάχιστης τιμής.</long>
+            <long xml:lang="en_GB">Brightness of the least focused window. Windows will get brightness levels between the focused and minimum.</long>
+            <long xml:lang="fr">Luminosité de la dernière fenêtre ayant obtenu le focus. Les fenêtres auront le niveau de luminosité entre celui de la fenêtre active et celui-ci.</long>
+            <long xml:lang="gl">Brillo da fiestra " menos enfocada". As fiestras terán níbeis de brillo  entre o da fiestra enfocada e o valor mínimo.</long>
+            <long xml:lang="gu">ઓછી ફોકસ થયેલ વિન્ડોની તેજસ્વીતા. વિન્ડો ફોકસ થયેલ અને ન્યૂનતમ વચ્ચેનું તેજસ્વીતાનું સ્તર પ્રાપ્ત કરશે.</long>
+            <long xml:lang="hi">कम से कम फोकस किये विंडो का चमकीलापन. विंडो चमकीलापन स्तर को पायेगा फोकस किये व न्यूनतम के बीच.</long>
+            <long xml:lang="it">Luminosità dell'ultima finestra selezionata. Le finestre assumeranno un livello di luminosità compreso tra quello della finestra selezionata e il minimo.</long>
+            <long xml:lang="ja">追跡順番のもっとも古いフォーカス・ウィンドウの明るさ。ウィンドウは、現在フォーカス・ウィンドウの値とこの値との間の明度を得ます</long>
+            <long xml:lang="nb">Sakrphet for det minst fokuserte vinduet. Vinduer vil få skarphetsnivåer mellom det fokuserte og det minimale.</long>
+            <long xml:lang="nl">Helderheid van het venster met de minste focus. Vensters krĳgen een helderheidsniveau tussen dat van een venster met focus en het minimum.</long>
+            <long xml:lang="pl">Jasność najdawniej używanego okna. Okna będą stopniowo stawać się ciemniejsze aż do ustawionego stopnia.</long>
+            <long xml:lang="pt">Brilho da janela "menos focada". As janelas irão ter níveis de brilho entre o da janela focada e o valor mínimo.</long>
+            <long xml:lang="pt_BR">Brilho da janela "menos focada". As janelas irão ter níveis de brilho entre o nível da janela focada e o valor mínimo.</long>
+            <long xml:lang="sv">Ljusstyrkenivå för det minst fokuserade fönstret. Fönster kommer få ljusstyrkenivå mellan det fokuserade och minimum.</long>
+            <default>100</default>
+            <min>1</min>
+            <max>100</max>
+          </option>
+        </subgroup>
+        <subgroup>
+          <short>Saturation</short>
+          <short xml:lang="ar">قوة الألوان</short>
+          <short xml:lang="bn">সম্পৃক্তি</short>
+          <short xml:lang="ca">Saturació</short>
+          <short xml:lang="de">Sättigung</short>
+          <short xml:lang="el">Κορεσμός</short>
+          <short xml:lang="en_GB">Saturation</short>
+          <short xml:lang="es">Saturación</short>
+          <short xml:lang="eu">Saturazioa</short>
+          <short xml:lang="fi">Kylläisyys</short>
+          <short xml:lang="fr">Saturation</short>
+          <short xml:lang="gl">Contrastes</short>
+          <short xml:lang="gu">સંતુલન</short>
+          <short xml:lang="hi">संतृप्ति</short>
+          <short xml:lang="it">Saturazione</short>
+          <short xml:lang="ja">彩度</short>
+          <short xml:lang="nb">Metning</short>
+          <short xml:lang="nl">Verzadiging</short>
+          <short xml:lang="pl">Nasycenie</short>
+          <short xml:lang="pt">Contraste</short>
+          <short xml:lang="pt_BR">Saturação</short>
+          <short xml:lang="ru">Насыщенность</short>
+          <short xml:lang="sv">Mättnad</short>
+          <short xml:lang="tr">Doygunluk</short>
+          <short xml:lang="zh_CN">饱和度</short>
+          <option type="int" name="max_saturation">
+            <short>Saturation Level of Focused Windows</short>
+            <short xml:lang="de">Sättigung des fokusierten Fensters</short>
+            <short xml:lang="el">Επίπεδο Κορεσμού των Εστιασμένων Παραθύρων</short>
+            <short xml:lang="en_GB">Saturation Level of Focused Windows</short>
+            <short xml:lang="es">Nivel de saturación de las ventanas con el foco</short>
+            <short xml:lang="fr">Niveau de saturation des fenêtres actives</short>
+            <short xml:lang="gl">Nivel de Saturación das fiestras enfocadas</short>
+            <short xml:lang="gu">ફોકસ થયેલ વિન્ડોનું સંતુલન સ્તર</short>
+            <short xml:lang="hi">फोकस किये विंडो का संतृप्ति स्तर</short>
+            <short xml:lang="it">Saturazione delle finestre selezionate</short>
+            <short xml:lang="ja">フォーカス・ウィンドウの彩度</short>
+            <short xml:lang="nb">Metningsnivå for fokuserte vinduer</short>
+            <short xml:lang="nl">Verzadigingsnivo van venster met focus</short>
+            <short xml:lang="pl">Nasycenie używanego okna</short>
+            <short xml:lang="pt">Nível de Saturação das Janelas Focadas</short>
+            <short xml:lang="pt_BR">Nível de Saturação das Janelas Focadas</short>
+            <short xml:lang="sv">Färgmättnadsnivå för fokuserade fönster</short>
+            <short xml:lang="zh_CN">聚焦窗口的饱和度级别</short>
+            <long>Saturation of the currently focused window. Windows will get saturation levels between the focused and minimum.</long>
+            <long xml:lang="de">Sättigung des momentan aktiven Fensters. Andere Fenster werden einen Wert zwischen diesem und dem unfokusiertem Fenster Wert bekommen.</long>
+            <long xml:lang="el">Κορεσμός του τρέχοντος εστιασμένου παραθύρου. Τα παράθυρα θα έχουν επίπεδα κορεσμού μεταξύ της τιμής του εστιασμένου και της ελάχιστης τιμής.</long>
+            <long xml:lang="en_GB">Saturation of the currently focused window. Windows will get saturation levels between the focused and minimum.</long>
+            <long xml:lang="fr">Niveau de saturation de la fenêtre actuellement active. Les autres fenêtres auront un niveau de saturation entre celui de la fenêtre active et le minimum.</long>
+            <long xml:lang="gl">Saturación da fiestra enfocada actualmente. As fiestras terán níbeis de saturación entre o da fiestra enfocada e o valor mínimo.</long>
+            <long xml:lang="gu">વર્તમાનમાં ફોકસ થયેલ વિન્ડોનું સંતુલન. વિન્ડો ફોકસ થયેલ અને ન્યૂનતમ વચ્ચેનું સંતુલન સ્તરો મેળવશે.</long>
+            <long xml:lang="hi">अभी फोकस किये विंडो का संतृप्ति. विंडोज फोकस व न्यूनतम के बीच संतृप्ति स्तर को पायेगा.</long>
+            <long xml:lang="it">Livello di saturazione della finestra selezionata. Le finestre assumeranno un livello di saturazione compreso tra quello di una finestra selezionata e il minimo.</long>
+            <long xml:lang="ja">現在フォーカスのあるウィンドウの彩度。ウィンドウは、この値と追跡順番がもっとも古いフォーカス・ウィンドウの値との間の彩度を得ます。</long>
+            <long xml:lang="nb">Metning for det fokuserte vinduet. Vinduer vil få metningsnivåer mellom det fokuserte og det minimale.</long>
+            <long xml:lang="nl">Verzadiging van het venster met de huidige focus. Vensters krĳgen een verzadigingsniveau tussen dat van een venster met focus en minimum.</long>
+            <long xml:lang="pl">Nasycenie aktualnie używanego okna. Okna będą stopniowo zanikaćaż od tego stopnia.</long>
+            <long xml:lang="pt">Saturação da janela focada actualmente. As janelas irão ter níveis de saturação entre o da janela focada e o valor mínimo.</long>
+            <long xml:lang="pt_BR">Saturação da janela focada atualmente. As janelas terão níveis de saturação entre o nível da janela focada e o valor mínimo.</long>
+            <long xml:lang="sv">Färgmättnad för det nuvarande fokuserade fönstret. Fönster kommer få färgmättnadsnivå mellan det fokuserade och minimum.</long>
+            <default>100</default>
+            <min>1</min>
+            <max>100</max>
+          </option>
+          <option type="int" name="min_saturation">
+            <short>Saturation Level of Unfocused Windows</short>
+            <short xml:lang="de">Sättigung des unfokusierten Fensters</short>
+            <short xml:lang="el">Επίπεδο Κορεσμού των Μη Εστιασμένων Παραθύρων</short>
+            <short xml:lang="en_GB">Saturation Level of Unfocused Windows</short>
+            <short xml:lang="es">Nivel de saturación de las ventanas sin el foco</short>
+            <short xml:lang="fr">Niveau de saturation des fenêtres inactives</short>
+            <short xml:lang="gl">Nivel de saturación das fiestras non enfocadas</short>
+            <short xml:lang="gu">નહિં ફોકસ થયેલ વિન્ડોનું સંતુલન સ્તર</short>
+            <short xml:lang="hi">बिना फोकस किये विंडो का संतृप्ति स्तर</short>
+            <short xml:lang="it">Saturazione delle finestre non selezionate</short>
+            <short xml:lang="ja">非フォーカス・ウィンドウの彩度</short>
+            <short xml:lang="nb">Metningsnivå for avfokuserte vinduer</short>
+            <short xml:lang="nl">Verzadigingsnivo van vensters zonder focus</short>
+            <short xml:lang="pl">Nasycenie nieużywanego okna</short>
+            <short xml:lang="pt">Nível de Saturação das Janelas Não Focadas</short>
+            <short xml:lang="pt_BR">Nível de Saturação das Janelas Não Focadas</short>
+            <short xml:lang="sv">Färgmättnadsnivå för ofokuserade fönster</short>
+            <short xml:lang="zh_CN">未聚焦窗口的饱和度级别</short>
+            <long>Saturation of the least focused window. Windows will get saturation levels between the focused and minimum.</long>
+            <long xml:lang="de">Sättigung des unfokusierten Fensters. Andere Fenster werden einen Wert zwischen diesem und dem momentan aktiven Fenster Wert bekommen.</long>
+            <long xml:lang="el">Κορεσμός του λιγότερο εστιασμένου παραθύρου. Τα παράθυρα θα έχουν επίπεδα κορεσμού μεταξύ της τιμής του εστιασμένου και της ελάχιστης τιμής.</long>
+            <long xml:lang="en_GB">Saturation of the least focused window. Windows will get saturation levels between the focused and minimum.</long>
+            <long xml:lang="fr">Saturation de la dernière fenêtre ayant obtenu le focus. Les fenêtres auront le niveau de saturation entre celui de la fenêtre active et celui-ci.</long>
+            <long xml:lang="gl"> Saturación da fiestra a estar " menos enfocada". As fiestras terán níbeis de  saturación entre o da fiestra enfocada e o valor mínimo.</long>
+            <long xml:lang="gu">ઓછી ફોકસ થયેલ વિન્ડોનું સંતુલન. વિન્ડો ફોકસ થયેલ અને ન્યૂનતમ વચ્ચેનું સંતુલન સ્તરો મેળવશે.</long>
+            <long xml:lang="hi">कम से कम फोकस किये विंडो का संतृप्ति. विंडोज फोकस व न्यूनतम के बीच संतृप्ति स्तर को पायेगा.</long>
+            <long xml:lang="it">Saturazione dell'ultima finestra in ordine di focus. Le finestre assumeranno un livello di saturazione compreso tra quello di una finestra selezionata e il minimo.</long>
+            <long xml:lang="ja">追跡順番のもっとも古いフォーカス・ウィンドウの彩度。ウィンドウは、現在フォーカス・ウィンドウの値とこの値との間の彩度を得ます。</long>
+            <long xml:lang="nb">Metning for det minst fokuserte vinduet. Vinduer vil få metningsnivåer mellom det fokuserte og det minimale.</long>
+            <long xml:lang="nl">Verzadiging van het venster met de minste focus. Vensters krĳgen een verzadigingsniveau tussen dat van een venster met focus en minimum.</long>
+            <long xml:lang="pl">Nasycenie najdawniej używanego okna. Okna będą stopniowo wygasać aż do ustawionego stopnia.</long>
+            <long xml:lang="pt">Saturação da janela a estar "menos focada". As janelas irão ter níveis de saturação entre o da janela focada e o valor mínimo.</long>
+            <long xml:lang="pt_BR">Saturação da janela "menos focada". As janelas terão níveis de saturação entre o nível da janela focada e o valor mínimo.</long>
+            <long xml:lang="sv">Färgmättnad för det minst fokuserade fönstret. Fönster kommer få färgmättnadsnivå mellan det fokuserade och minimum.</long>
+            <default>100</default>
+            <min>1</min>
+            <max>100</max>
+          </option>
+        </subgroup>
+      </group>
+    </screen>
+  </plugin>
+</compiz>

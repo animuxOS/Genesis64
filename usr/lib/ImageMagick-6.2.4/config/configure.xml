@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuremap [
+  <!ELEMENT configuremap (configure+)>
+  <!ELEMENT configure (#PCDATA)>
+  <!ATTLIST configure name CDATA #REQUIRED>
+  <!ATTLIST configure value CDATA #REQUIRED>
+]>
+<configuremap>
+  <configure name="NAME" value="ImageMagick" />
+  <configure name="LIB_VERSION" value="0x624" />
+  <configure name="LIB_VERSION_NUMBER" value="6,2,4,5" />
+  <configure name="RELEASE_DATE" value="09/30/07" />
+  <configure name="CONFIGURE" value="./configure --prefix=/usr --mandir=${prefix}/share/man --infodir=${prefix}/share/info --with-gs-font-dir=/usr/share/fonts/type1/gsfonts --with-magick-plus-plus --enable-shared --enable-lzw --without-dps --without-fpx --without-perl --with-perl-options=INSTALLDIRS=vendor --x-includes=/usr/include/X11 --x-libraries=/usr/lib/X11" />
+  <configure name="PREFIX" value="/usr" />
+  <configure name="EXEC-PREFIX" value="/usr" />
+  <configure name="VERSION" value="6.2.4" />
+  <configure name="CC" value="gcc" />
+  <configure name="CFLAGS" value="-g -O2 -Wall -pthread" />
+  <configure name="CPPFLAGS" value="-I/usr/include" />
+  <configure name="PCFLAGS" value="" />
+  <configure name="DEFS" value="-DHAVE_CONFIG_H" />
+  <configure name="LDFLAGS" value="-L/usr/lib -L/usr/lib/X11 -lfreetype -lz -L/usr/lib" />
+  <configure name="LIBS" value="-lMagick -llcms -ltiff -lfreetype -ljasper -ljpeg -lpng -lXext -lXt -lSM -lICE -lX11 -lbz2 -lxml2 -lz -lpthread -lm -lpthread" />
+  <configure name="CXX" value="g++" />
+  <configure name="CXXFLAGS" value="-pthread" />
+  <configure name="DISTCHECK_CONFIG_FLAGS" value="--prefix=/usr --mandir=${prefix}/share/man --infodir=${prefix}/share/info --with-gs-font-dir=/usr/share/fonts/type1/gsfonts --with-magick-plus-plus --enable-shared --enable-lzw --without-dps --without-fpx --without-perl --with-perl-options=INSTALLDIRS=vendor --x-includes=/usr/include/X11 --x-libraries=/usr/lib/X11" />
+  <configure name="CVS_BRANCH_TAG" value="HEAD" />
+  <configure name="HOST" value="x86_64-unknown-linux-gnu" />
+  <configure name="COPYRIGHT" value="Copyright (C) 1999-2005 ImageMagick Studio LLC" />
+  <configure name="WEBSITE" value="http://www.imagemagick.org" />
+  <configure name="QuantumDepth" value="16" />
+</configuremap>

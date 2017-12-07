@@ -1,0 +1,79 @@
+%% -*- mode:erlang; erlang-indent-level: 2 -*-
+{wpc_turnedge,
+ [
+  {menu,
+   [
+    {1,"Tourner l'arete"}
+   ]},
+  {menu_entry,
+   [
+    {1,"Tourner"},
+    {2,"Tourner"},
+    {3,"Tourner l'arete"},
+    {4,"Optimiser l'arete tourner"},
+    {5,"Tourner l'arete seulement si la longueur de la nouvelle arete etait plus courte"}
+   ]},
+  {pref_edit,
+   [
+    {1,"Preferences de l'outil"},
+    {2,"Permettre"}
+   ]},
+  {turn_help,
+   [
+    {1,"Tourner l'arete"},
+    {2,"Tourner l'arete seulement si la longueur de la nouvelle arete etait plus courte"}
+   ]}
+ ]}.
+
+%%
+%% The following strings have no translation.
+%%
+
+{wpc_turnedge,
+ [
+  {pref_edit,
+   [
+    {6,"Tourner dans le sens contraire des aiguilles d'une montre "},
+    {5,"Tourner dans le sens des aiguilles d'une montre "},
+    {4,"Tourner les aretes"},
+    {3,"Mode tourner"}
+   ]}
+ ]}.
+%% [wpc_turnedge,menu_entry,1] is not used
+%% [wpc_turnedge,menu_entry,2] is not used
+%% [wpc_turnedge,menu_entry,3] is not used
+%% [wpc_turnedge,menu_entry,4] is not used
+%% [wpc_turnedge,menu_entry,5] is not used
+%% [wpc_turnedge,pref_edit] is not used
+%% [wpc_turnedge,menu] is not used
+%% [wpc_turnedge,pref_edit] is not used
+%% [wpc_turnedge,turn_help] is not used
+
+%%
+%% The following strings have no translation.
+%%
+
+{wpc_turnedge,
+ [
+  {validate_edges,
+   [
+    {1,"Selected edges must not be in the same face."}
+   ]},
+  {menu_entry,
+   [
+    {turn,"Turn"}
+   ]},
+  {command_name,
+   [
+    {turn,"Turn"},
+    {turn_ccw,"Turn CCW"},
+    {turn_cw,"Turn CW"},
+    {turn_optimized,"Turn Optimized"}
+   ]},
+  {command_help,
+   [
+    {turn_ccw,"Turn edge counter-clockwise"},
+    {turn_cw,"Turn edge clockwise"},
+    {turn_optimized,"Turn edge (clockwise) only if new edge would be shorter"}
+   ]}
+ ]}.

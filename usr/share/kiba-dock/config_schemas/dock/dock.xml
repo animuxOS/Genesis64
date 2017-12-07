@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema>
+	<section>
+		<sec_name>Dock</sec_name>
+		<sec_name xml:lang="bg">Док</sec_name>
+		<sec_name xml:lang="de">Dock</sec_name>
+		<sec_name xml:lang="es">Dock</sec_name>
+		<sec_name xml:lang="fr">Dock</sec_name>
+		<sec_name xml:lang="it">Barra</sec_name>
+		<sec_name xml:lang="ja">ドック</sec_name>
+		<sec_name xml:lang="pt">Painel</sec_name>
+		<sec_desc>Modify the general aspect and behavior of Kiba Dock.</sec_desc>
+		<sec_desc xml:lang="bg">Промяна на общия изглед и поведение на Киба-док</sec_desc>
+		<sec_desc xml:lang="de">Verändere das Aussehen und Verhalten vom Kiba Dock.</sec_desc>
+		<sec_desc xml:lang="es">Modificar aspecto general y comportamiento del dock Kiba</sec_desc>
+		<sec_desc xml:lang="fr">Modifier l'aspect et le comportement général de Kiba-Dock</sec_desc>
+		<sec_desc xml:lang="it">Modifica l'aspetto generale e il comportamento di Kiba Dock</sec_desc>
+		<sec_desc xml:lang="ja">Kiba-Dock の全般的な外観と振る舞いの変更</sec_desc>
+		<sec_desc xml:lang="pt">Modificar o aspecto geral e comportamento do Kiba-Dock</sec_desc>
+		<sec_icon>[/usr/share/kiba-dock/icons/kiba-dock-panel.svg]</sec_icon>
+		<subsection>
+			<sub_sec_name>General</sub_sec_name>
+			<sub_sec_name xml:lang="bg">Общи</sub_sec_name>
+			<sub_sec_name xml:lang="de">Allgemein</sub_sec_name>
+			<sub_sec_name xml:lang="es">General</sub_sec_name>
+			<sub_sec_name xml:lang="fr">Général</sub_sec_name>
+			<sub_sec_name xml:lang="it">Generale</sub_sec_name>
+			<sub_sec_name xml:lang="ja">全般</sub_sec_name>
+			<sub_sec_name xml:lang="pt">Geral</sub_sec_name>
+			<option>
+				<name>keep_window_below_others</name>
+				<title>Keep Below</title>
+				<title xml:lang="bg">Дръж отдолу</title>
+				<title xml:lang="de">Halte unterhalb</title>
+				<title xml:lang="es">Mantener debajo</title>
+				<title xml:lang="fr">Garder au-dessous</title>
+				<title xml:lang="it">Mantieni in basso</title>
+				<title xml:lang="ja">最背面に保持</title>
+				<title xml:lang="pt">Manter abaixo</title>
+				<type>bool</type>
+				<range/>
+				<default>FALSE</default>
+				<description>Keep dock window below other windows</description>
+			</option>
+			<option>
+				<name>keep_window_above_others</name>
+				<title>Keep Above</title>
+				<title xml:lang="bg">Дръж отгоре</title>
+				<title xml:lang="de">Halte oberhalb</title>
+				<title xml:lang="es">Mantener encima</title>
+				<title xml:lang="fr">Garder au-dessus</title>
+				<title xml:lang="it">Mantieni sopra</title>
+				<title xml:lang="ja">最前面に保持</title>
+				<title xml:lang="pt">Manter acima</title>
+				<type>bool</type>
+				<range/>
+				<default>FALSE</default>
+				<description>Keep dock window above other windows</description>
+			</option>
+			<option>
+				<name>dock_set_strut</name>
+				<title>Strut</title>
+				<title xml:lang="bg">Панел</title>
+				<title xml:lang="ja">Strut</title>
+				<title xml:lang="pt">Estrutura</title>
+				<type>bool</type>
+				<range/>
+				<default>TRUE</default>
+				<description>Set the _NET_WM_STRUT property</description>
+				<description xml:lang="bg">Поставя свойство на дока, така че максимизираните прозорци да не го покриват (_NET_WM_STRUT)</description>
+				<description xml:lang="ja">_NET_WM_STRUT プロパティを設定</description>
+			</option>
+			<option>
+				<name>edge_position</name>
+				<title>Edge</title>
+				<title xml:lang="bg">Край</title>
+				<title xml:lang="de">Bildschirm Kante</title>
+				<title xml:lang="es">Borde</title>
+				<title xml:lang="fr">Bord</title>
+				<title xml:lang="it">Ombra</title>
+				<title xml:lang="ja">エッジ</title>
+				<title xml:lang="pt">Borda</title>
+				<type>char</type>
+				<range>bottom_edge,right_edge,top_edge,left_edge</range>
+				<default>bottom_edge</default>
+				<description>Screen edge</description>
+				<description xml:lang="bg">Страна на екрана</description>
+				<description xml:lang="de">Bildschirm Kante</description>
+				<description xml:lang="ja">スクリーンエッジ</description>
+			</option>
+			<option>
+				<name>dock_max_size</name>
+				<title>Max size</title>
+				<title xml:lang="bg">Максимален размер</title>
+				<title xml:lang="de">Max Größe</title>
+				<title xml:lang="ja">最大の大きさ</title>
+				<type>int</type>
+				<range>0-1800</range>
+				<default>0</default>
+				<description>Max size</description>
+				<description xml:lang="bg">Максимален размер</description>
+				<description xml:lang="de">Max Größe</description>
+				<description xml:lang="ja">最大の大きさ</description>
+			</option>
+			<option>
+				<name>dock_edge_offset</name>
+				<title>Edge offset</title>
+				<title xml:lang="bg">Отклонение от ръба</title>
+				<title xml:lang="de">Kanten-Zentrum Abstand</title>
+				<title xml:lang="ja">エッジのオフセット</title>
+				<type>int</type>
+				<range>-1200-1200</range>
+				<default>0</default>
+				<description>Edge offset (0 = Center)</description>
+				<description xml:lang="bg">Отклонение от ръба (0 = Центриран)</description>
+				<description xml:lang="de">Abstand des Docks vom Kanten-Zentrum (0 = Mitte)</description>
+				<description xml:lang="ja">ドックのエッジのオフセット (0 = 中央)</description>
+			</option>
+			<option>
+				<name>dock_margin</name>
+				<title>Height</title>
+				<title xml:lang="bg">Височина</title>
+				<title xml:lang="de">Höhe</title>
+				<title xml:lang="es">Altura</title>
+				<title xml:lang="fr">Hauteur</title>
+				<title xml:lang="it">Altezza</title>
+				<title xml:lang="ja">高さ</title>
+				<title xml:lang="pt">Altura</title>
+				<type>int</type>
+				<range>28-50</range>
+				<default>40</default>
+				<description>Height of the dock</description>
+				<description xml:lang="bg">Височина на дока</description>
+				<description xml:lang="de">Höhe des Docks</description>
+				<description xml:lang="es">Altura del dock</description>
+				<description xml:lang="fr">Hauteur du dock</description>
+				<description xml:lang="it">Altezza della barra</description>
+				<description xml:lang="ja">ドックの高さ</description>
+				<description xml:lang="pt">Altura do painel</description>
+			</option>
+			<option>
+				<name>dock_cap_size</name>
+				<title>Cap size</title>
+				<title xml:lang="bg">Размер на полето за прихващане</title>
+				<title xml:lang="de">Kappen Größe</title>
+				<title xml:lang="ja">キャップサイズ</title>
+				<type>int</type>
+				<range>0-200</range>
+				<default>25</default>
+				<description>Cap size of the dock</description>
+				<description xml:lang="bg">Размер на полето за прихващане на дока</description>
+				<description xml:lang="de">Kappen Größe des Docks</description>
+				<description xml:lang="fr">Taille du chapeau du dock</description>
+				<description xml:lang="it">Dimensione della barra</description>
+				<description xml:lang="ja">ドックのキャップサイズ</description>
+				<description xml:lang="pt">Tamanho da cobertura do painel</description>
+			</option>
+		</subsection>
+		<subsection>
+			<sub_sec_name>Style</sub_sec_name>
+			<sub_sec_name xml:lang="bg">Стил</sub_sec_name>
+			<sub_sec_name xml:lang="de">Stil</sub_sec_name>
+			<sub_sec_name xml:lang="es">Estilo</sub_sec_name>
+			<sub_sec_name xml:lang="fr">Style</sub_sec_name>
+			<sub_sec_name xml:lang="it">Stile</sub_sec_name>
+			<sub_sec_name xml:lang="ja">スタイル</sub_sec_name>
+			<sub_sec_name xml:lang="pt">Estilo</sub_sec_name>
+			<option>
+				<name>dock_draw</name>
+				<title>Draw</title>
+				<title xml:lang="bg">Изрисуване</title>
+				<title xml:lang="de">Zeichnen</title>
+				<title xml:lang="es">Dibujar</title>
+				<title xml:lang="fr">Dessiner</title>
+				<title xml:lang="it">Disegna</title>
+				<title xml:lang="ja">描画</title>
+				<title xml:lang="pt">Desenho</title>
+				<type>bool</type>
+				<range/>
+				<default>TRUE</default>
+				<description>Enable/Disable dock drawing</description>
+				<description xml:lang="bg">Пуска/спира рисуването на дока</description>
+				<description xml:lang="de">Aktiviert/Deaktiviert Zeichnen des Docks</description>
+				<description xml:lang="es">Activar/desactivar dibujado del dock</description>
+				<description xml:lang="fr">Activer/Désactiver le dessin du dock</description>
+				<description xml:lang="it">Abilita/Disabilita disegno barra</description>
+				<description xml:lang="ja">ドックの描画の有効化/無効化</description>
+				<description xml:lang="pt">Habilitar/Desabilitar o desenho do painel</description>
+			</option>
+			<option>
+				<name>dock_curves</name>
+				<title>Curves</title>
+				<title xml:lang="bg">Извивки</title>
+				<title xml:lang="de">Kurven</title>
+				<title xml:lang="fr">Courbes</title>
+				<title xml:lang="ja">Curves</title>
+				<type>bool</type>
+				<range/>
+				<default>TRUE</default>
+				<description>Enable/Disable dock curves</description>
+				<description xml:lang="bg">Пуска/Спира извивките на дока</description>
+				<description xml:lang="de">Aktiviert/Deaktiviert Dock Kurven</description>
+				<description xml:lang="ja">ドックの curves の有効化/無効化</description>
+			</option>
+			<option>
+				<name>dock_shape</name>
+				<title>Shape style</title>
+				<title xml:lang="bg">Стил на формата</title>
+				<title xml:lang="de">Form</title>
+				<title xml:lang="ja">タイトルの形状のスタイル</title>
+				<type>char</type>
+				<range>podest,default</range>
+				<default>podest</default>
+				<description>Shape style</description>
+				<description xml:lang="bg">Стил на формата</description>
+				<description xml:lang="de">Form</description>
+				<description xml:lang="ja">タイトルの形状のスタイル</description>
+			</option>
+			<option>
+				<name>dock_background</name>
+				<title>Background</title>
+				<title xml:lang="bg">Фонов цвят</title>
+				<title xml:lang="de">Hintegrund</title>
+				<title xml:lang="es">Fondo</title>
+				<title xml:lang="fr">Arrière plan</title>
+				<title xml:lang="it">Sfondo</title>
+				<title xml:lang="ja">背景</title>
+				<title xml:lang="pt">Fundo</title>
+				<type>char</type>
+				<range>gradient,pngfile</range>
+				<default>gradient</default>
+				<description>Style of the dock background</description>
+				<description xml:lang="bg">Определяне на цвета на фона</description>
+				<description xml:lang="de">Stil des Dock Hintergrunds</description>
+				<description xml:lang="es">Estilo del fondo del dock</description>
+				<description xml:lang="fr">Style de l'arrière plan du dock</description>
+				<description xml:lang="it">Stile dello sfondo della barra</description>
+				<description xml:lang="ja">ドックの背景のスタイル</description>
+				<description xml:lang="pt">Estilo do fundo do painel</description>
+			</option>
+			<option>
+				<name>dock_gradient</name>
+				<title>Gradient</title>
+				<type>list</type>
+				<range>rgba</range>
+				<default>[#888888CA]</default>
+				<description>Gradient</description>
+			</option>
+			<option>
+				<name>dock_curves_color</name>
+				<title>Curves color</title>
+				<title xml:lang="bg">Цвят на извивките</title>
+				<title xml:lang="de">Kurven Farbe</title>
+				<title xml:lang="ja">Curves の色</title>
+				<type>char</type>
+				<range>rgba</range>
+				<default>#00000033</default>
+				<description>Curves color</description>
+				<description xml:lang="bg">Цвят на извивките</description>
+				<description xml:lang="de">Kurven Farbe</description>
+				<description xml:lang="ja">Curves の色</description>
+			</option>
+			<option>
+				<name>dock_background_alpha</name>
+				<title>Background alpha</title>
+				<title xml:lang="bg">Прозрачност на фона</title>
+				<title xml:lang="de">Hintegrund Transparenz</title>
+				<title xml:lang="ja">背景の透明度</title>
+				<type>double</type>
+				<range>0.0-1.0</range>
+				<default>1.0</default>
+				<description>Background alpha</description>
+				<description xml:lang="bg">Прозрачност на фона</description>
+				<description xml:lang="de">Hintegrund Transparenz</description>
+				<description xml:lang="ja">背景の透明度</description>
+			</option>
+			<option>
+				<name>dock_corner_topleft</name>
+				<title>Top-left corner</title>
+				<title xml:lang="bg">Горен ляв ъгъл</title>
+				<title xml:lang="de">Ecke oben-links</title>
+				<title xml:lang="ja">左上角の形状</title>
+				<type>char</type>
+				<range>squared,rounded,mitered,notched</range>
+				<default>rounded</default>
+				<description>Shape of the top-left corner of the dock</description>
+				<description xml:lang="bg">Форма на горния ляв ъгъл на дока</description>
+				<description xml:lang="de">Form der Dock Ecke unten-links</description>
+				<description xml:lang="ja">ドックの左上角の形状</description>
+			</option>
+			<option>
+				<name>dock_corner_topright</name>
+				<title>Top-right corner</title>
+				<title xml:lang="bg">Горен десен ъгъл</title>
+				<title xml:lang="de">Ecke oben rechts</title>
+				<title xml:lang="ja">右上角の形状</title>
+				<type>char</type>
+				<range>squared,rounded,mitered,notched</range>
+				<default>squared</default>
+				<description>Shape of the top-right corner of the dock</description>
+				<description xml:lang="bg">Форма на горния десен ъгъл на дока</description>
+				<description xml:lang="de">Form der Dock Ecke unten-rechts</description>
+				<description xml:lang="ja">ドックの右上角の形状</description>
+			</option>
+			<option>
+				<name>dock_corner_bottomleft</name>
+				<title>Bottom-left corner</title>
+				<title xml:lang="bg">Долен ляв ъгъл</title>
+				<title xml:lang="de">Ecke unten-links</title>
+				<title xml:lang="ja">左下角の形状</title>
+				<type>char</type>
+				<range>squared,rounded,mitered,notched</range>
+				<default>rounded</default>
+				<description>Shape of the bottom-left corner of the dock</description>
+				<description xml:lang="bg">Форма на долния ляв ъгъл на дока</description>
+				<description xml:lang="de">Form der Dock Ecke unten-links</description>
+				<description xml:lang="ja">ドックの左下角の形状</description>
+			</option>
+			<option>
+				<name>dock_corner_bottomright</name>
+				<title>Bottom-right corner</title>
+				<title xml:lang="bg">Долен десен ъгъл</title>
+				<title xml:lang="de">Ecke unten-rechts</title>
+				<title xml:lang="ja">右下角の形状</title>
+				<type>char</type>
+				<range>squared,rounded,mitered,notched</range>
+				<default>rounded</default>
+				<description>Shape of the bottom-right corner of the dock</description>
+				<description xml:lang="bg">Форма на долния десен ъгъл на дока</description>
+				<description xml:lang="de">Form der Dock Ecke unten-rechts</description>
+				<description xml:lang="ja">ドックの右下角の形状</description>
+			</option>
+			<option>
+				<name>dock_border_rgba</name>
+				<title>Border color</title>
+				<title xml:lang="bg">Цвят на ръба</title>
+				<title xml:lang="de">Rahmen Farbe</title>
+				<title xml:lang="ja">境界の色</title>
+				<type>char</type>
+				<range>rgba</range>
+				<default>#000000AA</default>
+				<description>Border color</description>
+				<description xml:lang="bg">Цвят на ръба</description>
+				<description xml:lang="de">Rahmen Farbe</description>
+				<description xml:lang="ja">境界の色</description>
+			</option>
+			<option>
+				<name>dock_edge_radius</name>
+				<title>Corner radius</title>
+				<title xml:lang="bg">Радиус при ъглите</title>
+				<title xml:lang="de">Ecken Radius</title>
+				<title xml:lang="ja">角の半径</title>
+				<type>double</type>
+				<range>1.0-200.0</range>
+				<default>40.0</default>
+				<description>Corner radius</description>
+				<description xml:lang="bg">Радиус при ъглите</description>
+				<description xml:lang="de">Ecken Radius</description>
+				<description xml:lang="ja">角の半径</description>
+			</option>
+			<option>
+				<name>dock_border_width</name>
+				<title>Border width</title>
+				<title xml:lang="bg">Размер на границата</title>
+				<title xml:lang="de">Rahmen Breite</title>
+				<title xml:lang="es">Ancho del borde</title>
+				<title xml:lang="fr">Épaisseur de la bordure</title>
+				<title xml:lang="it">Ampiezza bordo</title>
+				<title xml:lang="ja">境界の太さ</title>
+				<title xml:lang="pt">Largura da borda</title>
+				<type>double</type>
+				<range>0.1-10.0</range>
+				<default>4.0</default>
+				<description>Border width</description>
+				<description xml:lang="bg">Размер на границата</description>
+				<description xml:lang="de">Rahmen Breite</description>
+				<description xml:lang="es">Ancho del borde</description>
+				<description xml:lang="fr">Épaisseur de la bordure</description>
+				<description xml:lang="it">Ampiezza bordo</description>
+				<description xml:lang="ja">境界の太さ</description>
+				<description xml:lang="pt">Largura da borda</description>
+			</option>
+		</subsection>
+		<subsection>
+			<sub_sec_name>Autohide</sub_sec_name>
+			<sub_sec_name xml:lang="bg">Автоматично скриване</sub_sec_name>
+			<sub_sec_name xml:lang="de">Verstecken</sub_sec_name>
+			<sub_sec_name xml:lang="es">Ocultar automáticamente</sub_sec_name>
+			<sub_sec_name xml:lang="fr">Masquage automatique</sub_sec_name>
+			<sub_sec_name xml:lang="it">Nascondimento Automatico</sub_sec_name>
+			<sub_sec_name xml:lang="ja">自動的に隠す</sub_sec_name>
+			<sub_sec_name xml:lang="pt">Auto-ocultar</sub_sec_name>
+			<option>
+				<name>auto_hide_enable</name>
+				<title>Enable</title>
+				<title xml:lang="bg">Пускане</title>
+				<title xml:lang="de">Aktivieren</title>
+				<title xml:lang="es">Activar</title>
+				<title xml:lang="fr">Activer</title>
+				<title xml:lang="it">Abilita</title>
+				<title xml:lang="ja">有効</title>
+				<title xml:lang="pt">Habilitar</title>
+				<type>bool</type>
+				<range/>
+				<default>FALSE</default>
+				<description>Enable/Disable autohide of the dock</description>
+				<description xml:lang="bg">Пуска/Спира автоматичното скриване на дока</description>
+				<description xml:lang="de">Aktiviert/Deaktiviert automatisches Verstecken des Docks</description>
+				<description xml:lang="ja">自動的に隠すの有効化/無効化</description>
+			</option>
+			<option>
+				<name>auto_hide_speed</name>
+				<title>Speed</title>
+				<title xml:lang="bg">Скорост</title>
+				<title xml:lang="de">Geschwindigkeit</title>
+				<title xml:lang="es">Velocidad</title>
+				<title xml:lang="fr">Vitesse</title>
+				<title xml:lang="it">Velocitï¿½</title>
+				<title xml:lang="ja">スピード</title>
+				<title xml:lang="pt">Velocidade</title>
+				<type>int</type>
+				<range>1-10</range>
+				<default>3</default>
+				<description>Speed</description>
+				<description xml:lang="bg">Скорост</description>
+				<description xml:lang="de">Geschwindigkeit</description>
+				<description xml:lang="es">Velocidad</description>
+				<description xml:lang="fr">Vitesse</description>
+				<description xml:lang="it">Velocitï¿½</description>
+				<description xml:lang="ja">スピード</description>
+				<description xml:lang="pt">Velocidade</description>
+			</option>
+			<option>
+				<name>auto_hide_delay</name>
+				<title>Delay</title>
+				<title xml:lang="bg">Забавяне</title>
+				<title xml:lang="de">Verzögerung</title>
+				<title xml:lang="es">Retardo</title>
+				<title xml:lang="fr">Délai</title>
+				<title xml:lang="it">Ritardo</title>
+				<title xml:lang="ja">遅延</title>
+				<title xml:lang="pt">Atraso</title>
+				<type>int</type>
+				<range>1-100</range>
+				<default>5</default>
+				<description>Delay (in seconds)</description>
+				<description xml:lang="bg">Забавяне (в секунди)</description>
+				<description xml:lang="de">Verzögerung (in Sekunden)</description>
+				<description xml:lang="ja">遅延 (秒)</description>
+			</option>
+			<option>
+				<name>auto_hide_area</name>
+				<title>Area</title>
+				<title xml:lang="bg">Област</title>
+				<title xml:lang="de">Bereich</title>
+				<title xml:lang="es">Área</title>
+				<title xml:lang="fr">Zone</title>
+				<title xml:lang="it">Area</title>
+				<title xml:lang="ja">範囲</title>
+				<title xml:lang="pt">Área</title>
+				<type>int</type>
+				<range>0-100</range>
+				<default>10</default>
+				<description>Area</description>
+				<description xml:lang="bg">Област</description>
+				<description xml:lang="de">Bereich</description>
+				<description xml:lang="es">Área</description>
+				<description xml:lang="fr">Zone</description>
+				<description xml:lang="it">Area</description>
+				<description xml:lang="ja">範囲</description>
+				<description xml:lang="pt">Área</description>
+			</option>
+		</subsection>
+	</section>
+	<section>
+		<sec_name>Objects</sec_name>
+		<sec_name xml:lang="bg">Обекти</sec_name>
+		<sec_name xml:lang="de">Objekte</sec_name>
+		<sec_name xml:lang="es">Objetos</sec_name>
+		<sec_name xml:lang="fr">Objets</sec_name>
+		<sec_name xml:lang="it">Oggetti</sec_name>
+		<sec_name xml:lang="ja">オブジェクト</sec_name>
+		<sec_name xml:lang="pt">Objetos</sec_name>
+		<sec_desc>Modify the general aspect and behavior of the objects you place on the dock.</sec_desc>
+		<sec_desc xml:lang="bg">Промяна на общия изглед и поведение на обектите в дока</sec_desc>
+		<sec_desc xml:lang="de">Verändere das Aussehen und das Verhalten der auf dem Dock plazierten Objekte</sec_desc>
+		<sec_desc xml:lang="es">Modificar el aspecto general y comportamiento de los objetos que se colocan en el dock.</sec_desc>
+		<sec_desc xml:lang="fr">Modifier l'aspect et le comportement général des objets placés sur le dock.</sec_desc>
+		<sec_desc xml:lang="it">Modifica l'aspetto generale e il comportamento degli oggetti che posizioni sulla barra.</sec_desc>
+		<sec_desc xml:lang="ja">ドックに配置したオブジェクトの全般的な外観と振る舞いの変更</sec_desc>
+		<sec_desc xml:lang="pt">Modificar o aspecto geral e comportamento dos objetos colocados no painel.</sec_desc>
+		<sec_icon>[/usr/share/kiba-dock/icons/kiba-dock-objects.svg]</sec_icon>
+		<subsection>
+			<sub_sec_name>General</sub_sec_name>
+			<sub_sec_name xml:lang="bg">Общи</sub_sec_name>
+			<sub_sec_name xml:lang="de">Allgemein</sub_sec_name>
+			<sub_sec_name xml:lang="es">General</sub_sec_name>
+			<sub_sec_name xml:lang="fr">Général</sub_sec_name>
+			<sub_sec_name xml:lang="it">Generale</sub_sec_name>
+			<sub_sec_name xml:lang="ja">全般</sub_sec_name>
+			<sub_sec_name xml:lang="pt">Geral</sub_sec_name>
+			<option>
+				<name>dock_object_size</name>
+				<title>Size</title>
+				<title xml:lang="bg">Размер</title>
+				<title xml:lang="de">Größe</title>
+				<title xml:lang="es">Tamaño</title>
+				<title xml:lang="fr">Taille</title>
+				<title xml:lang="it">Dimensione</title>
+				<title xml:lang="ja">大きさ</title>
+				<title xml:lang="pt">Tamanho</title>
+				<type>int</type>
+				<range>16-128</range>
+				<default>38</default>
+				<description>Size of the objects on the dock</description>
+				<description xml:lang="bg">Размер на обектите в дока</description>
+				<description xml:lang="de">Größe der Objekte auf dem Dock</description>
+				<description xml:lang="ja">ドックのオブジェクトの大きさ</description>
+			</option>
+			<option>
+				<name>object_margin</name>
+				<title>Margin</title>
+				<title xml:lang="bg">Отстояние</title>
+				<title xml:lang="de">Kanten Abstand</title>
+				<title xml:lang="es">Margen</title>
+				<title xml:lang="fr">Marge</title>
+				<title xml:lang="it">Margine</title>
+				<title xml:lang="ja">余白</title>
+				<title xml:lang="pt">Margem</title>
+				<type>int</type>
+				<range>1-25</range>
+				<default>20</default>
+				<description>Space between objects on the dock and the screen edge</description>
+				<description xml:lang="bg">Разстояние между обектите в дока и ръба на екрана</description>
+				<description xml:lang="de">Abstand zwischen den Objekten und der Bildschirmkante</description>
+				<description xml:lang="ja">ドックのオブジェクトと画面の端の間隔</description>
+			</option>
+			<option>
+				<name>object_space</name>
+				<title>Space</title>
+				<title xml:lang="bg">Място</title>
+				<title xml:lang="de">Abstand</title>
+				<title xml:lang="es">Espacio</title>
+				<title xml:lang="fr">Espace</title>
+				<title xml:lang="it">Spazio</title>
+				<title xml:lang="ja">間隔</title>
+				<title xml:lang="pt">Espaço</title>
+				<type>int</type>
+				<range>0-20</range>
+				<default>5</default>
+				<description>Space between objects on the dock</description>
+				<description xml:lang="bg">Разстояние между обектите в дока</description>
+				<description xml:lang="de">Abstand zwischen den Objekten auf dem Dock</description>
+				<description xml:lang="ja">ドックのオブジェクトの間隔</description>
+			</option>
+		</subsection>
+		<subsection>
+			<sub_sec_name>Separator</sub_sec_name>
+			<sub_sec_name xml:lang="bg">Разделител</sub_sec_name>
+			<sub_sec_name xml:lang="de">Trennsymbol</sub_sec_name>
+			<sub_sec_name xml:lang="es">Separador</sub_sec_name>
+			<sub_sec_name xml:lang="fr">Séparateur</sub_sec_name>
+			<sub_sec_name xml:lang="it">Separatore</sub_sec_name>
+			<sub_sec_name xml:lang="ja">区切り</sub_sec_name>
+			<sub_sec_name xml:lang="pt">Separador</sub_sec_name>
+			<option>
+				<name>separator_draw</name>
+				<title>Draw</title>
+				<title xml:lang="bg">Изрисуване</title>
+				<title xml:lang="de">Zeichnen</title>
+				<title xml:lang="es">Dibujar</title>
+				<title xml:lang="fr">Dessiner</title>
+				<title xml:lang="it">Disegna</title>
+				<title xml:lang="ja">描画</title>
+				<title xml:lang="pt">Desenho</title>
+				<type>bool</type>
+				<range/>
+				<default>TRUE</default>
+				<description>Enable/Disable seperator objects</description>
+				<description xml:lang="bg">Пуска/Спира показване на разделителя</description>
+				<description xml:lang="de">Aktiviert/Deaktiviert Trennzeichen Objekte</description>
+				<description xml:lang="ja">区切りオブジェクトの有効化/無効化</description>
+			</option>
+			<option>
+				<name>separator_size</name>
+				<title>Size</title>
+				<title xml:lang="bg">Размер</title>
+				<title xml:lang="de">Größe</title>
+				<title xml:lang="es">Tamaño</title>
+				<title xml:lang="fr">Taille</title>
+				<title xml:lang="it">Dimensione</title>
+				<title xml:lang="ja">大きさ</title>
+				<title xml:lang="pt">Tamanho</title>
+				<type>int</type>
+				<range>1-25</range>
+				<default>15</default>
+				<description>Size</description>
+				<description xml:lang="bg">Размер</description>
+				<description xml:lang="de">Größe</description>
+				<description xml:lang="es">Tamaño</description>
+				<description xml:lang="fr">Taille</description>
+				<description xml:lang="it">Dimensione</description>
+				<description xml:lang="ja">大きさ</description>
+				<description xml:lang="pt">Tamanho</description>
+			</option>
+		</subsection>
+		<subsection>
+			<sub_sec_name>Triangle</sub_sec_name>
+			<sub_sec_name xml:lang="bg">Триъгълник</sub_sec_name>
+			<sub_sec_name xml:lang="ja">トライアングル</sub_sec_name>
+			<option>
+				<name>notification_triangle_enable</name>
+				<title>Enable</title>
+				<title xml:lang="bg">Пускане</title>
+				<title xml:lang="de">Aktivieren</title>
+				<title xml:lang="es">Activar</title>
+				<title xml:lang="fr">Activer</title>
+				<title xml:lang="it">Abilita</title>
+				<title xml:lang="ja">有効</title>
+				<title xml:lang="pt">Habilitar</title>
+				<type>bool</type>
+				<range/>
+				<default>TRUE</default>
+				<description>Enable/Disable object triangle</description>
+				<description xml:lang="bg">Пуска/Спира триъгълниците</description>
+				<description xml:lang="de">Aktiviert/Deaktiviert Objekt "Triangle"</description>
+				<description xml:lang="ja">オブジェクトトライアングルの有効化/無効化</description>
+			</option>
+			<option>
+				<name>triangle_icon</name>
+				<title>Icon</title>
+				<title xml:lang="bg">Икона</title>
+				<title xml:lang="de">Symbol</title>
+				<title xml:lang="fr">Icône</title>
+				<title xml:lang="ja">アイコン</title>
+				<type>char</type>
+				<range>pngfile</range>
+				<default>/usr/share/kiba-dock/icons/broken-glass.svg</default>
+				<description>Custom icon for triangles</description>
+				<description xml:lang="bg">Нова икона за триъгълниците</description>
+				<description xml:lang="ja">トライアングルのカスタムアイコン</description>
+			</option>
+		</subsection>
+		<subsection>
+			<sub_sec_name>Progress</sub_sec_name>
+			<sub_sec_name xml:lang="bg">Прогрес</sub_sec_name>
+			<sub_sec_name xml:lang="de">Fortschrittsanzeige</sub_sec_name>
+			<sub_sec_name xml:lang="es">Progreso</sub_sec_name>
+			<sub_sec_name xml:lang="fr">Progression</sub_sec_name>
+			<sub_sec_name xml:lang="it">Progresso</sub_sec_name>
+			<sub_sec_name xml:lang="ja">進歩状況</sub_sec_name>
+			<sub_sec_name xml:lang="pt">Progresso</sub_sec_name>
+			<option>
+				<name>progress_enable</name>
+				<title>Enable</title>
+				<title xml:lang="bg">Пускане</title>
+				<title xml:lang="de">Aktivieren</title>
+				<title xml:lang="es">Activar</title>
+				<title xml:lang="fr">Activer</title>
+				<title xml:lang="it">Abilita</title>
+				<title xml:lang="ja">有効</title>
+				<title xml:lang="pt">Habilitar</title>
+				<type>bool</type>
+				<range/>
+				<default>TRUE</default>
+				<description>Enable/Disable object progress</description>
+				<description xml:lang="bg">Пуска/Спира чертането на прогрес</description>
+				<description xml:lang="de">Aktiviert/Deaktiviert Objekt Progress</description>
+				<description xml:lang="ja">進歩状況の描画の有効化/無効化</description>
+			</option>
+			<option>
+				<name>progress_rgba</name>
+				<title>Color</title>
+				<title xml:lang="bg">Цвят</title>
+				<title xml:lang="de">Farbe</title>
+				<title xml:lang="es">Color</title>
+				<title xml:lang="fr">Couleur</title>
+				<title xml:lang="it">Colore</title>
+				<title xml:lang="ja">色</title>
+				<title xml:lang="pt">Cor</title>
+				<type>char</type>
+				<range>rgba</range>
+				<default>#00000090</default>
+				<description>Color</description>
+				<description xml:lang="bg">Цвят</description>
+				<description xml:lang="de">Farbe</description>
+				<description xml:lang="es">Color</description>
+				<description xml:lang="fr">Couleur</description>
+				<description xml:lang="it">Colore</description>
+				<description xml:lang="ja">色</description>
+				<description xml:lang="pt">Cor</description>
+			</option>
+			<option>
+				<name>progress_bg_rgba</name>
+				<title>Background color</title>
+				<title xml:lang="bg">Цвят на фона</title>
+				<title xml:lang="de">Hintergrund Farbe</title>
+				<title xml:lang="ja">背景の色</title>
+				<type>char</type>
+				<range>rgba</range>
+				<default>#FFFFFF90</default>
+				<description>Background color</description>
+				<description xml:lang="bg">Цвят на фона</description>
+				<description xml:lang="de">Hintergrund Farbe</description>
+				<description xml:lang="ja">背景の色</description>
+			</option>
+		</subsection>
+		<subsection>
+			<sub_sec_name>Contiuous Progress</sub_sec_name>
+			<option>
+				<name>cprogress_enable</name>
+				<title>Enable</title>
+				<title xml:lang="bg">Пускане</title>
+				<title xml:lang="de">Aktivieren</title>
+				<title xml:lang="es">Activar</title>
+				<title xml:lang="fr">Activer</title>
+				<title xml:lang="it">Abilita</title>
+				<title xml:lang="ja">有効</title>
+				<title xml:lang="pt">Habilitar</title>
+				<type>bool</type>
+				<range/>
+				<default>TRUE</default>
+				<description>Enable/Disable contiuous object progress</description>
+			</option>
+			<option>
+				<name>cprogress_icon</name>
+				<title>Icon</title>
+				<title xml:lang="bg">Икона</title>
+				<title xml:lang="de">Symbol</title>
+				<title xml:lang="fr">Icône</title>
+				<title xml:lang="ja">アイコン</title>
+				<type>char</type>
+				<range>pngfile</range>
+				<default>/usr/share/kiba-dock/icons/gear.svg</default>
+				<description>Custom icon for contiuous progresses</description>
+			</option>
+			<option>
+				<name>cprogress_size</name>
+				<title>Size</title>
+				<title xml:lang="bg">Размер</title>
+				<title xml:lang="de">Größe</title>
+				<title xml:lang="es">Tamaño</title>
+				<title xml:lang="fr">Taille</title>
+				<title xml:lang="it">Dimensione</title>
+				<title xml:lang="ja">大きさ</title>
+				<title xml:lang="pt">Tamanho</title>
+				<type>int</type>
+				<range>16-48</range>
+				<default>26</default>
+				<description>Contiuous progress Icon size</description>
+			</option>
+			<option>
+				<name>cprogress_step</name>
+				<title>Step</title>
+				<type>double</type>
+				<range>0.01-0.15</range>
+				<default>0.05</default>
+				<description>Step</description>
+			</option>
+		</subsection>
+	</section>
+	<section>
+		<sec_name>Effects</sec_name>
+		<sec_name xml:lang="bg">Ефекти</sec_name>
+		<sec_name xml:lang="de">Effekte</sec_name>
+		<sec_name xml:lang="es">Efectos</sec_name>
+		<sec_name xml:lang="fr">Effets</sec_name>
+		<sec_name xml:lang="it">Effetti</sec_name>
+		<sec_name xml:lang="ja">効果</sec_name>
+		<sec_name xml:lang="pt">Efeitos</sec_name>
+		<sec_desc>Modify the behavior of the objects on mouse over and clicking.</sec_desc>
+		<sec_desc xml:lang="bg">Промяна на поведението на обектите при преминаване с мишката и натискане</sec_desc>
+		<sec_desc xml:lang="de">Verändere das Verhalten der Objekte bei Mouseover und beim Klicken</sec_desc>
+		<sec_desc xml:lang="es">Modificar el comportamiento de los objetos cuando el ratón pasa por encima o hace click</sec_desc>
+		<sec_desc xml:lang="fr">Modifier le comportement des objets au survol et au click de la souris</sec_desc>
+		<sec_desc xml:lang="it">Modifica il comportamento degli oggetti al passaggio e al click del mouse</sec_desc>
+		<sec_desc xml:lang="ja">マウスオーバーやクリック時のオブジェクトの振る舞いの変更</sec_desc>
+		<sec_desc xml:lang="pt">Modificar o comportamento dos objetos com o mouse sobre e clicando.</sec_desc>
+		<sec_icon>[/usr/share/kiba-dock/icons/visual-effects.svg]</sec_icon>
+		<subsection>
+			<sub_sec_name>Prelight</sub_sec_name>
+			<sub_sec_name xml:lang="bg">Осветяване</sub_sec_name>
+			<sub_sec_name xml:lang="it">Pre-illuminazione</sub_sec_name>
+			<sub_sec_name xml:lang="ja">照明</sub_sec_name>
+			<sub_sec_name xml:lang="pt">Pré-iluminação</sub_sec_name>
+			<option>
+				<name>prelight_enable</name>
+				<title>Enable</title>
+				<title xml:lang="bg">Пускане</title>
+				<title xml:lang="de">Aktivieren</title>
+				<title xml:lang="es">Activar</title>
+				<title xml:lang="fr">Activer</title>
+				<title xml:lang="it">Abilita</title>
+				<title xml:lang="ja">有効</title>
+				<title xml:lang="pt">Habilitar</title>
+				<type>bool</type>
+				<range/>
+				<default>TRUE</default>
+				<description>Enable/Disable object prelight</description>
+				<description xml:lang="bg">Пуска/Спира осветяването на обекти</description>
+				<description xml:lang="de">Aktiviert/Deaktiviert Objekt Prelight</description>
+				<description xml:lang="ja">照明の描画の有効化/無効化</description>
+			</option>
+			<option>
+				<name>prelight_rgba</name>
+				<title>Color</title>
+				<title xml:lang="bg">Цвят</title>
+				<title xml:lang="de">Farbe</title>
+				<title xml:lang="es">Color</title>
+				<title xml:lang="fr">Couleur</title>
+				<title xml:lang="it">Colore</title>
+				<title xml:lang="ja">色</title>
+				<title xml:lang="pt">Cor</title>
+				<type>char</type>
+				<range>rgba</range>
+				<default>#FFFFFF66</default>
+				<description>Color</description>
+				<description xml:lang="bg">Цвят</description>
+				<description xml:lang="de">Farbe</description>
+				<description xml:lang="es">Color</description>
+				<description xml:lang="fr">Couleur</description>
+				<description xml:lang="it">Colore</description>
+				<description xml:lang="ja">色</description>
+				<description xml:lang="pt">Cor</description>
+			</option>
+		</subsection>
+		<subsection>
+			<sub_sec_name>Reflection</sub_sec_name>
+			<sub_sec_name xml:lang="bg">Отражения</sub_sec_name>
+			<sub_sec_name xml:lang="de">Reflektion</sub_sec_name>
+			<sub_sec_name xml:lang="es">Reflejo</sub_sec_name>
+			<sub_sec_name xml:lang="fr">Réflexion</sub_sec_name>
+			<sub_sec_name xml:lang="it">Riflesso</sub_sec_name>
+			<sub_sec_name xml:lang="ja">反射</sub_sec_name>
+			<sub_sec_name xml:lang="pt">Reflexo</sub_sec_name>
+			<option>
+				<name>reflection_enable</name>
+				<title>Enable</title>
+				<title xml:lang="bg">Пускане</title>
+				<title xml:lang="de">Aktivieren</title>
+				<title xml:lang="es">Activar</title>
+				<title xml:lang="fr">Activer</title>
+				<title xml:lang="it">Abilita</title>
+				<title xml:lang="ja">有効</title>
+				<title xml:lang="pt">Habilitar</title>
+				<type>bool</type>
+				<range/>
+				<default>TRUE</default>
+				<description>Enable/Disable reflection drawing</description>
+				<description xml:lang="bg">Писка/спира рисуването на отражения</description>
+				<description xml:lang="de">Aktiviert/Deaktiviert Reflektionen auf dem Dock</description>
+				<description xml:lang="es">Activar/desactivar dibujado de reflejo</description>
+				<description xml:lang="fr">Activer/Désactiver les réflexions</description>
+				<description xml:lang="it">Abilita/Disabilita disegno del riflesso</description>
+				<description xml:lang="ja">反射の描画の有効化/無効化</description>
+				<description xml:lang="pt">Habilitar/desabilitar desenho de reflexo</description>
+			</option>
+			<option>
+				<name>reflection_alpha</name>
+				<title>Alpha</title>
+				<title xml:lang="bg">Прозрачност</title>
+				<title xml:lang="de">Transparenz</title>
+				<title xml:lang="es">Transparencia</title>
+				<title xml:lang="fr">Opacité</title>
+				<title xml:lang="it">Alpha</title>
+				<title xml:lang="ja">透明度</title>
+				<title xml:lang="pt">Transparência</title>
+				<type>double</type>
+				<range>0.0-1.0</range>
+				<default>0.6</default>
+				<description>Alpha</description>
+				<description xml:lang="bg">Прозрачност</description>
+				<description xml:lang="de">Transparenz</description>
+				<description xml:lang="es">Transparencia</description>
+				<description xml:lang="fr">Opacité</description>
+				<description xml:lang="it">Alpha</description>
+				<description xml:lang="ja">透明度</description>
+				<description xml:lang="pt">Transparência</description>
+			</option>
+			<option>
+				<name>reflection_scale_factor</name>
+				<title>Scale factor</title>
+				<title xml:lang="bg">Фактор на размера</title>
+				<title xml:lang="de">Skalierfaktor</title>
+				<title xml:lang="es">Factor de escala</title>
+				<title xml:lang="it">Fattore di Scala</title>
+				<title xml:lang="ja">大きさ</title>
+				<title xml:lang="pt">Fator de escala</title>
+				<type>double</type>
+				<range>0.1-1.0</range>
+				<default>0.75</default>
+				<description>Scale factor</description>
+				<description xml:lang="bg">Фактор на размера</description>
+				<description xml:lang="de">Skalierfaktor</description>
+				<description xml:lang="es">Factor de escala</description>
+				<description xml:lang="it">Fattore di Scala</description>
+				<description xml:lang="ja">大きさ</description>
+				<description xml:lang="pt">Fator de escala</description>
+			</option>
+		</subsection>
+		<subsection>
+			<sub_sec_name>Shadow</sub_sec_name>
+			<sub_sec_name xml:lang="bg">Сенки</sub_sec_name>
+			<sub_sec_name xml:lang="de">Schatten</sub_sec_name>
+			<sub_sec_name xml:lang="es">Sombra</sub_sec_name>
+			<sub_sec_name xml:lang="fr">Ombre</sub_sec_name>
+			<sub_sec_name xml:lang="it">Ombra</sub_sec_name>
+			<sub_sec_name xml:lang="ja">影</sub_sec_name>
+			<sub_sec_name xml:lang="pt">Sombra</sub_sec_name>
+			<option>
+				<name>shadow_enable</name>
+				<title>Enable</title>
+				<title xml:lang="bg">Пускане</title>
+				<title xml:lang="de">Aktivieren</title>
+				<title xml:lang="es">Activar</title>
+				<title xml:lang="fr">Activer</title>
+				<title xml:lang="it">Abilita</title>
+				<title xml:lang="ja">有効</title>
+				<title xml:lang="pt">Habilitar</title>
+				<type>bool</type>
+				<range/>
+				<default>FALSE</default>
+				<description>Enable/Disable object shadow</description>
+				<description xml:lang="bg">Пуска/Спира подсенчване на обектите</description>
+				<description xml:lang="de">Aktviert/Deaktiviert Objekt Schatten</description>
+				<description xml:lang="ja">影の描画の有効化/無効化</description>
+			</option>
+			<option>
+				<name>object_shadow_color</name>
+				<title>Color</title>
+				<title xml:lang="bg">Цвят</title>
+				<title xml:lang="de">Farbe</title>
+				<title xml:lang="es">Color</title>
+				<title xml:lang="fr">Couleur</title>
+				<title xml:lang="it">Colore</title>
+				<title xml:lang="ja">色</title>
+				<title xml:lang="pt">Cor</title>
+				<type>char</type>
+				<range>rgba</range>
+				<default>#00000088</default>
+				<description>Color</description>
+				<description xml:lang="bg">Цвят</description>
+				<description xml:lang="de">Farbe</description>
+				<description xml:lang="es">Color</description>
+				<description xml:lang="fr">Couleur</description>
+				<description xml:lang="it">Colore</description>
+				<description xml:lang="ja">色</description>
+				<description xml:lang="pt">Cor</description>
+			</option>
+			<option>
+				<name>object_shadow_offset</name>
+				<title>Offset</title>
+				<title xml:lang="ja">オフセット</title>
+				<type>int</type>
+				<range>0-10</range>
+				<default>5</default>
+				<description>Offset</description>
+				<description xml:lang="ja">オフセット</description>
+			</option>
+			<option>
+				<name>shadow_affection</name>
+				<title>Affection</title>
+				<title xml:lang="bg">Притегляне</title>
+				<title xml:lang="de">Winkel</title>
+				<title xml:lang="ja">効果</title>
+				<type>int</type>
+				<range>0-360</range>
+				<default>45</default>
+				<description>Affection</description>
+				<description xml:lang="bg">Притегляне</description>
+				<description xml:lang="de">Winkel</description>
+				<description xml:lang="ja">効果</description>
+			</option>
+		</subsection>
+	</section>
+</schema>

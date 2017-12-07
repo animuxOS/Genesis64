@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+    <plugin useBcop="true" name="cubecaps">
+	<short>Cube Caps</short>
+	<short xml:lang="ca">Tapes del cub</short>
+	<short xml:lang="el">Καλύματα Κύβου</short>
+	<short xml:lang="gl">Coberturas Cubo</short>
+	<short xml:lang="it">Immagini ai capi del cubo</short>
+	<short xml:lang="nb">Kubeluer</short>
+	<short xml:lang="pt">Coberturas Cubo</short>
+	<short xml:lang="tr">Küp Kapakları</short>
+	<long>Render images on top and bottom of the cube</long>
+	<long xml:lang="ca">Renderitza imatges en les cares superior i inferior del cub</long>
+	<long xml:lang="el">Απεικόνιση εικόνων πάνω και κάτω του κύβου</long>
+	<long xml:lang="gl">Mostrar imaxes nas caras de cima e de abaixo do cubo</long>
+	<long xml:lang="it">Applica delle immagini alle facce superiore e inferiore del cubo</long>
+	<long xml:lang="nb">Gjengi bilder på toppen og bunnen av kuben</long>
+	<long xml:lang="pt">Mostrar imagens nas faces de cima e de baixo do cubo</long>
+	<long xml:lang="sv">Rendererar blider på toppen och botten av kuben</long>
+	<category>Utility</category>
+	<feature>cubecaps</feature>
+	<deps>
+	    <relation type="after">
+		    <plugin>cube</plugin>
+		    <plugin>svg</plugin>
+		    <plugin>png</plugin>
+		    <plugin>imgjpeg</plugin>
+	    </relation>
+	    <requirement>
+		    <plugin>cube</plugin>
+	    </requirement>
+	</deps>
+	<display>
+	    <option type="action" name="top_next">
+		<short>Next top image</short>
+		<short xml:lang="ca">Següent imatge superior</short>
+		<short xml:lang="el">Επόμενη πάνω εικόνα</short>
+		<short xml:lang="gl">Imaxe superior seguinte</short>
+		<short xml:lang="it">Immagine superiore successiva</short>
+		<short xml:lang="nb">Neste toppbilde</short>
+		<short xml:lang="pt">Imagem superior seguinte</short>
+		<short xml:lang="sv">Nästa översida bild</short>
+		<short xml:lang="tr">Sonraki tavan resmi</short>
+		<long>Advance to next image for top face of the cube</long>
+		<long xml:lang="ca">Passa a la següent imatge per la superior inferior del cub</long>
+		<long xml:lang="el">Πέρασμα στην επόμενη εικόνα για την πάνω όψη του κύβου</long>
+		<long xml:lang="gl">Avanzar á próxima imaxe na cara de arriba do cubo.</long>
+		<long xml:lang="it">Avanza all'immagine successiva per la faccia superiore del cubo</long>
+		<long xml:lang="nb">Gå videre til neste toppbilde for kuben</long>
+		<long xml:lang="pt">Avançar para a próxima imagem na face de cima do cubo.</long>
+		<long xml:lang="sv">Byt till nästa bild för översidan av kuben</long>
+		<allowed key="true" button="true"/>
+		<passive_grab>false</passive_grab>
+		<default>
+		    <key>space</key>
+		</default>
+	    </option>
+	    <option type="action" name="top_prev">
+		<short>Prev top image</short>
+		<short xml:lang="ca">Imatge superior prèvia.</short>
+		<short xml:lang="el">Προηγούμενη κάτω εικόνα</short>
+		<short xml:lang="gl">Imaxe superior seguinte</short>
+		<short xml:lang="it">Immagine superiore precedente</short>
+		<short xml:lang="nb">Forrige toppbilde</short>
+		<short xml:lang="pt">Imagem superior seguinte</short>
+		<short xml:lang="sv">Föreg översida bild</short>
+		<short xml:lang="tr">Önceki tavan resmi</short>
+		<long>Go back to previous image for top face of the cube</long>
+		<long xml:lang="ca">Torna a la imatge anterior per la cara superior del cub</long>
+		<long xml:lang="el">Πήγαινε πίσω στη προηγούμενη εικόνα για την πάνω όψη του κύβου</long>
+		<long xml:lang="gl">Retroceder para a imaxe anterior na cara de cima do cubo.</long>
+		<long xml:lang="it">Torna all'immagine precedente per la faccia superiore del cubo</long>
+		<long xml:lang="nb">Gå tilbake til forrige bilde for toppen av kuben</long>
+		<long xml:lang="pt">Retroceder para a imagem anterior na face de cima do cubo.</long>
+		<long xml:lang="sv">Gå tillbaka till föregående bild till översidan av kuben</long>
+		<allowed key="true" button="true"/>
+		<passive_grab>false</passive_grab>
+		<default>
+		    <key>Backspace</key>
+		</default>
+	    </option>
+	    <option type="action" name="bottom_next">
+		<short>Next bottom image</short>
+		<short xml:lang="ca">Següent imatge inferior</short>
+		<short xml:lang="el">Επόμενη κάτω εικόνα</short>
+		<short xml:lang="gl">Imaxe inferior seguinte</short>
+		<short xml:lang="it">Immagine inferiore successiva</short>
+		<short xml:lang="nb">Neste bunnbilde</short>
+		<short xml:lang="pt">Imagem inferior seguinte</short>
+		<short xml:lang="sv">Nästa undersida bild</short>
+		<short xml:lang="tr">Sonraki taban resmi</short>
+		<long>Advance to next image for bottom face of the cube</long>
+		<long xml:lang="ca">Passa a la següent imatge per la cara inferior del cub</long>
+		<long xml:lang="el">Πέρασμα στην επόμενη εικόνα για την κάτω όψη του κύβου</long>
+		<long xml:lang="gl">Avanzar á próxima imaxe na cara de abaixo do cubo.</long>
+		<long xml:lang="it">Avanza all'immagine successiva per la faccia inferiore del cubo</long>
+		<long xml:lang="nb">Gå videre til neste bunnbilde for kuben</long>
+		<long xml:lang="pt">Avançar para a próxima imagem na face de baixo do cubo.</long>
+		<long xml:lang="sv">Byt till nästa bild för undersidan av kuben</long>
+		<allowed key="true" button="true"/>
+		<passive_grab>false</passive_grab>
+		<default/>
+	    </option>
+	    <option type="action" name="bottom_prev">
+		<short>Prev bottom image</short>
+		<short xml:lang="ca">Imatge inferior prèvia.</short>
+		<short xml:lang="el">Προηγούμενη κάτω εικόνα</short>
+		<short xml:lang="gl">Imaxe inferior anterior</short>
+		<short xml:lang="it">Immagine inferiore precedente</short>
+		<short xml:lang="nb">Forrige bunnbilde</short>
+		<short xml:lang="pt">Imagem inferior anterior</short>
+		<short xml:lang="sv">Föreg undersida bild</short>
+		<short xml:lang="tr">Önceki taban resmi</short>
+		<long>Go back to previous image for bottom face of the cube</long>
+		<long xml:lang="ca">Torna a la imatge anterior per la cara inferior del cub</long>
+		<long xml:lang="el">Πήγαινε πίσω στη προηγούμενη εικόνα για την κάτω όψη του κύβου</long>
+		<long xml:lang="gl">Retroceder para a imaxe anterior na cara de abaixo do cubo.</long>
+		<long xml:lang="it">Torna all'immagine precedente per la faccia inferiore del cubo</long>
+		<long xml:lang="nb">Gå tilbake til forrige bilde for bunnen av kuben</long>
+		<long xml:lang="pt">Retroceder para a imagem anterior na face de baixo do cubo.</long>
+		<long xml:lang="sv">Gå tillbaka till föregående bild till undersidan av kuben</long>
+		<allowed key="true" button="true"/>
+		<passive_grab>false</passive_grab>
+		<default/>
+	    </option>
+	</display>
+	<screen>
+	    <group>
+		<short>Behaviour</short>
+		<short xml:lang="ca">Comportament</short>
+		<short xml:lang="de">Verhalten</short>
+		<short xml:lang="el">Συμπεριφορά</short>
+		<short xml:lang="fr">Comportement</short>
+		<short xml:lang="gl">Comportamento</short>
+		<short xml:lang="it">Comportamento</short>
+		<short xml:lang="ja">動作</short>
+		<short xml:lang="nb">Oppførsel</short>
+		<short xml:lang="pl">Zachowanie</short>
+		<short xml:lang="pt">Comportamento</short>
+		<short xml:lang="sv">Beteende</short>
+		<short xml:lang="tr">Davranış</short>
+		<short xml:lang="zh_CN">行为</short>
+		<option type="bool" name="draw_top">
+		    <short>Draw top face</short>
+		    <short xml:lang="ca">Dibuixa la cara superior</short>
+		    <short xml:lang="el">Ζωγράφισε πάνω όψη</short>
+		    <short xml:lang="gl">Deseñar cara superior</short>
+		    <short xml:lang="it">Disegnare la faccia superiore</short>
+		    <short xml:lang="nb">Tegn topp</short>
+		    <short xml:lang="pt">Desenhar face superior</short>
+		    <short xml:lang="sv">Rita översida</short>
+		    <short xml:lang="tr">Üst kapağı oluştur</short>
+		    <long>Draw top face of the cube</long>
+		    <long xml:lang="ca">Dibuixa la cara superior del cub</long>
+		    <long xml:lang="el">Ζωγράφισε πάνω όψη του κύβου</long>
+		    <long xml:lang="gl">Deseñar cara superior do cubo</long>
+		    <long xml:lang="it">Disegna la faccia superiore del cubo</long>
+		    <long xml:lang="nb">Tegn toppen på kuben</long>
+		    <long xml:lang="pt">Desenhar face superior do cubo</long>
+		    <long xml:lang="sv">Ritar översidan av kuben</long>
+		    <long xml:lang="tr">Küpün üst kapağını oluştur</long>
+		    <default>true</default>
+		</option>
+		<option type="bool" name="draw_bottom">
+		    <short>Draw bottom face</short>
+		    <short xml:lang="ca">Dibuixa la cara inferior</short>
+		    <short xml:lang="el">Ζωγράφισε κάτω όψη</short>
+		    <short xml:lang="gl">Deseñar cara inferior</short>
+		    <short xml:lang="it">Disegnare la faccia inferiore</short>
+		    <short xml:lang="nb">Tegn bunn</short>
+		    <short xml:lang="pt">Desenhar face inferior</short>
+		    <short xml:lang="sv">Rita undersida</short>
+		    <short xml:lang="tr">Alt kapağı oluştur</short>
+		    <long>Draw bottom face of the cube</long>
+		    <long xml:lang="ca">Dibuixa la cara de sota del cub</long>
+		    <long xml:lang="el">Ζωγράφισε κάτω όψη του κύβου</long>
+		    <long xml:lang="gl">Deseñar cara inferior do cubo</long>
+		    <long xml:lang="it">Disegna la faccia inferiore del cubo</long>
+		    <long xml:lang="nb">Tegn bunnen på kuben</long>
+		    <long xml:lang="pt">Desenhar face inferior do cubo</long>
+		    <long xml:lang="sv">Ritar undersidan av kuben</long>
+		    <long xml:lang="tr">Küpün alt kapağını oluştur</long>
+		    <default>true</default>
+		</option>
+		<option type="bool" name="adjust_top">
+		    <short>Adjust top image</short>
+		    <short xml:lang="ca">Ajusta la imatge superior</short>
+		    <short xml:lang="el">Προσαρμογή πάνω εικόνας</short>
+		    <short xml:lang="gl">Axustar imaxe da cara superior</short>
+		    <short xml:lang="it">Regola immagine superiore</short>
+		    <short xml:lang="nb">Juster toppbilde</short>
+		    <short xml:lang="pt">Ajustar imagem da face superior</short>
+		    <short xml:lang="sv">Justera bilden på översidan</short>
+		    <long>Adjust top face image to rotation</long>
+		    <long xml:lang="ca">Ajusta la imatge superior a la rotació</long>
+		    <long xml:lang="el">Προσαρμογή εικόνας πάνω όψης για περιστροφή</long>
+		    <long xml:lang="gl">Axustar imaxe da cara superior para rotación</long>
+		    <long xml:lang="it">Regola immagine faccia superiore alla rotazione</long>
+		    <long xml:lang="nb">Juster toppbilde til rotasjon</long>
+		    <long xml:lang="pt">Ajustar imagem da face superior para rotação</long>
+		    <long xml:lang="sv">Justera bilden på översidan till rotation</long>
+		    <default>false</default>
+		</option>
+		<option type="bool" name="adjust_bottom">
+		    <short>Adjust bottom image</short>
+		    <short xml:lang="ca">Ajusta la imatge inferior</short>
+		    <short xml:lang="el">Προσαρμογή κάτω εικόνας</short>
+		    <short xml:lang="gl">Axustar imaxe da cara superior</short>
+		    <short xml:lang="it">Regolare immagine inferiore</short>
+		    <short xml:lang="nb">Juster bunnbilde</short>
+		    <short xml:lang="pt">Ajustar imagem da face superior</short>
+		    <short xml:lang="sv">Justera bilden på undersidan</short>
+		    <long>Adjust bottom face image to rotation</long>
+		    <long xml:lang="ca">Ajusta la imatge de la cara inferior a la rotació</long>
+		    <long xml:lang="el">Προσαρμογή εικόνα κάτω όψης για περιστροφή</long>
+		    <long xml:lang="gl">Axustar imaxe da cara inferior para rotación</long>
+		    <long xml:lang="it">Regola immagine faccia inferiore alla rotazione</long>
+		    <long xml:lang="nb">Juster bunnbilde til rotasjon</long>
+		    <long xml:lang="pt">Ajustar imagem da face inferior para rotação</long>
+		    <long xml:lang="sv">Justera bilden på undersidan till rotation</long>
+		    <default>false</default>
+		</option>
+		<option type="bool" name="scale_top_image">
+		    <short>Scale top image</short>
+		    <short xml:lang="ca">Escala la imatge superior</short>
+		    <short xml:lang="el">Κλιμάκωση πάνω εικόνας</short>
+		    <short xml:lang="gl">Escalar imaxe superior</short>
+		    <short xml:lang="it">Scala immagine superiore</short>
+		    <short xml:lang="nb">Skaler toppbilde</short>
+		    <short xml:lang="pt">Escalar imagem superior</short>
+		    <short xml:lang="sv">Skala bilden på översidan</short>
+		    <long>Scale image to cover top face of cube</long>
+		    <long xml:lang="ca">Escala la imatge per cobrir la cara superior del cub</long>
+		    <long xml:lang="el">Κλιμάκωση εικόνας ωστε να καλύπτει την πάνω όψη του κύβου</long>
+		    <long xml:lang="gl">Escalar imaxe para cobrir a cara superior do cubo</long>
+		    <long xml:lang="it">Scala l'immagine in modo da coprire la faccia superiore del cubo</long>
+		    <long xml:lang="nb">Skaler bilde til å dekke toppen av kuben</long>
+		    <long xml:lang="pt">Escalar imagem para cobrir a face superior do cubo</long>
+		    <long xml:lang="sv">Skala bilden så den täcker översidan av kuben</long>
+		    <default>false</default>
+		</option>
+		<option type="bool" name="scale_bottom_image">
+		    <short>Scale bottom image</short>
+		    <short xml:lang="ca">Escala la imatge inferior</short>
+		    <short xml:lang="el">Κλιμάκωση κάτω εικόνας</short>
+		    <short xml:lang="gl">Escalar imaxe inferior</short>
+		    <short xml:lang="it">Scalare immagine inferiore</short>
+		    <short xml:lang="nb">Skaler bunnbilde</short>
+		    <short xml:lang="pt">Escalar imagem inferior</short>
+		    <short xml:lang="sv">Skala bilden på undersidan</short>
+		    <long>Scale image to cover bottom face of cube</long>
+		    <long xml:lang="ca">Escala la imatge per cobrir la cara inferior del cub</long>
+		    <long xml:lang="el">Κλιμάκωση εικόνας ωστε να καλύπτει την κάτω όψη του κύβου</long>
+		    <long xml:lang="gl">Escalar imaxe para cobrir a cara inferior do cubo</long>
+		    <long xml:lang="it">Scala l'immagine in modo da coprire la faccia inferiore del cubo</long>
+		    <long xml:lang="nb">Skaler bilde til å dekke bunnen av kuben</long>
+		    <long xml:lang="pt">Escalar imagem para cobrir a face inferior do cubo</long>
+		    <long xml:lang="sv">Skala bilden så den täcker undersidan av kuben</long>
+		    <default>false</default>
+		</option>
+		<option type="bool" name="clamp_top_to_border">
+		    <short>Clamp top face image to border</short>
+		    <short xml:lang="el">Συρρίκνωση εικόνας πάνω όψης στα όρια</short>
+		    <short xml:lang="gl">Cortar imaxe da cara superior nas marxes</short>
+		    <short xml:lang="it">Bloccare l'immagine superiore al bordo</short>
+		    <short xml:lang="nb">Hold toppbilde fast til kanten</short>
+		    <short xml:lang="pt">Cortar imagem da face superior nas margens</short>
+		    <short xml:lang="sv">Spänn fast översidans bild till kanten</short>
+		    <long>Clamp top face image to border. This is often the best if your image doesn't fit the size of the cube or if it's transparent. It can lead to some ugly dotted lines when enabled (especially with large enough images) though.</long>
+		    <long xml:lang="el">Συρρίκνωση εικόνας πάνω όψης στα όρια. Είναι συχνά το καλύτερο αν η εικόνα σας δεν ταιριάζει στο μέγεθος του κύβου ή είναι διάφανη. Μπορεί να οδηγήσει σε ορισμένες άσχημες γραμμές όταν ενεργοποιηθεί (ειδικά σε αρκετά μεγάλες εικόνες) όμως.</long>
+		    <long xml:lang="gl">Cortar imaxe da cara de cima nas marxes. Esta opción é moitas veces amellor se a súa imaxe non cabe no cubo, ou se é transparente. Sen embargo, pode orixinar algunhas liñas punteadas cando activa (especialmente con  imaxes bastante grandes) .</long>
+		    <long xml:lang="it">Blocca l'immagine della faccia superiore al bordo. È l'opzione raccomandata se l'immagine non è della dimensione del cubo o se è trasparente. Può però causare la presenza di alcune righe di puntini.</long>
+		    <long xml:lang="nb">Hold toppbildet fast i kanten. Dette er ofte det beste hvis bildet ditt ikke passer til størrelsen på kuben, eller er gjennomsiktig. Det kan likevel føre til noen stygge prikkede linjer når det brukes (spesielt ved store nok bilder).</long>
+		    <long xml:lang="pt">Cortar imagem da face de cima nas margens. Esta opção é muitas vezes a melhor se a sua imagem não cabe no cubo, ou se é transparente. No entanto, pode originar algumas linhas ponteadas quando activa (especialmente com imagens bastante grandes).</long>
+		    <long xml:lang="sv">Spänn fast översidans bild till kanten. Detta är oftast det bästa om din bildinte passar till storleken på kuben eller om den är genomskinlig. Det kan ledatill fula prickade linjer (speciellt med tillräckligt stor bilder).</long>
+		    <default>true</default>
+		</option>
+		<option type="bool" name="clamp_bottom_to_border">
+		    <short>Clamp bottom face image to border</short>
+		    <short xml:lang="el">Συρρίκνωση εικόνας κάτω όψης στα όρια</short>
+		    <short xml:lang="gl">Cortar imaxe da cara de abaixo nas marxes</short>
+		    <short xml:lang="it">Bloccare l'immagine inferiore al bordo</short>
+		    <short xml:lang="nb">Hold bunnbilde fast til kanten</short>
+		    <short xml:lang="pt">Cortar imagem da face de baixo nas margens</short>
+		    <long>Clamp bottom face image to border. This is often the best if your image doesn't fit the size of the cube or if it's transparent. It can lead to some ugly dotted lines when enabled (especially with large enough images) though.</long>
+		    <long xml:lang="el">Συρρίκνωση εικόνας κάτω όψης στα όρια. Είναι συχνά το καλύτερο αν η εικόνα σας δεν ταιριάζει στο μέγεθος του κύβου ή είναι διάφανη. Μπορεί να οδηγήσει σε ορισμένες άσχημες γραμμές όταν ενεργοποιηθεί (ειδικά σε αρκετά μεγάλες εικόνες) όμως.</long>
+		    <long xml:lang="gl">Cortar imaxe da cara de abaixo nas marxes. Esta opción é moitas veces amellor se a súa imaxe non cabe no cubo, ou se é transparente. Sen embargo, pode orixinar algunhas liñas punteadas cando activa (especialmente con  imaxes bastante grandes) .</long>
+		    <long xml:lang="it">Blocca l'immagine della faccia inferiore al bordo. È l'opzione raccomandata se l'immagine non è della dimensione del cubo o se è trasparente. Può però causare la presenza di alcune righe di puntini.</long>
+		    <long xml:lang="nb">Hold bunnbildet fast i kanten. Dette er ofte det beste hvis bildet ditt ikke passer til størrelsen på kuben, eller er gjennomsiktig. Det kan likevel føre til noen stygge prikkede linjer når det brukes (spesielt ved store nok bilder).</long>
+		    <long xml:lang="pt">Cortar imagem da face de baixo nas margens. Esta opção é muitas vezes a melhor se a sua imagem não cabe no cubo, ou se é transparente. No entanto, pode originar algumas linhas ponteadas quando activa (especialmente com imagens bastante grandes).</long>
+		    <long xml:lang="sv">Spänn fast undersidans bild till kanten. Detta är oftast det bästa om din bildinte passar till storleken på kuben eller om den är genomskinlig. Det kan ledatill fula prickade linjer (speciellt med tillräckligt stor bilder).</long>
+		    <default>true</default>
+		</option>
+	    </group>
+	    <group>
+		<short>Appearance</short>
+		<short xml:lang="ca">Aparença</short>
+		<short xml:lang="de">Aussehen</short>
+		<short xml:lang="el">Εμφάνιση</short>
+		<short xml:lang="fr">Apparence</short>
+		<short xml:lang="gl">Aparencia</short>
+		<short xml:lang="it">Aspetto</short>
+		<short xml:lang="ja">見え方</short>
+		<short xml:lang="nb">Utseende</short>
+		<short xml:lang="pl">Wygląd</short>
+		<short xml:lang="pt">Aparência</short>
+		<short xml:lang="sv">Utseende</short>
+		<short xml:lang="tr">Görünüm</short>
+		<short xml:lang="zh_CN">外观</short>
+		<option type="color" name="top_color">
+		    <short>Cube Top Color</short>
+		    <short xml:lang="ca">Color superior del cub</short>
+		    <short xml:lang="el">Πάνω Χρώμα Κύβου</short>
+		    <short xml:lang="gl">Cor Face Superior Cubo</short>
+		    <short xml:lang="it">Colore superiore del cubo</short>
+		    <short xml:lang="nb">Kubens toppfarge</short>
+		    <short xml:lang="pt">Cor Face Superior Cubo</short>
+		    <short xml:lang="sv">Färgen på kubens översida</short>
+		    <short xml:lang="tr">Küp Üst Rengi</short>
+		    <long>Color of top face of the cube</long>
+		    <long xml:lang="ca">Color de la cara superior del cub</long>
+		    <long xml:lang="el">Χρώμα πάνω όψης του κύβου.</long>
+		    <long xml:lang="gl">Cor da cara superior do cubo</long>
+		    <long xml:lang="it">Colore della faccia superiore del cubo</long>
+		    <long xml:lang="nb">Farge på toppen av kuben</long>
+		    <long xml:lang="pt">Cor da face superior do cubo</long>
+		    <long xml:lang="sv">Färgen på toppytan av kuben</long>
+		    <default>
+			<red>0x0000</red>
+			<green>0x0000</green>
+			<blue>0x0000</blue>
+		    </default>
+		</option>
+		<option type="color" name="bottom_color">
+		    <short>Cube Bottom Color</short>
+		    <short xml:lang="ca">Color inferior del cub</short>
+		    <short xml:lang="el">Κάτω Χρώμα Κύβου</short>
+		    <short xml:lang="gl">Cor Face Inferior Cubo</short>
+		    <short xml:lang="it">Colore inferiore del cubo</short>
+		    <short xml:lang="nb">Kubens bunnfarge</short>
+		    <short xml:lang="pt">Cor Face Inferior Cubo</short>
+		    <short xml:lang="sv">Färgen på kubens undersidan</short>
+		    <short xml:lang="tr">Küp Alt Rengi</short>
+		    <long>Color of bottom face of the cube</long>
+		    <long xml:lang="ca">Color de la cara inferior del cub</long>
+		    <long xml:lang="el">Χρώμα κάτω όψης του κύβου.</long>
+		    <long xml:lang="gl">Cor da cara inferior do cubo</long>
+		    <long xml:lang="it">Colore della faccia inferiore del cubo</long>
+		    <long xml:lang="nb">Farge på bunnen av kuben</long>
+		    <long xml:lang="pt">Cor da face inferior do cubo</long>
+		    <long xml:lang="sv">Färgen på bottenytan av kuben</long>
+		    <default>
+			<red>0x0000</red>
+			<green>0x0000</green>
+			<blue>0x0000</blue>
+		    </default>
+		</option>
+		<option type="list" name="top_images">
+		    <short>Top image files</short>
+		    <short xml:lang="ca">Arxius de les imatges superiors</short>
+		    <short xml:lang="el">Αρχεία πάνω εικόνας</short>
+		    <short xml:lang="gl">icheiros coas imaxes para cara superior</short>
+		    <short xml:lang="it">File immagine superiore</short>
+		    <short xml:lang="nb">Toppbildefiler</short>
+		    <short xml:lang="pt">icheiros com as imagens para face superior</short>
+		    <short xml:lang="sv">Översidas bildfiler</short>
+		    <long>List of PNG and SVG files that should be rendered on top face of cube</long>
+		    <long xml:lang="ca">Llista d'arxius PNG i SVG que s'han de renderitzar a la tapa superior del cub</long>
+		    <long xml:lang="el">Λίστα των PNG και SVG αρχείων που πρέπει να απεικονιστούν στην πάνω όψη του κύβου</long>
+		    <long xml:lang="gl">Lista de arquivos PNG e SVG que deben ser renderizados na cara superior do cubo</long>
+		    <long xml:lang="it">Elenco di file PNG e SVG da usare per la faccia superiore del cubo</long>
+		    <long xml:lang="nb">Liste med PNG- og SVG-filer som skal gjengis på toppen av kuben</long>
+		    <long xml:lang="pt">Lista de arquivos PNG e SVG que devem ser renderizados na face superior do cubo</long>
+		    <long xml:lang="sv">Lista på PNG och SVG filer som ska bli rendererade på översidan av kuben</long>
+		    <type>string</type>
+		    <default>
+			<value>animux-cubecap.png</value>
+		    </default>
+		    <hints>file;image;</hints>
+		</option>
+		<option type="list" name="bottom_images">
+		    <short>Bottom image files</short>
+		    <short xml:lang="ca">Arxius de les imatges inferiors</short>
+		    <short xml:lang="el">Αρχεία κάτω εικόνας </short>
+		    <short xml:lang="gl">Ficheiros coas imaxes para cara inferior</short>
+		    <short xml:lang="it">File immagine inferiore</short>
+		    <short xml:lang="nb">Bunnbildefiler</short>
+		    <short xml:lang="pt">Ficheiros com as imagens para face inferior</short>
+		    <short xml:lang="tr">Alt resim dosyaları</short>
+		    <long>List of PNG and SVG files that should be rendered on bottom face of cube</long>
+		    <long xml:lang="ca">Llista d'arxius PNG i SVG que s'han de renderitzar a la tapa inferior del cub</long>
+		    <long xml:lang="el">Λίστα των PNG και SVG αρχείων που πρέπει να απεικονιστούν στην κάτω όψη του κύβου</long>
+		    <long xml:lang="gl">Lista de arquivos PNG e SVG que deben ser renderizados na cara inferior do cubo</long>
+		    <long xml:lang="it">Elenco di file PNG e SVG da usare per la faccia inferiore del cubo</long>
+		    <long xml:lang="nb">Liste med PNG- og SVG-filer som skal gjengis på bunnen av kuben</long>
+		    <long xml:lang="pt">Lista de arquivos PNG e SVG que devem ser renderizados na face inferior do cubo</long>
+		    <long xml:lang="sv">Lista på PNG och SVG filer som ska bli rendererade på undersidan av kuben</long>
+		    <type>string</type>
+		    <default>
+			<value>animux-cubecap.png</value>
+		    </default>
+		    <hints>file;image;</hints>
+		</option>
+	    </group>
+	</screen>
+    </plugin>
+</compiz>

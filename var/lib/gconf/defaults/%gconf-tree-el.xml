@@ -1,0 +1,926 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="Αν θα είναι ενεργοποιημένο το gnome-keyring PKCS#11 component">
+                                                        <longdesc>Αυτή η επιλογή ενεργοποιεί το  PKCS#11 component στο gnome-keyring daemon. Πραγματοποιείται μόνο όταν ξεκινάει ο  gnome-keyring-daemon, (δηλ. όταν ο χρήστης συνδέεται). Αυτή η ρύθμιση μπορεί να παρακαμθεί με συγκεκριμένες εντολές στην γραμμή εντολών στο daemon.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="Αν ο gnome-keyring SSH agent θα είναι ενεργοποιημένος.">
+                                                        <longdesc>Αυτή η επιλογή ενεργοποιεί τον SSH agent στο gnome-keyring daemon. Πραγματοποιείται μόνο όταν ξεκινάει ο  gnome-keyring-daemon, (δηλ. όταν ο χρήστης συνδέεται). Αυτή η ρύθμιση μπορεί να παρακαμθεί με συγκεκριμένες εντολές στην γραμμή εντολών στο daemon.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Πλάτος του παραθύρου">
+                                                        <longdesc>Πλάτος του παραθύρου που θα προβληθεί</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Ύψος του παραθύρου">
+                                                        <longdesc>Ύψος του παραθύρου που θα προβληθεί</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Εντολές που εκτελούνται σε αντιστοίχιση με  συνδυασμούς πλήκτρων">
+                                                        <longdesc>Τα κλειδιά /apps/metacity/global_keybindings/run_command_N ορίζουν τους συνδυασμούς πλήκτρων που αντιστοιχούν σε αυτές τις εντολές. Πιέζοντας το συνδυασμό για run_command_N θα εκτελείται η εντολή_Ν.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Η εντολή λήψης στιγμιότυπου παραθύρου">
+                                                        <longdesc>Το κλειδί /apps/metacity/global_keybindings/run_command_window_screenshotορίζει το συνδυασμό πλήκτρων που αντιστοιχεί σε αυτή την εντολή.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Η εντολή λήψης στιγμιότυπου οθόνης">
+                                                        <longdesc>Το κλειδί /apps/metacity/global_keybindings/run_command_screenshot ορίζει το συνδυασμό πλήκτρων που αντιστοιχεί σε αυτή την εντολή.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Εκτέλεση μιας ορισμένης εντολής φλοιού">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Εκτέλεση ενός τερματικού">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Λήψη στιγμιότυπου ενός παραθύρου">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Λήψη στιγμιότυπου οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Εμφάνιση του διαλόγου εκτέλεσης πίνακα εφαρμογών">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Εμφάνιση του μενού του πίνακα εφαρμογών">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Αλλαγή σε χώρο εργασίας κάτω από τον τρέχοντα χώρο εργασίας">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Αλλαγή σε χώρο εργασίας πάνω από τον τρέχοντα χώρο εργασίας">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Αλλαγή στο χώρο εργασίας στα δεξιά.">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Αλλαγή στο χώρο εργασίας στα αριστερά">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Αλλαγή στο χώρο εργασίας 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Αλλαγή στο χώρο εργασίας 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Αλλαγή στο χώρο εργασίας 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Αλλαγή στο χώρο εργασίας 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Αλλαγή στο χώρο εργασίας 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Αλλαγή στο χώρο εργασίας 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Αλλαγή στο χώρο εργασίας 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Αλλαγή στο χώρο εργασίας 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Αλλαγή στο χώρο εργασίας 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Αλλαγή στο χώρο εργασίας 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Αλλαγή στο χώρο εργασίας 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Αλλαγή στο χώρο εργασίας 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Απόκρυψη όλων των παραθύρων και εστίαση επιφάνεια εργασίας">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Άμεση μετακίνηση προς τα πίσω ανάμεσα στους πίνακες εφαρμογών και στην επιφάνεια εργασίας.">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Άμεση μετακίνηση ανάμεσα στους πίνακες εφαρμογών και στην επιφάνεια εργασίας">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Άμεση μετακίνηση προς τα πίσω ανάμεσα σε παράθυρα">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Άμεση μετακίνηση ανάμεσα σε παράθυρα">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Μετακίνηση προς τα πίσω ανάμεσα στα παράθυρα μιας εφαρμογής τη χρήση αναδυόμενης οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Μετακίνηση ανάμεσα σε παράθυρα μιας εφαρμογής με τη χρήση αναδυόμενης οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Άμεση μετακίνηση προς τα πίσω ανάμεσα σε παράθυρα μιας εφαρμογής">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Άμεση μετακίνηση ανάμεσα σε παράθυρα μιας εφαρμογής">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Μετακίνηση προς τα πίσω ανάμεσα στους πίνακες εφαρμογών και την επιφάνεια εργασίας με τη χρήση αναδυόμενης οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Μετακίνηση ανάμεσα στους πίνακες εφαρμογών και στην επιφάνεια εργασίας με τη χρήση αναδυόμενης οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Μετακίνηση εστίασης προς τα πίσω ανάμεσα στα παράθυρα με τη χρήση αναδυόμενης οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Μετακίνηση ανάμεσα σε παράθυρα με τη χρήση αναδυόμενης οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στην δυτική πλευρά της οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στην ανατολική πλευρά της οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στη νότια πλευρά της οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στην βόρεια πλευρά της οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στην νοτιοανατολική πλευρά της οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στην νοτιοδυτική πλευρά της οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στην βορειοανατολική πλευρά της οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στην βορειοδυτική πλευρά της οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Μεγιστοποίηση ενός παραθύρου οριζόντια">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Μεγιστοποίηση ενός παραθύρου κάθετα">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Χαμήλωμα παραθύρου κάτω από τα άλλα παράθυρα">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Ανάδυση παραθύρου πάνω από τα άλλα παράθυρα">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Ανασήκωση παραθύρων αν είναι κρυμμένο, αλλιώς χαμήλωμα του">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Μετακίνηση του παραθύρου ένα χώρο εργασίας κάτω">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Μετακίνηση του παραθύρου ένα χώρο εργασίας πάνω">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Μετακίνηση του παραθύρου ένα χώρο εργασίας δεξιά">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Μετακίνηση του παραθύρου ένα χώρο εργασίας αριστερά">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στο χώρο εργασίας 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στο χώρο εργασίας 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στο χώρο εργασίας 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στο χώρο εργασίας 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στο χώρο εργασίας 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στο χώρο εργασίας 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στο χώρο εργασίας 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στο χώρο εργασίας 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στο χώρο εργασίας 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στο χώρο εργασίας 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στο χώρο εργασίας 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου στο χώρο εργασίας 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Εναλλαγή παράθυρου σε όλους τους χώρους εργασίας">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Αλλαγή μεγέθους παραθύρου">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Μετακίνηση παραθύρου">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Ελαχιστοποίηση παραθύρου">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Κλείσιμο παραθύρου">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Εναλλαγή σκιασμένης κατάστασης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Απομεγιστοποίηση παραθύρου">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Μεγιστοποίηση παραθύρου">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Εναλλαγή  κατάστασης μεγιστοποίησης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Εναλλαγή πάντοτε σε κατάσταση επικάλυψης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Εναλλαγή κατάστασης πλήρους οθόνης">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Ενεργοποίηση μενού παραθύρου">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Όνομα χώρου εργασίας">
+                                                        <longdesc>Το όνομα του χώρου εργασίας.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Απενεργοποίηση κακών λειτουργιών που απαιτούνται από παλιές η χαλασμένες εφαρμογές">
+                                                        <longdesc>Some applications disregard specifications in ways that result in window manager misfeatures. This option puts Metacity in a rigorously correct mode, which gives a more consistent user interface, provided one does not need to run any misbehaving applications.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Δεν εφαρμόζεται) Η πλοήγηση λειτουργεί με όρους εφαρμογών και όχι παραθύρων">
+                                                        <longdesc>Αν true, τότε το  Metacity  δουλεύει με όρους εφαρμογών αντί για παραθύρων. Η ιδέα είναι λίγο αφηρημένη αλλά σε γενικές γραμμές μια εγκατάσταση βασισμένη σε εφαρμογές μοιάζει περισσότερο σε Mac και λιγότερο σε  Windows. Όταν εστιάζετε σε ένα παράθυρο σε λειτουργία βασισμένη σε εφαρμογές, τα κλικ εστίασης δε μεταβιβάζονται μέσα από παράθυρα σε άλλες εφαρμογές. Η ύπαρξη αυτής της ρύθμισης είναι βέβαια κάπως συζητήσιμη. Αλλά είναι καλύτερα να υπάρχουν ρυθμίσεις για όλες τις λεπτομέρειες. Ακόμα η λειτουργία βασισμένη σε εφαρμογές δεν έχει εφαρμοστεί ακόμα σε μεγάλο βαθμό.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="An true, ανταλλαγή χρηστικότητας για λιγότερη χρήση πόρων">
+                                                        <longdesc>Αν true, το metacity θα δίνει στο χρήστη λιγότερη ανάδραση και λιγότερη αίσθηση &quot;άμεσων χειρισμών&quot; με τη χρήση wireframes και την αποφυγή κινήσεων. Αυτή είναι μια σημαντική παραχώρηση στη χρηστικότητα για πολλούς χρήστες αλλά θα επιτρέψει σε εφαρμογές legacy και εξυπηρετητές τερματικού να λειτουργήσουν εκεί που δεν μπορούσαν πριν.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="Διαχειριστής Compositing">
+                                                        <longdesc>Καθορίζει αν το Metacity είναι ένας διαχειριστής compositing</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Οπτικό είδος κουδουνιού">
+                                                        <longdesc>Επικοινωνεί με το Metacity για τον τρόπο με τον οποίο θα εφαρμόζεται η οπτική ένδειξη του οπτικού κουδουνιού. Αυτή τη στιγμή υπάρχουν δύο έγκυρες τιμές &quot;πλήρης οθόνη&quot;, που δημιουργεί ένα ασπρόμαυρο φλάς σε πλήρη οθόνη, και  &quot;φλάς-πλαισίου&quot; που δημιουργεί ένα ένα αναβόσβημα του τίτλου της εφαρμογής που έστειλε το κουδούνισμα. Αν η εφαρμογή που έστειλε το κουδούνισμα είναι άγνωστη (όπως συνήθως συμβαίνει για το προεπιλεγμένο &quot;μπιπ συστήματος&quot;) αναβοσβήνει η μπάρα τίτλου του εστιαζόμενου εκείνη τη στιγμή παραθύρου.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Το κουδούνι συστήματος είναι ενεργό">
+                                                        <longdesc>Καθορίζει αν οι εφαρμογές ή το σύστημα θα δημιουργούν ήχους &apos;μπιπ&apos;, μπορεί να χρησιμοποιηθεί σε συνδυασμό με το &apos;οπτικό κουδούνι&apos; για να επιτρέπει ήσυχα &apos;μπιπ&apos;.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Ενεργοποίηση οπτικού κουδουνιού">
+                                                        <longdesc>Ενεργοποιεί μια οπτική ένδειξη για το πότε η εφαρμογή ή το σύστημα στέλνει ένα &apos;κουδούνισμα&apos; ή &apos;μπιπ&apos;. Είναι χρήσιμο για όσους έχουν προβλήματα ακοής ή για όσους εργάζονται σε θορυβώδες περιβάλλον.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Αριθμός χώρων εργασίας">
+                                                        <longdesc>Αριθμός των χώρων εργασίας. Πρέπει να είναι παραπάνω από μηδέν, και έχει ένα καθορισμένο μέγιστο όριο  (ώστε να αποφευχθεί τυχαία καταστροφή της επιφάνειας εργασίας με καθορισμό εξωφρενικά πολλών χώρων εργασίας).</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Γραμματοσειρά τίτλου παραθύρου">
+                                                        <longdesc>Ένα αλφαριθμητικό περιγραφής που περιγράφει τη γραμματοσειρά της μπάρας τίτλου παραθύρου. Το μέγεθος από την περιγραφή θα χρησιμοποιείται μόνο αν η επιλογή μεγέθους γραμματοσειράς είναι 0. Ακόμα, αυτή η επιλογή απενεργοποιείται αν η επιλογή titlebar_uses_desktop_font είναι true.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Χρήση κανονικής γραμματοσειράς συστήματος στους τίτλους παραθύρων.">
+                                                        <longdesc>Αν true, αγνοείται την επιλογή γραμματοσειράς μπάρας τίτλου, και γίνεται χρήση των καθορισμένων γραμματοσειρών για τους τίτλους παραθύρων.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Τρέχον θέμα">
+                                                        <longdesc>Το θέμα καθορίζει την εμφάνιση των περιγραμμάτων παραθύρου, μπάρας τίτλου κτλ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Καθυστέρηση σε ms πριν την αυτόματη ανασήκωση παραθύρων">
+                                                        <longdesc>Η χρονική καθυστέρηση πριν την ανάδυση ενός παραθύρου αν το  auto_raise είναι true. Η καθυστέρηση δίνεται σε χιλιοστά του δευτερολέπτου.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Αυτόματη ανασήκωση του εστιασμένου παράθυρου">
+                                                        <longdesc>If set to true, and the focus mode is either &quot;sloppy&quot; or &quot;mouse&quot; then the focused window will be automatically raised after a delay specified by the auto_raise_delay key. This is not related to clicking on a window to raise it, nor to entering a window during drag-and-drop.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="Ενέργεια κατά το δεξί κλικ στη μπάρα τίτλου">
+                                                        <longdesc>Αυτή η επιλογή καθορίζει τα αποτελέσματα του δεξιού κλικ στη μπάρα τίτλου. Οι τρέχουσες έγκυρες επιλογές είναι &apos;εναλλαγή_σκίαση&apos;, που θα σκιάζει/αποσκιάζει το παράθυρο, &apos;εναλλαγή_μεγιστοποίηση&apos; που θα μεγιστοποιεί/απομεγιστοποεί το παράθυρο, &apos;ελαχιστοποίηση&apos; που θα ελαχιστοποιεί το παράθυρο, και &apos;καμία&apos; που δεν θα κάνει τίποτα.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="Ενέργεια κατά το μεσαίο κλικ στη μπάρα τίτλου">
+                                                        <longdesc>Αυτή η επιλογή καθορίζει τα αποτελέσματα του μεσαίου κλικ στη μπάρα τίτλου. Οι τρέχουσες έγκυρες επιλογές είναι &apos;εναλλαγή_σκίαση&apos;, που θα σκιάζει/αποσκιάζει το παράθυρο, &apos;εναλλαγή_μεγιστοποίηση&apos; που θα μεγιστοποιεί/απομεγιστοποεί το παράθυρο, &apos;ελαχιστοποίηση&apos; που θα ελαχιστοποιεί το παράθυρο, και &apos;καμία&apos; που δεν θα κάνει τίποτα.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Ενέργεια κατά το διπλό κλικ στη μπάρα τίτλου">
+                                                        <longdesc>Αυτή η επιλογή καθορίζει τα αποτελέσματα του διπλού κλικ στη μπάρα τίτλου. Οι τρέχουσες έγκυρες επιλογές είναι &apos;εναλλαγή_σκίαση&apos;, που θα σκιάζει/αποσκιάζει το παράθυρο, &apos;εναλλαγή_μεγιστοποίηση&apos; που θα μεγιστοποιεί/απομεγιστοποεί το παράθυρο, &apos;ελαχιστοποίηση&apos; που θα ελαχιστοποιεί το παράθυρο, και &apos;καμία&apos; που δεν θα κάνει τίποτα.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Αν η ανασήκωση θα έχει παρενέργειες στις άλλες δράσεις του χρήστη">
+                                                        <longdesc>Πολλές ενέργειες (π.χ κλικ στη περιοχή εφαρμογής, μετακίνηση η αλλαγή μεγέθους παραθύρου) συνήθως έχουν σαν παρενέργειες την ανασήκωση του παραθύρου. Αν ορίσετε αυτή την επιλογή ως false θα αποσυνδεθεί η ανασήκωση από τις άλλες ενέργειες. Όταν είναι στο false , πράγμα το οποίο δεν σας συστήνουμε, θα επηρεαστούν άλλες ενέργειες χρήστη, και θα αγνοούνται αιτήσεις ανασήκωσης από άλλες εφαρμογές. Δείτε το http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Έλεγχος της λήψης εστίασης από τα νέα παράθυρα">
+                                                        <longdesc>This option provides additional control over how newly created windows get focus. It has two possible values; &quot;smart&quot; applies the user&apos;s normal focus mode, and &quot;strict&quot; results in windows started from a terminal not being given focus.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Λειτουργία εστίασης παραθύρου">
+                                                        <longdesc>Η λειτουργία εστίασης παραθύρου ορίζει τον τρόπο που θα ενεργοποιούνται τα παράθυρα. Έχει τρείς πιθανές τιμές: &quot;click&quot; σημαίνει οτι πρέπει να γίνεται κλικ στα παράθυρα για να εστιάζονται, &quot;sloppy&quot; σημαίνει ότι τα παράθυρα εστιάζονται όταν το ποντίκι μπαίνει στο παράθυρο, και &quot;mouse&quot;  σημαίνει ότι τα παράθυρα εστιάζονται όταν το ποντίκι μπαίνει στο παράθυρο και απεστιάζονται όταν φεύγει.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Διάταξη των κουμπιών στη μπάρα τίτλου">
+                                                        <longdesc>Διάταξη των κουμπιών στη μπάρα τίτλου. Η τιμή θα πρέπει να είναι αλφαριθμητικό,  όπως &quot;menu:minimize,maximize,close&quot;, το σημείο χωρίζει την αριστερή γωνία του παραθύρου από τη δεξιά γωνία, και τα ονόματα κουμπιών χωρίζονται από κόμμα. Δεν επιτρέπονται διπλά κουμπιά. Άγνωστοι τύποι κουμπιών αγνοούνται σιωπηλά έτσι ώστε να μπορούν να προστεθούν σε μελλοντικές εκδόσεις του metacity χωρίς να χαλάνε οι προηγούμενες εκδόσεις.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Μετατροπέας για χρήση στις τροποποιημένες ενέργειες κλικ παραθύρων">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Προεπιλεγμένο συστατικό εφαρμογής προβολής">
+                                                                <longdesc>Η εφαρμογή για την προβολή αρχείων που απαιτούν ένα συστατικό για την προβολή τους. Η παράμετρος %s θα αντικαταστηθεί από το  URIs αρχείου και η παράμετρος %c θα αντικατασταθεί από το IID συστατικού.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Παράμετρος Exec για προεπιλεγμένο τερματικό">
+                                                                <longdesc>Η παράμετρος exec για χρήση στην προεπιλεγμένη εφαρμογή τερματικού.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Προεπιλεγμένη εφαρμογή τερματικού">
+                                                                <longdesc>Η προεπιλεγμένη εφαρμογή τερματικού για χρήση σε εφαρμογές που απαιτούν ένα τερματικό.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Εκτέλεση της εντολής σε τερματικό">
+                                                                <longdesc>True αν το πρόγραμμα για το χειρισμό του URL θα πρέπει να εκτελείται σε τερματικό.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Το πρόγραμμα χειρισμού για &quot;h323&quot; URLs">
+                                                                <longdesc>Η εντολή που χρησιμοποιείται για το χειρισμό &quot;h323&quot; URLs, αν ενεργοποιηθεί.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Αν η καθορισμένη εντολή θα χειρίζεται &quot;h323&quot; URLs">
+                                                                <longdesc>Ορισμός σε true αν η εντολή που καθορίζεται στο &quot;command&quot; key θα πρέπει να χειρίζεται  &quot;h323&quot; URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Εκτέλεση της εντολής σε τερματικό">
+                                                                <longdesc>True αν το πρόγραμμα για το χειρισμό του URL θα πρέπει να εκτελείται σε τερματικό.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Το πρόγραμμα χειρισμού για &quot;callto&quot; URLs">
+                                                                <longdesc>Η εντολή που χρησιμοποιείται για το χειρισμό &quot;callto&quot; URLs, αν ενεργοποιηθεί.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Αν η καθορισμένη εντολή θα χειρίζεται &quot;callto&quot; URLs">
+                                                                <longdesc>Ορισμός σε true αν η εντολή που καθορίζεται στο &quot;command&quot; key θα πρέπει να χειρίζεται  &quot;callto&quot; URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Εκτέλεση της εντολής σε τερματικό">
+                                                                <longdesc>True αν το πρόγραμμα για το χειρισμό του URL θα πρέπει να εκτελείται σε τερματικό.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Το πρόγραμμα χειρισμού για &quot;mailto&quot; URLs">
+                                                                <longdesc>Η εντολή που χρησιμοποιείται για το χειρισμό &quot;mailto&quot; URLs, αν ενεργοποιηθεί.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Αν η καθορισμένη εντολή θα χειρίζεται &quot;mailto&quot; URLs">
+                                                                <longdesc>Ορισμός σε true αν η εντολή που καθορίζεται στο &quot;command&quot; key θα πρέπει να χειρίζεται  &quot;mailto&quot; URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Εκτέλεση της εντολής σε τερματικό">
+                                                                <longdesc>True αν το πρόγραμμα για το χειρισμό του URL θα πρέπει να εκτελείται σε τερματικό.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Το πρόγραμμα χειρισμού για &quot;https&quot; URLs">
+                                                                <longdesc>Η εντολή που χρησιμοποιείται για το χειρισμό &quot;https&quot; URLs, αν ενεργοποιηθεί.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Αν η καθορισμένη εντολή θα χειρίζεται &quot;https&quot; URLs">
+                                                                <longdesc>Ορισμός σε true αν η εντολή που καθορίζεται στο &quot;command&quot; key θα πρέπει να χειρίζεται  &quot;https&quot; URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Εκτέλεση της εντολής σε τερματικό">
+                                                                <longdesc>True αν το πρόγραμμα για το χειρισμό του URL θα πρέπει να εκτελείται σε τερματικό.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Εκτέλεση της εντολής σε τερματικό">
+                                                                <longdesc>True αν το πρόγραμμα για το χειρισμό του URL θα πρέπει να εκτελείται σε τερματικό.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Το πρόγραμμα χειρισμού για &quot;http&quot; URLs">
+                                                                <longdesc>Η εντολή που χρησιμοποιείται για το χειρισμό &quot;http&quot; URLs, αν ενεργοποιηθεί.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Αν η καθορισμένη εντολή θα χειρίζεται &quot;http&quot; URLs">
+                                                                <longdesc>Ορισμός σε true αν η εντολή που καθορίζεται στο &quot;command&quot; key θα πρέπει να χειρίζεται  &quot;http&quot; URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Εκτέλεση της εντολής σε τερματικό">
+                                                                <longdesc>True αν το πρόγραμμα για το χειρισμό του URL θα πρέπει να εκτελείται σε τερματικό.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Το πρόγραμμα χειρισμού για &quot;man&quot; URLs">
+                                                                <longdesc>Η εντολή που χρησιμοποιείται για το χειρισμό  &quot;man&quot; URLs, αν ενεργοποιηθεί.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Αν η καθορισμένη εντολή θα χειρίζεται &quot;man&quot; URLs">
+                                                                <longdesc>Ορισμός σε true αν η εντολή που καθορίζεται στο &quot;command&quot; key θα πρέπει να χειρίζεται   &quot;man&quot; URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Εκτέλεση της εντολής σε τερματικό">
+                                                                <longdesc>True αν το πρόγραμμα για το χειρισμό του URL θα πρέπει να εκτελείται σε τερματικό.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Το πρόγραμμα χειρισμού για &quot;info&quot; URLs">
+                                                                <longdesc>Η εντολή που χρησιμοποιείται για το χειρισμό &quot;info&quot; URLs, αν ενεργοποιηθεί.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Αν η καθορισμένη εντολή θα χειρίζεται &quot;info&quot; URLs">
+                                                                <longdesc>Ορισμός σε true αν η εντολή που καθορίζεται στο &quot;command&quot; key θα πρέπει να χειρίζεται  &quot;info&quot; URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Εκτέλεση της εντολής σε τερματικό">
+                                                                <longdesc>True αν το πρόγραμμα για το χειρισμό του URL θα πρέπει να εκτελείται σε τερματικό.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Το πρόγραμμα χειρισμού για &quot;ghelp&quot; URLs">
+                                                                <longdesc>Η εντολή που χρησιμοποιείται για το χειρισμό &quot;ghelp&quot; URLs, αν ενεργοποιηθεί.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Αν η καθορισμένη εντολή θα χειρίζεται &quot;ghelp&quot; URLs">
+                                                                <longdesc>Ορισμός σε true αν η εντολή που καθορίζεται στο &quot;command&quot; key θα πρέπει να χειρίζεται &quot;ghelp&quot; URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Εκτέλεση της εντολής σε τερματικό">
+                                                                <longdesc>True αν το πρόγραμμα για το χειρισμό του URL θα πρέπει να εκτελείται σε τερματικό.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Το πρόγραμμα χειρισμού για &quot;trash&quot; URLs">
+                                                                <longdesc>Η εντολή που χρησιμοποιείται για το χειρισμό &quot;trash&quot; URLs, αν ενεργοποιηθεί.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Αν η καθορισμένη εντολή θα χειρίζεται &quot;trash&quot; URLs">
+                                                                <longdesc>Ορισμός σε true αν η εντολή που καθορίζεται στο &quot;command&quot; key θα πρέπει να χειρίζεται  &quot;trash&quot; URLs.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Αν χρησιμοποιηθεί ή όχι αυτό το προφίλ">
+                                                                        <longdesc>Αν χρησιμοποιηθεί και εμφανιστεί ή όχι αυτό το προφίλ.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Η προεπιλεγμένη επέκταση αρχείου για αυτό το προφίλ">
+                                                                        <longdesc>Μια επέκταση ονόματος αρχείου που θα χρησιμοποιηθεί κατά την αποθήκευση αρχείων που έχουν κωδικοποιηθεί με αυτό το προφίλ.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Η μερική GStreamer pipeline που χρησιμοποιείται">
+                                                                        <longdesc>Μια μερική GStreamer pipeline για χρήση με αυτό το προφίλ.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="Μια περιγραφή για το προφίλ ήχου">
+                                                                        <longdesc>Μια περιγραφή για το προφίλ, που περιέχει περισσότερες πληροφορίες και περιγράφει πότε να χρησιμοποιηθεί αυτό το προφίλ.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Ένα σύντομο για το προφίλ ήχου">
+                                                                        <longdesc>Ένα σύντομο για το προφίλ ήχου, για να χρησιμοποιηθεί σε επιλογές και να είναι αναγνωριστικό του προφίλ.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Αν χρησιμοποιηθεί ή όχι αυτό το προφίλ">
+                                                                                <longdesc>Αν χρησιμοποιηθεί και εμφανιστεί ή όχι αυτό το προφίλ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Η προεπιλεγμένη επέκταση αρχείου για αυτό το προφίλ">
+                                                                                <longdesc>Μια επέκταση ονόματος αρχείου που θα χρησιμοποιηθεί κατά την αποθήκευση αρχείων που έχουν κωδικοποιηθεί με αυτό το προφίλ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Η μερική GStreamer pipeline που χρησιμοποιείται">
+                                                                                <longdesc>Μια μερική GStreamer pipeline για χρήση με αυτό το προφίλ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Μια περιγραφή για το προφίλ ήχου">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ένα σύντομο για το προφίλ ήχου">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Η προεπιλεγμένη επέκταση αρχείου για αυτό το προφίλ">
+                                                                                <longdesc>Μια επέκταση ονόματος αρχείου που θα χρησιμοποιηθεί κατά την αποθήκευση αρχείων που έχουν κωδικοποιηθεί με αυτό το προφίλ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Η μερική GStreamer pipeline που χρησιμοποιείται">
+                                                                                <longdesc>Μια μερική GStreamer pipeline για χρήση με αυτό το προφίλ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Μια περιγραφή για το προφίλ ήχου">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ένα σύντομο για το προφίλ ήχου">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Η προεπιλεγμένη επέκταση αρχείου για αυτό το προφίλ">
+                                                                                <longdesc>Μια επέκταση ονόματος αρχείου που θα χρησιμοποιηθεί κατά την αποθήκευση αρχείων που έχουν κωδικοποιηθεί με αυτό το προφίλ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Η μερική GStreamer pipeline που χρησιμοποιείται">
+                                                                                <longdesc>Μια μερική GStreamer pipeline για χρήση με αυτό το προφίλ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Μια περιγραφή για το προφίλ ήχου">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ένα σύντομο για το προφίλ ήχου">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Η προεπιλεγμένη επέκταση αρχείου για αυτό το προφίλ">
+                                                                                <longdesc>Μια επέκταση ονόματος αρχείου που θα χρησιμοποιηθεί κατά την αποθήκευση αρχείων που έχουν κωδικοποιηθεί με αυτό το προφίλ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Η μερική GStreamer pipeline που χρησιμοποιείται">
+                                                                                <longdesc>Μια μερική GStreamer pipeline για χρήση με αυτό το προφίλ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Μια περιγραφή για το προφίλ ήχου">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ένα σύντομο για το προφίλ ήχου">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Η προεπιλεγμένη επέκταση αρχείου για αυτό το προφίλ">
+                                                                                <longdesc>Μια επέκταση ονόματος αρχείου που θα χρησιμοποιηθεί κατά την αποθήκευση αρχείων που έχουν κωδικοποιηθεί με αυτό το προφίλ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Η μερική GStreamer pipeline που χρησιμοποιείται">
+                                                                                <longdesc>Μια μερική GStreamer pipeline για χρήση με αυτό το προφίλ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Μια περιγραφή για το προφίλ ήχου">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ένα σύντομο για το προφίλ ήχου">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Η προεπιλεγμένη επέκταση αρχείου για αυτό το προφίλ">
+                                                                                <longdesc>Μια επέκταση ονόματος αρχείου που θα χρησιμοποιηθεί κατά την αποθήκευση αρχείων που έχουν κωδικοποιηθεί με αυτό το προφίλ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Η μερική GStreamer pipeline που χρησιμοποιείται">
+                                                                                <longdesc>Μια μερική GStreamer pipeline για χρήση με αυτό το προφίλ.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Μια περιγραφή για το προφίλ ήχου">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ένα σύντομο για το προφίλ ήχου">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Λίστα προφίλ">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="Αυτόματη ρύθμιση URL ρύθμισης διαμεσολαβητή">
+                                                <longdesc>Το URL που παρέχει τιμές ρύθμισης διαμεσολαβητή.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="Θύρα διαμεσολαβητή SOCKS">
+                                                <longdesc>Η θύρα στο σύστημα που καθορίζεται από το  &quot;/system/proxy/socks_host&quot; μέσω του οποίου γίνεται διαμεσολάβηση.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="Όνομα συστήματος διαμεσολαβητή SOCKS">
+                                                <longdesc>Το όνομα συστήματος μέσω του οποίου γίνεται διαμεσολάβηση socks.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="Θύρα διαμεσολαβητή FTP ">
+                                                <longdesc>Η θύρα στο σύστημα που καθορίζεται από το &quot;/system/proxy/ftp_host&quot; μέσω του οποίου γίνεται διαμεσολάβηση.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="Όνομα συστήματος διαμεσολαβητή FTP ">
+                                                <longdesc>Το όνομα συστήματος μέσω του οποίου γίνεται διαμεσολάβηση FTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Θύρα ασφαλούς διαμεσολαβητή HTTP">
+                                                <longdesc>Η θύρα στο σύστημα που καθορίζεται από το &quot;/system/proxy/secure_host&quot; μέσω του οποίου γίνεται διαμεσολάβηση.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Όνομα συστήματος ασφαλούς διαμεσολαβητή HTTP">
+                                                <longdesc>Το όνομα συστήματος μέσω του οποίου γίνεται διαμεσολάβηση ασφαλούς HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Λειτουργία ρυθμίσεων διαμεσολαβητή">
+                                                <longdesc>Επιλογή λειτουργίας ρύθμισης διαμεσολαβητή. Υποστηριζόμενες τιμές είναι &quot;καμμία&quot;, &quot;χειροκίνητη&quot;, &quot;αυτόματη&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Συστήματα χωρίς διαμεσολαβητή">
+                                                <longdesc>Αυτό το κλειδί περιέχει μια λίστα από συστήματα στα οποία γίνεται απευθείας σύνδεση, παρά μέσω του διαμεσολαβητή (αν είναι ενεργός). Οι τιμές μπορεί να είναι ονόματα συστήματος, τομείς (με τη χρήση μιας αρχικής wildcard όπως *.foo.com), διευθύνσεις IP (και IPv4 και IPv6) και διευθύνσεις δικτύου με  netmask (κάτι σαν 192.168.0.0/24).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="Κωδικός διαμεσολαβητή HTTP">
+                                                <longdesc>Κωδικός πρόσβασης για πιστοποίηση όταν γίνεται διαμεσολάβηση HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="Όνομα χρήστη διαμεσολαβητή HTTP">
+                                                <longdesc>Όνομα χρήστη για να περάσει ως πιστοποίηση κατά τη διαμεσολάβηση http.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Πιστοποίηση συνδέσεων στον εξυπηρετητή διαμεσολάβησης">
+                                                <longdesc>Αν αληθές, τότε οι συνδέσεις στο διαμεσολαβητή απαιτούν πιστοποίηση. Τα όνομα χρήστη/κωδικός καθορίζονται από το &quot;/system/http_proxy/authentication_user&quot; και &quot;/system/http_proxy/authentication_password&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="Θύρα διαμεσολαβητή HTTP">
+                                                <longdesc>Η θύρα στο σύστημα που καθορίζεται από το  &quot;/system/http_proxy/host&quot; μέσω του οποίου γίνεται διαμεσολάβηση.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="Όνομα συστήματος διαμεσολαβητή HTTP">
+                                                <longdesc>Το όνομα συστήματος μέσω του οποίου γίνεται διαμεσολάβηση HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="Χρήση διαμεσολαβητή HTTP">
+                                                <longdesc>Ενεργοποιεί τις ρυθμίσεις διαμεσολαβητή κατά την πρόσβαση HTTP στο διαδίκτυο.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Επιπρόσθετοι τομείς για αναζήτηση υπηρεσιών dns-sd">
+                                                <longdesc>Λίστα διαχωρισμένη με κόμμα από τομείς dns-sd που θα πρέπει να είναι ορατοί στην τοποθεσία &quot;network:///&quot; </longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Πως να εμφανίζεται η τοπική υπηρεσία DNS-SD">
+                                                <longdesc>Πιθανές τιμές είναι &quot;merged&quot;, &quot;separate&quot; and &quot;disabled&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="Ομάδα εργασίας SMB">
+                                                <longdesc>Το Windows networking workgroup ή ο τομέας όπου ανήκει ο χρήστης. Για να πραγματοποιηθεί η δημιουργία ενός νέου workgroup ο χρήστης θα πρέπει να αποσυνδεθεί καινα επανασυνδεθεί.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

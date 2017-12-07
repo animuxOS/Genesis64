@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdefoma
+if [ "$1" = "configure" ]; then
+
+  test -x /usr/bin/defoma-app && /usr/bin/defoma-app update libwmf0.2-7
+
+fi
+# End automatically added section
+# Automatically added by dh_makeshlibs
+if [ "$1" = "configure" ]; then
+	ldconfig
+fi
+# End automatically added section

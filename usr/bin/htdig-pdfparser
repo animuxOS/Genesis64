@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# Wrapper script for the ht://Dig PDF parser engine
+#
+# This script is called by the htdig binary to parse pdf documents
+# Set the debian_pdf_parsed in the htdig configuration
+# 
+# 
+# Written by Stijn de Bekker <stijn@debian.org> for Debian GNU/Linux.
+
+
+#PARSER=`grep debian_pdf_parser /etc/htdig/htdig.conf | awk '{ print $2 }'
+# replaced with the following line, suggestion by pod, should fix #196916
+PARSER=`awk '/^debian_pdf_parser:/{ print $2 }' /etc/htdig/htdig.conf`
+PDFFILE=$1
+PSFILE=$2
+
+if [ "$PDFFILE" = "" -o "$PSFILE" = "" ]; then
+	# Missing .pdf or .ps file
+	exit 1
+fi
+
+case "$PARSER" in
+	acrobat|acroread)
+		if [ -x /usr/bin/acroread ]; then
+			/usr/bin/acroread -toPostscript $PDFFILE $PSFILE
+		fi
+		;;
+
+	xpdf|pdftotext)
+		if [ -x /usr/bin/pdftotext ]; then
+			/usr/bin/pdftotext $PDFFILE $PSFILE
+		fi
+		;;
+esac
+
+exit 0

@@ -1,0 +1,12 @@
+#This calls the standard shinymetal shader.
+#The linked materials "Amb" slider controls "Ka".
+#The linked materials "Spec" slider controls "Ks".
+#The linked materials "Ref" slider controls "Kr".
+#The linked materials "Hard" slider controls "roughness".
+#User entered parameter for "texturename" (default to raytracing).
+Surface "shinymetal"
+	"uniform float Ka" <MatAmb_M1.0_A0.0_F>
+	"uniform float Ks" <MatSpec_M1.0_A0.0_F>
+	"uniform float Kr" <MatRef_M1.0_A0.0_F>
+	"uniform float roughness" <MatHard_M-0.001956947162426614481_A1.0_F>
+	"uniform string texturename" [ "raytrace" ]

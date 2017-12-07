@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+if [ "$1" = "configure" ]; then
+    echo -e "# pixie libs\n/opt/pixie/lib" > /etc/ld.so.conf.d/pixie.conf
+    ldconfig
+fi

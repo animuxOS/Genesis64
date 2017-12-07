@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+  <plugin useBcop="true" name="shelf">
+    <short>Shelf</short>
+    <short xml:lang="en_GB">Shelf</short>
+    <short xml:lang="fr">Rebord</short>
+    <short xml:lang="gl">Propio</short>
+    <short xml:lang="it">Scaffale</short>
+    <short xml:lang="ja">シェルフ</short>
+    <short xml:lang="nb">Hylle</short>
+    <short xml:lang="nl">BoekenPlank</short>
+    <short xml:lang="pt">Prateleira</short>
+    <short xml:lang="sv">Hylla</short>
+    <long>Visually scales a window down to allow easy monitoring without true/traditional resizing.</long>
+    <long xml:lang="en_GB">Visually scales a window down to allow easy monitoring without true/traditional resizing.</long>
+    <long xml:lang="fr">Modifie visuellement la taille de la fenêtre (zoom) au lieu de redimensionner les composants (widgets) de la fenêtre.</long>
+    <long xml:lang="gl">Reducir a escala da fiestra visualmente para permitir controlar sen o reescalado verdadeiro/tradicional</long>
+    <long xml:lang="it">Riduce visivamente la finestra in scala per permettere il monitoraggio senza un ridimensionamento tradizionale.</long>
+    <long xml:lang="ja">ウィンドウを従来方式のサイズ変更はせずにそのまま縮尺表示してモニタしやすくする</long>
+    <long xml:lang="nb">Skaler ned et vindu visuelt for å muliggjøre enkel monitorering uten sann/ tradisjonell størrelsesendring.</long>
+    <long xml:lang="nl">Schaalt een venster visueel kleiner om monitoring makkelĳker zonder echte/traditionele grootte aanpassing.</long>
+    <long xml:lang="pt">Escala uma janela visualmente para permitir uma monitorização fácil sem fazer o redimensionamento usual.</long>
+    <long xml:lang="sv">Skalar ner ett fönster visuellt för att tillåta enkel betraktning utan verklig förminskning.</long>
+    <category>Window Management</category>
+    <deps>
+	<relation type="after">
+	    <plugin>wall</plugin>
+	</relation>
+    </deps>
+    <display>
+      <group>
+        <short>Bindings</short>
+        <short xml:lang="ar">الأغلفة</short>
+        <short xml:lang="bn">সীমাবদ্ধতা</short>
+        <short xml:lang="ca">Vinculacions</short>
+        <short xml:lang="de">Tastenkombinationen</short>
+        <short xml:lang="el">Συνδυασμοί</short>
+        <short xml:lang="en_GB">Bindings</short>
+        <short xml:lang="es">Combinación de Teclas</short>
+        <short xml:lang="fi">Näppäinyhdistelmät</short>
+        <short xml:lang="fr">Raccourcis</short>
+        <short xml:lang="gl">Atallos</short>
+        <short xml:lang="gu">બાઈન્ડીંગો</short>
+        <short xml:lang="hi">बाइंडिंग</short>
+        <short xml:lang="it">Scorciatoie</short>
+        <short xml:lang="ja">割り当て</short>
+        <short xml:lang="nb">Hurtigtast</short>
+        <short xml:lang="nl">Bindingen</short>
+        <short xml:lang="pl">Skróty klawiszowe</short>
+        <short xml:lang="pt">Atalhos</short>
+        <short xml:lang="pt_BR">Atalhos</short>
+        <short xml:lang="ru">Горячие клавиши</short>
+        <short xml:lang="sv">Bindningar</short>
+        <short xml:lang="tr">Bağlayıcılar</short>
+        <short xml:lang="zh_CN">按键组合</short>
+        <option type="key" name="trigger_key">
+          <short>Trigger scale down</short>
+          <short xml:lang="en_GB">Trigger scale down</short>
+          <short xml:lang="fr">Basculer Mise à l'échelle</short>
+          <short xml:lang="gl">Activar reducción</short>
+          <short xml:lang="it">Attiva riduzione in scala</short>
+          <short xml:lang="ja">縮尺のオンオフ</short>
+          <short xml:lang="nb">Utløs nedskalering</short>
+          <short xml:lang="nl">Kleiner schalen activeren</short>
+          <short xml:lang="pt">Activar escalamento para baixo</short>
+          <short xml:lang="sv">Aktivera nerskalning</short>
+          <long>Scale a window down to a portion of it's size.</long>
+          <long xml:lang="en_GB">Scale a window down to a portion of it's size.</long>
+          <long xml:lang="fr">Échelonner une fenêtre à une fraction de sa taille</long>
+          <long xml:lang="gl">Reducir o tamaño da fiestra a unha porción do seu tamaño</long>
+          <long xml:lang="it">Riduce la dimensione di una finestra in scala proporzionalmente alle sue dimensioni.</long>
+          <long xml:lang="ja">ウィンドウをその大きさに対しての部分的割合に縮尺</long>
+          <long xml:lang="nb">Skaler et vindu ned til en del av størrelsen.</long>
+          <long xml:lang="nl">Schaal een venster naar een deel van zĳn grootte.</long>
+          <long xml:lang="pl">Skaluj okno do ułamka jego wielkości</long>
+          <long xml:lang="pt">Diminui a escala da janela para uma proporção do seu tamanho.</long>
+          <long xml:lang="sv">Skala ner ett fönster till hälften av dess tidgare storlek.</long>
+          <default>&lt;Super&gt;l</default>
+        </option>
+	<option type="key" name="reset_key">
+	  <short>Reset the window to original size</short>
+	  <short xml:lang="en_GB">Reset the window to original size</short>
+	  <short xml:lang="fi">Palauta ikkunan alkuperäinen koko</short>
+	  <short xml:lang="fr">Restaurer la fenêtre à sa taille d'origine</short>
+	  <short xml:lang="gl">Restablecer a fiestra ó seu tamaño orixinal</short>
+	  <short xml:lang="it">Reimposta finestra alla dimensione originale</short>
+	  <short xml:lang="ja">ウィンドウを元の大きさに戻す</short>
+	  <short xml:lang="nb">Tilbakestill vinduet til original størrelse</short>
+	  <short xml:lang="pl">Przywróć pierwotny rozmiar okna</short>
+	  <short xml:lang="pt">Redimensiona janela para tamanho original</short>
+	  <long>Resets the currently focused window to original size</long>
+	  <long xml:lang="en_GB">Resets the currently focused window to original size</long>
+	  <long xml:lang="fr">Restaure la fenêtre ayant le focus à sa taille d'origine</long>
+	  <long xml:lang="gl">Restaurar ó tamaño orixinal da fiestra focada actualmente</long>
+	  <long xml:lang="it">Reimposta la finestra col focus alla dimensione originale</long>
+	  <long xml:lang="ja">現在のフォーカス・ウィンドウを元の大きさに戻す</long>
+	  <long xml:lang="nb">Tilbakestiller det fokuserte vinduet til original størrelse</long>
+	  <long xml:lang="pl">Przywraca wybrane okno do pierwotnych rozmiarów</long>
+	  <long xml:lang="pt">Redimensiona a janela focada actualmente para o tamanho original</long>
+	</option>
+        <option type="key" name="triggerscreen_key">
+          <short>Trigger scale down to screen</short>
+          <short xml:lang="en_GB">Trigger scale down to screen</short>
+          <short xml:lang="fr">Basculer Mise à l'échelle de l'écran</short>
+          <short xml:lang="gl">Reducción á pantalla</short>
+          <short xml:lang="it">Attiva riduzione in scala allo schermo</short>
+          <short xml:lang="ja">画面の大きさに対する縮尺の開始</short>
+          <short xml:lang="nb">Utløs nedskalering</short>
+          <short xml:lang="nl">Kleiner schalen naar scherm activeren</short>
+          <short xml:lang="pt">Activar escalamento para baixo para o ecrã</short>
+          <short xml:lang="sv">Aktivera nerskalning till skärm</short>
+          <long>Scale a window down to a ration of the screen size. Respectively half, a third or a sixth of the screen.</long>
+          <long xml:lang="en_GB">Scale a window down to a ration of the screen size. Respectively half, a third or a sixth of the screen.</long>
+          <long xml:lang="fr">Échelonner une fenêtre à une fraction de la taille de l'écran. Respectivement la moitié, le tiers ou le sixième de l'écran.</long>
+          <long xml:lang="gl">Reducir o tamaño de fiestra segundo o ratio do tamaño da pantalla. Respectivamente a metade, a terceira ou sexta parte da fiestra.</long>
+          <long xml:lang="it">Riduce la dimensione di una finestra in scala proporzionalmente allo schermo. Rispettivamente metà, un terzo o un sesto dello schermo.</long>
+          <long xml:lang="ja">ウィンドウを画面の大きさの2分の1、3分の1、6分の1の割合に段階的に縮尺</long>
+          <long xml:lang="nb">Skaler et vindu ned til en del av skjermstørrelsen, henholdsvis halvparten, en tredjedel eller en sjettedel av skjermen.</long>
+          <long xml:lang="pl">Skaluj okno do rozmiaru pewnej części ekranu. Odpowiednio: do połowy, jednej trzeciej i jednej szóstej ekranu.</long>
+          <long xml:lang="pt">Escala uma janela para uma proporção do tamanho do ecrã. Respectivamente metade, um terço ou um sexto do ecrã.</long>
+          <long xml:lang="sv">Skala ner ett fönster till en del av skärmstorleken.Respektive hälften, en tredjedel eller en sjättedel av skärmen.</long>
+          <default>&lt;Super&gt;p</default>
+        </option>
+        <option type="button" name="dec_button">
+          <short>Make the window smaller</short>
+          <short xml:lang="el">Σμίκρυνση παραθύρου</short>
+          <short xml:lang="en_GB">Make the window smaller</short>
+          <short xml:lang="fi">Tee ikkunasta pienempi</short>
+          <short xml:lang="fr">Rendre la fenêtre plus petite</short>
+          <short xml:lang="gl">Facer a fiestra máis pequena</short>
+          <short xml:lang="it">Rimpicciolisci finestra</short>
+          <short xml:lang="ja">ウィンドウを小さくする</short>
+          <short xml:lang="nb">Gjør vinduet mindre</short>
+          <short xml:lang="nl">Maak het venster kleiner</short>
+          <short xml:lang="pl">Zmniejsz okno</short>
+          <short xml:lang="pt">Tornar a janela menor</short>
+          <short xml:lang="sv">Gör fönstret mindre</short>
+          <long>Reduces the scale factor making the window smaller.</long>
+          <long xml:lang="en_GB">Reduces the scale factor making the window smaller.</long>
+          <long xml:lang="fr">Diminue le facteur de réduction</long>
+          <long xml:lang="gl">Reducir o factor de escala facendo a fiestra máis pequena</long>
+          <long xml:lang="it">Riduce il fattore di scala facendo la finestra più piccola.</long>
+          <long xml:lang="ja">ウィンドウを小さくするために拡縮率を下げる</long>
+          <long xml:lang="nb">Reduserer skaleringsfaktoren for å gjøre vinduet mindre.</long>
+          <long xml:lang="nl">Verkleint de schaal factor en maakt het venster kleiner.</long>
+          <long xml:lang="pl">Zmniejsz współczynnik skalowania, zmniejszając okno.</long>
+          <long xml:lang="pt">Diminui o factor de escala tornando a janela menor.</long>
+          <long xml:lang="sv">Minskar skalningsfaktorn, detta gör fönstret mindre.</long>
+          <default>&lt;Alt&gt;&lt;Super&gt;Button4</default>
+        </option>
+        <option type="button" name="inc_button">
+          <short>Make the window bigger</short>
+          <short xml:lang="el">Μεγένθυση παραθύρου</short>
+          <short xml:lang="en_GB">Make the window bigger</short>
+          <short xml:lang="fi">Tee ikkunasta suurempi</short>
+          <short xml:lang="fr">Rendre la fenêtre plus grosse</short>
+          <short xml:lang="gl">Facer a fiestra máis grande</short>
+          <short xml:lang="it">Ingrandisci finestra</short>
+          <short xml:lang="ja">ウィンドウを大きくする</short>
+          <short xml:lang="nb">Gjør vinduet større</short>
+          <short xml:lang="nl">Maak het venster groter</short>
+          <short xml:lang="pl">Zwiększ okno</short>
+          <short xml:lang="pt">Tornar a janela maior</short>
+          <short xml:lang="sv">Gör fönstret större</short>
+          <long>Increase the scale factor making the window bigger.</long>
+          <long xml:lang="el">Αύξηση του παράγοντα κλιμάκωσης για μεγένθυση του παραθύρου.</long>
+          <long xml:lang="en_GB">Increase the scale factor making the window bigger.</long>
+          <long xml:lang="fr">Augmente le facteur de grossissement</long>
+          <long xml:lang="gl">Incrementar o factor de escala facendo a fiestra máis grande</long>
+          <long xml:lang="it">Aumenta il fattore di scala rendendo la finestra più grande.</long>
+          <long xml:lang="ja">ウィンドウを大きくするために拡縮率を上げる</long>
+          <long xml:lang="nb">Øk skeleringsfaktoren for å gjøre vinudet større.</long>
+          <long xml:lang="nl">Vergroot de schaal factor.</long>
+          <long xml:lang="pl">Zwiększ współczynnik skalowania, powiększając okno.</long>
+          <long xml:lang="pt">Aumenta o factor de escala tornando a janela maior.</long>
+          <long xml:lang="sv">Ökar skalningsfaktorn, detta gör fönstret större.</long>
+          <default>&lt;Alt&gt;&lt;Super&gt;Button5</default>
+        </option>
+      </group>
+      <option type="int" name="animtime">
+       <short>Animation duration</short>
+       <short xml:lang="el">Διάρκεια γραφικής απεικόνισης</short>
+       <short xml:lang="en_GB">Animation duration</short>
+       <short xml:lang="fi">Animaation kesto</short>
+       <short xml:lang="fr">Durée de l'animation</short>
+       <short xml:lang="gl">Duración da animación</short>
+       <short xml:lang="it">Durata animazione</short>
+       <short xml:lang="ja">アニメーション持続時間</short>
+       <short xml:lang="nb">Animasjonsvarighet</short>
+       <short xml:lang="nl">Duur van animatie</short>
+       <short xml:lang="pl">Czas trwania animacji</short>
+       <short xml:lang="pt">Duração da animação</short>
+       <short xml:lang="sv">Varaktighet på animation</short>
+       <long>Duration of the animation in milliseconds.</long>
+       <long xml:lang="el">Διάρκεια της γραφικής απεικόνισης σε χιλιοστά δευτερολέπτου.</long>
+       <long xml:lang="en_GB">Duration of the animation in milliseconds.</long>
+       <long xml:lang="fi">Animaation kesto millisekunneissa</long>
+       <long xml:lang="fr">Durée de l'animation en millisecondes</long>
+       <long xml:lang="gl">Duración da animación en milisegundos</long>
+       <long xml:lang="it">Durata dell'animazione in millisecondi.</long>
+       <long xml:lang="ja">アニメーションの持続時間（ミリ秒）</long>
+       <long xml:lang="nb">Varighet for animasjonen i millisekunder</long>
+       <long xml:lang="nl">Duur animatie (in milliseconden).</long>
+       <long xml:lang="pl">Czas (w milisekundach) trwania animacji</long>
+       <long xml:lang="pt">Duração da animação em milisegundos.</long>
+       <long xml:lang="sv">Varaktighet för animationen i millisekunder</long>
+       <default>150</default>
+       <min>1</min>
+       <max>10000</max>
+      </option>
+      <option type="float" name="interval">
+       <short>Scale interval</short>
+       <short xml:lang="de">Skalierungsinterval</short>
+       <short xml:lang="en_GB">Scale interval</short>
+       <short xml:lang="fr">Intervalle de mise à l'échelle</short>
+       <short xml:lang="gl">Intervalo de escala</short>
+       <short xml:lang="it">Intervallo di scala</short>
+       <short xml:lang="ja">拡縮間隔</short>
+       <short xml:lang="nb">Skaleringsintervall</short>
+       <short xml:lang="nl">Schaal interval</short>
+       <short xml:lang="pt">Intervalo no escalamento</short>
+       <short xml:lang="sv">Skalningsintervall</short>
+       <long>The number to divide the scale factor by or multiply it with when (respectively) increasing and decreasing the scale level manually. Higher number means finer changes.</long>
+       <long xml:lang="en_GB">The number to divide the scale factor by or multiply it with when (respectively) increasing and decreasing the scale level manually. Higher number means finer changes.</long>
+       <long xml:lang="fr">Nombre par lequel diviser ou multiplier le facteur d'échelle en augmentant ou diminuant (respectivement) le niveau d'échelle manuellement. Plus la valeur est grande, plus les changements sont fins.</long>
+       <long xml:lang="gl">O número para dividir ou multiplicar o factor de escala cando sexa incrementado ou decrementado manualmente. Números máis grandes significan cambios máis liviáns.</long>
+       <long xml:lang="it">Fattore di incremento o decremento di scala per l'aggiustamento manuale. Numeri più grandi indicano modifiche più accurate.</long>
+       <long xml:lang="ja">手動で拡縮率の上げ下げをした際に、この数字で拡縮率を乗除。高い数字ほど、ウィンドウの大きさの変化がより細かくなります。</long>
+       <long xml:lang="nb">Tallet som skaleringsfaktoren divideres eller multipliseres med når skaleringsnivået henholdsvis økes eller senkes manuelt. Høyere tall betyr finere endringer.</long>
+       <long xml:lang="nl">Het getal om de schaal factor mee te delen of te vermenigvuldigen wanneer het schaal niveau met de hand resp. vergroot of verkleind wordt. Grotere getallen betekent een fĳnere afstelling.</long>
+       <long xml:lang="pt">O número pelo qual dividir/multiplicar o factor de escala quando aumentar/diminuir (respectivamente) o nível de escalamento manualmente. Números altos significam alterações mais pequenas.</long>
+       <long xml:lang="sv">Numret man ska dividera skalningsfaktorn eller multiplicerar med när man antingen ökar eller minskar skalningsnivån manuellt. Högre nummer betyder bättre finjusteringar</long>
+       <default>0.9</default>
+       <min>0.100</min>
+       <max>0.999</max>
+       <precision>0.001</precision>
+      </option>
+    </display>
+  </plugin>
+</compiz>

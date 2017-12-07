@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>gdl-tools</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="GDL Reference Manual">
+<link rel="up" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+<link rel="prev" href="gdl-gdl-stock.html" title="gdl-stock">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="gdl-gdl-stock.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="gdl-main.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GDL Reference Manual</th>
+<td>&#160;</td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2591991" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2613266" class="shortcut">Description</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="gdl-gdl-tools"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2591991"></a><span class="refentrytitle">gdl-tools</span>
+</h2>
+<p>gdl-tools</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+#define             <a href="gdl-gdl-tools.html#DO-GDL-TRACE:CAPS">DO_GDL_TRACE</a>
+#define             <a href="gdl-gdl-tools.html#GDL-TRACE:CAPS">GDL_TRACE</a>                           ()
+#define             <a href="gdl-gdl-tools.html#GDL-TRACE-EXTRA:CAPS">GDL_TRACE_EXTRA</a>                     (format, args...)
+#define             <a href="gdl-gdl-tools.html#GDL-BOILERPLATE:CAPS">GDL_BOILERPLATE</a>                     (type, type_as_function, corba_type,
+                                                         			parent_type, parent_type_macro,
+                                                         			register_type_macro)
+#define             <a href="gdl-gdl-tools.html#GDL-CALL-PARENT:CAPS">GDL_CALL_PARENT</a>                     (parent_class_cast, name, args)
+#define             <a href="gdl-gdl-tools.html#GDL-CALL-PARENT-GBOOLEAN:CAPS">GDL_CALL_PARENT_GBOOLEAN</a>            (parent_class_cast, name, args)
+#define             <a href="gdl-gdl-tools.html#GDL-CALL-PARENT-WITH-DEFAULT:CAPS">GDL_CALL_PARENT_WITH_DEFAULT</a>        (parent_class_cast,
+                                                         				     name, args, def_return)
+#define             <a href="gdl-gdl-tools.html#GDL-CLASS-BOILERPLATE:CAPS">GDL_CLASS_BOILERPLATE</a>               (type, type_as_function,
+                                                         				parent_type, parent_type_macro)
+#define             <a href="gdl-gdl-tools.html#GDL-REGISTER-TYPE:CAPS">GDL_REGISTER_TYPE</a>                   (type, type_as_function, corba_type,
+                                                         			  parent_type, parent_type_macro)
+#define             <a href="gdl-gdl-tools.html#GDL-CALL-VIRTUAL:CAPS">GDL_CALL_VIRTUAL</a>                    (object, get_class_cast, method, args)
+#define             <a href="gdl-gdl-tools.html#GDL-CALL-VIRTUAL-WITH-DEFAULT:CAPS">GDL_CALL_VIRTUAL_WITH_DEFAULT</a>       (object, get_class_cast, method, args, default)
+                    <a href="gdl-gdl-tools.html#GdlPixmap">GdlPixmap</a>;
+#define             <a href="gdl-gdl-tools.html#GDL-PIXMAP:CAPS">GDL_PIXMAP</a>                          (path,fname)
+#define             <a href="gdl-gdl-tools.html#GDL-PIXMAP-END:CAPS">GDL_PIXMAP_END</a>
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2613266"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2613282"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2613293"></a><h3>
+<a name="DO-GDL-TRACE:CAPS"></a>DO_GDL_TRACE</h3>
+<a class="indexterm" name="id2613305"></a><pre class="programlisting">#define DO_GDL_TRACE
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2613321"></a><h3>
+<a name="GDL-TRACE:CAPS"></a>GDL_TRACE()</h3>
+<a class="indexterm" name="id2613333"></a><pre class="programlisting">#define             GDL_TRACE()</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601906"></a><h3>
+<a name="GDL-TRACE-EXTRA:CAPS"></a>GDL_TRACE_EXTRA()</h3>
+<a class="indexterm" name="id2601918"></a><pre class="programlisting">#define             GDL_TRACE_EXTRA(format, args...)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>format</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>args...</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601967"></a><h3>
+<a name="GDL-BOILERPLATE:CAPS"></a>GDL_BOILERPLATE()</h3>
+<a class="indexterm" name="id2601979"></a><pre class="programlisting">#define             GDL_BOILERPLATE(type, type_as_function, corba_type,                     \
+            			parent_type, parent_type_macro,                         \
+            			register_type_macro)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>type</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>type_as_function</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>corba_type</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>parent_type</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>parent_type_macro</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>register_type_macro</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2612612"></a><h3>
+<a name="GDL-CALL-PARENT:CAPS"></a>GDL_CALL_PARENT()</h3>
+<a class="indexterm" name="id2612624"></a><pre class="programlisting">#define             GDL_CALL_PARENT(parent_class_cast, name, args)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>parent_class_cast</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>name</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>args</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2612688"></a><h3>
+<a name="GDL-CALL-PARENT-GBOOLEAN:CAPS"></a>GDL_CALL_PARENT_GBOOLEAN()</h3>
+<a class="indexterm" name="id2612699"></a><pre class="programlisting">#define             GDL_CALL_PARENT_GBOOLEAN(parent_class_cast, name, args)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>parent_class_cast</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>name</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>args</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2612763"></a><h3>
+<a name="GDL-CALL-PARENT-WITH-DEFAULT:CAPS"></a>GDL_CALL_PARENT_WITH_DEFAULT()</h3>
+<a class="indexterm" name="id2612774"></a><pre class="programlisting">#define             GDL_CALL_PARENT_WITH_DEFAULT(parent_class_cast,                 \
+            				     name, args, def_return)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>parent_class_cast</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>name</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>args</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>def_return</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601475"></a><h3>
+<a name="GDL-CLASS-BOILERPLATE:CAPS"></a>GDL_CLASS_BOILERPLATE()</h3>
+<a class="indexterm" name="id2601486"></a><pre class="programlisting">#define             GDL_CLASS_BOILERPLATE(type, type_as_function,           \
+            				parent_type, parent_type_macro)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>type</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>type_as_function</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>parent_type</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>parent_type_macro</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601566"></a><h3>
+<a name="GDL-REGISTER-TYPE:CAPS"></a>GDL_REGISTER_TYPE()</h3>
+<a class="indexterm" name="id2601577"></a><pre class="programlisting">#define             GDL_REGISTER_TYPE(type, type_as_function, corba_type,                   \
+            			  parent_type, parent_type_macro)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>type</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>type_as_function</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>corba_type</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>parent_type</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>parent_type_macro</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2601672"></a><h3>
+<a name="GDL-CALL-VIRTUAL:CAPS"></a>GDL_CALL_VIRTUAL()</h3>
+<a class="indexterm" name="id2601683"></a><pre class="programlisting">#define             GDL_CALL_VIRTUAL(object, get_class_cast, method, args)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>object</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>get_class_cast</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>method</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>args</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2613758"></a><h3>
+<a name="GDL-CALL-VIRTUAL-WITH-DEFAULT:CAPS"></a>GDL_CALL_VIRTUAL_WITH_DEFAULT()</h3>
+<a class="indexterm" name="id2613769"></a><pre class="programlisting">#define             GDL_CALL_VIRTUAL_WITH_DEFAULT(object, get_class_cast, method, args, default)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>object</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>get_class_cast</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>method</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>args</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>default</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2613862"></a><h3>
+<a name="GdlPixmap"></a>GdlPixmap</h3>
+<a class="indexterm" name="id2613874"></a><pre class="programlisting">typedef struct {
+	const char *path;
+	const char *fname;
+	char       *pixbuf;
+} GdlPixmap;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2613891"></a><h3>
+<a name="GDL-PIXMAP:CAPS"></a>GDL_PIXMAP()</h3>
+<a class="indexterm" name="id2613904"></a><pre class="programlisting">#define GDL_PIXMAP(path,fname)	{ (path), (fname), NULL }
+</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>path</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>fname</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2613953"></a><h3>
+<a name="GDL-PIXMAP-END:CAPS"></a>GDL_PIXMAP_END</h3>
+<a class="indexterm" name="id2613966"></a><pre class="programlisting">#define GDL_PIXMAP_END		{ NULL, NULL, NULL }
+</pre>
+<p>
+
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

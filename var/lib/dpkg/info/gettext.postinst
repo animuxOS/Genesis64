@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+install-info --quiet --section "Development" "Development" \
+ --description="" /usr/share/info/gettext.info
+
+if [ "$1" = "configure" ]; then
+  ldconfig
+fi

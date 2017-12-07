@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>GdlDockPlaceholder</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="GDL Reference Manual">
+<link rel="up" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+<link rel="prev" href="GdlDockNotebook.html" title="GdlDockNotebook">
+<link rel="next" href="GdlComboButton.html" title="GdlComboButton">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GdlDockNotebook.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="gdl-main.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GDL Reference Manual</th>
+<td><a accesskey="n" href="GdlComboButton.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2586962" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2602349" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2602151" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2602206" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id2602233" class="shortcut">Properties</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="GdlDockPlaceholder"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2586962"></a><span class="refentrytitle">GdlDockPlaceholder</span>
+</h2>
+<p>GdlDockPlaceholder</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+                    <a href="GdlDockPlaceholder.html#GdlDockPlaceholderPrivate">GdlDockPlaceholderPrivate</a>;
+                    <a href="GdlDockPlaceholder.html#GdlDockPlaceholder-struct">GdlDockPlaceholder</a>;
+GtkWidget*          <a href="GdlDockPlaceholder.html#gdl-dock-placeholder-new">gdl_dock_placeholder_new</a>            (gchar *name,
+                                                         <a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a> *object,
+                                                         <a href="GdlDockObject.html#GdlDockPlacement">GdlDockPlacement</a> position,
+                                                         gboolean sticky);
+void                <a href="GdlDockPlaceholder.html#gdl-dock-placeholder-attach">gdl_dock_placeholder_attach</a>         (<a href="GdlDockPlaceholder.html" title="GdlDockPlaceholder">GdlDockPlaceholder</a> *ph,
+                                                         <a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a> *object);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2602151"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----GtkObject
+               +----GtkWidget
+                     +----GtkContainer
+                           +----<a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a>
+                                 +----GdlDockPlaceholder
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2602206"></a><h2>Implemented Interfaces</h2>
+<p>
+GdlDockPlaceholder implements
+ GtkBuildable and  AtkImplementorIface.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2602233"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="GdlDockPlaceholder.html#GdlDockPlaceholder--floating">floating</a>"                 gboolean              : Read / Write / Construct Only
+  "<a href="GdlDockPlaceholder.html#GdlDockPlaceholder--floatx">floatx</a>"                   gint                  : Read / Write / Construct Only
+  "<a href="GdlDockPlaceholder.html#GdlDockPlaceholder--floaty">floaty</a>"                   gint                  : Read / Write / Construct Only
+  "<a href="GdlDockPlaceholder.html#GdlDockPlaceholder--height">height</a>"                   gint                  : Read / Write / Construct
+  "<a href="GdlDockPlaceholder.html#GdlDockPlaceholder--host">host</a>"                     <a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a>         : Read / Write
+  "<a href="GdlDockPlaceholder.html#GdlDockPlaceholder--next-placement">next-placement</a>"           <a href="GdlDockObject.html#GdlDockPlacement">GdlDockPlacement</a>      : Read / Write
+  "<a href="GdlDockPlaceholder.html#GdlDockPlaceholder--sticky">sticky</a>"                   gboolean              : Read / Write / Construct Only
+  "<a href="GdlDockPlaceholder.html#GdlDockPlaceholder--width">width</a>"                    gint                  : Read / Write / Construct
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2602349"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2607344"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2607354"></a><h3>
+<a name="GdlDockPlaceholderPrivate"></a>GdlDockPlaceholderPrivate</h3>
+<a class="indexterm" name="id2607366"></a><pre class="programlisting">typedef struct _GdlDockPlaceholderPrivate GdlDockPlaceholderPrivate;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607382"></a><h3>
+<a name="GdlDockPlaceholder-struct"></a>GdlDockPlaceholder</h3>
+<a class="indexterm" name="id2607394"></a><pre class="programlisting">typedef struct _GdlDockPlaceholder GdlDockPlaceholder;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607410"></a><h3>
+<a name="gdl-dock-placeholder-new"></a>gdl_dock_placeholder_new ()</h3>
+<a class="indexterm" name="id2607421"></a><pre class="programlisting">GtkWidget*          gdl_dock_placeholder_new            (gchar *name,
+                                                         <a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a> *object,
+                                                         <a href="GdlDockObject.html#GdlDockPlacement">GdlDockPlacement</a> position,
+                                                         gboolean sticky);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>name</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>object</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>position</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>sticky</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607542"></a><h3>
+<a name="gdl-dock-placeholder-attach"></a>gdl_dock_placeholder_attach ()</h3>
+<a class="indexterm" name="id2607553"></a><pre class="programlisting">void                gdl_dock_placeholder_attach         (<a href="GdlDockPlaceholder.html" title="GdlDockPlaceholder">GdlDockPlaceholder</a> *ph,
+                                                         <a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a> *object);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>ph</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>object</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2607691"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2607702"></a><h3>
+<a name="GdlDockPlaceholder--floating"></a>The "<code class="literal">floating</code>" property</h3>
+<a class="indexterm" name="id2607716"></a><pre class="programlisting">  "floating"                 gboolean              : Read / Write / Construct Only</pre>
+<p>Whether the placeholder is standing in for a floating toplevel dock.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607742"></a><h3>
+<a name="GdlDockPlaceholder--floatx"></a>The "<code class="literal">floatx</code>" property</h3>
+<a class="indexterm" name="id2607756"></a><pre class="programlisting">  "floatx"                   gint                  : Read / Write / Construct Only</pre>
+<p>X-Coordinate for dock when floating.</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607785"></a><h3>
+<a name="GdlDockPlaceholder--floaty"></a>The "<code class="literal">floaty</code>" property</h3>
+<a class="indexterm" name="id2607799"></a><pre class="programlisting">  "floaty"                   gint                  : Read / Write / Construct Only</pre>
+<p>Y-Coordinate for dock when floating.</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607827"></a><h3>
+<a name="GdlDockPlaceholder--height"></a>The "<code class="literal">height</code>" property</h3>
+<a class="indexterm" name="id2607841"></a><pre class="programlisting">  "height"                   gint                  : Read / Write / Construct</pre>
+<p>Height for the widget when it's attached to the placeholder.</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607871"></a><h3>
+<a name="GdlDockPlaceholder--host"></a>The "<code class="literal">host</code>" property</h3>
+<a class="indexterm" name="id2607885"></a><pre class="programlisting">  "host"                     <a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a>         : Read / Write</pre>
+<p>The dock object this placeholder is attached to.</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607907"></a><h3>
+<a name="GdlDockPlaceholder--next-placement"></a>The "<code class="literal">next-placement</code>" property</h3>
+<a class="indexterm" name="id2607923"></a><pre class="programlisting">  "next-placement"           <a href="GdlDockObject.html#GdlDockPlacement">GdlDockPlacement</a>      : Read / Write</pre>
+<p>The position an item will be docked to our host if a request is made to dock to us.</p>
+<p>Default value: GDL_DOCK_CENTER</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607950"></a><h3>
+<a name="GdlDockPlaceholder--sticky"></a>The "<code class="literal">sticky</code>" property</h3>
+<a class="indexterm" name="id2607964"></a><pre class="programlisting">  "sticky"                   gboolean              : Read / Write / Construct Only</pre>
+<p>Whether the placeholder will stick to its host or move up the hierarchy when the host is redocked.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2607991"></a><h3>
+<a name="GdlDockPlaceholder--width"></a>The "<code class="literal">width</code>" property</h3>
+<a class="indexterm" name="id2608005"></a><pre class="programlisting">  "width"                    gint                  : Read / Write / Construct</pre>
+<p>Width for the widget when it's attached to the placeholder.</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: -1</p>
+</div>
+</div>
+</div>
+</body>
+</html>

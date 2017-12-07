@@ -1,0 +1,42 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+configure)
+	if [ -z "$2" ]; then
+		L="/etc/udev/rules.d/z60_xen-backend.rules"
+		[ -e "$L" ] || ln -s ../xen-backend.rules "$L"
+	fi
+
+	install -d -m 0700 /var/lib/xenstored
+	install -d -m 2750 -g adm /var/log/xen
+	;;
+
+abort-upgrade|abort-remove|abort-deconfigure)
+	;;
+
+*)
+	echo "postinst called with unknown argument \`$1'" >&2
+	exit 1
+	;;
+esac
+
+# Automatically added by dh_installinit
+if [ -x "/etc/init.d/xend" ]; then
+	update-rc.d xend defaults 20 21 >/dev/null
+	if [ -x "`which invoke-rc.d 2>/dev/null`" ]; then
+		invoke-rc.d xend start || exit $?
+	else
+		/etc/init.d/xend start || exit $?
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installinit
+if [ -x "/etc/init.d/xendomains" ]; then
+	update-rc.d xendomains defaults 21 20 >/dev/null || exit $?
+fi
+# End automatically added section
+
+
+exit 0

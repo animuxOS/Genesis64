@@ -1,0 +1,926 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="Se o componente PKCS#11 do gnome-keyring está ou não activo.">
+                                                        <longdesc>Esta opção activa o componente PKCS#11 no daemon gnome-keyring. Apenas tem efeito quando o gnome-keyring-daemon é iniciado, (por ex: quando o utilizador inicia uma sessão). Esta definição pode ser sobreposta quando determinados argumentos de linha de comando forem passados para o daemon.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="Se o agente SSH do gnome-keyring está ou não activo.">
+                                                        <longdesc>Esta opção activa o agente SSH no daemon gnome-keyring. Apenas tem efeito quando o gnome-keyring-daemon é iniciado, (por ex: quando o utilizador inicia uma sessão). Esta definição pode ser sobreposta quando determinados argumentos de linha de comando forem passados para o daemon.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Largura da Janela">
+                                                        <longdesc>Largura da Janela a ser apresentada</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Altura da Janela">
+                                                        <longdesc>Altura da Janela a ser apresentada</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Comandos a executar em resposta a um atalho de teclado">
+                                                        <longdesc>As chaves /apps/metacity/global_keybindings/run_command_N definem atalhos de teclado que correspondem a estes comandos. Premir o atalho de teclado para run_command_N irá executar o command_N.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="O comando de captura de janela">
+                                                        <longdesc>A chave /apps/metacity/global_keybindings/run_command_window_screenshot define um atalho de teclado que invoca o comando especificado por esta definição.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="O comando de captura de ecrã">
+                                                        <longdesc>A chave /apps/metacity/global_keybindings/run_command_screenshot define um atalho de teclado que invoca o comando especificado por esta definição.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Executar um comando definido">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Executar uma consola">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Efectuar uma captura de uma janela">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Efectuar uma captura de ecrã">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Apresentar o diálogo de painel de execução de aplicação">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Apresentar o menu do painel">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Mover para a área de trabalho abaixo desta">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Mover para a área de trabalho acima desta">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Mover para a área de trabalho à direita">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Mover para a área de trabalho à esquerda">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Mover para a área de trabalho 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Mover para a área de trabalho 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Mover para a área de trabalho 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Mover para a área de trabalho 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Mover para a área de trabalho 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Mover para a área de trabalho 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Mover para a área de trabalho 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Mover para a área de trabalho 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Mover para a área de trabalho 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Mover para a área de trabalho 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Mover para a área de trabalho 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Mover para a área de trabalho 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Esconder todas as janelas e colocar foco na área de trabalho">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Mover para trás imediatamente entre painéis e o ambiente">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Mover imediatamente entre painéis e o ambiente">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Mover para trás imediatamente entre janelas">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Mover imediatamente entre janelas">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Mover para trás entre janelas de uma aplicação com popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Mover entre janelas de uma aplicação com popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Mover para trás imediatamente entre janelas de uma aplicação">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Mover imediatamente entre janelas de uma aplicação">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Mover para trás entre painéis e o ambiente com popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Mover entre painéis e o ambiente com popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Mover foco para trás entre janelas utilizando apresentação de popup">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Mover entre janelas com popup">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Mover a janela para o lado oeste do ecrã">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Mover a janela para o lado leste do ecrã">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Mover a janela para o lado sul do ecrã">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Mover a janela para o lado norte do ecrã">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Mover a janela para o canto sudeste">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Mover a janela para o canto sudoeste">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Mover a janela para o canto nordeste">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Mover a janela para o canto noroeste">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Maximizar janela horizontalmente">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Maximizar janela verticalmente">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Baixar janela abaixo de outras janelas">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Elevar janela acima de outras janelas">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Elevar janela obscurecida, caso contrário baixar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Mover a janela uma área de trabalho abaixo">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Mover a janela uma área de trabalho acima">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Mover a janela uma área de trabalho para a direita">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Mover a janela uma área de trabalho para a esquerda">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Mover janela para a área de trabalho 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Mover janela para a área de trabalho 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Mover janela para a área de trabalho 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Mover janela para a área de trabalho 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Mover janela para a área de trabalho 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Mover janela para a área de trabalho 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Mover janela para a área de trabalho 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Mover janela para a área de trabalho 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Mover janela para a área de trabalho 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Mover janela para a área de trabalho 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Mover janela para a área de trabalho 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Mover janela para a área de trabalho 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Alternar janela em todas as áreas de trabalho">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Redimensionar a janela">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Mover a janela">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Minimizar a janela">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Fechar a janela">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Alternar estado sombreado">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Restaurar a janela">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Maximizar a janela">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Alternar estado de maximização">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Alternar estado sempre no topo">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Alternar modo de ecrã completo">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Activar menu de janela">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Nome da área de trabalho">
+                                                        <longdesc>O nome de uma área de trabalho.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Desabilitar funcionalidades inválidas requeridas por aplicações antigas ou estragadas">
+                                                        <longdesc>Algumas aplicações ignoram as especificações de formas que resultam num funcionamento incorrecto do gestor de janelas. Esta opção coloca o Metacity num modo de correcção estrita, o que disponibiliza um interface de utilizador mais consistente, desde que não seja necessário utilizar nenhuma aplicação que seja problemática.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Não implementado) Navegação funciona em termos de aplicações e não janelas">
+                                                        <longdesc>Se verdadeiro, o Metacity funcionará em termos de aplicações e não de janelas. O conceito é algo abstracto, mas em geral uma configuração baseada em aplicações é mais tipo Mac e menos tipo Windows. Ao colocar o foco numa janela em modo aplicação, todas as janelas da aplicação são elevadas. Também, em modo aplicação, cliques de foco não são passados para janelas noutras aplicações. O modo aplicação está ainda, no entanto, quase todo por implementar.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Se verdadeiro, trocar usabilidade por menor utilização de recursos">
+                                                        <longdesc>Se verdadeiro, o metacity transmitirá ao utilizador menos resposta utilizando molduras de linhas, evitando animações ou por outros meios. Isto representa para muitos utilizadores uma redução significativa na usabilidade, mas poderá permitir que aplicações antigas funcionem e pode também ser um bom compromisso para servidores de consola. No entanto, a funcionalidade de molduras de linhas estará inactiva quando a acessibilidade estiver activa.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="Gestor de Composições">
+                                                        <longdesc>Determina se o Metacity é ou não um gestor de composições.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Tipo de Campainha Visual">
+                                                        <longdesc>Indica ao Metacity como implementar a indicação visual de que a campainha de sistema ou o indicador de &apos;campainha&apos; de outra aplicação tocou. Actualmente existem dois valores válidos, &quot;fullscreen&quot;, que causa um flash branco-preto de ecrã completo, e &quot;frame_flash&quot; que faz com que a barra de título da aplicação que emitiu a campainha emita um flash. Se a aplicação que tocou a campainha for desconhecida (é normalmente o caso para o &quot;beep de sistema&quot; por omissão), irá emitir flash a barra de título da aplicação com o foco.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Campainha de Sistema é Audível">
+                                                        <longdesc>Determina se as aplicações ou o sistema podem gerar &apos;beeps&apos; audíveis; pode ser utilizado em conjunto com &apos;visual bell&apos; para permitir &apos;beeps&apos; silenciosos.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Activar Campainha Visual">
+                                                        <longdesc>Activa um indicador visual de quando uma aplicação ou o sistema emitem uma &apos;campainha&apos; ou &apos;beep&apos;; útil para os deficientes auditivos e para utilizar em ambientes ruidosos.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Número de áreas de trabalho">
+                                                        <longdesc>Número de áreas de trabalho. Tem de ser maior do que zero, e tem um máximo fixo (para impedir que torne o seu ambiente de trabalho inutilizável por pedir demasiadas áreas de trabalho).</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Fonte de título de janela">
+                                                        <longdesc>Uma expressão de descrição de fonte que descreve uma fonte para as barras de título. O tamanho da descrição apenas será utilizada se a opção titlebar_font_size estiver definida como 0. Esta opção será desabilitada se a opção titlebar_uses_desktop_font estiver definida como verdadeira.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Utilizar fonte de sistema standard nos títulos das janelas">
+                                                        <longdesc>Se verdadeiro, ignora a opção titlebar_font e utiliza a fonte standard da aplicação para os títulos da janela.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Tema actual">
+                                                        <longdesc>O tema determina a aparência das margens das janelas, barras de título, etc.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Atraso em milisegundos para a opção de elevar automaticamente">
+                                                        <longdesc>O atraso temporal antes de elevar uma janela caso auto_raise esteja definido como verdadeiro. O atraso é especificado em milésimas de segundo.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Eleva automaticamente a janela com o foco">
+                                                        <longdesc>Se verdadeiro, e o modo de foco for &quot;sloppy&quot; ou &quot;mouse&quot; então a janela com foco será automaticamente elevada após um atraso especificado pela chave auto_raise_delay. Isto não está relacionado com clicar numa janela para a elevar, nem com entrar numa janela durante um processo de arrastar-e-largar.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="Acção do clique-direito na barra de título">
+                                                        <longdesc>Esta opção determina o efeito do clique-direito na barra de título. As opções actualmente válidas são &apos;toggle_shade&apos;, que sombreia/remove sombra na janela, &apos;toggle_maximize&apos; que maximiza/restaura a janela, &apos;minimize&apos; que irá minimizar a janela e &apos;none&apos; que não fará qualquer acção.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="Acção do clique-do-meio na barra de título">
+                                                        <longdesc>Esta opção determina o efeito do clique-do-meio na barra de título. As opções actualmente válidas são &apos;toggle_shade&apos;, que sombreia/remove sombra na janela, &apos;toggle_maximize&apos; que maximiza/restaura a janela, &apos;minimize&apos; que irá minimizar a janela e &apos;none&apos; que não fará qualquer acção.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Acção do duplo-clique na barra de título">
+                                                        <longdesc>Esta opção determina o efeito do clique-duplo na barra de título. As opções actualmente válidas são &apos;toggle_shade&apos;, que sombreia/remove sombra na janela, &apos;toggle_maximize&apos; que maximiza/restaura a janela, &apos;minimize&apos; que irá minimizar a janela e &apos;none&apos; que não fará qualquer acção.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Se elevar deverá ou não ser um efeito secundário de outras acções do utilizador">
+                                                        <longdesc>Muitas acções (por ex. clicar na área de cliente, mover ou redimensionar a janela) normalmente elevam a janela como efeito secundário. Definir esta opção como falsa, o que é muito desaconselhável, irá desassociar o elevar de outras acções do utilizador e ignorar pedidos de elevação gerados pelas aplicações. Consulte http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Controla como as novas janelas obtém o foco">
+                                                        <longdesc>Esta opção disponibiliza controlo adicional sobre como as janelas novas obtêm o foco. Existem dois valores possíveis; &quot;smart&quot; aplica o modo normal de foco do utilizador, e &quot;strict&quot; resulta em janelas iniciadas a partir de uma consola não receberem o foco.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Modo de foco de janela">
+                                                        <longdesc>O modo de foco de janela indica como as janelas são activadas. Tem três valores possíveis; &quot;click&quot; significa que a janela tem de ser clicada para obter o foco, &quot;sloppy&quot; significa que a janela fica com foco quando o rato entra na janela, e &quot;mouse&quot; significa que a janela fica com o foco quando o rato entra na janela e o perde quando o rato sai.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Disposição dos botões na barra de título">
+                                                        <longdesc>Disposição dos botões na barra de título. O valor deverá ser uma expressão, tal como &quot;menu:minimize,maximize,close&quot;; o dois-pontos separa o canto esquerdo da janela do direito, e os nomes dos botões são separados por vírgulas. Não são permitidos botões duplicados. Nomes de botões desconhecidos são ignorados para que possam ser adicionados botões em versões futuras do metacity sem gerar erros em versões antigas.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Modificador a utilizar para acções de clique de janela modificada">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Aplicação visualizadora por omissão de componente">
+                                                                <longdesc>A aplicação a utilizar para visualizar ficheiros que requerem um componente para que possam ser visualizadas. O parâmetro %s será substituido pelo URI do ficheiro, o parâmetro %c será substituido pelo IID do componente.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Argumentos de execução para consola por omissão">
+                                                                <longdesc>O argumento de execução a utilizar para a aplicação de consola por omissão.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Aplicação de consola por omissão">
+                                                                <longdesc>A aplicação de consola a utilizar por omissão para aplicações que necessitem de uma consola.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Executar o comando numa consola">
+                                                                <longdesc>Verdadeiro se o comando utilizado para manipular este tipo de URL deverá ser executado numa consola.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="O manipulador de URLs &quot;h323&quot;">
+                                                                <longdesc>O comando utilizado para manipular URLs &quot;h323&quot;, se activo.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Se o comando especificado deverá manipular URLs &quot;h323&quot;">
+                                                                <longdesc>Verdadeiro se o comando especificado na chave &quot;command&quot; deverá manipular URLs &quot;h323&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Executar o comando numa consola">
+                                                                <longdesc>Verdadeiro se o comando utilizado para manipular este tipo de URL deverá ser executado numa consola.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="O manipulador de URLs &quot;callto&quot;">
+                                                                <longdesc>O comando utilizado para manipular URLs &quot;callto&quot;, se activo.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Se o comando especificado deverá manipular URLs &quot;callto&quot;">
+                                                                <longdesc>Verdadeiro se o comando especificado na chave &quot;command&quot; deverá manipular URLs &quot;callto&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Executar o comando numa consola">
+                                                                <longdesc>Verdadeiro se o comando utilizado para manipular este tipo de URL deverá ser executado numa consola.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="O manipulador de URLs &quot;mailto&quot;">
+                                                                <longdesc>O comando utilizado para manipular URLs &quot;mailto&quot;, se activo.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Se o comando especificado deverá manipular URLs &quot;mailto&quot;">
+                                                                <longdesc>Verdadeiro se o comando especificado na chave &quot;command&quot; deverá manipular URLs &quot;mailto&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Executar o comando numa consola">
+                                                                <longdesc>Verdadeiro se o comando utilizado para manipular este tipo de URL deverá ser executado numa consola.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="O manipulador de URLs &quot;https&quot;">
+                                                                <longdesc>O comando utilizado para manipular URLs &quot;https&quot;, se activo.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Se o comando especificado deverá manipular URLs &quot;https&quot;">
+                                                                <longdesc>Verdadeiro se o comando especificado na chave &quot;command&quot; deverá manipular URLs &quot;https&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Executar o comando numa consola">
+                                                                <longdesc>Verdadeiro se o comando utilizado para manipular este tipo de URL deverá ser executado numa consola.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Executar o comando numa consola">
+                                                                <longdesc>Verdadeiro se o comando utilizado para manipular este tipo de URL deverá ser executado numa consola.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="O manipulador de URLs &quot;http&quot;">
+                                                                <longdesc>O comando utilizado para manipular URLs &quot;http&quot;, se activo.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Se o comando especificado deverá manipular URLs &quot;http&quot;">
+                                                                <longdesc>Verdadeiro se o comando especificado na chave &quot;command&quot; deverá manipular URLs &quot;http&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Executar o comando numa consola">
+                                                                <longdesc>Verdadeiro se o comando utilizado para manipular este tipo de URL deverá ser executado numa consola.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="O manipulador de URLs &quot;man&quot;">
+                                                                <longdesc>O comando utilizado para manipular URLs &quot;man&quot;, se activo.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Se o comando especificado deverá manipular URLs &quot;man&quot;">
+                                                                <longdesc>Verdadeiro se o comando especificado na chave &quot;command&quot; deverá manipular URLs &quot;man&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Executar o comando numa consola">
+                                                                <longdesc>Verdadeiro se o comando utilizado para manipular este tipo de URL deverá ser executado numa consola.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="O manipulador de URLs &quot;info&quot;">
+                                                                <longdesc>O comando utilizado para manipular URLs &quot;info&quot;, se activo.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Se o comando especificado deverá manipular URLs &quot;info&quot;">
+                                                                <longdesc>Verdadeiro se o comando especificado na chave &quot;command&quot; deverá manipular URLs &quot;info&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Executar o comando numa consola">
+                                                                <longdesc>Verdadeiro se o comando utilizado para manipular este tipo de URL deverá ser executado numa consola.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="O manipulador de URLs &quot;ghelp&quot;">
+                                                                <longdesc>O comando utilizado para manipular URLs &quot;ghelp&quot;, se activo.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Se o comando especificado deverá manipular URLs &quot;ghelp&quot;">
+                                                                <longdesc>Verdadeiro se o comando especificado na chave &quot;command&quot; deverá manipular URLs &quot;ghelp&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Executar o comando numa consola">
+                                                                <longdesc>Verdadeiro se o comando utilizado para manipular este tipo de URL deverá ser executado numa consola.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="O manipulador de URLs &quot;trash&quot;">
+                                                                <longdesc>O comando utilizado para manipular URLs &quot;trash&quot;, se activo.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Se o comando especificado deverá manipular URLs &quot;trash&quot;">
+                                                                <longdesc>Verdadeiro se o comando especificado na chave &quot;command&quot; deverá manipular URLs &quot;trash&quot;.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Se este perfil é ou não para ser utilizado">
+                                                                        <longdesc>Se este perfil é ou não para ser utilizado e apresentado.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="A extensão de nome de ficheiro por omissão para este perfil">
+                                                                        <longdesc>Uma extensão de nome de ficheiro a ser utilizada ao armazenar ficheiros codificados com este perfil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="O canal parcial GStreamer utilizado">
+                                                                        <longdesc>Um canal parcial GStreamer utilizado para este perfil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="Uma descrição do perfil audio">
+                                                                        <longdesc>Uma descrição do perfil, contendo mais informação e descrevendo quando utilizar este perfil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Um nome abreviado para este perfil audio">
+                                                                        <longdesc>Um nome abreviado para o perfil audio, a ser utilizado nas selecções e que identifica univocamente o perfil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Se este perfil é ou não para ser utilizado">
+                                                                                <longdesc>Se este perfil é ou não para ser utilizado e apresentado.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="A extensão de nome de ficheiro por omissão para este perfil">
+                                                                                <longdesc>Uma extensão de nome de ficheiro a ser utilizada ao armazenar ficheiros codificados com este perfil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="O canal parcial GStreamer utilizado">
+                                                                                <longdesc>Um canal parcial GStreamer utilizado para este perfil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Uma descrição do perfil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Um nome abreviado para este perfil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="A extensão de nome de ficheiro por omissão para este perfil">
+                                                                                <longdesc>Uma extensão de nome de ficheiro a ser utilizada ao armazenar ficheiros codificados com este perfil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="O canal parcial GStreamer utilizado">
+                                                                                <longdesc>Um canal parcial GStreamer utilizado para este perfil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Uma descrição do perfil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Um nome abreviado para este perfil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="A extensão de nome de ficheiro por omissão para este perfil">
+                                                                                <longdesc>Uma extensão de nome de ficheiro a ser utilizada ao armazenar ficheiros codificados com este perfil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="O canal parcial GStreamer utilizado">
+                                                                                <longdesc>Um canal parcial GStreamer utilizado para este perfil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Uma descrição do perfil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Um nome abreviado para este perfil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="A extensão de nome de ficheiro por omissão para este perfil">
+                                                                                <longdesc>Uma extensão de nome de ficheiro a ser utilizada ao armazenar ficheiros codificados com este perfil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="O canal parcial GStreamer utilizado">
+                                                                                <longdesc>Um canal parcial GStreamer utilizado para este perfil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Uma descrição do perfil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Um nome abreviado para este perfil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="A extensão de nome de ficheiro por omissão para este perfil">
+                                                                                <longdesc>Uma extensão de nome de ficheiro a ser utilizada ao armazenar ficheiros codificados com este perfil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="O canal parcial GStreamer utilizado">
+                                                                                <longdesc>Um canal parcial GStreamer utilizado para este perfil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Uma descrição do perfil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Um nome abreviado para este perfil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="A extensão de nome de ficheiro por omissão para este perfil">
+                                                                                <longdesc>Uma extensão de nome de ficheiro a ser utilizada ao armazenar ficheiros codificados com este perfil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="O canal parcial GStreamer utilizado">
+                                                                                <longdesc>Um canal parcial GStreamer utilizado para este perfil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Uma descrição do perfil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Um nome abreviado para este perfil audio">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Lista de perfis">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="URL de configuração automática de proxy">
+                                                <longdesc>URL que disponibiliza valores de configuração da proxy.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="Porto de proxy SOCKS">
+                                                <longdesc>O porto na máquina, definido por &quot;/system/proxy/socks_host&quot;, através do qual efectuar proxy.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="Nome de máquina de proxy SOCKS">
+                                                <longdesc>O nome da máquina através da qual efectuar proxy socks.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="Porto do proxy FTP">
+                                                <longdesc>O porto na máquina, definido por &quot;/system/proxy/ftp_host&quot;, através do qual efectuar proxy.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="Nome de máquina da proxy FTP">
+                                                <longdesc>O nome da máquina através da qual efectuar proxy de FTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Porto de proxy de HTTP seguro">
+                                                <longdesc>O porto na máquina, definido por &quot;/system/proxy/secure_host&quot;, através do qual efectuar proxy.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Nome de máquina de proxy de HTTP seguro">
+                                                <longdesc>O nome da máquina através da qual efectuar proxy de HTTP seguro.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Modo de configuração proxy">
+                                                <longdesc>Seleccione o modo de configuração de proxy. Valores suportados são &quot;none&quot; (nenhum), &quot;manual&quot;, &quot;auto&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Máquina não-proxy">
+                                                <longdesc>Esta chave contém uma lista de máquinas às quais a ligação deverá ser directa, e não através da proxy (caso esteja activa). Os valores podem ser nomes de máquinas, domínios (utilizando um caracter genérico tal como *.exemplo.pt), endereços IP (tanto IPv4 como IPv6) e endereços de rede com uma máscara de rede (algo como 192.168.0.0/24).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="Senha da proxy HTTP">
+                                                <longdesc>Senha a indicar como autenticação ao efectuar proxy de HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="Utilizador da proxy HTTP">
+                                                <longdesc>Utilizador a indicar como autenticação ao efectuar proxy de HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Autenticar ligações ao servidor proxy">
+                                                <longdesc>Se verdadeiro, ligações ao servidor proxy requerem autenticação. O conjunto utilizador/senha é definido por &quot;/system/http_proxy/authentication_user&quot; e &quot;/system/http_proxy/authentication_password&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="Porto do proxy HTTP">
+                                                <longdesc>O porto na máquina, definido por &quot;/system/http_proxy/host&quot;, através do qual efectuar proxy.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="Nome de máquina da proxy HTTP">
+                                                <longdesc>O nome da máquina através da qual efectuar proxy de HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="Utilizar proxy HTTP">
+                                                <longdesc>Activa as definições de proxy ao aceder por HTTP à Internet.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Domínios adicionais onde procurar serviços DNS-SD">
+                                                <longdesc>Lista separada por vírgulas de domínios DNS-SD que deverão ser visíveis na localização de rede &quot;network:///&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Como apresentar o serviço DNS-SD local">
+                                                <longdesc>Valores possíveis são &quot;merged&quot;, &quot;separate&quot; e &quot;disabled&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="Grupo de trabalho SMB">
+                                                <longdesc>O grupo de trabalho de rede Windows ou o domínio a que o utilizador pertence. Para que um novo grupo de trabalho tenha efeito total o utilizador poderá ter de terminar a sessão e iniciá-la novamente.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

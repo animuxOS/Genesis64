@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+    <plugin name="session">
+	<short>Session Management</short>
+	<short xml:lang="en_GB">Session Management</short>
+	<short xml:lang="fi">Istunnon hallinta</short>
+	<short xml:lang="fr">Gestion de Session</short>
+	<short xml:lang="gl">Xestión de Sesións</short>
+	<short xml:lang="it">Gestione sessione</short>
+	<short xml:lang="ja">セッション・マネジメント</short>
+	<short xml:lang="nb">Sesjonshåndtering</short>
+	<short xml:lang="pt">Gestão de Sessão</short>
+	<long>Talk to session manager and save/load window state</long>
+	<long xml:lang="en_GB">Talk to session manager and save/load window state</long>
+	<long xml:lang="fr">Ouvrir le gestionnaire de session et sauvegarder/charger l'état des fenêtres.</long>
+	<long xml:lang="gl">Comunicar co xestor de sesións e gardar/cargar estado das fiestras</long>
+	<long xml:lang="it">Interagisce col gestore di sessione e salva/carica lo stato della finestra</long>
+	<long xml:lang="ja">セッション・マネージャと対話してウィンドウの状態を保存/読み込み</long>
+	<long xml:lang="nb">Snakk til sesjonshåndtereren og lagre/laste vindustilstand</long>
+	<long xml:lang="pl">Komunikacja z menedżerem sesji i zapis/wczytywanie stanu okien</long>
+	<long xml:lang="pt">Comunicar com o gestor de sessão e guardar/restaurar estado da janela</long>
+	<category>Utility</category>
+	<deps>
+	    <relation type="before">
+		<plugin>decoration</plugin>
+	    </relation>
+	</deps>
+	<display>
+	    <option type="bool" name="save_legacy">
+		<short>Save Legacy Apps</short>
+		<short xml:lang="en_GB">Save Legacy Apps</short>
+		<short xml:lang="fr">Sauvegarder les Applications Héritées</short>
+		<short xml:lang="gl">Gardar Aplicacións Herdadas</short>
+		<short xml:lang="it">Salvare applicazioni datate</short>
+		<short xml:lang="ja">レガシー・アプリの保存</short>
+		<short xml:lang="nb">Lagre gamle applikasjoner</short>
+		<short xml:lang="pt">Guardar Estado Aplicações Legacy</short>
+		<long>Also try to save and restore legacy apps that don't support the X session management protocol. This setting only should be used in KDE, as only KDE's session manager also saves those applications.</long>
+		<long xml:lang="en_GB">Also try to save and restore legacy apps that don't support the X session management protocol. This setting only should be used in KDE, as only KDE's session manager also saves those applications.</long>
+		<long xml:lang="fr">Essayer aussi de sauvegarder et restaurer les applications héritées qui ne supportent pas le protocole de gestion de session de X. Ce réglage devrait n'être utilisé qu'avec KDE, car seules le gestionnaire de session de KDE sauvegarde aussi ces applications.</long>
+		<long xml:lang="gl">Tamén tentar gardar e restaurar aplicacións que non soportan a xestión de protocolo de sesión X. Esta configuración só será empregada en KDE, xa que só o xestor de sesións de KDE garda estas aplicacións.</long>
+		<long xml:lang="it">Cerca di salvare e ripristinare le applicazioni datate che non supportano il protocollo di gestione della sessione X. Questa impostazione dovrebbe essere usata solamente in KDE, dato che solo il gestore di sessione di KDE salva queste applicazioni.</long>
+		<long xml:lang="ja">X のセッションマネジメント・プロトコルをサポートしていないレガシー・アプリの保存や復元も試みます。これは KDE でのみ使用されるべき設定です。KDE のセッション・マネージャだけがそうしたアプリケーションの保存も行うからです。</long>
+		<long xml:lang="nb">Prøv også å lagre og gjenopprette gamle applikasjoner som ikke støtter X sesjonshåndterings-protokollen. Denne innstillingen burde kun brukes i kDE, siden kun KDEs sesjonshåndterer også lagrer disse applikasjonene.</long>
+		<long xml:lang="pt">Tentar também salvar e restaurar aplicações legacy que não suportam o protocolo de gestão de sessão do X. Esta definição deve ser apenas usada quando estiver em KDE, uma vez que o gestor de sessão do KDE é o único que gere essas aplicações.</long>
+		<default>false</default>
+	    </option>
+	</display>
+    </plugin>
+</compiz>

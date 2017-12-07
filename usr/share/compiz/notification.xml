@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compiz>
+    <plugin name="notification">
+	<short>Error Notifications</short>
+	<short xml:lang="el">Ειδοποιήσεις Σφαλμάτων</short>
+	<short xml:lang="en_GB">Error Notifications</short>
+	<short xml:lang="es">Notificacion de error</short>
+	<short xml:lang="fr">Notifications d'erreurs</short>
+	<short xml:lang="gl">Notificacións de Erro</short>
+	<short xml:lang="it">Notifiche di errore</short>
+	<short xml:lang="ja">エラー通知</short>
+	<short xml:lang="nb">Feilmeldinger</short>
+	<short xml:lang="nl">Fout notificatie's</short>
+	<short xml:lang="pl">Informowanie o błędach</short>
+	<short xml:lang="pt">Notificações Erro</short>
+	<short xml:lang="sv">Felmeddelanden</short>
+	<long>Display errors and other messages using libnotify.</long>
+	<long xml:lang="el">Εμφάνιση σφαλμάτων και άλλων μηνυμάτων με τη χρήση του libnotify.</long>
+	<long xml:lang="en_GB">Display errors and other messages using libnotify.</long>
+	<long xml:lang="fr">Afficher les erreurs et autres messages en utilisant libnotify.</long>
+	<long xml:lang="gl">Mostrar erros e outras mensaxes empregando libnotify</long>
+	<long xml:lang="it">Mostra errori e altri messaggi utilizzando libnotify.</long>
+	<long xml:lang="ja">libnotify を使用して、エラーやその他のメッセージを表示</long>
+	<long xml:lang="nb">Vis feil og andre beskjeder ved hjelp av libnotify</long>
+	<long xml:lang="nl">Toon fouten en andere berichten met gebruik van libnotify.</long>
+	<long xml:lang="pl">Wyświetlaj błędy i inne powiadomienia używając libnotify.</long>
+	<long xml:lang="pt">Mostrar erros e outras mensagens através de libnotify.</long>
+	<long xml:lang="sv">Använd libnotify för att visa fel och andra meddelanden.</long>
+	<display>
+	    <option type="int" name="timeout">
+		<short>Hide Timeout</short>
+		<short xml:lang="el">Τέλος Χρόνου Απόκρυψης</short>
+		<short xml:lang="en_GB">Hide Timeout</short>
+		<short xml:lang="fr">Délai d'apparition</short>
+		<short xml:lang="gl">Tempo para esconder</short>
+		<short xml:lang="it">Durata scomparsa</short>
+		<short xml:lang="ja">非表示タイムアウト</short>
+		<short xml:lang="nb">Ventetid før skjul</short>
+		<short xml:lang="nl">Verberg time out</short>
+		<short xml:lang="pt">Tempo de Espera para Esconder</short>
+		<short xml:lang="sv">Göm-fördröjning</short>
+		<long>Timeout (in seconds) before hiding the notification, set to -1 for system default and 0 for indefinite</long>
+		<long xml:lang="el">Τέλος χρόνου (σε δευτερόλεπτα) πριν την απόκρυψη της ειδοποίησης, θέστε -1 για προεπιλογή συστήματος και 0 για απροσδιόριστο</long>
+		<long xml:lang="en_GB">Timeout (in seconds) before hiding the notification, set to -1 for system default and 0 for indefinite</long>
+		<long xml:lang="es">Timeout(En segundos) Antes de ocultar la notificaion,,Set es -1 para sistema por defecto y 0 para indefinido</long>
+		<long xml:lang="fr">Délai (en secondes) avant de cacher la notification, réglez à -1 pour la valeur par défaut, et 0 pour indéfini</long>
+		<long xml:lang="gl">Retardo (en segundos) despois de agochar a notificción, poñer a -1 para o valor por defecto e 0 para infinito</long>
+		<long xml:lang="it">Timeout (in secondi) prima di nascondere la notifica, impostare a -1 per il predefinito di sistema, 0 per indefinito</long>
+		<long xml:lang="ja">通知表示を隠し始めるまでのタイムアウト（ミリ秒）。-1 に設定するとシステムのデフォルトに、0 に設定すると無期限に。 </long>
+		<long xml:lang="nb">Pause i sekunder før beskjeden skjules. Sett til -1 for systemets standard, og 0 for uendelig</long>
+		<long xml:lang="nl">Time out (in seconden) voordat de notificatie verborgen wordt, stel in op 1 voor standaard van systeem en nul voor onbeperkt</long>
+		<long xml:lang="pl">Czas przed zamknięciem powiadomienia (w sekundach), ustaw -1 dla wartości domyślnej, 0 dla czasu nieograniczonego.</long>
+		<long xml:lang="pt">Tempo de espera (em s) antes de esconder a notificação, coloque -1 para a definição por omissão e 0 para indefinido</long>
+		<long xml:lang="sv">Tiden (i sekunder) innan notisen gömms, sätt till -1 för systemets standardvärden och 0 för obestämd tid</long>
+		<min>-1</min>
+		<max>30</max>
+		<default>-1</default>
+	    </option>
+	    <option type="int" name="max_log_level">
+		<short>Maximum Log Level</short>
+		<short xml:lang="el">Μέγιστο Επίπεδο Καταγραφής</short>
+		<short xml:lang="en_GB">Maximum Log Level</short>
+		<short xml:lang="es">Nivel maximo de registro</short>
+		<short xml:lang="fr">Niveau de Log Maximum</short>
+		<short xml:lang="gl">Nivel de log máximo</short>
+		<short xml:lang="it">Massimo livello del registro</short>
+		<short xml:lang="ja">最高ログ出力レベル</short>
+		<short xml:lang="nb">Maksimalt loggnivå</short>
+		<short xml:lang="nl">Maximum log niveau</short>
+		<short xml:lang="pl">Maksymalny poziom logu</short>
+		<short xml:lang="pt">Nível de Registo Máximo</short>
+		<short xml:lang="sv">Maximal lognivå</short>
+		<long>The maximum log level to display</long>
+		<long xml:lang="el">Το μέγιστο επίπεδο καταγραφής προς εμφάνιση</long>
+		<long xml:lang="en_GB">The maximum log level to display</long>
+		<long xml:lang="es">Nivel maximo de registro en pantalla</long>
+		<long xml:lang="fr">Le niveau maximum de log à afficher</long>
+		<long xml:lang="gl">Nivel de log máximo a mostrar</long>
+		<long xml:lang="it">Il massimo livello del registro da visualizzare</long>
+		<long xml:lang="ja">表示対象のログ出力最高レベル</long>
+		<long xml:lang="nb">Maksimum loggnivå å vise</long>
+		<long xml:lang="nl">Het maximum log niveau om te tonen</long>
+		<long xml:lang="pl">Maksymalny poziom logu do wyświetlania</long>
+		<long xml:lang="pt">Valor máximo do nível de registo</long>
+		<long xml:lang="sv">Den maximala lognivån som visas</long>
+		<default>1</default>
+		<desc>
+		    <value>0</value>
+		    <name>Fatal</name>
+		    <name xml:lang="el">Μοιραίο</name>
+		    <name xml:lang="en_GB">Fatal</name>
+		    <name xml:lang="fr">Fatal</name>
+		    <name xml:lang="gl">Fatal</name>
+		    <name xml:lang="it">Fatale</name>
+		    <name xml:lang="ja">致命的</name>
+		    <name xml:lang="nb">Fatal</name>
+		    <name xml:lang="nl">Fataal</name>
+		    <name xml:lang="pt">Fatal</name>
+		    <name xml:lang="sv">Allvarligt</name>
+		</desc>
+		<desc>
+		    <value>1</value>
+		    <name>Error</name>
+		    <name xml:lang="el">Σφάλμα</name>
+		    <name xml:lang="en_GB">Error</name>
+		    <name xml:lang="es">Error</name>
+		    <name xml:lang="fi">Virhe</name>
+		    <name xml:lang="fr">Erreur</name>
+		    <name xml:lang="gl">Erro</name>
+		    <name xml:lang="it">Errore</name>
+		    <name xml:lang="ja">エラー</name>
+		    <name xml:lang="nb">Feil</name>
+		    <name xml:lang="nl">Fout</name>
+		    <name xml:lang="pl">Błąd</name>
+		    <name xml:lang="pt">Erro</name>
+		    <name xml:lang="sv">Fel</name>
+		</desc>
+		<desc>
+		    <value>2</value>
+		    <name>Warning</name>
+		    <name xml:lang="el">Προσοχή</name>
+		    <name xml:lang="en_GB">Warning</name>
+		    <name xml:lang="es">Peligro</name>
+		    <name xml:lang="fi">Varoitus</name>
+		    <name xml:lang="fr">Avertissement</name>
+		    <name xml:lang="gl">Advertencia</name>
+		    <name xml:lang="it">Attenzione</name>
+		    <name xml:lang="ja">警告</name>
+		    <name xml:lang="nb">Advarsel</name>
+		    <name xml:lang="nl">Waarschuwing</name>
+		    <name xml:lang="pl">Ostrzeżenie</name>
+		    <name xml:lang="pt">Aviso</name>
+		    <name xml:lang="sv">Varning</name>
+		</desc>
+		<desc>
+		    <value>3</value>
+		    <name>Info</name>
+		    <name xml:lang="el">Πληροφορίες</name>
+		    <name xml:lang="en_GB">Info</name>
+		    <name xml:lang="es">Informacion</name>
+		    <name xml:lang="fr">Info</name>
+		    <name xml:lang="gl">Información</name>
+		    <name xml:lang="it">Informazioni</name>
+		    <name xml:lang="ja">情報</name>
+		    <name xml:lang="nb">Info</name>
+		    <name xml:lang="nl">Info</name>
+		    <name xml:lang="pl">Informacja</name>
+		    <name xml:lang="pt">Info</name>
+		    <name xml:lang="sv">Info</name>
+		</desc>
+		<desc>
+		    <value>4</value>
+		    <name>Debug</name>
+		    <name xml:lang="ca">Depurar</name>
+		    <name xml:lang="de">Fehlersuche</name>
+		    <name xml:lang="el">Αποσφαλμάτωση</name>
+		    <name xml:lang="en_GB">Debug</name>
+		    <name xml:lang="es">Depurar</name>
+		    <name xml:lang="fi">Virheenjäljitys</name>
+		    <name xml:lang="fr">Déboggage</name>
+		    <name xml:lang="gl">Depuración</name>
+		    <name xml:lang="gu">ડિબગ</name>
+		    <name xml:lang="hi">डिबग</name>
+		    <name xml:lang="it">Debug</name>
+		    <name xml:lang="ja">デバグ</name>
+		    <name xml:lang="nb">Feilsøk</name>
+		    <name xml:lang="nl">Debug</name>
+		    <name xml:lang="pl">Opcje</name>
+		    <name xml:lang="pt">Depuração</name>
+		    <name xml:lang="pt_BR">Depuração</name>
+		    <name xml:lang="sv">Debug</name>
+		    <name xml:lang="tr">Hata Ayıklama</name>
+		    <name xml:lang="zh_CN">调试</name>
+		</desc>
+	    </option>
+	</display>
+    </plugin>
+</compiz>

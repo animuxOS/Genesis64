@@ -1,0 +1,845 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="Gnome-keyring PKCS#11 bileşeninin etkin olmaması.">
+                                                        <longdesc>Bu özellik gnome-keyring servisi içindeki PKCS#11 eklentisini etkinleştirir. Bu sadece gnome-keyring-daemon başladığında etkili olur, (örn: kullanıcı giriş yaptığında). Kesin komut parametleri servise geçildiğinde bu ayarın yerine geçer.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="Gnome-keyring SSH aracının etkin olmaması.">
+                                                        <longdesc>Bu özellik gnome-keyring servisi içindeki SSH aracını etkinleştirir. Bu sadece gnome-keyring-daemon başladığında etkili olur, (örn: kullanıcı giriş yaptığında). Kesin komut parametleri servise geçildiğinde bu ayarın yerine geçer.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Pencerenin Genişliği">
+                                                        <longdesc>Gösterilecek pencerenin genişliği</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Pencerenin Yüksekliği">
+                                                        <longdesc>Gösterilecek pencerenin yüksekliği</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Tuş bağlarına yanıt olarak çalıştırılacak komutlar">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_N anahtarları bu komutlara karşılık gelen tuş bağlarını tanımlar. run_command_N için tuş bağına basınca command_N çalışır.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Pencere ekran görüntüsü komutu">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_window_screenshot anahtarı bu ayara atanmış komutun çalıştırılması için gereken tuş bağını tanımlar.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Ekran görüntüsü komutu">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_screenshot anahtarı bu ayara atanmış komutun çalıştırılması için gereken tuş bağını tanımlar.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Tanımlanmış bir komutu çalıştır">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Bir terminal çalıştır">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Pencerenin ekran görüntüsünü al">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Ekran görüntüsü al">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Panel çalıştır penceresini göster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Panel menüsünü göster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Aşağıdaki çalışma alanına geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Yukarıdaki çalışma alanına geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Sağdaki çalışma alanına geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Soldaki çalışma alanına geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Çalışma alanı 12&apos;ye geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Çalışma alanı 11&apos;e geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Çalışma alanı 10&apos;a geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Çalışma alanı 9&apos;a geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Çalışma alanı 8&apos;e geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Çalışma alanı 7&apos;ye geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Çalışma alanı 6&apos;ya geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Çalışma alanı 5&apos;e geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Çalışma alanı 4&apos;e geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Çalışma alanı 3&apos;e geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Çalışma alanı 2&apos;ye geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Çalışma alanı 1&apos;e geç">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Tüm pencereleri gizleyip masaüstüne odaklan">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Panellerle masaüstü arasındaki geri geçişi anında yap">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Panellerle masaüstü arasındaki geçişi anında yap">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Pencereler arası geri geçişi anında yap">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Pencereler arası geçişi anında yap">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Panellerle masaüstü arasındaki geri geçişi beliren pencere ile yap">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Panellerle masaüstü arasındaki geçişi beliren pencere ile yap">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Odağı pencereler arasında beliren pencere aracılığıyla taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Pencereler arası geçişi beliren pencere ile yap">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Pencereyi yatay olarak büyült">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Pencereyi dikey olarak büyült">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Pencereyi diğerlerinin altına gönder">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Pencereyi diğerlerinin üstüne çıkar">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Pencere tam görünmüyorsa en üste al, yoksa aşağı gönder">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Pencereyi alttaki çalışma alanına taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Pencereyi üstteki çalışma alanına taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Pencereyi sağdaki çalışma alanına taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Pencereyi soldaki çalışma alanına taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Pencereyi çalışma alanı 12&apos;ye taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Pencereyi çalışma alanı 11&apos;e taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Pencereyi çalışma alanı 2&apos;ye taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Pencereyi çalışma alanı 9&apos;a taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Pencereyi çalışma alanı 8&apos;e taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Pencereyi çalışma alanı 7&apos;ye taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Pencereyi çalışma alanı 6&apos;ya taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Pencereyi çalışma alanı 5&apos;e taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Pencereyi çalışma alanı 4&apos;e taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Pencereyi çalışma alanı 3&apos;e taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Pencereyi çalışma alanı 2&apos;ye taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Pencereyi çalışma alanı 1&apos;e taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Pencerenin tüm çalışma alanlarında oluşunu aç veya kapat">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Pencereyi yeniden boyutlandır">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Pencere taşı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Pencereyi küçült">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Pencereyi kapat">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Toplanmış durumu aç veya kapat">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Pencereyi büyültmeyi geri al">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Bencereyi büyült">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Ekranı kaplama durumunu aç veya kapat">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Herzaman üstte tut durumunu aç veya kapat">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Tam ekran kipini aç veya kapat">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Pencere menüsünü etkinleştir">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Çalışma alanının adı">
+                                                        <longdesc>Çalışma alanının adı.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Eski ya da hatalı uygulamaların gerektirdiği hatalı özellikleri kapat">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Henüz uygulanmamış) Gezinme, pencerelere göre değil uygulamalara göre işler">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Eğer seçiliyse, daha az kaynak kullanımı için kullanılabilirliği azaltır">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Görsel Zil Türü">
+                                                        <longdesc>Metacity&apos;e sistem zilinin veya diğer uygulama zil belirticilerinin kullanacağı görsel uyarıcı şeklini belirtir. Şu an için iki geçerli değer vardır, tüm ekranın siyah-beyaz flaşlaması için &quot;fullscreen&quot;, ve uygulamanın başlık çubuğunun, zil sinyali ile flaşlaması için &quot;frame_flash&quot;. Eğer zil sinyalini gönderen uygulama bilinmiyorsa (ön tanımlı &quot;sistem zili&quot; için geçerli olan durum), güncel odaklanmış pencerenin başlık çubuğu flaşlanır.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Sistem Zili Duyulabilir">
+                                                        <longdesc>Uygulamaların veya sistemin sesli zil çıkarıp çıkartamayacaklarını belirler, sessiz zil sesleri için &apos;görzel zil&apos; ile ilişkili de kullanılabilir.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Görsel Zili Etkinleştir">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Çalışma alanlarının sayısı">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Pencere başlığı yazıtipi">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Pencere başlıklarında standart sistem yazıtipini kullan">
+                                                        <longdesc>Eğer seçiliyse, titlebar_font seçeneğini göz ardı edip pencere başlıklarında standart uygulama yazıtipi kullanılır.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Geçerli tema">
+                                                        <longdesc>Tema; pencere kenarları, başlık çubuğu gibi öğelerin görünümünü belirler.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Kendiliğinden yükseltme seçeneği için milisaniye olarak gecikme">
+                                                        <longdesc>Pencereyi auto_raise ayarı seçiliyse yükseltmeden önceki gecikme. Bu gecikme saniyenin binde biri cinsinden verilir.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Odaklanılan pencereyi kendiliğinden yükseltir">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Başlık çubuğuna çift tıklandığındaki eylem">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Pencere odaklama kipi">
+                                                        <longdesc>Pencere odaklama kipi, pencerelerin nasıl etkinleştirileceğini belirler. Üç olası değeri vardır; &quot;click&quot; olursa pencereler tıklanarak odaklanır, &quot;sloppy&quot; olursa fare pencere sınırlarına girince kendiliğinden odaklanır, &quot;mouse&quot; olursa fare pencereye girince odaklanır ama fare çıktığında odaklama kaybolur.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Başlık çubuğundaki düğmelerin düzeni">
+                                                        <longdesc>Başlık çubuğundaki düğmelerin düzeni. Dizgi türünde bir değer alır, örneğin &quot;menu:minimize,maximize,close&quot;; pencerenin sol köşesindekilerle sağ köşesindekileri iki noktayla, düğme adlarını virgülle ayırın. Bir düğme birden çok kez kullanılamaz. Gelecek metacity sürümlerinde eski sürümlerde soruna yol açmadan yeni düğmeler eklenebilmesi için bilinmeyen düğme adları hata vermeden göz ardı edilecektir.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Değiştirilmiş pencere tıklama işlemleri için kullanılacak değiştirici">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Öntanımlı içerik görüntüleme uygulaması">
+                                                                <longdesc>Görüntülemek için kullanılan uygulama, görüntülemek için içerik gerektirir. %s parametresi doyaların URI &apos;si ile, %c parametresi ise içeriğin IID&apos;si ile değiştirilecek. </longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Öntanımlı uçbirim için çalıştırma argümanı">
+                                                                <longdesc>Öntanımlı uçbirim uygulamsı için çalıştırma argümanları.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Öntanımlı uçbirim uygulaması">
+                                                                <longdesc>Uçbirim gerektiren uygulamalar için öntanımlı uçbirim uygulaması.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Komutu uçbirim içinde çalıştır">
+                                                                <longdesc>Eğer seçiliyse, bu URL&apos;yi işletecek program uçbirimde çalışması gerekiyor demektir.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;h323&quot; URL&apos;leri için işleyici">
+                                                                <longdesc>Eğer etkinse, &quot;h323&quot; URL&apos;lerinin işlemek için kullanılacak komut.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Belirtilen komutun &quot;h323&quot; URL&apos;lerini işlemesi">
+                                                                <longdesc>Eğer seçiliyse, &quot;command&quot; de belirtilen programın &quot;h323&quot; URL&apos;lerini işletmek için ayarlanır.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Komutu uçbirim içinde çalıştır">
+                                                                <longdesc>Eğer seçiliyse, bu URL&apos;yi işletecek program uçbirimde çalışması gerekiyor demektir.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;callto&quot; URL&apos;leri için işleyici">
+                                                                <longdesc>Eğer etkinse, &quot;callto&quot; URL&apos;lerinin işlemek için kullanılacak komut.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Belirtilen komutun &quot;callto&quot; URL&apos;lerini işlemesi">
+                                                                <longdesc>Eğer seçiliyse, &quot;command&quot; da belirtilen programın &quot;callto&quot; URL&apos;lerini işletmesi için ayalalanır.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Komutu uçbirim içinde çalıştır">
+                                                                <longdesc>Eğer seçiliyse, bu URL&apos;yi işletecek program uçbirimde çalışması gerekiyor demektir.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;mailto&quot; URL&apos;leri için işleyici">
+                                                                <longdesc>Eğer etkinse, &quot;mailto&quot; URL&apos;lerinin işlemek için kullanılacak komut.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Belirtilen komutun &quot;mailto&quot; URL&apos;lerini işlemesi">
+                                                                <longdesc>Eğer seçiliyse, &quot;command&quot; da belirtilen programın &quot;mailto&quot; URL&apos;lerini işletmesi için ayalalanır.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Komutu uçbirim içinde çalıştır">
+                                                                <longdesc>Eğer seçiliyse, bu URL&apos;yi işletecek program uçbirimde çalışması gerekiyor demektir.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;https&quot; URL&apos;leri için işleyici">
+                                                                <longdesc>Eğer etkinse, &quot;https&quot; URL&apos;lerinin işlemek için kullanılacak komut.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Belirtilen komutun &quot;https&quot; URL&apos;lerini işlemesi">
+                                                                <longdesc>Eğer seçiliyse, &quot;command&quot; da belirtilen programın &quot;https&quot; URL&apos;lerini işletmesi için ayalalanır.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Komutu uçbirim içinde çalıştır">
+                                                                <longdesc>Eğer seçiliyse, bu URL&apos;yi işletecek program uçbirimde çalışması gerekiyor demektir.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Komutu uçbirim içinde çalıştır">
+                                                                <longdesc>Eğer seçiliyse, bu URL&apos;yi işletecek program uçbirimde çalışması gerekiyor demektir.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;http&quot; URL&apos;leri için işleyici">
+                                                                <longdesc>Eğer etkinse, &quot;http&quot; URL&apos;lerinin işlemek için kullanılacak komut.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Belirtilen komutun &quot;http&quot; URL&apos;lerini işlemesi">
+                                                                <longdesc>Eğer seçiliyse, &quot;command&quot; da belirtilen programın &quot;http&quot; URL&apos;lerini işletmesi için ayalalanır.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Komutu uçbirim içinde çalıştır">
+                                                                <longdesc>Eğer seçiliyse, bu URL&apos;yi işletecek program uçbirimde çalışması gerekiyor demektir.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;man&quot; URL&apos;leri için işleyici">
+                                                                <longdesc>Eğer etkinse, &quot;man&quot; URL&apos;lerinin işlemek için kullanılacak komut.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Belirtilen komutun &quot;man&quot; URL&apos;lerini işlemesi">
+                                                                <longdesc>Eğer seçiliyse, &quot;command&quot; da belirtilen programın &quot;man&quot; URL&apos;lerini işletmesi için ayalalanır.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Komutu uçbirim içinde çalıştır">
+                                                                <longdesc>Eğer seçiliyse, bu URL&apos;yi işletecek program uçbirimde çalışması gerekiyor demektir.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;info&quot; URL&apos;leri için işleyici">
+                                                                <longdesc>Eğer etkinse, &quot;info&quot; URL&apos;lerinin işlemek için kullanılacak komut.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Belirtilen komutun &quot;info&quot; URL&apos;lerini işlemesi">
+                                                                <longdesc>Eğer seçiliyse, &quot;command&quot; da belirtilen programın &quot;info&quot; URL&apos;lerini işletmesi için ayalalanır.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Komutu uçbirim içinde çalıştır">
+                                                                <longdesc>Eğer seçiliyse, bu URL&apos;yi işletecek program uçbirimde çalışması gerekiyor demektir.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ghelp&quot; URL&apos;leri için işleyici">
+                                                                <longdesc>Eğer etkinse, &quot;ghelp&quot; URL&apos;lerinin işlemek için kullanılacak komut.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Belirtilen komutun &quot;ghelp&quot; URL&apos;lerini işlemesi">
+                                                                <longdesc>Eğer seçiliyse, &quot;command&quot; da belirtilen programın &quot;ghelp&quot; URL&apos;lerini işletmesi için ayalalanır.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Komutu uçbirim içinde çalıştır">
+                                                                <longdesc>Eğer seçiliyse, bu URL&apos;yi işletecek program uçbirimde çalışması gerekiyor demektir.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;trash&quot; URL&apos;leri için işleyici">
+                                                                <longdesc>Eğer etkinse, &quot;trash&quot; URL&apos;lerinin işlemek için kullanılacak komut.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Belirtilen komutun &quot;trash&quot; URL&apos;lerini işlemesi">
+                                                                <longdesc>Eğer seçiliyse, &quot;command&quot; da belirtilen programın &quot;trash&quot; URL&apos;lerini işletmesi için ayalalanır.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Bu profilin kullanılıp kullanılmayacağı">
+                                                                        <longdesc>Bu profilin listede gösterilip gösterilmeyeceği.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Bu profil için öntanımlı dosya uzantısı">
+                                                                        <longdesc>Bu profil ile kodlanan dosyaları kaydederken kullanılacak uzantı.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Kullanılacak kısmi GStreamer yönlendirmesi">
+                                                                        <longdesc>Bu profili kullanacak kısmi GStreamer yönlendirmesi (pipeline).</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="Ses profili için bir açıklama">
+                                                                        <longdesc>Profilin nerede kullanılacağı ve profil hakkında daha fazla bilgiler içeren bir açıklama.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Ses profili için kısa bir isim">
+                                                                        <longdesc>Profili ayırt edebilmek ve seçerken kullanmak için kısa bir isim.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Bu profilin kullanılıp kullanılmayacağı">
+                                                                                <longdesc>Bu profilin listede gösterilip gösterilmeyeceği.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Bu profil için öntanımlı dosya uzantısı">
+                                                                                <longdesc>Bu profil ile kodlanan dosyaları kaydederken kullanılacak uzantı.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Kullanılacak kısmi GStreamer yönlendirmesi">
+                                                                                <longdesc>Bu profili kullanacak kısmi GStreamer yönlendirmesi (pipeline).</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Ses profili için bir açıklama">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ses profili için kısa bir isim">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Bu profil için öntanımlı dosya uzantısı">
+                                                                                <longdesc>Bu profil ile kodlanan dosyaları kaydederken kullanılacak uzantı.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Kullanılacak kısmi GStreamer yönlendirmesi">
+                                                                                <longdesc>Bu profili kullanacak kısmi GStreamer yönlendirmesi (pipeline).</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Ses profili için bir açıklama">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ses profili için kısa bir isim">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Bu profil için öntanımlı dosya uzantısı">
+                                                                                <longdesc>Bu profil ile kodlanan dosyaları kaydederken kullanılacak uzantı.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Kullanılacak kısmi GStreamer yönlendirmesi">
+                                                                                <longdesc>Bu profili kullanacak kısmi GStreamer yönlendirmesi (pipeline).</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Ses profili için bir açıklama">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ses profili için kısa bir isim">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Bu profil için öntanımlı dosya uzantısı">
+                                                                                <longdesc>Bu profil ile kodlanan dosyaları kaydederken kullanılacak uzantı.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Kullanılacak kısmi GStreamer yönlendirmesi">
+                                                                                <longdesc>Bu profili kullanacak kısmi GStreamer yönlendirmesi (pipeline).</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Ses profili için bir açıklama">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ses profili için kısa bir isim">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Bu profil için öntanımlı dosya uzantısı">
+                                                                                <longdesc>Bu profil ile kodlanan dosyaları kaydederken kullanılacak uzantı.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Kullanılacak kısmi GStreamer yönlendirmesi">
+                                                                                <longdesc>Bu profili kullanacak kısmi GStreamer yönlendirmesi (pipeline).</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Ses profili için bir açıklama">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ses profili için kısa bir isim">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Bu profil için öntanımlı dosya uzantısı">
+                                                                                <longdesc>Bu profil ile kodlanan dosyaları kaydederken kullanılacak uzantı.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Kullanılacak kısmi GStreamer yönlendirmesi">
+                                                                                <longdesc>Bu profili kullanacak kısmi GStreamer yönlendirmesi (pipeline).</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Ses profili için bir açıklama">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ses profili için kısa bir isim">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Profillerin listesi">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="Otomatik vekil sunucu yapılandırma adresi">
+                                                <longdesc>Vekil ayar değerlerini sağlayan URL.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="SOCS vekil sunucu portu">
+                                                <longdesc>&quot;/system/proxy/socks_host&quot; ile tanımlanmış vekil olarak kullanacağınız makinenin portu.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="SOCKS vekil sunucu adı">
+                                                <longdesc>Socks için kullanılacak vekilin makine adı.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="FTP vekil sunucu portu">
+                                                <longdesc>&quot;/system/proxy/ftp_host&quot; ile tanımlanmış vekil olarak kullanacağınız makinenin portu.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="FTP vekil sunucu makine adı">
+                                                <longdesc>FTP için kullanılacak vekilin makine adı.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Güvenli HTTP sunucu portu">
+                                                <longdesc>&quot;/system/proxy/secure_host&quot; ile tanımlanmış vekil olarak kullanacağınız makinenin portu.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Güvenli HTTP vekil sunucu adı">
+                                                <longdesc>Güvenli HTTP için kullanılacak vekilin makine adı.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Vekil sunucu yapılandırma kipi">
+                                                <longdesc>Vekil yapılandırma kipi seç. Geçerli değerler &quot;none&quot;, &quot;manual&quot; ve &quot;auto&quot;dur.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Vekil olmayan makineler">
+                                                <longdesc>Bu anahtar vekil (eğer aktifse) aracılığından daha çok, direk bağlanmış sunucuların listesini içerir. Değerler, sunucu adları, alanları (enbaşta maske kullanarak, *.foo.com), IP sunucu adresleri (hem IPv4 hem IPv6) ve ağ maskeli ağ adresleri (192.168.0.0/24 benzeri) olabilir.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="HTTP vekil sunucu parolası">
+                                                <longdesc>HTTP vekili kimlik doğrulaması için kullanılacak şifre.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="HTTP vekil sunucu kullanıcı adı">
+                                                <longdesc>HTTP vekili kimlik doğrulamasında kullanacağı kullanıcı adı.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Vekil sunucu bağlantılarında kimlik doğrulaması yap">
+                                                <longdesc>Eğer seçiliyse, vekil sunucusuna bağlantılar kimlik doğrulaması gerektirir. kullanıcı adı/parola ikilisi &quot;/system/http_proxy/authentication_user&quot; ve  &quot;/system/http_proxy/authentication_password&quot; ile tanımlanır.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="HTTP vekil sunucu portu">
+                                                <longdesc>&quot;/system/http_proxy/host&quot; ile tanımlanmış vekil olarak kullanacağınız makinenin portu.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="HTTP vekil sunucu makine adı">
+                                                <longdesc>HTTP için kullanılacak vekilin makine adı.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="HTTP vekili kullan">
+                                                <longdesc>HTTP&apos;ye İnternet üzerinden bağlanırken vekili etkin kılar.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="İçinde DNS-SD servislerini aramak için ek alan adları">
+                                                <longdesc>&quot;network:///&quot; konumunda görülmesi gereken DNS-SD alan adlarının virgül ile ayırılmış listesi.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Yerel DNS-SD servislerinin nasıl gösterileceği">
+                                                <longdesc>Geçerli değerler, &quot;merged&quot; (birleşik), &quot;separate&quot; (ayrık) ve &quot;disabled&quot; (kapalı)&apos;dir.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="SMB çalışma gurubu">
+                                                <longdesc>Kullanıcının parçası olduğu Windows ağ çalışma grubu ya da etki alanı. Yeni çalışma grubunun tam olarak işlemesi için kullanıcının çıkış yapıp tekrar giriş yapması gerekebilir.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

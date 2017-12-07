@@ -1,0 +1,963 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="Huruvida PKCS#11-komponenten i gnome-keyring är aktiverad.">
+                                                        <longdesc>Detta alternativ aktiverar PKCS#11-komponenten i gnome-keyring-demonen. Den blir endast aktiverad när gnome-keyring-daemon startar, (alltså när användaren loggar in). Denna inställning kan åsidosättas när vissa kommandoradsflaggor skickas till demonen.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="Huruvida SSH-agenten i gnome-keyring är aktiverad.">
+                                                        <longdesc>Detta alternativ aktiverar SSH-agenten i gnome-keyring-demonen. Den blir endast aktiverad när gnome-keyring-daemon startar, (alltså när användaren loggar in). Denna inställning kan åsidosättas när vissa kommandoradsflaggor skickas till demonen.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Bredd på fönstret">
+                                                        <longdesc>Bredd på fönstret som ska visas</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Höjd på fönstret">
+                                                        <longdesc>Höjd på fönstret som ska visas</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gksu">
+                                <entry name="save-keyring">
+                                        <local_schema short_desc="Nyckelring till vilken lösenord kommer att sparas">
+                                                <longdesc>Namnet på nyckelringen som gksu ska använda. Vanliga värden är &quot;session&quot;, vilket sparar lösenordet för sessionen, och &quot;default&quot; som sparar lösenordet utan maximal tidsgräns.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="save-to-keyring">
+                                        <local_schema short_desc="Spara lösenord i gnome-keyring">
+                                                <longdesc>gksu kan spara lösenordet som du anger i gnome-keyring så att du inte kommer att bli tillfrågad varje gång det används</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display-no-pass-info">
+                                        <local_schema short_desc="Visa informationsmeddelande när inget lösenord behövs">
+                                                <longdesc>Det här alternativet bestämmer huruvida en meddelandedialog kommer att visas och informera användaren att programmet kör utan att behöva fråga efter ett lösenord av någon anledning.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="prompt">
+                                        <local_schema short_desc="Fråga för fångst">
+                                                <longdesc>Det här alternativet kommer att göra att gksu frågar användaren om denne vill få skärmen fångad innan lösenordet matas in. Observera att det endast har effekt om force-grab är inaktivert.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="sudo-mode">
+                                        <local_schema short_desc="Sudo-läge">
+                                                <longdesc>Huruvida sudo ska vara standardbakändemetoden. Den här metoden användas annars genom flaggan -S eller genom att köra &quot;gksudo&quot; istället för &quot;gksu&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="force-grab">
+                                        <local_schema short_desc="Tvinga fångst av tangentbord och mus">
+                                                <longdesc>Fånga tangentbord och mus även om -g har angivits som argument på kommandoraden.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="disable-grab">
+                                        <local_schema short_desc="Inaktivera fångst av tangentbord och mus">
+                                                <longdesc>Huruvida fångst av tangentbordet och musen ska stängas av. Det här gör det möjligt för andra X-program att lyssna på tangentbordsinmatningshändelser, vilket gör det inte är möjligt att skydda sig mot ondsinta program som kan vara igång.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Kommandon att köra som svar på tangentbindningar">
+                                                        <longdesc>Nycklarna /apps/metacity/global_keybindings/run_command_N anger tangentbindningar som motsvarar dessa kommandon. Att trycka tangentbindningen för run_command_N kommer att köra command_N.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Fönsterskärmdumpskommandot">
+                                                        <longdesc>Nyckeln /apps/metacity/global_keybindings/run_command_window_screenshot anger en tangentbindning som gör att det kommando som anges av denna inställning körs.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Skärmdumpskommandot">
+                                                        <longdesc>Nyckeln /apps/metacity/global_keybindings/run_command_screenshot anger en tangentbindning som gör att det kommando som anges av denna inställning körs.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Kör ett angivet kommando">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Kör en terminal">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Ta en skärmdump av ett fönster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Ta en skärmdump">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Visa paneldialogfönstret för körning av program">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Visa panelmenyn">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Växla till arbetsytan nedanför denna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Växla till arbetsytan ovanför denna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Växla till arbetsytan till höger">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Växla till arbetsytan till vänster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Växla till arbetsyta 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Växla till arbetsyta 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Växla till arbetsyta 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Växla till arbetsyta 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Växla till arbetsyta 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Växla till arbetsyta 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Växla till arbetsyta 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Växla till arbetsyta 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Växla till arbetsyta 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Växla till arbetsyta 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Växla till arbetsyta 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Växla till arbetsyta 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Dölj alla fönster och fokusera skrivbordet">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Flytta baklänges mellan paneler och skrivbordet omedelbart">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Flytta mellan paneler och skrivbordet omedelbart">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Flytta baklänges mellan fönster omedelbart">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Flytta mellan fönster omedelbart">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Flytta baklänges mellan ett programs fönster med popupfönster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Flytta mellan ett programs fönster med popupfönster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Flytta baklänges mellan ett programs fönster omedelbart">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Flytta mellan ett programs fönster omedelbart">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Flytta baklänges mellan paneler och skrivbordet genom användning av popupfönster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Flytta mellan paneler och skrivbordet genom användning av popupfönster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Flytta fokus baklänges mellan fönster genom användning av popupfönster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Flytta mellan fönster genom användning av popupfönster">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Flytta fönstret till västra sidan av skärmen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Flytta fönstret till östra sidan av skärmen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Flytta fönstret till södra sidan av skärmen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Flytta fönstret till norra sidan av skärmen">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Flytta fönstret till sydöstra hörnet">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Flytta fönstret till sydvästra hörnet">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Flytta fönstret till nordöstra hörnet">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Flytta fönstret till nordvästra hörnet">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Maximera fönster horisontellt">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Maximera fönster vertikalt">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Sänk fönster under andra fönster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Höj fönstret över andra fönster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Höj fönstret om skymt, sänk det annars">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Flytta fönster en arbetsyta nedåt">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Flytta fönster en arbetsyta uppåt">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Flytta fönster en arbetsyta åt höger">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Flytta fönster en arbetsyta åt vänster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Flytta fönster till arbetsyta 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Flytta fönster till arbetsyta 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Flytta fönster till arbetsyta 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Flytta fönster till arbetsyta 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Flytta fönster till arbetsyta 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Flytta fönster till arbetsyta 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Flytta fönster till arbetsyta 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Flytta fönster till arbetsyta 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Flytta fönster till arbetsyta 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Flytta fönster till arbetsyta 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Flytta fönster till arbetsyta 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Flytta fönster till arbetsyta 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Växla huruvida fönstret är på alla arbetsytor">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Ändra storlek på fönster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Flytta fönster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Minimera fönster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Stäng fönster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Växla skuggat tillstånd">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Avmaximera fönster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Maximera fönster">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Växla maximeringstillstånd">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Växla tillstånd för alltid överst">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Växla helskärmsläge">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Aktivera fönstermeny">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Namn på arbetsyta">
+                                                        <longdesc>Namnet på en arbetsyta.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Inaktivera felaktiga egenskaper som krävs av gamla eller felaktiga program">
+                                                        <longdesc>Vissa program bortser från specifikationerna vilket resulterar i att fönsterhanteraren inte fungerar som den ska. Detta alternativ försätter Metacity i ett mycket korrekt läge, vilket ger ett mer konsistent användargränssnitt, om man inte behöver köra några program som inte sköter sig.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Inte implementerat) Navigering fungerar i termer av program, inte fönster">
+                                                        <longdesc>Om sant fungerar Metacity i termer av program, inte av fönster. Konceptet är ganska abstrakt, men i regel fungerar en programbaserad konfiguration mer likt Mac och mindre likt Windows. När du fokuserar ett fönster i programbaserat läge kommer alla fönster i programmet att höjas. Dessutom skickas fokusklick inte vidare till fönster i andra program då programbaserat läge används. Dessutom är programbaserat läge till stor del oimplementerat just nu.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Om sant kommer användbarhet att åsidosättas till förmån för mindre resursanvändning">
+                                                        <longdesc>Om detta är sant kommer metacity att ge användaren mindre återkoppling genom att använda trådramar, undvika animationer, och andra sätt. Detta är en betydande minskning av användbarheten för många användare, men kan tillåta äldre program och terminalservrar att fungera i de fall de annars skulle varit olämpliga. Funktionaliteten med trådramar är dock inaktiverad då tillgänglighet är på.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="Compositinghanterare">
+                                                        <longdesc>Fastställer huruvida Metacity är en compositinghanterare.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Typ av visuell signal">
+                                                        <longdesc>Talar om för Metacity hur den synliga indikeringen att systemsignalen eller en annan programsignal har ljudit ska implementeras. För tillfället finns det två giltiga värden, &quot;fullscreen&quot;, som genererar en svartvit blinkning i helskärmsformat, och &quot;frame_flash&quot; som gör att titelraden på programmet som skickade signalen blinkar. Om programmet som skickade signalen är okänd (vilket normalt är fallet för &quot;standardsystempipet&quot;), blinkas titelraden på det för tillfället fokuserade fönstret.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Systemsignalen är ljudlig">
+                                                        <longdesc>Avgör huruvida program eller systemet kan generera ljudliga &quot;pip&quot;. Kan användas tillsammans med &quot;visual bell&quot; för att tillåta tysta &quot;pip&quot;.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Använd visuell signal">
+                                                        <longdesc>Slår på en synlig indikering då ett program eller systemet sänder ut en signal eller &quot;pip&quot;. Användbart för hörselskadade eller för användning i bullriga miljöer.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Antal arbetsytor">
+                                                        <longdesc>Antal arbetsytor. Måste vara större än noll, och har ett fast maxvärde för att förhindra att skrivbordet förstörs genom att för många arbetsytor begärs av misstag.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Typsnitt för fönstertitel">
+                                                        <longdesc>En typsnittsbeskrivningssträng som beskriver ett typsnitt för fönstertitelrader. Storleken från beskrivningen kommer dock endast att användas om alternativet titlebar_font_size är ställt till 0. Dessutom är detta alternativ inaktiverat om alternativet titlebar_uses_desktop_font är sant.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Använd standardsystemtypsnitt i fönstertitlar">
+                                                        <longdesc>Om sant ignoreras alternativet titlebar_font och standardtypsnittet för program används för fönstertitlar.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Aktuellt tema">
+                                                        <longdesc>Temat avgör utseendet på fönsterramar, titelrader, och så vidare.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Fördröjning i millisekunder ">
+                                                        <longdesc>Tidsfördröjningen innan ett fönster höjs om auto_raise är sant. Fördröjningen ges i tusendelar av en sekund.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Höjer automatiskt det fokuserade fönstret">
+                                                        <longdesc>Om sant, och om fokusläget antingen är &quot;sloppy&quot; eller &quot;mouse&quot;, kommer det fokuserade fönstret att automatiskt höjas efter en fördröjning (fördröjningen anges av nyckeln auto_raise_delay). Detta är inte relaterat till att klicka på ett fönster för att höja det, inte heller att gå in i ett fönster med drag-och-släpp.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="Åtgärd vid högerklick på titellisten">
+                                                        <longdesc>Detta alternativ bestämmer effekterna av högerklick på titellisten. Aktuella giltiga alternativ är &quot;toggle_shade&quot; som kommer att skugga/avskugga fönstret, &quot;toggle_maximize&quot; som kommer att maximera/avmaximera fönstret, &quot;minimize&quot; kommer kommer att minimera fönstret, och &quot;none&quot; som inte gör något.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="Åtgärd vid mittenklick på titellisten">
+                                                        <longdesc>Detta alternativ bestämmer effekterna av mittenklick på titellisten. Aktuella giltiga alternativ är &quot;toggle_shade&quot; som kommer att skugga/avskugga fönstret, &quot;toggle_maximize&quot; som kommer att maximera/avmaximera fönstret, &quot;minimize&quot; kommer kommer att minimera fönstret, och &quot;none&quot; som inte gör något.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Åtgärd vid dubbelklick på titelraden">
+                                                        <longdesc>Detta alternativ bestämmer effekterna av dubbelklick på titelraden. Aktuella giltiga alternativ är &quot;toggle_shade&quot; som kommer att skugga/avskugga fönstret, &quot;toggle_maximize&quot; som kommer att maximera/avmaximera fönstret, &quot;minimize&quot; kommer kommer att minimera fönstret, och &quot;none&quot; som inte gör något.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Huruvida höjning ska vara en sidoeffekt av andra användarinteraktioner">
+                                                        <longdesc>Många åtgärder (t.ex. klickning i klientområdet, flyttning eller storleksändring av fönstret) höjer fönstret som en sidoeffekt. Ställ in detta alternativ till falskt, vilket inte alls rekommenderas, för att särbehandla höjning från andra användaråtgärder, och ignorera höjningsbegäran som genereras av programmen. Se http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Kontrollera hur nya fönster får fokus">
+                                                        <longdesc>Detta alternativ tillhandahåller ytterligare kontroll över hur nyligen skapade fönster får fokus. Det har två möjliga värden; &quot;smart&quot; som verkställer användarens normala fokusläge, och &quot;strict&quot; som resulterar i att fönster som startar från en terminal inte ges fokus.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Fönsterfokusläge">
+                                                        <longdesc>Fönsterfokusläget anger hur fönster ska aktiveras. Det har tre möjliga värden; &quot;click&quot; betyder att fönster måste klickas på för att de ska få fokus, &quot;sloppy&quot; betyder att fönster fokuseras då muspekaren hamnar i fönstret, och &quot;mouse&quot; betyder att fönster fokuseras då muspekaren hamnar i fönstret och förlorar fokus då muspekaren lämnar fönstret.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Knapparrangemang på titalraden">
+                                                        <longdesc>Arrangemang av knapparna på titelraden. Värdet måste vara en sträng som till exempel &quot;menu:minimize,maximize,close&quot;; kolonet skiljer det vänstra hörnet från det högra hörnet, och knappnamnen är kommaseparerade. Två knappar av samma typ är inte tillåtet. Okända knappnamn ignoreras helt och hållet så att knappar kan läggas till i framtida versioner utan att gamla versioner går sönder.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Modifierare att använda för modifierade fönsterklickåtgärder">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Standardprogram för komponentvisning">
+                                                                <longdesc>Programmet som används för visning av filer som kräver en komponent för att visa dem. Parametern %s kommer att ersättas av filens URI:er, och parametern %c kommer att ersättas av komponent-IID.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Exekveringsargument för standardterminal">
+                                                                <longdesc>Exekveringsargumentet att använda för standardterminalprogrammet.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Standardterminalprogram">
+                                                                <longdesc>Standardterminalprogrammet att använda för program som kräver en terminal.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kör kommandot i ett terminalfönster">
+                                                                <longdesc>Sant om kommandot för att hantera denna typ av URL ska köras i ett terminalfönster.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Hanteraren för &quot;h323&quot;-URL:er">
+                                                                <longdesc>Kommandot som används för att hantera &quot;h323&quot;-URL:er, om aktiverat.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Huruvida det angivna kommandot ska hantera &quot;h323&quot;-URL:er">
+                                                                <longdesc>Sant om kommandot som är angivet i nyckeln &quot;command&quot; ska hantera &quot;h323&quot;-URL:er.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kör kommandot i ett terminalfönster">
+                                                                <longdesc>Sant om kommandot för att hantera denna typ av URL ska köras i ett terminalfönster.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Hanteraren för &quot;callto&quot;-URL:er">
+                                                                <longdesc>Kommandot som används för att hantera &quot;callto&quot;-URL:er, om aktiverat.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Huruvida det angivna kommandot ska hantera &quot;callto&quot;-URL:er">
+                                                                <longdesc>Sant om kommandot som är angivet i nyckeln &quot;command&quot; ska hantera &quot;callto&quot;-URL:er.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kör kommandot i ett terminalfönster">
+                                                                <longdesc>Sant om kommandot för att hantera denna typ av URL ska köras i ett terminalfönster.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Hanteraren för &quot;mailto&quot;-URL:er">
+                                                                <longdesc>Kommandot som används för att hantera &quot;mailto&quot;-URL:er, om aktiverat.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Huruvida det angivna kommandot ska hantera &quot;mailto&quot;-URL:er">
+                                                                <longdesc>Sant om kommandot som är angivet i nyckeln &quot;command&quot; ska hantera &quot;mailto&quot;-URL:er.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kör kommandot i ett terminalfönster">
+                                                                <longdesc>Sant om kommandot för att hantera denna typ av URL ska köras i ett terminalfönster.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Hanteraren för &quot;https&quot;-URL:er">
+                                                                <longdesc>Kommandot som används för att hantera &quot;https&quot;-URL:er, om aktiverat.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Huruvida det angivna kommandot ska hantera &quot;https&quot;-URL:er">
+                                                                <longdesc>Sant om kommandot som är angivet i nyckeln &quot;command&quot; ska hantera &quot;https&quot;-URL:er.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kör kommandot i ett terminalfönster">
+                                                                <longdesc>Sant om kommandot för att hantera denna typ av URL ska köras i ett terminalfönster.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kör kommandot i ett terminalfönster">
+                                                                <longdesc>Sant om kommandot för att hantera denna typ av URL ska köras i ett terminalfönster.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Hanteraren för &quot;http&quot;-URL:er">
+                                                                <longdesc>Kommandot som används för att hantera &quot;http&quot;-URL:er, om aktiverat.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Huruvida det angivna kommandot ska hantera &quot;http&quot;-URL:er">
+                                                                <longdesc>Sant om kommandot som är angivet i nyckeln &quot;command&quot; ska hantera &quot;http&quot;-URL:er.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kör kommandot i ett terminalfönster">
+                                                                <longdesc>Sant om kommandot för att hantera denna typ av URL ska köras i ett terminalfönster.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Hanteraren för &quot;man&quot;-URL:er">
+                                                                <longdesc>Kommandot som används för att hantera &quot;man&quot;-URL:er, om aktiverat.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Huruvida det angivna kommandot ska hantera &quot;man&quot;-URL:er">
+                                                                <longdesc>Sant om kommandot som är angivet i nyckeln &quot;command&quot; ska hantera &quot;man&quot;-URL:er.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kör kommandot i ett terminalfönster">
+                                                                <longdesc>Sant om kommandot för att hantera denna typ av URL ska köras i ett terminalfönster.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Hanteraren för &quot;info&quot;-URL:er">
+                                                                <longdesc>Kommandot som används för att hantera &quot;info&quot;-URL:er, om aktiverat.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Huruvida det angivna kommandot ska hantera &quot;info&quot;-URL:er">
+                                                                <longdesc>Sant om kommandot som är angivet i nyckeln &quot;command&quot; ska hantera &quot;info&quot;-URL:er.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kör kommandot i ett terminalfönster">
+                                                                <longdesc>Sant om kommandot för att hantera denna typ av URL ska köras i ett terminalfönster.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Hanteraren för &quot;ghelp&quot;-URL:er">
+                                                                <longdesc>Kommandot som används för att hantera &quot;ghelp&quot;-URL:er, om aktiverat.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Huruvida det angivna kommandot ska hantera &quot;ghelp&quot;-URL:er">
+                                                                <longdesc>Sant om kommandot som är angivet i nyckeln &quot;command&quot; ska hantera &quot;ghelp&quot;-URL:er.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Kör kommandot i ett terminalfönster">
+                                                                <longdesc>Sant om kommandot för att hantera denna typ av URL ska köras i ett terminalfönster.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Hanteraren för &quot;trash&quot;-URL:er">
+                                                                <longdesc>Kommandot som används för att hantera &quot;trash&quot;-URL:er, om aktiverat.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Huruvida det angivna kommandot ska hantera &quot;trash&quot;-URL:er">
+                                                                <longdesc>Sant om kommandot som är angivet i nyckeln &quot;command&quot; ska hantera &quot;trash&quot;-URL:er.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Huruvida denna profil ska användas eller inte">
+                                                                        <longdesc>Huruvida denna profil ska användas och visas eller inte.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Standardfiländelsen för denna profil">
+                                                                        <longdesc>En filändelse som ska användas då filer som är kodade med denna profil lagras.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Den ofullständiga GSTreamer-rörledning som används">
+                                                                        <longdesc>En ofullständig GStreamer-rörledning som ska användas för denna profil.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="En beskrivning för ljudprofilen">
+                                                                        <longdesc>En beskrivning av profilen som innehåller mer information och beskriver när profilen ska användas.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Ett kort namn för ljudprofilen">
+                                                                        <longdesc>Ett kort namn för ljudprofilen som kan användas i markeringar och som unikt identifierar profilen.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Huruvida denna profil ska användas eller inte">
+                                                                                <longdesc>Huruvida denna profil ska användas och visas eller inte.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Standardfiländelsen för denna profil">
+                                                                                <longdesc>En filändelse som ska användas då filer som är kodade med denna profil lagras.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Den ofullständiga GSTreamer-rörledning som används">
+                                                                                <longdesc>En ofullständig GStreamer-rörledning som ska användas för denna profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="En beskrivning för ljudprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ett kort namn för ljudprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Standardfiländelsen för denna profil">
+                                                                                <longdesc>En filändelse som ska användas då filer som är kodade med denna profil lagras.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Den ofullständiga GSTreamer-rörledning som används">
+                                                                                <longdesc>En ofullständig GStreamer-rörledning som ska användas för denna profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="En beskrivning för ljudprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ett kort namn för ljudprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Standardfiländelsen för denna profil">
+                                                                                <longdesc>En filändelse som ska användas då filer som är kodade med denna profil lagras.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Den ofullständiga GSTreamer-rörledning som används">
+                                                                                <longdesc>En ofullständig GStreamer-rörledning som ska användas för denna profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="En beskrivning för ljudprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ett kort namn för ljudprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Standardfiländelsen för denna profil">
+                                                                                <longdesc>En filändelse som ska användas då filer som är kodade med denna profil lagras.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Den ofullständiga GSTreamer-rörledning som används">
+                                                                                <longdesc>En ofullständig GStreamer-rörledning som ska användas för denna profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="En beskrivning för ljudprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ett kort namn för ljudprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Standardfiländelsen för denna profil">
+                                                                                <longdesc>En filändelse som ska användas då filer som är kodade med denna profil lagras.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Den ofullständiga GSTreamer-rörledning som används">
+                                                                                <longdesc>En ofullständig GStreamer-rörledning som ska användas för denna profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="En beskrivning för ljudprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ett kort namn för ljudprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Standardfiländelsen för denna profil">
+                                                                                <longdesc>En filändelse som ska användas då filer som är kodade med denna profil lagras.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Den ofullständiga GSTreamer-rörledning som används">
+                                                                                <longdesc>En ofullständig GStreamer-rörledning som ska användas för denna profil.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="En beskrivning för ljudprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Ett kort namn för ljudprofilen">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Lista med profiler">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="URL för automatisk proxykonfiguration">
+                                                <longdesc>URL som tillhandahåller proxykonfigurationsvärden.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="Port för SOCKS-proxyserver">
+                                                <longdesc>Porten på maskinen som definieras av &quot;/system/proxy/socks_host&quot; som du använder som proxyserver.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="Värdnamn för SOCKS-proxyserver">
+                                                <longdesc>Namnet på maskinen som ska agera proxyserver för socks.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="Port för FTP-proxyserver">
+                                                <longdesc>Porten på maskinen som definieras av &quot;/system/proxy/ftp_host&quot; som du använder som proxyserver.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="Värdnamn för FTP-proxyserver">
+                                                <longdesc>Namnet på maskinen som ska agera proxyserver för FTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Port för säker HTTP-proxyserver">
+                                                <longdesc>Porten på maskinen som definieras av &quot;/system/proxy/secure_host&quot; som du använder som proxyserver.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Värdnamn för säker HTTP-proxyserver">
+                                                <longdesc>Namnet på maskinen som ska agera proxyserver för säker HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Proxykonfigurationsläge">
+                                                <longdesc>Välj proxykonfigurationsläget. Värden som stöds är &quot;none&quot;, &quot;manual&quot;, &quot;auto&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Värdnamn för ickeproxyvärdar">
+                                                <longdesc>Denna nyckel innehåller en lista med värdar som ansluts till direkt istället för att gå via proxyservern (om den är igång). Värdena kan vara värdnamn, domäner (genom användning av ett inledande jokertecken som *.blaha.se), IP-värdadresser (både IPv4 och IPv6) och nätverksadresser med en nätmask (någonting liknande 192.168.0.0/24).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="Lösenord för HTTP-proxyserver">
+                                                <longdesc>Lösenord att skicka som autentisering vid användning av HTTP-proxyserver.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="Användarnamn för HTTP-proxyserver">
+                                                <longdesc>Användarnamn att skicka som autentisering vid användning av HTTP-proxyserver.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Autentisera proxyserveranslutningar">
+                                                <longdesc>Om detta är sant kräver anslutningarna till proxyservern autentisering. Användarnamn- och lösenordsparet definieras av &quot;/system/http_proxy/authentication_user&quot; och &quot;/system/http_proxy/authentication_password&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="Port för HTTP-proxyserver">
+                                                <longdesc>Porten på maskinen som definieras av &quot;/system/http_proxy/host&quot; som du använder som proxyserver.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="Värdnamn för HTTP-proxyserver">
+                                                <longdesc>Namnet på maskinen som ska agera proxyserver för HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="Använd HTTP-proxyserver">
+                                                <longdesc>Aktiverar proxyinställningarna vid åtkomst av HTTP över Internet.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Extra domäner som dns-sd-tjänster ska sökas i">
+                                                <longdesc>Kommaseparerad lista med dns-sd-domäner som ska synas på platsen &quot;network:///&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Hur den lokala DNS-SD-tjänsten ska visas">
+                                                <longdesc>Möjliga värden är &quot;merged&quot;, &quot;separate&quot; och &quot;disabled&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="SMB-arbetsgrupp">
+                                                <longdesc>Windows-nätverksarbetsgruppen eller -domänen som användaren är del av. För att en ny arbetsgrupp ska börja gälla kan användaren behöva logga ut och in igen.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

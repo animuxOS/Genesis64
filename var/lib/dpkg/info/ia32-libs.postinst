@@ -1,0 +1,38 @@
+#!/bin/sh
+
+set -e
+
+if [ $(lsb_release -i -s) = "Debian" ]; then
+    ROOT=/emul/ia32-linux
+    SUFFIX=
+else
+    ROOT=
+    SUFFIX=32
+fi
+
+removeline () {
+  if grep -q "^$1$" "$2" 2>/dev/null; then
+    # grep -v fails if the output is empty so ignore error
+    grep -v "^$1$" "$2" > "$2".ia32-libs-tmp || true
+    # make sure the grep didn't totaly fail
+    [ -f "$2".ia32-libs-tmp ]
+    chmod 0644 "$2".ia32-libs-tmp
+    mv "$2".ia32-libs-tmp "$2"
+  fi
+}
+
+if [ "$1" = configure ]; then
+  # clean up the old mess if needed
+  if dpkg --compare-versions "$2" "<<" "1.5.2"; then
+    removeline ${ROOT}/lib${SUFFIX} /etc/ld.so.conf
+    removeline ${ROOT}/usr/lib${SUFFIX} /etc/ld.so.conf
+    removeline ${ROOT}/usr/X11R6/lib${SUFFIX} /etc/ld.so.conf
+    if [ "$(dpkg --print-architecture)" = "amd64" ]; then
+      dpkg-divert --divert /usr/bin/ldd.ia32-libs --quiet --rename --package ia32-libs --remove /usr/bin/ldd
+    fi
+  fi
+
+  ldconfig
+fi
+
+

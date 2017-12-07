@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>GdlSwitcher</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="GDL Reference Manual">
+<link rel="up" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+<link rel="prev" href="GdlDockBar.html" title="GdlDockBar">
+<link rel="next" href="gdl-gdl-stock.html" title="gdl-stock">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GdlDockBar.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="gdl-main.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GDL Reference Manual</th>
+<td><a accesskey="n" href="gdl-gdl-stock.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2592954" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2614030" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2609234" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2609288" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id2609316" class="shortcut">Properties</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="GdlSwitcher"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2592954"></a><span class="refentrytitle">GdlSwitcher</span>
+</h2>
+<p>GdlSwitcher</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+                    <a href="GdlSwitcher.html#GdlSwitcherPrivate">GdlSwitcherPrivate</a>;
+enum                <a href="GdlSwitcher.html#GdlSwitcherStyle">GdlSwitcherStyle</a>;
+                    <a href="GdlSwitcher.html#GdlSwitcher-struct">GdlSwitcher</a>;
+GtkWidget*          <a href="GdlSwitcher.html#gdl-switcher-new">gdl_switcher_new</a>                    (void);
+gint                <a href="GdlSwitcher.html#gdl-switcher-insert-page">gdl_switcher_insert_page</a>            (<a href="GdlSwitcher.html" title="GdlSwitcher">GdlSwitcher</a> *switcher,
+                                                         GtkWidget *page,
+                                                         GtkWidget *tab_widget,
+                                                         const gchar *label,
+                                                         const gchar *tooltips,
+                                                         const gchar *stock_id,
+                                                         gint position);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2609234"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----GtkObject
+               +----GtkWidget
+                     +----GtkContainer
+                           +----GtkNotebook
+                                 +----GdlSwitcher
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2609288"></a><h2>Implemented Interfaces</h2>
+<p>
+GdlSwitcher implements
+ GtkBuildable and  AtkImplementorIface.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2609316"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="GdlSwitcher.html#GdlSwitcher--switcher-style">switcher-style</a>"           <a href="GdlSwitcher.html#GdlSwitcherStyle">GdlSwitcherStyle</a>      : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2614030"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2614046"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2614057"></a><h3>
+<a name="GdlSwitcherPrivate"></a>GdlSwitcherPrivate</h3>
+<a class="indexterm" name="id2614069"></a><pre class="programlisting">typedef struct _GdlSwitcherPrivate GdlSwitcherPrivate;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2614086"></a><h3>
+<a name="GdlSwitcherStyle"></a>enum GdlSwitcherStyle</h3>
+<a class="indexterm" name="id2614098"></a><pre class="programlisting">typedef enum {
+    GDL_SWITCHER_STYLE_TEXT,
+    GDL_SWITCHER_STYLE_ICON,
+    GDL_SWITCHER_STYLE_BOTH,
+    GDL_SWITCHER_STYLE_TOOLBAR,
+    GDL_SWITCHER_STYLE_TABS
+} GdlSwitcherStyle;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2614116"></a><h3>
+<a name="GdlSwitcher-struct"></a>GdlSwitcher</h3>
+<a class="indexterm" name="id2614129"></a><pre class="programlisting">typedef struct _GdlSwitcher GdlSwitcher;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2614144"></a><h3>
+<a name="gdl-switcher-new"></a>gdl_switcher_new ()</h3>
+<a class="indexterm" name="id2614156"></a><pre class="programlisting">GtkWidget*          gdl_switcher_new                    (void);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2614193"></a><h3>
+<a name="gdl-switcher-insert-page"></a>gdl_switcher_insert_page ()</h3>
+<a class="indexterm" name="id2614204"></a><pre class="programlisting">gint                gdl_switcher_insert_page            (<a href="GdlSwitcher.html" title="GdlSwitcher">GdlSwitcher</a> *switcher,
+                                                         GtkWidget *page,
+                                                         GtkWidget *tab_widget,
+                                                         const gchar *label,
+                                                         const gchar *tooltips,
+                                                         const gchar *stock_id,
+                                                         gint position);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>switcher</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>page</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>tab_widget</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>label</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>tooltips</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>stock_id</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>position</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2601403"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2601414"></a><h3>
+<a name="GdlSwitcher--switcher-style"></a>The "<code class="literal">switcher-style</code>" property</h3>
+<a class="indexterm" name="id2601428"></a><pre class="programlisting">  "switcher-style"           <a href="GdlSwitcher.html#GdlSwitcherStyle">GdlSwitcherStyle</a>      : Read / Write</pre>
+<p>Switcher buttons style.</p>
+<p>Default value: GDL_SWITCHER_STYLE_BOTH</p>
+</div>
+</div>
+</div>
+</body>
+</html>

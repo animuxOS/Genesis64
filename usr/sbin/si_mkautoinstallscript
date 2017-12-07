@@ -1,0 +1,256 @@
+#!/usr/bin/perl -w
+
+#
+#  "SystemImager" 
+#
+#  Copyright (C) 1999-2004 Brian Elliott Finley
+#
+#  $Id: si_mkautoinstallscript 2872 2004-09-29 18:36:18Z brianfinley $
+#
+#  2004.05.05 Brian Elliott Finley
+#  - Allow --update-script=yes  in addition to --force.
+#
+
+use lib "/usr/lib/systemimager/perl";
+use Getopt::Long;
+use SystemImager::Server;
+use SystemImager::Common;
+use SystemImager::Config;
+use vars qw($config $VERSION);
+
+my $config_dir = "/etc/systemimager";
+
+### BEGIN parse the config file ###
+my $autoinstall_script_dir = $config->autoinstall_script_dir();
+my $rsyncd_conf = $config->rsyncd_conf();
+my $rsync_stub_dir = $config->rsync_stub_dir();
+
+if (!$autoinstall_script_dir) {
+    die "AUTOINSTALL_SCRIPT_DIR not defined in the config file.";
+}
+if (!$rsyncd_conf) { die "RSYNCD_CONF not defined in the config file."; }
+if (!$rsync_stub_dir) { die "RSYNC_STUB_DIR not defined in the config file."; }
+### END parse the config file ###
+
+$VERSION="3.6.3";
+$program_name = "si_mkautoinstallscript";
+$version_info = <<"EOF";
+$program_name (part of SystemImager) v$VERSION
+    
+Copyright (C) 1999-2001 Brian Elliott Finley <brian\@systemimager.org>
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+EOF
+
+$get_help = "\n       Try \"--help\" for more options.";
+
+$help_info = $version_info . <<"EOF";
+
+Usage: $program_name [OPTION]... -image IMAGENAME
+
+Options: (options can be presented in any order and may be abbreviated)
+ --help                 Display this output.
+
+ --version              Display version and copyright information.
+
+ --quiet                Don\'t print any output, just provide an 
+                        appropriate exit code.
+
+ --image IMAGENAME      Where IMAGENAME is the name of the image for 
+                        which you want to create a new autoinstall 
+			            script.
+
+ --script SCRIPTNAME    Where SCRIPTNAME is the base name to use for the 
+                        resultant autoinstall script.  If not specified,
+                        SCRIPTNAME defaults to IMAGENAME.
+
+ --update-script        Overwrite the \$image.master script, if it exists.
+
+ --force                Same as --update-script.
+
+ --config-file FILE     Use FILE to get autoinstall script configuration
+                        information.  Defaults to the 
+                        ./etc/systemimager/autoinstallscript.conf file
+                        in the image.
+
+ --no-listing           Don't show each filename as it is copied over during
+                        install.  This is useful for times when your console
+                        device is slow (e.g. serial console), and is the 
+                        bottleneck of your installation.
+
+The following options affect the autoinstall client after autoinstalling:
+
+ --ip-assignment METHOD    Where METHOD can be DHCP, STATIC, or REPLICANT.
+
+                DHCP
+                ----------------------------------------------------------------
+                A DHCP server will assign IP addresses to clients installed with
+                this image.  They may be assigned a different address each time.
+                If you want to use DHCP, but must ensure that your clients 
+                receive the same IP address each time, see \"man si_mkdhcpstatic\".
+
+                STATIC
+                ----------------------------------------------------------------
+                The IP address the client uses during autoinstall will be 
+                permanently assigned to that client.
+
+                REPLICANT
+                ----------------------------------------------------------------
+                Don\'t mess with the network settings in this image.  I\'m using
+                it as a backup and quick restore mechanism for a single machine.
+
+
+ --post-install ACTION     Where ACTION can be BEEP, REBOOT, or SHUTDOWN.
+
+                BEEP 
+                ----------------------------------------------------------------
+                Clients will beep incessantly after succussful completion of an
+                autoinstall.  (default)
+
+                REBOOT 
+                ----------------------------------------------------------------
+                Clients will reboot themselves after successful completion of 
+                an autoinstall.
+
+                SHUTDOWN 
+                ----------------------------------------------------------------
+                Clients will halt themselves after successful completion of an 
+                autoinstall.
+
+Download, report bugs, and make suggestions at:
+http://systemimager.org/
+EOF
+
+# Set some defaults. -BEF-
+my $ip_assignment_method = "dhcp";
+my $post_install = "beep";
+my $auto_install_script_conf;
+my $script_name;
+
+GetOptions( 
+    "help"              => \$help,
+    "version"           => \$version,
+    "quiet"             => \$quiet,
+    "image=s"           => \$image,
+    "script=s"          => \$script_name,
+    "config-file=s"     => \$auto_install_script_conf,
+    "ip-assignment=s"   => \$ip_assignment_method,
+    "force"             => \my $force,
+    "update-script=s"   => \my $update_script,
+    "post-install=s"    => \$post_install,
+    "no-listing"        => \$no_listing,
+    "raidtab=s"         => \$raidtab  # XXX remove when raidtab 
+                                      # is in aiscript.conf
+) || die "$help_info";
+
+
+### BEGIN evaluate options ###
+# if requested, print help information
+if($help) { 
+  print "$help_info";
+  exit 0;
+}
+
+# if requested, print version and copyright information
+if($version) {
+  print "$version_info";
+  exit 0;
+}
+
+# be sure $image is set
+unless ($image) {
+  die "\n$program_name: --image IMAGENAME must be specified.\n$get_help\n\n";
+}
+
+# turns out, it's really handy to use the exact same syntax as getimage
+if($update_script && lc $update_script eq "yes") {
+        $force = 1;
+}
+
+# be sure $image doesn't start with a hyphen
+if ($image =~ /^-/) {
+  die "\n$program_name: Image name can't start with a hyphen.\n$get_help\n\n";
+}
+### END evaluate options ###
+
+# be sure program is run by root
+SystemImager::Common->check_if_root();
+
+my $imagedir = SystemImager::Server->get_image_path( $rsync_stub_dir, $image );
+unless ($imagedir) { 
+    print qq(\nFATAL: Image "$image" doesn't appear to exist!\n\n);
+    exit 1;
+}
+
+## XXX remove when raidtab is included in autoinstallscript.conf
+if (!$raidtab and -f "$imagedir/etc/raidtab") {
+    $raidtab = "$imagedir/etc/raidtab";
+}
+
+# If an autoinstallscript was specified, make sure it exists.
+if ($auto_install_script_conf) {
+    unless (-f $auto_install_script_conf) {
+        print "\n$program_name: I can't find\n";
+        die   "$auto_install_script_conf.\n$get_help\n\n";
+    }
+} else {
+
+    # If an autoinstallscript was not specified, use default for autoinstallscript.conf. -BEF-
+    $auto_install_script_conf = "${imagedir}/etc/systemimager/autoinstallscript.conf";
+
+    # If an autoinstallscript conf file already exists, use it.  This is to prevent us from
+    # perpetually updating from partitionschemes in an image.
+    unless (-f $auto_install_script_conf) {
+        # Test for a partitionschemes dir, and update if needed.
+        if (-d "${imagedir}/etc/systemimager/partitionschemes") {
+            SystemImager::Common->write_auto_install_script_conf_header($auto_install_script_conf);
+            SystemImager::Server->upgrade_partition_schemes_to_generic_style($imagedir, "etc/systemimager");
+            SystemImager::Common->save_filesystem_information("${imagedir}/etc/fstab", $auto_install_script_conf);
+            SystemImager::Common->write_auto_install_script_conf_footer($auto_install_script_conf);
+        } else {
+            die "I can't find an autoinstallscript.conf file, or a partitionschemes directory!\n";
+        }
+
+    }
+}
+
+unless ($script_name) { $script_name = "$image"; }
+
+my $file = "$autoinstall_script_dir/$script_name.master";
+if (( -e "$file" ) && ( ! $force )) {
+    die qq(\nWARNING: "$file" already exists.\n         Use "--force" to overwrite.\n$get_help\n\n);
+}
+
+SystemImager::Server->validate_ip_assignment_option( $ip_assignment_method );
+SystemImager::Server->validate_post_install_option( $post_install );
+SystemImager::Server->validate_auto_install_script_conf( $auto_install_script_conf );
+
+### BEGIN create a fresh master autoinstall script ###
+SystemImager::Server->create_autoinstall_script(
+	$script_name,
+	$autoinstall_script_dir,
+	$config_dir,
+	$image,
+	$imagedir,
+	$ip_assignment_method,
+	$post_install,
+    $no_listing,
+    $auto_install_script_conf,
+    $raidtab  ## XXX removed when raidtab is included in autoinstallscript.conf
+);
+### END create a fresh master autoinstall script ###
+
+$file = "$autoinstall_script_dir/$script_name.master";
+unless ($quiet) { print qq(\nYour new autoinstall script has been created:\n\n); }
+unless ($quiet) { print qq("$file"\n\n); }
+unless ($quiet) {
+    print qq(WARNING:  If you made a change to your autoinstallscript.conf file that could\n);
+    print qq(          affect the boot process, for example, changing your root device, then\n);
+    print qq(          you must also modify your boot loader's configuration file.  This \n);
+    print qq(          file can be modified either directly in the image, or in an override\n);
+    print qq(          directory.  For more information on override directories, see the\n);
+    print qq(          full manual in /usr/share/doc/systemimager-doc/ or at\n);
+    print qq(          http://systemimager.org/documentation/.\n);
+}
+
+exit 0;

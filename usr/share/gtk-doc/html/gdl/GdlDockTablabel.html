@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>GdlDockTablabel</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="GDL Reference Manual">
+<link rel="up" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+<link rel="prev" href="GdlDockObject.html" title="GdlDockObject">
+<link rel="next" href="GdlDockNotebook.html" title="GdlDockNotebook">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GdlDockObject.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="gdl-main.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GDL Reference Manual</th>
+<td><a accesskey="n" href="GdlDockNotebook.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2568491" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2603145" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2602910" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2602964" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id2602992" class="shortcut">Properties</a>
+                  &#160;|&#160;
+                  <a href="#id2603122" class="shortcut">Signals</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="GdlDockTablabel"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2568491"></a><span class="refentrytitle">GdlDockTablabel</span>
+</h2>
+<p>GdlDockTablabel</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+                    <a href="GdlDockTablabel.html#GdlDockTablabel-struct">GdlDockTablabel</a>;
+GtkWidget*          <a href="GdlDockTablabel.html#gdl-dock-tablabel-new">gdl_dock_tablabel_new</a>               (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);
+void                <a href="GdlDockTablabel.html#gdl-dock-tablabel-activate">gdl_dock_tablabel_activate</a>          (<a href="GdlDockTablabel.html" title="GdlDockTablabel">GdlDockTablabel</a> *tablabel);
+void                <a href="GdlDockTablabel.html#gdl-dock-tablabel-deactivate">gdl_dock_tablabel_deactivate</a>        (<a href="GdlDockTablabel.html" title="GdlDockTablabel">GdlDockTablabel</a> *tablabel);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2602910"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----GtkObject
+               +----GtkWidget
+                     +----GtkContainer
+                           +----GtkBin
+                                 +----GdlDockTablabel
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2602964"></a><h2>Implemented Interfaces</h2>
+<p>
+GdlDockTablabel implements
+ GtkBuildable and  AtkImplementorIface.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2602992"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="GdlDockTablabel.html#GdlDockTablabel--item">item</a>"                     <a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a>           : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2603122"></a><h2>Signals</h2>
+<pre class="synopsis">
+
+  "<a href="GdlDockTablabel.html#GdlDockTablabel-button-pressed-handle">button-pressed-handle</a>"                          : Run Last
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2603145"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2603161"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2603172"></a><h3>
+<a name="GdlDockTablabel-struct"></a>GdlDockTablabel</h3>
+<a class="indexterm" name="id2603184"></a><pre class="programlisting">typedef struct _GdlDockTablabel GdlDockTablabel;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2603200"></a><h3>
+<a name="gdl-dock-tablabel-new"></a>gdl_dock_tablabel_new ()</h3>
+<a class="indexterm" name="id2603211"></a><pre class="programlisting">GtkWidget*          gdl_dock_tablabel_new               (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2603267"></a><h3>
+<a name="gdl-dock-tablabel-activate"></a>gdl_dock_tablabel_activate ()</h3>
+<a class="indexterm" name="id2603279"></a><pre class="programlisting">void                gdl_dock_tablabel_activate          (<a href="GdlDockTablabel.html" title="GdlDockTablabel">GdlDockTablabel</a> *tablabel);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>tablabel</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2606584"></a><h3>
+<a name="gdl-dock-tablabel-deactivate"></a>gdl_dock_tablabel_deactivate ()</h3>
+<a class="indexterm" name="id2606596"></a><pre class="programlisting">void                gdl_dock_tablabel_deactivate        (<a href="GdlDockTablabel.html" title="GdlDockTablabel">GdlDockTablabel</a> *tablabel);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>tablabel</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2606643"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2606654"></a><h3>
+<a name="GdlDockTablabel--item"></a>The "<code class="literal">item</code>" property</h3>
+<a class="indexterm" name="id2606668"></a><pre class="programlisting">  "item"                     <a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a>           : Read / Write</pre>
+<p>Dockitem which 'owns' this tablabel.</p>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2606690"></a><h2>Signal Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2606700"></a><h3>
+<a name="GdlDockTablabel-button-pressed-handle"></a>The "button-pressed-handle" signal</h3>
+<a class="indexterm" name="id2606710"></a><pre class="programlisting">void                user_function                      (<a href="GdlDockTablabel.html" title="GdlDockTablabel">GdlDockTablabel</a> *gdldocktablabel,
+                                                        GdkEvent        *event,
+                                                        gpointer         user_data)            : Run Last</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>gdldocktablabel</code></em>&#160;:</span></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>event</code></em>&#160;:</span></td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>GdlDockMaster</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="GDL Reference Manual">
+<link rel="up" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+<link rel="prev" href="GdlDockLayout.html" title="GdlDockLayout">
+<link rel="next" href="GdlIcons.html" title="GdlIcons">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GdlDockLayout.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="gdl-main.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GDL Reference Manual</th>
+<td><a accesskey="n" href="GdlIcons.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2585743" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2581519" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2581417" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2581441" class="shortcut">Properties</a>
+                  &#160;|&#160;
+                  <a href="#id2581494" class="shortcut">Signals</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="GdlDockMaster"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2585743"></a><span class="refentrytitle">GdlDockMaster</span>
+</h2>
+<p>GdlDockMaster</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+                    <a href="GdlDockMaster.html#GdlDockMasterPrivate">GdlDockMasterPrivate</a>;
+                    <a href="GdlDockMaster.html#GdlDockMaster-struct">GdlDockMaster</a>;
+#define             <a href="GdlDockMaster.html#GDL-DOCK-OBJECT-GET-MASTER:CAPS">GDL_DOCK_OBJECT_GET_MASTER</a>          (object)
+void                <a href="GdlDockMaster.html#gdl-dock-master-add">gdl_dock_master_add</a>                 (<a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master,
+                                                         <a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a> *object);
+void                <a href="GdlDockMaster.html#gdl-dock-master-remove">gdl_dock_master_remove</a>              (<a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master,
+                                                         <a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a> *object);
+void                <a href="GdlDockMaster.html#gdl-dock-master-foreach">gdl_dock_master_foreach</a>             (<a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master,
+                                                         GFunc function,
+                                                         gpointer user_data);
+void                <a href="GdlDockMaster.html#gdl-dock-master-foreach-toplevel">gdl_dock_master_foreach_toplevel</a>    (<a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master,
+                                                         gboolean include_controller,
+                                                         GFunc function,
+                                                         gpointer user_data);
+<a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a>*      <a href="GdlDockMaster.html#gdl-dock-master-get-object">gdl_dock_master_get_object</a>          (<a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master,
+                                                         const gchar *nick_name);
+<a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a>*      <a href="GdlDockMaster.html#gdl-dock-master-get-controller">gdl_dock_master_get_controller</a>      (<a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master);
+void                <a href="GdlDockMaster.html#gdl-dock-master-set-controller">gdl_dock_master_set_controller</a>      (<a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master,
+                                                         <a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a> *new_controller);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2581417"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GdlDockMaster
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2581441"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="GdlDockMaster.html#GdlDockMaster--default-title">default-title</a>"            gchararray            : Read / Write
+  "<a href="GdlDockMaster.html#GdlDockMaster--locked">locked</a>"                   gint                  : Read / Write
+  "<a href="GdlDockMaster.html#GdlDockMaster--switcher-style">switcher-style</a>"           <a href="GdlSwitcher.html#GdlSwitcherStyle">GdlSwitcherStyle</a>      : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2581494"></a><h2>Signals</h2>
+<pre class="synopsis">
+
+  "<a href="GdlDockMaster.html#GdlDockMaster-layout-changed">layout-changed</a>"                                 : Run Last
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2581519"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2581535"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2569120"></a><h3>
+<a name="GdlDockMasterPrivate"></a>GdlDockMasterPrivate</h3>
+<a class="indexterm" name="id2569132"></a><pre class="programlisting">typedef struct _GdlDockMasterPrivate GdlDockMasterPrivate;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2569148"></a><h3>
+<a name="GdlDockMaster-struct"></a>GdlDockMaster</h3>
+<a class="indexterm" name="id2569159"></a><pre class="programlisting">typedef struct _GdlDockMaster GdlDockMaster;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2569176"></a><h3>
+<a name="GDL-DOCK-OBJECT-GET-MASTER:CAPS"></a>GDL_DOCK_OBJECT_GET_MASTER()</h3>
+<a class="indexterm" name="id2569188"></a><pre class="programlisting">#define             GDL_DOCK_OBJECT_GET_MASTER(object)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>object</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2569223"></a><h3>
+<a name="gdl-dock-master-add"></a>gdl_dock_master_add ()</h3>
+<a class="indexterm" name="id2569235"></a><pre class="programlisting">void                gdl_dock_master_add                 (<a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master,
+                                                         <a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a> *object);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>master</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>object</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2569302"></a><h3>
+<a name="gdl-dock-master-remove"></a>gdl_dock_master_remove ()</h3>
+<a class="indexterm" name="id2569314"></a><pre class="programlisting">void                gdl_dock_master_remove              (<a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master,
+                                                         <a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a> *object);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>master</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>object</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2583510"></a><h3>
+<a name="gdl-dock-master-foreach"></a>gdl_dock_master_foreach ()</h3>
+<a class="indexterm" name="id2583521"></a><pre class="programlisting">void                gdl_dock_master_foreach             (<a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master,
+                                                         GFunc function,
+                                                         gpointer user_data);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>master</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>function</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2583610"></a><h3>
+<a name="gdl-dock-master-foreach-toplevel"></a>gdl_dock_master_foreach_toplevel ()</h3>
+<a class="indexterm" name="id2583623"></a><pre class="programlisting">void                gdl_dock_master_foreach_toplevel    (<a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master,
+                                                         gboolean include_controller,
+                                                         GFunc function,
+                                                         gpointer user_data);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>master</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>include_controller</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>function</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2583734"></a><h3>
+<a name="gdl-dock-master-get-object"></a>gdl_dock_master_get_object ()</h3>
+<a class="indexterm" name="id2583746"></a><pre class="programlisting"><a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a>*      gdl_dock_master_get_object          (<a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master,
+                                                         const gchar *nick_name);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>master</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>nick_name</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2599637"></a><h3>
+<a name="gdl-dock-master-get-controller"></a>gdl_dock_master_get_controller ()</h3>
+<a class="indexterm" name="id2599649"></a><pre class="programlisting"><a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a>*      gdl_dock_master_get_controller      (<a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>master</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2599701"></a><h3>
+<a name="gdl-dock-master-set-controller"></a>gdl_dock_master_set_controller ()</h3>
+<a class="indexterm" name="id2599714"></a><pre class="programlisting">void                gdl_dock_master_set_controller      (<a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *master,
+                                                         <a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a> *new_controller);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>master</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>new_controller</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2599784"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2599794"></a><h3>
+<a name="GdlDockMaster--default-title"></a>The "<code class="literal">default-title</code>" property</h3>
+<a class="indexterm" name="id2599810"></a><pre class="programlisting">  "default-title"            gchararray            : Read / Write</pre>
+<p>Default title for newly created floating docks.</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2599836"></a><h3>
+<a name="GdlDockMaster--locked"></a>The "<code class="literal">locked</code>" property</h3>
+<a class="indexterm" name="id2599849"></a><pre class="programlisting">  "locked"                   gint                  : Read / Write</pre>
+<p>If is set to 1, all the dock items bound to the master are locked; if it's 0, all are unlocked; -1 indicates inconsistency among the items.</p>
+<p>Allowed values: [-1,1]</p>
+<p>Default value: 0</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2599881"></a><h3>
+<a name="GdlDockMaster--switcher-style"></a>The "<code class="literal">switcher-style</code>" property</h3>
+<a class="indexterm" name="id2599897"></a><pre class="programlisting">  "switcher-style"           <a href="GdlSwitcher.html#GdlSwitcherStyle">GdlSwitcherStyle</a>      : Read / Write</pre>
+<p>Switcher buttons style.</p>
+<p>Default value: GDL_SWITCHER_STYLE_BOTH</p>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2599923"></a><h2>Signal Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2599934"></a><h3>
+<a name="GdlDockMaster-layout-changed"></a>The "layout-changed" signal</h3>
+<a class="indexterm" name="id2599944"></a><pre class="programlisting">void                user_function                      (<a href="GdlDockMaster.html" title="GdlDockMaster">GdlDockMaster</a> *gdldockmaster,
+                                                        gpointer       user_data)          : Run Last</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>gdldockmaster</code></em>&#160;:</span></td>
+<td>the object which received the signal.
+
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

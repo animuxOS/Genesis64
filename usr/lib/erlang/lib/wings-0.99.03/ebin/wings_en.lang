@@ -1,0 +1,2951 @@
+%% -*- mode:erlang; erlang-indent-level: 2 -*-
+{wings,
+ [
+  {area_info,
+   [
+    {40," Area ~s"}
+   ]},
+  {cannot_repeat,
+   [
+    {1,"Can't repeat"}
+   ]},
+  {crash_handler,
+   [
+    {1,"Internal error - log written to"},
+    {2,"Click a mouse button to continue working"},
+    {3,"Continue working"}
+   ]},
+  {define_command,
+   [
+    {1,"Do you want to define"},
+    {2,"as a default command"}
+   ]},
+  {edit_menu,
+   [
+    {1,"Delete undo history to reclaim memory"},
+    {3,"Undo/Redo"},
+    {4,"Undo or redo the last command"},
+    {5,"Redo"},
+    {6,"Redo the last command that was undone"},
+    {7,"Undo"},
+    {8,"Undo the last command"},
+    {9,"Repeat"},
+    {10,"Repeat Args"},
+    {11,"Repeat Drag"},
+    {12,"Plug-in Preferences"},
+    {13,"Purge Undo History"}
+   ]},
+  {enhanced_info,
+   [
+    {41,"Edge~s ~s"},
+    {42,"\nDistance ~s"},
+    {43,"Object~s"},
+    {45,"Difference ~s"},
+    {48,"Face~s"}
+   ]},
+  {geom_title,
+   [
+    {1,"Geometry"},
+    {2,"Geometry #"}
+   ]},
+  {halt_loop,
+   [
+    {1,"Fatal internal error - log written to ~s\n"},
+    {2,"<Unknown Window Name>"},
+    {3,"Fatal internal error - log written to ~s\n"}
+   ]},
+  {handle_drop_1,
+   [
+    {1,"No Selection"},
+    {2,"Cancel drop operation"},
+    {3,"Assign material to selected faces"},
+    {4,"Assign material \""},
+    {5,"\" only to selected faces"},
+    {6,"Assign material to all faces"},
+    {7,"Assign material \""},
+    {8,"\" to all faces in objects having a selection"},
+    {9,"Assign material to all faces"},
+    {10,"Assign material \""},
+    {11,"\" to all faces in objects having a selection"}
+   ]},
+  {handle_event_3,
+   [
+    {1,"Select"},
+    {2,"Show menu"}
+   ]},
+  {info_1,
+   [
+    {1,"Vertex ~p selected"},
+    {2,"Vertices"},
+    {3,"~p vertices selected"},
+    {4,"Edge ~p selected"},
+    {5,"Edges"},
+    {6,"~p edges selected"},
+    {7,"Face ~p selected"},
+    {8,"Faces"},
+    {9,"~p faces selected"},
+    {10,"~p vertices selected in ~p objects"},
+    {11,"~p edges selected in ~p objects"},
+    {12,"~p faces selected in ~p objects"}
+   ]},
+  {init_menubar,
+   [
+    {1,"File"},
+    {2,"Edit"},
+    {3,"View"},
+    {4,"Select"},
+    {5,"Tools"},
+    {6,"Window"},
+    {7,"Help"}
+   ]},
+  {item_list,
+   [
+    {1," selected"}
+   ]},
+  {measure,
+   [
+    {1,". Position <~s  ~s  ~s>"},
+    {3,". Midpoint <~s  ~s  ~s>\nLength ~s"},
+    {4,". Midpoint <~s  ~s  ~s> \nMaterial ~s."},
+    {5,". Distance ~s  <~s  ~s  ~s>"},
+    {6,". Angle ~s"}
+   ]},
+  {object_mode,
+   [
+    {material,"material"},
+    {vertex,"vertex color"}
+   ]},
+  {patches,
+   [
+    {1,"Use "}
+   ]},
+  {purge_undo,
+   [
+    {1,"Undo states: "},
+    {2,"Redo states: "},
+    {3,"Nothing to remove"},
+    {4,"Remove all states (NOT undoable)?"}
+   ]},
+  {shape_info,
+   [
+    {2,"~p objects, ~p faces, ~p edges, ~p vertices"},
+    {object_info,"Object ~p \"~s\" has ~p polygons, ~p edges, ~p vertices.\nMode is ~s"}
+   ]},
+  {tools_menu,
+   [
+    {8,"Align"},
+    {9,"Center"},
+    {10,"Save Bounding Box"},
+    {11,"Scale to Saved BB"},
+    {12,"Scale to Saved BB Proportionally"},
+    {13,"Move to Saved BB"},
+    {14,"Set Default Axis"},
+    {15,"Define and store axis (with ref. point) for later use with any "},
+    {16,"\"Default Axis\" command (e.g. Scale|Default Axis)"},
+    {17,"Virtual Mirror"},
+    {18,"Create"},
+    {19,"Given a face selection, set up a virtual mirror"},
+    {20,"Break"},
+    {21,"Remove virtual mirrors for all objects"},
+    {22,"Freeze"},
+    {23,"Create real geometry from the virtual mirrors"},
+    {24,"Screenshot"},
+    {25,"Grab an image of the window (export it from the outliner)"},
+    {26,"Scene Info: Area & Volume"},
+    {27,"Calculate area and volume for each object in the scene"},
+    {28,"Put on Ground"},
+    {29,"Put selected objects on the ground plane"},
+    {30,"Unitize"},
+    {31,"Scale selected objects to fit inside a unit sphere and move to origin"}
+   ]},
+  {undo_info,
+   [
+    {1,"there are no undo states"},
+    {2,"there is one undo state"},
+    {3,"there are ~p undo states"},
+    {4,"; one operation can be redone"},
+    {5,"; ~p operations can be redone"}
+   ]},
+  {window_menu,
+   [
+    {1,"Geometry Graph"},
+    {2,"Geometry Graph #"},
+    {3,"Outliner"},
+    {4,"Open the outliner window (showing materials and objects)"},
+    {5,"Open a Geometry Graph window (showing objects)"},
+    {6,"Palette"},
+    {7,"Open the color palette window"},
+    {8,"New Geometry Window"},
+    {9,"Open a new Geometry window"},
+    {10,"Console"},
+    {11,"Open a console window for information messages"}
+   ]}
+ ]}.
+{wings_ask,
+ [
+  {button_label,
+   [
+    {1,"OK"}
+   ]},
+  {frame_event,
+   [
+    {1,"Expand this frame; collapse other frames"},
+    {2,"Expand this frame"},
+    {3,"Collapse this frame"}
+   ]},
+  {mktree,
+   [
+    {1,"Browse"}
+   ]}
+ ]}.
+{wings_body,
+ [
+  {arealight_conv,
+   [
+    {1,"Area Light to Object"},
+    {2,"Convert selected area lights to objects"},
+    {3,"Object To Area Light"},
+    {4,"Convert selected objects to area lights"}
+   ]},
+  {auto_smooth,
+   [
+    {1,"Auto Smooth Parameters"},
+    {2,"Crease Angle"}
+   ]},
+  {clean_isolated_vertices,
+   [
+    {1,"Removed 1 isolated vertex\n"},
+    {2,"Removed ~p isolated vertices\n"}
+   ]},
+  {cleanup,
+   [
+    {1,"Short Edges"},
+    {2,"Length Tolerance"},
+    {3,"Isolated Vertices"},
+    {4,"Cleanup"}
+   ]},
+  {cleanup_rep_1,
+   [
+    {1,"Repeated vertex ~p in face ~p\n"}
+   ]},
+  {cleanup_waists_1,
+   [
+    {1,"Removed waist vertex: ~p\n"}
+   ]},
+  {color_material,
+   [
+    {1,"color_"}
+   ]},
+  {delete_2edged_faces_1,
+   [
+    {1,"Face"},
+    {2,"has only one edge"}
+   ]},
+  {mat_col_conv,
+   [
+    {1,"Colors to Materials"},
+    {2,"Convert vertex colors to materials"},
+    {3,"Materials to Colors"},
+    {4,"Convert materials to vertex colors"}
+   ]},
+  {menu,
+   [
+    {1,"Object operations"},
+    {2,"Move"},
+    {3,"Flip"},
+    {5,"Flip the object around"},
+    {10,"Invert"},
+    {11,"Flip all normals, turning the object inside out"},
+    {12,"Tighten"},
+    {13,"Move vertices towards average midpoint"},
+    {14,"Smooth"},
+    {15,"Subdivide all faces to give the object a smoother apperance"},
+    {16,"Combine"},
+    {17,"Combine multiple objects into a single object"},
+    {18,"Separate"},
+    {19,"Separate a combined objects into its components"},
+    {20,"Weld"},
+    {21,"Merge pair of faces that are nearly coincident"},
+    {22,"Cleanup"},
+    {23,"Remove various defects"},
+    {24,"Auto-Smooth"},
+    {25,"Set edges hard or soft depending on the angle between faces"},
+    {26,"Duplicate"},
+    {27,"Delete"},
+    {28,"Delete the selected objects"},
+    {29,"Rename..."},
+    {30,"Rename selected objects"},
+    {31,"Show All"},
+    {32,"Show all faces for this object"}
+   ]},
+  {mode_conv,
+   [
+    {1,"Vertex Color Mode"},
+    {2,"Change object mode to vertex color mode (materials will be kept, but not shown)"},
+    {3,"Material Mode"},
+    {4,"Change object mode to material mode (vertex colors will be kept, but not shown)"}
+   ]},
+  {rename_1,
+   [
+    {1,"Rename"}
+   ]},
+  {unify_modes,
+   [
+    {1,"Objects with vertex colors cannot be combined with objects with materials."}
+   ]},
+  {vertex_color_item,
+   [
+    {1,"Vertex Color"},
+    {2,"Apply vertex colors to selected objects (first changing mode to vertex color mode if needed)"}
+   ]},
+  {weld,
+   [
+    {1,"Distance Tolerance"},
+    {2,"Weld"}
+   ]},
+  {weld_1,
+   [
+    {1,"Found no faces to weld."}
+   ]}
+ ]}.
+{wings_camera,
+ [
+  {desc,
+   [
+    {1,"One"},
+    {2,"Two"},
+    {3,"Three"}
+   ]},
+  {help,
+   [
+    {1,"Start camera"}
+   ]},
+  {info,
+   [
+    {1,"Note: Only the Nendo camera mode can be used with a one-button mouse"},
+    {2,"Note: Only the Nendo and Blender camera modes can be used with a two-button mouse"},
+    {3,"Note: The "},
+    {4," camera mode requires at least 2 mouse buttons"},
+    {5,"Note: The "},
+    {6," camera mode requires 3 mouse buttons"}
+   ]},
+  {message,
+   [
+    {2,"Drag to Dolly"},
+    {3,"Move mouse to tumble"},
+    {4,"[Q]"},
+    {5,"Move mouse to track"},
+    {6,"Cancel/restore view"},
+    {7,"Restore view"},
+    {8,"Drag to Pan"}
+   ]},
+  {mode_help,
+   [
+    {1,"Track"},
+    {2,"Dolly"},
+    {3,"Tumble"},
+    {4,"Scroll: Dolly"}
+   ]},
+  {prefs,
+   [
+    {1,"Mouse Buttons"},
+    {2,"Camera Mode"},
+    {3,"Pan Speed"},
+    {4,"Wheel Zooms"},
+    {5,"Forwards Zooms In"},
+    {6,"Forwards Zooms Out"},
+    {7,"Zoom Factor"},
+    {9,"Scroll Wheel"},
+    {10,"Alternate Zoom Factor(Alt+Scroll)"},
+    {11,"Wheel Pans & Rotates"},
+    {12,"Pan Speed"},
+    {13,"Rotation Step in Degrees"},
+    {15,"Unidirectional Camera"},
+    {16,"Arrow Key Pan Speed"},
+    {17,"Show Info Line Help String"}
+   ]},
+  {scroll_help,
+   [
+    {1,"  [Ctrl](+[Alt])+Scroll: Pan  [Shift](+[Alt])+Scroll: Rotate"}
+   ]}
+ ]}.
+{wings_collapse,
+ [
+  {check_consistency,
+   [
+    {1,"Collapsing would cause an inconsistent object structure."}
+   ]},
+  {check_vertices_1,
+   [
+    {1,"Non-collapsible vertex"},
+    {2,"would leave waist.\n"}
+   ]}
+ ]}.
+{wings_color,
+ [
+  {choose_1,
+   [
+    {1,"Choose Color"}
+   ]}
+ ]}.
+{wings_console,
+ [
+  {do_window,
+   [
+    {1,"Console "},
+    {2,"x"}
+   ]},
+  {handle_action,
+   [
+    {1,"Write"},
+    {3,"Text File"},
+    {4,"Write error: ~w"}
+   ]},
+  {popup_menu,
+   [
+    {1,"Write to File"},
+    {2,"Write console contents to a file"}
+   ]},
+  {server_loop,
+   [
+    {1,":~w Received unknown: ~p~n"}
+   ]}
+ ]}.
+{wings_deform,
+ [
+  {check_range,
+   [
+    {1,"Extent along "},
+    {2,"axis is too short."}
+   ]},
+  {crumple_dirs,
+   [
+    {1,"Random"},
+    {2,"a random direction"},
+    {4,"its normal"},
+    {8,"Move each vertex a random amount along"}
+   ]},
+  {dir,
+   [
+    {1,"Twist selected vertices around the "},
+    {2," passing through the center of the selection"},
+    {3," passing through the origin"}
+   ]},
+  {inflate_fun,
+   [
+    {1,"Pick center and radius"},
+    {2,"Inflate elements"},
+    {3,"Pick center point"},
+    {4,"Pick point to define radius"}
+   ]},
+  {sub_menu,
+   [
+    {1,"Inflate elements"},
+    {2,"Pick center and radius"},
+    {3,"Crumple"},
+    {4,"Randomly move vertices"},
+    {5,"Inflate"},
+    {6,"Taper"},
+    {7,"Twist"},
+    {8,"Torque"}
+   ]},
+  {taper_item,
+   [
+    {1,"Taper along "},
+    {2," (with effect on "},
+    {3,")"},
+    {4,"Choose effect axis"},
+    {5,"Pick axis center location"},
+    {6,"Pick taper origin"},
+    {7,"Effect on "}
+   ]}
+ ]}.
+{wings_dissolve,
+ [
+  {dissolve_1,
+   [
+    {1,"Dissolving would cause an inconsistent object structure."}
+   ]}
+ ]}.
+{wings_drag,
+ [
+  {fpmove_help,
+   [
+    {1,"Drag to adjust forth parameter"},
+    {2,"Drag to adjust rotation"}
+   ]},
+  {help_message,
+   [
+    {1,"Numeric entry"},
+    {2,"Switch constraint sets"}
+   ]},
+  {make_query_1,
+   [
+    {2,"A"}
+   ]},
+  {numeric_input,
+   [
+    {1,"Numeric Input"}
+   ]},
+  {qstr,
+   [
+    {1,"Dx"},
+    {2,"Dx"},
+    {3,"Dy"},
+    {4,"Dz"},
+    {5,"R"},
+    {6,"A"}
+   ]},
+  {standard_mode_fun,
+   [
+    {1,"[Shift] and/or [Ctrl] and/or [Alt] Constrain"},
+    {2,"[+] or [-] Adjust Radius"}
+   ]},
+  {switch,
+   [
+    {1," (using alternate constraints)"}
+   ]},
+  {zmove_help,
+   [
+    {1,"Drag to move along Z"},
+    {2,"Drag to adjust third parameter"},
+    {3,"Drag to adjust scale"}
+   ]}
+ ]}.
+{wings_edge,
+ [
+  {dissolve_edge_2,
+   [
+    {1,"Dissolving would cause a badly formed face."}
+   ]}
+ ]}.
+{wings_edge_cmd,
+ [
+  {command,
+   [
+    {1,"Segments"}
+   ]},
+  {cut_ask_entry,
+   [
+    {1,"Cut into <N> segments"},
+    {2,"Enter Number..."}
+   ]},
+  {cut_command,
+   [
+    {1,"Cut"}
+   ]},
+  {cut_entry,
+   [
+    {1,"Cut into "},
+    {2," edges of equal length"}
+   ]},
+  {cut_fun,
+   [
+    {1,"Cut into edges of equal length"},
+    {2,"Cut at arbitrary position"}
+   ]},
+  {cut_pick_error,
+   [
+    {1,"Only one edge can be cut at an arbitrary position."}
+   ]},
+  {loop_cut,
+   [
+    {1,"Edge loop doesn't divide ~p into two (or more) parts."}
+   ]},
+  {menu,
+   [
+    {1,"Edge operations"},
+    {2,"Move"},
+    {3,"Slide"},
+    {4,"Slide edges along neighbor edges"},
+    {5,"Extrude"},
+    {6,"Connect"},
+    {7,"Create a new edge by connecting midpoints of selected edges"},
+    {8,"Bevel"},
+    {9,"Round off selected edges"},
+    {10,"Dissolve"},
+    {11,"Eliminate selected edges"},
+    {12,"Collapse"},
+    {13,"Delete edges, replacing them with vertices"},
+    {14,"Hardness"},
+    {15,"Soft"},
+    {16,"Hard"},
+    {17,"Loop Cut"},
+    {18,"Cut into two objects along edge loop"},
+    {19,"Vertex Color"},
+    {20,"Apply vertex colors to selected edges"},
+    {50,"Eliminate selected edges and remove remaining isolated verts"}
+   ]},
+  {plain_cut_menu,
+   [
+    {2,"Cut into edges of equal length"}
+   ]},
+  {slide_help_mode,
+   [
+    {1,"Absolute"},
+    {2,"Relative"},
+    {3,"Freeze direction"},
+    {4,"Thaw direction"},
+    {5,"Stop at other edges"},
+    {6,"Continue past other edges"}
+   ]}
+ ]}.
+{wings_export,
+ [
+  {export,
+   [
+    {1,"exporting"},
+    {2,"preparing"},
+    {4,"Exporter crashed"}
+   ]}
+ ]}.
+{wings_extrude_edge,
+ [
+  {bevel_faces,
+   [
+    {1,"Object is too small to bevel."}
+   ]},
+  {extrude_problem,
+   [
+    {1,"Can't extrude/bevel; two or more vertices are probably too near to each other.\nTry the Cleanup command."}
+   ]}
+ ]}.
+{wings_face_cmd,
+ [
+  {bridge,
+   [
+    {1,"Faces must have the same number of vertices."},
+    {2,"Faces must not point in the same direction."},
+    {3,"Faces must not be neighbors."}
+   ]},
+  {bridge_error,
+   [
+    {1,"Exactly two faces must be selected."}
+   ]},
+  {clone_on,
+   [
+    {1,"There must only be one face selected."}
+   ]},
+  {clone_on_selection,
+   [
+    {1,"Select target elements on which to put clones"}
+   ]},
+  {lift_check_selection,
+   [
+    {1,"Face and edge selections don't match."},
+    {2,"Face and vertex selections don't match."}
+   ]},
+  {lift_fun,
+   [
+    {1,"Lift, rotating face around edge or vertex"},
+    {2,"Lift in std. directions"}
+   ]},
+  {lift_sel_mismatch,
+   [
+    {1,"Face and edge selections don't match."}
+   ]},
+  {lift_selection,
+   [
+    {1,"Select edge or vertex to act as hinge"}
+   ]},
+  {lift_vtx_sel_mismatch,
+   [
+    {1,"Face and vertex selections don't match."}
+   ]},
+  {menu,
+   [
+    {1,"Face operations"},
+    {2,"Move"},
+    {3,"Extrude"},
+    {4,"Extrude Region"},
+    {5,"Extract Region"},
+    {6,"Inset"},
+    {7,"Inset a face inside the selected face"},
+    {8,"Intrude"},
+    {9,"Carve out interior of object, making selected faces holes"},
+    {10,"Bevel"},
+    {11,"Round off edges of selected faces"},
+    {12,"Bridge"},
+    {13,"Create a bridge or tunnel between two faces"},
+    {14,"Bump"},
+    {15,"Create bump of selected faces"},
+    {16,"Lift"},
+    {17,"Put On"},
+    {18,"Move and rotate object, aligning the selected face to another element"},
+    {19,"Clone object on to one or more elements"},
+    {20,"Mirror"},
+    {21,"Mirror object around selected faces and merge to object"},
+    {22,"Mirror and create separate objects"},
+    {23,"Dissolve"},
+    {24,"Eliminate all edges between selected faces"},
+    {25,"Collapse"},
+    {26,"Delete faces, replacing them with vertices"},
+    {27,"Smooth"},
+    {28,"Subdivide selected faces to smooth them (Catmull-Clark)"},
+    {29,"Tesselate"},
+    {30,"Vertex Color"},
+    {31,"Apply vertex colors to selected faces"},
+    {32,"Hide"},
+    {33,"Hide the selected faces"}
+   ]},
+  {put_on,
+   [
+    {1,"There must only be one face selected."}
+   ]},
+  {put_on_check_selection,
+   [
+    {1,"Selection must not be in the same object."},
+    {2,"Select only one element."}
+   ]},
+  {put_on_selection,
+   [
+    {1,"Select target element on which to put source object"}
+   ]},
+  {smooth,
+   [
+    {1,"smoothing"}
+   ]},
+  {unify_modes,
+   [
+    {1,"An object with vertex colors cannot be bridged with an object with materials."}
+   ]}
+ ]}.
+{wings_ff_ndo,
+ [
+  {check_size,
+   [
+    {1,"Object \""},
+    {2,"\" cannot be exported "},
+    {3,"to Nendo format (too many edges)."}
+   ]},
+  {clean_bad_edges,
+   [
+    {1,"Bad edge: ~w\n"}
+   ]},
+  {import,
+   [
+    {1,"Nendo 1.0 files not supported"},
+    {2,"not a Nendo file"}
+   ]},
+  {import_1,
+   [
+    {1,"~w object(s)\n"}
+   ]},
+  {read_edges,
+   [
+    {1," edges ~w\n"}
+   ]},
+  {read_object_1,
+   [
+    {1,"~w: ~s: vis=~p sensitivity=~p\n"}
+   ]},
+  {read_objects,
+   [
+    {1,"  ~w empty object(s)\n"},
+    {2,"  garbage: ~w\n"}
+   ]},
+  {read_vertices,
+   [
+    {1," vertices ~w\n"}
+   ]},
+  {skip_faces,
+   [
+    {1," faces ~w\n"}
+   ]}
+ ]}.
+{wings_ff_wings,
+ [
+  {export,
+   [
+    {1,"saving"},
+    {2,"lights"},
+    {3,"renumbering"},
+    {4,"objects"},
+    {5,"compressing"},
+    {6,"writing file"}
+   ]},
+  {import,
+   [
+    {1,"opening wings file"},
+    {2,"reading file"}
+   ]},
+  {import_1,
+   [
+    {1,"converting binary"},
+    {2,"Pre-0.80 Wings format no longer supported."},
+    {3,"Pre-0.92 Wings format no longer supported."},
+    {4,"unknown wings format"},
+    {5,"corrupt Wings file"},
+    {6,"not a Wings file (or old Wings format)"}
+   ]},
+  {import_image,
+   [
+    {1,"unnamed image"},
+    {2,"Bad image: ~p\n"}
+   ]},
+  {import_object_mode,
+   [
+    {1,"Changed undefined mode to material\n"}
+   ]},
+  {import_props,
+   [
+    {1,"<Stored Selection>"}
+   ]},
+  {import_vsn2,
+   [
+    {1,"images and materials"},
+    {2,"objects"}
+   ]},
+  {translate_map_images_2,
+   [
+    {1,"Material ~p, ~p texture: reference to non-existing image ~p\n"}
+   ]}
+ ]}.
+{wings_file,
+ [
+  {autosave,
+   [
+    {1,"Autosaving \"~s\" failed: ~s"}
+   ]},
+  {command,
+   [
+    {1,"Revert failed: "},
+    {2,"Export"},
+    {3,"Export Selected"},
+    {4,"Do you want to save your changes before quitting?"},
+    {5,"This file has been moved or deleted."}
+   ]},
+  {confirmed_open,
+   [
+    {1,"Read failed: "}
+   ]},
+  {confirmed_open_dialog,
+   [
+    {1,"Open"}
+   ]},
+  {export_filename,
+   [
+    {1,"Export"}
+   ]},
+  {import_filename,
+   [
+    {1,"Import"}
+   ]},
+  {import_image,
+   [
+    {1,"Failed to load \"~s\": ~s\n"}
+   ]},
+  {import_ndo,
+   [
+    {1,"Import failed: "}
+   ]},
+  {install_plugin,
+   [
+    {1,"Install Plug-In"},
+    {2,"GZip Compressed File"},
+    {3,"Tar File"},
+    {4,"Compressed Tar File"},
+    {5,"Beam File"}
+   ]},
+  {menu,
+   [
+    {3,"New"},
+    {4,"Create a new, empty scene"},
+    {5,"Open..."},
+    {6,"Open a previously saved scene"},
+    {7,"Merge..."},
+    {8,"Merge a previously saved scene into the current scene"},
+    {9,"Save"},
+    {10,"Save the current scene"},
+    {11,"Save As..."},
+    {12,"Save the current scene under a new name"},
+    {13,"Save Selected..."},
+    {14,"Save only the selected objects or faces"},
+    {15,"Save Incrementally"},
+    {16,"Revert"},
+    {17,"Revert current scene to the saved contents"},
+    {18,"Import"},
+    {19,"Export"},
+    {20,"Export Selected"},
+    {21,"Import Image..."},
+    {22,"Import an image file"},
+    {23,"Render"},
+    {24,"Install Plug-In"},
+    {25,"Exit"},
+    {26,"Generate new filename and save"},
+    {27,"Install a plug-in"},
+    {28,"Exit Wings 3D"}
+   ]},
+  {merge,
+   [
+    {1,"Merge"},
+    {2,"Read failed: "}
+   ]},
+  {recent_files,
+   [
+    {1,"Open this recently used file"}
+   ]},
+  {save_as,
+   [
+    {1,"Save"}
+   ]},
+  {save_now,
+   [
+    {1,"Save failed: "}
+   ]},
+  {save_selected,
+   [
+    {1,"This command requires a selection."},
+    {2,"Save Selected"}
+   ]},
+  {str_save_changes,
+   [
+    {1,"Do you want to save your changes?"}
+   ]},
+  {use_autosave_1,
+   [
+    {1,"An autosaved file with a later time stamp exists; do you want to load the autosaved file instead?"}
+   ]},
+  {wings_prop,
+   [
+    {1,"Wings File"}
+   ]}
+ ]}.
+{wings_help,
+ [
+  {advanced_menus,
+   [
+    {1,"In the "},
+    {4," dialog, there is a check box for \"Advanced Menus\"."},
+    {5,"Activating advanced menus provide the following additional features:"},
+    {6,"New commands: "},
+    {7,"Face"},
+    {8,"Put On"},
+    {9," and "},
+    {10,"Face"},
+    {11,"Lift"},
+    {12,"Vector based operations: The means to specify an axis (or vector) and to be able to re-locate it so it passes through a new point."},
+    {13,"Magnet operations: A facility that provides a way of attaining smooth modifications / transitions to surrounding geometry during the operation of any valid tool. Magnet type and influence radius settings provide further control options."},
+    {14,"Vector and magnet operations can be combined."},
+    {15,"With advanced menus turned on, many menu commands do different things depending on which mouse button you invoke them with."},
+    {16,"For instance, R clicking on the Rotate command allows you to specify an axis (or vector) to rotate your selection around, while M clicking lets you define an axis - and a new point through which that axis will pass. (A vector does not have to be parallel to an x, y or z axis.)"},
+    {17,"Reading the contents of the info line at the bottom of the Wings window is highly recommended when using advanced menus."}
+   ]},
+  {def_commands,
+   [
+    {1,"In the "},
+    {4," dialog, you can turn on \"Default Commands\"."},
+    {5,"Two default commands can be defined. To save the previous command that was executed, use one of:"},
+    {8,"To use a command that has been defined this way, use one of:"},
+    {11,"Note: When using the "},
+    {13," or "},
+    {15," camera modes, the second default command cannot be used."}
+   ]},
+  {def_hotkeys,
+   [
+    {1,"Any command that appears in a menu, can be assigned a keyboard short-cut (hotkey)."},
+    {4,"To assign a hotkey to a command:"},
+    {5,"1. Open the menu containing the command and high-light the command."},
+    {6,"2. Press the [Insert] or [/] key."},
+    {7,"3. If the command does different things depending on which mouse button is pressed (when Advanced menus are enabled), there will be a message in the information line asking you to press a mouse button to choose which variant of the command to assign to the hotkey. (Note: The mouse cursor must remain inside the menu when you click.)"},
+    {8,"4. The information line ask you to press the key that the command should be assigned to."},
+    {9,"To delete a hotkey, similarly high-light the command in a menu, and press the [Del] or [\\] key. A dialog box listing all keys bound to the command will appear. Check all hotkeys you want to delete."}
+   ]},
+  {edit_prefs,
+   [
+    {1,"Edit"},
+    {2,"Preferences"}
+   ]},
+  {getting_started,
+   [
+    {1,"When learning Wings, keep an eye at the information line at the bottom of the screen. Generally it shows what the mouse buttons will do at any given moment."},
+    {2,"The actions for the mouse buttons are given first, labeled "},
+    {7,"Generally, L (left mouse button) is used for selecting and accepting, M (middle mouse button) for operating the camera, and R (right mouse button) to access the context-sensitive pop-up menus."},
+    {left_def,"left mouse button"},
+    {middle_def,"middle button or scroll wheel"},
+    {right_def,"right button"},
+    {two_a,"followed by any hotkey actions."}
+   ]},
+  {header,
+   [
+    {1,"Getting Started"},
+    {2,"Using a Mouse With One or Two Buttons"},
+    {3,"French and German Keyboards"},
+    {4,"Defined Hotkeys"},
+    {5,"How To Define Hotkeys"},
+    {6,"Light Basics"},
+    {7,"Advanced Menus"},
+    {8,"Default Commands"},
+    {9,"Performance Tips"},
+    {10,"OpenGL Info"},
+    {11,"About Wings 3D"}
+   ]},
+  {help_window,
+   [
+    {1,"No help text"}
+   ]},
+  {international,
+   [
+    {1,"Unfortunately, on French and German keyboards (and possibly others), the Undo/Redo commands will not be bound to the [Z] key. (That might be changed in a future release of Wings.)"},
+    {2,"On French keyboards, the Undo/Redo commands are found on the [W] key ([Ctrl]+[W], [Ctrl]+[Alt]+[W] and so on)."},
+    {3,"On German keyboards, the Undo/Redo commands are found on the [Y] key ([Ctrl]+[Y], [Ctrl]+[Alt]+[Y] and so on)."}
+   ]},
+  {lights,
+   [
+    {1,"1. Create lights using the Light command in the primitives menu (R-click when there is no selection)."},
+    {2,"2. Select a light by L-clicking on it. When any light is selected, a special Light menu will pop up when you R-click."},
+    {3,"3. To tell Wings to actually use the lights you have created, use the "},
+    {4,"View"},
+    {5,"Scene Lights"},
+    {6," command."}
+   ]},
+  {message,
+   [
+    {1,"Close help window"}
+   ]},
+  {one_or_two,
+   [
+    {1,"Note that only the "},
+    {2," and "},
+    {3," modes can be used with a two-button mouse. Only the "},
+    {4," mode can be used with an one-button mouse."}
+   ]},
+  {opengl_info,
+   [
+    {1,"Vendor: "},
+    {2,"Renderer: "},
+    {3,"Version: "},
+    {4,"Version tuple: "},
+    {5,"Red bits"},
+    {6,"Green bits"},
+    {7,"Blue bits"},
+    {8,"Alpha bits"},
+    {9,"Depth bits"},
+    {10,"Stencil bits"},
+    {11,"Accum. red bits"},
+    {12,"Accum. green bits"},
+    {13,"Accum. blue bits"},
+    {14,"Accum. alpha bits"},
+    {15,"Max number of lights"},
+    {16,"Max clip planes"},
+    {17,"Max modelview stack depth"},
+    {18,"Max projection stack depth"},
+    {19,"Max texture stack depth"},
+    {20,"Subpixel bits"},
+    {21,"Max 3D texture size"},
+    {22,"Max texture size"},
+    {23,"Max pixel map table"},
+    {24,"Max name stack depth"},
+    {25,"Max display-list call nesting"},
+    {26,"Max evaluator polynomial order"},
+    {27,"Max viewport dimensions"},
+    {28,"Max depth of attribute stack"},
+    {29,"Max depth of client attribute stack"},
+    {30,"Number of auxiliary buffers"},
+    {31,"Color buffers store RGBA"},
+    {32,"Color buffers store indices"},
+    {33,"Double buffering"},
+    {34,"Stereo buffers"},
+    {35,"Range of aliased point sizes"},
+    {36,"Range of antialised point sizes"},
+    {37,"Range of aliased line widths"},
+    {38,"Range of antialised line widths"},
+    {39,"Recommended max number of indices for drawRangeElement()"},
+    {40,"Recommended max number of vertices for drawRangeElement()"},
+    {41,"Max number of texturing units"},
+    {42,"Number of compression formats"},
+    {43,"Max number of vertex units"},
+    {44,"OpenGL Extensions"}
+   ]},
+  {performance_tips,
+   [
+    {1,"The performance of Wings is dependent on many different things, such as"},
+    {2,"the speed of the CPU"},
+    {3,"type and size of the CPU cache"},
+    {4,"amount and speed of memory"},
+    {5,"type of graphics card"},
+    {6,"amount of video memory"},
+    {7,"the phase of the moon"},
+    {8,"Therefore, it is difficult to give any firm advice on how to improve Wings performance. The following tips MAY improve performance:"},
+    {9,"Try different number of colors and different screen resolutions. Especially if the graphics card doesn't have much memory, many colors and/or high resolution may drastically reduce performance. Using a smaller Wings window (not maximized) may also help."},
+    {10,"Close unnecessary windows inside Wings."},
+    {11,"Make sure that Geometry windows don't overlap."},
+    {12,"Use as few (active) lights as possible. More lights means less speed on most grahics cards."},
+    {13,"If possible, use the "},
+    {14,"Tools"},
+    {15,"Virtual Mirror"},
+    {16," command."},
+    {17,"Hide models that you don't work on for the moment."},
+    {18,"Use the "},
+    {19,"View"},
+    {20,"Show Colors"},
+    {21," command to turn off vertex color display if your model has vertex colors."},
+    {22,"Use the "},
+    {23,"View"},
+    {24,"Show Textures"},
+    {25," command to turn off textures while modeling."},
+    {26,"Work in wireframe mode."},
+    {27,"Some graphics cards display edges slowly. Turn off edge display using the "},
+    {28,"View"},
+    {29,"Show Edges"},
+    {30," command."}
+   ]},
+  {splash_contents,
+   [
+    {1,"Wings 3D is a subdivision modeler inspired"},
+    {2,"by Nendo and Mirai from IZware."},
+    {3,"Wings 3D comes with absolutely no warranty,"},
+    {4,"but is completely free for any kind of use"},
+    {5,"(including commercial)."},
+    {6,"Copyright"},
+    {7,"& Others"},
+    {8,"JPEG library: Copyright"}
+   ]},
+  {use_one_or_two,
+   [
+    {1,"To use mice with only one or two buttons, you must inform Wings how many buttons your mouse has in the "},
+    {2," dialog."}
+   ]}
+ ]}.
+{wings_hotkey,
+ [
+  {keyname,
+   [
+    {1,"Bksp"},
+    {2,"Tab"},
+    {3,"Space"},
+    {4,"Shift+"}
+   ]},
+  {list_header,
+   [
+    {1,"Hotkeys in all modes"},
+    {2,"Hotkeys in object mode"},
+    {3,"Hotkeys in edge mode"},
+    {4,"Hotkeys in face mode"},
+    {5,"Hotkeys for lights"},
+    {6,"Hotkeys for vertices"}
+   ]},
+  {list_keys,
+   [
+    {1," (user-defined)"},
+    {2," (plug-in-defined)"}
+   ]},
+  {vkeyname,
+   [
+    {1,"Bksp"},
+    {2,"Tab"},
+    {3,"Enter"},
+    {4,"Pause"},
+    {5,"Esc"},
+    {6,"Space"},
+    {7,"Delete"},
+    {8,"Del"},
+    {9,"Div"},
+    {10,"Mul"},
+    {11,"-"},
+    {12,"+"},
+    {13,"Enter"},
+    {14,"="},
+    {15,"Up"},
+    {16,"Down"},
+    {17,"Right"},
+    {18,"Left"},
+    {19,"Insert"},
+    {20,"Home"},
+    {21,"End"},
+    {22,"Page Up"},
+    {23,"Page Down"},
+    {24,"UKEY"}
+   ]}
+ ]}.
+{wings_image,
+ [
+  {create_default,
+   [
+    {1,"~p Don't know about the type ~p; ignoring\n"}
+   ]},
+  {create_image,
+   [
+    {1,"Width"},
+    {2,"Height"},
+    {3,"Pattern"},
+    {4,"Grid"},
+    {5,"Checkerboard"},
+    {6,"Vertical Bars"},
+    {7,"Horizontal Bars"},
+    {8,"White"},
+    {9,"Black"},
+    {10,"Create Image"}
+   ]},
+  {event,
+   [
+    {1,"Show menu"}
+   ]},
+  {event_1,
+   [
+    {1,"Show in natural size"}
+   ]},
+  {screenshot,
+   [
+    {1,"<<Screenshot>>"}
+   ]},
+  {window_params,
+   [
+    {1,"Image: ~s [~wx~wx~w]"}
+   ]}
+ ]}.
+{wings_init,
+ [
+  {display_actual_mode,
+   [
+    {1,"Actual: RGBA: ~p ~p ~p ~p Depth: ~p Stencil: ~p Accum: ~p ~p ~p ~p\n"}
+   ]},
+  {try_video_modes,
+   [
+    {1,"Trying OpenGL modes\n"}
+   ]},
+  {video_mode_failure,
+   [
+    {2,"Failed to find any suitable OpenGL mode.\n\n"},
+    {3,"Make sure that OpenGL drivers are installed.\n\n"},
+    {5,"No suitable OpenGL mode found (are OpenGL drivers installed?)"}
+   ]}
+ ]}.
+{wings_light,
+ [
+  {attenuation,
+   [
+    {1,"Not a point light or spotlight."}
+   ]},
+  {color,
+   [
+    {1,"Select only one light."}
+   ]},
+  {edit,
+   [
+    {1,"Select only one light."},
+    {2,"Ambient Light Properties"},
+    {3,"Light Properties"}
+   ]},
+  {edit_ambient_dialog,
+   [
+    {1,"Ambient"},
+    {2,"Color"},
+    {3,"OK"}
+   ]},
+  {edit_dialog,
+   [
+    {1,"Diffuse"},
+    {2,"Ambient"},
+    {3,"Specular"},
+    {4,"Colors"},
+    {5,"OK"}
+   ]},
+  {export_camera_lights,
+   [
+    {1,"Ambient"},
+    {2,"Infinite"},
+    {3,"Infinite1"},
+    {4,"Infinite2"}
+   ]},
+  {info,
+   [
+    {1,"Light ~s"},
+    {2,": Pos ~s ~s ~s"}
+   ]},
+  {info_1,
+   [
+    {1,". Aim ~s ~s ~s. Dir ~s ~s ~s"},
+    {2,". Angle ~s~c"}
+   ]},
+  {light_types,
+   [
+    {1,"Infinite"},
+    {2,"Create a far-away, directional light (like the sun)"},
+    {3,"Point"},
+    {4,"Create a light that radiates light in every direction"},
+    {5,"Spot"},
+    {6,"Create a spotlight"},
+    {7,"Ambient"},
+    {8,"Create an ambient light source"},
+    {9,"Area"},
+    {10,"Create an area that radiates light"}
+   ]},
+  {menu,
+   [
+    {1,"Light operations"},
+    {2,"Move"},
+    {3,"Position Highlight"},
+    {4,"Position the aim point or location of light"},
+    {5,"Color"},
+    {6,"Interactively adjust hue, value, and saturation"},
+    {7,"Attenuation"},
+    {8,"Linear"},
+    {9,"Interactively adjust how much light weakens as it travels away from its source (linear factor)"},
+    {10,"Quadratic"},
+    {11,"Interactively adjust how much light weakens as it travels away from its source (quadratic factor)"},
+    {12,"Spot Angle"},
+    {13,"Interactivly adjust the angle of the spotlight cone"},
+    {14,"Spot Falloff"},
+    {15,"Interactivly adjust how much light weakens farther away from the center of the spotlight cone"},
+    {16,"Edit Properties..."},
+    {17,"Edit light properties"},
+    {18,"Duplicate"},
+    {19,"Duplicate and move selected lights"},
+    {20,"Delete"},
+    {21,"Delete seleced lights"}
+   ]},
+  {plugin_results,
+   [
+    {1,"Light editor plugin(s) left garbage:~n    ~P~n"},
+    {2,"Plugin(s) left garbage"}
+   ]},
+  {qs_att,
+   [
+    {1,"Linear"},
+    {2,"Quadratic"},
+    {3,"Attenuation"}
+   ]},
+  {qs_specific,
+   [
+    {1,"Angle"},
+    {2,"Falloff"},
+    {3,"Spot Parameters"}
+   ]},
+  {selected_light,
+   [
+    {1,"Select only one light."}
+   ]},
+  {spot_angle,
+   [
+    {1,"Not a spotlight."}
+   ]},
+  {spot_falloff,
+   [
+    {1,"Not a spotlight."}
+   ]}
+ ]}.
+{wings_magnet,
+ [
+  {check_radius,
+   [
+    {1,"Too short influence radius."}
+   ]},
+  {common_dialog,
+   [
+    {4,"Distance Route"}
+   ]},
+  {dialog,
+   [
+    {1,"Magnet Options"},
+    {2,"Influence Radius"},
+    {3,"Magnet Options"}
+   ]},
+  {drag_help,
+   [
+    {1,"[+] or [-] Adjust Radius  "}
+   ]},
+  {info_string,
+   [
+    {1,"Magnet route:"}
+   ]},
+  {magnet_route,
+   [
+    {midpoint,"Midpoint"},
+    {shortest,"Shortest"},
+    {surface,"Surface"}
+   ]},
+  {magnet_shape_str,
+   [
+    {bell,"Bell"},
+    {dome,"Dome"},
+    {spike,"Spike"},
+    {straight,"Straight"}
+   ]}
+ ]}.
+{wings_material,
+ [
+  {edit,
+   [
+    {1,"Material Properties: "}
+   ]},
+  {edit_dialog,
+   [
+    {1,"Diffuse"},
+    {2,"Ambient"},
+    {3,"Specular"},
+    {4,"Emission"},
+    {5,"Shininess"},
+    {6,"Opacity"},
+    {7,"OK"}
+   ]},
+  {load_map_1,
+   [
+    {1,"Failed to load"}
+   ]},
+  {material_fun,
+   [
+    {1,"Assign existing material to selection"},
+    {2,"Create and assign new material"}
+   ]},
+  {material_menu,
+   [
+    {1,"Material"},
+    {2,"New..."},
+    {3,"Create a new material and assign to selected faces"},
+    {4,"Material"}
+   ]},
+  {new_1,
+   [
+    {1,"New Material"},
+    {2,"Material Name"},
+    {3,"New Material"}
+   ]},
+  {plugin_results,
+   [
+    {1,"Material editor plugin(s) left garbage:~n    ~P~n"},
+    {2,"Plugin(s) left garbage"}
+   ]},
+  {rename,
+   [
+    {1,"Rename"}
+   ]},
+  {show_map,
+   [
+    {1,"~p: <image deleted>"},
+    {2,"~p: ~p [~px~px~p]"},
+    {3,"Delete"}
+   ]},
+  {show_maps,
+   [
+    {1,"Textures"}
+   ]}
+ ]}.
+{wings_menu,
+ [
+  {handle_key_event,
+   [
+    {1,"This key is already bound to the "},
+    {2," command. Do you want to re-define it?"}
+   ]},
+  {help_text_1,
+   [
+    {1," submenu"}
+   ]},
+  {hotkey_delete_dialog,
+   [
+    {1,"Delete Hotkeys"}
+   ]},
+  {hotkey_key_message,
+   [
+    {1,"Press the key to bind the \""},
+    {2,"\" command to."}
+   ]},
+  {hotkey_mouse_message,
+   [
+    {1,"Click a mouse button to choose command to bind"}
+   ]},
+  {magnet_help,
+   [
+    {2,"Click for Magnet"}
+   ]},
+  {mk_dialog,
+   [
+    {1,"Check all hotkeys to be deleted."}
+   ]},
+  {norm_help_adv,
+   [
+    {1,"Open option dialog"}
+   ]}
+ ]}.
+{wings_menu_util,
+ [
+  {adv_scale_1,
+   [
+    {1,"Scale Uniform"},
+    {2,"Scale Axis"},
+    {3,"Scale Radial"}
+   ]},
+  {basic_scale,
+   [
+    {1,"Scale"}
+   ]},
+  {dir_help,
+   [
+    {3,"the last axis"},
+    {4,"the default axis"},
+    {7,"around"},
+    {10,"along its normal"},
+    {11,"freely in all directions"},
+    {12,"Scale equally in all directions"}
+   ]},
+  {dir_help_1,
+   [
+    {1,"Move each element "},
+    {2,"Rotate freely"},
+    {3,"Rotate around each element's normal"},
+    {4,"Extrude each element, then move it "},
+    {5,"Extrude faces as region, then move faces along the region's normal"},
+    {6,"Extrude faces as region, then move faces "},
+    {7,"Extract faces, then move faces along the region's normal"},
+    {8,"Extract faces, then move faces "},
+    {9,"Flatten elements to normal plane"},
+    {10,"Lift face along its normal"},
+    {11,"Lift face and move it "},
+    {12,"Duplicate and move freely "},
+    {13,"Move each element along "},
+    {14,"Extrude elements, then move along "},
+    {15,"Extrude faces as region, then move along "},
+    {16,"Extract faces, then move along "},
+    {17,"Rotate around "},
+    {18,"Scale "},
+    {19,"Scale along "},
+    {20,"Flatten to "},
+    {21,"Flatten and move to "},
+    {22,"Lift face along "},
+    {23,"Duplicate, then move along "}
+   ]},
+  {dirs,
+   [
+    {1,"Move along std. axis"},
+    {2,"Pick axis to move along"},
+    {3,"Move along std. axis"},
+    {4,"Move along selection's normal"},
+    {5,"Pick axis to move along"},
+    {6,"Extrude along std. axis"},
+    {7,"Extrude along selection's normal"},
+    {8,"Pick axis to extrude along"},
+    {9,"Extrude along std. axis"},
+    {10,"Extrude along selection's normal"},
+    {11,"Pick axis to extrude along"},
+    {12,"Extract along std. axis"},
+    {13,"Extract along selection's normal"},
+    {14,"Pick axis to extract along"},
+    {15,"Duplicate; move along std. axis"},
+    {16,"Duplicate; don't move"},
+    {17,"Duplicate; pick axis to move along"}
+   ]},
+  {flatten,
+   [
+    {1,"Flatten"},
+    {2,"Flatten to std. planes"},
+    {3,"Pick plane and ref point on plane"},
+    {4,"Pick plane"}
+   ]},
+  {flatten_fun_1,
+   [
+    {1,"Pick point on plane"}
+   ]},
+  {rotate,
+   [
+    {1,"Rotate around std. axis"},
+    {2,"Pick axis and ref point"},
+    {3,"Pick axis to rotate around"}
+   ]},
+  {rotate_1,
+   [
+    {1,"Rotate"}
+   ]},
+  {rotate_fun,
+   [
+    {1,"Pick point for axis to pass through"}
+   ]},
+  {scale,
+   [
+    {1,"Scale outward from std. axis"},
+    {2,"Pick axis and point to scale from"},
+    {3,"Pick axis to scale out from"},
+    {4,"Scale along std. axis"},
+    {5,"Pick axis and point to scale from"},
+    {6,"Pick axis to scale along"}
+   ]},
+  {scale_fun,
+   [
+    {1,"Pick point to scale from"}
+   ]},
+  {uniform_scale,
+   [
+    {1,"Choose point to scale from"},
+    {2,"Scale uniformly from midpoint of selection"}
+   ]}
+ ]}.
+{wings_outliner,
+ [
+  {command,
+   [
+    {1,"NYI: ~p\n"}
+   ]},
+  {common_image_menu,
+   [
+    {1,"Export..."},
+    {2,"Export the image"},
+    {3,"Duplicate"},
+    {4,"Duplicate selected image"},
+    {5,"Delete"},
+    {6,"Delete selected image"},
+    {7,"Rename"},
+    {8,"Rename selected image"},
+    {9,"Pick up Image"},
+    {10,"Pick up the Image to it put on a material as a texture"}
+   ]},
+  {delete_image,
+   [
+    {1,"The image is used by a material."},
+    {2,"Are you sure you want to delete the image (NOT undoable)?"}
+   ]},
+  {do_menu,
+   [
+    {1,"Edit Material..."},
+    {2,"Edit material properties"},
+    {3,"Assign to Selection"},
+    {4,"Assign the material to the selected faces or bodies"},
+    {5,"Select"},
+    {6,"Select all faces that have this material"},
+    {7,"Duplicate"},
+    {8,"Duplicate this material"},
+    {9,"Delete"},
+    {10,"Delete this material"},
+    {11,"Rename"},
+    {12,"Rename this material"},
+    {13,"Duplicate"},
+    {14,"Duplicate this object"},
+    {15,"Delete"},
+    {16,"Delete this object"},
+    {17,"Rename"},
+    {18,"Rename this object"},
+    {19,"Edit Light..."},
+    {20,"Edit light properties"},
+    {21,"Duplicate"},
+    {22,"Duplicate this light"},
+    {23,"Delete"},
+    {24,"Delete this light"},
+    {25,"Rename"},
+    {26,"Rename this light"},
+    {121,"Drop picked object"},
+    {122,"Drop a previously picked object on this material"}
+   ]},
+  {event,
+   [
+    {1,"Select"},
+    {2,"Show outliner menu (if selection) or creation menu (if no selection)"}
+   ]},
+  {handle_drop,
+   [
+    {1,"Texture Type"},
+    {2,"Diffuse"},
+    {3,"Gloss"},
+    {4,"Bump (HeightMap)"},
+    {5,"Bump (NormalMap)"}
+   ]},
+  {image_menu,
+   [
+    {1,"Show"},
+    {2,"Show the image in a window"}
+   ]},
+  {image_menu_1,
+   [
+    {1,"Make External..."},
+    {2,"Refresh"},
+    {3,"Make Internal"}
+   ]},
+  {make_external,
+   [
+    {1,"Make External"}
+   ]},
+  {refresh_image,
+   [
+    {1,"Failed to refresh \""}
+   ]},
+  {rename_image,
+   [
+    {1,"Rename Image"}
+   ]},
+  {title,
+   [
+    {1,"Outliner"}
+   ]}
+ ]}.
+{wings_palette,
+ [
+  {command,
+   [
+    {1,"No start color found."},
+    {2,"No end color found."},
+    {3,"Export"},
+    {5,"Wings Palette"},
+    {6,"Export error: ~w"},
+    {7,"Import"},
+    {9,"Wings Palette"},
+    {10,"No palette found"},
+    {11,"Import error: ~w"},
+    {12,"Import error: ~w"}
+   ]},
+  {do_menu,
+   [
+    {1,"Edit"},
+    {2,"Edit color"},
+    {3,"Interpolate"},
+    {4,"Interpolate Empty Colors"},
+    {5,"Clear All"},
+    {6,"Clear palette"},
+    {7,"Compact"},
+    {8,"Compact Palette"},
+    {9,"Scan Colors"},
+    {10,"Scan colors from selected objects"},
+    {11,"Export"},
+    {12,"Export palette to file"},
+    {13,"Import"},
+    {14,"Import palette from file"}
+   ]},
+  {event,
+   [
+    {1,"Assign color to selection"},
+    {2,"Edit color"},
+    {3,"Show menu"},
+    {4,"Clear color"}
+   ]},
+  {title,
+   [
+    {1,"Palette"}
+   ]}
+ ]}.
+{wings_pb,
+ [
+  {loop,
+   [
+    {1,"done"}
+   ]}
+ ]}.
+{wings_pick,
+ [
+  {area_info,
+   [
+    {40," Area ~s"}
+   ]},
+  {clear_hilite_marquee_mode,
+   [
+    {ctrl_action,"Deselect"},
+    {shift_action,"(De)select only elements wholly inside marquee"}
+   ]},
+  {enhanced_hl_info,
+   [
+    {1,". Position <~s  ~s  ~s>"},
+    {3,". Midpoint <~s  ~s  ~s>\nLength ~s"},
+    {4,". Midpoint <~s  ~s  ~s> \nMaterial ~s."}
+   ]},
+  {handle_hilite_event,
+   [
+    {2,"(in mirror)"},
+    {3,"Object"},
+    {4,"Vertex"},
+    {5,"Edge"},
+    {6,"Face"}
+   ]}
+ ]}.
+{wings_plugin,
+ [
+  {cat_label,
+   [
+    {1,"Commands"},
+    {2,"Import/export"},
+    {3,"Primitives"},
+    {4,"Render"},
+    {5,"Select"},
+    {6,"Tools"},
+    {7,"Unclassified"}
+   ]},
+  {def_ui_plugin,
+   [
+    {1,"Reinstall Wings. Missing plugin for ~p."}
+   ]},
+  {install,
+   [
+    {1,"The plug-in was successfully installed."}
+   ]},
+  {install_beam,
+   [
+    {1,"Install of \"~s\" failed: ~p"},
+    {2,"File \"~s\" is not a Wings plug-in module"}
+   ]},
+  {install_file_type,
+   [
+    {1,"File \"~s\": Unknown file type"}
+   ]},
+  {install_verify_files,
+   [
+    {1,"File \"~s\" contains a file with an absolute path"},
+    {2,"File \"~s\" does not contain any Wings plug-in modules"}
+   ]},
+  {manager_command,
+   [
+    {1,"Plug-In Manager"}
+   ]},
+  {manager_entry,
+   [
+    {1,"Plug-in Manager..."}
+   ]},
+  {plugin_dir,
+   [
+    {1,"No \"plugins\" directory found"}
+   ]},
+  {plugin_menu_info_3,
+   [
+    {1,"(The Plug-In Manager was unable to find more information)"}
+   ]},
+  {plugin_modules,
+   [
+    {1,"Enable or disable this plug-in "},
+    {2,"(a disbled plug-in does not show up in menus)"}
+   ]},
+  {plugin_root_menu,
+   [
+    {1,"body: "},
+    {2,"edge: "},
+    {3,"face: "},
+    {4,"vertex: "},
+    {5,"Select|"},
+    {6,"Tools|"}
+   ]}
+ ]}.
+{wings_pref_dlg,
+ [
+  {advanced_prefs,
+   [
+    {1,"Default Commands"},
+    {2,"Allow defining commands that can be invoked by Ctrl+L or Ctrl+M"},
+    {3,"Use Highlight as Temporary Selection"},
+    {4,"If there is no selection, "},
+    {5,"allow commands to act on the highlighted element"},
+    {6,"Hide Selection While Dragging"},
+    {7,"Don't show the selection in any interactive command"},
+    {8,"Hide Selection While Moving Camera"},
+    {9,"Don't show the selection when the camera is being moved"},
+    {10,"Advanced Menus"},
+    {11,"More commands and more options, such as magnets"},
+    {12,"Power-user temporary selections"},
+    {13,"In the secondary selection mode, RMB-clicking always adds to the selection"},
+    {14,"Length"},
+    {15,"Length of vector in secondary selections"},
+    {16,"Width"},
+    {17,"Width of vector (in pixels)"},
+    {18,"Color"},
+    {19,"Color of vector"},
+    {20,"Vector Display"},
+    {21,"Use Mirror for Selections"},
+    {22,"Default to using the virtual mirror for secondary selections"},
+    {23,"Size"},
+    {24,"Size of user-defined clipping indicator"},
+    {25,"Color"},
+    {26,"Color of user-defined clipping indicator"},
+    {27,"Clipping Plane Indicator"}
+   ]},
+  {command,
+   [
+    {1,"General"},
+    {2,"Camera"},
+    {3,"Advanced"},
+    {4,"User Interface"},
+    {5,"Misc"},
+    {6,"Preferences"},
+    {31,"Constraints"}
+   ]},
+  {constraint_prefs,
+   [
+    {1,"Distance"},
+    {2,"Rotation"},
+    {3,"Scale"},
+    {4,"Default Modifier Keys"},
+    {9,"Distance Constraints"},
+    {10,"Alternate Distances"},
+    {11,"Save Constraints to..."},
+    {12,"Constraint bound to ~s for distance operations."},
+    {13,"Constraint bound to ~s for rotations."},
+    {14,"Constraint bound to ~s for scale operations."},
+    {15," Alternate constrains to reciprocal (1.0/Value)."},
+    {16," Alternate constrains to supplementary (180.0 minus angle)."},
+    {17,"(default 1/~s)"},
+    {18,"(default 5/8)"},
+    {19,"(default 3/64)"},
+    {22,"Distance Constraints"},
+    {23,"Rotation Constraints"},
+    {25,"Scale Factors"},
+    {29,"Alternate Distances"},
+    {30,"Deleting value or entering '0' resets constraint to Wings default"},
+    {31,"Set Constraint Preferences"},
+    {32,"Default Constraint Values"},
+    {33,"Use Alternate Constraints"},
+    {34,"Checked uses alternate distances, reciprocal scale factors, and supplementary angles."},
+    {35," Switch on the fly pressing [Shift]+[Tab] during a drag operation."},
+    {36,"Switching Modes Resets Model's Position"},
+    {37,"Only affects tools with more than one drag mode such as Edge|Slide"},
+    {38,"Customize Drag Response"},
+    {39,"Customize the drag to mouse motion ratio. Unchecked uses default settings."},
+    {40,"Factor in Distance from Camera"},
+    {42,"Absolute Speed"},
+    {43,"Factor in Distance from Camera"},
+    {46,"Relative Speed"},
+    {48,"Rotation Speed"},
+    {49,"Drag Preferences"}
+   ]},
+  {gen_prefs,
+   [
+    {1,"Unselected Size"},
+    {2,"Size in pixels of unselected vertices (0.0 means not shown)"},
+    {3,"Selected Size"},
+    {4,"Size in pixels of selected vertices"},
+    {5,"Vertex Display"},
+    {6,"Unselected Width"},
+    {7,"Width in pixels of unselected edges"},
+    {8,"Selected Width"},
+    {9,"Width in pixels of selected edges"},
+    {10,"Soft Edges"},
+    {11,"Color of soft edges"},
+    {12,"Hard Edges"},
+    {13,"Color of hard edges"},
+    {14,"Edge Display"},
+    {15,"Vertices"},
+    {16,"Edges"},
+    {17,"Faces"},
+    {18,"Objects"},
+    {19,"Unselected"},
+    {20,"Selected"},
+    {21,"Smart Highlighting"},
+    {22,"Highlighting"},
+    {23,"Solid Face Selections"},
+    {24,"Stippled Face Selections"},
+    {25,"Selection Color"},
+    {26,"Selection"},
+    {27,"Text"},
+    {28,"Color of information text"},
+    {29,"Background"},
+    {30,"Color of background for information text (including transparency)"},
+    {31,"Information Text"},
+    {32,"Color"},
+    {33,"Force Axis-Aligned Grid"},
+    {34,"Always show the grid when the view is aligned along one of the major axes"},
+    {35,"Grid"},
+    {36,"Show Axis Letters"},
+    {37,"+X Color"},
+    {38,"+Y Color"},
+    {39,"+Z Color"},
+    {40,"-X Color"},
+    {41,"-Y Color"},
+    {42,"-Z Color"},
+    {43,"Axes"},
+    {44,"Length"},
+    {45,"Length of normals"},
+    {46,"Color"},
+    {47,"Color of normals"},
+    {48,"Normals Display"},
+    {49,"Constrain Axes to Grid"},
+    {50,"Draw Anti-Aliased Edges"},
+    {51,"Default"},
+    {52,"Sets the colour of the default material"},
+    {53,"Hole"},
+    {54,"Sets the colour of the hole material"},
+    {55,"Materials"},
+    {56,"Show Mini Axis"},
+    {57,"Hard Edge Width"},
+    {58,"Width in pixels of hard edges"},
+    {59,"Width"},
+    {60,"Width of normals"},
+    {61,"Verbose"},
+    {62,"Show additional information about selected elements"},
+    {63,"Mouseover"},
+    {64,"Show additional information for highlighted element on mouseover"},
+    {aa_ortho1,"Force Axis-Aligned Ortho"},
+    {aa_ortho2,"Always go into orthogonal mode when the view is aligned along one of the major axes"}
+   ]},
+  {menu,
+   [
+    {1,"Preferences..."},
+    {2,"Edit the preferences for Wings"}
+   ]},
+  {misc_prefs,
+   [
+    {1,"Opacity settings not supported using this version of OpenGL"},
+    {2,"Save automatically every"},
+    {3,"minutes"},
+    {4,"Undo levels"},
+    {5,"Angle"},
+    {6,"Delay (ms)"},
+    {7,"Auto Rotate"},
+    {8,"Cage"},
+    {9,"Some Edges"},
+    {10,"All Edges"},
+    {11,"Shaded Mode Edge Style"},
+    {12,"Stationary Opacity"},
+    {13,"Moving Opacity"},
+    {14,"Proxy Mode"},
+    {15,"Text in menus and dialogs disappear"},
+    {16,"Problem occurs on some Matrox cards"},
+    {17,"Wings crashes if axes are turned off"},
+    {18,"Problem occurs on some Matrox cards"},
+    {19,"Camera moves and interactive commands are jumpy"},
+    {20,"Problem occurs on Mac OS X 10.3 (Panther)"},
+    {21,"Workarounds"},
+    {22,"Edge display problems?"},
+    {23,"Edge offsets:"}
+   ]},
+  {smart_set_value_1,
+   [
+    {1,"The change to the system font will take\neffect the next time Wings 3D is started."},
+    {2,"The change to the interface icons will take\neffect the next time Wings 3D is started."},
+    {3,"The change to the default material color will take\neffect the next time Wings 3D is started."},
+    {5,"The change to the hole material color will take\neffect the next time Wings 3D is started."}
+   ]},
+  {ui_prefs,
+   [
+    {1,"System Font"},
+    {2,"Desktop/Geometry Background"},
+    {3,"Menu Text"},
+    {4,"Menu Highlight"},
+    {5,"Menu Highlighted Text"},
+    {6,"Menu Background"},
+    {7,"Dialog Text"},
+    {8,"Dialog (Disabled) Text"},
+    {9,"Dialog Background"},
+    {10,"Title Text"},
+    {11,"Title (Passive) Background"},
+    {12,"Title (Active) Background"},
+    {13,"Colors"},
+    {14,"No Progress Bar"},
+    {15,"Console Font"},
+    {16,"Width"},
+    {17,"Height"},
+    {18,"Save Lines"},
+    {19,"Background"},
+    {20,"Text"},
+    {21,"Cursor"},
+    {22,"Console"},
+    {23,"Language"},
+    {24,"Objects in Outliner"},
+    {25,"View image after rendering"},
+    {26,"Load image after rendering"},
+    {27,"Extended Toolbar Icons"},
+    {50,"Interface Icons"},
+    {51,"Classic"},
+    {52,"Blue Cube"},
+    {53,"Purple Tube"}
+   ]},
+  {viewer_prefs,
+   [
+    {1,"Viewer"},
+    {2,"Options"},
+    {3,"..filename.."}
+   ]},
+  {workaround_1,
+   [
+    {1,"Problem"},
+    {2,"Use Workaround?"}
+   ]}
+ ]}.
+{wings_rotate,
+ [
+  {edges_to_vertices,
+   [
+    {1,"Magnet Rotate on multiple edge regions requires an explicit rotate origin."}
+   ]},
+  {faces_to_vertices,
+   [
+    {1,"Magnet Rotate on multiple face regions requires an explicit rotate origin."}
+   ]}
+ ]}.
+{wings_s,
+ [
+  {accept,
+   [
+    {1,"Accept"}
+   ]},
+  {camera_mode,
+   [
+    {blender,"Blender"},
+    {maya,"Maya"},
+    {mb,"Motionbuilder"},
+    {mirai,"Mirai"},
+    {nendo,"Nendo"},
+    {sketchup,"SketchUp"},
+    {tds,"3ds max"},
+    {wings_cam,"Wings 3D"}
+   ]},
+  {cancel,
+   [
+    {1,"Cancel"}
+   ]},
+  {dir,
+   [
+    {all,"All"},
+    {da,"default axis"},
+    {f,"Free"},
+    {la,"last axis"},
+    {n,"Normal"},
+    {r,"Radial"},
+    {the_axis,"the ~s axis"},
+    {u,"Uniform"},
+    {x,"X"},
+    {y,"Y"},
+    {z,"Z"}
+   ]},
+  {mod,
+   [
+    {alt,"Alt"},
+    {command,"Command"},
+    {ctrl,"Ctrl"},
+    {shift,"Shift"}
+   ]},
+  {mouse_b,
+   [
+    {l,"L"},
+    {m,"M"},
+    {r,"R"}
+   ]},
+  {no,
+   [
+    {1,"No"}
+   ]},
+  {yes,
+   [
+    {1,"Yes"}
+   ]}
+ ]}.
+{wings_scale,
+ [
+  {edges_to_vertices,
+   [
+    {1,"Magnet scale on multiple edge regions requires an explicit scale origin."}
+   ]},
+  {faces_to_vertices,
+   [
+    {1,"Magnet scale on multiple face regions requires an explicit scale origin."}
+   ]},
+  {inset_face,
+   [
+    {1,"There are too short edges in one or more selected faces. (Use Cleanup.)"}
+   ]}
+ ]}.
+{wings_sel_cmd,
+ [
+  {ask,
+   [
+    {1,"Select By Id"}
+   ]},
+  {group_mode_string,
+   [
+    {body,"Body selection group"},
+    {edge,"Edge selection group"},
+    {face,"Face selection group"},
+    {vertex,"Vertex selection group"}
+   ]},
+  {group_title,
+   [
+    {1,"vertex: "},
+    {2,"edge: "},
+    {3,"face: "},
+    {4,"body: "}
+   ]},
+  {groups_menu,
+   [
+    {1,"Delete Group"},
+    {2,"Delete group \""},
+    {4,"Add to Group"},
+    {5,"Add current selection to group \""},
+    {7,"Subtract from Group"},
+    {8,"Subtract current selection from group \""},
+    {10,"Select Group"},
+    {11,"Select group \""},
+    {13,"Union Group"},
+    {14,"Union group \""},
+    {15,"\" with current selection"},
+    {16,"Subtract Group"},
+    {17,"Subtract group \""},
+    {18,"\" from current selection"},
+    {19,"Intersect Group"},
+    {20,"Intersect group \""},
+    {21,"\" with current selection"}
+   ]},
+  {item_by_id,
+   [
+    {1,"Nothing to select."},
+    {2,"Object Id"}
+   ]},
+  {less_help,
+   [
+    {1,"Deselect all vertices adjacent to an unselected vertex"},
+    {2,"Deselect all edges adjacent to an unselected edge"},
+    {3,"Deselect all faces sharing a vertex with an unselected face"}
+   ]},
+  {menu,
+   [
+    {1,"Deselect"},
+    {2,"Clear the selection"},
+    {3,"More"},
+    {4,"Less"},
+    {5,"Similar"},
+    {6,"Edge Loop"},
+    {7,"Edge Loop"},
+    {8,"Expand edge selection to loop; "},
+    {9,"convert face selection to selected border edges"},
+    {10,"Edge Loop to Region"},
+    {11,"Select all faces on one side of an edge loop"},
+    {12,"Edge Ring"},
+    {13,"Expand edge selection to ring"},
+    {14,"Previous Edge Loop"},
+    {15,"Select the previous edge loop"},
+    {16,"Next Edge Loop"},
+    {17,"Select the next edge loop"},
+    {18,"Grow Edge Loop"},
+    {19,"Grow edge selection by one edge in loop directions"},
+    {20,"Shrink Edge Loop"},
+    {21,"Shrink edge selection by one in loop direction"},
+    {22,"Grow Edge Ring"},
+    {23,"Grow edge selection by one edge in ring direction"},
+    {24,"Shrink Edge Ring"},
+    {25,"Shrink edge selection by one edge in ring directions"},
+    {26,"Adjacent"},
+    {27,"Vertices"},
+    {28,"Edges"},
+    {29,"Faces"},
+    {30,"Objects"},
+    {31,"By"},
+    {32,"Hard Edges"},
+    {33,"Select all hard edges"},
+    {34,"Isolated Vertices"},
+    {35,"Select all isolated vertices"},
+    {36,"Vertices With"},
+    {37,"2 Edges"},
+    {38,"3 Edges"},
+    {39,"4 Edges"},
+    {40,"5 Edges"},
+    {41,"Faces With"},
+    {42,"2 Edges"},
+    {43,"3 Edges"},
+    {44,"4 Edges"},
+    {45,"5 or More"},
+    {46,"Random"},
+    {56,"Short Edges"},
+    {57,"Select (too) short edges"},
+    {58,"Material Edges"},
+    {59,"Select all edges between different materials"},
+    {60,"UV-Mapped Faces"},
+    {61,"Select all edges that have UV coordinates"},
+    {62,"Id..."},
+    {63,"Select by numeric id"},
+    {64,"Lights"},
+    {65,"Select all lights"},
+    {66,"Select all elements"},
+    {67,"Inverse"},
+    {68,"Invert the selection"},
+    {69,"Hide Selected"},
+    {70,"Hide all (partly or wholly) selected objects"},
+    {71,"Hide Unselected"},
+    {72,"Hide objects that have no selection"},
+    {73,"Lock Unselected"},
+    {74,"Lock objects that have no selection"},
+    {75,"Show All"},
+    {76,"Show all objects that have been hidden"},
+    {77,"Unlock All"},
+    {78,"Unlock all locked objects"},
+    {79,"Store Selection"},
+    {80,"Store the selection into the selection group named \"StoredSelection\""},
+    {81,"Recall Selection"},
+    {82,"Recall the selection from the selection group named \"StoredSelection\""},
+    {83,"New Group..."},
+    {84,"Create a new selection group"},
+    {85,"Non-planar Faces"},
+    {86,"Select all non-planar faces"},
+    {87,"Sharp Edges"},
+    {88,"Select sharp edges"},
+    {89,"Fewest Edges Path"},
+    {90,"Select the path with the fewest edges between two vertices"},
+    {91,"Shortest Path (Dijkstra)"},
+    {92,"Select the shortest path between two vertices (Dijkstra)"},
+    {93,"Shortest Path (A-Star)"},
+    {94,"Select the shortest path between two vertices (A-Star)"},
+    {95,"Vertex Path"},
+    {401,"6 or More"},
+    {nq0,"Non Quadrangle Faces"},
+    {nq1,"All Non Quadrangle Faces"},
+    {nq2,"Odd Non Quadrangle Faces"},
+    {nq3,"Even Non Quadrangle Faces"}
+   ]},
+  {more_help,
+   [
+    {1,"Select all vertices adjacent to a selected vertex"},
+    {2,"Select all edges adjacent to a selected edge"},
+    {3,"Select all faces sharing a vertex with a selected face"}
+   ]},
+  {new_group,
+   [
+    {1,"Create New Group"},
+    {2,"Group Name"}
+   ]},
+  {new_group_name,
+   [
+    {exists,"already exists."}
+   ]},
+  {nonplanar_faces,
+   [
+    {1,"Distance tolerance"},
+    {2,"Select Non-planar Faces"}
+   ]},
+  {oriented_faces,
+   [
+    {1,"Angle tolerance"},
+    {2,"Select Similarly Oriented Faces"}
+   ]},
+  {oriented_faces_menu,
+   [
+    {1,"Similar Normals"},
+    {2,"Select faces with normals similar to those of the already selected faces"}
+   ]},
+  {sel_all_str,
+   [
+    {1,"All Vertices"},
+    {2,"All Edges"},
+    {3,"All Faces"},
+    {4,"All Objects"}
+   ]},
+  {sharp_edges,
+   [
+    {1,"Max Angle"},
+    {2,"Select Sharp Edges"}
+   ]},
+  {short_edges,
+   [
+    {1,"Length tolerance"},
+    {2,"Select Short Edges"}
+   ]},
+  {shortest_path,
+   [
+    {1,"Exactly two vertices must be\n selected on the same object."},
+    {2,"Exactly two vertices must be selected."}
+   ]},
+  {similar_area,
+   [
+    {1,"Area Tolerance"},
+    {2,"Select Similar Area"},
+    {3,"Exactly one face must be\n selected on a single object."},
+    {4,"Exactly one face must be selected."}
+   ]},
+  {similar_area_faces_menu,
+   [
+    {1,"Similar Area"},
+    {2,"Select faces with areas similar to that of the already selected face"}
+   ]},
+  {similar_help,
+   [
+    {1,"Select vertices similar to the already selected vertices"},
+    {2,"Select edges similar to the already selected edges"},
+    {3,"Select faces similar to the already selected faces"},
+    {4,"Select objects with the same number of edges, faces, and vertices"}
+   ]},
+  {valid_sel,
+   [
+    {1,"The Object Id "},
+    {2," is invalid."},
+    {3,"The "},
+    {4," is invalid."}
+   ]}
+ ]}.
+{wings_shape,
+ [
+  {do_menu,
+   [
+    {1,"Duplicate"},
+    {2,"Duplicate selected objects"},
+    {3,"Delete"},
+    {4,"Delete selected objects"},
+    {5,"Rename"},
+    {6,"Rename selected objects"}
+   ]},
+  {help,
+   [
+    {1,"Select"},
+    {2,"Show menu"},
+    {3,"Toggle visibility of active object"},
+    {4,"Toggle visibility of all other objects"},
+    {5,"Lock/unlock active object"},
+    {6,"Lock/unlock all objects"},
+    {7,"Toggle selection for active object"},
+    {8,"Toggle selection for all other objects"},
+    {9,"Toggle shaded/wireframe for active object"},
+    {10,"Toggle shaded/wireframe for all other objects"}
+   ]},
+  {title,
+   [
+    {1,"Geometry Graph"},
+    {2,"Geometry Graph #"}
+   ]}
+ ]}.
+{wings_shapes,
+ [
+  {cone,
+   [
+    {1,"Sections"},
+    {2,"Height"},
+    {3,"X Diameter"},
+    {4,"Y Diameter"}
+   ]},
+  {cube,
+   [
+    {1,"X Edge Lengths"},
+    {2,"Y Edge Lengths"},
+    {3,"Z Edge Lengths"}
+   ]},
+  {cylinder,
+   [
+    {1,"Sections"},
+    {2,"Height"},
+    {3,"Top Face X Diameter"},
+    {4,"Top Face Z Diameter"},
+    {5,"Bottom Face X Diameter"},
+    {6,"Bottom Face Z Diameter"}
+   ]},
+  {dodecahedron,
+   [
+    {1,"Edge Length"}
+   ]},
+  {grid,
+   [
+    {1,"Rows/Cols"},
+    {2,"X Spacing"},
+    {3,"Z Spacing"},
+    {4,"Height"}
+   ]},
+  {icosahedron,
+   [
+    {1,"Edge Length"}
+   ]},
+  {menu,
+   [
+    {15,"More"},
+    {16,"More primitives"}
+   ]},
+  {prim_help,
+   [
+    {cone,"Create a cone"},
+    {cube,"Create a cube"},
+    {cylinder,"Create a cylinder"},
+    {dodecahedron,"Create a dodecahedron"},
+    {grid,"Create a grid"},
+    {icosahedron,"Create an icosahedron"},
+    {image,"Create an image..."},
+    {light,"Create a light"},
+    {material,"Create a material..."},
+    {octahedron,"Create an octahedron"},
+    {octotoad,"Create an octotoad"},
+    {sphere,"Create a sphere"},
+    {tetrahedron,"Create a tetrahedron"},
+    {torus,"Create a torus"}
+   ]},
+  {prim_name,
+   [
+    {cone,"Cone"},
+    {cube,"Cube"},
+    {cylinder,"Cylinder"},
+    {dodecahedron,"Dodecahedron"},
+    {grid,"Grid"},
+    {icosahedron,"Icosahedron"},
+    {image,"Image..."},
+    {light,"Light"},
+    {material,"Material..."},
+    {octahedron,"Octahedron"},
+    {octotoad,"Octotoad"},
+    {sphere,"Sphere"},
+    {tetrahedron,"Tetrahedron"},
+    {torus,"Torus"}
+   ]},
+  {sphere,
+   [
+    {1,"Sections"},
+    {2,"Slices"},
+    {3,"X Radial"},
+    {4,"Y Radial"}
+   ]},
+  {tetrahedron,
+   [
+    {1,"Edge Length"}
+   ]},
+  {torus,
+   [
+    {1,"Sections"},
+    {2,"Slices"},
+    {4,"Minor Radius"},
+    {31,"Major X Radius"},
+    {32,"Major Z Radius"}
+   ]}
+ ]}.
+{wings_subdiv,
+ [
+  {face_centers,
+   [
+    {1,"Face "},
+    {2," has only two edges."}
+   ]},
+  {smooth,
+   [
+    {1,"smoothing"},
+    {2,"calculating face centers"},
+    {3,"cutting edges"},
+    {4,"updating materials"},
+    {5,"creating new faces"},
+    {6,"moving vertices"},
+    {7,"finishing"}
+   ]}
+ ]}.
+{wings_tesselation,
+ [
+  {submenu,
+   [
+    {1,"Triangulate"},
+    {2,"Quadrangulate"}
+   ]}
+ ]}.
+{wings_toolbar,
+ [
+  {button_help_1,
+   [
+    {1,"Deselect"}
+   ]},
+  {button_help_2,
+   [
+    {1,"Select adjacent vertices"},
+    {2,"Change to vertex selection mode"},
+    {3,"Select adjcacent edges"},
+    {4,"Change to edge selection mode"},
+    {5,"Select adjacent faces"},
+    {6,"Change to face selection mode"},
+    {7,"Change to body selection mode"}
+   ]},
+  {button_help_3,
+   [
+    {1,"Undo the last command"},
+    {2,"Redo the last command that was undone"},
+    {3,"Open a previously saved scene"},
+    {4,"Save the current scene"},
+    {5,"Edit the preferences for Wings"}
+   ]},
+  {messages,
+   [
+    {axes,"axes"},
+    {change_to,"Change to"},
+    {flat,"flat shading"},
+    {groundplane,"ground plane"},
+    {hide,"Hide"},
+    {orthogonal,"orthogonal view"},
+    {perspective,"perspective view"},
+    {show,"Show"},
+    {show_objects,"Show objects with"},
+    {smooth,"smooth shading"}
+   ]}
+ ]}.
+{wings_u,
+ [
+  {caption,
+   [
+    {1,"auto-saved"}
+   ]}
+ ]}.
+{wings_vec,
+ [
+  {add_help_text,
+   [
+    {1,"Pick axis (and point)"},
+    {2,"Pick axis"},
+    {3,"Pick point"},
+    {4,"Pick outer boundary point for magnet influence"}
+   ]},
+  {add_magnet,
+   [
+    {1,"Pick outer boundary point for magnet influence"}
+   ]},
+  {check_magnet_point,
+   [
+    {1,"Midpoint of selection saved."}
+   ]},
+  {check_point,
+   [
+    {1,"Midpoint of selection saved."},
+    {2,"Disregard virtual mirror in reference point calculation"},
+    {3,"Include virtual mirror in reference point calculation"}
+   ]},
+  {common_magnet_message,
+   [
+    {1,"Magnet"}
+   ]},
+  {common_message,
+   [
+    {1,"Execute"},
+    {2,"Continue"}
+   ]},
+  {exit_menu,
+   [
+    {2,"Cancel current command"}
+   ]},
+  {get_vec,
+   [
+    {1,"Edge saved as axis"},
+    {2,"Save edge normal"},
+    {3,"Edge normal saved as axis"},
+    {4,"Save edge direction"},
+    {5,"Direction between edges saved as axis."},
+    {6,"Edge loop normal saved as axis."},
+    {7,"Multi-edge selection must form a single closed edge loop."},
+    {8,"Vertex normal saved."},
+    {9,"Direction between vertices saved as axis."},
+    {10,"Use average of vertex normals as axis"},
+    {11,"Average of vertex normals saved as axis."},
+    {12,"Use direction between vertices as axis"},
+    {13,"3-point perp. normal saved as axis."},
+    {14,"Vertex loop normal saved as axis."},
+    {15,"Multi-vertex selection must form a single closed edge loop."},
+    {16,"Face normal saved as axis."},
+    {17,"Direction between face centers saved as axis."},
+    {18,"Use average of face normals"},
+    {19,"Average of face normals saved as axis."},
+    {20,"Use direction between face centers"},
+    {21,"Edge loop normal for region saved as axis."},
+    {22,"Multi-face selection must have a single edge loop."},
+    {23,"Select vertices, edges, or faces."},
+    {24,"Save cross vector"},
+    {25,"Cross product of edges saved as axis"},
+    {26,"Save direction between edges"},
+    {27,"Vertices cannot share coordinates when defining a 3 point plane normal"}
+   ]},
+  {guard_string,
+   [
+    {1,"Select parts of one object only"},
+    {2,", or select one element in each of two objects"},
+    {3,", or any three vertices."}
+   ]},
+  {magnet_message,
+   [
+    {1,"Execute "},
+    {2,"Magnet options"}
+   ]}
+ ]}.
+{wings_vertex_cmd,
+ [
+  {menu,
+   [
+    {1,"Vertex operations"},
+    {2,"Move"},
+    {3,"Extrude"},
+    {4,"Connect"},
+    {5,"Create a new edge by connecting selected vertices"},
+    {6,"Tighten"},
+    {7,"Move selected vertices towards average midpoint"},
+    {8,"Bevel"},
+    {9,"Create faces of selected vertices"},
+    {10,"Dissolve"},
+    {11,"Delete selected vertices (clearing selection)"},
+    {12,"Collapse"},
+    {13,"Delete selected vertices (creating a face selection)"},
+    {14,"Deform"},
+    {15,"Vertex Color"},
+    {16,"Apply vertex colors to selected vertices"},
+    {17,"Connect vertices and return the new edge selected"}
+   ]}
+ ]}.
+{wings_view,
+ [
+  {auto_rotate_help,
+   [
+    {1,"Stop rotating"},
+    {2,"Increase speed"},
+    {3,"Decrease speed"}
+   ]},
+  {camera,
+   [
+    {1,"Negative Format"},
+    {4,"Custom"},
+    {5,"x"},
+    {6,"Wide-Angle Lens"},
+    {7,"Moderate Wide-Angle Lens"},
+    {8,"Standard Lens"},
+    {9,"Portrait Telephoto Lens"},
+    {10,"Telephoto Lens"},
+    {11,"Custom Lens"},
+    {12,"Length"},
+    {13,"x Zoom"},
+    {14,"Lens"},
+    {15,"Field of View"},
+    {16,"Near Clipping Plane"},
+    {17,"Far Clipping Plane"},
+    {18,"Camera Settings"}
+   ]},
+  {help,
+   [
+    {1,"Camera Settings: Field of View"},
+    {2,"Sets the vertical field of view, i.e. the angle from lower to upper border seen from the camera. "},
+    {3,"The Lens controls sets the field of view according to other perhaps more well-known entities, at least for a photographer. The negative size is stored among the user preferences."},
+    {4,"The Lens controls make the height of the picture right for the choosen lens, so if you do not have the same aspect ratio for the negative size in the Lens frame, as for the size of the Geometry window, the width will be in error."},
+    {5,"Note: the zoom factor is relative a standard lens length of the negative diagonal, while only the negative height affects the effective lens length."}
+   ]},
+  {menu,
+   [
+    {1,"Ground Plane"},
+    {2,"Show the ground plane"},
+    {3,"Axes"},
+    {4,"Show the coordinate axes"},
+    {5,"Workmode"},
+    {6,"Toggle flat/smooth shading"},
+    {7,"Wireframe"},
+    {8,"Display selected objects as a wireframe (same for all objects if nothing is selected)"},
+    {9,"Shade"},
+    {10,"Display selected objects as shaded (same for all objects if nothing is selected)"},
+    {11,"Toggle Wireframe"},
+    {12,"Toggle display mode for selected objects (same for all objects if nothing is selected)"},
+    {13,"Toggle Proxy Mode"},
+    {14,"Toggle the smooth proxy mode for selected objects"},
+    {15,"Quick Smoothed Preview"},
+    {16,"Toggle the smooth proxy mode for all objects"},
+    {17,"Show Saved BB"},
+    {18,"Display any saved bounding box"},
+    {19,"Show Edges"},
+    {20,"Show edges in workmode"},
+    {21,"Show Wireframe Backfaces"},
+    {22,"Show wireframe backfaces"},
+    {23,"Show Normals"},
+    {24,"Show normals for selected elements"},
+    {25,"Reset View"},
+    {26,"Reset view to the default position"},
+    {27,"Aim"},
+    {28,"Aim the camera at the selected element"},
+    {29,"Frame"},
+    {30,"Dolly to show all selected elements (or all objects if nothing is selected)"},
+    {31,"Orthographic View"},
+    {32,"Toggle between orthographic and perspective views"},
+    {33,"Saved Views: "},
+    {34,"Camera Settings..."},
+    {35,"Set field of view, and near and far clipping planes"},
+    {36,"Scene Lights"},
+    {37,"Use the lights defined in the scene"},
+    {38,"Two Lights"},
+    {39,"One Light"},
+    {40,"Use two work lights"},
+    {41,"Use one work light"},
+    {42,"Show Colors"},
+    {43,"Show vertex colors on objects in \"vertex\" mode"},
+    {44,"Show Materials"},
+    {45,"Show materials on objects in \"material\" mode"},
+    {46,"Show Textures"},
+    {47,"Show the texture on objects in \"material\" mode"},
+    {48,"Show Info Text"},
+    {49,"Show an informational text at the top of this Geometry window"},
+    {50,"View Along"},
+    {51,"+X"},
+    {52,"+Y"},
+    {53,"+Z"},
+    {54,"-X"},
+    {55,"-Y"},
+    {56,"-Z"},
+    {57,"Align to Selection"},
+    {58,"Align the view to the normal of the selection"},
+    {59,"Auto Rotate"},
+    {60,"Spin the view"},
+    {61,"Clipping Planes"},
+    {62,"Toggle extra clipping planes (use default axis)"},
+    {65,"Frame Disregards Mirror"}
+   ]},
+  {view_legend,
+   [
+    {2,"along +X"},
+    {3,"along +Y"},
+    {4,"along +Z"},
+    {5,"along -X"},
+    {6,"along -Y"},
+    {7,"along -Z"},
+    {8,"towards Origin"},
+    {9,"towards "},
+    {distance,"distance"},
+    {from,"From"}
+   ]},
+  {views,
+   [
+    {1,"This view is already the current"},
+    {2,"No saved views"},
+    {3,"Rename view"},
+    {4,"You have to be at the current view"},
+    {5,"Are you sure you want to delete all saved views?"}
+   ]},
+  {views_jump,
+   [
+    {1,"No such view slot"}
+   ]},
+  {views_jumpmenu,
+   [
+    {1,"Jump"},
+    {2,"No saved views!"},
+    {3,"Jump to prev["},
+    {5,"Jump to current["},
+    {7,"Jump to next["},
+    {9,"Jump to ["},
+    {11,"Jump"}
+   ]},
+  {views_move,
+   [
+    {1,"No such view ["}
+   ]},
+  {views_movemenu,
+   [
+    {1,"Move Current"},
+    {2,"No saved views!"},
+    {3,"Move \""},
+    {5,"] to prev["},
+    {7,"Move \""},
+    {9,"] nowhere"},
+    {10,"Move \""},
+    {12,"] to next["},
+    {14,"Move \""},
+    {16,"] to ["},
+    {18,"Move Current"}
+   ]},
+  {views_rename_qs,
+   [
+    {1,"Name"}
+   ]},
+  {views_save_dialog,
+   [
+    {1,"Save view as"}
+   ]},
+  {views_submenu,
+   [
+    {1,"Next"},
+    {2,"Current"},
+    {3,"Prev"},
+    {4,"Save"},
+    {5,"Save this view at "},
+    {7,"Rename..."},
+    {8,"Delete"},
+    {9,"Delete All..."}
+   ]},
+  {views_submenu_help,
+   [
+    {1,"No saved views!"},
+    {2,"Jump to \""},
+    {5,"Rename \""},
+    {8,"Delete \""},
+    {11,"Delete all saved views"}
+   ]},
+  {virtual_mirror,
+   [
+    {1,"Virtual mirror requires a face selection."}
+   ]},
+  {virtual_mirror_fun,
+   [
+    {1,"Only a single face must be selected per object."}
+   ]}
+ ]}.
+{wings_we,
+ [
+  {all_soft,
+   [
+    {1,"preparing"},
+    {2,"collecting"}
+   ]},
+  {mixed_edges,
+   [
+    {1,"preparing"},
+    {2,"vertex normals"},
+    {3,"vertex normals per face"}
+   ]},
+  {normals_2,
+   [
+    {1,"calculating soft normals"}
+   ]}
+ ]}.
+{wings_wm,
+ [
+  {message_event,
+   [
+    {1,"This is the information line"}
+   ]}
+ ]}.
+{wings_wm_toplevel,
+ [
+  {close_event,
+   [
+    {1,"Close this window"}
+   ]},
+  {ctrl_command,
+   [
+    {1,"Width"},
+    {2,"Height"},
+    {3,"Set Window Size"}
+   ]},
+  {ctrl_menu,
+   [
+    {1,"Fit"},
+    {2,"Both"},
+    {3,"Let window use all available space by expanding in all directions"},
+    {4,"Horizontal"},
+    {5,"Let window use all available space by expanding it horizontally"},
+    {6,"Vertical"},
+    {7,"Let window use all available space by expanding it vertically"},
+    {8,"Size"},
+    {9,"Set window size numerically"}
+   ]},
+  {ctrl_menu_toolbar,
+   [
+    {1,"Hide Toolbar"},
+    {2,"Hide the toolbar"},
+    {3,"Show Toolbar"},
+    {4,"Show the toolbar"}
+   ]},
+  {ctrl_message,
+   [
+    {1,"Drag to Move"},
+    {2,"Fit"},
+    {3,"Show menu"}
+   ]},
+  {ctrl_resize,
+   [
+    {1,"Too large size specified"}
+   ]},
+  {resize_event,
+   [
+    {1,"Resize"},
+    {2,"Resize, keeping current aspect ratio"}
+   ]}
+ ]}.
+{wpa,
+ [
+  {dialog_template,
+   [
+    {1,"Swap Y and Z Axes"},
+    {6,"Sub-division Steps"},
+    {7,"Default texture file type"},
+    {color,"Export vertex colors"},
+    {norms,"Export normals/smoothing groups"},
+    {tess,"Tesselation"},
+    {tess0,"None"},
+    {tess3,"Triangulation"},
+    {tess4,"Quadrangulation"},
+    {uv,"Export UV coordinates"}
+   ]},
+  {do_import,
+   [
+    {1,"reading file"}
+   ]},
+  {export_scale_s,
+   [
+    {1,"Export scale"}
+   ]},
+  {export_selected,
+   [
+    {1,"Select objects or faces."}
+   ]},
+  {format_error,
+   [
+    {1,"Internal error: ~P\n"}
+   ]},
+  {import,
+   [
+    {1,"Import failed: "}
+   ]},
+  {import_scale_s,
+   [
+    {1,"Import scale"}
+   ]}
+ ]}.

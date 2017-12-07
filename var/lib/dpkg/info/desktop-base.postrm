@@ -1,0 +1,15 @@
+#!/bin/sh -e
+
+# Automatically added by dh_gconf
+if which update-gconf-defaults >/dev/null 2>&1; then
+	update-gconf-defaults
+fi
+# End automatically added section
+
+
+if [ "$1" = "remove" ] || [ "$1" = "deconfigure" ]; then
+    if which update-grub2 > /dev/null ; then
+        update-grub2
+    fi
+fi
+

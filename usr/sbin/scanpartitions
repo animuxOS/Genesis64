@@ -1,0 +1,89 @@
+#!/bin/bash
+# (C) Klaus Knopper Nov 2002
+# Reads /proc/partitions, returns table of the form
+# basename(devicefile) mountpoint filesystemtype
+# Useful for automatic generation of /etc/fstab entries (you
+# still may have to add noauto 0 0).
+
+[ ! -e /proc/partitions ] && { echo "$0: /proc not mounted, exiting" >&2; exit 1; }
+
+###
+
+if [ -z "$1" ]; then
+ CMDLINE="$(cat /proc/cmdline 2>/dev/null)"
+ case "$CMDLINE" in *noideraid*) ;; # Don't check for raid partitions
+ *) # Do check for raid partitions
+  # Raid disks/partitions
+  RAIDDISKS=""
+  if type -p dmraid >/dev/null 2>&1; then
+   while read disk relax; do
+    case "$disk" in /dev/[hs]d?:)
+     d="${disk##*/}"; d="${d%:}"
+     RAIDDISKS="$RAIDDISKS $d"
+    ;;
+    esac
+   done <<EOT
+$(dmraid -r 2>/dev/null)
+EOT
+  fi
+  ;;
+ esac
+
+ # Checks disk/partition name (without leading /dev/) for being a raid disk
+ is_raiddisk(){
+  d="${1%%[0-9]*}"
+  for i in $RAIDDISKS; do
+   case "$d" in $i) return 0 ;; esac
+  done
+  return 1
+ }
+
+ partitions=""
+ disks=""
+ disksize=0
+ blocksum=0
+ pold="none"
+ while read major minor blocks partition relax; do
+  partition="${partition#/dev/}"
+  [ -z "$partition" -o ! -e "/dev/$partition" ] && continue
+  [ "$blocks" -lt 2 ] 2>/dev/null && continue
+  is_raiddisk "$partition" 2>/dev/null && continue
+  case "$partition" in
+   ?d?|ub?|ataraid/d?|rd/c?d?) disks="$disks $partition"; disksize="$blocks"; blocksum=0;;
+   ram*|cloop*|loop*) ;; # Kernel 2.6 bug?
+   *) blocksum="$(($blocksum + $blocks))"; [ "$blocksum" -gt "$disksize" ] >/dev/null 2>&1 || partitions="$partitions /dev/$partition";;
+  esac
+ done <<EOT
+$(awk 'BEGIN{old="__start"}{if($0==old){exit}else{old=$0;if($4&&$4!="name"){print $0}}}' /proc/partitions)
+EOT
+
+ # IDE-Raid partitions
+ for i in $(ls -1d /dev/mapper/* 2>/dev/null); do
+  [ -b "$i" ] || continue
+  case "$i" in *[0-9]) # We found a partition
+   partitions="$partitions ${i}"
+  ;;
+  esac
+ done
+ 
+ # Add disks without partition table (probably ZIP drives)
+ for d in $disks; do
+  case "$partitions" in */dev/$d*) continue;; esac
+  partitions="$partitions /dev/$d"
+ done
+
+else # Partition(s) given as option
+ partitions="$*"
+fi
+
+for p in $partitions; do
+ fs="auto"
+ # fstype is an external script
+ scanfs="$(fstype $p)"
+ [ -n "$scanfs" ] && fs="$scanfs"
+ mountpoint="/media/${p##*/}"
+ [ "$fs" = "swap" ] && mountpoint="none"
+ echo "${p}" "${mountpoint}" "${fs}"
+done
+
+exit 0

@@ -1,0 +1,9 @@
+#! /bin/sh -e
+
+if [ "$1" != "upgrade" ]; then
+    update-alternatives --remove mplayer-skin /usr/share/mplayer/skins/blue
+fi
+
+
+
+exit 0

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section>
+	<sec_name>Stack</sec_name>
+	<sec_name xml:lang="bg">Стак</sec_name>
+	<sec_name xml:lang="ja">スタック</sec_name>
+	<sec_desc>Add Files and Directories to the Dock.</sec_desc>
+	<sec_desc xml:lang="bg">Добавяне на файлове и директории в дока</sec_desc>
+	<sec_desc xml:lang="ja">ファイルとディレクトリをドックに追加</sec_desc>
+	<sec_icon>[file-manager]</sec_icon>
+	<subsection>
+		<sub_sec_name>General</sub_sec_name>
+		<sub_sec_name xml:lang="bg">Общи</sub_sec_name>
+		<sub_sec_name xml:lang="de">Generell</sub_sec_name>
+		<sub_sec_name xml:lang="es">General</sub_sec_name>
+		<sub_sec_name xml:lang="fr">Général</sub_sec_name>
+		<sub_sec_name xml:lang="it">Generale</sub_sec_name>
+		<sub_sec_name xml:lang="ja">全般</sub_sec_name>
+		<sub_sec_name xml:lang="pt">Geral</sub_sec_name>
+		<option>
+			<name>stack_enable</name>
+			<title>Enable</title>
+			<title xml:lang="bg">Пускане</title>
+			<title xml:lang="de">Aktivieren</title>
+			<title xml:lang="es">Activar</title>
+			<title xml:lang="fr">Activer</title>
+			<title xml:lang="it">Abilita</title>
+			<title xml:lang="ja">有効</title>
+			<title xml:lang="pt">Habilitar</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable the Stack plugin</description>
+			<description xml:lang="bg">Пускане/спиране на плъгина "Стак"</description>
+			<description xml:lang="de">Aktiviere/Deaktiviere das Stack Plugin.</description>
+			<description xml:lang="ja">スタックプラグインの有効化/無効化</description>
+		</option>
+		<option>
+			<name>stack_open_dirs</name>
+			<title>Directory-open icon</title>
+			<title xml:lang="bg">Икона за отваряне на директория</title>
+			<title xml:lang="de">Ordner-offen Symbol</title>
+			<title xml:lang="ja">ディレクトリのアイコン</title>
+			<type>bool</type>
+			<range/>
+			<default>TRUE</default>
+			<description>Use directory-open icon</description>
+			<description xml:lang="bg">Използване на иконата отваряне на директория</description>
+			<description xml:lang="ja">ディレクトリのアイコンを使用</description>
+		</option>
+		<option>
+			<name>stack_size_factor</name>
+			<title>Size factor</title>
+			<title xml:lang="bg">Степен на оразмеряване</title>
+			<title xml:lang="de">Größen Faktor</title>
+			<title xml:lang="ja">アイコンの大きさ</title>
+			<type>double</type>
+			<range>0.1-2.0</range>
+			<default>1.0</default>
+			<description>Size factor</description>
+			<description xml:lang="bg">Степен на оразмеряване</description>
+			<description xml:lang="de">Größen Faktor</description>
+			<description xml:lang="ja">アイコンの大きさ</description>
+		</option>
+		<option>
+			<name>stack_alpha</name>
+			<title>Alpha</title>
+			<title xml:lang="bg">Прозрачност</title>
+			<title xml:lang="de">Transparenz</title>
+			<title xml:lang="es">Transparencia</title>
+			<title xml:lang="it">Alpha</title>
+			<title xml:lang="ja">透明度</title>
+			<title xml:lang="pt">Transparência</title>
+			<type>double</type>
+			<range>0.0-1.0</range>
+			<default>1.0</default>
+			<description>Alpha</description>
+			<description xml:lang="bg">Прозрачност</description>
+			<description xml:lang="de">Transparenz</description>
+			<description xml:lang="es">Transparencia</description>
+			<description xml:lang="it">Alpha</description>
+			<description xml:lang="ja">透明度</description>
+			<description xml:lang="pt">Transparência</description>
+		</option>
+	</subsection>
+	<subsection>
+		<sub_sec_name>Icon View</sub_sec_name>
+		<sub_sec_name xml:lang="bg">Изглед с икони</sub_sec_name>
+		<sub_sec_name xml:lang="de">Symbol Ansicht</sub_sec_name>
+		<sub_sec_name xml:lang="ja">アイコンビュー</sub_sec_name>
+		<option>
+			<name>stack_view_icon_size</name>
+			<title>Icon size</title>
+			<title xml:lang="bg">Размер на иконити</title>
+			<title xml:lang="de">Symbol Größe</title>
+			<title xml:lang="ja">アイコンの大きさ</title>
+			<type>int</type>
+			<range>12-128</range>
+			<default>64</default>
+			<description>Icon size</description>
+			<description xml:lang="bg">Размер на иконити</description>
+			<description xml:lang="de">Symbol Größe</description>
+			<description xml:lang="ja">アイコンの大きさ</description>
+		</option>
+		<option>
+			<name>stack_view_rows</name>
+			<title>Rows</title>
+			<title xml:lang="bg">Редове</title>
+			<title xml:lang="de">Reihen</title>
+			<title xml:lang="ja">行</title>
+			<type>int</type>
+			<range>1-10</range>
+			<default>4</default>
+			<description>Number of rows</description>
+			<description xml:lang="bg">Брой редове</description>
+			<description xml:lang="de">Anzahl der Reihen</description>
+			<description xml:lang="ja">行数</description>
+		</option>
+		<option>
+			<name>stack_view_columns</name>
+			<title>Columns</title>
+			<title xml:lang="bg">Колони</title>
+			<title xml:lang="de">Spalten</title>
+			<title xml:lang="ja">列</title>
+			<type>int</type>
+			<range>1-10</range>
+			<default>4</default>
+			<description>Number of columns</description>
+			<description xml:lang="bg">Брой колони</description>
+			<description xml:lang="de">Anzahl der Spalten</description>
+			<description xml:lang="ja">列数</description>
+		</option>
+	</subsection>
+</section>

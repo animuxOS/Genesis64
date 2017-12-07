@@ -1,0 +1,1038 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>GdlDockItem</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="GDL Reference Manual">
+<link rel="up" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+<link rel="prev" href="GdlIcons.html" title="GdlIcons">
+<link rel="next" href="GdlDock.html" title="GdlDock">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GdlIcons.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="gdl-main.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GDL Reference Manual</th>
+<td><a accesskey="n" href="GdlDock.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2579585" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2591662" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2587132" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2587202" class="shortcut">Implemented Interfaces</a>
+                  &#160;|&#160;
+                  <a href="#id2591532" class="shortcut">Properties</a>
+                  &#160;|&#160;
+                  <a href="#id2591623" class="shortcut">Signals</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="GdlDockItem"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2579585"></a><span class="refentrytitle">GdlDockItem</span>
+</h2>
+<p>GdlDockItem</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+enum                <a href="GdlDockItem.html#GdlDockItemBehavior">GdlDockItemBehavior</a>;
+enum                <a href="GdlDockItem.html#GdlDockItemFlags">GdlDockItemFlags</a>;
+                    <a href="GdlDockItem.html#GdlDockItemPrivate">GdlDockItemPrivate</a>;
+                    <a href="GdlDockItem.html#GdlDockItem-struct">GdlDockItem</a>;
+#define             <a href="GdlDockItem.html#GDL-DOCK-ITEM-FLAGS:CAPS">GDL_DOCK_ITEM_FLAGS</a>                 (item)
+#define             <a href="GdlDockItem.html#GDL-DOCK-ITEM-IN-DRAG:CAPS">GDL_DOCK_ITEM_IN_DRAG</a>               (item)
+#define             <a href="GdlDockItem.html#GDL-DOCK-ITEM-IN-PREDRAG:CAPS">GDL_DOCK_ITEM_IN_PREDRAG</a>            (item)
+#define             <a href="GdlDockItem.html#GDL-DOCK-ITEM-ICONIFIED:CAPS">GDL_DOCK_ITEM_ICONIFIED</a>             (item)
+#define             <a href="GdlDockItem.html#GDL-DOCK-ITEM-USER-ACTION:CAPS">GDL_DOCK_ITEM_USER_ACTION</a>           (item)
+#define             <a href="GdlDockItem.html#GDL-DOCK-ITEM-NOT-LOCKED:CAPS">GDL_DOCK_ITEM_NOT_LOCKED</a>            (item)
+#define             <a href="GdlDockItem.html#GDL-DOCK-ITEM-NO-GRIP:CAPS">GDL_DOCK_ITEM_NO_GRIP</a>               (item)
+#define             <a href="GdlDockItem.html#GDL-DOCK-ITEM-SET-FLAGS:CAPS">GDL_DOCK_ITEM_SET_FLAGS</a>             (item,flag)
+#define             <a href="GdlDockItem.html#GDL-DOCK-ITEM-UNSET-FLAGS:CAPS">GDL_DOCK_ITEM_UNSET_FLAGS</a>           (item,flag)
+#define             <a href="GdlDockItem.html#GDL-DOCK-ITEM-HAS-GRIP:CAPS">GDL_DOCK_ITEM_HAS_GRIP</a>              (item)
+#define             <a href="GdlDockItem.html#GDL-DOCK-ITEM-CANT-CLOSE:CAPS">GDL_DOCK_ITEM_CANT_CLOSE</a>            (item)
+#define             <a href="GdlDockItem.html#GDL-DOCK-ITEM-CANT-ICONIFY:CAPS">GDL_DOCK_ITEM_CANT_ICONIFY</a>          (item)
+GtkWidget*          <a href="GdlDockItem.html#gdl-dock-item-new">gdl_dock_item_new</a>                   (const gchar *name,
+                                                         const gchar *long_name,
+                                                         <a href="GdlDockItem.html#GdlDockItemBehavior">GdlDockItemBehavior</a> behavior);
+GtkWidget*          <a href="GdlDockItem.html#gdl-dock-item-new-with-stock">gdl_dock_item_new_with_stock</a>        (const gchar *name,
+                                                         const gchar *long_name,
+                                                         const gchar *stock_id,
+                                                         <a href="GdlDockItem.html#GdlDockItemBehavior">GdlDockItemBehavior</a> behavior);
+void                <a href="GdlDockItem.html#gdl-dock-item-dock-to">gdl_dock_item_dock_to</a>               (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item,
+                                                         <a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *target,
+                                                         <a href="GdlDockObject.html#GdlDockPlacement">GdlDockPlacement</a> position,
+                                                         gint docking_param);
+void                <a href="GdlDockItem.html#gdl-dock-item-set-orientation">gdl_dock_item_set_orientation</a>       (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item,
+                                                         GtkOrientation orientation);
+GtkWidget*          <a href="GdlDockItem.html#gdl-dock-item-get-tablabel">gdl_dock_item_get_tablabel</a>          (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);
+void                <a href="GdlDockItem.html#gdl-dock-item-set-tablabel">gdl_dock_item_set_tablabel</a>          (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item,
+                                                         GtkWidget *tablabel);
+void                <a href="GdlDockItem.html#gdl-dock-item-hide-grip">gdl_dock_item_hide_grip</a>             (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);
+void                <a href="GdlDockItem.html#gdl-dock-item-show-grip">gdl_dock_item_show_grip</a>             (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);
+void                <a href="GdlDockItem.html#gdl-dock-item-bind">gdl_dock_item_bind</a>                  (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item,
+                                                         GtkWidget *dock);
+void                <a href="GdlDockItem.html#gdl-dock-item-unbind">gdl_dock_item_unbind</a>                (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);
+void                <a href="GdlDockItem.html#gdl-dock-item-hide-item">gdl_dock_item_hide_item</a>             (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);
+void                <a href="GdlDockItem.html#gdl-dock-item-iconify-item">gdl_dock_item_iconify_item</a>          (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);
+void                <a href="GdlDockItem.html#gdl-dock-item-show-item">gdl_dock_item_show_item</a>             (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);
+void                <a href="GdlDockItem.html#gdl-dock-item-lock">gdl_dock_item_lock</a>                  (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);
+void                <a href="GdlDockItem.html#gdl-dock-item-unlock">gdl_dock_item_unlock</a>                (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);
+void                <a href="GdlDockItem.html#gdl-dock-item-set-default-position">gdl_dock_item_set_default_position</a>  (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item,
+                                                         <a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a> *reference);
+void                <a href="GdlDockItem.html#gdl-dock-item-preferred-size">gdl_dock_item_preferred_size</a>        (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item,
+                                                         GtkRequisition *req);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2587132"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GInitiallyUnowned
+         +----GtkObject
+               +----GtkWidget
+                     +----GtkContainer
+                           +----<a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a>
+                                 +----GdlDockItem
+                                       +----<a href="GdlDockNotebook.html" title="GdlDockNotebook">GdlDockNotebook</a>
+                                       +----<a href="GdlDockPaned.html" title="GdlDockPaned">GdlDockPaned</a>
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2587202"></a><h2>Implemented Interfaces</h2>
+<p>
+GdlDockItem implements
+ GtkBuildable and  AtkImplementorIface.</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2591532"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="GdlDockItem.html#GdlDockItem--behavior">behavior</a>"                 <a href="GdlDockItem.html#GdlDockItemBehavior">GdlDockItemBehavior</a>   : Read / Write
+  "<a href="GdlDockItem.html#GdlDockItem--locked">locked</a>"                   gboolean              : Read / Write
+  "<a href="GdlDockItem.html#GdlDockItem--orientation">orientation</a>"              GtkOrientation        : Read / Write / Construct
+  "<a href="GdlDockItem.html#GdlDockItem--preferred-height">preferred-height</a>"         gint                  : Read / Write
+  "<a href="GdlDockItem.html#GdlDockItem--preferred-width">preferred-width</a>"          gint                  : Read / Write
+  "<a href="GdlDockItem.html#GdlDockItem--resize">resize</a>"                   gboolean              : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2591623"></a><h2>Signals</h2>
+<pre class="synopsis">
+
+  "<a href="GdlDockItem.html#GdlDockItem-dock-drag-begin">dock-drag-begin</a>"                                : Run First
+  "<a href="GdlDockItem.html#GdlDockItem-dock-drag-end">dock-drag-end</a>"                                  : Run First
+  "<a href="GdlDockItem.html#GdlDockItem-dock-drag-motion">dock-drag-motion</a>"                               : Run First
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2591662"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2591678"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2591689"></a><h3>
+<a name="GdlDockItemBehavior"></a>enum GdlDockItemBehavior</h3>
+<a class="indexterm" name="id2591701"></a><pre class="programlisting">typedef enum {
+    GDL_DOCK_ITEM_BEH_NORMAL           = 0,
+    GDL_DOCK_ITEM_BEH_NEVER_FLOATING   = 1 &lt;&lt; 0,
+    GDL_DOCK_ITEM_BEH_NEVER_VERTICAL   = 1 &lt;&lt; 1,
+    GDL_DOCK_ITEM_BEH_NEVER_HORIZONTAL = 1 &lt;&lt; 2,
+    GDL_DOCK_ITEM_BEH_LOCKED           = 1 &lt;&lt; 3,
+    GDL_DOCK_ITEM_BEH_CANT_DOCK_TOP    = 1 &lt;&lt; 4,
+    GDL_DOCK_ITEM_BEH_CANT_DOCK_BOTTOM = 1 &lt;&lt; 5,
+    GDL_DOCK_ITEM_BEH_CANT_DOCK_LEFT   = 1 &lt;&lt; 6,
+    GDL_DOCK_ITEM_BEH_CANT_DOCK_RIGHT  = 1 &lt;&lt; 7,
+    GDL_DOCK_ITEM_BEH_CANT_DOCK_CENTER = 1 &lt;&lt; 8,
+    GDL_DOCK_ITEM_BEH_CANT_CLOSE       = 1 &lt;&lt; 9,
+    GDL_DOCK_ITEM_BEH_CANT_ICONIFY     = 1 &lt;&lt; 10,
+    GDL_DOCK_ITEM_BEH_NO_GRIP          = 1 &lt;&lt; 11
+} GdlDockItemBehavior;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2595037"></a><h3>
+<a name="GdlDockItemFlags"></a>enum GdlDockItemFlags</h3>
+<a class="indexterm" name="id2568767"></a><pre class="programlisting">typedef enum {
+    GDL_DOCK_IN_DRAG             = 1 &lt;&lt; GDL_DOCK_OBJECT_FLAGS_SHIFT,
+    GDL_DOCK_IN_PREDRAG          = 1 &lt;&lt; (GDL_DOCK_OBJECT_FLAGS_SHIFT + 1),
+    GDL_DOCK_ICONIFIED           = 1 &lt;&lt; (GDL_DOCK_OBJECT_FLAGS_SHIFT + 2),
+    /* for general use: indicates the user has started an action on
+       the dock item */
+    GDL_DOCK_USER_ACTION         = 1 &lt;&lt; (GDL_DOCK_OBJECT_FLAGS_SHIFT + 3)
+} GdlDockItemFlags;
+</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2591733"></a><h3>
+<a name="GdlDockItemPrivate"></a>GdlDockItemPrivate</h3>
+<a class="indexterm" name="id2591746"></a><pre class="programlisting">typedef struct _GdlDockItemPrivate GdlDockItemPrivate;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2591762"></a><h3>
+<a name="GdlDockItem-struct"></a>GdlDockItem</h3>
+<a class="indexterm" name="id2591775"></a><pre class="programlisting">typedef struct _GdlDockItem GdlDockItem;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2591791"></a><h3>
+<a name="GDL-DOCK-ITEM-FLAGS:CAPS"></a>GDL_DOCK_ITEM_FLAGS()</h3>
+<a class="indexterm" name="id2560628"></a><pre class="programlisting">#define GDL_DOCK_ITEM_FLAGS(item)     (GDL_DOCK_OBJECT (item)-&gt;flags)
+</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2603883"></a><h3>
+<a name="GDL-DOCK-ITEM-IN-DRAG:CAPS"></a>GDL_DOCK_ITEM_IN_DRAG()</h3>
+<a class="indexterm" name="id2603894"></a><pre class="programlisting">#define             GDL_DOCK_ITEM_IN_DRAG(item)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2603925"></a><h3>
+<a name="GDL-DOCK-ITEM-IN-PREDRAG:CAPS"></a>GDL_DOCK_ITEM_IN_PREDRAG()</h3>
+<a class="indexterm" name="id2603937"></a><pre class="programlisting">#define             GDL_DOCK_ITEM_IN_PREDRAG(item)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2603968"></a><h3>
+<a name="GDL-DOCK-ITEM-ICONIFIED:CAPS"></a>GDL_DOCK_ITEM_ICONIFIED()</h3>
+<a class="indexterm" name="id2603980"></a><pre class="programlisting">#define             GDL_DOCK_ITEM_ICONIFIED(item)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604011"></a><h3>
+<a name="GDL-DOCK-ITEM-USER-ACTION:CAPS"></a>GDL_DOCK_ITEM_USER_ACTION()</h3>
+<a class="indexterm" name="id2604023"></a><pre class="programlisting">#define             GDL_DOCK_ITEM_USER_ACTION(item)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604054"></a><h3>
+<a name="GDL-DOCK-ITEM-NOT-LOCKED:CAPS"></a>GDL_DOCK_ITEM_NOT_LOCKED()</h3>
+<a class="indexterm" name="id2604066"></a><pre class="programlisting">#define GDL_DOCK_ITEM_NOT_LOCKED(item) !((item)-&gt;behavior &amp; GDL_DOCK_ITEM_BEH_LOCKED)
+</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604098"></a><h3>
+<a name="GDL-DOCK-ITEM-NO-GRIP:CAPS"></a>GDL_DOCK_ITEM_NO_GRIP()</h3>
+<a class="indexterm" name="id2604108"></a><pre class="programlisting">#define GDL_DOCK_ITEM_NO_GRIP(item) ((item)-&gt;behavior &amp; GDL_DOCK_ITEM_BEH_NO_GRIP)
+</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604140"></a><h3>
+<a name="GDL-DOCK-ITEM-SET-FLAGS:CAPS"></a>GDL_DOCK_ITEM_SET_FLAGS()</h3>
+<a class="indexterm" name="id2604152"></a><pre class="programlisting">#define             GDL_DOCK_ITEM_SET_FLAGS(item,flag)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>flag</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604196"></a><h3>
+<a name="GDL-DOCK-ITEM-UNSET-FLAGS:CAPS"></a>GDL_DOCK_ITEM_UNSET_FLAGS()</h3>
+<a class="indexterm" name="id2604208"></a><pre class="programlisting">#define             GDL_DOCK_ITEM_UNSET_FLAGS(item,flag)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>flag</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604252"></a><h3>
+<a name="GDL-DOCK-ITEM-HAS-GRIP:CAPS"></a>GDL_DOCK_ITEM_HAS_GRIP()</h3>
+<a class="indexterm" name="id2604262"></a><pre class="programlisting">#define             GDL_DOCK_ITEM_HAS_GRIP(item)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604294"></a><h3>
+<a name="GDL-DOCK-ITEM-CANT-CLOSE:CAPS"></a>GDL_DOCK_ITEM_CANT_CLOSE()</h3>
+<a class="indexterm" name="id2604306"></a><pre class="programlisting">#define             GDL_DOCK_ITEM_CANT_CLOSE(item)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604337"></a><h3>
+<a name="GDL-DOCK-ITEM-CANT-ICONIFY:CAPS"></a>GDL_DOCK_ITEM_CANT_ICONIFY()</h3>
+<a class="indexterm" name="id2604349"></a><pre class="programlisting">#define             GDL_DOCK_ITEM_CANT_ICONIFY(item)</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604380"></a><h3>
+<a name="gdl-dock-item-new"></a>gdl_dock_item_new ()</h3>
+<a class="indexterm" name="id2604390"></a><pre class="programlisting">GtkWidget*          gdl_dock_item_new                   (const gchar *name,
+                                                         const gchar *long_name,
+                                                         <a href="GdlDockItem.html#GdlDockItemBehavior">GdlDockItemBehavior</a> behavior);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>name</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>long_name</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>behavior</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604479"></a><h3>
+<a name="gdl-dock-item-new-with-stock"></a>gdl_dock_item_new_with_stock ()</h3>
+<a class="indexterm" name="id2604492"></a><pre class="programlisting">GtkWidget*          gdl_dock_item_new_with_stock        (const gchar *name,
+                                                         const gchar *long_name,
+                                                         const gchar *stock_id,
+                                                         <a href="GdlDockItem.html#GdlDockItemBehavior">GdlDockItemBehavior</a> behavior);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>name</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>long_name</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>stock_id</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>behavior</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604600"></a><h3>
+<a name="gdl-dock-item-dock-to"></a>gdl_dock_item_dock_to ()</h3>
+<a class="indexterm" name="id2604611"></a><pre class="programlisting">void                gdl_dock_item_dock_to               (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item,
+                                                         <a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *target,
+                                                         <a href="GdlDockObject.html#GdlDockPlacement">GdlDockPlacement</a> position,
+                                                         gint docking_param);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>target</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>position</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>docking_param</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604709"></a><h3>
+<a name="gdl-dock-item-set-orientation"></a>gdl_dock_item_set_orientation ()</h3>
+<a class="indexterm" name="id2604721"></a><pre class="programlisting">void                gdl_dock_item_set_orientation       (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item,
+                                                         GtkOrientation orientation);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>orientation</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604782"></a><h3>
+<a name="gdl-dock-item-get-tablabel"></a>gdl_dock_item_get_tablabel ()</h3>
+<a class="indexterm" name="id2604793"></a><pre class="programlisting">GtkWidget*          gdl_dock_item_get_tablabel          (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604843"></a><h3>
+<a name="gdl-dock-item-set-tablabel"></a>gdl_dock_item_set_tablabel ()</h3>
+<a class="indexterm" name="id2604854"></a><pre class="programlisting">void                gdl_dock_item_set_tablabel          (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item,
+                                                         GtkWidget *tablabel);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>tablabel</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604914"></a><h3>
+<a name="gdl-dock-item-hide-grip"></a>gdl_dock_item_hide_grip ()</h3>
+<a class="indexterm" name="id2604925"></a><pre class="programlisting">void                gdl_dock_item_hide_grip             (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2604965"></a><h3>
+<a name="gdl-dock-item-show-grip"></a>gdl_dock_item_show_grip ()</h3>
+<a class="indexterm" name="id2604976"></a><pre class="programlisting">void                gdl_dock_item_show_grip             (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605017"></a><h3>
+<a name="gdl-dock-item-bind"></a>gdl_dock_item_bind ()</h3>
+<a class="indexterm" name="id2605027"></a><pre class="programlisting">void                gdl_dock_item_bind                  (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item,
+                                                         GtkWidget *dock);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>dock</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605087"></a><h3>
+<a name="gdl-dock-item-unbind"></a>gdl_dock_item_unbind ()</h3>
+<a class="indexterm" name="id2605097"></a><pre class="programlisting">void                gdl_dock_item_unbind                (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605138"></a><h3>
+<a name="gdl-dock-item-hide-item"></a>gdl_dock_item_hide_item ()</h3>
+<a class="indexterm" name="id2605148"></a><pre class="programlisting">void                gdl_dock_item_hide_item             (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605189"></a><h3>
+<a name="gdl-dock-item-iconify-item"></a>gdl_dock_item_iconify_item ()</h3>
+<a class="indexterm" name="id2605200"></a><pre class="programlisting">void                gdl_dock_item_iconify_item          (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605241"></a><h3>
+<a name="gdl-dock-item-show-item"></a>gdl_dock_item_show_item ()</h3>
+<a class="indexterm" name="id2605252"></a><pre class="programlisting">void                gdl_dock_item_show_item             (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605292"></a><h3>
+<a name="gdl-dock-item-lock"></a>gdl_dock_item_lock ()</h3>
+<a class="indexterm" name="id2605303"></a><pre class="programlisting">void                gdl_dock_item_lock                  (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605344"></a><h3>
+<a name="gdl-dock-item-unlock"></a>gdl_dock_item_unlock ()</h3>
+<a class="indexterm" name="id2605354"></a><pre class="programlisting">void                gdl_dock_item_unlock                (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605395"></a><h3>
+<a name="gdl-dock-item-set-default-position"></a>gdl_dock_item_set_default_position ()</h3>
+<a class="indexterm" name="id2605408"></a><pre class="programlisting">void                gdl_dock_item_set_default_position  (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item,
+                                                         <a href="GdlDockObject.html" title="GdlDockObject">GdlDockObject</a> *reference);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>reference</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605468"></a><h3>
+<a name="gdl-dock-item-preferred-size"></a>gdl_dock_item_preferred_size ()</h3>
+<a class="indexterm" name="id2605480"></a><pre class="programlisting">void                gdl_dock_item_preferred_size        (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *item,
+                                                         GtkRequisition *req);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>item</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>req</code></em>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2605542"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2605551"></a><h3>
+<a name="GdlDockItem--behavior"></a>The "<code class="literal">behavior</code>" property</h3>
+<a class="indexterm" name="id2605564"></a><pre class="programlisting">  "behavior"                 <a href="GdlDockItem.html#GdlDockItemBehavior">GdlDockItemBehavior</a>   : Read / Write</pre>
+<p>General behavior for the dock item (i.e. whether it can float, if it's locked, etc.).</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605585"></a><h3>
+<a name="GdlDockItem--locked"></a>The "<code class="literal">locked</code>" property</h3>
+<a class="indexterm" name="id2605597"></a><pre class="programlisting">  "locked"                   gboolean              : Read / Write</pre>
+<p>If set, the dock item cannot be dragged around and it doesn't show a grip.</p>
+<p>Default value: FALSE</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605622"></a><h3>
+<a name="GdlDockItem--orientation"></a>The "<code class="literal">orientation</code>" property</h3>
+<a class="indexterm" name="id2605634"></a><pre class="programlisting">  "orientation"              GtkOrientation        : Read / Write / Construct</pre>
+<p>Orientation of the docking item.</p>
+<p>Default value: GTK_ORIENTATION_VERTICAL</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605659"></a><h3>
+<a name="GdlDockItem--preferred-height"></a>The "<code class="literal">preferred-height</code>" property</h3>
+<a class="indexterm" name="id2605674"></a><pre class="programlisting">  "preferred-height"         gint                  : Read / Write</pre>
+<p>Preferred height for the dock item.</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605701"></a><h3>
+<a name="GdlDockItem--preferred-width"></a>The "<code class="literal">preferred-width</code>" property</h3>
+<a class="indexterm" name="id2605716"></a><pre class="programlisting">  "preferred-width"          gint                  : Read / Write</pre>
+<p>Preferred width for the dock item.</p>
+<p>Allowed values: &gt;= -1</p>
+<p>Default value: -1</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605742"></a><h3>
+<a name="GdlDockItem--resize"></a>The "<code class="literal">resize</code>" property</h3>
+<a class="indexterm" name="id2605755"></a><pre class="programlisting">  "resize"                   gboolean              : Read / Write</pre>
+<p>If set, the dock item can be resized when docked in a GtkPanel widget.</p>
+<p>Default value: TRUE</p>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2605780"></a><h2>Signal Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2605790"></a><h3>
+<a name="GdlDockItem-dock-drag-begin"></a>The "dock-drag-begin" signal</h3>
+<a class="indexterm" name="id2605798"></a><pre class="programlisting">void                user_function                      (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *gdldockitem,
+                                                        gpointer     user_data)        : Run First</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>gdldockitem</code></em>&#160;:</span></td>
+<td>the object which received the signal.
+
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605860"></a><h3>
+<a name="GdlDockItem-dock-drag-end"></a>The "dock-drag-end" signal</h3>
+<a class="indexterm" name="id2605867"></a><pre class="programlisting">void                user_function                      (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *gdldockitem,
+                                                        gboolean     arg1,
+                                                        gpointer     user_data)        : Run First</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>gdldockitem</code></em>&#160;:</span></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>arg1</code></em>&#160;:</span></td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2605948"></a><h3>
+<a name="GdlDockItem-dock-drag-motion"></a>The "dock-drag-motion" signal</h3>
+<a class="indexterm" name="id2605957"></a><pre class="programlisting">void                user_function                      (<a href="GdlDockItem.html" title="GdlDockItem">GdlDockItem</a> *gdldockitem,
+                                                        gint         arg1,
+                                                        gint         arg2,
+                                                        gpointer     user_data)        : Run First</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>gdldockitem</code></em>&#160;:</span></td>
+<td>the object which received the signal.
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>arg1</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>arg2</code></em>&#160;:</span></td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>user_data</code></em>&#160;:</span></td>
+<td>user data set when the signal handler was connected.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</body>
+</html>

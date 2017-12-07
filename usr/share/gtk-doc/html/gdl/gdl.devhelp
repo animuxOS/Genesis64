@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="GDL Reference Manual" link="index.html" author="" name="gdl">
+  <chapters>
+    <sub name="GDL - Gnome Development/Docking library" link="gdl-main.html">
+      <sub name="GdlDockLayout" link="GdlDockLayout.html"/>
+      <sub name="GdlDockMaster" link="GdlDockMaster.html"/>
+      <sub name="GdlIcons" link="GdlIcons.html"/>
+      <sub name="GdlDockItem" link="GdlDockItem.html"/>
+      <sub name="GdlDock" link="GdlDock.html"/>
+      <sub name="GdlDockObject" link="GdlDockObject.html"/>
+      <sub name="GdlDockTablabel" link="GdlDockTablabel.html"/>
+      <sub name="GdlDockNotebook" link="GdlDockNotebook.html"/>
+      <sub name="GdlDockPlaceholder" link="GdlDockPlaceholder.html"/>
+      <sub name="GdlComboButton" link="GdlComboButton.html"/>
+      <sub name="GdlDockPaned" link="GdlDockPaned.html"/>
+      <sub name="GdlDockBar" link="GdlDockBar.html"/>
+      <sub name="GdlSwitcher" link="GdlSwitcher.html"/>
+      <sub name="gdl-stock" link="gdl-gdl-stock.html"/>
+      <sub name="gdl-tools" link="gdl-gdl-tools.html"/>
+    </sub>
+  </chapters>
+  <functions>
+    <function name="GdlDockLayoutPrivate" link="GdlDockLayout.html#GdlDockLayoutPrivate"/>
+    <function name="GdlDockLayout" link="GdlDockLayout.html#GdlDockLayout-struct"/>
+    <function name="gdl_dock_layout_new ()" link="GdlDockLayout.html#gdl-dock-layout-new"/>
+    <function name="gdl_dock_layout_attach ()" link="GdlDockLayout.html#gdl-dock-layout-attach"/>
+    <function name="gdl_dock_layout_load_layout ()" link="GdlDockLayout.html#gdl-dock-layout-load-layout"/>
+    <function name="gdl_dock_layout_save_layout ()" link="GdlDockLayout.html#gdl-dock-layout-save-layout"/>
+    <function name="gdl_dock_layout_delete_layout ()" link="GdlDockLayout.html#gdl-dock-layout-delete-layout"/>
+    <function name="gdl_dock_layout_get_layouts ()" link="GdlDockLayout.html#gdl-dock-layout-get-layouts"/>
+    <function name="gdl_dock_layout_run_manager ()" link="GdlDockLayout.html#gdl-dock-layout-run-manager"/>
+    <function name="gdl_dock_layout_load_from_file ()" link="GdlDockLayout.html#gdl-dock-layout-load-from-file"/>
+    <function name="gdl_dock_layout_save_to_file ()" link="GdlDockLayout.html#gdl-dock-layout-save-to-file"/>
+    <function name="gdl_dock_layout_is_dirty ()" link="GdlDockLayout.html#gdl-dock-layout-is-dirty"/>
+    <function name="gdl_dock_layout_get_ui ()" link="GdlDockLayout.html#gdl-dock-layout-get-ui"/>
+    <function name="gdl_dock_layout_get_items_ui ()" link="GdlDockLayout.html#gdl-dock-layout-get-items-ui"/>
+    <function name="gdl_dock_layout_get_layouts_ui ()" link="GdlDockLayout.html#gdl-dock-layout-get-layouts-ui"/>
+    <function name="The &quot;dirty&quot; property" link="GdlDockLayout.html#GdlDockLayout--dirty"/>
+    <function name="The &quot;master&quot; property" link="GdlDockLayout.html#GdlDockLayout--master"/>
+    <function name="GdlDockMasterPrivate" link="GdlDockMaster.html#GdlDockMasterPrivate"/>
+    <function name="GdlDockMaster" link="GdlDockMaster.html#GdlDockMaster-struct"/>
+    <function name="GDL_DOCK_OBJECT_GET_MASTER()" link="GdlDockMaster.html#GDL-DOCK-OBJECT-GET-MASTER:CAPS"/>
+    <function name="gdl_dock_master_add ()" link="GdlDockMaster.html#gdl-dock-master-add"/>
+    <function name="gdl_dock_master_remove ()" link="GdlDockMaster.html#gdl-dock-master-remove"/>
+    <function name="gdl_dock_master_foreach ()" link="GdlDockMaster.html#gdl-dock-master-foreach"/>
+    <function name="gdl_dock_master_foreach_toplevel ()" link="GdlDockMaster.html#gdl-dock-master-foreach-toplevel"/>
+    <function name="gdl_dock_master_get_object ()" link="GdlDockMaster.html#gdl-dock-master-get-object"/>
+    <function name="gdl_dock_master_get_controller ()" link="GdlDockMaster.html#gdl-dock-master-get-controller"/>
+    <function name="gdl_dock_master_set_controller ()" link="GdlDockMaster.html#gdl-dock-master-set-controller"/>
+    <function name="The &quot;default-title&quot; property" link="GdlDockMaster.html#GdlDockMaster--default-title"/>
+    <function name="The &quot;locked&quot; property" link="GdlDockMaster.html#GdlDockMaster--locked"/>
+    <function name="The &quot;switcher-style&quot; property" link="GdlDockMaster.html#GdlDockMaster--switcher-style"/>
+    <function name="The &quot;layout-changed&quot; signal" link="GdlDockMaster.html#GdlDockMaster-layout-changed"/>
+    <function name="GdlIcons" link="GdlIcons.html#GdlIcons-struct"/>
+    <function name="gdl_icons_new ()" link="GdlIcons.html#gdl-icons-new"/>
+    <function name="gdl_icons_get_folder_icon ()" link="GdlIcons.html#gdl-icons-get-folder-icon"/>
+    <function name="gdl_icons_get_uri_icon ()" link="GdlIcons.html#gdl-icons-get-uri-icon"/>
+    <function name="gdl_icons_get_mime_icon ()" link="GdlIcons.html#gdl-icons-get-mime-icon"/>
+    <function name="The &quot;icon-size&quot; property" link="GdlIcons.html#GdlIcons--icon-size"/>
+    <function name="enum GdlDockItemBehavior" link="GdlDockItem.html#GdlDockItemBehavior"/>
+    <function name="enum GdlDockItemFlags" link="GdlDockItem.html#GdlDockItemFlags"/>
+    <function name="GdlDockItemPrivate" link="GdlDockItem.html#GdlDockItemPrivate"/>
+    <function name="GdlDockItem" link="GdlDockItem.html#GdlDockItem-struct"/>
+    <function name="GDL_DOCK_ITEM_FLAGS()" link="GdlDockItem.html#GDL-DOCK-ITEM-FLAGS:CAPS"/>
+    <function name="GDL_DOCK_ITEM_IN_DRAG()" link="GdlDockItem.html#GDL-DOCK-ITEM-IN-DRAG:CAPS"/>
+    <function name="GDL_DOCK_ITEM_IN_PREDRAG()" link="GdlDockItem.html#GDL-DOCK-ITEM-IN-PREDRAG:CAPS"/>
+    <function name="GDL_DOCK_ITEM_ICONIFIED()" link="GdlDockItem.html#GDL-DOCK-ITEM-ICONIFIED:CAPS"/>
+    <function name="GDL_DOCK_ITEM_USER_ACTION()" link="GdlDockItem.html#GDL-DOCK-ITEM-USER-ACTION:CAPS"/>
+    <function name="GDL_DOCK_ITEM_NOT_LOCKED()" link="GdlDockItem.html#GDL-DOCK-ITEM-NOT-LOCKED:CAPS"/>
+    <function name="GDL_DOCK_ITEM_NO_GRIP()" link="GdlDockItem.html#GDL-DOCK-ITEM-NO-GRIP:CAPS"/>
+    <function name="GDL_DOCK_ITEM_SET_FLAGS()" link="GdlDockItem.html#GDL-DOCK-ITEM-SET-FLAGS:CAPS"/>
+    <function name="GDL_DOCK_ITEM_UNSET_FLAGS()" link="GdlDockItem.html#GDL-DOCK-ITEM-UNSET-FLAGS:CAPS"/>
+    <function name="GDL_DOCK_ITEM_HAS_GRIP()" link="GdlDockItem.html#GDL-DOCK-ITEM-HAS-GRIP:CAPS"/>
+    <function name="GDL_DOCK_ITEM_CANT_CLOSE()" link="GdlDockItem.html#GDL-DOCK-ITEM-CANT-CLOSE:CAPS"/>
+    <function name="GDL_DOCK_ITEM_CANT_ICONIFY()" link="GdlDockItem.html#GDL-DOCK-ITEM-CANT-ICONIFY:CAPS"/>
+    <function name="gdl_dock_item_new ()" link="GdlDockItem.html#gdl-dock-item-new"/>
+    <function name="gdl_dock_item_new_with_stock ()" link="GdlDockItem.html#gdl-dock-item-new-with-stock"/>
+    <function name="gdl_dock_item_dock_to ()" link="GdlDockItem.html#gdl-dock-item-dock-to"/>
+    <function name="gdl_dock_item_set_orientation ()" link="GdlDockItem.html#gdl-dock-item-set-orientation"/>
+    <function name="gdl_dock_item_get_tablabel ()" link="GdlDockItem.html#gdl-dock-item-get-tablabel"/>
+    <function name="gdl_dock_item_set_tablabel ()" link="GdlDockItem.html#gdl-dock-item-set-tablabel"/>
+    <function name="gdl_dock_item_hide_grip ()" link="GdlDockItem.html#gdl-dock-item-hide-grip"/>
+    <function name="gdl_dock_item_show_grip ()" link="GdlDockItem.html#gdl-dock-item-show-grip"/>
+    <function name="gdl_dock_item_bind ()" link="GdlDockItem.html#gdl-dock-item-bind"/>
+    <function name="gdl_dock_item_unbind ()" link="GdlDockItem.html#gdl-dock-item-unbind"/>
+    <function name="gdl_dock_item_hide_item ()" link="GdlDockItem.html#gdl-dock-item-hide-item"/>
+    <function name="gdl_dock_item_iconify_item ()" link="GdlDockItem.html#gdl-dock-item-iconify-item"/>
+    <function name="gdl_dock_item_show_item ()" link="GdlDockItem.html#gdl-dock-item-show-item"/>
+    <function name="gdl_dock_item_lock ()" link="GdlDockItem.html#gdl-dock-item-lock"/>
+    <function name="gdl_dock_item_unlock ()" link="GdlDockItem.html#gdl-dock-item-unlock"/>
+    <function name="gdl_dock_item_set_default_position ()" link="GdlDockItem.html#gdl-dock-item-set-default-position"/>
+    <function name="gdl_dock_item_preferred_size ()" link="GdlDockItem.html#gdl-dock-item-preferred-size"/>
+    <function name="The &quot;behavior&quot; property" link="GdlDockItem.html#GdlDockItem--behavior"/>
+    <function name="The &quot;locked&quot; property" link="GdlDockItem.html#GdlDockItem--locked"/>
+    <function name="The &quot;orientation&quot; property" link="GdlDockItem.html#GdlDockItem--orientation"/>
+    <function name="The &quot;preferred-height&quot; property" link="GdlDockItem.html#GdlDockItem--preferred-height"/>
+    <function name="The &quot;preferred-width&quot; property" link="GdlDockItem.html#GdlDockItem--preferred-width"/>
+    <function name="The &quot;resize&quot; property" link="GdlDockItem.html#GdlDockItem--resize"/>
+    <function name="The &quot;dock-drag-begin&quot; signal" link="GdlDockItem.html#GdlDockItem-dock-drag-begin"/>
+    <function name="The &quot;dock-drag-end&quot; signal" link="GdlDockItem.html#GdlDockItem-dock-drag-end"/>
+    <function name="The &quot;dock-drag-motion&quot; signal" link="GdlDockItem.html#GdlDockItem-dock-drag-motion"/>
+    <function name="GdlDockPrivate" link="GdlDock.html#GdlDockPrivate"/>
+    <function name="GdlDock" link="GdlDock.html#GdlDock-struct"/>
+    <function name="GDL_DOCK_IS_CONTROLLER()" link="GdlDock.html#GDL-DOCK-IS-CONTROLLER:CAPS"/>
+    <function name="gdl_dock_new ()" link="GdlDock.html#gdl-dock-new"/>
+    <function name="gdl_dock_new_from ()" link="GdlDock.html#gdl-dock-new-from"/>
+    <function name="gdl_dock_add_item ()" link="GdlDock.html#gdl-dock-add-item"/>
+    <function name="gdl_dock_add_floating_item ()" link="GdlDock.html#gdl-dock-add-floating-item"/>
+    <function name="gdl_dock_get_item_by_name ()" link="GdlDock.html#gdl-dock-get-item-by-name"/>
+    <function name="gdl_dock_get_placeholder_by_name ()" link="GdlDock.html#gdl-dock-get-placeholder-by-name"/>
+    <function name="gdl_dock_get_named_items ()" link="GdlDock.html#gdl-dock-get-named-items"/>
+    <function name="gdl_dock_object_get_toplevel ()" link="GdlDock.html#gdl-dock-object-get-toplevel"/>
+    <function name="gdl_dock_xor_rect ()" link="GdlDock.html#gdl-dock-xor-rect"/>
+    <function name="The &quot;default-title&quot; property" link="GdlDock.html#GdlDock--default-title"/>
+    <function name="The &quot;floating&quot; property" link="GdlDock.html#GdlDock--floating"/>
+    <function name="The &quot;floatx&quot; property" link="GdlDock.html#GdlDock--floatx"/>
+    <function name="The &quot;floaty&quot; property" link="GdlDock.html#GdlDock--floaty"/>
+    <function name="The &quot;height&quot; property" link="GdlDock.html#GdlDock--height"/>
+    <function name="The &quot;width&quot; property" link="GdlDock.html#GdlDock--width"/>
+    <function name="The &quot;layout-changed&quot; signal" link="GdlDock.html#GdlDock-layout-changed"/>
+    <function name="enum GdlDockParamFlags" link="GdlDockObject.html#GdlDockParamFlags"/>
+    <function name="GDL_DOCK_NAME_PROPERTY" link="GdlDockObject.html#GDL-DOCK-NAME-PROPERTY:CAPS"/>
+    <function name="GDL_DOCK_MASTER_PROPERTY" link="GdlDockObject.html#GDL-DOCK-MASTER-PROPERTY:CAPS"/>
+    <function name="enum GdlDockObjectFlags" link="GdlDockObject.html#GdlDockObjectFlags"/>
+    <function name="GDL_DOCK_OBJECT_FLAGS_SHIFT" link="GdlDockObject.html#GDL-DOCK-OBJECT-FLAGS-SHIFT:CAPS"/>
+    <function name="enum GdlDockPlacement" link="GdlDockObject.html#GdlDockPlacement"/>
+    <function name="GdlDockRequest" link="GdlDockObject.html#GdlDockRequest"/>
+    <function name="GdlDockObject" link="GdlDockObject.html#GdlDockObject-struct"/>
+    <function name="GDL_DOCK_OBJECT_FLAGS()" link="GdlDockObject.html#GDL-DOCK-OBJECT-FLAGS:CAPS"/>
+    <function name="GDL_DOCK_OBJECT_AUTOMATIC()" link="GdlDockObject.html#GDL-DOCK-OBJECT-AUTOMATIC:CAPS"/>
+    <function name="GDL_DOCK_OBJECT_ATTACHED()" link="GdlDockObject.html#GDL-DOCK-OBJECT-ATTACHED:CAPS"/>
+    <function name="GDL_DOCK_OBJECT_IN_REFLOW()" link="GdlDockObject.html#GDL-DOCK-OBJECT-IN-REFLOW:CAPS"/>
+    <function name="GDL_DOCK_OBJECT_IN_DETACH()" link="GdlDockObject.html#GDL-DOCK-OBJECT-IN-DETACH:CAPS"/>
+    <function name="GDL_DOCK_OBJECT_SET_FLAGS()" link="GdlDockObject.html#GDL-DOCK-OBJECT-SET-FLAGS:CAPS"/>
+    <function name="GDL_DOCK_OBJECT_UNSET_FLAGS()" link="GdlDockObject.html#GDL-DOCK-OBJECT-UNSET-FLAGS:CAPS"/>
+    <function name="GDL_DOCK_OBJECT_FROZEN()" link="GdlDockObject.html#GDL-DOCK-OBJECT-FROZEN:CAPS"/>
+    <function name="gdl_dock_object_is_compound ()" link="GdlDockObject.html#gdl-dock-object-is-compound"/>
+    <function name="gdl_dock_object_detach ()" link="GdlDockObject.html#gdl-dock-object-detach"/>
+    <function name="gdl_dock_object_get_parent_object ()" link="GdlDockObject.html#gdl-dock-object-get-parent-object"/>
+    <function name="gdl_dock_object_freeze ()" link="GdlDockObject.html#gdl-dock-object-freeze"/>
+    <function name="gdl_dock_object_thaw ()" link="GdlDockObject.html#gdl-dock-object-thaw"/>
+    <function name="gdl_dock_object_reduce ()" link="GdlDockObject.html#gdl-dock-object-reduce"/>
+    <function name="gdl_dock_object_dock_request ()" link="GdlDockObject.html#gdl-dock-object-dock-request"/>
+    <function name="gdl_dock_object_dock ()" link="GdlDockObject.html#gdl-dock-object-dock"/>
+    <function name="gdl_dock_object_bind ()" link="GdlDockObject.html#gdl-dock-object-bind"/>
+    <function name="gdl_dock_object_unbind ()" link="GdlDockObject.html#gdl-dock-object-unbind"/>
+    <function name="gdl_dock_object_is_bound ()" link="GdlDockObject.html#gdl-dock-object-is-bound"/>
+    <function name="gdl_dock_object_reorder ()" link="GdlDockObject.html#gdl-dock-object-reorder"/>
+    <function name="gdl_dock_object_present ()" link="GdlDockObject.html#gdl-dock-object-present"/>
+    <function name="gdl_dock_object_child_placement ()" link="GdlDockObject.html#gdl-dock-object-child-placement"/>
+    <function name="GDL_TYPE_DOCK_PARAM" link="GdlDockObject.html#GDL-TYPE-DOCK-PARAM:CAPS"/>
+    <function name="gdl_dock_param_get_type ()" link="GdlDockObject.html#gdl-dock-param-get-type"/>
+    <function name="gdl_dock_object_nick_from_type ()" link="GdlDockObject.html#gdl-dock-object-nick-from-type"/>
+    <function name="gdl_dock_object_type_from_nick ()" link="GdlDockObject.html#gdl-dock-object-type-from-nick"/>
+    <function name="gdl_dock_object_set_type_for_nick ()" link="GdlDockObject.html#gdl-dock-object-set-type-for-nick"/>
+    <function name="GDL_TRACE_OBJECT()" link="GdlDockObject.html#GDL-TRACE-OBJECT:CAPS"/>
+    <function name="The &quot;long-name&quot; property" link="GdlDockObject.html#GdlDockObject--long-name"/>
+    <function name="The &quot;master&quot; property" link="GdlDockObject.html#GdlDockObject--master"/>
+    <function name="The &quot;name&quot; property" link="GdlDockObject.html#GdlDockObject--name"/>
+    <function name="The &quot;stock-id&quot; property" link="GdlDockObject.html#GdlDockObject--stock-id"/>
+    <function name="The &quot;detach&quot; signal" link="GdlDockObject.html#GdlDockObject-detach"/>
+    <function name="The &quot;dock&quot; signal" link="GdlDockObject.html#GdlDockObject-dock"/>
+    <function name="GdlDockTablabel" link="GdlDockTablabel.html#GdlDockTablabel-struct"/>
+    <function name="gdl_dock_tablabel_new ()" link="GdlDockTablabel.html#gdl-dock-tablabel-new"/>
+    <function name="gdl_dock_tablabel_activate ()" link="GdlDockTablabel.html#gdl-dock-tablabel-activate"/>
+    <function name="gdl_dock_tablabel_deactivate ()" link="GdlDockTablabel.html#gdl-dock-tablabel-deactivate"/>
+    <function name="The &quot;item&quot; property" link="GdlDockTablabel.html#GdlDockTablabel--item"/>
+    <function name="The &quot;button-pressed-handle&quot; signal" link="GdlDockTablabel.html#GdlDockTablabel-button-pressed-handle"/>
+    <function name="GdlDockNotebook" link="GdlDockNotebook.html#GdlDockNotebook-struct"/>
+    <function name="gdl_dock_notebook_new ()" link="GdlDockNotebook.html#gdl-dock-notebook-new"/>
+    <function name="The &quot;page&quot; property" link="GdlDockNotebook.html#GdlDockNotebook--page"/>
+    <function name="GdlDockPlaceholderPrivate" link="GdlDockPlaceholder.html#GdlDockPlaceholderPrivate"/>
+    <function name="GdlDockPlaceholder" link="GdlDockPlaceholder.html#GdlDockPlaceholder-struct"/>
+    <function name="gdl_dock_placeholder_new ()" link="GdlDockPlaceholder.html#gdl-dock-placeholder-new"/>
+    <function name="gdl_dock_placeholder_attach ()" link="GdlDockPlaceholder.html#gdl-dock-placeholder-attach"/>
+    <function name="The &quot;floating&quot; property" link="GdlDockPlaceholder.html#GdlDockPlaceholder--floating"/>
+    <function name="The &quot;floatx&quot; property" link="GdlDockPlaceholder.html#GdlDockPlaceholder--floatx"/>
+    <function name="The &quot;floaty&quot; property" link="GdlDockPlaceholder.html#GdlDockPlaceholder--floaty"/>
+    <function name="The &quot;height&quot; property" link="GdlDockPlaceholder.html#GdlDockPlaceholder--height"/>
+    <function name="The &quot;host&quot; property" link="GdlDockPlaceholder.html#GdlDockPlaceholder--host"/>
+    <function name="The &quot;next-placement&quot; property" link="GdlDockPlaceholder.html#GdlDockPlaceholder--next-placement"/>
+    <function name="The &quot;sticky&quot; property" link="GdlDockPlaceholder.html#GdlDockPlaceholder--sticky"/>
+    <function name="The &quot;width&quot; property" link="GdlDockPlaceholder.html#GdlDockPlaceholder--width"/>
+    <function name="GdlComboButtonPrivate" link="GdlComboButton.html#GdlComboButtonPrivate"/>
+    <function name="GdlComboButton" link="GdlComboButton.html#GdlComboButton-struct"/>
+    <function name="gdl_combo_button_new ()" link="GdlComboButton.html#gdl-combo-button-new"/>
+    <function name="gdl_combo_button_set_icon ()" link="GdlComboButton.html#gdl-combo-button-set-icon"/>
+    <function name="gdl_combo_button_set_label ()" link="GdlComboButton.html#gdl-combo-button-set-label"/>
+    <function name="gdl_combo_button_set_menu ()" link="GdlComboButton.html#gdl-combo-button-set-menu"/>
+    <function name="The &quot;activate-default&quot; signal" link="GdlComboButton.html#GdlComboButton-activate-default"/>
+    <function name="GdlDockPaned" link="GdlDockPaned.html#GdlDockPaned-struct"/>
+    <function name="gdl_dock_paned_new ()" link="GdlDockPaned.html#gdl-dock-paned-new"/>
+    <function name="The &quot;position&quot; property" link="GdlDockPaned.html#GdlDockPaned--position"/>
+    <function name="GdlDockBarPrivate" link="GdlDockBar.html#GdlDockBarPrivate"/>
+    <function name="enum GdlDockBarStyle" link="GdlDockBar.html#GdlDockBarStyle"/>
+    <function name="GdlDockBar" link="GdlDockBar.html#GdlDockBar-struct"/>
+    <function name="gdl_dock_bar_new ()" link="GdlDockBar.html#gdl-dock-bar-new"/>
+    <function name="gdl_dock_bar_get_orientation ()" link="GdlDockBar.html#gdl-dock-bar-get-orientation"/>
+    <function name="gdl_dock_bar_set_orientation ()" link="GdlDockBar.html#gdl-dock-bar-set-orientation"/>
+    <function name="gdl_dock_bar_set_style ()" link="GdlDockBar.html#gdl-dock-bar-set-style"/>
+    <function name="gdl_dock_bar_get_style ()" link="GdlDockBar.html#gdl-dock-bar-get-style"/>
+    <function name="The &quot;dockbar-style&quot; property" link="GdlDockBar.html#GdlDockBar--dockbar-style"/>
+    <function name="The &quot;master&quot; property" link="GdlDockBar.html#GdlDockBar--master"/>
+    <function name="GdlSwitcherPrivate" link="GdlSwitcher.html#GdlSwitcherPrivate"/>
+    <function name="enum GdlSwitcherStyle" link="GdlSwitcher.html#GdlSwitcherStyle"/>
+    <function name="GdlSwitcher" link="GdlSwitcher.html#GdlSwitcher-struct"/>
+    <function name="gdl_switcher_new ()" link="GdlSwitcher.html#gdl-switcher-new"/>
+    <function name="gdl_switcher_insert_page ()" link="GdlSwitcher.html#gdl-switcher-insert-page"/>
+    <function name="The &quot;switcher-style&quot; property" link="GdlSwitcher.html#GdlSwitcher--switcher-style"/>
+    <function name="GDL_STOCK_CLOSE" link="gdl-gdl-stock.html#GDL-STOCK-CLOSE:CAPS"/>
+    <function name="GDL_STOCK_MENU_LEFT" link="gdl-gdl-stock.html#GDL-STOCK-MENU-LEFT:CAPS"/>
+    <function name="GDL_STOCK_MENU_RIGHT" link="gdl-gdl-stock.html#GDL-STOCK-MENU-RIGHT:CAPS"/>
+    <function name="gdl_stock_init ()" link="gdl-gdl-stock.html#gdl-stock-init"/>
+    <function name="DO_GDL_TRACE" link="gdl-gdl-tools.html#DO-GDL-TRACE:CAPS"/>
+    <function name="GDL_TRACE()" link="gdl-gdl-tools.html#GDL-TRACE:CAPS"/>
+    <function name="GDL_TRACE_EXTRA()" link="gdl-gdl-tools.html#GDL-TRACE-EXTRA:CAPS"/>
+    <function name="GDL_BOILERPLATE()" link="gdl-gdl-tools.html#GDL-BOILERPLATE:CAPS"/>
+    <function name="GDL_CALL_PARENT()" link="gdl-gdl-tools.html#GDL-CALL-PARENT:CAPS"/>
+    <function name="GDL_CALL_PARENT_GBOOLEAN()" link="gdl-gdl-tools.html#GDL-CALL-PARENT-GBOOLEAN:CAPS"/>
+    <function name="GDL_CALL_PARENT_WITH_DEFAULT()" link="gdl-gdl-tools.html#GDL-CALL-PARENT-WITH-DEFAULT:CAPS"/>
+    <function name="GDL_CLASS_BOILERPLATE()" link="gdl-gdl-tools.html#GDL-CLASS-BOILERPLATE:CAPS"/>
+    <function name="GDL_REGISTER_TYPE()" link="gdl-gdl-tools.html#GDL-REGISTER-TYPE:CAPS"/>
+    <function name="GDL_CALL_VIRTUAL()" link="gdl-gdl-tools.html#GDL-CALL-VIRTUAL:CAPS"/>
+    <function name="GDL_CALL_VIRTUAL_WITH_DEFAULT()" link="gdl-gdl-tools.html#GDL-CALL-VIRTUAL-WITH-DEFAULT:CAPS"/>
+    <function name="GdlPixmap" link="gdl-gdl-tools.html#GdlPixmap"/>
+    <function name="GDL_PIXMAP()" link="gdl-gdl-tools.html#GDL-PIXMAP:CAPS"/>
+    <function name="GDL_PIXMAP_END" link="gdl-gdl-tools.html#GDL-PIXMAP-END:CAPS"/>
+  </functions>
+</book>

@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>GdlIcons</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="GDL Reference Manual">
+<link rel="up" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+<link rel="prev" href="GdlDockMaster.html" title="GdlDockMaster">
+<link rel="next" href="GdlDockItem.html" title="GdlDockItem">
+<meta name="generator" content="GTK-Doc V1.8 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="gdl-main.html" title="GDL - Gnome Development/Docking library">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GdlDockMaster.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="gdl-main.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GDL Reference Manual</th>
+<td><a accesskey="n" href="GdlDockItem.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts"><nobr><a href="#id2588260" class="shortcut">Top</a>
+                  &#160;|&#160;
+                  <a href="#id2596998" class="shortcut">Description</a>
+                  &#160;|&#160;
+                  <a href="#id2596944" class="shortcut">Object Hierarchy</a>
+                  &#160;|&#160;
+                  <a href="#id2596968" class="shortcut">Properties</a></nobr></td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="GdlIcons"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2>
+<a name="id2588260"></a><span class="refentrytitle">GdlIcons</span>
+</h2>
+<p>GdlIcons</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<h2>Synopsis</h2>
+<pre class="synopsis">
+
+
+
+                    <a href="GdlIcons.html#GdlIcons-struct">GdlIcons</a>;
+<a href="GdlIcons.html" title="GdlIcons">GdlIcons</a>*           <a href="GdlIcons.html#gdl-icons-new">gdl_icons_new</a>                       (int icon_size);
+GdkPixbuf*          <a href="GdlIcons.html#gdl-icons-get-folder-icon">gdl_icons_get_folder_icon</a>           (<a href="GdlIcons.html" title="GdlIcons">GdlIcons</a> *icons);
+GdkPixbuf*          <a href="GdlIcons.html#gdl-icons-get-uri-icon">gdl_icons_get_uri_icon</a>              (<a href="GdlIcons.html" title="GdlIcons">GdlIcons</a> *icons,
+                                                         const char *uri);
+GdkPixbuf*          <a href="GdlIcons.html#gdl-icons-get-mime-icon">gdl_icons_get_mime_icon</a>             (<a href="GdlIcons.html" title="GdlIcons">GdlIcons</a> *icons,
+                                                         const char *mime_type);
+
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2596944"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+
+  GObject
+   +----GdlIcons
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2596968"></a><h2>Properties</h2>
+<pre class="synopsis">
+
+  "<a href="GdlIcons.html#GdlIcons--icon-size">icon-size</a>"                gint                  : Read / Write
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2596998"></a><h2>Description</h2>
+<p>
+
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2597014"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2559034"></a><h3>
+<a name="GdlIcons-struct"></a>GdlIcons</h3>
+<a class="indexterm" name="id2559046"></a><pre class="programlisting">typedef struct _GdlIcons GdlIcons;</pre>
+<p>
+
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2559061"></a><h3>
+<a name="gdl-icons-new"></a>gdl_icons_new ()</h3>
+<a class="indexterm" name="id2559074"></a><pre class="programlisting"><a href="GdlIcons.html" title="GdlIcons">GdlIcons</a>*           gdl_icons_new                       (int icon_size);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>icon_size</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2559131"></a><h3>
+<a name="gdl-icons-get-folder-icon"></a>gdl_icons_get_folder_icon ()</h3>
+<a class="indexterm" name="id2559142"></a><pre class="programlisting">GdkPixbuf*          gdl_icons_get_folder_icon           (<a href="GdlIcons.html" title="GdlIcons">GdlIcons</a> *icons);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>icons</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2589960"></a><h3>
+<a name="gdl-icons-get-uri-icon"></a>gdl_icons_get_uri_icon ()</h3>
+<a class="indexterm" name="id2589970"></a><pre class="programlisting">GdkPixbuf*          gdl_icons_get_uri_icon              (<a href="GdlIcons.html" title="GdlIcons">GdlIcons</a> *icons,
+                                                         const char *uri);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>icons</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>uri</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="id2590048"></a><h3>
+<a name="gdl-icons-get-mime-icon"></a>gdl_icons_get_mime_icon ()</h3>
+<a class="indexterm" name="id2590059"></a><pre class="programlisting">GdkPixbuf*          gdl_icons_get_mime_icon             (<a href="GdlIcons.html" title="GdlIcons">GdlIcons</a> *icons,
+                                                         const char *mime_type);</pre>
+<p>
+
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><span class="term"><em class="parameter"><code>icons</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><em class="parameter"><code>mime_type</code></em>&#160;:</span></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><span class="term"><span class="emphasis"><em>Returns</em></span>&#160;:</span></td>
+<td>
+
+
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="refsect1" lang="en">
+<a name="id2590138"></a><h2>Property Details</h2>
+<div class="refsect2" lang="en">
+<a name="id2590149"></a><h3>
+<a name="GdlIcons--icon-size"></a>The "<code class="literal">icon-size</code>" property</h3>
+<a class="indexterm" name="id2590164"></a><pre class="programlisting">  "icon-size"                gint                  : Read / Write</pre>
+<p>Icon size.</p>
+<p>Allowed values: [12,256]</p>
+<p>Default value: 24</p>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/apps/compiz/plugins/place/screen0/options/workarounds</key>
+      <applyto>/apps/compiz/plugins/place/screen0/options/workarounds</applyto>
+      <owner>compiz</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+        <short>Workarounds</short>
+        <long>Window placement workarounds</long>
+      </locale>
+      <locale name="ca">
+        <short>Solucions alternatives</short>
+        <long>Solucions alternatives de disposició de finestres</long>
+      </locale>
+      <locale name="cs">
+        <short>Řešení problémů</short>
+        <long>Nouzová řešení umístění oken</long>
+      </locale>
+      <locale name="da">
+        <short>Løsninger</short>
+        <long>Løsninger til vinduesplaceringer</long>
+      </locale>
+      <locale name="es">
+        <short>Soluciones alternativas</short>
+        <long>Procedimientos alternativos para colocación de ventanas</long>
+      </locale>
+      <locale name="fi">
+        <short>Poikkeukset</short>
+        <long>Poikkeukset ikkunoiden asettelussa</long>
+      </locale>
+      <locale name="fr">
+        <short>Solutions</short>
+        <long>Solution de placement de fenêtre</long>
+      </locale>
+      <locale name="hu">
+        <short>Kerülő megoldások</short>
+        <long>Kerülőmegoldások az ablak elhelyezésére</long>
+      </locale>
+      <locale name="it">
+        <short>Alternative</short>
+        <long>Alternative posizionamento finestre</long>
+      </locale>
+      <locale name="ja">
+        <short>回避方法</short>
+        <long>ウィンドウ配置の回避策</long>
+      </locale>
+      <locale name="pl">
+        <short>Obejścia problemów</short>
+        <long>Obejścia problemów z rozmieszczeniem okien</long>
+      </locale>
+      <locale name="pt">
+        <short>Soluções</short>
+        <long>Soluções para colocação de janelas</long>
+      </locale>
+      <locale name="pt_BR">
+        <short>Soluções</short>
+        <long>Soluções para colocação de janelas</long>
+      </locale>
+      <locale name="ru">
+        <short>Обходные пути</short>
+        <long>Обходные пути при размещении окна</long>
+      </locale>
+      <locale name="sv">
+        <short>Problemlösningar</short>
+        <long>Problemlösning för fönsterplacering</long>
+      </locale>
+      <locale name="zh_CN">
+        <short>工作区</short>
+        <long>窗口放置工作区</long>
+      </locale>
+      <locale name="zh_TW">
+        <short>解決方式</short>
+        <long>視窗位置解決方式</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz/plugins/place/screen0/options/mode</key>
+      <applyto>/apps/compiz/plugins/place/screen0/options/mode</applyto>
+      <owner>compiz</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short>Placement Mode</short>
+        <long>Algorithm to use for window placement (0 = Cascade, 1 = Centered, 2 = Smart, 3 = Maximize, 4 = Random)</long>
+      </locale>
+      <locale name="sv">
+        <short>Placeringsläge</short>
+        <long>Algoritm att använda för fönsterplacering (0 = Cascade, 1 = Centered, 2 = Smart, 3 = Maximize, 4 = Random)</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz/plugins/place/screen0/options/position_matches</key>
+      <applyto>/apps/compiz/plugins/place/screen0/options/position_matches</applyto>
+      <owner>compiz</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Positioned windows</short>
+        <long>Windows that should be positioned by default</long>
+      </locale>
+      <locale name="sv">
+        <short>Positionerade fönster</short>
+        <long>Windows that should be positioned by default</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz/plugins/place/screen0/options/position_x_values</key>
+      <applyto>/apps/compiz/plugins/place/screen0/options/position_x_values</applyto>
+      <owner>compiz</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>X Positions</short>
+        <long>X position values</long>
+      </locale>
+      <locale name="sv">
+        <short>X-positioner</short>
+        <long>X-positionsvärden</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz/plugins/place/screen0/options/position_y_values</key>
+      <applyto>/apps/compiz/plugins/place/screen0/options/position_y_values</applyto>
+      <owner>compiz</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Y Positions</short>
+        <long>Y position values</long>
+      </locale>
+      <locale name="sv">
+        <short>Y-positioner</short>
+        <long>Y-positionsvärden</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz/plugins/place/screen0/options/viewport_matches</key>
+      <applyto>/apps/compiz/plugins/place/screen0/options/viewport_matches</applyto>
+      <owner>compiz</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Viewport positioned windows</short>
+        <long>Windows that should be positioned in specific viewports by default</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz/plugins/place/screen0/options/viewport_x_values</key>
+      <applyto>/apps/compiz/plugins/place/screen0/options/viewport_x_values</applyto>
+      <owner>compiz</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>X Viewport Positions</short>
+        <long>Horizontal viewport positions</long>
+      </locale>
+    </schema>
+    <schema>
+      <key>/schemas/apps/compiz/plugins/place/screen0/options/viewport_y_values</key>
+      <applyto>/apps/compiz/plugins/place/screen0/options/viewport_y_values</applyto>
+      <owner>compiz</owner>
+      <type>list</type>
+      <list_type>int</list_type>
+      <default>[]</default>
+      <locale name="C">
+        <short>Y Viewport Positions</short>
+        <long>Vertical viewport positions</long>
+      </locale>
+    </schema>
+  </schemalist>
+</gconfschemafile>

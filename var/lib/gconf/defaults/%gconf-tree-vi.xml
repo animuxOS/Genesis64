@@ -1,0 +1,946 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="Có bật thành phần gnome-keyring PKCS#11 hay không.">
+                                                        <longdesc>Tuỳ chọn này bật thành phần PKCS#11 trong gnome-keyring daemon. Nó chỉ có tác dụng khi gnome-keyring-daemon hoạt động, (ví dụ: khi người dùng đăng nhập). Thiết lập này có thể bị ghi đè bằng đối số dòng lệnh truyền cho daemon.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="Có bật gnome-keyring SSH agent hay không.">
+                                                        <longdesc>Tuỳ chọn này bật SSH agent trong gnome-keyring daemon. Nó chỉ có tác dụng khi gnome-keyring-daemon hoạt động, (ví dụ: khi người dùng đăng nhập). Thiết lập này có thể bị ghi đè bằng đối số dòng lệnh truyền cho daemon.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Độ rộng cửa sổ">
+                                                        <longdesc>Độ rộng của cửa sổ cần hiển thị</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Độ cao cửa sổ">
+                                                        <longdesc>Độ cao của cửa sổ cần hiển thị</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Lệnh cần chạy khi nhấn phím tổ hợp">
+                                                        <longdesc>Những khóa «/apps/metacity/global_keybindings/run_command_N» định nghĩa tổ hợp phím tương ứng với những lệnh này. Hãy nhấn phím tổ hợp của «run_command_N» để thực hiện «command_N».</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Lệnh chụp hình cửa sổ">
+                                                        <longdesc>Những khóa «/apps/metacity/global_keybindings/run_command_window_screenshot» định nghĩa tổ hợp phím, khi được nhấn, sẽ thực hiện lệnh được ghi trong khóa này.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Lệnh chụp hình">
+                                                        <longdesc>Những khóa «/apps/metacity/global_keybindings/run_command_screenshot» định nghĩa tổ hợp phím, khi được nhấn, sẽ thực hiện lệnh được ghi trong khóa này.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Chạy lệnh đã định nghĩa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Chạy thiết bị cuối">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Chụp hình cửa sổ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Chụp hình">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Hiện hộp thoại «Chạy ứng dụng» của Bảng">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Hiện trình đơn Bảng điều khiển">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc ở dưới cái này">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc ở trên cái này">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc bên phải">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc bên trái">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Chuyển sang vùng làm việc 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Ẩn mọi của sổ và màn hình nền có tiêu điểm">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Di chuyển lùi lại giữa các bảng và màn hình nền ngay">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Di chuyển giữa các bảng và màn hình nền ngay">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Di chuyển lùi lại giữa các cửa sổ ngay">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Di chuyển giữa các cửa sổ ngay">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Di chuyển lùi lại giữa các cửa sổ của ứng dụng với điều bật lên">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Di chuyển giữa các cửa sổ của ứng dụng với điều bật lên">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Di chuyển ngay lùi lại giữa các cửa sổ của ứng dụng">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Di chuyển ngay giữa các cửa sổ của ứng dụng">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Di chuyển lùi lại giữa các bảng và màn hình nền với cửa sổ bật lên">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Di chuyển giữa các bảng và màn hình nền với cửa sổ bật lên">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Di chuyển tiêu điểm lùi lại giữa các cửa sổ dùng hiển thị bật lên">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Di chuyển giữa các cửa sổ với cửa sổ bật lên">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Chuyển cửa sổ sang phía tây màn hình">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Chuyển cửa sổ sang phía đông màn hình">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Chuyển cửa sổ sang phía nam màn hình">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Chuyển cửa sổ sang phía bắc màn hình">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Chuyển cửa sổ sang góc đông nam">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Chuyển cửa sổ sang góc tây nam">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Chuyển cửa sổ sang góc đông bắc">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Chuyển cửa sổ sang góc tây bắc">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Phóng to cửa sổ theo chiều ngang">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Phóng to cửa sổ theo chiều dọc">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Hạ thấp cửa sổ xuống dưới các cửa sổ khác">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Nâng cửa sổ lên trên các cửa sổ khác">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Nâng cửa sổ bị lấp, nếu không thì hạ nó xuống">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Chuyển cửa sổ xuống vùng làm việc dưới">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Chuyển cửa sổ lên vùng làm việc trên">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Chuyển cửa sổ sang vùng làm việc bên phải">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Chuyển cửa sổ sang vùng làm việc bên trái">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Chuyển cửa sổ sang vùng làm việc 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Chuyển cửa sổ sang vùng làm việc 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Chuyển cửa sổ sang vùng làm việc 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Chuyển cửa sổ sang vùng làm việc 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Chuyển cửa sổ sang vùng làm việc 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Chuyển cửa sổ sang vùng làm việc 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Chuyển cửa sổ sang vùng làm việc 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Chuyển cửa sổ sang vùng làm việc 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Chuyển cửa sổ sang vùng làm việc 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Chuyển cửa sổ sang vùng làm việc 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Chuyển cửa sổ sang vùng làm việc 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Chuyển cửa sổ sang vùng làm việc 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Chốt cửa sổ trên mọi vùng làm việc">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Đổi cỡ cửa sổ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Di chuyển cửa sổ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Thu nhỏ cửa sổ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Đóng cửa sổ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Bật tắt trạng thái đánh bóng">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Bỏ phóng to cửa sổ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Phóng to cửa sổ">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Bật tắt trạng thái phóng to">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Bật/Tắt trạng thái luôn nổi">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Bật/Tắt Chế độ Toàn màn hình">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Kích hoạt trình đơn cửa sổ">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Tên vùng làm việc">
+                                                        <longdesc>Tên của vùng làm việc.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Tắt «tính năng sai» là cần thiết đối với các ứng dụng cũ hay bị hỏng">
+                                                        <longdesc>Một số ứng dụng riêng bỏ qua đặc tả, gây ra bộ quản lý cửa sổ không hoạt động cho đúng. Tùy chọn này đặt Metacity trong chế độ đúng chính xác, mà bảo tồn một giao diện người dùng thống nhất hơn, nếu bạn không cần chạy ứng dụng nào chạy sai.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="Việc duyệt (chưa thực hiện) làm việc theo các điều khoản của ứng dụng, không phải cửa sổ.">
+                                                        <longdesc>Nếu bật thì trình Metacity hoạt động như theo ứng dụng hơn là theo cửa sổ. Khái niệm này hơi trừu tượng, nhưng nói chung một thiết lập dựa trên ứng dụng thì giống như Mac hơn Windows. Khi bạn đặt tiêu điểm lên một cửa sổ trong chế độ dựa trên ứng dụng, mọi cửa sổ trong ứng dụng đó sẽ được hiển thị. Ngoài ra, trong chế độ dựa trên ứng dụng, nhấn tiêu điểm không được chuyển cho cửa sổ của ứng dụng khác. Ngoài ra chế độ dựa trên ứng dụng chưa được làm tại thời điểm này.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Nếu đúng, thoả hiệp giữa tính hữu dụng và dùng ít tài nguyên">
+                                                        <longdesc>Nếu bật thì trình metacity sẽ cho người dùng xem phản hồi ít hơn bằng cách dùng đường viền, tránh hoạt ảnh, hoặc bằng cách khác. Phần lớn người dùng sẽ thấy biết tính hữu dụng đã giảm xuống, nhưng mà có lẽ tùy chọn này sẽ cho phép ứng dụng cũ hơn tiếp tục hoạt động, và có lẽ cũng là thoả hiệp có ích cho trình phục vụ thiết bị cuỗi. Tuy nhiên, tính năng đường viền đã tắt khi khả năng truy cập được bật.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="Bộ Quản lý Ghép lại">
+                                                        <longdesc>Quyết định nếu trình Metacity là bộ quản lý ghép lại hay không.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Kiểu Chuông hình">
+                                                        <longdesc>Cho Metacity biết cách thực hiện cái hiển thị khi có chuông từ hệ thống hoặc từ ứng dụng khác. Hiện thời chỉ có hai gia trị hợp lệ là «fullscreen» (toàn màn hình), làm chớp trắng-đen toàn màn hình, và «frame_flash» (khung chớp) làm chớp thanh tựa đề của ứng dụng rung chuông. Nếu không biết ứng dụng nào rung chuông (trường hợp thường khi là «chuông hệ thống»), tựa đề ứng dụng đang có tiêu điểm sẽ chớp.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Chuông hệ thống có thể nghe rõ">
+                                                        <longdesc>Xác định ứng dụng hoặc hệ thống có thể phát sinh tiến «bíp» hay không; có thể dùng chung với «cái chuông hình» để cho phép «bíp» câm.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Bật Chuông hình">
+                                                        <longdesc>Bật chỉ thị trực quan khi ứng dụng hoặc hệ thống rung chuông; rất hữu dụng trong môi trường ồn ào hoặc không nghe rõ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Số vùng làm việc">
+                                                        <longdesc>Số vùng làm việc. Phải là số lớn hơn số không, và có giới hạn cố định lớn nhất (để tránh việc hủy màn hình nền một cách bất ngờ bởi vì một yêu cầu 34 tỉ vùng làm việc).</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Phông chữ tựa đề cửa sổ">
+                                                        <longdesc>Chuỗi mô tả phông chữ mô tả phông chữ cho tựa đề cửa sổ. Tuy nhiên kích thước theo mô tả này sẽ chỉ được dùng nếu tùy chọn « titlebar_font_size » (kích thước phông chữ thanh tựa đề) được đặt là 0. Ngoài ra, tùy chọn này sẽ tắt nếu tùy chọn « titlebar_uses_desktop_font » (thanh đựa đề dùng phông chữ của màn hình làm việc) bật.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Dùng phông chữ hệ thống chuẩn cho tựa đề cửa sổ">
+                                                        <longdesc>Nếu bật, bỏ qua tùy chọn «titlebar_font», và dùng phông chữ ứng dụng chuẩn cho tựa đề cửa sổ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Sắc thái hiện tại">
+                                                        <longdesc>Sắc thái xác định diện mạo của đường viền cửa sổ, thanh tựa đề, và nhiều thứ khác.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Khoảng chờ (mili giây) cho tùy chọn tự động hiện">
+                                                        <longdesc>Khoảng chờ trước khi hiện cửa sổ nếu đặt «auto_raise». Khoảng chờ tính theo số phần ngàn giây.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Tự động hiển thị cửa sổ có tiêu điểm">
+                                                        <longdesc>Nếu bật, và chế độ tiêu điểm hoạc là « sloppy » (luộm thuộm) hay « mouse » (con chuột) thì cửa sổ có tiêu điểm sẽ được nâng lên tự động, sau một thời gian hoãn được xác định bởi khoá « auto_raise_delay » (hoãn nâng lên tự động). Cái này không liên quan đến việc nhắp vào cửa sổ để nâng nó lên, cũng không liên quan đến việc vào cửa sổ trong khi kéo và thả.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="Hành động khi nhấn-phải chuột lên thanh tựa">
+                                                        <longdesc>Tùy chọn này quyết định tác dụng của việc nhấn-giữa chuột trên thanh tựa. Tùy chọn hợp lệ hiện thời là:
+ • toggle_shade		tạo bóng/thôi tạo bóng cửa sổ
+ • toggle_maximize	phóng to/thôi phóng to cửa sổ
+ • minimize			thu nhỏ cửa sổ
+ • none				không làm gì.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="Hành động khi nhấn-đúp chuột lên thanh tựa">
+                                                        <longdesc>Tùy chọn này quyết định tác dụng của việc nhấn-giữa chuột trên thanh tựa.Tùy chọn hợp lệ hiện thời là:
+ • toggle_shade		tạo bóng/thôi tạo bóng cửa sổ
+ • toggle_maximize	phóng to/thôi phóng to cửa sổ
+ • minimize			thu nhỏ cửa sổ
+ • none				không làm gì.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Hành động khi nhấn đúp chuột lên thanh tiêu đề">
+                                                        <longdesc>Tùy chọn này quyết định tác dụng của việc nhấn đúp chuột trên thanh tiêu đề. Tùy chọn hợp lệ hiện thời là:
+ • toggle_shade		tạo bóng/thôi tạo bóng cửa sổ
+ • toggle_maximize	phóng to/thôi phóng to cửa sổ
+ • minimize			thu nhỏ cửa sổ
+ • none				không làm gì.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Việc nâng lên có nên là hiệu ứng khác của việc tương tác người dùng khác hay không.">
+                                                        <longdesc>Nhiều hành động (v.d. nhấn vào vùng khách, di chuyển hoặc thay đổi kích cỡ của cửa sổ) bình thường có hiệu ứng khác là nâng cửa sổ lên. Rất khuyên bạn không đặt tùy chọn này thành sai (false), mà sẽ gỡ hành động nâng lên ra các hành động người dùng khác, và bỏ qua các yêu cầu nâng lên được làm bởi ứng dụng. Xem vấn đề « http://bugzilla.gnome.org/show_bug.cgi?id=445447#c6 ».</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Điều khiển cách gán tiêu điểm cho cửa sổ mới">
+                                                        <longdesc>Tùy chọn này cung cấp khả năng thêm điều khiển cách gán tiêu điểm cho cửa sổ mới tạo. Nó có hai giá trị có thể :
+ • smart		áp dụng chế độ tiêu điểm bình thường của người dùng đó,
+ • strict		gây ra cửa sổ không có tiêu điểm nếu được tạo từ thiết bị cuối.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Chế độ tiêu điểm cửa sổ">
+                                                        <longdesc>Chế độ tiêu điểm cửa sổ chỉ ra cách cửa sổ được kích hoạt. Nó có thể có ba giá trị sau: «nhắp» (click) nghĩa là cửa sổ được nhấn để nhận tiêu điểm, «luộn thuộm» (sloppy) nghĩa là cửa sổ nhận tiêu điểm nếu con chuột đi ngang qua cửa sổ, và «chuột» (mouse) nghĩa là cửa sổ nhận tiêu điểm khi con chuột đi vào cửa sổ và mất tiêu điểm khi con chuột rời khỏi cửa sổ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Sự bố trí các nút trên thanh tiêu đề">
+                                                        <longdesc>Bố trí các nút trên thanh tiêu đề. Giá trị là các chuỗi như là «menu:minimize,maximize,close» (trình đơn:cực tiểu hóa,cực đại hóa,đóng), dấu hai chấm tách góc trái ra khỏi góc phải cửa sổ, tên các nút được cách nhau bởi dấu phẩy. Không cho phép nút đúp nào. Tên nút không rõ sẽ được bỏ qua để cho các nút tiếp tục được bổ sung vào các phiên bản tiếp theo của metacity mà không phá vỡ phiên bản cũ.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Trình biến đổi để dùng cho các hành động nhấn chuột biến đổi lên cửa sổ">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Ứng dụng xem thành phần mặc định">
+                                                                <longdesc>Ứng dụng cần dùng để xem tập tin cần thiết thành phần để xem nó. Tham số %s sẽ được thay thế bằng các URI của tập tin đó, tham số %c sẽ được thay thế bằng IID của thành phần.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Đối số thức hiện cho thiết bị cuối mặc định">
+                                                                <longdesc>Đối số thực hiện cần dùng cho ứng dụng thiết bị cuối mặc định</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Ứng dụng thiết bị cuối mặc định">
+                                                                <longdesc>Ứng dụng thiết bị cuối mặc định cần dùng cho các ứng dụng cần thiết thiết bị cuối.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Chạy lệnh trong thiết bị cuối">
+                                                                <longdesc>Đúng nếu lệnh được dùng để xử lý URL kiểu này nên được dùng trong thiết bị cuối.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Bộ xử lý cho URL « h323 »">
+                                                                <longdesc>Lệnh được dùng để xử lý các địa chỉ Mạng kiểu « h323 », nếu bật.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Lệnh được xác định có nên xử lý URL « h323 » hay không">
+                                                                <longdesc>Đúng nếu lệnh được xác định trong khóa « lệnh » nên xử lý các URL « h323 ».</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Chạy lệnh trong thiết bị cuối">
+                                                                <longdesc>Đúng nếu lệnh được dùng để xử lý URL kiểu này nên được dùng trong thiết bị cuối.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Bộ xử lý cho URL « callto » (gợi đến)">
+                                                                <longdesc>Lệnh được dùng để xử lý các URL kiểu « callto » (gọi đến), nếu bật.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Lệnh được xác định có nên xử lý URL « callto » (gợi đến) hay không">
+                                                                <longdesc>Đúng nếu lệnh được xác định trong khóa « lệnh » nên xử lý các URL « callto » (gợi đến).</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Chạy lệnh trong thiết bị cuối">
+                                                                <longdesc>Đúng nếu lệnh được dùng để xử lý URL kiểu này nên được dùng trong thiết bị cuối.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Bộ xử lý cho URL « mailto » (gởi thư cho)">
+                                                                <longdesc>Lệnh được dùng để xử lý các URL kiểu « mailto » (gởi thư cho), nếu bật.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Lệnh được xác định có nên xử lý URL « mailto » (gởi thư cho) hay không">
+                                                                <longdesc>Đúng nếu lệnh được xác định trong khóa « lệnh » nên xử lý các URL « mailto » (gởi thư cho).</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Chạy lệnh trong thiết bị cuối">
+                                                                <longdesc>Đúng nếu lệnh được dùng để xử lý URL kiểu này nên được dùng trong thiết bị cuối.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Bộ xử lý cho URL « https »">
+                                                                <longdesc>Lệnh được dùng để xử lý các địa chỉ Mạng kiểu « https », nếu bật.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Lệnh được xác định có nên xử lý URL « https » hay không">
+                                                                <longdesc>Đúng nếu lệnh được xác định trong khóa « lệnh » nên xử lý các URL « https ».</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Chạy lệnh trong thiết bị cuối">
+                                                                <longdesc>Đúng nếu lệnh được dùng để xử lý URL kiểu này nên được dùng trong thiết bị cuối.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Chạy lệnh trong thiết bị cuối">
+                                                                <longdesc>Đúng nếu lệnh được dùng để xử lý URL kiểu này nên được dùng trong thiết bị cuối.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Bộ xử lý cho URL « http »">
+                                                                <longdesc>Lệnh được dùng để xử lý các địa chỉ Mạng kiểu « http », nếu bật.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Lệnh được xác định có nên xử lý URL « http » hay không">
+                                                                <longdesc>Đúng nếu lệnh được xác định trong khóa « lệnh » nên xử lý các URL « http ».</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Chạy lệnh trong thiết bị cuối">
+                                                                <longdesc>Đúng nếu lệnh được dùng để xử lý URL kiểu này nên được dùng trong thiết bị cuối.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Bộ xử lý cho URL « man » (trang hướng dẫn)">
+                                                                <longdesc>Lệnh được dùng để xử lý các URL kiểu « man » (trang hướng dẫn), nếu bật.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Lệnh được xác định có nên xử lý URL « man » (trang hướng dẫn) hay không">
+                                                                <longdesc>Đúng nếu lệnh được xác định trong khóa « lệnh » nên xử lý các URL « man » (trang hướng dẫn).</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Chạy lệnh trong thiết bị cuối">
+                                                                <longdesc>Đúng nếu lệnh được dùng để xử lý URL kiểu này nên được dùng trong thiết bị cuối.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Bộ xử lý cho URL « info » (thông tin)">
+                                                                <longdesc>Lệnh được dùng để xử lý các địa chỉ Mạng kiểu « info » (thông tin), nếu bật.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Lệnh được xác định có nên xử lý URL « info » (thông tin) hay không">
+                                                                <longdesc>Đúng nếu lệnh được xác định trong khóa « lệnh » nên xử lý các URL « info » (thông tin).</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Chạy lệnh trong thiết bị cuối">
+                                                                <longdesc>Đúng nếu lệnh được dùng để xử lý URL kiểu này nên được dùng trong thiết bị cuối.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Bộ xử lý cho URL « ghelp » (trợ giúp g)">
+                                                                <longdesc>Lệnh được dùng để xử lý các URL kiểu « ghelp » (trợ giúp g), nếu bật.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Lệnh được xác định có nên xử lý URL « ghelp » (trợ giúp g) hay không">
+                                                                <longdesc>Đúng nếu lệnh được xác định trong khóa « lệnh » nên xử lý các URL « ghelp » (trợ giúp g).</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Chạy lệnh trong thiết bị cuối">
+                                                                <longdesc>Đúng nếu lệnh được dùng để xử lý URL kiểu này nên được dùng trong thiết bị cuối.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="Bộ xử lý cho URL « trash » (rác)">
+                                                                <longdesc>Lệnh được dùng để xử lý các URL kiểu « trash » (rác), nếu bật.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Lệnh được xác định có nên xử lý URL « trash » (rác) hay không">
+                                                                <longdesc>Đúng nếu lệnh được xác định trong khóa « lệnh » nên xử lý các URL « trash » (rác).</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Có nên sử dụng hồ sơ này hay không">
+                                                                        <longdesc>Có nên sử dụng và hiển thị hồ sơ này hay không</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Phần mở rộng tên tập tin mặc định cho hồ sơ này">
+                                                                        <longdesc>Phần mở rộng tập tin để sử dụng khi lưu tập tin đã mã hóa bằng hồ sơ này.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Ống dẫn GStreamer bộ phận đã sử dụng">
+                                                                        <longdesc>Ống dẫn GStreamer bộ phận để sử dụng cho hồ sơ này.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="Mô tả hồ sơ âm thanh">
+                                                                        <longdesc>Mô tả hồ sơ mà chứa thông tin thêm, và diễn tả khi nào nên sử dụng hồ sơ này.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Tên ngắn cho hồ sơ âm thanh">
+                                                                        <longdesc>Một tên ngắn duy nhất cho hồ sơ âm thanh, để sử dụng khi chọn hồ sơ.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Có nên sử dụng hồ sơ này hay không">
+                                                                                <longdesc>Có nên sử dụng và hiển thị hồ sơ này hay không</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Phần mở rộng tên tập tin mặc định cho hồ sơ này">
+                                                                                <longdesc>Phần mở rộng tập tin để sử dụng khi lưu tập tin đã mã hóa bằng hồ sơ này.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Ống dẫn GStreamer bộ phận đã sử dụng">
+                                                                                <longdesc>Ống dẫn GStreamer bộ phận để sử dụng cho hồ sơ này.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Mô tả hồ sơ âm thanh">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Tên ngắn cho hồ sơ âm thanh">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Phần mở rộng tên tập tin mặc định cho hồ sơ này">
+                                                                                <longdesc>Phần mở rộng tập tin để sử dụng khi lưu tập tin đã mã hóa bằng hồ sơ này.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Ống dẫn GStreamer bộ phận đã sử dụng">
+                                                                                <longdesc>Ống dẫn GStreamer bộ phận để sử dụng cho hồ sơ này.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Mô tả hồ sơ âm thanh">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Tên ngắn cho hồ sơ âm thanh">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Phần mở rộng tên tập tin mặc định cho hồ sơ này">
+                                                                                <longdesc>Phần mở rộng tập tin để sử dụng khi lưu tập tin đã mã hóa bằng hồ sơ này.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Ống dẫn GStreamer bộ phận đã sử dụng">
+                                                                                <longdesc>Ống dẫn GStreamer bộ phận để sử dụng cho hồ sơ này.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Mô tả hồ sơ âm thanh">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Tên ngắn cho hồ sơ âm thanh">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Phần mở rộng tên tập tin mặc định cho hồ sơ này">
+                                                                                <longdesc>Phần mở rộng tập tin để sử dụng khi lưu tập tin đã mã hóa bằng hồ sơ này.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Ống dẫn GStreamer bộ phận đã sử dụng">
+                                                                                <longdesc>Ống dẫn GStreamer bộ phận để sử dụng cho hồ sơ này.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Mô tả hồ sơ âm thanh">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Tên ngắn cho hồ sơ âm thanh">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Phần mở rộng tên tập tin mặc định cho hồ sơ này">
+                                                                                <longdesc>Phần mở rộng tập tin để sử dụng khi lưu tập tin đã mã hóa bằng hồ sơ này.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Ống dẫn GStreamer bộ phận đã sử dụng">
+                                                                                <longdesc>Ống dẫn GStreamer bộ phận để sử dụng cho hồ sơ này.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Mô tả hồ sơ âm thanh">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Tên ngắn cho hồ sơ âm thanh">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Phần mở rộng tên tập tin mặc định cho hồ sơ này">
+                                                                                <longdesc>Phần mở rộng tập tin để sử dụng khi lưu tập tin đã mã hóa bằng hồ sơ này.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Ống dẫn GStreamer bộ phận đã sử dụng">
+                                                                                <longdesc>Ống dẫn GStreamer bộ phận để sử dụng cho hồ sơ này.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Mô tả hồ sơ âm thanh">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Tên ngắn cho hồ sơ âm thanh">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Danh sách hồ sơ">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="URL cấu hình tự động ủy nhiệm">
+                                                <longdesc>URL cung cấp giá trị cấu hình ủy nhiệm.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="Cổng ủy nhiệm SOCKS">
+                                                <longdesc>Cổng trên máy được định nghĩa bởi « /system/proxy/socks_host » qua đó cần chạy ủy nhiệm.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="Tên máy ủy nhiệm SOCKS">
+                                                <longdesc>Tên của máy qua đó cần chạy ủy nhiệm SOCKS.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="Cổng ủy nhiệm FTP">
+                                                <longdesc>Cổng trên máy được định nghĩa bởi « /system/ftp_proxy/host » qua đó cần chạy ủy nhiệm.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="Tên máy ủy nhiệm FTP">
+                                                <longdesc>Tên của máy qua đó cần chạy ủy nhiệm FTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="Cổng ủy nhiệm HTTP bảo mật">
+                                                <longdesc>Cổng trên máy được định nghĩa bởi « /system/proxy/secure_host » qua đó cần chạy ủy nhiệm.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="Tên máy ủy nhiệm HTTP bảo mật">
+                                                <longdesc>Tên của máy qua đó cần chạy ủy nhiệm HTTP bảo mật.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Chế độ cấu hình ủy nhiệm">
+                                                <longdesc>Hãy chọn chế độ cấu hình ủy nhiệm. Giá trị được hỗ trợ là:
+ • none — không có,
+ • manual — tự làm,
+ • auto — tự động.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Máy khác ủy nhiệm">
+                                                <longdesc>Khóa này chứa danh sách các máy được kết nối trực tiếp, hơn là qua ủy nhiệm (nếu nó hoạt động). Giá trị có thể là tên máy, miền (dùng ký tự đại diện ban đầu như « *.phu.com »), địa chỉ IP của máy (cả IPv4 lẫn IPv6) và địa chỉ mạng có mặt nạ mạng (như « 192.168.0.0/24 »).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="Mật khẩu ủy nhiệm HTTP">
+                                                <longdesc>Mật khẩu để gởi qua là xác thực khi dùng ủy nhiệm HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="Tên người dùng ủy nhiệm HTTP">
+                                                <longdesc>Tên người dùng để gởi qua là xác thực khi dùng ủy nhiệm HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Xác thực sự kết nối đến máy phục vụ ủy nhiệm">
+                                                <longdesc>Nếu đúng, mọi sự kết nối đến máy phục vụ ủy nhiệm cần thiết xác thực. Tổ hợp tên người dùng và mật khẩu được định nghĩa bằng « /system/http_proxy/authentication_user » và « /system/http_proxy/authentication_password ».</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="Cổng ủy nhiệm HTTP">
+                                                <longdesc>Cổng trên máy được định nghĩa bởi « /system/http_proxy/host » qua đó cần chạy ủy nhiệm.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="Tên máy ủy nhiệm HTTP">
+                                                <longdesc>Tên của máy qua đó cần chạy ủy nhiệm HTTP.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="Dùng ủy nhiệm HTTP">
+                                                <longdesc>Bật chạy thiết lập ủy nhiệm khi truy cập HTTP qua Mạng.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Những miền thêm nơi cần tìm dịch vụ DNS-SD">
+                                                <longdesc>Danh sách các miền DNS-SD, định giới bằng dấu phẩy, nên được hiển thị trong địa điểm « network:// ».</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Cách hiển thị dịch vụ DNS-SD cục bộ">
+                                                <longdesc>Giá trị có thể là:
+ • merged — đã phối hợp.
+ • separate — riêng,
+ • disabled — đã tắt.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="Nhóm làm việc SMB">
+                                                <longdesc>Nhóm làm việc chạy mạng Windows hay miền chứa người dùng này. Người dùng có lẽ cần phải đăng xuất rồi đăng nhập lại để dùng một nhóm làm việc mới.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

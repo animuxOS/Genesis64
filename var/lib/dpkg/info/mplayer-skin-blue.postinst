@@ -1,0 +1,9 @@
+#! /bin/sh -e
+
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+    update-alternatives --install //usr/share/mplayer/skins/default mplayer-skin /usr/share/mplayer/skins/blue 40 
+fi
+
+
+
+exit 0

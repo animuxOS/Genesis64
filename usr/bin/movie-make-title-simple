@@ -1,0 +1,336 @@
+#!/bin/sh
+
+# Copyright (c) 2005-2007, Sven Berkvens-Matthijsse
+# 
+# All rights reserved.
+# 
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 
+# * Redistributions of source code must retain the above copyright
+#   notice, this list of conditions and the following disclaimer.
+# 
+# * Redistributions in binary form must reproduce the above copyright
+#   notice, this list of conditions and the following disclaimer in the
+#   documentation and/or other materials provided with the distribution.
+# 
+# * Neither the name of deKattenFabriek nor the names of its
+#   contributors may be used to endorse or promote products derived from
+#   this software without specific prior written permission.
+# 
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Botch on errors
+set -e
+
+###############################################################################
+# Load the library routines
+###############################################################################
+
+prefix="/usr"
+exec_prefix="${prefix}"
+datadir="${prefix}/share"
+bindir="${exec_prefix}/bin"
+
+. "${datadir}/videotrans/library.sh"
+
+###############################################################################
+# Function to display the program's usage
+###############################################################################
+
+usage()
+{
+	cat >&2 << EOF
+Usage: ${0##*/} -o output -m mode
+		 [-i image [-s]] [-b background] [-a audio] [-n animation]
+
+-o output	Directory to set up as the title sequence directory. If the
+		directory does not exist yet, it will be created. If the
+		directory already exists, it will be removed first and
+		recreated. If <output> exists but is not a directory, the
+		program will abort.
+
+-m mode		The video mode, either 'pal' or 'ntsc'.
+
+-i image	An image to use as the background. May be in any format that
+		the ImageMagick suite understands.
+
+-s		Can only be used if you specify an image to be used with the
+		-i option. If you specify the -s option, the image will be
+		scaled (taking aspect ratio into account) to be as large as
+		possible. If you don't specify the -s option, the image will
+		be used as-is and will be centered in the background,
+		unscaled.
+
+-b background	Using this option, you can determine the color of the
+		background on which the image that you specified with the -i
+		option will be placed (assuming that the image does not fit
+		exactly and that borders will thus be visible), of, if you do
+		not supply an image, this will be the color of the emptiness
+		surround the picture-in-picture images.  If you don't specify
+		this, black will be the default.  The color should be in the
+		#rgb, rgb, #rrggbb or rrggbb format.
+
+-a audio	Some audio file to use in the menu. May be an MP3 file, a WAV
+		file or anything else that mplayer can play without needing
+		extra options.
+
+-n animation	Using the -n option, you can control what the picture-in-
+		picture versions of the movies on the DVD will look like.
+		You may specify 'animated' (in which case they will be
+		animated and display previews of the movies), 'static' (in
+		which case they will be static, frozen preview images
+		instead) or 'none' (in which case no previews will be shown
+		whatsoever). The default is 'animated'.
+
+EOF
+	if [ "$1" != "" ]
+	then
+		echo "" >&2
+		echo "ERROR: $@" >&2
+	fi
+	exit 1
+}
+
+###############################################################################
+# Temporary file name
+###############################################################################
+
+TEMP="/tmp/.movie-make-title.$$"
+trap "rm -f ${TEMP}* 2>/dev/null || :" EXIT
+
+###############################################################################
+# Parse options
+###############################################################################
+
+OUTPUT=""
+IMAGE=""
+AUDIO=""
+ANIMATED="animated"
+SCALED="no"
+BACKGROUND=""
+d_size=""
+while getopts "o:m:i:b:sa:n:" option
+do
+	case "${option}"
+	in
+		o)
+			OUTPUT="${OPTARG}"
+			;;
+
+		m)
+			if [ "${OPTARG}" = "pal" ]
+			then
+				d_size="-dx 720 -dy 576"
+				ofps1000="25000:1000"
+				d_x="720"
+				d_y="576"
+			elif [ "${OPTARG}" = "ntsc" ]
+			then
+				d_size="-dx 720 -dy 480"
+				ofps1000="29970:1000"
+				d_x="720"
+				d_y="480"
+			else
+				usage "Unknown video mode for -m"
+			fi
+			;;
+
+		i)
+			IMAGE="${OPTARG}"
+			;;
+
+		b)
+			case "${OPTARG}"
+			in
+				'#'[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F])
+					BACKGROUND="${OPTARG}"
+					;;
+				'#'[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F])
+					BACKGROUND="${OPTARG}"
+					;;
+				[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F])
+					BACKGROUND="#${OPTARG}"
+					;;
+				[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F])
+					BACKGROUND="#${OPTARG}"
+					;;
+				*)
+					usage "Illegal color specification for -b"
+					;;
+			esac
+			;;
+
+		s)
+			SCALED="yes"
+			;;
+
+		a)
+			AUDIO="${OPTARG}"
+			;;
+
+		n)
+			case "${OPTARG}"
+			in
+				"animated" | "static" | "none")
+					ANIMATED="${OPTARG}"
+					;;
+				*)
+					usage "Unknown animation mode for -n"
+					;;
+			esac
+			;;
+
+		*)
+			usage
+			;;
+	esac
+done
+
+###############################################################################
+# Check the parameters
+###############################################################################
+
+if [ "${d_size}" = "" ]
+then
+	usage "Missing -m option"
+fi
+
+if [ "${OUTPUT}" = "" ]
+then
+	usage "Missing -o option"
+fi
+
+if ! check_filenames "${OUTPUT}"
+then
+	exit 1
+fi
+
+if [ -e "${OUTPUT}" -a ! -d "${OUTPUT}" ]
+then
+	message "ERROR: <${OUTPUT}> exists but is not a directory!"
+	exit 1
+fi
+
+if [ "${AUDIO}" = "" -a "${ANIMATED}" = "animated" ]
+then
+	message "Notification: changing the animation setting from <animated> to <static> because there is no audio for the title sequence, and thus, the title sequence cannot be animated."
+	ANIMATED="static"
+fi
+
+if [ "${IMAGE}" = "" -a "${SCALED}" = "yes" ]
+then
+	usage "You cannot use the -s option unless you use the -i option as well"
+fi
+
+if [ "${BACKGROUND}" = "" ]
+then
+	# Default background color is black
+	BACKGROUND="#000"
+fi
+
+###############################################################################
+# No extra parameters?
+###############################################################################
+
+shift "`expr ${OPTIND} - 1`"
+[ "$#" = 0 ] || usage
+
+###############################################################################
+# Set up the destination directory
+###############################################################################
+
+message "Setting up directory <${OUTPUT}>"
+[ -d "${OUTPUT}" ] && rm -r -- "${OUTPUT}"
+mkdir -p -- "${OUTPUT}"
+
+###############################################################################
+# Set up the directory to use a static menu
+###############################################################################
+
+echo "${ofps1000}" > "${OUTPUT}/title.fps"
+echo "${ANIMATED}" > "${OUTPUT}/animation"
+
+###############################################################################
+# Write background image
+###############################################################################
+
+if [ "${IMAGE}" != "" ]
+then
+	message "Using <${IMAGE}> as the background for the menu."
+
+	resize=""
+	[ "${SCALED}" = "no" ] && resize=">"
+	convert -background "${BACKGROUND}" -fill "${BACKGROUND}" -depth 8 \
+		-resize "${d_x}x${d_y}${resize}" "${IMAGE}" "${OUTPUT}/image.jpg"
+
+	convert -background "${BACKGROUND}" -fill "${BACKGROUND}" -depth 8 \
+		-geometry "${d_x}x${d_y}!" "${datadir}/videotrans/null.png" \
+		-draw "Rectangle 0,0 ${d_x},${d_y}" "${OUTPUT}/background.png"
+
+	composite -gravity center "${OUTPUT}/image.jpg" \
+		"${OUTPUT}/background.png" "${OUTPUT}/static.jpg"
+
+	rm "${OUTPUT}/image.jpg" "${OUTPUT}/background.png"
+else
+	message "Using a background of color <${BACKGROUND}> for the menu."
+
+	convert -background "${BACKGROUND}" -fill "${BACKGROUND}" -depth 8 \
+		-geometry "${d_x}x${d_y}!" "${datadir}/videotrans/null.png" \
+		-draw "Rectangle 0,0 ${d_x},${d_y}" "${OUTPUT}/static.jpg"
+fi
+
+###############################################################################
+# Write audio file if necessary
+###############################################################################
+
+if [ "${AUDIO}" != "" ]
+then
+	# Find the audio properties
+
+	if ! mplayer_identify "${AUDIO}" "audio_only"
+	then
+		exit 1
+	fi
+	audio_params "" "auto" "${OUTPUT}/title.wav"
+
+	# Start mplayer to transform the audio
+
+	message "Converting <${AUDIO}> to <${OUTPUT}/title.wav>."
+
+	eval mplayer -slave -noframedrop -vo null "${audio_options}" \
+		-osdlevel 0 -nolirc -nojoystick -- "`shellescape "${AUDIO}"`" \
+		\> "${TEMP}.mplayer" 2\>\&1 \< /dev/null \&
+	mplayer_pid="$!"
+
+	# Check mplayer exited as expected
+
+	if ! wait "${mplayer_pid}"
+	then
+		message "mplayer failed! mplayer error output follows:"
+		cat "${TEMP}.mplayer" >&2
+		exit 1
+	fi
+else
+	message "Not including any audio in the menu."
+fi
+
+###############################################################################
+# We're done!
+###############################################################################
+
+message "The static menu is now set up."
+exit 0
+
+# vim:ts=2:sw=2

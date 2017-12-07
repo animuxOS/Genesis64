@@ -1,0 +1,24 @@
+#! /bin/sh -e
+
+case "$1" in
+configure|install)
+    # Remove leftover diversions
+    for i in \
+	/usr/lib/openoffice/program/soffice.bin \
+	/usr/lib/openoffice/program/spadmin.bin \
+	/usr/lib/openoffice/program/ooqstart \
+	/usr/lib/openoffice2/program/soffice.bin \
+	/usr/lib/openoffice2/program/spadmin.bin;
+    do
+	if [ -n "$(dpkg-divert --list $i)" ]; then
+	   echo >&2 "ia32-libs-gtk: removing old diversion for $i"
+	   dpkg-divert --quiet --package ia32-libs-gtk --remove --rename \
+		--divert ${i}.real ${i}
+	fi
+    done
+esac
+
+ldconfig
+
+
+

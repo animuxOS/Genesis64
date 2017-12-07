@@ -1,0 +1,14 @@
+; File generated automatically from /home/animux/animux/trunk/wine-1.0-rc1/dlls/winedos/winedos.spec; do not edit!
+
+LIBRARY winedos.dll
+
+EXPORTS
+  wine_load_dos_exe@8 @1
+  EmulateInterruptPM@8=DOSVM_EmulateInterruptPM@8 @2
+  CallBuiltinHandler@8=DOSVM_CallBuiltinHandler@8 @3
+  inport@8=DOSVM_inport@8 @4
+  outport@12=DOSVM_outport@12 @5
+  FreeDosBlock=DOSMEM_FreeBlock @6
+  AllocDosBlock=DOSMEM_AllocBlock @7
+  ResizeDosBlock=DOSMEM_ResizeBlock @8
+  BiosTick @9

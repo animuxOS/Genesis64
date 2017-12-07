@@ -1,0 +1,152 @@
+#!/bin/sh
+#
+# apt-method-installed - (c) 2006 by Fabian Franz <apt-knoppix@fabian-franz.de>
+#
+# Version: 0.2
+#
+# Licensed under GPL, v2.
+# 
+# Code based loosely on apt-method-ssh by Scott Penrose
+
+log()
+{
+	#echo -en "$@" >>/tmp/apt.log
+:
+}
+
+print()
+{
+	echo -en "$@"
+	log "$@"
+}
+
+showformat()
+{
+cat <<EOF
+Package: \${Package}
+Essential: \${Essential}
+Priority: \${Priority}
+Section: \${Section}
+Installed-Size: \${Installed-Size}
+Maintainer: \${Maintainer}
+Architecture: \${Architecture}
+Version: \${Version}
+Replaces: \${Replaces}
+Depends: \${Depends}
+Pre-Depends: \${Pre-Depends}
+Suggests: \${Suggests}
+Enhances: \${Enhances}
+Recommends: \${Recommends}
+Provides: \${Provides}
+Conflicts: \${Conflicts}
+Filename: ./\${Package}_\${Version}_\${Architecture}.deb
+Description: \${Description}
+====
+EOF
+}
+
+get_uri()
+{
+	INDEX_FILE=0
+	FILENAME=""
+	URI=""
+	
+	while true
+	do
+		read CMD
+		log "SERVER/$CMD\n"
+		
+		[ -z "$CMD" ] && break
+		
+		case "$CMD" in
+			URI:*)
+				URI=$(echo $CMD | cut -d: -f2,3,4,5,6)
+			;;
+			Filename:*)
+				FILENAME=$(echo $CMD | cut -d: -f2,3,4,5,6 | sed 's/ //g')
+			;;
+			"Index-File: true")
+				INDEX_FILE=1
+			;;
+		esac
+	done
+	print "200 URI Start\nURI: $URI\n\n";
+
+	# TODO: check valid uri format
+	FILE=$(basename $URI)
+	ROOT=$(dirname $URI | cut -d: -f2,3,4,5,6 )
+				
+	if [ "$INDEX_FILE" = "1" ]
+	then
+		case "$FILE" in 
+			*Release*)
+				print "400 URI Failure\nURI: $URI\nMessage: Could not find index file $FILE.\n\n";
+			;;
+			*Packages.bz2)
+				print "400 URI Failure\nURI: $URI\nMessage: Could not find index file $FILE.\n\n";
+			;;
+			*Packages.gz)
+				dpkg-query --admindir "$ROOT/var/lib/dpkg/" -W --showformat "$(showformat)" | sed 's/^====/\n/g' | egrep -vx "(Essential|Replaces|Depends|Pre-Depends|Recommends|Enhances|Suggests|Provides|Conflicts): " >$FILENAME
+				gzip $FILENAME
+				mv -f $FILENAME.gz $FILENAME
+				print "201 URI Done\nURI: $URI\nFilename: $FILENAME\n\n";
+			;;
+		esac
+	else
+		mkdir -p $(dirname $FILENAME)/repack-cache/
+		( 
+		
+		cd $(dirname $FILENAME)/repack-cache/
+		
+		[ ! -f $(dirname $FILENAME)/repack-cache/$(basename $FILENAME) ] && dpkg-myrepack --root="$ROOT" $(echo $FILE | cut -d_ -f1) $(dirname $FILENAME)/repack-cache/$(basename $FILENAME) >/dev/null
+		ln -f $(dirname $FILENAME)/repack-cache/$(basename $FILENAME) $FILENAME
+		
+		#mv -f 3dchess_0.8.1-11.1_i386.deb 3dchess_0.9.1-11.1_i386.deb
+
+		if [ -f $FILENAME ]
+		then
+			print "201 URI Done\nURI: $URI\nFilename: $FILENAME\n\n";
+		else
+			print "400 URI Failure\nURI: $URI\nMessage: Could not find package $FILE.\n\n";
+		fi
+		
+		)
+	fi
+}
+
+#echo >/tmp/apt.log
+
+# Hello
+print "100 Capabilities\n";
+print "Version: 1.02\n";
+print "Pipeline: false\n";
+print "Send-Config: false\n";
+print "\n";
+
+while true
+do
+	read CMD || exit 0
+	log "SERVER/$CMD\n"
+
+	case "$CMD" in
+		600*)
+			get_uri "$CMD"
+		;;
+		601*)
+	                # Configuration
+			print "401 General Failure\nMessage: Config not supported\n\n";
+		;;
+		602*)
+                	# Auth credentials
+                	print "401 General Failure\nMessage: Credentials not supported\n\n";
+        	;;
+		603*)
+                	# Media change
+                	print "401 General Failure\nMessage: Media change not supported\n\n";
+		;;
+		*)
+                	# Unknown
+                	print "401 General Failure\nMessage: Unknown request\n\n";
+		;;
+	esac
+done

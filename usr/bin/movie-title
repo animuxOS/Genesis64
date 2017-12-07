@@ -1,0 +1,1534 @@
+#!/bin/sh
+
+# Copyright (c) 2005-2007, Sven Berkvens-Matthijsse
+# 
+# All rights reserved.
+# 
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 
+# * Redistributions of source code must retain the above copyright
+#   notice, this list of conditions and the following disclaimer.
+# 
+# * Redistributions in binary form must reproduce the above copyright
+#   notice, this list of conditions and the following disclaimer in the
+#   documentation and/or other materials provided with the distribution.
+# 
+# * Neither the name of deKattenFabriek nor the names of its
+#   contributors may be used to endorse or promote products derived from
+#   this software without specific prior written permission.
+# 
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Botch on errors
+set -e
+
+prefix="/usr"
+exec_prefix="${prefix}"
+datadir="${prefix}/share"
+bindir="${exec_prefix}/bin"
+
+. "${datadir}/videotrans/library.sh"
+
+###############################################################################
+# Program usage function
+###############################################################################
+
+usage()
+{
+	cat >&2 << EOF
+Usage: ${0##*/} [-C] -o vob -t title [-T XxY] [-s start]
+			[-c interval] video [video ...]
+
+-C		Clean up any mess left by the generation. You will use this
+		after you've run dvdauthor to create a DVD image to clean up
+		all the temporary files that this program left behind. At the
+		end of the normal run of this program, it will tell you how
+		to run this program again with the -C option.
+
+-o vob		Output VOB file that will contain the title. This may be
+		anything, for example <title.vob>.
+
+-t title	Directory containing the title sequence, which should have
+		been created by movie-make-title or movie-make-title-simple.
+
+-T XxY		Display movie picture-in-picture previews in a grid of X by Y
+		(normally automatically detected by the program).
+
+-s start	Start picture-in-picture movie previews at approximately this
+		number of seconds instead of at the beginning of the movie.
+		You should probably also use this option when the title
+		sequence was generated with the "static preview images" option
+		(using the -n option for the movie-make-title and
+		movie-make-title-simple programs).
+
+-c interval	Sets how long a chapter lasts in the movies. Chapters are
+		created every <interval> minutes in the movies. This makes
+		the movie easy to navigate with a DVD player's remote
+		control. The default is 2 minutes. If you do not want chapters
+		to be created, specify <none>.
+EOF
+	if [ "$1" != "" ]
+	then
+		echo "ERROR: $@" >&2
+		echo "" >&2
+	fi
+	exit 1
+}
+
+###############################################################################
+# Function to surround shellescape with another function, needed to dump the
+# arguments to this program below.
+###############################################################################
+
+echoescape()
+{
+	echo -n "`shellescape "$@"` "
+}
+
+###############################################################################
+# Temporary file name and cleanup
+###############################################################################
+
+TEMP="/tmp/.movie-title.$$"
+trap "rm -fr ${TEMP}* 2>/dev/null || :" EXIT
+
+###############################################################################
+# Parse options
+###############################################################################
+
+OUTPUT=""
+TITLE=""
+original_command_line="`for i ; do echoescape "$i" ; done`"
+clean=""
+tile_x=""
+START="0"
+chapter_interval="2"
+while getopts "o:t:T:s:Cc:" option
+do
+	case "${option}"
+	in
+		o)
+			OUTPUT="${OPTARG}"
+			;;
+
+		t)
+			TITLE="${OPTARG}"
+			;;
+
+		T)
+			case "${OPTARG}"
+			in
+				[0-9]x[0-9])
+					tile_x="${OPTARG%x?}"
+					tile_y="${OPTARG#?x}"
+					;;
+				[0-9][0-9]x[0-9])
+					tile_x="${OPTARG%x?}"
+					tile_y="${OPTARG#??x}"
+					;;
+				[0-9]x[0-9][0-9])
+					tile_x="${OPTARG%x??}"
+					tile_y="${OPTARG#?x}"
+					;;
+				[0-9][0-9]x[0-9][0-9])
+					tile_x="${OPTARG%x??}"
+					tile_y="${OPTARG#??x}"
+					;;
+				*)
+					usage "Illegal grid specification for option -T: ${OPTARG}
+      Format is XxY, where X and Y are one or two digits"
+					;;
+			esac
+			;;
+
+		s)
+			case "${OPTARG}"
+			in
+				*[!0-9]* | "")
+					usage "Illegal number of seconds specified for -s: ${OPTARG}"
+					;;
+				*)
+					START="${OPTARG}"
+					;;
+			esac
+			;;
+
+		C)
+			clean="yes"
+			;;
+
+		c)
+			case "${OPTARG}"
+			in
+				"none")
+					chapter_interval="0"
+					;;
+				*[!0-9]* | "")
+					usage "Illegal number of minutes specified for -i: ${OPTARG}"
+					;;
+				*)
+					chapter_interval="${OPTARG}"
+					;;
+			esac
+			;;
+
+		*)
+			usage "Unknown option specified"
+			;;
+	esac
+done
+
+###############################################################################
+# Check the options
+###############################################################################
+
+[ "${OUTPUT}" = "" ] && usage "No -o option specified"
+[ "${TITLE}" = "" ] && usage "No -t option specified"
+
+if ! check_filenames "${OUTPUT}" "${TITLE}"
+then
+	exit 1
+fi
+
+if [ -e "${OUTPUT}" -a ! -f "${OUTPUT}" ]
+then
+	usage "<${OUTPUT}> exists but is not a file!"
+	exit 1
+fi
+
+###############################################################################
+# At least one source file?
+###############################################################################
+
+shift "`expr ${OPTIND} - 1 || :`"
+num_sources="$#"
+[ "${num_sources}" -gt 0 ] || usage "Expected at least one source file"
+
+if ! check_filenames "$@"
+then
+	exit 1
+fi
+
+###############################################################################
+# Clean up the mess?
+###############################################################################
+
+if [ "${clean}" = "yes" ]
+then
+	message "Cleaning up."
+
+	rm -fr -- "${OUTPUT}-jpeg" \
+		"${OUTPUT}.no-menu.m2v" "${OUTPUT}-normal.png" \
+		"${OUTPUT}-selected.png" "${OUTPUT}-chosen.png" \
+		"${OUTPUT}-spumux.xml" "${OUTPUT}.mp2" "${OUTPUT}-overlay.png" \
+		"${OUTPUT}.m2v" "${OUTPUT}-dvdauthor.xml" "${OUTPUT}-info.xml" \
+		"${OUTPUT}-info.normal.png" "${OUTPUT}-info.selected.png" \
+		"${OUTPUT}-info.chosen.png" "${OUTPUT}-title.wav" \
+		"${OUTPUT}-title.mp2" "${OUTPUT}-title.ac3"
+	for source
+	do
+		[ -d "${source}-jpeg" ] && rm -fr -- "${source}-jpeg"
+		rm -f -- "${source}"-info[0-9]*.png "${source}"-info[0-9]*.vob
+	done
+
+	message "Cleaning up is done."
+	exit 0
+fi
+
+###############################################################################
+# Look in the title directory and find out how many images there are
+###############################################################################
+
+title_frames="`cd -- "${TITLE}" && { echo *.jpg 2>/dev/null || : ; }`"
+num_title_frames="`echo "${title_frames}" | wc -w | tr -d ' '`"
+if [ "${num_title_frames}" -lt 2 ]
+then
+	# Try looking for PNGs instead
+
+	title_frames="`cd -- "${TITLE}" && { echo *.png 2>/dev/null || : ; }`"
+	num_title_frames="`echo "${title_frames}" | wc -w | tr -d ' '`"
+	if [ "${num_title_frames}" -lt 2 ]
+	then
+		if [ -f "${TITLE}/static.jpg" ]
+		then
+			title_frames="static.jpg"
+			num_title_frames="1"
+		else
+			usage "No *.jpg or *.png in directory <${TITLE}>?"
+		fi
+	fi
+fi
+
+###############################################################################
+# Find out how large the title images are and decide on a mode accordingly
+###############################################################################
+
+identify -format "%w %h" "${TITLE}/${title_frames%% *}" > "${TEMP}"
+read xx yy < "${TEMP}"
+rm -f "${TEMP}"
+message "Title images are ${xx} by ${yy} pixels."
+
+if [ "${xx}" = "720" -a "${yy}" = "576" ]
+then
+	message "Title is a PAL mode title."
+	mode="pal"
+elif [ "${xx}" = "720" -a "${yy}" = "480" ]
+then
+	message "Title is an NTSC mode title."
+	mode="ntsc"
+else
+	usage "Title images should be either 720x576 (pal) or 720x480 (ntsc)
+       The images in <${TITLE}> are ${xx}x${yy} instead"
+fi
+
+###############################################################################
+# Find out whether we're animating the picture-in-picture previews (if we
+# have any picture-in-picture previews at all) or not
+###############################################################################
+
+if [ -f "${TITLE}/animation" ]
+then
+	animated="`cat "${TITLE}/animation"`"
+	if [ "${animated}" != "animated" -a "${animated}" != "static" -a \
+				"${animated}" != "none" ]
+	then
+		message "ERROR: The file <${TITLE}/animated> is broken, it should contain one of the words <animated>, <static> or <none>."
+		exit 1
+	fi
+else
+	# Default to "animated" for compatibility with old versions of
+	# movie-make-title
+
+	animated="animated"
+fi
+
+###############################################################################
+# Calculate border sizes
+###############################################################################
+
+if [ "${mode}" = "pal" ]
+then
+	border_x=40
+	border_y=42 # Should be 42+2/3
+	pixel_size="9375"
+else # if [ "${mode}" = "ntsc" ]
+	border_x=40
+	border_y=36 # Should be 35+5/9
+	pixel_size="11250"
+fi
+
+###############################################################################
+# What kind of tile and size should we use?
+###############################################################################
+
+max_tile_y="`expr \( ${yy} - ${border_y} - ${border_y} \) / 40 || :`"
+
+if [ "${tile_x}" = "" ]
+then
+	if [ "${animated}" = "none" ]
+	then
+		tile_x="`expr \( ${num_sources} + ${max_tile_y} - 1 \) / ${max_tile_y}`"
+		tile_y="`expr \( ${num_sources} + ${tile_x} - 1 \) / ${tile_x} || :`"
+	else
+		case "${num_sources}"
+		in
+			1)
+				tile_x="1"
+				tile_y="1"
+				;;
+			2)
+				tile_x="2"
+				tile_y="1"
+				;;
+			3 | 4)
+				tile_x="2"
+				tile_y="2"
+				;;
+			5 | 6)
+				tile_x="3"
+				tile_y="2"
+				;;
+			7 | 8 | 9)
+				tile_x="3"
+				tile_y="3"
+				;;
+			10 | 11 | 12)
+				tile_x="4"
+				tile_y="3"
+				;;
+			13 | 14 | 15 | 16)
+				tile_x="4"
+				tile_y="4"
+				;;
+			*)
+				usage "Cannot handle ${num_sources} sources (yet)
+				 You may use the -T option to set the grid size"
+				;;
+		esac
+	fi
+fi
+
+###############################################################################
+# Is the grid large enough?
+###############################################################################
+
+if [ "${num_sources}" -gt "`expr ${tile_x} \* ${tile_y} || :`" ]
+then
+	usage "The specified grid of ${tile_x} by ${tile_y} spaces is not large enough to
+       accomodate ${num_sources} movie previews. Specify another grid size
+       using the -T option."
+fi
+
+###############################################################################
+# Calculate how large each subpicture will be
+###############################################################################
+
+if [ "${animated}" != "none" ]
+then
+	subimage_x="`expr \( ${xx} - \( \( ${tile_x} + 1 \) \* ${border_x} \) \) / ${tile_x} || :`"
+	subimage_y_plus_text="`expr \( ${yy} - \( \( ${tile_y} + 1 \) \* ${border_y} \) \) / ${tile_y} || :`"
+	subimage_y="`expr ${subimage_y_plus_text} - 25 - 40 || :`"
+
+	if [ "${subimage_x}" -lt 16 ]
+	then
+		usage "The specified grid of ${tile_x} by ${tile_y} spaces is too large to
+				 display on the screen. There is not enough room to accomodate ${tile_x}
+				 pictures horizontally. Please specify another grid size using the -T
+				 option."
+	fi
+
+	if [ "${subimage_y}" -lt 16 ]
+	then
+		usage "The specified grid of ${tile_x} by ${tile_y} spaces is too large to
+				 display on the screen. There is not enough room to accomodate ${tile_y}
+				 pictures vertically. Please specify another grid size using the -T
+				 option."
+	fi
+else
+	subimage_x="`expr \( ${xx} - ${border_x} - \( ${tile_x} \* ${border_x} \) \) / ${tile_x} || :`"
+	subimage_y_plus_text="0"
+	if [ "${tile_y}" -gt 1 ]
+	then
+		subimage_y="`expr \( ${yy} - \( 3 \* ${border_y} \) \) / \( ${tile_y} - 1 \) || :`"
+	else
+		subimage_y="0"
+	fi
+	if [ "${tile_x}" -gt 4 ]
+	then
+		usage "When no preview images are displayed, at most four movies titles
+         can be displayed next to eachother. Specify a geometry using the
+         -T option where the first number is no larger than 4."
+	fi
+	if [ "${tile_y}" -gt "${max_tile_y}" ]
+	then
+		usage "When no preview images are display, no more than ${max_tile_y} movie
+         titles can be displayed under eachother. Specify a geometry using the
+         -T option where the second number is no larger than ${max_tile_y}."
+	fi
+fi
+
+###############################################################################
+# Detect how many frames are needed to have some video ready while the music
+# is playing. We need this if the title sequence is just an image but
+# animation is turned on (so we know how many frames to grab).
+###############################################################################
+
+if [ -s "${TITLE}/title.wav" ]
+then
+	if ! mplayer_identify "${TITLE}/title.wav" "audio_only"
+	then
+		exit 1
+	fi
+
+	audio_length="`wc -c < "${TITLE}/title.wav" | tr -d ' '`"
+	audio_length="`echo "scale=6; ( ( ${audio_length} - 44 ) * 8 ) / ${audio_bitrate}" | bc`"
+	if [ "${mode}" = "pal" ]
+	then
+		echo "scale=6; ( ${audio_length} * 25 )" | bc | sed 's,\..*,,' > "${TEMP}.audio_length"
+	else
+		echo "scale=6; ( ${audio_length} * 30 )" | bc | sed 's,\..*,,' > "${TEMP}.audio_length"
+	fi
+	audio_length="`cat "${TEMP}.audio_length"`"
+	if [ "${audio_length}" = "" ]
+	then
+		audio_length="0"
+	fi
+else
+	audio_length="0"
+fi
+
+###############################################################################
+# Loop over all the sources and produce some JPEGs for them.
+###############################################################################
+
+for source
+do
+	# Do we need these images at all?
+
+	if [ "${animated}" = "none" ]
+	then
+		if [ -d "${source}-jpeg" ]
+		then
+			rm -r -- "${source}-jpeg"
+		fi
+		mkdir -p -- "${source}-jpeg"
+		echo "okay" > "${source}-jpeg/done"
+		continue
+	fi
+
+	# Was this directory done already?
+
+	if [ -f "${source}-jpeg/done" ]
+	then
+		message "Skipping conversion of <${source}> to JPEG, already done! Remove <${source}-jpeg/done> if this is not correct."
+		continue
+	fi
+
+	# Read the video properties from the input file.
+
+	if ! mplayer_identify "${source}"
+	then
+		exit 1
+	fi
+
+	# Calculate the adjust width and height according to the video's
+	# current aspect ratio.
+
+	case "${s_aspect}"
+	in
+		0 | 0.0 | 0.00 | 0.000 | 0.0000)
+			s_aspect=""
+			;;
+		*)
+			s_aspect="-sax ${s_aspect} -say 1.0"
+			;;
+	esac
+
+	# Calculate new X and Y size, taking into account all the aspects.
+	# We use panscan so that the entire image area is always filled with video.
+
+	temp_dax="`expr ${subimage_x} \* ${pixel_size} / 10000 || :`"
+	eval "`${bindir}/movie-zoomcalc -sx ${x} -sy ${y} ${s_aspect} -dx ${subimage_x} -dy ${subimage_y} -dax ${temp_dax} -day ${subimage_y} -panscan`"
+
+	if [ "${animated}" = "animated" -a "${num_title_frames}" -gt "1" ]
+	then
+		message "Converting <${source}> to JPEG (${num_title_frames} frames)."
+		this_num_title_frames="`expr "${num_title_frames}" + 32 || :`"
+	elif [ "${num_title_frames}" = "1" -a "${audio_length}" -gt "0" \
+					-a "${animated}" = "animated" ]
+	then
+		message "Converting <${source}> to JPEG (${audio_length} frames)."
+		this_num_title_frames="`expr "${audio_length}" + 32 || :`"
+	else
+		# We use the value 32 here because the first frame is usually unusable
+		# (due to the -ss option) and mplayer stops one short of the maximum.
+
+		message "Converting <${source}> to a single JPEG file."
+		this_num_title_frames="32"
+	fi
+
+	if [ -d "${source}-jpeg" ]
+	then
+		rm -r -- "${source}-jpeg"
+	fi
+	mkdir -p -- "${source}-jpeg"
+
+	if ! mplayer -ss "${START}" -vo jpeg:quality=90:outdir="${source}-jpeg" \
+		-zoom -vf crop=${CX}:${CY},scale=${ZX}:${ZY},expand=${DX}:${DY} \
+		-nosound -frames "${this_num_title_frames}" -slave -nojoystick -nolirc \
+		-- "${source}" > "${TEMP}" 2>&1 < /dev/null
+	then
+		message "ERROR: mplayer failed to save the movie's frames as JPEGs. mplayer's output will now follow:"
+		cat "${TEMP}" >&2
+		exit 1
+	fi
+
+	# Remove first images. They're usually broken, especially if the -ss option
+	# seeked somewhere.
+
+	rm -- "${source}-jpeg"/000000[012]?.jpg
+
+	# Mark the dump as complete
+
+	echo "okay" > "${source}-jpeg/done"
+done
+
+###############################################################################
+# Generate commands for convert to draw title texts
+###############################################################################
+
+message "Creating overlay PNG file with texts and borders."
+
+source_pos_x=0
+source_pos_y=0
+source_x="${border_x}"
+if [ "${animated}" = "none" ]
+then
+	source_y="`expr ${border_y} + 20 || :`"
+else
+	source_y="`expr ${border_y} + 40 || :`"
+fi
+
+for source
+do
+	# Find out the name of the info text file
+	txt_file="${source%.*}.info"
+
+	# Get coordinates for the text outlines and such
+	if [ "${animated}" = "none" ]
+	then
+		tx="`expr ${source_x} + 64 || :`"
+		ty="${source_y}"
+	else
+		tx="${source_x}"
+		ty="`expr ${source_y} + ${subimage_y} + 25 || :`"
+	fi
+	tx_1="`expr ${tx} - 1 || :`"
+	tx1="`expr ${tx} + 1 || :`"
+	ty_1="`expr ${ty} - 1 || :`"
+	ty1="`expr ${ty} + 1 || :`"
+
+	# Set up font stuff
+	echo "font \"Palatino-Roman\""
+	echo "font-size 20"
+
+	# The first line in the file should be the title. If the .info file does not
+	# exist, use the file name as the title. The '^' character may be used to
+	# split lines.
+
+	if [ -f "${txt_file}" ]
+	then
+		head -1 -- "${txt_file}" 2>/dev/null | tr '^' '
+'
+	else
+		echo "${source%.*}"
+	fi | while read -r line
+	do
+		line="`imagemagick_escape "${line}"`"
+		echo "fill #000000"
+		echo "text ${tx_1},${ty_1} \"${line}\""
+		echo "text ${tx},${ty_1} \"${line}\""
+		echo "text ${tx1},${ty_1} \"${line}\""
+		echo "text ${tx_1},${ty} \"${line}\""
+		echo "text ${tx1},${ty} \"${line}\""
+		echo "text ${tx_1},${ty1} \"${line}\""
+		echo "text ${tx},${ty1} \"${line}\""
+		echo "text ${tx1},${ty1} \"${line}\""
+		echo "fill #ffffff"
+		echo "text ${tx},${ty} \"${line}\""
+
+		# Go to next vertical position in case we're display more than one line
+		if [ "${animated}" = "none" ]
+		then
+			ty="`expr "${ty}" + 20 || :`"
+		else
+			ty="`expr "${ty}" + 25 || :`"
+		fi
+		ty_1="`expr ${ty} - 1 || :`"
+		ty1="`expr ${ty} + 1 || :`"
+	done
+
+	# Draw rectangles around the subvideos
+
+	if [ "${animated}" != "none" ]
+	then
+		echo "push graphic-context"
+		echo "stroke rgba(255,255,255,0.5)"
+		echo "stroke-width 5"
+		echo "stroke-linecap square"
+		echo "stroke-linejoin miter"
+		echo "fill rgba(0,0,0,0)"
+		box_x1="`expr ${source_x} - 2 || :`"
+		box_y1="`expr ${source_y} - 2 || :`"
+		box_x2="`expr ${source_x} + ${subimage_x} + 2 || :`"
+		box_y2="`expr ${source_y} + ${subimage_y} + 2 || :`"
+		echo "rectangle ${box_x1},${box_y1} ${box_x2},${box_y2}"
+		echo "rectangle ${box_x2},${box_y1} ${box_x1},${box_y2}"
+		echo "pop graphic-context"
+	fi
+
+	# Go to the next source
+
+	source_pos_x="`expr ${source_pos_x} + 1 || :`"
+	source_x="`expr ${source_x} + ${subimage_x} + ${border_x} || :`"
+	if [ "${source_pos_x}" = "${tile_x}" ]
+	then
+		source_pos_x="0"
+		source_x="${border_x}"
+		source_pos_y="`expr ${source_pos_y} + 1 || :`"
+		if [ "${animated}" != "none" ]
+		then
+			source_y="`expr ${source_y} + 25 + ${subimage_y} + ${border_y} + 40 || :`"
+		else
+			source_y="`expr ${source_y} + ${subimage_y} || :`"
+		fi
+	fi
+done > "${TEMP}.convert"
+
+# Create the overlay image using the commands that were generated above
+
+convert -depth 8 -matte -colorspace Transparent -type PaletteMatte \
+	"${datadir}/videotrans/null.png" \
+	-background "rgba(0,0,0,0)" -splice "`expr ${xx} - 1 || :`x`expr ${yy} - 1 || :`+0+0" \
+	-draw "@${TEMP}.convert" "${OUTPUT}-overlay.png"
+
+###############################################################################
+# Determine the number of frames that the title sequence will consist of
+###############################################################################
+
+if [ "${num_title_frames}" -gt "1" ]
+then
+	this_num_title_frames="${num_title_frames}"
+elif [ "${audio_length}" -gt "0" -a "${animated}" = "animated" ]
+then
+	this_num_title_frames="${audio_length}"
+else
+	this_num_title_frames="1"
+fi
+
+if [ "${this_num_title_frames}" = "1" ]
+then
+	message "Creating one new JPEG image."
+else
+	message "Creating ${this_num_title_frames} new JPEG images."
+fi
+
+###############################################################################
+# Generate all the new images that are necessary to produce the title image
+# frames from.
+###############################################################################
+
+if [ -f "${OUTPUT}-jpeg/done" ]
+then
+	message "Skipping, already done! Remove <${OUTPUT}-jpeg/done> if this is not correct."
+else
+	# Create new JPEGs with all the other JPEGs combined
+
+	[ -d "${OUTPUT}-jpeg" ] && rm -r -- "${OUTPUT}-jpeg"
+	mkdir -p -- "${OUTPUT}-jpeg"
+
+	frame="31"
+	prepend="000000"
+	num_processing="0"
+	counter="0"
+	max_title_frame="`expr "${this_num_title_frames}" + "${frame}" || :`"
+
+	OUTPUT_escape="`imagemagick_escape "${OUTPUT}"`"
+	while [ "${frame}" -lt "${max_title_frame}" ]
+	do
+		# Get frame number
+
+		framenum="${prepend}${frame}"
+		if [ "${#framenum}" -gt 8 ]
+		then
+			prepend="${prepend#?}"
+			framenum="${prepend}${frame}"
+		fi
+
+		# Find the next title frame name and remove it from the list (but only
+		# if there is more than one title sequence frame)
+
+		title_frame="${title_frames%% *}"
+		if [ "${num_title_frames}" -gt "1" ]
+		then
+			title_frames="${title_frames#* }"
+		fi
+
+		# Find out which JPEGs to use from the sources
+
+		source_pos_x="0"
+		source_pos_y="0"
+		source_x="${border_x}"
+		source_y="`expr ${border_y} + 40 || :`"
+		for source
+		do
+			# Do we need these images at all?
+
+			if [ "${animated}" = "none" ]
+			then
+				continue
+			fi
+
+			# Create a command to superimpose the image
+
+			if [ "${animated}" = "static" ]
+			then
+				ssource="`imagemagick_escape "${source}"`"
+				echo "image Over ${source_x},${source_y} 0,0 \"${ssource}-jpeg/00000031.jpg\""
+			elif [ -s "${source}-jpeg/${framenum}.jpg" ]
+			then
+				ssource="`imagemagick_escape "${source}"`"
+				echo "image Over ${source_x},${source_y} 0,0 \"${ssource}-jpeg/${framenum}.jpg\""
+			else
+				# Frame does not exist: the title lasts longer than the movie
+				# Fill in the rectangle with a black box
+				echo "fill #000000"
+				echo "Rectangle ${source_x},${source_y} `expr ${source_x} + ${subimage_x} - 1`,`expr ${source_y} + ${subimage_y} - 1`"
+			fi
+
+			# Go to the next source
+
+			source_pos_x="`expr ${source_pos_x} + 1 || :`"
+			source_x="`expr ${source_x} + ${subimage_x} + ${border_x} || :`"
+			if [ "${source_pos_x}" = "${tile_x}" ]
+			then
+				source_pos_x="0"
+				source_x="${border_x}"
+				source_pos_y="`expr ${source_pos_y} + 1 || :`"
+				source_y="`expr ${source_y} + 25 + ${subimage_y} + ${border_y} + 40 || :`"
+			fi
+		done > "${TEMP}.convert${num_processing}"
+
+		# Drop on the overlay
+		echo "image Over 0,0 0,0 \"${OUTPUT_escape}-overlay.png\"" \
+				>> "${TEMP}.convert${num_processing}"
+
+		# Invoke convert in the background
+
+		echo -n "." >&2
+		convert "${TITLE}/${title_frame}" \
+			-draw "@${TEMP}.convert${num_processing}" \
+			-quality 90 "${OUTPUT}-jpeg/${framenum}.jpg" &
+
+		num_processing="`expr ${num_processing} + 1 || :`"
+		counter="`expr ${counter} + 1 || :`"
+		if [ "${num_processing}" = 2 ]
+		then
+			num_processing=0
+			wait
+			case "${counter}"
+			in
+				*00 | *50)
+					echo " (${counter})" >&2
+					;;
+			esac
+		fi
+
+		# Next frame
+
+		frame="`expr ${frame} + 1 || :`"
+	done
+
+	wait
+	echo " done" >&2
+	echo "" >&2
+
+	echo "okay" > "${OUTPUT}-jpeg/done"
+fi
+
+###############################################################################
+# Determine with which flags some of the program that are used below should be
+# called.
+###############################################################################
+
+source_rate="`cat "${TITLE}/title.fps"`"
+p_option=""
+F_option=""
+if [ "${mode}" = "pal" ]
+then
+	rate="25:1"
+	rate_float="25"
+	n_option="p"
+	if [ "${source_rate}" = "23976:1000" ]
+	then
+		source_rate="25:1"
+		yuvfps_cmd="cat"
+		F_option="-F 3"
+	else
+		yuvfps_cmd="yuvfps -s ${source_rate} -r ${rate} -v 0"
+	fi
+else
+	rate="30000:1001"
+	rate_float="29.97"
+	n_option="n"
+	if [ "${source_rate}" = "23976:1000" ]
+	then
+		rate_float="23.976"
+		yuvfps_cmd="cat"
+		p_option="-p"
+		F_option="-F 4"
+	else
+		yuvfps_cmd="yuvfps -s ${source_rate} -r ${rate} -v 0"
+	fi
+fi
+
+###############################################################################
+# Create a VOB file with all the images in it. Create an audio stream as well.
+###############################################################################
+
+if [ -f "${OUTPUT}-jpeg/done.m2v" ]
+then
+	message "VOB file is already created. Remove <${OUTPUT}-jpeg/done.m2v> if this is not correct."
+else
+	message "Creating a VOB file without sound using jpeg2yuv."
+
+	needed_copies="1"
+	if [ "${num_title_frames}" = "1" -a "${audio_length}" -gt "0" -a \
+				"${animated}" != "animated" ]
+	then
+		needed_copies="${audio_length}"
+	elif [ "${this_num_title_frames}" = "1" ]
+	then
+		needed_copies="16"
+	fi
+	rm -f -- "${TEMP}.yuv"
+	mkfifo -m 660 "${TEMP}.yuv"
+	(
+		jpeg2yuv -v 1 -b 31 -f 1 -n -1 -I p -l "${needed_copies}" \
+			-j "${OUTPUT}-jpeg/%08d.jpg" > "${TEMP}.yuv" 2>"${TEMP}.jpeg2yuv"
+	) &
+
+	jpeg2yuv_pid="$!"
+
+	{
+		# Avoid the use of "cat" if we can
+
+		if [ "${yuvfps_cmd}" = "cat" ]
+		then
+			< "${TEMP}.yuv" \
+			mpeg2enc -v 0 -f 8 -K kvcd -b 6000 -V 1000 -s -n "${n_option}" \
+				${p_option} ${F_option} -a 2 -q 7 -g 6 -G 15 -P -4 2 -2 1 \
+				-H -D 10 -o "${OUTPUT}".no-menu.m2v
+		else
+			< "${TEMP}.yuv" $yuvfps_cmd | \
+			mpeg2enc -v 0 -f 8 -K kvcd -b 6000 -V 1000 -s -n "${n_option}" \
+				${p_option} ${F_option} -a 2 -q 7 -g 6 -G 15 -P -4 2 -2 1 \
+				-H -D 10 -o "${OUTPUT}".no-menu.m2v
+		fi
+	} > "${TEMP}.encode" 2>&1 &
+	video_enc_pid="$!"
+
+	if ! wait "${jpeg2yuv_pid}"
+	then
+		message "ERROR: jpeg2yuv failed. jpeg2yuv's output will now follow:"
+		cat "${TEMP}.jpeg2yuv" >&2
+		exit 1
+	fi
+
+	if ! wait "${video_enc_pid}"
+	then
+		message "ERROR: Video encoding failed! Error output will now follow:"
+		cat "${TEMP}.encode" >&2
+		exit 1
+	fi
+
+	# Do the audio now
+
+	if [ -s "${TITLE}/title.wav" ]
+	then
+		if ! mplayer_identify "${TITLE}/title.wav" "audio_only"
+		then
+			exit 1
+		fi
+
+		if [ "${num_title_frames}" -gt "1" ]
+		then
+			audio_length2="`wc -c < "${TITLE}/title.wav" | tr -d ' '`"
+			audio_length2="`echo "scale=6; ( ( ${audio_length2} - 44 ) * 8 ) / ${audio_bitrate}" | bc`"
+			wanted_audio_length="`echo "scale=6; ${num_title_frames} / ${rate_float}" | bc`"
+			message "Original audio length: ${audio_length2} seconds. Wanted audio length: ${wanted_audio_length} seconds."
+
+			transform_factor="`echo "scale=20; ${audio_length2} / ${wanted_audio_length}" | bc`"
+		else
+			message "Using the title's audio file as-is."
+			transform_factor=""
+		fi
+
+		output="${OUTPUT}-title"
+		audio_params "${transform_factor}" "auto"
+
+		# Set up the named pipe
+
+		rm -f -- "${TEMP}.wav"
+		mkfifo -m 660 -- "${TEMP}.wav"
+		
+		# Start mplayer to transform the audio
+		
+		eval mplayer -slave -noframedrop -vo null ${audio_options} \
+			-osdlevel 0 -nojoystick -nolirc -- "${TITLE}/title.wav" \
+			\> "${TEMP}.mplayer" 2\>\&1 \< /dev/null \&
+		mplayer_pid="$!"
+
+		# Start mp2enc or ffmpeg to encode the audio
+
+		{
+			< "${TEMP}.wav" $audio_filter_cmd | eval ${audio_encode}
+		} > "${TEMP}.encode" 2>&1 &
+		audio_enc_pid="$!"
+
+		# Check whether each program exited as expected
+
+		if ! wait "${mplayer_pid}"
+		then
+			message "mplayer failed! mplayer error output follows:"
+			cat "${TEMP}.mplayer" >&2
+			exit 1
+		fi
+
+		if ! wait "${audio_enc_pid}"
+		then
+			message "Audio encoding failed! Error output follows:"
+			cat "${TEMP}.encode" >&2
+			exit 1
+		fi
+
+		# Delete temporary named pipe
+
+		rm -- "${TEMP}.wav"
+	else
+		# Copy the silence audio file
+
+		cp "${datadir}/videotrans/silence.mp2" "${OUTPUT}-title.mp2"
+	fi
+
+	# Remember that we've already done this
+
+	echo "okay" > "${OUTPUT}-jpeg/done.m2v"
+fi
+
+###############################################################################
+# Generate the menu buttons
+###############################################################################
+
+for style in "normal" "selected" "chosen"
+do
+	message "Generating menu selection button images for mode <${style}>."
+
+	source_pos_x=0
+	source_pos_y=0
+	source_x="${border_x}"
+	source_y="${border_y}"
+	echo "fill #ffffff" > "${TEMP}.convert"
+	echo "rectangle 0 0 ${xx} ${yy}" >> "${TEMP}.convert"
+	for source
+	do
+		# Draw the buttons in the correct places
+
+		echo "image Over ${source_x},${source_y} 32,32 \"${datadir}/videotrans/play_${style}.png\""
+
+		txt_file="${source%.*}.info"
+		if [ -f "${txt_file}" ]
+		then
+			if [ "`wc -l < "${txt_file}"`" -ge 2 ]
+			then
+				if [ "${animated}" = "none" ]
+				then
+					pos="`expr ${source_x} + 32 || :`"
+				else
+					pos="`expr ${source_x} + ${subimage_x} - 32 || :`"
+				fi
+				echo "image Over ${pos},${source_y} 32,32 \"${datadir}/videotrans/info_${style}.png\""
+			fi
+		fi
+
+		# Go to the next source
+
+		source_pos_x="`expr ${source_pos_x} + 1 || :`"
+		source_x="`expr ${source_x} + ${subimage_x} + ${border_x} || :`"
+		if [ "${source_pos_x}" = "${tile_x}" ]
+		then
+			source_pos_x="0"
+			source_x="${border_x}"
+			source_pos_y="`expr ${source_pos_y} + 1 || :`"
+			if [ "${animated}" != "none" ]
+			then
+				source_y="`expr ${source_y} + 25 + ${subimage_y} + ${border_y} + 40 || :`"
+			else
+				source_y="`expr ${source_y} + ${subimage_y} || :`"
+			fi
+		fi
+	done >> "${TEMP}.convert"
+	convert -depth 8 -colorspace RGB -type Palette \
+		-geometry "${xx}x${yy}!" "${datadir}/videotrans/null.png" \
+		-draw "@${TEMP}.convert" "${OUTPUT}-${style}.png"
+done
+
+message "Done generating menu selection borders."
+
+###############################################################################
+# Generate input XML for spumux to add the buttons to the menu
+###############################################################################
+
+OUTPUT_escape="`xmlescape "${OUTPUT}"`"
+cat > "${OUTPUT}-spumux.xml" <<EOF
+<subpictures>
+	<stream>
+		<spu start="00:00:00.00"
+			image="${OUTPUT_escape}-normal.png"
+			highlight="${OUTPUT_escape}-selected.png"
+			select="${OUTPUT_escape}-chosen.png"
+			transparent="ffffff"
+			force="yes"
+			autoorder="rows">
+EOF
+
+source_pos_x=0
+source_pos_y=0
+source_x="${border_x}"
+source_y="${border_y}"
+for source
+do
+	# Define one or two buttons here
+
+	echo "			<button x0=\"${source_x}\" y0=\"${source_y}\" x1=\"`expr ${source_x} + 32 || :`\" y1=\"`expr ${source_y} + 32 || :`\" />"
+	txt_file="${source%.*}.info"
+	if [ -f "${txt_file}" ]
+	then
+		if [ "`wc -l < "${txt_file}"`" -ge 2 ]
+		then
+			if [ "${animated}" = "none" ]
+			then
+				pos="`expr ${source_x} + 32 || :`"
+			else
+				pos="`expr ${source_x} + ${subimage_x} - 32 || :`"
+			fi
+			echo "			<button x0=\"${pos}\" y0=\"${source_y}\" x1=\"`expr ${pos} + 32 || :`\" y1=\"`expr ${source_y} + 32 || :`\" />"
+		fi
+	fi
+
+	# Go to the next source
+
+	source_pos_x="`expr ${source_pos_x} + 1 || :`"
+	source_x="`expr ${source_x} + ${subimage_x} + ${border_x} || :`"
+	if [ "${source_pos_x}" = "${tile_x}" ]
+	then
+		source_pos_x="0"
+		source_x="${border_x}"
+		source_pos_y="`expr ${source_pos_y} + 1 || :`"
+		if [ "${animated}" != "none" ]
+		then
+			source_y="`expr ${source_y} + 25 + ${subimage_y} + ${border_y} + 40 || :`"
+		else
+			source_y="`expr ${source_y} + ${subimage_y} || :`"
+		fi
+	fi
+done >> "${OUTPUT}-spumux.xml"
+
+cat >> "${OUTPUT}-spumux.xml" <<EOF
+		</spu>
+	</stream>
+</subpictures>
+EOF
+
+###############################################################################
+# Generate VOB file with sound
+###############################################################################
+
+message "Generating main title VOB file with sound."
+
+if [ -f "${OUTPUT}-title.ac3" ]
+then
+	audio_ext="ac3"
+else
+	audio_ext="mp2"
+fi
+if ! mplex -f 8 -v 0 -V -h -o "${OUTPUT}".m2v \
+		"${OUTPUT}.no-menu.m2v" "${OUTPUT}-title.${audio_ext}" > "${TEMP}" 2>&1
+then
+	message "mplex failed! Error output follows:"
+	cat "${TEMP}" >&2
+	exit 1
+fi
+
+###############################################################################
+# Stuff the menu into the VOB file that contains the audio
+###############################################################################
+
+message "Multiplexing the menu into the VOB file."
+if ! spumux -m dvd "${OUTPUT}-spumux.xml" \
+	< "${OUTPUT}.m2v" > "${OUTPUT}" 2>"${TEMP}"
+then
+	message "spumux failed! Error output follows:"
+	cat "${TEMP}" >&2
+	exit 1
+fi
+
+###############################################################################
+# Generate the button images for the information pages
+###############################################################################
+
+message "Generating buttons for information pages."
+for style in "normal" "selected" "chosen"
+do
+	convert -depth 8 -geometry "${xx}x${yy}!" "${datadir}/videotrans/null.png" \
+		-fill "#ffffff" -draw "rectangle 0,0 ${xx},${yy}" \
+		-draw "image Over 40,40 32,32 \"${datadir}/videotrans/menu_${style}.png\"" \
+		-draw "image Over `expr ${xx} - 40 - 32 || :`,40 32,32 \"${datadir}/videotrans/play_${style}.png\"" \
+		"${OUTPUT}-info.${style}.png"
+done
+
+cat > "${OUTPUT}-info.xml" <<EOF
+<subpictures>
+	<stream>
+		<spu start="00:00:00.00"
+			force="yes"
+			autoorder="rows"
+			transparent="ffffff"
+			image="${OUTPUT_escape}-info.normal.png"
+			highlight="${OUTPUT_escape}-info.selected.png"
+			select="${OUTPUT_escape}-info.chosen.png">
+			<button name="menu" x0="40" y0="40" x1="72" y1="72"
+				up="scroll_up" down="scroll_down" left="play" right="play" />
+			<button name="play" x0="`expr ${xx} - 40 - 32 || :`" y0="40"
+				x1="`expr ${xx} - 40 || :`" y1="72"
+				up="scroll_up" down="scroll_down" left="menu" right="menu" />
+			<action name="scroll_up"/>
+			<action name="scroll_down"/>
+		</spu>
+	</stream>
+</subpictures>
+EOF
+
+###############################################################################
+# Generate VOB files for the information about the titles
+###############################################################################
+
+# Border of 40 on both sides
+avail_x="`expr ${xx} - 40 - 40 || :`"
+# Border of 40 on top and bottom, 40 for icons
+avail_y="`expr ${yy} - 40 - 40 - 40 || :`"
+num_lines_at_once="`expr ${avail_y} / 20 || :`"
+
+for source
+do
+	# Do we need information for this source?
+
+	txt_file="${source%.*}.info"
+	[ -f "${txt_file}" ] || continue
+	num_lines="`wc -l < "${txt_file}"`"
+	[ "${num_lines}" -ge 2 ] || continue
+
+	# Convert the text information to an image
+
+	num_images="`expr \( ${num_lines} + ${num_lines_at_once} - 2 \) / ${num_lines_at_once} || :`"
+
+	message "Generating ${num_images} image(s) for information on <${txt_file}>."
+	image="0"
+	while [ "${image}" -lt "${num_images}" ]
+	do
+		if [ -s "${source}-info${image}.vob" ]
+		then
+			image="`expr ${image} + 1 || :`"
+			continue
+		fi
+
+		ty="`expr 40 + 40 + 20 || :`"
+		{
+			# Set up the page
+			echo "fill #000000"
+			echo "rectangle 0,0 ${xx},${yy}"
+			echo "font \"Palatino-Roman\""
+			echo "font-size 18"
+
+			# Skip title line
+			read -r first_line
+
+			# Skip to this page
+			skip="`expr ${num_lines_at_once} \* ${image} || :`"
+			while [ "${skip}" -gt "0" ]
+			do
+				read -r line || break
+				skip="`expr ${skip} - 1 || :`"
+			done
+
+			# Read the number of lines on the page
+			to_do="${num_lines_at_once}"
+			while [ "${to_do}" -gt "0" ]
+			do
+				IFS="" read -r line || break
+				case "${line}"
+				in
+					"#"[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F]" "*)
+						color="${line%% *}"
+						line="${line#????????}"
+						;;
+					*)
+						color="#ffffff"
+						;;
+				esac
+				half_color="`echo "${color}" | tr '0123456789abcdefABCDEF' '0011223344556677556677'`"
+				line="`imagemagick_escape "${line}"`"
+				echo "fill ${half_color}"
+				echo "text 39,`expr ${ty} - 1 || :` \"${line}\""
+				echo "text 40,`expr ${ty} - 1 || :` \"${line}\""
+				echo "text 41,`expr ${ty} - 1 || :` \"${line}\""
+				echo "text 39,${ty} \"${line}\""
+				echo "text 41,${ty} \"${line}\""
+				echo "text 39,`expr ${ty} + 1 || :` \"${line}\""
+				echo "text 40,`expr ${ty} + 1 || :` \"${line}\""
+				echo "text 41,`expr ${ty} + 1 || :` \"${line}\""
+				echo "fill ${color}"
+				echo "text 40,${ty} \"${line}\""
+				ty="`expr ${ty} + 20 || :`"
+				to_do="`expr ${to_do} - 1 || :`"
+			done
+
+			# Draw a scrollbar
+
+			sbx1="`expr ${xx} - 40 - 16 || :`"
+			sby1="`expr 40 + 40 || :`"
+			sbx2="`expr ${xx} - 40 || :`"
+			sby2="`expr ${yy} - 40 || :`"
+			
+			echo "fill #ffffff"
+			echo "rectangle ${sbx1},${sby1} ${sbx2},${sby2}"
+			sbfy="`expr \( ${sby2} - ${sby1} \) / ${num_images} || :`"
+			sbfy1="`expr \( ${sbfy} \* ${image} \) + ${sby1} || :`"
+			sbfy2="`expr \( ${sbfy} \* ${image} \) + ${sby1} + ${sbfy} || :`"
+			echo "fill #ff0000"
+			echo "rectangle `expr ${sbx1} + 2 || :`,`expr ${sbfy1} + 2 || :` `expr ${sbx2} - 2 || :`,`expr ${sbfy2} - 2 || :`"
+		} < "${txt_file}" > "${TEMP}.convert"
+
+		# Draw the entire image
+
+		ssource="`shellescape "${source}"`"
+		convert -depth 8 -geometry "${xx}x${yy}!" "${datadir}/videotrans/null.png" \
+			-draw "@${TEMP}.convert" "${source}-info${image}.png"
+
+		if ! {
+			png2yuv -n 20 -f "${rate_float}" -I p \
+				-j "${source}-info${image}.png" -v 0 | \
+			mpeg2enc -v 0 -f 8 -K kvcd -b 6000 -V 1000 -s \
+				-n "${n_option}" -a 2 -q 7 -g 6 -G 15 -P \
+				-4 2 -2 1 -H -D 10 -o "${source}-info${image}.m2v"
+		} > "${TEMP}" 2>&1
+		then
+			message "Failed to encode a still image. Error output follows:"
+			cat "${TEMP}" >&2
+			exit 1
+		fi
+
+		if ! mplex -f 8 -v 0 -V -h -o "${source}-info${image}-temp.m2v" \
+			"${source}-info${image}.m2v" "${datadir}/videotrans/silence.mp2" \
+			> "${TEMP}" 2>&1
+		then
+			message "mplex failed! Error output follows:"
+			cat "${TEMP}" >&2
+			exit 1
+		fi
+
+		if ! spumux -m dvd "${OUTPUT}-info.xml" \
+			< "${source}-info${image}-temp.m2v" > "${source}-info${image}.vob" \
+			2>"${TEMP}"
+		then
+			message "spumux failed! Error output follows:"
+			cat "${TEMP}" >&2
+			exit 1
+		fi
+
+		rm -- "${source}-info${image}.m2v" "${source}-info${image}-temp.m2v"
+		image="`expr ${image} + 1 || :`"
+	done
+done
+
+rm -f -- "${TEMP}".*
+
+###############################################################################
+# Generate the configuration file for dvdauthor
+###############################################################################
+
+message "Generating dvdauthor configuration file <${OUTPUT}-dvdauthor.xml>."
+
+chapter_string=""
+if [ "${chapter_interval}" -gt "0" ]
+then
+	chapter_string="chapters=\"0"
+	chapter_time="${chapter_interval}"
+	chapter_time_max="480"
+	while [ "${chapter_time}" -lt "${chapter_time_max}" ]
+	do
+		chapter_hour="`expr "${chapter_time}" / 60 || :`"
+		chapter_minute="`expr "${chapter_time}" % 60 || :`"
+		if [ "${#chapter_minute}" -lt 2 ]
+		then
+			chapter_minute="0${chapter_minute}"
+		fi
+		chapter_string="${chapter_string},${chapter_hour}:${chapter_minute}:00"
+		chapter_time="`expr "${chapter_time}" + "${chapter_interval}" || :`"
+	done
+	chapter_string="${chapter_string}\""
+fi
+
+buttons=""
+source_num=1
+for source
+do
+	buttons="${buttons}<button>g0=0; jump titleset ${source_num} menu;</button>
+"
+	txt_file="${source%.*}.info"
+	if [ -f "${txt_file}" ]
+	then
+		num_lines="`wc -l < "${txt_file}"`"
+		if [ "${num_lines}" -ge 2 ]
+		then
+			buttons="${buttons}<button>g0=1; jump titleset ${source_num} menu;</button>
+"
+		fi
+	fi
+	source_num="`expr ${source_num} + 1 || :`"
+done
+
+# Autodetect settings for dvdauthorescape
+dvdauthorescape "" > /dev/null
+
+{
+	OUTPUT_escape="`xmlescape "${OUTPUT}"`"
+	if [ "${num_title_frames}" = "1" -a "${audio_length}" = "0" ]
+	then
+		pause=' pause="inf"'
+		post='<!-- No post commands -->'
+	else
+		pause=''
+		post='<post>jump cell 1;</post>'
+	fi
+
+	cat <<EOF
+<dvdauthor>
+	<vmgm>
+		<menus>
+			<!-- Main menu where the user starts -->
+			<video format="${mode}" aspect="4:3" resolution="${xx}x${yy}" />
+			<audio/>
+			<pgc entry="title"${pause}>
+				<pre>
+					if (g1 == 999) { button = g2; g1 = 0; }
+				</pre>
+				<vob file="${OUTPUT_escape}"/>
+				${buttons}
+				${post}
+			</pgc>
+		</menus>
+	</vmgm>
+EOF
+
+	source_num="0"
+	button_num="1024"
+	for source
+	do
+		source_num="`expr ${source_num} + 1 || :`"
+		cat <<EOF
+	<titleset>
+EOF
+		txt_file="${source%.*}.info"
+		wrote_menu="no"
+		if [ -f "${txt_file}" ]
+		then
+			num_lines="`wc -l < "${txt_file}"`"
+			if [ "${num_lines}" -ge 2 ]
+			then
+				wrote_menu="yes"
+				cat <<EOF
+		<menus>
+			<!-- First menu of a titleset is a jumppad -->
+			<video format="${mode}" aspect="4:3" resolution="${xx}x${yy}" />
+			<audio/>
+			<pgc>
+				<pre>if (g0 == 0) { jump title 1; } else { jump menu 2; }</pre>
+			</pgc>
+EOF
+				num_images="`expr \( ${num_lines} + ${num_lines_at_once} - 2 \) / ${num_lines_at_once} || :`"
+				image="0"
+				ssource="`xmlescape "${source}"`"
+				while [ "${image}" -lt "${num_images}" ]
+				do
+					next="`expr \( \( ${image} + 1 \) % ${num_images} \) + 2 || :`"
+					prev="`expr \( \( ${image} + ${num_images} - 1 \) % ${num_images} \) + 2 || :`"
+					cat <<EOF
+			<pgc pause="inf">
+				<vob file="${ssource}-info${image}.vob"/>
+				<button name="menu">g1=999;g2=`expr ${button_num} + 1024 || :`;jump vmgm menu entry title;</button>
+				<button name="play">g1=999;g2=${button_num};jump title 1;</button>
+				<button name="scroll_up">jump menu ${prev};</button>
+				<button name="scroll_down">jump menu ${next};</button>
+			</pgc>
+EOF
+					image="`expr ${image} + 1 || :`"
+				done
+				button_num="`expr ${button_num} + 1024 || :`"
+				cat <<EOF
+		</menus>
+EOF
+			fi
+		fi
+		if [ "${wrote_menu}" = "no" ]
+		then
+			cat <<EOF
+		<menus>
+			<!-- First menu of a titleset is a jumppad -->
+			<video format="${mode}" aspect="4:3" resolution="${xx}x${yy}" />
+			<audio/>
+			<pgc>
+				<pre>jump title 1;</pre>
+			</pgc>
+		</menus>
+EOF
+		fi
+		button_num="`expr ${button_num} + 1024 || :`"
+		cat <<EOF
+		<titles>
+			<video/>
+			<audio/>
+			<pgc>
+EOF
+		case "${source}"
+		in
+			*.m2v)
+				source_escape="`dvdauthorescape "${source}"`"
+				source_escape="`xmlescape "${source_escape}"`"
+				if [ -f "${source%.m2v}.ac3" ]
+				then
+					cat <<EOF
+				<vob file="mplex -f 8 -v 0 -V -h -o /dev/stdout ${source_escape} ${source_escape%.*}.ac3 |" ${chapter_string} />
+EOF
+				elif [ -f "${source%.m2v}.mp2" ]
+				then
+					cat <<EOF
+				<vob file="mplex -f 8 -v 0 -V -h -o /dev/stdout ${source_escape} ${source_escape%.*}.mp2 |" ${chapter_string} />
+EOF
+				else
+					echo "Could not find any audio to go with video file <${source}>" >&2
+					exit 1
+				fi
+				;;
+			*)
+				source_escape="`xmlescape "${source}"`"
+				cat <<EOF
+					<vob file="${source_escape}" ${chapter_string} />
+EOF
+				;;
+		esac
+		cat <<EOF
+				<post>call vmgm menu;</post>
+			</pgc>
+		</titles>
+	</titleset>
+EOF
+	done
+
+	cat <<EOF
+</dvdauthor>
+EOF
+} > "${OUTPUT}-dvdauthor.xml" 
+
+# Tell the user what to do next
+
+message "To create the DVD, run:"
+echo "             dvdauthor -o dvd_directory -x `shellescape ${OUTPUT}`-dvdauthor.xml" >&2
+echo "" >&2
+message "To clean up any mess afterwards, run:"
+echo "             `shellescape "${0##*/}"` -C ${original_command_line}" >&2
+exit 0
+
+# vim:ts=2:sw=2

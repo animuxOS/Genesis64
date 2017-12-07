@@ -1,0 +1,926 @@
+<?xml version="1.0"?>
+<gconf>
+        <dir name="schemas">
+                <dir name="apps">
+                        <dir name="gnome-keyring">
+                                <dir name="daemon-components">
+                                        <entry name="pkcs11">
+                                                <local_schema short_desc="Onko gnome-keyring PKCS#11-komponentti käytössä.">
+                                                        <longdesc>Tämä valinta ottaa käyttöön gnome-keyring-palvelimen PKCS#11-komponentin. Muutos tulee voimaan, kun gnome-keyring-palvelin käynnistetään uudestaan, esimerkiksi sisäänkirjauduttaessa. Tämä asetus voidaan ohittaa palvelimelle annetuilla komentorivivalitsimilla.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="ssh">
+                                                <local_schema short_desc="Onko gnome-keyring SSH-agentti käytössä.">
+                                                        <longdesc>Tämä valinta ottaa käyttöön gnome-keyring-palvelimen SSH-agentin. Muutos tulee voimaan, kun gnome-keyring-palvelin käynnistetään uudestaan, esimerkiksi sisäänkirjauduttaessa. Tämä asetus voidaan ohittaa palvelimelle annetuilla komentorivivalitsimilla.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="gnome-volume-control">
+                                <dir name="ui">
+                                        <entry name="window_width">
+                                                <local_schema short_desc="Ikkunan leveys">
+                                                        <longdesc>Näytettävän ikkunan leveys</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="window_height">
+                                                <local_schema short_desc="Ikkunan korkeus">
+                                                        <longdesc>Näytettävän ikkunan korkeus</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                        <dir name="metacity">
+                                <dir name="keybinding_commands">
+                                        <entry name="command">
+                                                <local_schema short_desc="Komennot, jotka käynnistyvät pikanäppäimin">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_N-avaimet määrittelevät pikanäppäimet, jotka liittyvät näihin komentoihin. Avaimen run_command_N pikanäppäimen painaminen suorittaa komennon command_N.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_window_screenshot">
+                                                <local_schema short_desc="Ikkunan kuvakaappauksen ottokomento">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_window_screenshot-avain määrittelee pikanäppäimen, joka käynnistää tämän asetuksen määrittelemän ohjelman.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="command_screenshot">
+                                                <local_schema short_desc="Kuvakaappauksen ottokomento">
+                                                        <longdesc>/apps/metacity/global_keybindings/run_command_screenshot-avain määrittelee pikanäppäimen, joka käynnistää tämän asetuksen määrittelemän ohjelman.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="global_keybindings">
+                                        <entry name="run_command">
+                                                <local_schema short_desc="Suorita annettu komento">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_terminal">
+                                                <local_schema short_desc="Käynnistä pääte">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_window_screenshot">
+                                                <local_schema short_desc="Ota kuvakaappaus ikkunasta">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="run_command_screenshot">
+                                                <local_schema short_desc="Ota kuvakaappaus">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_run_dialog">
+                                                <local_schema short_desc="Näytä paneelin suoritusikkuna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="panel_main_menu">
+                                                <local_schema short_desc="Näytä paneelivalikko">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_down">
+                                                <local_schema short_desc="Siirry alla olevaan työtilaan">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_up">
+                                                <local_schema short_desc="Siirry yllä olevaan työtilaan">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_right">
+                                                <local_schema short_desc="Siirry oikealla olevaan työtilaan">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_left">
+                                                <local_schema short_desc="Siirry vasemmalla olevaan työtilaan">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_12">
+                                                <local_schema short_desc="Siirry työtilaan 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_11">
+                                                <local_schema short_desc="Siirry työtilaan 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_10">
+                                                <local_schema short_desc="Siirry työtilaan 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_9">
+                                                <local_schema short_desc="Siirry työtilaan 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_8">
+                                                <local_schema short_desc="Siirry työtilaan 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_7">
+                                                <local_schema short_desc="Siirry työtilaan 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_6">
+                                                <local_schema short_desc="Siirry työtilaan 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_5">
+                                                <local_schema short_desc="Siirry työtilaan 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_4">
+                                                <local_schema short_desc="Siirry työtilaan 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_3">
+                                                <local_schema short_desc="Siirry työtilaan 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_2">
+                                                <local_schema short_desc="Siirry työtilaan 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_to_workspace_1">
+                                                <local_schema short_desc="Siirry työtilaan 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="show_desktop">
+                                                <local_schema short_desc="Piilota kaikki ikkunat ja kohdista työpöytä">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels_backward">
+                                                <local_schema short_desc="Siirry heti taaksepäin paneelien ja työpöydän välillä">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_panels">
+                                                <local_schema short_desc="Siirry heti paneeleiden ja työtilan välillä">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows_backward">
+                                                <local_schema short_desc="Siirry heti taaksepäin ikkunoiden välillä">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_windows">
+                                                <local_schema short_desc="Siirry heti ikkunoiden välillä">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group_backward">
+                                                <local_schema short_desc="Siirry taaksepäin sovelluksen ikkunoiden välillä ponnahdusikkunalla">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_group">
+                                                <local_schema short_desc="Siirry sovelluksen ikkunoiden välillä ponnahdusikkunalla">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group_backward">
+                                                <local_schema short_desc="Siirry heti taaksepäin sovelluksen ikkunoiden välillä">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="cycle_group">
+                                                <local_schema short_desc="Siirry heti sovelluksen ikkunoiden välillä">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels_backward">
+                                                <local_schema short_desc="Siirry taaksepäin paneeleiden ja työtilan välillä (selausikkuna)">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_panels">
+                                                <local_schema short_desc="Siirry paneeleiden ja työpöydän välillä (selausikkuna)">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows_backward">
+                                                <local_schema short_desc="Siirry taaksepäin ikkunoiden välillä (selausikkuna)">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="switch_windows">
+                                                <local_schema short_desc="Siirry ikkunoiden välillä (selausikkuna)">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="window_keybindings">
+                                        <entry name="move_to_side_w">
+                                                <local_schema short_desc="Siirrä ikkuna oikeean reunaan">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_e">
+                                                <local_schema short_desc="Siirrä ikkuna vasemapaan laitaan">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_s">
+                                                <local_schema short_desc="Siirrä ikkuna alalaitaan">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_side_n">
+                                                <local_schema short_desc="Siirrä ikkuna ylälaitaan">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_se">
+                                                <local_schema short_desc="Siirrä ikkuna vasempaan alakulmaan">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_sw">
+                                                <local_schema short_desc="Siirrä ikkuna oikeaan alakulmaan">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_ne">
+                                                <local_schema short_desc="Siirrä ikkuna oikeaan yläkulmaan">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_corner_nw">
+                                                <local_schema short_desc="Siirrä ikkuna vasempaan yläkulmaan">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_horizontally">
+                                                <local_schema short_desc="Suurenna ikkuna vaakasuunnassa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize_vertically">
+                                                <local_schema short_desc="Suurenna ikkuna pystysuunnassa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="lower">
+                                                <local_schema short_desc="Laske ikkuna muiden alle">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise">
+                                                <local_schema short_desc="Nosta ikkuna muiden päälle">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_or_lower">
+                                                <local_schema short_desc="Nosta, jos ikkuna peittynyt, muuten laske">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_down">
+                                                <local_schema short_desc="Siirrä ikkunaa yksi työtila alas">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_up">
+                                                <local_schema short_desc="Siirrä ikkunaa yksi työtila ylös">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_right">
+                                                <local_schema short_desc="Siirrä ikkunaa yksi työtila oikealle">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_left">
+                                                <local_schema short_desc="Siirrä ikkunaa yksi työtila vasemmalle">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_12">
+                                                <local_schema short_desc="Siirrä ikkuna työtilaan 12">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_11">
+                                                <local_schema short_desc="Siirrä ikkuna työtilaan 11">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_10">
+                                                <local_schema short_desc="Siirrä ikkuna työtilaan 10">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_9">
+                                                <local_schema short_desc="Siirrä ikkuna työtilaan 9">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_8">
+                                                <local_schema short_desc="Siirrä ikkuna työtilaan 8">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_7">
+                                                <local_schema short_desc="Siirrä ikkuna työtilaan 7">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_6">
+                                                <local_schema short_desc="Siirrä ikkuna työtilaan 6">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_5">
+                                                <local_schema short_desc="Siirrä ikkuna työtilaan 5">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_4">
+                                                <local_schema short_desc="Siirrä ikkuna työtilaan 4">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_3">
+                                                <local_schema short_desc="Siirrä ikkuna työtilaan 3">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_2">
+                                                <local_schema short_desc="Siirrä ikkuna työtilaan 2">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="move_to_workspace_1">
+                                                <local_schema short_desc="Siirrä ikkuna työtilaan 1">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_on_all_workspaces">
+                                                <local_schema short_desc="Näytä tai älä näytä ikkunaa joka työtilassa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_resize">
+                                                <local_schema short_desc="Muuta ikkunan kokoa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="begin_move">
+                                                <local_schema short_desc="Siirrä ikkunaa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="minimize">
+                                                <local_schema short_desc="Pienennä ikkuna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="close">
+                                                <local_schema short_desc="Sulje ikkuna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_shaded">
+                                                <local_schema short_desc="Vaihda rullaustilaa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="unmaximize">
+                                                <local_schema short_desc="Palauta ikkuna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="maximize">
+                                                <local_schema short_desc="Suurenna ikkuna">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_maximized">
+                                                <local_schema short_desc="Vaihda suurennustilaa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_above">
+                                                <local_schema short_desc="Vaihda aina päällimmäisenä -tilaa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="toggle_fullscreen">
+                                                <local_schema short_desc="Vaihda kokoruututilaa">
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="activate_window_menu">
+                                                <local_schema short_desc="Aktivoi ikkunavalikko">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="workspace_names">
+                                        <entry name="name">
+                                                <local_schema short_desc="Työtilan nimi">
+                                                        <longdesc>Työtilan nimi.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                                <dir name="general">
+                                        <entry name="disable_workarounds">
+                                                <local_schema short_desc="Poista käytöstä &quot;ominaisuuksia&quot;, joita vanhat tai rikkinäiset sovellukset vaativat toimiakseen">
+                                                        <longdesc>Jotkut sovellukset eivät kunnioita määrittelyjä ja tämä johtaa ongelmiin ikkunamanagerin kanssa. Tämä valitsin laittaa Metacityn tarkalleen oikein toimivaan tilaan, joka takaa yhtenäisen käyttöliittymän jos voidaan olla varmoja ettei tällaisia väärin toimivia ohjelmia käytetä.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="application_based">
+                                                <local_schema short_desc="(Ei toteutettu) Navigointi toimii sovelluksittain, ei ikkunoittain.">
+                                                        <longdesc>Jos tosi, Metacity toimii sovelluksiin keskittyvästi, ei ikkunoihin keskittyvästi. Tämä on hieman abstrakti käsite, mutta yleisesti sovelluksiin keskittyvä tila toimii enemmän Macin kuin Windowsin kaltaisesti. Kun ikkuna kohdistetaan sovellustilassa, kaikki sovelluksen ikkunat nousevat. Lisäksi kohdistusnapsautukset eivät välity muiden sovellusten ikkunoille. Sovellustilaa ei ole suurimmaksi osaksi vielä toteutettu kunnolla.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="reduced_resources">
+                                                <local_schema short_desc="Jos tosi, käytä vähemmän resursseja käytettävyyden kustannuksella">
+                                                        <longdesc>Jos tosi, metacity antaa käyttäjälle vähemmän palautetta piirtämällä kehykset viivoina, välttämällä animaatioita ja muin keinoin. Tämä vähentää käytettävyyttä useimpien käyttäjien kohdalla, mutta saattaa saada vanhentuneet sovellukset toimimaan oikein tai mahdollistaa hitaiden päätepalvelimien käytön. Kehyksiä ei kuitenkaan piirretä viivoina, jos esteettömyysominaisuudet ovat käytössä.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="compositing_manager">
+                                                <local_schema short_desc="Kerrostuksen hallintaohjelma">
+                                                        <longdesc>Määrittää, tulisiko metacityn toimia kerrostuksen hallintaohjelmana.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell_type">
+                                                <local_schema short_desc="Näkyvän piippauksen tyyppi">
+                                                        <longdesc>Kertoo Metacitylle, miten ilmaista näkyvästi, että järjestelmä tai ohjelma on päästänyt äänimerkin. Mahdollisia arvoja on tällä hetkellä kaksi: &quot;fullscreen&quot;, joka saa koko ruudun välkähtämään mustasta valkoiseksi ja &quot;frame_flash&quot;, joka saa merkin päästäneen sovelluksen ikkunan otsikkopalkin välkähtämään. Jos merkin lähettäjä on tuntematon (kuten yleensä kun &quot;järjestelmä piippaa&quot;), nykyisen ikkunan otsikkopalkki välkähtää.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="audible_bell">
+                                                <local_schema short_desc="Järjestelmän piippaus on kuultavissa">
+                                                        <longdesc>Määrittelee, voivatko sovellukset tai järjestelmä päästää kuultavia &quot;piippauksia&quot;. Tätä voi käyttää yhdessä &quot;näkyvien piippausten&quot; kanssa ja sallia &quot;hiljaiset piippaukset&quot;.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="visual_bell">
+                                                <local_schema short_desc="Käytä näkyviä piippauksia">
+                                                        <longdesc>Ottaa käyttöön näkyvän ilmaisimen järjestelmän &apos;piipauksille. Tämä on hyödyllistä, jos kuulo on heikko tai ympäristö on meluinen.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="num_workspaces">
+                                                <local_schema short_desc="Työtilojen määrä">
+                                                        <longdesc>Työtilojen lukumäärä. Arvon täytyy olla nollaa suurempi, ja sillä on kiinteä yläraja, jotta työpöytää ei vahingossa voi tehdä käyttökelvottomaksi pyytämällä liian monia työtiloja.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_font">
+                                                <local_schema short_desc="Ikkunan otsikon kirjasin">
+                                                        <longdesc>Kirjasinlajin kuvausmerkkijono otsikkopalkkeja varten. Kuvauksen määrittelemä koko vaikuttaa ainoastaan, jos asetuksen titlebar_font_size arvo on 0. Lisäksi tämä asetus ei ole käytössä, jos asetus titlebar_uses_desktop_font on tosi.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="titlebar_uses_system_font">
+                                                <local_schema short_desc="Järjestelmän oletuskirjasin ikkunoiden otsikoissa">
+                                                        <longdesc>Jos tosi, jätä titlebar_font-asetus huomiotta, ja käytä sovellusten tavallista kirjasinta ikkunoiden otsikoissa.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="theme">
+                                                <local_schema short_desc="Nykyinen teema">
+                                                        <longdesc>Teema määrittää ikkunoiden reunojen, valikkopalkkien yms. ulkonäön</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise_delay">
+                                                <local_schema short_desc="Viive (millisekunteina) automaattista nostoa varten">
+                                                        <longdesc>Viive ennen ikkunan nousemista, jos auto_raise on tosi. Viive on millisekunteina.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="auto_raise">
+                                                <local_schema short_desc="Nosta kohdistettu ikkuna itsestään">
+                                                        <longdesc>Jos arvo on tosi ja kohdistustila on joko &quot;sloppy&quot; tai &quot;mouse&quot;, nostetaan kohdistettu ikkuna automaattisesti avaimessa auto_raise-delay määritellyn viiveen jälkeen. Tämä ei liity ikkunan napsauttamiseen sen nostamiseksi eikä ikkunan kohdistamiseen raahaustoiminnon aikana.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_right_click_titlebar">
+                                                <local_schema short_desc="Toiminto otsikkopalkin napsautukselle oikealla napilla">
+                                                        <longdesc>Tämä valinta määrittelee otsikkopalkin oikealla napilla napsautuksen toiminnon. Tällä hetkellä mahdolliset toiminnot ovat &quot;toggle_shade&quot;, joka rullaa ikkunan ylös tai avaa rullauksen, &quot;toggle_maximize&quot;, joka suurentaa tai palauttaa ikkunan, &quot;minimize&quot;, joka pienentää ikkunan tai &quot;none&quot; joka ei tee mitään.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_middle_click_titlebar">
+                                                <local_schema short_desc="Toiminto otsikkopalkin napsautukselle keskinapilla">
+                                                        <longdesc>Tämä valinta määrittelee otsikkopalkin keskinapilla napsautuksen toiminnon. Tällä hetkellä mahdolliset toiminnot ovat &quot;toggle_shade&quot;, joka rullaa ikkunan ylös tai avaa rullauksen, &quot;toggle_maximize&quot;, joka suurentaa tai palauttaa ikkunan, &quot;minimize&quot;, joka pienentää ikkunan tai &quot;none&quot; joka ei tee mitään.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="action_double_click_titlebar">
+                                                <local_schema short_desc="Toiminto otsikkopalkin kaksoisnapsautettaelle">
+                                                        <longdesc>Tämä valinta määrittelee otsikkopalkin kaksoisnapsautuksen toiminnon. Tällä hetkellä mahdolliset toiminnot ovat &quot;toggle_shade&quot;, joka rullaa ikkunan ylös tai avaa rullauksen, &quot;toggle_maximize&quot;, joka suurentaa tai palauttaa ikkunan, &quot;minimize&quot;, joka pienentää ikkunan tai &quot;none&quot; joka ei tee mitään.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="raise_on_click">
+                                                <local_schema short_desc="Tulisiko nostamisen olla muiden toimenpiteiden sivuvaikutus">
+                                                        <longdesc>Monet toiminnot, kuten ikkunan alueelle napsautus, ikkunan siirtäminen tai koon muuttaminen, nostavat oletuksena ikkunan päällimmäiseksi. Aseta tämä valinta arvoon &quot;false&quot;, jos haluat erottaa ikkunan nostamisen muista toiminnoista. Tätä ei ole suositeltavaa tehdä. Tämä jättää huomioimatta muiden ikkunoiden tekemät nostopyynnöt, lue lisää osoitteesta bugzilla.gnome.org/show_bug.cgi?id=445447#c6.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_new_windows">
+                                                <local_schema short_desc="Määrittele kuinka uudet ikkunat kohdistetaan">
+                                                        <longdesc>Tämä valitsin antaa lisämahdollisuuksia ohjata, kuinka uudet ikkunan kohdistetaan. Kentällä on kaksi mahdollista; &quot;smart&quot; käyttää käyttäjän valitsemaa kohdistustilaa ja &quot;strict&quot; estää pääteikkunasta käynnistettyjen ikkunoiden kohdistamisen.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="focus_mode">
+                                                <local_schema short_desc="Windows-tyylinen kohdistus">
+                                                        <longdesc>Ikkunoiden kohdistustapa ilmaisee, miten ikkunoita aktivoidaan. Sillä on kolme mahdollista arvoa: &quot;click&quot;, eli ikkunat kohdistetaan niitä napsauttamalla; &quot;sloppy&quot;, eli ikkunat kohdistuvat, kun hiiri liikkuu niiden päälle; &quot;mouse&quot;, eli ikkunat kohdistuvat, kun hiiri liikkuu niiden päälle, ja menettävät kohdistuksen, kun hiiri liikkuu pois.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="button_layout">
+                                                <local_schema short_desc="Otsikkopalkin painikkeiden järjestys">
+                                                        <longdesc>Otsikkopalkin painikkeiden järjestys. Arvon pitää olla merkkijono, kuten &quot;menu:minimize,maximize,close&quot;, jossa kaksoispiste erottaa vasemman nurkan oikeasta nurkasta, ja painikkeiden nimet on pilkuin eroteltu. Kukin painike voi esiintyä vain kerran. Tuntemattomat painikkeiden nimet jäävät vain kokonaan huomiotta, joten uusia painikkeita voi lisätä tuleviin Metacityn versioihin rikkomatta yhteensopivuutta vanhojen kanssa.</longdesc>
+                                                </local_schema>
+                                        </entry>
+                                        <entry name="mouse_button_modifier">
+                                                <local_schema short_desc="Muunnosnäppäin ikkunoiden muunnettuja napsautustoimintoja varten">
+                                                </local_schema>
+                                        </entry>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="desktop">
+                        <dir name="gnome">
+                                <dir name="applications">
+                                        <dir name="component_viewer">
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Oletusarvoinen komponenttien katselusovellus">
+                                                                <longdesc>Katseluun komponentin vaativien tiedostojen katselusovellus. Parametri %s korvautuu tiedoston URI:lla, parametri %c komponentin IID:llä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="terminal">
+                                                <entry name="exec_arg">
+                                                        <local_schema short_desc="Päätesovelluksen suoritusvalitsin">
+                                                                <longdesc>Päätesovelluksen valitsin, joka määrittää mitä suoritetaan.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="exec">
+                                                        <local_schema short_desc="Oletusarvoinen päätesovellus">
+                                                                <longdesc>Oletusarvoinen päätesovellus päätteen vaativille sovelluksille.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                                <dir name="url-handlers">
+                                        <dir name="h323">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Suorita sovellus päätteessä">
+                                                                <longdesc>Tosi, jos tämäntyyppisiä URL:eja käsittelevä ohjelma tulisi käynnistää päätteessä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;h323&quot;-URL:ien käsittelykomento">
+                                                                <longdesc>&quot;h323&quot;-tyyppiset URL:t käsittelevä komento, jos käytössä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Käsitteleekö annettu komento &quot;h323&quot;-URL:eja">
+                                                                <longdesc>Tosi, jos avaimessa &quot;command&quot; annettu komento käsittelee &quot;h323&quot;-tyyppisiä URL:eja.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="callto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Suorita sovellus päätteessä">
+                                                                <longdesc>Tosi, jos tämäntyyppisiä URL:eja käsittelevä ohjelma tulisi käynnistää päätteessä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;callto&quot;-URL:ien käsittelykomento">
+                                                                <longdesc>&quot;callto&quot;-tyyppiset URL:t käsittelevä komento, jos käytössä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Käsitteleekö annettu komento &quot;callto&quot;-URL:eja">
+                                                                <longdesc>Tosi, jos avaimessa &quot;command&quot; annettu komento käsittelee &quot;callto&quot;-tyyppisiä URL:eja.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="mailto">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Suorita sovellus päätteessä">
+                                                                <longdesc>Tosi, jos tämäntyyppisiä URL:eja käsittelevä ohjelma tulisi käynnistää päätteessä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;mailto&quot;-URL:ien käsittelykomento">
+                                                                <longdesc>&quot;mailto&quot;-tyyppiset URL:t käsittelevä komento, jos käytössä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Käsitteleekö annettu komento &quot;mailto&quot;-URL:eja">
+                                                                <longdesc>Tosi, jos avaimessa &quot;command&quot; annettu komento käsittelee &quot;mailto&quot;-tyyppisiä URL:eja.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="https">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Suorita sovellus päätteessä">
+                                                                <longdesc>Tosi, jos tämäntyyppisiä URL:eja käsittelevä ohjelma tulisi käynnistää päätteessä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;https&quot;-URL:ien käsittelykomento">
+                                                                <longdesc>&quot;https&quot;-tyyppiset URL:t käsittelevä komento, jos käytössä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Käsitteleekö annettu komento &quot;https&quot;-URL:eja">
+                                                                <longdesc>Tosi, jos avaimessa &quot;command&quot; annettu komento käsittelee &quot;https&quot;-tyyppisiä URL:eja.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="cdda">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Suorita sovellus päätteessä">
+                                                                <longdesc>Tosi, jos tämäntyyppisiä URL:eja käsittelevä ohjelma tulisi käynnistää päätteessä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="http">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Suorita sovellus päätteessä">
+                                                                <longdesc>Tosi, jos tämäntyyppisiä URL:eja käsittelevä ohjelma tulisi käynnistää päätteessä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;http&quot;-URL:ien käsittelykomento">
+                                                                <longdesc>&quot;http&quot;-tyyppiset URL:t käsittelevä komento, jos käytössä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Käsitteleekö annettu komento &quot;http&quot;-URL:eja">
+                                                                <longdesc>Tosi, jos avaimessa &quot;command&quot; annettu komento käsittelee &quot;http&quot;-tyyppisiä URL:eja.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="man">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Suorita sovellus päätteessä">
+                                                                <longdesc>Tosi, jos tämäntyyppisiä URL:eja käsittelevä ohjelma tulisi käynnistää päätteessä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;man&quot;-URL:ien käsittelykomento">
+                                                                <longdesc>&quot;man&quot;-tyyppiset URL:t käsittelevä komento, jos käytössä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Käsitteleekö annettu komento &quot;man&quot;-URL:eja">
+                                                                <longdesc>Tosi, jos avaimessa &quot;command&quot; annettu komento käsittelee &quot;man&quot;-tyyppisiä URL:eja.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="info">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Suorita sovellus päätteessä">
+                                                                <longdesc>Tosi, jos tämäntyyppisiä URL:eja käsittelevä ohjelma tulisi käynnistää päätteessä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;info&quot;-URL:ien käsittelykomento">
+                                                                <longdesc>&quot;info&quot;-tyyppiset URL:t käsittelevä komento, jos käytössä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Käsitteleekö annettu komento &quot;info&quot;-URL:eja">
+                                                                <longdesc>Tosi, jos avaimessa &quot;command&quot; annettu komento käsittelee &quot;info&quot;-tyyppisiä URL:eja.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="ghelp">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Suorita sovellus päätteessä">
+                                                                <longdesc>Tosi, jos tämäntyyppisiä URL:eja käsittelevä ohjelma tulisi käynnistää päätteessä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;ghelp&quot;-URL:ien käsittelykomento">
+                                                                <longdesc>&quot;ghelp&quot;-tyyppiset URL:t käsittelevä komento, jos käytössä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Käsitteleekö annettu komento &quot;ghelp&quot;-URL:eja">
+                                                                <longdesc>Tosi, jos avaimessa &quot;command&quot; annettu komento käsittelee &quot;ghelp&quot;-tyyppisiä URL:eja.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                        <dir name="trash">
+                                                <entry name="needs_terminal">
+                                                        <local_schema short_desc="Suorita sovellus päätteessä">
+                                                                <longdesc>Tosi, jos tämäntyyppisiä URL:eja käsittelevä ohjelma tulisi käynnistää päätteessä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="command">
+                                                        <local_schema short_desc="&quot;trash&quot;-URL:ien käsittelykomento">
+                                                                <longdesc>&quot;trash&quot;-tyyppiset URL:t käsittelevä komento, jos käytössä.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                                <entry name="enabled">
+                                                        <local_schema short_desc="Käsitteleekö annettu komento &quot;trash&quot;-URL:eja">
+                                                                <longdesc>Tosi, jos avaimessa &quot;command&quot; annettu komento käsittelee &quot;trash&quot;-tyyppisiä URL:eja.</longdesc>
+                                                        </local_schema>
+                                                </entry>
+                                        </dir>
+                                </dir>
+                        </dir>
+                </dir>
+                <dir name="system">
+                        <dir name="gstreamer">
+                                <dir name="0.10">
+                                        <dir name="audio">
+                                                <dir name="profiles">
+                                                        <entry name="active">
+                                                                <local_schema short_desc="Määrittää onko profiili käytössä">
+                                                                        <longdesc>Määrittää käytetäänkö ja näytetäänkö tätä profiilia.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="extension">
+                                                                <local_schema short_desc="Profiilin oletustiedostopääte">
+                                                                        <longdesc>Tiedostopääte jota käytetään tallennettaessa tällä profiililla koodattuja tiedostoja.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="pipeline">
+                                                                <local_schema short_desc="Käytetty osittainen GStreamer-putki">
+                                                                        <longdesc>Tämän profiilin kanssa käytettävä osittainen GStreamer-putki.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="description">
+                                                                <local_schema short_desc="Ääniprofiilin kuvaus">
+                                                                        <longdesc>Profiilin kuvaus. Sisältää enemmän tietoa ja kuvauksen siitä milloin tätä profiilia käytetään.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <entry name="name">
+                                                                <local_schema short_desc="Lyhyt nimi ääniprofiilille">
+                                                                        <longdesc>Ääniprofiilin lyhyt nimi jota käytetään valinnoissa ja joka nimeää profiilin yksiselitteisesti.</longdesc>
+                                                                </local_schema>
+                                                        </entry>
+                                                        <dir name="aac">
+                                                                <entry name="active">
+                                                                        <local_schema short_desc="Määrittää onko profiili käytössä">
+                                                                                <longdesc>Määrittää käytetäänkö ja näytetäänkö tätä profiilia.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Profiilin oletustiedostopääte">
+                                                                                <longdesc>Tiedostopääte jota käytetään tallennettaessa tällä profiililla koodattuja tiedostoja.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Käytetty osittainen GStreamer-putki">
+                                                                                <longdesc>Tämän profiilin kanssa käytettävä osittainen GStreamer-putki.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Ääniprofiilin kuvaus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Lyhyt nimi ääniprofiilille">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="mp3">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Profiilin oletustiedostopääte">
+                                                                                <longdesc>Tiedostopääte jota käytetään tallennettaessa tällä profiililla koodattuja tiedostoja.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Käytetty osittainen GStreamer-putki">
+                                                                                <longdesc>Tämän profiilin kanssa käytettävä osittainen GStreamer-putki.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Ääniprofiilin kuvaus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Lyhyt nimi ääniprofiilille">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Profiilin oletustiedostopääte">
+                                                                                <longdesc>Tiedostopääte jota käytetään tallennettaessa tällä profiililla koodattuja tiedostoja.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Käytetty osittainen GStreamer-putki">
+                                                                                <longdesc>Tämän profiilin kanssa käytettävä osittainen GStreamer-putki.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Ääniprofiilin kuvaus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Lyhyt nimi ääniprofiilille">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="voicelossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Profiilin oletustiedostopääte">
+                                                                                <longdesc>Tiedostopääte jota käytetään tallennettaessa tällä profiililla koodattuja tiedostoja.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Käytetty osittainen GStreamer-putki">
+                                                                                <longdesc>Tämän profiilin kanssa käytettävä osittainen GStreamer-putki.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Ääniprofiilin kuvaus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Lyhyt nimi ääniprofiilille">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossless">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Profiilin oletustiedostopääte">
+                                                                                <longdesc>Tiedostopääte jota käytetään tallennettaessa tällä profiililla koodattuja tiedostoja.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Käytetty osittainen GStreamer-putki">
+                                                                                <longdesc>Tämän profiilin kanssa käytettävä osittainen GStreamer-putki.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Ääniprofiilin kuvaus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Lyhyt nimi ääniprofiilille">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                        <dir name="cdlossy">
+                                                                <entry name="extension">
+                                                                        <local_schema short_desc="Profiilin oletustiedostopääte">
+                                                                                <longdesc>Tiedostopääte jota käytetään tallennettaessa tällä profiililla koodattuja tiedostoja.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="pipeline">
+                                                                        <local_schema short_desc="Käytetty osittainen GStreamer-putki">
+                                                                                <longdesc>Tämän profiilin kanssa käytettävä osittainen GStreamer-putki.</longdesc>
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="description">
+                                                                        <local_schema short_desc="Ääniprofiilin kuvaus">
+                                                                        </local_schema>
+                                                                </entry>
+                                                                <entry name="name">
+                                                                        <local_schema short_desc="Lyhyt nimi ääniprofiilille">
+                                                                        </local_schema>
+                                                                </entry>
+                                                        </dir>
+                                                </dir>
+                                                <dir name="global">
+                                                        <entry name="profile_list">
+                                                                <local_schema short_desc="Profiililuettelo">
+                                                                </local_schema>
+                                                        </entry>
+                                                </dir>
+                                        </dir>
+                                </dir>
+                        </dir>
+                        <dir name="proxy">
+                                <entry name="autoconfig_url">
+                                        <local_schema short_desc="Automaattisten välipalvelinasetusten URL">
+                                                <longdesc>URL, joka tarjoaa välipalvelinasetukset.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_port">
+                                        <local_schema short_desc="SOCKS-välipalvelimen portti">
+                                                <longdesc>Välipalvelinportti koneella, joka on määritelty avaimessa &quot;/system/proxy/socks_host&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="socks_host">
+                                        <local_schema short_desc="SOCKS-välipalvelimen nimi">
+                                                <longdesc>SOCKS-välipalvelimena toimivan koneen nimi.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_port">
+                                        <local_schema short_desc="FTP-välipalvelimen portti">
+                                                <longdesc>Välipalvelinportti koneella, joka on määritelty avaimessa &quot;/system/proxy/ftp_host&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="ftp_host">
+                                        <local_schema short_desc="FTP-välipalvelimen nimi">
+                                                <longdesc>FTP-välipalvelimena toimivan koneen nimi.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_port">
+                                        <local_schema short_desc="SHTTP-välipalvelimen portti">
+                                                <longdesc>Välipalvelinportti koneella, joka on määritelty avaimessa &quot;/system/proxy/secure_host&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="secure_host">
+                                        <local_schema short_desc="SHTTP-välipalvelimen nimi">
+                                                <longdesc>SHTTP-välipalvelimena toimivan koneen nimi.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="mode">
+                                        <local_schema short_desc="Välipalvelimen asetustapa">
+                                                <longdesc>Valitse välipalvelimen asetustapa. Mahdolliset arvot ovat &quot;none&quot; (ei mikään), &quot;manual&quot; (asetukset käsin), &quot;auto&quot; (automaattinen).</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="http_proxy">
+                                <entry name="ignore_hosts">
+                                        <local_schema short_desc="Välipalvelinta käyttämättömät isäntäkoneet">
+                                                <longdesc>Tämä avain sisältää luettelon isäntäkoneista, joihin yhteys muodostetaan suoraan, ei välipalvelimen kautta (vaikka se olisi toiminnassa). Arvot voivat olla konenimiä, verkkoalueita (joissa alussa jokerimerkki, kuten *.testi.fi), IP-osoitteita (IPv4 tai IPv6) ja verkko-osoitteita verkkopeitteellä (kuten 192.168.0.0/24).</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_password">
+                                        <local_schema short_desc="HTTP-välipalvelimen salasana">
+                                                <longdesc>HTTP-välipalvelimelle välittyvä todentava salasana.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="authentication_user">
+                                        <local_schema short_desc="HTTP-välipalvelimen käyttäjätunnus">
+                                                <longdesc>HTTP-välipalvelimelle välittyvä todentava käyttäjätunnus</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_authentication">
+                                        <local_schema short_desc="Todenna välipalvelinyhteydet">
+                                                <longdesc>Jos tosi, yhteydet välipalvelimeen vaativat todennuksen. Käyttäjätunnus-salasana-yhdistelmän määrittelevät avaimet &quot;/system/http_proxy/authentication_user&quot; ja &quot;/system/http_proxy/authentication_password&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="port">
+                                        <local_schema short_desc="HTTP-välipalvelimen portti">
+                                                <longdesc>Välipalvelinportti koneella, joka on määritelty avaimessa &quot;/system/http_proxy/host&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="host">
+                                        <local_schema short_desc="HTTP-välipalvelimen nimi">
+                                                <longdesc>HTTP-välipalvelimena toimivan koneen nimi.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="use_http_proxy">
+                                        <local_schema short_desc="Käytä HTTP-välipalvelinta">
+                                                <longdesc>Ota välipalvelinasetukset käyttöön, kun HTTP:tä käytetään Internetissä.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="dns_sd">
+                                <entry name="extra_domains">
+                                        <local_schema short_desc="Lisäverkkoalueet, joilta etsiä DNS-SD-palveluja">
+                                                <longdesc>Pilkuilla eroteltu luettelo DNS-SD-verkkoalueista, jotka näkyvät sijainnissa &quot;network:///&quot;.</longdesc>
+                                        </local_schema>
+                                </entry>
+                                <entry name="display_local">
+                                        <local_schema short_desc="Miten paikallinen DNS-SD-palvelu näkyy">
+                                                <longdesc>Mahdollisia arvoja ovat &quot;merged&quot; (yhdessä), &quot;separate&quot; (erillinen) ja &quot;disabled&quot; (ei käytössä).</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                        <dir name="smb">
+                                <entry name="workgroup">
+                                        <local_schema short_desc="SMB-työryhmä">
+                                                <longdesc>Windows-verkkojen työryhmä tai aluenimi, johon käyttäjä kuuluu. Jotta uusi työryhmänimi toimii kaikkialla, voi olla tarpeen kirjautua uudestaan sisään järjestelmään muutoksen jälkeen.</longdesc>
+                                        </local_schema>
+                                </entry>
+                        </dir>
+                </dir>
+        </dir>
+</gconf>

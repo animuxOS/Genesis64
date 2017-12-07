@@ -1,0 +1,2761 @@
+<?xml version="1.0"?>
+<gconfschemafile>
+  <schemalist>
+    <schema>
+      <key>/schemas/desktop/gnome/accessibility/keyboard/enable</key>
+      <applyto>/desktop/gnome/accessibility/keyboard/enable</applyto>
+      <owner>gnome</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short></short>
+        <long></long>
+      </locale>
+    </schema>
+	<schema>
+	  <key>/schemas/desktop/gnome/accessibility/keyboard/feature_state_change_beep</key>
+	  <applyto>/desktop/gnome/accessibility/keyboard/feature_state_change_beep</applyto>
+	  <owner>gnome</owner>
+	  <type>bool</type>
+	  <default>false</default>
+	  <locale name="C">
+	    <short></short>
+	    <long></long>
+	  </locale>
+	</schema>
+	<schema>
+	  <key>/schemas/desktop/gnome/accessibility/keyboard/timeout_enable</key>
+	  <applyto>/desktop/gnome/accessibility/keyboard/timeout_enable</applyto>
+	  <owner>gnome</owner>
+	  <type>bool</type>
+	  <default>false</default>
+	  <locale name="C">
+	    <short></short>
+	    <long></long>
+	  </locale>
+	</schema>
+	<schema>
+	  <key>/schemas/desktop/gnome/accessibility/keyboard/timeout</key>
+	  <applyto>/desktop/gnome/accessibility/keyboard/timeout</applyto>
+	  <owner>gnome</owner>
+	  <type>int</type>
+	  <default>200</default>
+	  <locale name="C">
+	    <short></short>
+	    <long></long>
+	  </locale>
+	</schema>
+
+	<schema>
+	  <key>/schemas/desktop/gnome/accessibility/keyboard/bouncekeys_enable</key>
+	  <applyto>/desktop/gnome/accessibility/keyboard/bouncekeys_enable</applyto>
+	  <owner>gnome</owner>
+	  <type>bool</type>
+	  <default>false</default>
+	  <locale name="C">
+	    <short></short>
+	    <long></long>
+	  </locale>
+	</schema>
+	    <schema>
+	      <key>/schemas/desktop/gnome/accessibility/keyboard/bouncekeys_delay</key>
+	      <applyto>/desktop/gnome/accessibility/keyboard/bouncekeys_delay</applyto>
+	      <owner>gnome</owner>
+	      <type>int</type>
+	      <default>0</default>
+	      <locale name="C">
+		<short>minimum interval in milliseconds</short>
+		<long>Ignore multiple presses of the _same_ key within @delay milliseconds</long>
+	      </locale>
+
+	      <locale name="ar">
+		<short>الفترة الدنيا بالملي ثانية</short>
+		<long>تجاهل نقرات عديدة لنفس المفتاح خلال @delay ملي ثانية</long>
+	      </locale>
+
+	      <locale name="as">
+		<short>সৰ্বনিম্ন বিৰতি, মিলিসেকেন্ডে ব্যক্ত</short>
+		<long>@delay দ্বাৰা উল্লিখিত মিলিসেকেন্ডেৰ মধ্যে _এক_ কি পুনৰায় টেপা হলে অগ্ৰাহ্য কৰা হবে</long>
+	      </locale>
+
+	      <locale name="az">
+		<short>millisaniyə olaraq minimal interval</short>
+		<long>@delay millisaniyə içində _same_ düyməsinin çox dəfə basılmasını sayma</long>
+	      </locale>
+
+	      <locale name="be">
+		<short>найменшы прамежак у мілісэкундах</short>
+		<long>Ігнараваць шматлікія націскі на адну і тую сама клявішу у тэрмін @delay мілісэкундаў</long>
+	      </locale>
+
+	      <locale name="bg">
+		<short>минимален интервал в милисекунди</short>
+		<long>Игнориране на множество натискания на _един_ клавиш в рамките на @delay милисекунди</long>
+	      </locale>
+
+	      <locale name="bn">
+		<short>মিলিসেকেন্ডে সর্বনিম্ন বিরতি</short>
+		<long>স্বল্প সময়ের মধ্যে একই কীতে একাধিক চাপ পড়লে উপেক্ষা করুন</long>
+	      </locale>
+
+	      <locale name="bn_IN">
+		<short>সর্বনিম্ন বিরতি, মিলিসেকেন্ডে ব্যক্ত</short>
+		<long>@delay দ্বারা উল্লিখিত মিলিসেকেন্ডের মধ্যে _এক_ কি পুনরায় টেপা হলে অগ্রাহ্য করা হবে</long>
+	      </locale>
+
+	      <locale name="bs">
+		<short>minimalni interval u milisekundama</short>
+		<long>Ignoriši višestruke pritiske iste tipke u okviru @delay milisekundi</long>
+	      </locale>
+
+	      <locale name="ca">
+		<short>interval mínim en mil·lisegons</short>
+		<long>Descarta les pressions múltiples de la mateixa tecla en @retard mil·lisegons</long>
+	      </locale>
+
+	      <locale name="cs">
+		<short>minimální interval v milisekundách</short>
+		<long>Ignorovat více stisknutí _stejné_ klávesy do @delay milisekund</long>
+	      </locale>
+
+	      <locale name="cy">
+		<short>ysbaid lleiaf mewn milfedau eiliad</short>
+		<long>Anwybyddu mwy nag un gwasgiad o&apos;r _un_ bysell o fewn @delay milfed eiliad</long>
+	      </locale>
+
+	      <locale name="da">
+		<short>minimalt interval i millisekunder</short>
+		<long>Ignorér flere tryk på den _samme_ tast inden for @delay millisekunder</long>
+	      </locale>
+
+	      <locale name="de">
+		<short>Minimales Intervall in Millisekunden</short>
+		<long>Mehrmaliges Drücken _derselben_ Taste innerhalb von @delay Millisekunden ignorieren</long>
+	      </locale>
+
+	      <locale name="dz">
+		<short>བར་མཚམས་ཉུང་མཐའ་ མི་ལི་སྐར་ཆའི་ནང་།</short>
+		<long>@ ཕྱིར་འགྱངས་ཀྱི་ མི་ལི་སྐར་ཆའི་ནང་འཁོད་ལུ་ ལྡེ་མིག་ཅོག་གཅིགཔ་སྣ་ཚོགས་ ཨེབ་ནི་ཚུ་སྤང་དགོ།</long>
+	      </locale>
+
+	      <locale name="el">
+		<short>ελάχιστο χρονικό μεσοδιάστημα σε χιλιοστά δευτερόλεπτου</short>
+		<long>Αγνόηση πολλαπλών πατημάτων του _ίδιου_ πλήκτρου σε διάστημα χιλιοστών του δευτερολ.</long>
+	      </locale>
+
+	      <locale name="en_CA">
+		<short>minimum interval in milliseconds</short>
+		<long>Ignore multiple presses of the _same_ key within @delay milliseconds</long>
+	      </locale>
+
+	      <locale name="en_GB">
+		<short>minimum interval in milliseconds</short>
+		<long>Ignore multiple presses of the _same_ key within @delay milliseconds</long>
+	      </locale>
+
+	      <locale name="eo">
+		<short>minimuma intervalo en milisekundoj</short>
+		<long>Ignoru multoblajn premojn de la _sama_ klavo interne de @delay milisekundoj</long>
+	      </locale>
+
+	      <locale name="es">
+		<short>intervalo mínimo en milisegundos</short>
+		<long>Ignorar pulsaciones múltiples de la _misma_ tecla durante @delay milisegundos</long>
+	      </locale>
+
+	      <locale name="et">
+		<short>Vähim ajavahemik millisekundites</short>
+		<long>Määratud aja (millisekundites) jooksul _sama_ klahvi mitmekordset vajutamist eiratakse</long>
+	      </locale>
+
+	      <locale name="eu">
+		<short>gutxieneko tartea milisegundotan</short>
+		<long>Ez egin jaramonik tekla _bera_ hainbat aldiz sakatzen bada @delay milisegundotan</long>
+	      </locale>
+
+	      <locale name="fa">
+		<short>بازه‌ی حداقل به میلی‌ثانیه</short>
+		<long>فشرده‌شدن‌های متعدد _یک_ کلید در کمتر از @delay میلی‌ثانیه نادیده گرفته شود</long>
+	      </locale>
+
+	      <locale name="fi">
+		<short>pienin aikaväli millisekunteina</short>
+		<long>Hylkää useammat _saman_ näppäimen painallukset @delay millisekunnin aikana</long>
+	      </locale>
+
+	      <locale name="fr">
+		<short>intervalle minimum en millisecondes</short>
+		<long>Ignorer les pressions multiples de la _même_ touche en moins de @delay millisecondes </long>
+	      </locale>
+
+	      <locale name="gl">
+		<short>intervalo mínimo en milisegundos</short>
+		<long>Ignorar clics múltiples da _mesma_ tecla durante @delay milisegundos</long>
+	      </locale>
+
+	      <locale name="gu">
+		<short>મિલિસેકન્ડમાં ન્યૂનત્તમ સમયાંતર</short>
+		<long>એક જ કીનુ એક કરતા વધારે દબાયેલ @વિલંબ મિલિસેકન્ડમાં અવગણો</long>
+	      </locale>
+
+	      <locale name="he">
+		<short>minimum interval in milliseconds</short>
+		<long>Ignore multiple presses of the _same_ key within @delay milliseconds</long>
+	      </locale>
+
+	      <locale name="hi">
+		<short>न्यूनतम अंतराल मिलीसेकण्ड्स में</short>
+		<long>@दूरी मिलीसेकण्ड तक एक ही कुंजी को दबाकर रखा जाना बहुल दबाया जाना हेतु उपेक्षा करें</long>
+	      </locale>
+
+	      <locale name="hr">
+		<short>najmanja stanka u milisekundama</short>
+		<long>Zanemari višestruke pritiske na istu tipku unutar @delay milisekundi</long>
+	      </locale>
+
+	      <locale name="hu">
+		<short>minimális időköz ezredmásodpercben</short>
+		<long>Ugyanazon billentyű többszöri lenyomásának figyelmen kívül hagyása @delay ezredmásodpercen belül</long>
+	      </locale>
+
+	      <locale name="id">
+		<short>periode terkecil dalam satuan milidetik</short>
+		<long>Abaikan tombol yang ditekan pada saat yang sama selama @delay milidetik</long>
+	      </locale>
+
+	      <locale name="is">
+		<short>lágmarks bil í millisekúndum</short>
+		<long>Hunsa fjöldainnslátt ef þrýst er á  _same_ key innan @delay millisekúndna</long>
+	      </locale>
+
+	      <locale name="it">
+		<short>Intervallo minimo in millisecondi</short>
+		<long>Ignora pressioni multiple dello STESSO tasto se entro @delay millisecondi</long>
+	      </locale>
+
+	      <locale name="ja">
+		<short>最小の間隔 (ミリ秒単位)</short>
+		<long>@delay ミリ秒内に _同じ_ キーが押されても無視します。</long>
+	      </locale>
+
+	      <locale name="ka">
+		<short>მინიმალური შუალედი მილიწამებში</short>
+		<long>ერთი და იგივე კლავიშის მრავალჯერადი დაჭერის აღქმის უარყოფა @delay მილიწამზე ნაკლებ ხანს</long>
+	      </locale>
+
+	      <locale name="ko">
+		<short>밀리초 단위의 최소 시간 간격</short>
+		<long>@delay 밀리초 이내에 *같은* 키가 여러번 눌려졌을 때 무시</long>
+	      </locale>
+
+	      <locale name="ku">
+		<short>ji cureyê pîvana mîlîçirkeyan navbera herî kêm</short>
+		<long>Di dema @delay milliseconds de tikandinên cuda ên li ser heman bişkokê piştguh bike</long>
+	      </locale>
+
+	      <locale name="lt">
+		<short>mažiausias intervalas milisekundėmis</short>
+		<long>Ignoruoti pasikartojančius _to paties_ klavišo paspaudimus, įvykstančius @delay millisekundžių intervale</long>
+	      </locale>
+
+	      <locale name="lv">
+		<short>minimālais intervāls milisekundēs</short>
+		<long>Ignorēt vairākkārtēju _tā paša_ taustiņa nospiešanu @delay milisekunžu robežās</long>
+	      </locale>
+
+	      <locale name="mg">
+		<short>Elanelam-potoana ambany indrindra (milisegaondra)</short>
+		<long>Aza raharahaina ny fanindriana _kitendry_iray miverimberina anatin&apos;ny @delay milisegaondra</long>
+	      </locale>
+
+	      <locale name="mk">
+		<short>минимален интервал во милисекунди</short>
+		<long>Игнорај ги повеќекратните притискања на исто копче за @delay милисекунди</long>
+	      </locale>
+
+	      <locale name="ml">
+		<short>മില്ലിസെക്കന്‍ഡില്‍ ഏറ്റവും കുറഞ്ഞ ഇടവേള</short>
+		
+	      </locale>
+
+	      <locale name="mn">
+		<short>хамгийн бага хоорондын интервал миллисекундээр</short>
+		<long>_Ижил_ товчлуурыг @delay миллисекундэд олон удаа дарагдсаныг үл тооцох.</long>
+	      </locale>
+
+	      <locale name="ms">
+		<short>Selangmasa minimum dalam saat</short>
+		<long>Abai beberapa tekanan pada kekunci _sama_ dalam tempoh @ milisaat </long>
+	      </locale>
+
+	      <locale name="nb">
+		<short>minste intervall i millisekunder</short>
+		<long>Ignorer flere tastetrykk med samme tast innen @delay millisekunder</long>
+	      </locale>
+
+	      <locale name="ne">
+		<short>मिलिसेकेन्डमा न्युनतम अन्तराल</short>
+		<long>@मिलिसेकेन्डमा एउटै कुञ्जी धेरै पटक प्रयोग वेवास्ता गर्नुहोस्</long>
+	      </locale>
+
+	      <locale name="nl">
+		<short>minimuminterval in milliseconden</short>
+		<long>Meerdere aanslagen van _dezelfde_ toets negeren binnen @delay milliseconden</long>
+	      </locale>
+
+	      <locale name="nn">
+		<short>minste intervall, i millisekund</short>
+		<long>Oversjå fleire trykk på same tast i løpet av @delay millisekund</long>
+	      </locale>
+
+	      <locale name="oc">
+		<short>interval minimum en milisegondas</short>
+		
+	      </locale>
+
+	      <locale name="or">
+		<short>ସର୍ବନିମ୍ନ ବିରତି, ମିଲିସେକେଣ୍ଡରେ</short>
+		<long>@delay ମିଲିସେକେଣ୍ଡ ବିଳମ୍ବ ମଧ୍ଯରେ ଗୋଟିଏ ଚାବି ଏକାଧିକ ଥର ଦବାଯାଇଥିଲେ ଅଗ୍ରାହ୍ଯ କରନ୍ତୁ</long>
+	      </locale>
+
+	      <locale name="pa">
+		<short>ਘੱਟੋ-ਘੱਟ ਅੰਤਰਾਲ (ਮਿਲੀਸਕਿੰਟ ਵਿੱਚ)</short>
+		<long>ਇਕੋਂ ਸਮੇਂ ਬਹੁਤੀਆਂ ਸਵਿੱਚਾਂ @delay ਮਿਲੀਸਕਿੰਟ ਦਬਾਉਣ &apos;ਤੇ ਰੱਦ ਕਰ ਦਿਓ</long>
+	      </locale>
+
+	      <locale name="pl">
+		<short>minimalny odstęp czasowy w milisekundach</short>
+		<long>Ignoruje kolejne przyciśnięcia tego samego klawisza, jeśli będą one miały miejsce w podanym okresie czasu (w milisekundach).</long>
+	      </locale>
+
+	      <locale name="pt">
+		<short>intervalo mínimo em milisegundos</short>
+		<long>Ignorar pressões múltiplas ma _mesma_ tecla no espaço de @delay milisegundos</long>
+	      </locale>
+
+	      <locale name="pt_BR">
+		<short>intervalo mínimo em milisegundos</short>
+		<long>Ignorar múltiplas pressões da _mesma_ tecla dentro de @delay milisegundos</long>
+	      </locale>
+
+	      <locale name="ro">
+		<short>interval minim în milisecunde</short>
+		<long>Ignoră apăsările multiple ale aceleiaşi taste într-un interval de „@delay” milisecunde</long>
+	      </locale>
+
+	      <locale name="ru">
+		<short>Минимальный интервал (в миллисекундах)</short>
+		<long>Игнорировать многократные нажатия одной клавиши в период @delay миллисекунд</long>
+	      </locale>
+
+	      <locale name="sk">
+		<short>minimálny interval v milisekundách</short>
+		<long>Ignorovať viacnásobné stlačenia rovnakého klávesu</long>
+	      </locale>
+
+	      <locale name="sl">
+		<short>najmanjši interval (v milisekundah)</short>
+		<long>Prezri večkratne pritiske iste tipke znotraj @delay milisekund</long>
+	      </locale>
+
+	      <locale name="sq">
+		<short>intervali minimum në millisekonda</short>
+		<long>Shpërfill shtypje të shumëfishtë për të njëjtin pulsant nëse kryen brenda @delay millisekondash </long>
+	      </locale>
+
+	      <locale name="sr">
+		<short>најмањи период у милисекундама</short>
+		<long>Занемари вишеструки притисак на _исти_ тастер у распону од @delay милисекунди</long>
+	      </locale>
+
+	      <locale name="sr@Latn">
+		<short>najmanji period u milisekundama</short>
+		<long>Zanemari višestruki pritisak na _isti_ taster u rasponu od @delay milisekundi</long>
+	      </locale>
+
+	      <locale name="sr@ije">
+		<short>најмањи период у милисекундама</short>
+		<long>Занемари вишеструки притисак на _исти_ тастер у распону од @delay милисекунди</long>
+	      </locale>
+
+	      <locale name="sv">
+		<short>minsta intervall i millisekunder</short>
+		<long>Ignorera flera tryckningar på _samma_ tangent inom @delay millisekunder</long>
+	      </locale>
+
+	      <locale name="ta">
+		<short>மில்லிநொடிகளில் ஆகக்குறைந்த இடைவெளி</short>
+		<long>ஒரே விசைக்குள் மில்லி செகண்டு @தாமதத்தில் பல செயல்களை தவிர்</long>
+	      </locale>
+
+	      <locale name="th">
+		<short>ช่วงเวลาสั้นสุด เป็นมิลลิวินาที</short>
+		<long>ไม่สนใจปุ่มเดียวกันที่ถูกกดซ้ำภายใน @delay มิลลิวินาที</long>
+	      </locale>
+
+	      <locale name="tr">
+		<short>milisaniye cinsinden en düşük aralık</short>
+		<long>@delay milisaniye içerisinde _aynı_ tuşa birden fazla basmayı gözardı et</long>
+	      </locale>
+
+	      <locale name="uk">
+		<short>мінімальний інтервал у мілісекундах</short>
+		<long>Не зважати на багаторазове натиснення однієї клавіші протягом @delay мілісекунд</long>
+	      </locale>
+
+	      <locale name="vi">
+		<short>khoảng chờ tối thiểu (mili giây)</short>
+		<long>Bỏ qua nhấn nhiều lần _cùng_ một phím trong vòng @delay mili giây</long>
+	      </locale>
+
+	      <locale name="xh">
+		<short>ikhefu elingephi ngeemilisekondi</short>
+		<long>Sukuhoya ukucofa okuninzi _kwiqhosha_ elinye @delay lweemilisekondi</long>
+	      </locale>
+
+	      <locale name="yi">
+		
+		<long>איגנאָריר איבעריקע דריקונגען פֿון זעלבן קלאַװיש אין משך פֿון @delay מיליסעקונדעס</long>
+	      </locale>
+
+	      <locale name="zh_CN">
+		<short>最小间隔毫秒数</short>
+		<long>忽略在 @delay 毫秒内多次按下的同一个键</long>
+	      </locale>
+
+	      <locale name="zh_HK">
+		<short>時間間隔下限（毫秒）</short>
+		<long>若在 @delay 毫秒內多次按下同一按鍵，則第一次以後的按鍵作廢</long>
+	      </locale>
+
+	      <locale name="zh_TW">
+		<short>時間間隔下限（毫秒）</short>
+		<long>若在 @delay 毫秒內多次按下同一按鍵，則第一次以後的按鍵作廢</long>
+	      </locale>
+	    </schema>
+	    <schema>
+	      <key>/schemas/desktop/gnome/accessibility/keyboard/bouncekeys_beep_reject</key>
+	      <applyto>/desktop/gnome/accessibility/keyboard/bouncekeys_beep_reject</applyto>
+	      <owner>gnome</owner>
+	      <type>bool</type>
+	      <default>false</default>
+	      <locale name="C">
+		<short></short>
+		<long></long>
+	      </locale>
+	    </schema>
+
+	<schema>
+	  <key>/schemas/desktop/gnome/accessibility/keyboard/mousekeys_enable</key>
+	  <applyto>/desktop/gnome/accessibility/keyboard/mousekeys_enable</applyto>
+	  <owner>gnome</owner>
+	  <type>bool</type>
+	  <default>false</default>
+	  <locale name="C">
+	    <short></short>
+	    <long></long>
+	  </locale>
+	</schema>
+	    <schema>
+	      <key>/schemas/desktop/gnome/accessibility/keyboard/mousekeys_max_speed</key>
+	      <applyto>/desktop/gnome/accessibility/keyboard/mousekeys_max_speed</applyto>
+	      <owner>gnome</owner>
+	      <type>int</type>
+	      <default>10</default>
+	      <locale name="C">
+		<short>Pixels per seconds</short>
+		<long>How many pixels per second to move at the maximum speed</long>
+	      </locale>
+
+	      <locale name="ar">
+		<short>بكسلات في الثانية</short>
+		<long>عدد البكسلات التي ستحرك بالثانية بالسرعة القصوى</long>
+	      </locale>
+
+	      <locale name="as">
+		<short>পিক্সেল, প্ৰতি সেকেন্ডে</short>
+		<long>সৰ্বোচ্চ গতিতে প্ৰতি সেকেন্ডে যে সংখ্যক পিক্সেল সৰানো হবে</long>
+	      </locale>
+
+	      <locale name="az">
+		
+		<long>Ən yüksək sürətdə saniyədə hərəkət ediləcək piksel miqdarı</long>
+	      </locale>
+
+	      <locale name="be">
+		
+		<long>Колькі мінаецца піксэляў за сэкунду пры найбольшай хуткасьці</long>
+	      </locale>
+
+	      <locale name="bg">
+		<short>Пиксели в секунда</short>
+		<long>С колко пиксела в секунда да се движи при максимална скорост</long>
+	      </locale>
+
+	      <locale name="bn">
+		<short>পিক্সেল, প্রতি সেকেন্ডে</short>
+		<long>সর্বোচ্চ গতিতে প্রতি সেকেন্ডে যতগুলো পিকসেল সরে যায়</long>
+	      </locale>
+
+	      <locale name="bn_IN">
+		<short>পিক্সেল, প্রতি সেকেন্ডে</short>
+		<long>সর্বোচ্চ গতিতে প্রতি সেকেন্ডে যে সংখ্যক পিক্সেল সরানো হবে</long>
+	      </locale>
+
+	      <locale name="bs">
+		
+		<long>Koliko piksli po sekundi pomjerati pri maksimalnoj brzini</long>
+	      </locale>
+
+	      <locale name="ca">
+		<short>Píxels per segon</short>
+		<long>Quants píxels per segon es mourà a la velocitat màxima</long>
+	      </locale>
+
+	      <locale name="cs">
+		
+		<long>O kolik pixelů za sekundu se posunout při maximální rychlosti</long>
+	      </locale>
+
+	      <locale name="cy">
+		<short>Picseli&apos;r eiliad</short>
+		<long>Sawl picsel yr eiliad i symud ar y cyflymder uchaf</long>
+	      </locale>
+
+	      <locale name="da">
+		<short>Punkter pr. sekund</short>
+		<long>Hvor mange punkter pr. sekund der skal flyttes ved maksimal fart</long>
+	      </locale>
+
+	      <locale name="de">
+		<short>Pixel pro Sekunde</short>
+		<long>Mit wie vielen Pixeln pro Sekunde soll die Mausbewegung bei maximaler Geschwindigkeit erfolgen? </long>
+	      </locale>
+
+	      <locale name="dz">
+		
+		<long> མགྱོགས་ཚད་མང་མཐའ་ལུ་ འགུལ་བསྐྱོད་འབད་ནིའི་དོན་ལུ་ སྐར་ཆ་རེ་ནང་ པིག་སེལསི་ ག་དེམ་རེ་དགོཔ་སྨོ།</long>
+	      </locale>
+
+	      <locale name="el">
+		
+		<long>Αριθκός εικονοστοιχείων ανά δευτερόλεπτο που θα μετακινούνται στη μέγιστη ταχύτητα</long>
+	      </locale>
+
+	      <locale name="en_CA">
+		<short>Pixels per seconds</short>
+		<long>How many pixels per second to move at the maximum speed</long>
+	      </locale>
+
+	      <locale name="en_GB">
+		<short>Pixels per seconds</short>
+		<long>How many pixels per second to move at the maximum speed</long>
+	      </locale>
+
+	      <locale name="eo">
+		
+		<long>Kiom da bilderoj je sekundo oni movu je la maksimuma rapido</long>
+	      </locale>
+
+	      <locale name="es">
+		<short>Píxeles por segundos</short>
+		<long>Cuántos píxeles por segundo mover a la velocidad máxima</long>
+	      </locale>
+
+	      <locale name="et">
+		<short>Piksleid sekundis</short>
+		<long>Kui palju piksleid sekundis liigutakse maksimumkiirusel</long>
+	      </locale>
+
+	      <locale name="eu">
+		<short>Pixel segundoko</short>
+		<long>Gehienezko abiaduran mugitzeko segunduko behar den pixel-kopurua</long>
+	      </locale>
+
+	      <locale name="fa">
+		
+		<long>تعداد نقطه بر ثانیه‌ی جابه‌جایی در حداکثر سرعت</long>
+	      </locale>
+
+	      <locale name="fi">
+		<short>Pikseliä sekunnissa</short>
+		<long>Kuinka monta pikseliä sekunnissa kulkee maksiminopeudella</long>
+	      </locale>
+
+	      <locale name="fr">
+		<short>Pixels par seconde</short>
+		<long>Nombre de pixels par secondes pour se déplacer à la vitesse maximale</long>
+	      </locale>
+
+	      <locale name="gl">
+		
+		<long>Cantos píxeles por segundo se moven á velocidade máxima</long>
+	      </locale>
+
+	      <locale name="gu">
+		<short>સેકન્ડો દીઠ પિક્સેલો</short>
+		<long>મહત્તમ ઝડપે પ્રત્યેક સેકન્ડે કેટલા બિંદુઓ આગળ જવુ</long>
+	      </locale>
+
+	      <locale name="he">
+		<short>Pixels per seconds</short>
+		<long>How many pixels per second to move at the maximum speed</long>
+	      </locale>
+
+	      <locale name="hi">
+		
+		<long>अधिकतम गति पर कितने पिक्सेल्स प्रति सेकण्ड चलना है</long>
+	      </locale>
+
+	      <locale name="hr">
+		
+		<long>Koliko se piksela po sekundi pomakne pri najvećoj brzini</long>
+	      </locale>
+
+	      <locale name="hu">
+		<short>Képpont másodpercenként</short>
+		<long>Hány képpontot mozduljon másodpercenként maximális sebességnél</long>
+	      </locale>
+
+	      <locale name="id">
+		
+		<long>Berapa piksel per detik untuk digerakkan pada kecepatan tertinggi</long>
+	      </locale>
+
+	      <locale name="is">
+		
+		<long>Hve marga pixels á sekúndu flytja má á hámarkshraða</long>
+	      </locale>
+
+	      <locale name="it">
+		<short>Pixel al secondo</short>
+		<long>Di quanti pixel al secondo muovere alla massima velocità</long>
+	      </locale>
+
+	      <locale name="ja">
+		<short>単位秒あたりのピクセル数</short>
+		<long>速さが最大の時にどれくらい移動させるかです (ピクセル/秒)。</long>
+	      </locale>
+
+	      <locale name="ka">
+		<short>პიქსელი წამში</short>
+		<long>რამდენი პიქსელი წამშია საჭირო მაქსიმალური სიჩქარით მოძრაობისთვის</long>
+	      </locale>
+
+	      <locale name="ko">
+		<short>초당 픽셀 수</short>
+		<long>최대 속도에서 초당 이동한 픽셀수</long>
+	      </locale>
+
+	      <locale name="ku">
+		
+		<long>Di zêdetirîn tevgerê de her çirkekê çend pîksel pêwistin</long>
+	      </locale>
+
+	      <locale name="lt">
+		<short>Pikseliai per sekundę</short>
+		<long>Kiek taškų per sekundę turi būti įveikiama maksimaliu judėjimo greičiu</long>
+	      </locale>
+
+	      <locale name="lv">
+		
+		<long>Cik daudz pikseļus sekundē pārvietoties maksimālajā ātrumā</long>
+	      </locale>
+
+	      <locale name="mg">
+		
+		<long>Ny isan&apos;ny pixel afindra isan-tsegaondra raha mandeha faran&apos;ny izay haingana indrindra</long>
+	      </locale>
+
+	      <locale name="mk">
+		<short>Пиксели во секунда</short>
+		<long>Колку пиксели во секунда да биде поместувањето при максимална брзина</long>
+	      </locale>
+
+	      <locale name="ml">
+		<short>ഓരോ സെക്കന്‍ഡിലും ഉളള പിക്സലുകള്‍ </short>
+		<long>ഒരു സെക്കന്‍ഡില്‍ ഏറ്റവും കൂടുതല്‍ വേഗതയില്‍ നീങ്ങുന്ന പിക്സലുകളുടെ എണ്ണം</long>
+	      </locale>
+
+	      <locale name="mn">
+		
+		<long>Хулганын заагуурыг(&quot;түүчээ&quot; ч гэдэг) дээд хурдаар хөдөлгөх үед мөн хөдөлгөөнийг секундэд хэдэн цэгээр илэрхийлэх вэ? </long>
+	      </locale>
+
+	      <locale name="ms">
+		
+		<long>Berapa banyak piksel per saat untuk gerak pada kelajuan maksimum</long>
+	      </locale>
+
+	      <locale name="nb">
+		<short>Piksler per sekund</short>
+		<long>Antall piksler per sekund i bevegelse ved maksimal hastighet</long>
+	      </locale>
+
+	      <locale name="ne">
+		
+		<long>अधिकतम गति जान कति पिक्सेल प्रति सेकेन्ड सर्नुपर्ला</long>
+	      </locale>
+
+	      <locale name="nl">
+		<short>Pixels per seconde</short>
+		<long>Hoeveel pixels per seconde te bewegen op maximumsnelheid</long>
+	      </locale>
+
+	      <locale name="nn">
+		<short>Pikslar per sekund</short>
+		<long>Kor mange pikslar per sekund som er toppfart</long>
+	      </locale>
+
+	      <locale name="oc">
+		<short>Pixels per segondas</short>
+		
+	      </locale>
+
+	      <locale name="or">
+		<short>ସେକେଣ୍ଡ ପ୍ରତି ପିକ୍ସେଲ</short>
+		<long>ସର୍ବାଧିକ ଗତିରେ ପ୍ରତି ସେକେଣ୍ଡରେ କେତେ ପିକ୍ସେଲ ଘୁଞ୍ଚାଯିବ</long>
+	      </locale>
+
+	      <locale name="pa">
+		
+		<long>ਅਧਿਕਤਮ ਗਤੀ ਤੇ ਕਿੰਨੇ ਪਿਕਸਲ ਪ੍ਰਤੀ ਸਕਿੰਟ ਲੋਡ਼ੀਦੇ ਹਨ</long>
+	      </locale>
+
+	      <locale name="pl">
+		<short>Liczba pikseli na sekundę</short>
+		<long>Określa maksymalną szybkość ruchu w pikselach na sekundę</long>
+	      </locale>
+
+	      <locale name="pt">
+		<short>Pixels por segundo</short>
+		<long>Quantos pixels por segundo mover à velocidade máxima</long>
+	      </locale>
+
+	      <locale name="pt_BR">
+		<short>Pixels por segundos</short>
+		<long>Quantos pixels por segundo mover na velocidade máxima</long>
+	      </locale>
+
+	      <locale name="ro">
+		<short>Pixeli pe secundă</short>
+		<long>Număr de pixeli pe secundă la viteza maximă</long>
+	      </locale>
+
+	      <locale name="ru">
+		<short>Пикселей в секунду</short>
+		<long>Сколько пикселей в секунду составляет максимальноая скорость</long>
+	      </locale>
+
+	      <locale name="sk">
+		
+		<long>Koľko bodov za sekundu posúvať pri maximálnej rýchlosti</long>
+	      </locale>
+
+	      <locale name="sl">
+		<short>točk na sekundo</short>
+		<long>Koliko točk na sekundo se premika pri najvišji hitrosti</long>
+	      </locale>
+
+	      <locale name="sq">
+		<short>Pixels në sekondë</short>
+		<long>Sa pixel për sekondë duhen lëvizur me shpejtësinë maksimum</long>
+	      </locale>
+
+	      <locale name="sr">
+		<short>Тачака по секунди</short>
+		<long>Колико тачака у секунди да прелази при највећој брзини</long>
+	      </locale>
+
+	      <locale name="sr@Latn">
+		<short>Tačaka po sekundi</short>
+		<long>Koliko tačaka u sekundi da prelazi pri najvećoj brzini</long>
+	      </locale>
+
+	      <locale name="sr@ije">
+		
+		<long>Колико тачака у секунди да прелази при највећој брзини</long>
+	      </locale>
+
+	      <locale name="sv">
+		<short>Bildpunkter per sekund</short>
+		<long>Hur många bildpunkter per sekund att flytta vid maxhastighet</long>
+	      </locale>
+
+	      <locale name="ta">
+		
+		<long>ஆகக்கூடிய வேகத்தில் எத்தனை பிக்செல்கள் ஓர் நொடியில் நகர்த்த வேண்டும்</long>
+	      </locale>
+
+	      <locale name="th">
+		<short>พิกเซลต่อวินาที</short>
+		<long>ความเร็วสูงสุดกี่พิกเซลต่อวินาที</long>
+	      </locale>
+
+	      <locale name="tr">
+		
+		<long>En yüksek hızda hareket ederken kaç benek/saniye</long>
+	      </locale>
+
+	      <locale name="uk">
+		<short>Точок за секунду</short>
+		<long>Максимальна швидкість руху в точках на секунду</long>
+	      </locale>
+
+	      <locale name="vi">
+		<short>Điểm ảnh mỗi giây</short>
+		<long>Di chuyển bao nhiêu điểm ảnh mỗi giây ở tốc độ tối đa.</long>
+	      </locale>
+
+	      <locale name="xh">
+		
+		<long>Zingaphi ii-pixel kwisekondi nganye ukuhamba kwesona santya siphezulu</long>
+	      </locale>
+
+	      <locale name="yi">
+		
+		<long>װיפֿל בילדצעלן סעקונדעסװײַז זיך צו באַװעגן צום פֿלינקסטן</long>
+	      </locale>
+
+	      <locale name="zh_CN">
+		<short>每秒像素点</short>
+		<long>最大速度是每秒钟移动多少个像素点</long>
+	      </locale>
+
+	      <locale name="zh_HK">
+		
+		<long>最高速度時每秒可移動多少像素</long>
+	      </locale>
+
+	      <locale name="zh_TW">
+		
+		<long>最高速度時每秒可移動多少像素</long>
+	      </locale>
+	    </schema>
+	    <schema>
+	      <key>/schemas/desktop/gnome/accessibility/keyboard/mousekeys_accel_time</key>
+	      <applyto>/desktop/gnome/accessibility/keyboard/mousekeys_accel_time</applyto>
+	      <owner>gnome</owner>
+	      <type>int</type>
+	      <default>300</default>
+	      <locale name="C">
+		<short>How long to accelerate in milliseconds</short>
+		<long>How many milliseconds it takes to go from 0 to maximum speed</long>
+	      </locale>
+
+	      <locale name="ar">
+		<short>الوقت الذي يستغرقه التسريع بالملي ثانية</short>
+		<long>كم يستغرق التسريع من 0 حتى السرعة القصوى بالملي ثانية</long>
+	      </locale>
+
+	      <locale name="as">
+		<short>যে সময় অবধি গতিবৰ্ধন কৰা হবে, মিলিসেকেন্ডে ব্যক্ত</short>
+		<long>০ থেকে সৰ্বোচ্চ গতি অবধি পৌছতে অতিক্ৰান্ত মিলিসেকেন্ড</long>
+	      </locale>
+
+	      <locale name="az">
+		
+		<long>0-dan maksimum sürətə çıxmaq üçün keçən millisaniyə</long>
+	      </locale>
+
+	      <locale name="be">
+		
+		<long>Колькі мілісэкундаў зойме пераход ад нулявой да найбольшай хуткасьці</long>
+	      </locale>
+
+	      <locale name="bg">
+		<short>Колко дълго да ускорява в милисекунди</short>
+		<long>За колко милисекунди се стига от 0 до максималната скорост</long>
+	      </locale>
+
+	      <locale name="bn">
+		<short>মিলিসেকেন্ডে যতখানি ত্বরান্বিত হয়</short>
+		<long>শুন্য থেকে সর্বোচ্চ গতিতে যেতে যত মিলিসেকেন্ড সময় নেয়</long>
+	      </locale>
+
+	      <locale name="bn_IN">
+		<short>যে সময় অবধি গতিবর্ধন করা হবে, মিলিসেকেন্ডে ব্যক্ত</short>
+		<long>০ থেকে সর্বোচ্চ গতি অবধি পৌছতে অতিক্রান্ত মিলিসেকেন্ড</long>
+	      </locale>
+
+	      <locale name="bs">
+		
+		<long>Koliko milisekundi traje ubrzanje od 0 do maksimalne brzine</long>
+	      </locale>
+
+	      <locale name="ca">
+		<short>Durant quant de temps s&apos;ha d&apos;accelerar, en mil·lisegons</short>
+		<long>Quants mil·lisegons es tarda en anar de 0 a la velocitat màxima</long>
+	      </locale>
+
+	      <locale name="cs">
+		
+		<long>Kolik milisekund trvá přejít z 0 na maximální rychlost</long>
+	      </locale>
+
+	      <locale name="cy">
+		<short>Pa mor hir i gyflymu, mewn milfedau eiliad</short>
+		<long>Sawl milfed eiliad mae&apos;n cymryd i fynd o 0 i gyflymder uchaf</long>
+	      </locale>
+
+	      <locale name="da">
+		<short>Hvor lang tid der accelereres i millisekunder</short>
+		<long>Hvor mange millisekunder det tager at gå fra 0 til maksimal fart</long>
+	      </locale>
+
+	      <locale name="de">
+		<short>Wie lang die Beschleunigung in Millisekunden dauern soll</short>
+		<long>Wie viele Millisekunden soll es von 0 bis zur maximalen Beschleunigung dauern?</long>
+	      </locale>
+
+	      <locale name="dz">
+		
+		<long>མགྱོགས་ཚད་ ༠ ལས་ མང་མཐའ་ཚུན་ཚོད་འགྱོ་ནི་ལུ་ མི་ལི་སྐར་ཆ་ག་དེམ་ཅིག་འགོརཝ་ཨིན་ན།</long>
+	      </locale>
+
+	      <locale name="el">
+		
+		<long>Χιλιοστά δευτερολέπτου που χρειάζονται για τη μετάβαση από το 0 στη μέγιστη ταχύτητα</long>
+	      </locale>
+
+	      <locale name="en_CA">
+		<short>How long to accelerate in milliseconds</short>
+		<long>How many milliseconds it takes to go from 0 to maximum speed</long>
+	      </locale>
+
+	      <locale name="en_GB">
+		<short>How long to accelerate in milliseconds</short>
+		<long>How many milliseconds it takes to go from 0 to maximum speed</long>
+	      </locale>
+
+	      <locale name="eo">
+		
+		<long>Kiom da milisekundoj oni bezonas por iri de 0 al maksimuma rapido</long>
+	      </locale>
+
+	      <locale name="es">
+		<short>Duración de la aceleración en milisegundos</short>
+		<long>Cuántos milisegundos lleva ir desde 0 hasta la velocidad máxima</long>
+	      </locale>
+
+	      <locale name="et">
+		<short>Kiirenduse kestus millisekundites</short>
+		<long>Kui palju millisekundeid kulub nullist maksimumkiiruse saavutamiseks</long>
+	      </locale>
+
+	      <locale name="eu">
+		<short>Bizkortzeko denbora milisegundotan</short>
+		<long>0tik gehienezko abiadurara iristeko behar duen denbora milisegundotan</long>
+	      </locale>
+
+	      <locale name="fa">
+		
+		<long>تعداد میلی‌ثانیه‌هایی که طول می‌کشد تا از ۰ به حداکثر سرعت برسد</long>
+	      </locale>
+
+	      <locale name="fi">
+		<short>Kuinka monta millisekuntia kiihdytetään</short>
+		<long>Montako millisekuntia 0:sta maksiminopeuteen kiihdytys kestää</long>
+	      </locale>
+
+	      <locale name="fr">
+		<short>Durée d&apos;accélération en millisecondes</short>
+		<long>Nombre de millisecondes nécessaires pour passer de 0 à la vitesse maximum</long>
+	      </locale>
+
+	      <locale name="gl">
+		
+		<long>Canto tempo en milisegundos leva ir desde 0 até a velocidade máxima</long>
+	      </locale>
+
+	      <locale name="gu">
+		<short>કેટલા સમય સુધી પ્રવેગન કરવું મિલિસેકન્ડોમાં</short>
+		<long>૦ થી મહત્તમ ઝડપ પર જવા માટે તે કેટલી મિલિસેકન્ડ લેશે</long>
+	      </locale>
+
+	      <locale name="he">
+		<short>How long to accelerate in milliseconds</short>
+		<long>How many milliseconds it takes to go from 0 to maximum speed</long>
+	      </locale>
+
+	      <locale name="hi">
+		
+		<long>0 से अधिकतम गति तक पहुँचने में यह कितना मिलीसेकण्ड लेगा</long>
+	      </locale>
+
+	      <locale name="hr">
+		
+		<long>Koliko milisekundi je potrebno da prelazak od 0 do najveće brzine</long>
+	      </locale>
+
+	      <locale name="hu">
+		<short>Meddig gyorsítson, ezredmásodpercben</short>
+		<long>Hány ezredmásodpercig tart a 0-ról maximális sebességre gyorsulás</long>
+	      </locale>
+
+	      <locale name="id">
+		
+		<long>Berapa milidetik lamanya dari 0 hingga kecepatan tertinggi</long>
+	      </locale>
+
+	      <locale name="is">
+		
+		<long>Hve margar millisekúndur það tekur að fara frá 0 og upp í hámarkshraða</long>
+	      </locale>
+
+	      <locale name="it">
+		<short>Durata dell&apos;accelerazione in millisecondi</short>
+		<long>Quanti millisecondi sono necessari per andare da 0 alla velocità massima</long>
+	      </locale>
+
+	      <locale name="ja">
+		<short>加速するまでにどれくらい遅延するかです (ミリ秒単位)。</short>
+		<long>速さが０から最大値になるまでどれくらい遅延するかです (ミリ秒単位)。</long>
+	      </locale>
+
+	      <locale name="ka">
+		<short>აჩქარების ხანგრძლიობა მილიწამებში</short>
+		<long>რამდენი მილიწამია საჭირო 0-დან მაქსიმალური სიჩქარის მისაღწევად</long>
+	      </locale>
+
+	      <locale name="ko">
+		<short>얼마나 오래 가속할 지 밀리초</short>
+		<long>0에서 최대 속도로 가는 데 걸릴 밀리초</long>
+	      </locale>
+
+	      <locale name="ku">
+		
+		<long>Çiqas dem ji bilezkirina ji 0 ta bi zêdetirîn rêjeyê pêwiste</long>
+	      </locale>
+
+	      <locale name="lt">
+		<short>Akseleracijos laikas milisekundėmis</short>
+		<long>Per kiek milisekundžių pasiekti maksimalų žymeklio judėjimo greitį</long>
+	      </locale>
+
+	      <locale name="lv">
+		
+		<long>Cik daudz milisekundes prasīs, lai no 0 sasniegtu maksimālo ātrumu</long>
+	      </locale>
+
+	      <locale name="mg">
+		
+		<long>Ny elanelam-potoana (milisegaondra) hahatratrarana ny hafaingana ambony indrindra avy amin&apos;ny 0</long>
+	      </locale>
+
+	      <locale name="mk">
+		<short>колку долго да се забрзува, во милисекунди</short>
+		<long>Колку милисекунди се потребни од 0 до максималната брзина</long>
+	      </locale>
+
+	      <locale name="ml">
+		
+		<long>0-ല്‍ നിന്നും ഏറ്റവും കൂടുതല്‍ വേഗതയില്‍ എത്തുന്നതിനായി എടുക്കുന്ന സമയം (മില്ലിസെക്കന്‍ഡ്)</long>
+	      </locale>
+
+	      <locale name="mn">
+		
+		<long>0 -ээс хамгийн дээд хурдад хүртэл хэдэн миллисекунд үргэлжлэх вэ?</long>
+	      </locale>
+
+	      <locale name="ms">
+		
+		<long>Berapa milisaat untuk ia pergi drpd 0 ke kelajuan maksimum</long>
+	      </locale>
+
+	      <locale name="nb">
+		<short>Lengde på aksellerasjon i millisekunder</short>
+		<long>Antall millisekunder det tar å gå fra 0 til maksimal hastighet</long>
+	      </locale>
+
+	      <locale name="ne">
+		
+		<long>० देखि अधिकतम गतिमा जान कति मिलिस्केणड समय लाग्छ</long>
+	      </locale>
+
+	      <locale name="nl">
+		<short>Hoe lang te versnellen in milliseconden</short>
+		<long>Hoeveel milliseconden het duurt om van 0 naar maximumsnelheid te gaan</long>
+	      </locale>
+
+	      <locale name="nn">
+		<short>Kor lenge aksellerasjonen varar i millisekund</short>
+		<long>Kor mange millisekund det tek å gå frå 0 til toppfart</long>
+	      </locale>
+
+	      <locale name="or">
+		<short>କେତେ ସମୟ ତ୍ବରଣ କରିବ, ମିଲିସେକେଣ୍ଡରେ</short>
+		<long>0ରୁ ସର୍ବାଧିକ ଗତି ପର୍ଯ୍ଯନ୍ତ ଯିବା ପାଇଁ କେତେ ମିଲିସେକେଣ୍ଡ ଲାଗେ</long>
+	      </locale>
+
+	      <locale name="pa">
+		
+		<long>0 ਤੋਂ ਅਧਿਕਤਮ ਗਤੀ ਉੱਤੇ ਜਾਣ ਲਈ ਇਹ ਕਿੰਨੇ ਮਿਲੀਸਕਿੰਟ ਲੈਂਦਾ ਹੈ</long>
+	      </locale>
+
+	      <locale name="pl">
+		<short>Czas przyspieszania (w milisekundach).</short>
+		<long>Czas przyspieszania od 0 do maksymalnej prędkości (w milisekundach)</long>
+	      </locale>
+
+	      <locale name="pt">
+		<short>Durante quanto tempo acelerar, em milisegundos</short>
+		<long>Quantos milisegundos demora ir de 0 até à velocidade máxima</long>
+	      </locale>
+
+	      <locale name="pt_BR">
+		<short>Por quanto tempo acelerar em milisegundos</short>
+		<long>Quantos milisegundos leva para ir de 0 até a velocidade máxima</long>
+	      </locale>
+
+	      <locale name="ro">
+		<short>Cât timp se accelerează în milisecunde</short>
+		<long>În câte milisecunde se ajunge de la 0 la viteza maximă</long>
+	      </locale>
+
+	      <locale name="ru">
+		<short>Как долго ускоряться (в миллисекундах)</short>
+		<long>Сколько миллисекунд требуется для набора скорости от 0 до максимальной</long>
+	      </locale>
+
+	      <locale name="sk">
+		
+		<long>Koľko milisekúnd trvá zrýchlenie z 0 na maximálnu rýchlosť</long>
+	      </locale>
+
+	      <locale name="sl">
+		<short>kako dolgo je pospeševanje (v milisekundah)</short>
+		<long>Koliko milisekund naj vzame za prehod iz 0 na najvišjo hitrost</long>
+	      </locale>
+
+	      <locale name="sq">
+		<short>Kohëzgjatja e përshpejtimit në milisekonda</short>
+		<long>Për sa millisekonda ka nevojë për të shkuar nga 0 në shpejtësinë maksimum</long>
+	      </locale>
+
+	      <locale name="sr">
+		<short>Колико дуго (у милисекундама) да убрзава</short>
+		<long>Колико времена (у милисекундама) треба да дође од нуле до највеће брзине</long>
+	      </locale>
+
+	      <locale name="sr@Latn">
+		<short>Koliko dugo (u milisekundama) da ubrzava</short>
+		<long>Koliko vremena (u milisekundama) treba da dođe od nule do najveće brzine</long>
+	      </locale>
+
+	      <locale name="sr@ije">
+		
+		<long>Колико времена (у милисекундама) треба да дође од нуле до највеће брзине</long>
+	      </locale>
+
+	      <locale name="sv">
+		<short>Hur länge ska accelerering ske i millisekunder</short>
+		<long>Hur många millisekunder det tar att gå från 0 till maxhastighet</long>
+	      </locale>
+
+	      <locale name="ta">
+		
+		<long>0 விலிருந்து ஆகக்கூடிய வேகத்தை அடைவதற்கு எத்தனை மில்லிநொடிகள்</long>
+	      </locale>
+
+	      <locale name="th">
+		<short>ใช้เวลากี่มิลลิวินาที่ในการเร่งความเร็ว</short>
+		<long>ใช้เวลากี่มิลลิวินาทีในการเร่งจาก 0 ไปความเร็วสูงสุด</long>
+	      </locale>
+
+	      <locale name="tr">
+		
+		<long>0&apos;dan en yüksek hıza ulaşmak için kaç milisaniye gerektiği</long>
+	      </locale>
+
+	      <locale name="uk">
+		<short>Як довго прискорюватися (у мілісекундах)</short>
+		<long>Час розгону, в мілісекундах, від 0 до максимальної швидкості</long>
+	      </locale>
+
+	      <locale name="vi">
+		<short>Bao lâu cần tăng tốc (mili-giây)</short>
+		<long>Mất bao nhiêu mili giây để đi từ 0 đến tốc độ tối đa.</long>
+	      </locale>
+
+	      <locale name="xh">
+		
+		<long>Zingaphi iimilisekondi ukusuka ku-0 ukuya kwesona santya siphezulu</long>
+	      </locale>
+
+	      <locale name="yi">
+		
+		<long>װיפֿל מיליסעקונדעס געדױערט אין זיך פֿאַרגיכערן פֿון 0 צום העכסטן געאײַל</long>
+	      </locale>
+
+	      <locale name="zh_CN">
+		<short>经过多少毫秒后开始加速</short>
+		<long>在多少毫秒内从 0 增长到最大速度</long>
+	      </locale>
+
+	      <locale name="zh_HK">
+		
+		<long>從靜止加速至最高速度需要多少毫秒</long>
+	      </locale>
+
+	      <locale name="zh_TW">
+		
+		<long>從靜止加速至最高速度需要多少毫秒</long>
+	      </locale>
+	    </schema>
+	    <schema>
+	      <key>/schemas/desktop/gnome/accessibility/keyboard/mousekeys_init_delay</key>
+	      <applyto>/desktop/gnome/accessibility/keyboard/mousekeys_init_delay</applyto>
+	      <owner>gnome</owner>
+	      <type>int</type>
+	      <default>300</default>
+	      <locale name="C">
+		<short>Initial delay in milliseconds</short>
+		<long>How many milliseconds to wait before mouse movement keys start to operate</long>
+	      </locale>
+
+	      <locale name="ar">
+		<short>التأخير الأول بالملي ثانية</short>
+		<long>كم ملي ثانية يجب الإنتظار حتى تبدأ أزرار حركات الفأرة العمل</long>
+	      </locale>
+
+	      <locale name="as">
+		<short>প্ৰাৰম্ভিক বিলম্ব, মিলিসেকেন্ডে ব্যক্ত</short>
+		<long>মাউসেৰ কি নাড়ানোৰ পৰে যে সংখ্যক সেকেন্ড অপেক্ষা কৰা হবে</long>
+	      </locale>
+
+	      <locale name="az">
+		
+		<long>Sıçan hərəkət düymələri fəaliyyətə başlaman öncə gözləniləcək millisaniyə miqdarı</long>
+	      </locale>
+
+	      <locale name="be">
+		
+		<long>Колькі мілісэкундаў чакаць перад пачаткам дзеяньня клявішаў перамяшчэньня мышы</long>
+	      </locale>
+
+	      <locale name="bg">
+		<short>Първоначално забавяне в милисекунди</short>
+		<long>Колко милисекунди да се изчака преди включването на клавишите за движение на мишката</long>
+	      </locale>
+
+	      <locale name="bn">
+		<short>মিলিসেকেন্ডে প্রারম্ভিক বিলম্ব</short>
+		<long>মাউস নড়াচড়ার আগ পর্যন্ত যত মিলিসেকেন্ড অপেক্ষা করে</long>
+	      </locale>
+
+	      <locale name="bn_IN">
+		<short>প্রারম্ভিক বিলম্ব, মিলিসেকেন্ডে ব্যক্ত</short>
+		<long>মাউসের কি নাড়ানোর পরে যে সংখ্যক সেকেন্ড অপেক্ষা করা হবে</long>
+	      </locale>
+
+	      <locale name="bs">
+		
+		<long>Koliko milisekundi čekati prije nego tipke za pomjeranje kursora počnu djelovati</long>
+	      </locale>
+
+	      <locale name="ca">
+		<short>Retard inicial en mil·lisegons</short>
+		<long>Quants mil·lisegons s&apos;ha d&apos;esperar abans que les tecles de moviment del ratolí comencin a funcionar</long>
+	      </locale>
+
+	      <locale name="cs">
+		
+		<long>Kolik milisekund počkat, než začnou fungovat klávesy pro pohyb myši</long>
+	      </locale>
+
+	      <locale name="cy">
+		<short>Saib cychwynnol, mewn milfedau eiliad</short>
+		<long>Sawl milfed eiliad dylid aros cyn mae&apos;r bysellau symud llygoden yn gweithredu</long>
+	      </locale>
+
+	      <locale name="da">
+		<short>Begyndelsesventetid i millisekunder</short>
+		<long>Hvor mange millisekunder der skal ventes før museflytningstasterne begynder at virke</long>
+	      </locale>
+
+	      <locale name="de">
+		<short>Verzögerung in Millisekunden zu Beginn</short>
+		<long>Wie viele Millisekunden soll gewartet werden, bevor Maus-Bewegungstasten zu funktionieren beginnen?</long>
+	      </locale>
+
+	      <locale name="dz">
+		
+		<long>མཱའུསི་འགུལ་བསྐྱོད་ཀྱི་ལྡེ་མིག་ཚུ་ བཀོལ་སྤྱོད་འགོ་མ་བཙུགས་པའི་ཧེ་མར་ མི་ལི་སྐར་ཆ་ག་དེམ་ཅིག་ བསྒུག་དགོཔ་ཨིན་ན།</long>
+	      </locale>
+
+	      <locale name="el">
+		
+		<long>Χιλιοστά δευτερολέπτου αναμονής μέχρι την έναρξη της λειτουργίας των πλήκτρων κίνησης ποντικιού </long>
+	      </locale>
+
+	      <locale name="en_CA">
+		<short>Initial delay in milliseconds</short>
+		<long>How many milliseconds to wait before mouse movement keys start to operate</long>
+	      </locale>
+
+	      <locale name="en_GB">
+		<short>Initial delay in milliseconds</short>
+		<long>How many milliseconds to wait before mouse movement keys start to operate</long>
+	      </locale>
+
+	      <locale name="eo">
+		
+		<long>Kiom da milisekundoj oni atendu antaŭ ol musmovaj klavoj ekfunkcias</long>
+	      </locale>
+
+	      <locale name="es">
+		<short>Retardo inicial en milisegundos</short>
+		<long>Cuántos milisegundos esperar antes de que las teclas de movimiento del ratón empiecen a funcionar</long>
+	      </locale>
+
+	      <locale name="et">
+		<short>Lähteviivitus millisekundites</short>
+		<long>Kui mitu millisekundit tuleb enne hiire liigutamise klahvide toimimahakkamist oodata</long>
+	      </locale>
+
+	      <locale name="eu">
+		<short>Hasierako atzerapena milisegundotan</short>
+		<long>Sagua mugitzeko tresnak funtzionatzen hasi baino lehen itxaron behar den denbora milisegundotan</long>
+	      </locale>
+
+	      <locale name="fa">
+		
+		<long>تعداد میلی‌ثانیه‌هایی که باید صبر کرد تا کلیدهای حرکت موشی شروع به کار کنند</long>
+	      </locale>
+
+	      <locale name="fi">
+		<short>Alkuviive millisekunteina</short>
+		<long>Kuinka monta millisekuntia kestää, ennen kuin hiirenliikutusnäppäimet alkavat toimia</long>
+	      </locale>
+
+	      <locale name="fr">
+		<short>Délai initial en millisecondes</short>
+		<long>Nombre de millisecondes à attendre avant que les touches de mouvements de la souris commencent à opérer</long>
+	      </locale>
+
+	      <locale name="gl">
+		
+		<long>Canto tempo en milisegundos hai que esperar até que as teclas de </long>
+	      </locale>
+
+	      <locale name="gu">
+		<short>આરંભિક વિલંબ મિલિસેકન્ડમાં</short>
+		<long>માઉસ ફેરવવાની કી શરુ થાય તે ક્રિયા પહેલા કેટલી મિલિસેકન્ડ રાહ જોવી</long>
+	      </locale>
+
+	      <locale name="he">
+		<short>Initial delay in milliseconds</short>
+		<long>How many milliseconds to wait before mouse movement keys start to operate</long>
+	      </locale>
+
+	      <locale name="hi">
+		
+		<long>माउस गतिविधि कुंजियाँ कार्य करना प्रारंभ करने से पहले कितने मिलीसेकण्ड इंतज़ार करें</long>
+	      </locale>
+
+	      <locale name="hr">
+		
+		<long>Koliko milisekundi je potrebno čekati prije nego tipke pokretanja miša počinju raditi</long>
+	      </locale>
+
+	      <locale name="hu">
+		<short>Kezdő késleltetés ezredmásodpercben</short>
+		<long>Hány másodpercet várjon mielőtt az egérmozgató billentyűk működni kezdenek</long>
+	      </locale>
+
+	      <locale name="id">
+		
+		<long>Berapa milidetik yang ditunggu sebelum mouse bergerak</long>
+	      </locale>
+
+	      <locale name="is">
+		
+		<long>Hve margar millisekúndur á að bíða áður en hnappar músarhreyfinga byrja að virka</long>
+	      </locale>
+
+	      <locale name="it">
+		<short>Ritardo iniziale in millisecondi</short>
+		<long>Quanti millisecondi attendere prima che i tasti per il movimento del mouse inizino ad operare</long>
+	      </locale>
+
+	      <locale name="ja">
+		<short>初期の遅延 (ミリ秒単位)</short>
+		<long>マウスを移動させるまでどれくらい遅延するかです (ミリ秒単位)。</long>
+	      </locale>
+
+	      <locale name="ka">
+		<short>საწყისი დაყოვნება მილიწამებში</short>
+		<long>რამდენი მილიწამია საჭირო სანამ თაგუნას მოძრაობის კლავიშები ამუშავდება</long>
+	      </locale>
+
+	      <locale name="ko">
+		<short>밀리초 단위의 초기 지연시간</short>
+		<long>마우스 이동 키가 동작하기 전에 기다릴 밀리초</long>
+	      </locale>
+
+	      <locale name="ku">
+		
+		<long>Çiqas milîçirk pêwistin ji bo destpêkirina xebata bişokên mişkê</long>
+	      </locale>
+
+	      <locale name="lt">
+		<short>Pradinė pauzė milisekundėmis</short>
+		<long>Po kiek milisekundžių turi pradėti veikti pelės judėjimo klavišai</long>
+	      </locale>
+
+	      <locale name="lv">
+		
+		<long>Cik daudz milisekundes gaidīt pirms peles pārvietošanas taustiņi sāk darboties</long>
+	      </locale>
+
+	      <locale name="mg">
+		
+		<long>Ny elanelam-potoana (milisegaondra) iandrasana alohan&apos;ny hiasan&apos;ny famahan&apos;ny hetsiky ny totozy</long>
+	      </locale>
+
+	      <locale name="mk">
+		<short>Почетно доцнење во милисекунди</short>
+		<long>Колкаво е времето на чекање во милисекунди пред да се вклучат копчињата за движење на глушецот</long>
+	      </locale>
+
+	      <locale name="ml">
+		<short>മില്ലിസെക്കന്‍ഡില്‍ ആദ്യമുളള ഇടവേള </short>
+		
+	      </locale>
+
+	      <locale name="mn">
+		
+		<long>Хулганын хөдөлгөөний товчлуур үйлчилж эхэлтэл хэдэн миллисекунд хүлээх вэ?</long>
+	      </locale>
+
+	      <locale name="ms">
+		
+		<long>Berapa milisaat ditunggu sebelum kekunci pergerakan tetikus mula beroperasi</long>
+	      </locale>
+
+	      <locale name="nb">
+		<short>Initiell pause i millisekunder</short>
+		<long>Antall millisekunder ventetid før taster for musbevegelse begynner å virke</long>
+	      </locale>
+
+	      <locale name="ne">
+		
+		<long>कामशुरु गर्न माउस हलचल कुञ्जी थिच्नु भन्दा पहिले कति मिलिसेकेन्ड समय पर्खनु पर्ला</long>
+	      </locale>
+
+	      <locale name="nl">
+		<short>Startvertraging in milliseconden</short>
+		<long>Hoeveel milliseconden te wachten voordat muisbewegingstoetsen in werking treden</long>
+	      </locale>
+
+	      <locale name="nn">
+		<short>Pause i starten, i millisekund</short>
+		<long>Kor mange millisekund å venta før musrørsletastane tek til å virka</long>
+	      </locale>
+
+	      <locale name="or">
+		<short>ପ୍ରାରମ୍ଭିକ ବିଳମ୍ବ, ମିଲିସେକେଣ୍ଡରେ</short>
+		<long>ମାଉସ୍ ଘୁଞ୍ଚା ଚାବି ଚଳାଇବା ପୂର୍ବରୁ କେତେ ମିଲିସେକେଣ୍ଡ ଅପେକ୍ଷା କରାଯିବ</long>
+	      </locale>
+
+	      <locale name="pa">
+		
+		<long>ਮਾਊਸ-ਸਵਿੱਚ ਕੰਮ ਕਰਨ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਕਿੰਨੇ ਮਿਲੀਸਕਿੰਟ ਉਡੀਕ ਕਰਨੀ ਪਵੇਗੀ</long>
+	      </locale>
+
+	      <locale name="pl">
+		<short>Początkowe opóźnienie w milisekundach</short>
+		<long>Okres oczekiwania przed rozpoczęciem działania klawiszy przemieszczających wskaźnik myszy.</long>
+	      </locale>
+
+	      <locale name="pt">
+		<short>Atraso inicial em milisegundos</short>
+		<long>Quantos milisegundos aguardar antes das teclas de movimento do rato começarem a responder</long>
+	      </locale>
+
+	      <locale name="pt_BR">
+		<short>Espera inicial em milisegundos</short>
+		<long>Quantos milisegundos esperar antes de as teclas de movimento do mouse começarem a operar</long>
+	      </locale>
+
+	      <locale name="ro">
+		<short>Pauză iniţială în milisecunde</short>
+		<long>Milisecunde de aşteptare înainte ca tastele pentru mutarea cursorului de mouse să fie operaţionale</long>
+	      </locale>
+
+	      <locale name="ru">
+		<short>Начальная задержка (в миллисекундах)</short>
+		<long>Сколько миллисекунд одидать, прежде чем клавиши передвиджения мыши начнут работать</long>
+	      </locale>
+
+	      <locale name="sk">
+		
+		<long>Koľko milisekúnd čakať pred začiatkom fungovania kláves na presúvanie myši</long>
+	      </locale>
+
+	      <locale name="sl">
+		<short>začetni zamik (v milisekundah)</short>
+		<long>Koliko milisekund naj se počaka preden začnejo delovati tipke premikanja miške</long>
+	      </locale>
+
+	      <locale name="sq">
+		<short>Vonesa fillestare në milisekonda</short>
+		<long>Sa millisekonda duhet pritur përpara se pulsantët për lëvizjen e mouse të hyjnë në aksion</long>
+	      </locale>
+
+	      <locale name="sr">
+		<short>Почетно одуговлачење у милисекундама</short>
+		<long>Колико времена (у милисекундама) треба да прође пре него што тастери за померање миша почну да раде</long>
+	      </locale>
+
+	      <locale name="sr@Latn">
+		<short>Početno odugovlačenje u milisekundama</short>
+		<long>Koliko vremena (u milisekundama) treba da prođe pre nego što tasteri za pomeranje miša počnu da rade</long>
+	      </locale>
+
+	      <locale name="sr@ije">
+		
+		<long>Колико времена (у милисекундама) треба да прође пре него што тастери за помјерање миша почну да раде</long>
+	      </locale>
+
+	      <locale name="sv">
+		<short>Initiell fördröjning i millisekunder</short>
+		<long>Hur många millisekunder att vänta innan musflyttstangenter börjar fungera</long>
+	      </locale>
+
+	      <locale name="ta">
+		
+		<long>சுட்டி நகர்த்தல் விசைகளை தொடங்குவதற்கு எத்தனை மில்லிநொடிகள் காத்திருக்க வேண்டும்</long>
+	      </locale>
+
+	      <locale name="th">
+		<short>จำนวนมิลลิวินาทีที่คอย</short>
+		<long>คอยกี่มิลลิวินาทีก่อนที่ปุ่มบังคับเมาส์จะเริ่มทำงาน</long>
+	      </locale>
+
+	      <locale name="tr">
+		
+		<long>Fare hareket tuşlarının harekete başlamasından önce kaç milisaniye beklemek gerektiği</long>
+	      </locale>
+
+	      <locale name="uk">
+		<short>Початкова затримка у мілісекундах</short>
+		<long>Затримка, в мілісекундах, перед початком опрацювання клавіш руху мишею</long>
+	      </locale>
+
+	      <locale name="vi">
+		<short>Khoảng chờ khởi đầu (mili giây)</short>
+		<long>Số mili-giây cần chờ trước khi phím di chuyển chuột bắt đầu hoạt động</long>
+	      </locale>
+
+	      <locale name="xh">
+		
+		<long>Zingaphi iimilisekondi zokulinda ngaphambi kokuba amaqhosha ohambiso lwemawusi aqalise ukusebenza</long>
+	      </locale>
+
+	      <locale name="yi">
+		
+		<long>װיפֿל מיליסעקונדעס צו װאַרטן אײדער מײַזל־באַװעגונג־קלאַװישן הײבן זיך אָן צו אָפּערירן</long>
+	      </locale>
+
+	      <locale name="zh_CN">
+		<short>初始延迟毫秒数</short>
+		<long>在鼠标移动键起作用前等待多少毫秒</long>
+	      </locale>
+
+	      <locale name="zh_HK">
+		
+		<long>等待指定的毫秒數目後，滑鼠鍵才會生效</long>
+	      </locale>
+
+	      <locale name="zh_TW">
+		
+		<long>等待指定的毫秒數目後，滑鼠鍵才會生效</long>
+	      </locale>
+	    </schema>
+
+	<schema>
+	  <key>/schemas/desktop/gnome/accessibility/keyboard/slowkeys_enable</key>
+	  <applyto>/desktop/gnome/accessibility/keyboard/slowkeys_enable</applyto>
+	  <owner>gnome</owner>
+	  <type>bool</type>
+	  <default>false</default>
+	  <locale name="C">
+	    <short></short>
+	    <long></long>
+	  </locale>
+	</schema>
+	    <schema>
+	      <key>/schemas/desktop/gnome/accessibility/keyboard/slowkeys_delay</key>
+	      <applyto>/desktop/gnome/accessibility/keyboard/slowkeys_delay</applyto>
+	      <owner>gnome</owner>
+	      <type>int</type>
+	      <default>0</default>
+	      <locale name="C">
+		<short>Minimum interval in milliseconds</short>
+		<long>Do not accept a key as being pressed unless held for @delay milliseconds</long>
+	      </locale>
+
+	      <locale name="ar">
+		<short>الفترة الدنيا بالملي ثانية</short>
+		<long>لا تقبل زرا كمكبوس إلا عند ضغطه لـ @delay ملي ثانية</long>
+	      </locale>
+
+	      <locale name="as">
+		<short>সৰ্বনিম্ন বিৰতি, মিলিসেকেন্ডে ব্যক্ত</short>
+		<long>@delay দ্বাৰা উল্লিখিত মিলিসেকেন্ডেৰ কম সময়েৰ জন্য কি টেপা হলে গ্ৰাহ্য কৰা হবে না</long>
+	      </locale>
+
+	      <locale name="az">
+		
+		<long>Düymə @delay millisaniyə müddəti qədər basılmazsa onu basılmış hesab etmə</long>
+	      </locale>
+
+	      <locale name="be">
+		
+		<long>Ня ўспрымаць націск карацейшы за @delay мілісэкундаў</long>
+	      </locale>
+
+	      <locale name="bg">
+		<short>Минимален интервал в милисекунди</short>
+		<long>Клавиш не е натиснат, ако не е задържан поне @delay милисекунди</long>
+	      </locale>
+
+	      <locale name="bn">
+		<short>মিলিসেকেন্ডে সর্বনিম্ন বিরতি</short>
+		<long>@ মিলিসেকেন্ড চেপে ধরার পূর্ব  পযন্ত কীটি কাজ করবে না</long>
+	      </locale>
+
+	      <locale name="bn_IN">
+		<short>সর্বনিম্ন বিরতি, মিলিসেকেন্ডে ব্যক্ত</short>
+		<long>@delay দ্বারা উল্লিখিত মিলিসেকেন্ডের কম সময়ের জন্য কি টেপা হলে গ্রাহ্য করা হবে না</long>
+	      </locale>
+
+	      <locale name="bs">
+		
+		<long>Nemoj prihvatiti pritisak tipke ukoliko nije držana pritisnuta @delay milisekundi</long>
+	      </locale>
+
+	      <locale name="ca">
+		<short>Interval mínim en mil·lisegons</short>
+		<long>Accepta només les tecles premudes almenys durant @retard mil·lisegons</long>
+	      </locale>
+
+	      <locale name="cs">
+		
+		<long>Nepřijmout klávesu jako stisknutou, není-li podržena @delay milisekund</long>
+	      </locale>
+
+	      <locale name="cy">
+		<short>Ysbaid lleiaf, mewn milfedau eiliad</short>
+		<long>Peidio derbyn gwasgiad bysell os na caiff ei ddal am @delay milfed eiliad</long>
+	      </locale>
+
+	      <locale name="da">
+		<short>Minimalt interval i millisekunder</short>
+		<long>Acceptér ikke en tast som værende trykket ned medmindre den holdes @delay antal millisekunder</long>
+	      </locale>
+
+	      <locale name="de">
+		<short>Minimales Intervall in Millisekunden</short>
+		<long>Eine Taste nicht als gedrückt werten, wenn sie nicht @delay Millisekunden heruntergrdrückt wurde</long>
+	      </locale>
+
+	      <locale name="dz">
+		
+		<long>@ ཕྱིར་འགྱངས་ཀྱི་ མི་ལི་སྐར་ཆ་གི་དོན་ལུ་ འཆང་སྟེ་ཡོདན་མ་གཏོགས་ དེ་མིན་ལྡེ་མིག་ཅིག་ ཨེབ་དོ་བཟུམ་སྦེ་ དང་ལེན་མ་འབད།</long>
+	      </locale>
+
+	      <locale name="el">
+		
+		<long>Να μη γίνεται αποδοχή ενός πλήκτρου αν δεν πατηθεί και κρατηθεί @delay milliseconds</long>
+	      </locale>
+
+	      <locale name="en_CA">
+		<short>Minimum interval in milliseconds</short>
+		<long>Do not accept a key as being pressed unless held for @delay milliseconds</long>
+	      </locale>
+
+	      <locale name="en_GB">
+		<short>Minimum interval in milliseconds</short>
+		<long>Do not accept a key as being pressed unless held for @delay milliseconds</long>
+	      </locale>
+
+	      <locale name="eo">
+		
+		<long>Ne akceptu klavon presita escepte tenatan dum @delay milisekundoj</long>
+	      </locale>
+
+	      <locale name="es">
+		<short>Intervalo mínimo en milisegundos</short>
+		<long>No aceptar una tecla como pulsada a no ser que se mantenga durante @delay milisegundos</long>
+	      </locale>
+
+	      <locale name="et">
+		<short>Vähim ajavahemik millisekundites</short>
+		<long>Klahvivajutust, mille korral klahvi pärast vajutamist ei hoita all kauem kui selles võtmes määratud arv millisekundeid, ei arvestata.</long>
+	      </locale>
+
+	      <locale name="eu">
+		<short>Gutxieneko tartea milisegundotan</short>
+		<long>Ez onartu tekla bat sakatutzat @delay milisegundoz sakatuta edukitzen ez bada</long>
+	      </locale>
+
+	      <locale name="fa">
+		
+		<long>کلید به عنوان فشرده شده پذیرفته نشود مگر آنکه برای @delay میلی ثانیه نگاه داشته شود.</long>
+	      </locale>
+
+	      <locale name="fi">
+		<short>Pienin aikaväli millisekunteina</short>
+		<long>Hyväksy näppäimen painallus vain, jos se kestää yli @delay millisekuntia</long>
+	      </locale>
+
+	      <locale name="fr">
+		<short>Intervalle minimum en millisecondes</short>
+		<long>Ne pas accepter une touche comme étant pressée à moins qu&apos;elle ne l&apos;ai été au moins @delai millisecondes</long>
+	      </locale>
+
+	      <locale name="gl">
+		
+		<long>Non aceptar unha tecla como premida excepto que se manteña durante </long>
+	      </locale>
+
+	      <locale name="gu">
+		<short>ન્યૂનત્તમ અંતરાલ મિલિસેકન્ડમાં</short>
+		<long>કી જેવી દબાવવામાં આવે તેવી સ્વીકારવી નહિ જ્યાં સુધી @વિલંબ મિલિસેકન્ડમાં હોય</long>
+	      </locale>
+
+	      <locale name="he">
+		<short>Minimum interval in milliseconds</short>
+		<long>Do not accept a key as being pressed unless held for @delay milliseconds</long>
+	      </locale>
+
+	      <locale name="hi">
+		
+		<long>कुंजी को दबाया गया स्वीकारें नहीं जब तक कि वह दबाकर न रखा  जाए @देर मिलिसेकण्ड्स तक.</long>
+	      </locale>
+
+	      <locale name="hr">
+		
+		<long>Ne prihvaća tipku, koji je proslijeđen, osim ako je zadržan za @delay milisekundi.</long>
+	      </locale>
+
+	      <locale name="hu">
+		<short>Minimális időköz ezredmásodpercben</short>
+		<long>Ne fogadja el a billentyű lenyomását, hacsak nincs @delay ezredmásodpercig lenyomva</long>
+	      </locale>
+
+	      <locale name="id">
+		
+		<long>Jangan terima tombol saat ditekan kecuali bila ditekan selama @delay milidetik</long>
+	      </locale>
+
+	      <locale name="is">
+		
+		<long>Viðurkenna innslátt einungis ef hnapp hefur verið haldið í @delay millisekúndur</long>
+	      </locale>
+
+	      <locale name="it">
+		<short>Intervallo minimo in millisecondi</short>
+		<long>Non accetta un tasto se non è stato mantenuto premuto per almeno @delay millisecondi</long>
+	      </locale>
+
+	      <locale name="ja">
+		<short>最小の間隔 (ミリ秒単位)</short>
+		<long>@deley ミリ秒間押下し続けていないキーを無視します。</long>
+	      </locale>
+
+	      <locale name="ka">
+		<short>მინიმალური შუალედი მილიწამებში</short>
+		<long>კლავიშის აღქმის უარყოფა თუ დაჭერილია @delay მილიწამზე ნაკლებ ხანს</long>
+	      </locale>
+
+	      <locale name="ko">
+		<short>밀리초 단위의 최소 시간 간격</short>
+		<long>@delay 밀리초동안 눌려져 있지 않은 경우 키를 받아들이지 않습니다</long>
+	      </locale>
+
+	      <locale name="ku">
+		
+		<long>Heta ku bi qasî @delay mîlîçirke pêl bişkokan nehate kirin, nepejirîne</long>
+	      </locale>
+
+	      <locale name="lt">
+		<short>Mažiausias intervalas milisekundėmis</short>
+		<long>Nereaguoti į klavišo paspaudimą, jei jis paspaustas trumpiau nei @delay milisekundžių</long>
+	      </locale>
+
+	      <locale name="lv">
+		
+		<long>Nepieņemt taustiņa nospiešanu, ka vien nav turēta nospiesta @delay milisekundes</long>
+	      </locale>
+
+	      <locale name="mg">
+		
+		<long>Aza ekena izay kitendry voatsindry raha tsy hoe voatsindry mandritra ny @delay milisegaondra</long>
+	      </locale>
+
+	      <locale name="mk">
+		<short>Минимален интервал во милисекунди</short>
+		<long>Не регистрирај притискање на копчиња освен ако копчињата не се држат притиснати @delay милисекунди</long>
+	      </locale>
+
+	      <locale name="ml">
+		<short>മില്ലിസെക്കന്‍ഡില്‍ ഏറ്റവും കുറഞ്ഞ ഇടവേള </short>
+		
+	      </locale>
+
+	      <locale name="mn">
+		
+		<long>Товчлуур @delay миллисекундээс богино хугацаанд дарагдсан бол дарсныг үл тооцох</long>
+	      </locale>
+
+	      <locale name="ms">
+		
+		<long>Tak menerima kekunci sebagai ditekan melainkan ditekan selama @delay milisaat</long>
+	      </locale>
+
+	      <locale name="nb">
+		<short>Minste intervall i millisekunder</short>
+		<long>Ikke godta en tast som nedtrykket før den holdes minst @delay millisekunder</long>
+	      </locale>
+
+	      <locale name="ne">
+		
+		<long>@विलम्ब मिलिसेकेण्डहरू लाई नराखिकन कुञ्जी थिचियो भने स्वीकार नगर्नुहोस्</long>
+	      </locale>
+
+	      <locale name="nl">
+		<short>Minimuminterval in milliseconden</short>
+		<long>Toets niet accepteren als ingedrukt tenzij @delay milliseconden lang ingedrukt gehouden</long>
+	      </locale>
+
+	      <locale name="nn">
+		<short>Minste intervall, i millisekund</short>
+		<long>Ikkje registrer at ein tast er trykt ned før han er halden nede i @delay millisekund</long>
+	      </locale>
+
+	      <locale name="or">
+		<short>ସର୍ବନିମ୍ନ ବିରତି, ମିଲିସେକେଣ୍ଡରେ</short>
+		<long>@delay ମିଲିସେକେଣ୍ଡ ବିଳମ୍ବ ପର୍ଯ୍ଯନ୍ତ ଚାବି ଦବା ନ ଯାଇଥିଲେ ଅଗ୍ରାହ୍ଯ କରନ୍ତୁ</long>
+	      </locale>
+
+	      <locale name="pa">
+		
+		<long>ਕਿਸੇ ਕੁੰਜੀ ਨੂੰ ਮਾਨਤਾ ਨਾ ਦਿਓ, ਜਦੋਂ ਤੱਕ ਕਿ ਇਹਨਾਂ ਨੂੰ @delay ਮਿਲੀ ਸਕਿੰਟ ਲਈ ਦਬਾਇਆ ਨਹੀਂ ਜਾਂਦਾ ਹੈ</long>
+	      </locale>
+
+	      <locale name="pl">
+		<short>Minimalny odstęp czasowy w milisekundach</short>
+		<long>Akceptuje przyciśnięcia klawiszy, tylko, jeśli trwają co najmniej przez podany okres czasu (w milisekundach).</long>
+	      </locale>
+
+	      <locale name="pt">
+		<short>Intervalo mínimo em milisegundos</short>
+		<long>Não aceitar uma tecla como premida excepto se premida por mais de @delay milisegundos</long>
+	      </locale>
+
+	      <locale name="pt_BR">
+		<short>Intervalo mínimo em milisegundos</short>
+		<long>Não aceitar uma tecla como estando pressionada a menos que seja mantida assim por @delay milisegundos</long>
+	      </locale>
+
+	      <locale name="ro">
+		<short>Interval minim în milisecunde</short>
+		<long>Nu se acceptă apăsarea unei taste decât dacă este ţinută „@delay” milisecunde</long>
+	      </locale>
+
+	      <locale name="ru">
+		<short>Минимальный интервал (в миллисекундах)</short>
+		<long>Не принимать нажатие, если не оно длилось менее @delay миллисекунд</long>
+	      </locale>
+
+	      <locale name="sk">
+		
+		<long>Neakceptovať kláves ako stlačený, kým nie je stlačený aspoň @delay milisekúnd</long>
+	      </locale>
+
+	      <locale name="sl">
+		<short>najmanjši razmik (v milisekundah)</short>
+		<long>Ne sprejmi tipke kot pritisnjene, dokler ni pritisnjena @delay milisekund</long>
+	      </locale>
+
+	      <locale name="sq">
+		<short>Intervali minimum në millisekonda</short>
+		<long>Mos prano një pulsant nëse nuk është mbajtur i shtypur për të paktën @delay milisekonda</long>
+	      </locale>
+
+	      <locale name="sr">
+		<short>Најмањи период у милисекундама</short>
+		<long>Не сматрај тастер притиснутим док се не држи бар @delay милисекунди</long>
+	      </locale>
+
+	      <locale name="sr@Latn">
+		<short>Najmanji period u milisekundama</short>
+		<long>Ne smatraj taster pritisnutim dok se ne drži bar @delay milisekundi</long>
+	      </locale>
+
+	      <locale name="sr@ije">
+		
+		<long>Не сматрај тастер притиснутим док се не држи бар @delay милисекунди</long>
+	      </locale>
+
+	      <locale name="sv">
+		<short>Minsta intervall i millisekunder</short>
+		<long>Acceptera inte en tangent som trycks ned om den inte hålls nedtryckt i @delay millisekunder</long>
+	      </locale>
+
+	      <locale name="ta">
+		
+		<long>@தாமதம் மில்லிநொடிகளுக்கு அழுத்தப்படும் வரை, விசை அழுத்தப்பட்டதாக ஏற்றுக்கொள்ள வேண்டாம்</long>
+	      </locale>
+
+	      <locale name="th">
+		<short>ช่วงเวลาสั้นสุด เป็นมิลลิวินาที</short>
+		<long>รับสัญญาณการกดปุ่มต่อเมื่อปุ่มถูกกดค้างไว้ @delay มิลลิวินาที</long>
+	      </locale>
+
+	      <locale name="tr">
+		
+		<long>Bir tuşa @delay milisaniye uzunlukta basılmadıkça kabul etme</long>
+	      </locale>
+
+	      <locale name="uk">
+		<short>Мінімальний інтервал у мілісекундах</short>
+		<long>Не приймати натиснуту клавішу, якщо вона не утримувалась протягом @delay мілісекунд</long>
+	      </locale>
+
+	      <locale name="vi">
+		<short>Khoảng chờ tối thiểu (mili giây)</short>
+		<long>Không chấp nhận phím được nhấn trừ khi nhấn trong vòng @delay mili giây</long>
+	      </locale>
+
+	      <locale name="xh">
+		
+		<long>Sukuvuma iqhosha njengelicofiweyo ngaphandle kokuba libanjwe @delay ngeemilisekondi</long>
+	      </locale>
+
+	      <locale name="yi">
+		
+		<long>נעם נישט אָן קײן קלאַװיש סײַדן מען האַלט געדריקט אױף @delay מיליסעקונדעס</long>
+	      </locale>
+
+	      <locale name="zh_CN">
+		<short>最小间隔毫秒数</short>
+		<long>除非按住 @delay 毫秒不放，否则不接受按键输入</long>
+	      </locale>
+
+	      <locale name="zh_HK">
+		
+		<long>除非按下某鍵持續超過 @delay 毫秒，否則作廢。</long>
+	      </locale>
+
+	      <locale name="zh_TW">
+		
+		<long>除非按下某鍵持續超過 @delay 毫秒，否則作廢。</long>
+	      </locale>
+	    </schema>
+	    <schema>
+	      <key>/schemas/desktop/gnome/accessibility/keyboard/slowkeys_beep_press</key>
+	      <applyto>/desktop/gnome/accessibility/keyboard/slowkeys_beep_press</applyto>
+	      <owner>gnome</owner>
+	      <type>bool</type>
+	      <default>false</default>
+	      <locale name="C">
+		<short></short>
+		<long></long>
+	      </locale>
+	    </schema>
+	    <schema>
+	      <key>/schemas/desktop/gnome/accessibility/keyboard/slowkeys_beep_accept</key>
+	      <applyto>/desktop/gnome/accessibility/keyboard/slowkeys_beep_accept</applyto>
+	      <owner>gnome</owner>
+	      <type>bool</type>
+	      <default>false</default>
+	      <locale name="C">
+		<short></short>
+		<long></long>
+	      </locale>
+	    </schema>
+	    <schema>
+	      <key>/schemas/desktop/gnome/accessibility/keyboard/slowkeys_beep_reject</key>
+	      <applyto>/desktop/gnome/accessibility/keyboard/slowkeys_beep_reject</applyto>
+	      <owner>gnome</owner>
+	      <type>bool</type>
+	      <default>false</default>
+	      <locale name="C">
+		<short></short>
+		<long></long>
+	      </locale>
+	    </schema>
+
+	<schema>
+	  <key>/schemas/desktop/gnome/accessibility/keyboard/stickykeys_enable</key>
+	  <applyto>/desktop/gnome/accessibility/keyboard/stickykeys_enable</applyto>
+	  <owner>gnome</owner>
+	  <type>bool</type>
+	  <default>false</default>
+	  <locale name="C">
+	    <short></short>
+	    <long></long>
+	  </locale>
+	</schema>
+	    <schema>
+	      <key>/schemas/desktop/gnome/accessibility/keyboard/stickykeys_two_key_off</key>
+	      <applyto>/desktop/gnome/accessibility/keyboard/stickykeys_two_key_off</applyto>
+	      <owner>gnome</owner>
+	      <type>bool</type>
+	      <default>false</default>
+	      <locale name="C">
+		<short></short>
+		<long>Disable if two keys are pressed at the same time.</long>
+	      </locale>
+
+	      <locale name="ar">
+		
+		<long>عطّل إذا نقر زران في آن واحد.</long>
+	      </locale>
+
+	      <locale name="as">
+		
+		<long>একযোগে দুটি কি টেপা হলে নিষ্ক্ৰিয় কৰা হবে।</long>
+	      </locale>
+
+	      <locale name="az">
+		
+		<long>İki düymə eyni anda basılsa qeyri fəallaşdır.</long>
+	      </locale>
+
+	      <locale name="be">
+		
+		<long>Выключаць, калі дзьве кнопкі былі націснутыя адначасова.</long>
+	      </locale>
+
+	      <locale name="bg">
+		
+		<long>Изключване, ако два клавиша са натиснати едновременно.</long>
+	      </locale>
+
+	      <locale name="bn">
+		
+		<long>নিষ্ক্রিয়, যদি একই সময়ে দুটি কীতে চাপ পড়ে যায়</long>
+	      </locale>
+
+	      <locale name="bn_IN">
+		
+		<long>একযোগে দুটি কি টেপা হলে নিষ্ক্রিয় করা হবে।</long>
+	      </locale>
+
+	      <locale name="bs">
+		
+		<long>Isključi ako su dvije tipke istovremeno pritisnute.</long>
+	      </locale>
+
+	      <locale name="ca">
+		
+		<long>Inhabilita-ho si es premen dues tecles a la vegada.</long>
+	      </locale>
+
+	      <locale name="cs">
+		
+		<long>Zakázat, jsou-li zároveň stisknuty dvě klávesy.</long>
+	      </locale>
+
+	      <locale name="cy">
+		
+		<long>Analluogi os gwasgir dwy fysell yr un pryd.</long>
+	      </locale>
+
+	      <locale name="da">
+		
+		<long>Deaktivér hvis to taster trykkes ned på samme tid.</long>
+	      </locale>
+
+	      <locale name="de">
+		
+		<long>Deaktivieren, wenn zwei Tasten gleichzeitig gedrückt werden</long>
+	      </locale>
+
+	      <locale name="dz">
+		
+		<long>ལྡེ་མིག་གཉིས་ དུས་མཉམ་ལུ་ཨེབ་པ་ཅིན་ ལྕོགས་མིན་བཟོཝ་ཨིན། </long>
+	      </locale>
+
+	      <locale name="el">
+		
+		<long>Απενεργοποίηση αν δύο πλήκτρα πατηθούν την ίδια στιγμή.</long>
+	      </locale>
+
+	      <locale name="en_CA">
+		
+		<long>Disable if two keys are pressed at the same time.</long>
+	      </locale>
+
+	      <locale name="en_GB">
+		
+		<long>Disable if two keys are pressed at the same time.</long>
+	      </locale>
+
+	      <locale name="eo">
+		
+		<long>Malŝaltu se du klavoj estas samtempe presataj.</long>
+	      </locale>
+
+	      <locale name="es">
+		
+		<long>Desactivar si se presionan dos teclas al mismo tiempo.</long>
+	      </locale>
+
+	      <locale name="et">
+		
+		<long>Keelamine kahe klahvi samaaegselt vajutamisel.</long>
+	      </locale>
+
+	      <locale name="eu">
+		
+		<long>Desgaitu bi tekla aldi berean sakatzen direnean.</long>
+	      </locale>
+
+	      <locale name="fa">
+		
+		<long>از کار افتادن اگر دو کلید همزمان فشار داده شود.</long>
+	      </locale>
+
+	      <locale name="fi">
+		
+		<long>Poista käytöstä, jos kahta näppäintä painetaan samanaikaisesti.</long>
+	      </locale>
+
+	      <locale name="fr">
+		
+		<long>Désactiver si deux touches sont pressées en même temps.</long>
+	      </locale>
+
+	      <locale name="gl">
+		
+		<long>Desactivar se se premen dúas teclas á vez.</long>
+	      </locale>
+
+	      <locale name="gu">
+		
+		<long>નિષ્ક્રિય જો એક જ સમયે બે કી દબાવવામાં આવે.</long>
+	      </locale>
+
+	      <locale name="he">
+		
+		<long>Disable if two keys are pressed at the same time.</long>
+	      </locale>
+
+	      <locale name="hi">
+		
+		<long>यदि दो कुंजियाँ एक साथ दबाई जाएँ तो अक्षम करें</long>
+	      </locale>
+
+	      <locale name="hr">
+		
+		<long>Isključi ako su pritisnute dvije tipke istovremeno.</long>
+	      </locale>
+
+	      <locale name="hu">
+		
+		<long>Kikapcsolás két gomb egyidejű lenyomásakor.</long>
+	      </locale>
+
+	      <locale name="id">
+		
+		<long>Nonaktifkan bila ada dua tombol ditekan pada saat yang sama.</long>
+	      </locale>
+
+	      <locale name="is">
+		
+		<long>Afvirkja ef stutt er á tvo hnappa samtímis.</long>
+	      </locale>
+
+	      <locale name="it">
+		
+		<long>Disabilita se due tasti sono premuti contemporaneamente.</long>
+	      </locale>
+
+	      <locale name="ja">
+		
+		<long>同時に二つのキーを押下したら無効にします。</long>
+	      </locale>
+
+	      <locale name="ka">
+		
+		<long>ამორთვა ორი კლავიშის ერთდროულად დაჭერისას</long>
+	      </locale>
+
+	      <locale name="ko">
+		
+		<long>두개의 키가 동시에 눌려졌을 때 사용안함.</long>
+	      </locale>
+
+	      <locale name="ku">
+		
+		<long>Dema bi hev re pêl du heb bişkokan hate kirin wan bêbandor bike.</long>
+	      </locale>
+
+	      <locale name="lt">
+		
+		<long>Atjungti, jei du klavišai paspaudžiami vienu metu.</long>
+	      </locale>
+
+	      <locale name="lv">
+		
+		<long>Deaktivizēt, kad divi taustiņi tiek nospiesti vienlaicīgi.</long>
+	      </locale>
+
+	      <locale name="mg">
+		
+		<long>Tsy mandeha raha toa ka misy kitendry voatsindry miaraka.</long>
+	      </locale>
+
+	      <locale name="mk">
+		
+		<long>Оневозможи ако се стиснат две копчиња одеднаш</long>
+	      </locale>
+
+	      <locale name="ml">
+		
+		<long>രണ്ട് കീ ഒരുമിച്ച് അമര്‍ത്തിയാല്‍, പ്രവര്‍ത്തനരഹിതമാക്കുക.</long>
+	      </locale>
+
+	      <locale name="mn">
+		
+		<long>Нэгэн зэрэг хоёр товчлуур дарагдсан байхад идэвхгүйжүүлэх</long>
+	      </locale>
+
+	      <locale name="ms">
+		
+		<long>Dimatikan jika dua kekunci ditekan serentak.</long>
+	      </locale>
+
+	      <locale name="nb">
+		
+		<long>Deaktiver hvis to taster trykkes ned samtidig.</long>
+	      </locale>
+
+	      <locale name="ne">
+		
+		<long>यदि एकै पटकमा दुईवटा कुञ्जी थिचिएमा अक्षम पार्नुहोस् ।</long>
+	      </locale>
+
+	      <locale name="nl">
+		
+		<long>Uitschakelen wanneer twee toetsen tegelijkertijd worden aangeslagen.</long>
+	      </locale>
+
+	      <locale name="nn">
+		
+		<long>Slå av dersom to tastar vert trykt ned samtidig.</long>
+	      </locale>
+
+	      <locale name="or">
+		
+		<long>ଦୁଇଟି ଚାବି ଏକାସଙ୍ଗେ ଦବାଇଲେ ନିଷ୍କ୍ରିୟ କରନ୍ତୁ.</long>
+	      </locale>
+
+	      <locale name="pa">
+		
+		<long>ਅਯੋਗ, ਜਦੋਂ ਦੋ ਕੀ(ਬਟਨ) ਇੱਕਠੀਆਂ ਦਬਾਈਆਂ ਜਾਣ।</long>
+	      </locale>
+
+	      <locale name="pl">
+		
+		<long>Wyłączenie po jednoczesnym przyciśnięciu dwóch klawiszy</long>
+	      </locale>
+
+	      <locale name="pt">
+		
+		<long>Desactivar se forem premidas duas teclas simultaneamente.</long>
+	      </locale>
+
+	      <locale name="pt_BR">
+		
+		<long>Desativar se duas teclas forem pressionadas ao mesmo tempo.</long>
+	      </locale>
+
+	      <locale name="ro">
+		
+		<long>Dezactivează la apăsarea concomitentă a două taste.</long>
+	      </locale>
+
+	      <locale name="ru">
+		
+		<long>Отключать, если две клавиши нажаты одновременно</long>
+	      </locale>
+
+	      <locale name="sk">
+		
+		<long>Deaktivovať ak sú dve klávesy stlačené naraz.</long>
+	      </locale>
+
+	      <locale name="sl">
+		
+		<long>Izključi, če sta dve tipki pritisnjeni hkrati.</long>
+	      </locale>
+
+	      <locale name="sq">
+		
+		<long>Ç&apos;aktivo nëse shtypen njëkohësisht dy pulsante</long>
+	      </locale>
+
+	      <locale name="sr">
+		
+		<long>Искључи уколико су два тастера притиснута истовремено.</long>
+	      </locale>
+
+	      <locale name="sr@Latn">
+		
+		<long>Isključi ukoliko su dva tastera pritisnuta istovremeno.</long>
+	      </locale>
+
+	      <locale name="sr@ije">
+		
+		<long>Онемогући уколико су два тастера притиснута истовремено.</long>
+	      </locale>
+
+	      <locale name="sv">
+		
+		<long>Inaktivera om två tangenter trycks ned samtidigt.</long>
+	      </locale>
+
+	      <locale name="ta">
+		
+		<long>ஒரே நேரத்தில் இரண்டு விசைகள் அழுத்தப்படும்போது முடக்குசெய்.</long>
+	      </locale>
+
+	      <locale name="th">
+		
+		<long>เลิกใช้ถ้าสองปุ่มถูกกดพร้อมกัน</long>
+	      </locale>
+
+	      <locale name="tr">
+		
+		<long>İki tuşa birden basıldığında etkisiz hale getir.</long>
+	      </locale>
+
+	      <locale name="uk">
+		
+		<long>Вимкнути, якщо дві клавіші натиснуто одночасно</long>
+	      </locale>
+
+	      <locale name="vi">
+		
+		<long>Tắt nếu hai phím được nhấn cùng lúc.</long>
+	      </locale>
+
+	      <locale name="xh">
+		
+		<long>Sukusebenza xa kucofwe amaqhosha amabini ngaxeshanye.</long>
+	      </locale>
+
+	      <locale name="yi">
+		
+		<long>לעש אױס אױב מען דריקט צװײ קלאַװישן אין אײן מאָל</long>
+	      </locale>
+
+	      <locale name="zh_CN">
+		
+		<long>如果两个键同时按下则禁用。</long>
+	      </locale>
+
+	      <locale name="zh_HK">
+		
+		<long>如果同時按下兩個鍵則停止功能。</long>
+	      </locale>
+
+	      <locale name="zh_TW">
+		
+		<long>如果同時按下兩個鍵則停止功能。</long>
+	      </locale>
+	    </schema>
+	    <schema>
+	      <key>/schemas/desktop/gnome/accessibility/keyboard/stickykeys_modifier_beep</key>
+	      <applyto>/desktop/gnome/accessibility/keyboard/stickykeys_modifier_beep</applyto>
+	      <owner>gnome</owner>
+	      <type>bool</type>
+	      <default>false</default>
+	      <locale name="C">
+		<short></short>
+		<long>Beep when a modifier is pressed</long>
+	      </locale>
+
+	      <locale name="ar">
+		
+		<long>صفّر عند نقر المغيِّر</long>
+	      </locale>
+
+	      <locale name="as">
+		
+		<long>কোনো পৰিবৰ্তনকাৰী টেপা হলে বিপ শব্দ কৰা হবে</long>
+	      </locale>
+
+	      <locale name="az">
+		
+		<long>Şəkil dəyişdirici basılanda səs çıxar</long>
+	      </locale>
+
+	      <locale name="be">
+		
+		<long>Сыгналізаваць гукам калі націснуты мадыфікатар</long>
+	      </locale>
+
+	      <locale name="bg">
+		
+		<long>Издаване на звук, когато е натиснат модифициращ клавиш</long>
+	      </locale>
+
+	      <locale name="bn">
+		
+		<long>কোন মডিফায়ারে চাপ পড়লে পৌনঃপুনিক সংকেত</long>
+	      </locale>
+
+	      <locale name="bn_IN">
+		
+		<long>কোনো পরিবর্তনকারী টেপা হলে বিপ শব্দ করা হবে</long>
+	      </locale>
+
+	      <locale name="bs">
+		
+		<long>Zapišti kada je pritisnut modifikator</long>
+	      </locale>
+
+	      <locale name="ca">
+		
+		<long>Fes un avís sonor quan es premi un modificador</long>
+	      </locale>
+
+	      <locale name="cs">
+		
+		<long>Pípnout, je-li stisknut modifikátor</long>
+	      </locale>
+
+	      <locale name="cy">
+		
+		<long>Bipio pan wasgir addasydd</long>
+	      </locale>
+
+	      <locale name="da">
+		
+		<long>Bip når der trykkes på modifikationstast</long>
+	      </locale>
+
+	      <locale name="de">
+		
+		<long>Piepston erzeugen, wenn ein Modifikator gedrückt wird</long>
+	      </locale>
+
+	      <locale name="dz">
+		
+		<long>ལེགས་བཅོས་འབད་མི་ཅིག་ ཨེབ་པའི་སྐབས་ བརྡ་སྐད་སྟོནམ་ཨིན།</long>
+	      </locale>
+
+	      <locale name="el">
+		
+		<long>Ήχος μπιπ κατα το πάτημα modifier</long>
+	      </locale>
+
+	      <locale name="en_CA">
+		
+		<long>Beep when a modifier is pressed</long>
+	      </locale>
+
+	      <locale name="en_GB">
+		
+		<long>Beep when a modifier is pressed</long>
+	      </locale>
+
+	      <locale name="eo">
+		
+		<long>Pepu kiam modifigilo estas premata</long>
+	      </locale>
+
+	      <locale name="es">
+		
+		<long>Emitir un sonido cuando se presiona un modificador</long>
+	      </locale>
+
+	      <locale name="et">
+		
+		<long>Piiksumine muuteklahvi vajutamisel</long>
+	      </locale>
+
+	      <locale name="eu">
+		
+		<long>Jo soinu-seinalea aldatzailea sakatutakoan</long>
+	      </locale>
+
+	      <locale name="fa">
+		
+		<long>بوق زدن‌ هنگام فشرده شدن یک تغییردهنده</long>
+	      </locale>
+
+	      <locale name="fi">
+		
+		<long>Piippaa, kun muunnosnäppäintä painetaan</long>
+	      </locale>
+
+	      <locale name="fr">
+		
+		<long>Bip lorsqu&apos;un modificateur est pressé</long>
+	      </locale>
+
+	      <locale name="gl">
+		
+		<long>Emitir un ton de aviso ao premer un modificador</long>
+	      </locale>
+
+	      <locale name="gu">
+		
+		<long>જ્યારે સુધારનાર દબાવવમાં આવે ત્યારે બીપ વગાડો</long>
+	      </locale>
+
+	      <locale name="he">
+		
+		<long>Beep when a modifier is pressed</long>
+	      </locale>
+
+	      <locale name="hi">
+		
+		<long>जब परिवर्धक को दबाया जाए तो बीप बजाएँ</long>
+	      </locale>
+
+	      <locale name="hr">
+		
+		<long>Svira kad je pritisnut i izmjenitelj</long>
+	      </locale>
+
+	      <locale name="hu">
+		
+		<long>Hangjelzés egy módosító megnyomásakor</long>
+	      </locale>
+
+	      <locale name="id">
+		
+		<long>Bunyikan suara saat tombol ditekan</long>
+	      </locale>
+
+	      <locale name="is">
+		
+		<long>Gefa frá sér hljóð þegar þrýst er á &quot;modifier&quot;</long>
+	      </locale>
+
+	      <locale name="it">
+		
+		<long>Segnale acustico alla pressione di un modificatore</long>
+	      </locale>
+
+	      <locale name="ja">
+		
+		<long>修飾キーが押されたらビープ音を鳴らします。</long>
+	      </locale>
+
+	      <locale name="ka">
+		
+		<long>სიგნალი შემცვლელის დაჭერისას</long>
+	      </locale>
+
+	      <locale name="ko">
+		
+		<long>Modifier가 눌려졌을 때 삑소리</long>
+	      </locale>
+
+	      <locale name="ku">
+		
+		<long>Dema pêl guhêrbarekê hate kirin deng derxe</long>
+	      </locale>
+
+	      <locale name="lt">
+		
+		<long>Pyptelėti, kai paspaustas specialus klavišas</long>
+	      </locale>
+
+	      <locale name="lv">
+		
+		<long>Pīkstēt, kad modifikators tiek nospiests</long>
+	      </locale>
+
+	      <locale name="mg">
+		
+		<long>Maneno rehefa misy mpanova voatsindry</long>
+	      </locale>
+
+	      <locale name="mk">
+		
+		<long>Свирни кога ќе биде притиснат променувачот</long>
+	      </locale>
+
+	      <locale name="ml">
+		
+		<long>ഒരു മോഡിഫയര്‍ അമര്‍ത്തുന്പോള്‍ ശബ്ദമുണ്ടാക്കുക</long>
+	      </locale>
+
+	      <locale name="mn">
+		
+		<long>Сэлгүүр товчлуурыг дарахад нарийн дуу гаргах</long>
+	      </locale>
+
+	      <locale name="ms">
+		
+		<long>_Beep bila modifier ditekan</long>
+	      </locale>
+
+	      <locale name="nb">
+		
+		<long>Pip når en endringstast trykkes ned</long>
+	      </locale>
+
+	      <locale name="ne">
+		
+		<long>एउटा परिमार्जक लाई थिच्दा बीप आवाज निस्कन्छ</long>
+	      </locale>
+
+	      <locale name="nl">
+		
+		<long>Piepen bij aanslaan van een optietoets</long>
+	      </locale>
+
+	      <locale name="nn">
+		
+		<long>Pip når ein endringstast vert trykt ned</long>
+	      </locale>
+
+	      <locale name="or">
+		
+		<long>ରୂପାନ୍ତରକ ଚାବି ଦବାଇଲେ ବିପ୍ କରନ୍ତୁ</long>
+	      </locale>
+
+	      <locale name="pa">
+		
+		<long>ਬੀਪ (ਅਵਾਜ਼), ਜਦੋ ਕਿ ਸੋਧ ਦਬਾਈ ਜਾਵੇ</long>
+	      </locale>
+
+	      <locale name="pl">
+		
+		<long>Sygnał dźwiękowy po przyciśnięciu modyfikatora</long>
+	      </locale>
+
+	      <locale name="pt">
+		
+		<long>Emitir beep quando é premido um modificador</long>
+	      </locale>
+
+	      <locale name="pt_BR">
+		
+		<long>Emitir um bip quando um modificador for pressionado</long>
+	      </locale>
+
+	      <locale name="ro">
+		
+		<long>Bip la apăsarea unui modificator</long>
+	      </locale>
+
+	      <locale name="ru">
+		
+		<long>Подавать сигнал, когда модификатор нажат</long>
+	      </locale>
+
+	      <locale name="sk">
+		
+		<long>Pípnuť pri stlačení modifikátora</long>
+	      </locale>
+
+	      <locale name="sl">
+		
+		<long>Zapiskaj, ko je pritisnjen spremenilink</long>
+	      </locale>
+
+	      <locale name="sq">
+		
+		<long>Paralajmërim me tingull kur shtypet një ndryshues </long>
+	      </locale>
+
+	      <locale name="sr">
+		
+		<long>Свирни при притиску на измењивач</long>
+	      </locale>
+
+	      <locale name="sr@Latn">
+		
+		<long>Svirni pri pritisku na izmenjivač</long>
+	      </locale>
+
+	      <locale name="sr@ije">
+		
+		<long>Засвирај при притиску на измјењивач</long>
+	      </locale>
+
+	      <locale name="sv">
+		
+		<long>Pip då en modifierare trycks ned</long>
+	      </locale>
+
+	      <locale name="ta">
+		
+		<long>மாற்றி அழுத்தும்போது ஒலி உருவாக்கு</long>
+	      </locale>
+
+	      <locale name="th">
+		
+		<long>บี๊บถ้าปุ่มใช้ร่วมถูกกด</long>
+	      </locale>
+
+	      <locale name="tr">
+		
+		<long>Bir değiştiriciye basıldığında biple</long>
+	      </locale>
+
+	      <locale name="uk">
+		
+		<long>Подавати звуковий сигнал при натисканні модифікатора</long>
+	      </locale>
+
+	      <locale name="vi">
+		
+		<long>Kêu bíp khi nhấn phím bổ trợ.</long>
+	      </locale>
+
+	      <locale name="xh">
+		
+		<long>Bhipha xa isilungisi sicofiwe</long>
+	      </locale>
+
+	      <locale name="yi">
+		
+		<long>קנאַל װען מען דריקט אַ בײַטקלאַװיש</long>
+	      </locale>
+
+	      <locale name="zh_CN">
+		
+		<long>按下修饰键时响铃</long>
+	      </locale>
+
+	      <locale name="zh_HK">
+		
+		<long>當按下 Ctrl、Shift、Alt 等特殊按鍵時發出聲響</long>
+	      </locale>
+
+	      <locale name="zh_TW">
+		
+		<long>當按下 Ctrl、Shift、Alt 等特殊按鍵時發出聲響</long>
+	      </locale>
+	    </schema>
+
+	<schema>
+	  <key>/schemas/desktop/gnome/accessibility/keyboard/togglekeys_enable</key>
+	  <applyto>/desktop/gnome/accessibility/keyboard/togglekeys_enable</applyto>
+	  <owner>gnome</owner>
+	  <type>bool</type>
+	  <default>false</default>
+	  <locale name="C">
+	    <short></short>
+	    <long></long>
+	  </locale>
+	</schema>
+
+  </schemalist>
+</gconfschemafile>

@@ -1,0 +1,33 @@
+[Desktop Entry]
+X-AppInstall-Package=bmpx
+X-AppInstall-Popcon=250
+X-AppInstall-Section=main
+
+Name=BMPx (Offline Mode)
+Comment=Audio Player
+Comment[cs]=Přehrávač audia (nedostupná síť)
+Comment[de]=Audio-Player
+Comment[es]=Reproductor de audio
+Comment[fr]=Lecteur audio
+Comment[it]=Riproduttore Audio (Modalità Scollegato)
+Comment[lt]=Garso leistuvė
+Comment[pl]=Odtwarzacz dźwięku
+Comment[ro]=Player audio
+Comment[dk]=Lyd afspiller
+Exec=beep-media-player-2 --no-network
+Icon=bmpx
+#MimeType=audio/x-scpls;audio/x-mpegurl;audio/mpegurl;audio/mp3;audio/x-mp3;audio/mpeg;audio/x-mpeg;audio/x-wav;application/x-ogg;
+#Actions=Enqueue;Play;
+Categories=GTK;AudioVideo;Player;
+Terminal=false
+Type=Application
+Encoding=UTF-8
+StartupNotify=false
+
+#[Desktop Action Enqueue]
+#Exec=bmpx-remote AddUris %U
+#Name=BMPx: Enqueue Files
+
+#[Desktop Action Play]
+#Exec=bmpx-remote PlayUris %U
+#Name=BMPx: Play Files

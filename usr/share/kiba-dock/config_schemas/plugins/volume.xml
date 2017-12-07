@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section>
+	<sec_name>Volume</sec_name>
+	<sec_name xml:lang="bg">Сила на звука</sec_name>
+	<sec_name xml:lang="de">Lautstärke</sec_name>
+	<sec_name xml:lang="es">Volumen</sec_name>
+	<sec_name xml:lang="fr">Volume</sec_name>
+	<sec_name xml:lang="it">Volume</sec_name>
+	<sec_name xml:lang="ja">音量</sec_name>
+	<sec_name xml:lang="pt">Volume</sec_name>
+	<sec_desc>Control your Mixer Devices from a Kiba Icon.</sec_desc>
+	<sec_desc xml:lang="bg">Контролиране на звука от икона в Киба-док</sec_desc>
+	<sec_desc xml:lang="de">Reguliere deine Mixer Geräte mit einem Kiba Symbol.</sec_desc>
+	<sec_desc xml:lang="es">Controlar los dispositivos mezcladores desde un Icono Kiba</sec_desc>
+	<sec_desc xml:lang="it">Controlla i tuoi Dispositivi Mixer da un'Icona Kiba.</sec_desc>
+	<sec_desc xml:lang="ja">Kiba アイコンからミキサーデバイスの制御</sec_desc>
+	<sec_desc xml:lang="pt">Controle seu(s) dispositivo(s) de mixagem através de um ícone do Kiba.</sec_desc>
+	<sec_icon>[volume-zero,stock_volume-0]</sec_icon>
+	<subsection>
+		<sub_sec_name>General</sub_sec_name>
+		<sub_sec_name xml:lang="bg">Общи</sub_sec_name>
+		<sub_sec_name xml:lang="de">Generell</sub_sec_name>
+		<sub_sec_name xml:lang="es">General</sub_sec_name>
+		<sub_sec_name xml:lang="fr">Général</sub_sec_name>
+		<sub_sec_name xml:lang="it">Generale</sub_sec_name>
+		<sub_sec_name xml:lang="ja">全般</sub_sec_name>
+		<sub_sec_name xml:lang="pt">Geral</sub_sec_name>
+		<option>
+			<name>volume_enable</name>
+			<title>Enable</title>
+			<title xml:lang="bg">Пускане</title>
+			<title xml:lang="de">Aktivieren</title>
+			<title xml:lang="es">Activar</title>
+			<title xml:lang="fr">Activer</title>
+			<title xml:lang="it">Abilita</title>
+			<title xml:lang="ja">有効</title>
+			<title xml:lang="pt">Habilitar</title>
+			<type>bool</type>
+			<range/>
+			<default>FALSE</default>
+			<description>Enable/Disable the Volume plugin</description>
+			<description xml:lang="bg">Пускане/спиране на плъгина за контрол на силата на звука</description>
+			<description xml:lang="de">Aktiviere/Deaktiviere das Lautstärke Plugin</description>
+			<description xml:lang="ja">音量プラグインの有効化/無効化</description>
+		</option>
+		<option>
+			<name>volume_mixer_id</name>
+			<title>Mixer ID</title>
+			<type>char</type>
+			<range/>
+			<default/>
+			<description>>Mixer ID</description>
+		</option>
+		<option>
+			<name>volume_device_name</name>
+			<title>Device name</title>
+			<type>char</type>
+			<range>editable</range>
+			<default>PCM</default>
+			<description>Device name</description>
+		</option>
+		<option>
+			<name>volume_size_factor</name>
+			<title>Size factor</title>
+			<title xml:lang="bg">Степен на оразмеряване</title>
+			<title xml:lang="de">Größen Faktor</title>
+			<title xml:lang="ja">アイコンの大きさ</title>
+			<type>double</type>
+			<range>0.1-2.0</range>
+			<default>1.0</default>
+			<description>Size factor</description>
+			<description xml:lang="bg">Степен на оразмеряване</description>
+			<description xml:lang="de">Größen Faktor</description>
+			<description xml:lang="ja">アイコンの大きさ</description>
+		</option>
+		<option>
+			<name>volume_alpha</name>
+			<title>Alpha</title>
+			<title xml:lang="bg">Прозрачност</title>
+			<title xml:lang="de">Transparenz</title>
+			<title xml:lang="es">Transparencia</title>
+			<title xml:lang="it">Alpha</title>
+			<title xml:lang="ja">透明度</title>
+			<title xml:lang="pt">Transparência</title>
+			<type>double</type>
+			<range>0.0-1.0</range>
+			<default>1.0</default>
+			<description>Alpha</description>
+			<description xml:lang="bg">Прозрачност</description>
+			<description xml:lang="de">Transparenz</description>
+			<description xml:lang="es">Transparencia</description>
+			<description xml:lang="it">Alpha</description>
+			<description xml:lang="ja">透明度</description>
+			<description xml:lang="pt">Transparência</description>
+		</option>
+	</subsection>
+</section>
