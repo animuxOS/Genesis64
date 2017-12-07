@@ -1,0 +1,25 @@
+# Sunflow wrapper configuration file
+#
+# Please refer to sunflow(1) for the list of supported options.
+# Uncomment and adjust the variables at your convenience.
+#
+# One can overwrite these settings using a ~/.sunflowrc file,
+# or using environment variables.
+
+# Do not use the default "java" binary, handled via alternatives, but
+# another virtual machine:
+#
+# export SUNFLOW_JAVA=/path/to/some/jvm
+
+# Automatically pass these options to the java interpreter. In this example:
+#  - start the VM server
+#  - use a memory upper limit of 500M
+#
+# Note that the use of quotation marks if more than one option is passed
+# is important.
+#
+# export SUNFLOW_JAVA_OPTIONS="-server -Xmx500M"
+
+# Automatically pass these options to sunflow.
+#
+# export SUNFLOW_OPTIONS=""

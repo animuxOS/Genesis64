@@ -1,0 +1,89 @@
+#
+# Configuration file for the Xen instance {$hostname}, created
+# by xen-tools {$xen_tools_version} on { scalar localtime }.
+#
+
+#
+#  Kernel + memory size
+#
+{ if ( $kernel )
+  {
+    $OUT.= "kernel      = '$kernel'";
+  }
+}
+{ if ( $initrd )
+  {
+    $OUT.= "ramdisk     = '$initrd'";
+  }
+}
+memory      = '{$memory}'
+
+#
+#  Disk device(s).
+#
+{ 
+  for ( my $i = 0; $i <= $#PARTITIONS; $i++ )
+  {
+      if ( $PARTITIONS[$i]{'mountpoint'} eq '/' )
+      {
+          $OUT .= "root        = '/dev/$device" . ($i + 1) . " ro'\n";
+      }
+  }
+  $OUT .= "disk        = [\n";
+  for ( my $i = 0; $i <= $#PARTITIONS; $i++ )
+  {
+      $OUT .= "                  '$PARTITIONS[$i]{'imagetype'}$PARTITIONS[$i]{'image'},$device" . ( $i + 1 ) .",w',\n";
+  }
+  $OUT .= "              ]\n";
+}
+
+#
+#  Hostname
+#
+name        = '{$hostname}'
+
+#
+#  Networking
+#
+{ if ( $dhcp )
+  {
+    $OUT .= "dhcp        = 'dhcp'\n";
+
+    # Setup the mac address, if present.
+    my $m = '';
+    if ( $mac )
+    { 
+      $m = "mac=$mac"
+    }
+
+    $OUT .= "vif         = [ '$m' ]";
+  }    
+  else
+  {
+    #
+    # Setup the mac address, if present.
+    #
+    my $m = '';
+    if ( $mac )
+    { 
+      $m = ",mac=$mac"
+    }
+
+    $OUT .= "vif         = [ 'ip=$ip1"; 
+    $OUT .= "$m' ]";
+  }
+}
+
+#
+#  Behaviour
+#
+on_poweroff = 'destroy'
+on_reboot   = 'restart'
+on_crash    = 'restart'
+
+
+{ if ( $admins )
+  {
+    $OUT .= "xen_shell = '$admins'\n";
+  }
+}

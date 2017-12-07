@@ -1,0 +1,377 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Farmerjoe - The render Farmer</title>
+<style type="text/css">
+a {
+text-decoration: none;
+}
+</style>
+</head>
+<body><a class="u" href="top" name="top"></a>
+<h1>Farmerjoe - The render Farmer</h1>
+<strong>A distributed Rendering system for Blender</strong>
+<p>Homepage <a href="http://blender.formworks.co.nz">http://blender.formworks.co.nz</a></p>
+<h1>TOC</h1>
+<ol>
+<li><a href="#Introduction">Introduction</a></li>
+<li><a href="#Installation">Installation</a></li>
+<li><a href="#Starting">Starting</a></li>
+<li><a href="#TODO">TODO</a></li>
+<li><a href="#Help">Help</a></li>
+<li><a href="#PERL">Using Perl instead of Binaries</a></li>
+<li><a href="#Thanks">Thanks</a></li>
+<li><a href="#License">License</a></li>
+<li><a href="#DISCLAIMER">DISCLAIMER</a></li>
+</ol>
+<h1>Introduction <a class="u" href="#top" name="Introduction">^</a></h1>
+<p>
+Farmerjoe is a distributed rendering system for Blender, it does both frame based 
+distribution and bucket based (single frame) distribution, it has a web gui and 
+is fairly easy to set up IMHO :) I had tried to get Drqueue running and it worked 
+great on linux but was less than easy to use on windows. There are a few other 
+distributed rendering systems for blender but I wanted something I could run 
+independantly of blender and seeing how I knew perl I hacked together this system 
+to get distributed rendering running for Blender the way I wanted it to work.
+</p>
+
+<strong>Why Another Network Rendering System?</strong>
+<p>
+I originally tried to get DrQueue working, and while a very good system is a bit
+of a mission to get installed for windows and after struggling with it I figured
+that rather wasting anymore time trying out other systems, I would just write
+one that did things the way I wanted.
+</p>
+
+<strong>How is Farmerjoe Different?</strong>
+<p>
+Well, I hate having to install all sorts of stuff to get another render slave
+working so Farmerjoe is designed to have no install for render slaves.
+I also dont like having to install much for the server, and as I only really
+know how to program in perl I wrote the whole system in Perl as a (single script
+for the mostpart) and also compiled it to an exe version so you dont even have
+to install perl.
+Farmerjoe also is, I think one of the first distributed rendering systems for 
+Blender to do both frame based and bucket rendering.
+(bucket rendering = rendering a single image in parts afaik)
+</p>
+
+<strong>What Platforms does Farmerjoe Work On?</strong>
+<p>
+In theory any platform blender and perl and blender run on, but I have 
+only run it on Linux, Windows and now OSX, to run on other platforms a bit of
+code would need changing, I can fo this but cannot compile it as I only have Lin/Win/OSX</p>
+<p>There are Windows, Linux and OSX Binaries included.</p>
+
+<strong>What do I need to get Farmerjoe running?</strong>
+<p>
+    Farmerjoe (<a href="http://blender.formworks.co.nz">http://blender.formworks.co.nz</a>)<br/>
+    Blender (<a href="http://www.blender.org">http://www.blender.org</a>)<br/>
+    Imagemagick (<a href="http://www.imagemagick.org">http://www.imagemagick.org</a>)<br/>
+</p>
+
+<h1>Installation <a class="u" href="#top" name="Installation">^</a></h1>
+
+<strong>You dont so much install Farmerjoe but configure him :)</strong>
+<ol>
+<li>
+<strong>Make a directory for him</strong><br/>
+<p>
+I use 
+/farmerjoe
+on my linux machine, or
+c:\farmerjoe
+on windows or
+/Users/lobo/farmerjoe
+on OSX
+</p>
+</li><li>
+<strong>Share the directory you just made so its available on your network.</strong>
+<br/><br/><ul><li>
+<strong>WINDOWS</strong>
+<p>
+Rightclick the farmerjoe directory and choose sharing.
+Enable sharing and allow network users to modify the files.</p>
+</li><li>
+<strong>LINUX</strong>
+<p>
+NOTE: I use SMB (Windows Filesharing) on my linux machines as nfs shares
+caused an error when having the master PC also a slave - something about
+could not create text file - I figure it is something due to the same blend
+file being used by more than one instance of blender. Also NFS has allot more
+security so SMB is easier to set up for many linux slaves (for me anyway)
+
+Below is how I configure my Linux machines this will no doubt vary per
+distribution but should help you get started (I use Ubuntu and Debian)
+
+On my linux master I in my /etc/samba/smb.conf
+</p>
+<pre>
+[farmerjoe]
+     guest account = lobo
+     force user = lobo
+     delete readonly = yes
+     public = yes
+     path = /farmerjoe
+     force group = lobo
+     available = yes
+     browseable = yes
+     writable = yes
+</pre>
+</li>
+<li>
+<strong>OSX</strong>
+<p>
+On OSX I just turn on windows filesharing in Sytem Preferences > Sharing
+which shares my home directory where I keep Farmerjoe.
+</p>
+</li>
+<li>
+<strong>NOTE:</strong>
+<p>You do not have to share the farmerjoe directory itself
+you can put the farmerjoe directoy inside another shared directory. In this case
+simply alter the path in Farmerjoe.conf to suit eg:<br>
+If "c:\shared files" was the share and the path to Farmerjoe was 
+"c:\shared files\farmerjoe" in the conf you would write the 'jobs' and 'log's paths like this:
+</p><pre>jobs = farmerjoe\jobs</pre>
+
+</li>
+</ul>
+
+</li><li>
+<strong>Mount shares on the slaves</strong>
+<br/><br/><ul><li>
+<strong>WINDOWS</strong>
+<p>
+Use the View>Map Network Drive option in explorer, browse to the shared
+farmerjoe directory, allocate a drive letter (I use r: for render) select 
+reconnect at startup if you dont want to map the driver every time you reboot.
+</p></li><li>
+<strong>LINUX</strong>
+<p>
+Here is the line I have in my /etc/fstab on my linux slaves
+</p><pre>
+//&lt;master server&gt;/farmerjoe /render smbfs guest,uid=lobo,gid=lobo 0 0
+</pre><p>
+which mounts the shared directory on /render when they boot up.
+</p></li>
+<li>
+<strong>OSX</strong>
+<p>
+On OSX I use Go>Connect to Server.. in the finder, then type in:
+smb://&lt;master server&gt;/farmerjoe
+which ends up being mounted in /Volumes/farmerjoe
+</p>
+</li>
+</ul>
+</li><li>
+<strong>Edit the configuration file Farmerjoe.conf</strong>
+<ul><li><p>
+Set the master IP number and port you want to run the server on.
+</p></li><li><p>
+Set the Farmerjoe root directory which is the shared directory, so on my
+linux machine I use /render and on windows I map to drive r: and on OSX /Volumes/farmerjoe
+</p></li><li><p>
+The conf that comes with farmerjoe is set up to use a blender binary on the
+master server which I do so that I dont need to install blender on each slave
+which makes setting up slaves very easy, however you can install blender on
+each slave as long as the paths are the same for each platform,
+or if the blender binary is in your path you can simply use 'blender' 
+instead of the full path.
+</p></li><li><p>
+If you have a standard location for Imagemagick's convert you should be ok
+with the paths in the conf file supplied. Linux is pretty standard on the 
+path for Imagemagick and windows is in the path if you used the Imagemagick
+installer. If yours differs you probably know where it is :)
+</p></li></ul>
+</li><li>
+<strong>Set up Imagemagick</strong><p>
+If you want to use bucket rendering you will need Imagemagick installed
+as farmerjoe uses Imagemagick's convert to composite the parts back into
+a single image.</p><p>
+You can get Imagemagick from here <a href="http://www.imagemagick.org">http://www.imagemagick.org</a>, or if using
+linux you should be able to install using your package manager.
+you can either set the windows_composite &amp; linux_composite to the full path
+of imagemagick's convert or simply 'convert' if its in your path.
+</p>
+</li>
+</ol>
+
+<h1>Starting <a class="u" href="#top" name="Starting">^</a></h1>
+<p>
+Once you have everything configured you can run Farmerjoe.
+You need to run the master server which accepts jobs and manages the clients.
+Then run the client (slave) on each computer you want to render images.
+</p>
+<strong>Notes:</strong>
+<ul>
+<li>'xxx' would be 'exe' for windows, 'linux' for linux, 'osx' for OSX, 'pl' to use the perl script</li>
+<li>On windows you can also omit the .exe</li>
+<li>When you run Farmerjoe you may get 
+your firewall ask if you want to allow Farmerjoe to use a port, you will have to
+ALLOW Farmerjoe use of the port or Farmerjoe wont work.</li>
+<li>Farmejoe is generally started from the command line. If you are new to the command line I would
+recommend reading up on basic finctions.
+    <ul>
+        <li><a href="http://commandwindows.com">http://commandwindows.com</a> for Windows users.</li>
+        <li><a href="http://www.tuxfiles.org/linuxhelp/shell.html">http://www.tuxfiles.org/linuxhelp/shell.html</a> for Linux users.</li>
+        <li><a href="http://tuvix.apple.com/documentation/MacOSX/Conceptual/OSX_Technology_Overview/CommandLine/chapter_8_section_1.html">http://tuvix.apple.com/.../CommandLine/chapter_8_section_1.html</a> for OSX users</li>
+    </ul>
+</li>
+</ul>
+<p>
+To run Farmerjoe as a Master Server use this command<br/></p>
+<ul>
+    <li>for Windows
+    <ul>
+        <li><code>Farmerjoe --master</code></li>
+    </ul>
+    </li>
+    <li>for Linux
+    <ul>
+        <li><code>./Farmerjoe.linux --master</code></li>
+    </ul>
+    </li>
+    <li>for OSX
+    <ul>
+        <li><code>./Farmerjoe.osx --master</code></li>
+    </ul>
+    </li>
+</ul>
+
+<p>
+To run Farmerjoe as a client use this command</p>
+<ul>
+    <li>for Windows
+    <ul>
+        <li><code>Farmerjoe</code></li>
+    </ul>
+    </li>
+    <li>for Linux
+    <ul>
+        <li><code>./Farmerjoe.linux</code></li>
+    </ul>
+    </li>
+    <li>for OSX
+    <ul>
+        <li><code>./Farmerjoe.osx</code></li>
+    </ul>
+    </li>
+</ul>
+<p>
+Now you should be able to sumbit jobs directly from Blender. To submit a job you need to run
+the farmerjoe_submit.py script within blender, either put it in your scripts
+directory and run from Scripts>Render>Farmerjoe Submit Render
+or load farmerjoe_submit.py into blender as a text file and use ALT+P to run it.
+<strong>You can find farmerjoe_submit.py in the bin directory.</strong>
+</p><p>
+Once you have renders submitted you might want to check on their progress, you
+can telnet to the master server using the same port as in the Farmerjoe.conf file
+or you can run this command
+Farmerjoe.xxx --appserver
+which will run a web server that will allow you to see jobs progress and delete
+jobs and reset tasks as well as see the slaves connected.
+To connect to Farmerjoe with a web browser use the URL
+http://&lt;master server ip/host&gt;:&lt;master server port&gt;
+</p><p>
+When the render is complete you can retrieve the frames from the jobs directory
+look for a folder with the name of the job you submitted, once you have copied
+the frames to a safe place you can use the web gui to delete the job which will
+also remove the job directory - be warned there is no confirmation it just blows
+it away.
+</p>
+<h1>TODO <a class="u" href="#top" name="TODO">^</a></h1>   
+<p>
+Bucket renders always render as TARGA files as I am cheating when compositing
+them, rather than cutting out the rect from the full image I want I simply
+composite them and rely on the alpha chanel to do the work. I plan on doing this
+better in the future - possibly using ideasmans composite function fron his
+blenderfarm script :) and use blender to composite the image parts.
+The imagemagick's composite also seems to give different results on windows than
+on linux, the image is still composited but the background colour differs.
+</p><p>
+There are many small modifications I'd like to add, an auto refresh for the web
+interface, easier to read progress, more checking etc, however it works pretty
+well for what I need it for and hopefully others will find it useful to as is.
+</p><p>
+Id also like to get rid of all the command windows, maybe just have one that runs
+the other required processes or somthing - suggestions are welcome.
+</p>
+<h1>Help <a class="u" href="#top" name="Help">^</a></h1>   
+<p>
+If you need help to get Farmerjoe farming email me &lt;lobo.nz (at) gmail (dot) com&gt;
+<br/>or<br/>
+go to #blenderchat or #blender I am there quite often.
+</p>
+<h1>Using Perl instead of Binaries <a class="u" href="#top" name="PERL">^</a></h1>
+<p>
+If you want to modify and/or use the perl file rather than use the binaries you
+will need these extra perl modules
+</p>
+<pre>
+YAML::Tiny
+Compress::Zlib
+</pre>
+<p>
+The rest should come standard with perl.
+</p>
+<p>You also need to change these three lines in the farmerjoe_submit.py in the
+#variables Section if you want the slaves to use the Farmerjoe.pl script too</p>
+<pre>
+'linux_farmerjoe'  :'Farmerjoe.linux',
+'windows_farmerjoe'  :'Farmerjoe.exe',
+'osx_farmerjoe'  :'Farmerjoe.osx'
+</pre>
+<p>So that they refer to the Farmerjoe.pl</p>
+<pre>
+'linux_farmerjoe'  :'Farmerjoe.pl',
+'windows_farmerjoe'  :'Farmerjoe.pl',
+'osx_farmerjoe'  :'Farmerjoe.pl'
+</pre>
+<p>
+If you make changes or improvements let me know and please email me a copy so I
+can include it for others. Also if you have suggestions or trouble please email 
+me - I will try to reply to all emails :)
+&lt;lobo.nz (at) gmail (dot) com&gt;
+</p>
+<h1>Thanks <a class="u" href="#top" name="Thanks">^</a></h1>
+<p>
+Thanks to ideasman I have used a small portion of his blenderfarm script which I
+ported to perl to save writing the rect calculations for bucket rendering from scratch.
+Also thanks to those who have given feedback on Blenderartists, Email and IRC
+</p>
+
+<h1>License <a class="u" href="#top" name="License">^</a></h1>
+<p>
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+</p><p>
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+</p><p>
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software Foundation,
+Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+</p>
+<h1>DISCLAIMER <a class="u" href="#top" name="DISCLAIMER">^</a></h1>
+<strong>I am paranoid and poor so read this :)</strong>
+<p>
+THE PROGRAM IS DISTRIBUTED IN THE HOPE THAT IT WILL BE USEFUL, BUT WITHOUT ANY 
+WARRANTY. IT IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED 
+OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE 
+QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE 
+DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+IN NO EVENT WILL THE AUTHOR WILL BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY 
+GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR 
+INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA 
+BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A 
+FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF THE AUTHOR
+HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+</p>
+</body>
+

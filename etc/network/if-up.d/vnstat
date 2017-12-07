@@ -1,0 +1,2 @@
+#!/bin/sh
+if [ -x /usr/bin/vnstat ] && [ -w /var/lib/vnstat/$IFACE ]; then /usr/bin/vnstat -r --enable -i $IFACE; fi

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note: You can copy this file to ~/.config/xfce4/desktop/ for customisation. -->
+
+<!--
+	Here is how this file works:
+
+	<xfce-registered-categories> - root element, required.
+
+	<category>
+ 		name:  Required.  Corresponds to an official category from the
+		  freedesktop.org menu spec.
+		replace: Optional.  Name that is displayed as the menu name for items
+		  in the category (useful, e.g., for translations).
+		icon: icon to be displayed for this category (actually, for the menu
+		  item referenced by this category's 'replace' attribute)
+		toplevel: Optional.  Marks categories as being "allowed" to be toplevel
+		  menus.  Note: if a category is unrooted, it will be promoted to
+		  toplevel regardless of the value of this attribute. (default: false)
+		ignore: Optional.  This category will be ignored when organising menu
+		  items. (default: false)
+		hide: Optional.  Items referencing this category will not appear in any
+			menu. (default: false)
+
+	<subcategory> - sub-element of <category>, specifies a subcategory relation
+		name: Required.  Corresponds to an official category from the
+		  freedesktop.org menu spec.
+	  Example:
+	  <category name="Graphics">
+		  <subcategory name="RasterGraphics">
+	  </category>
+	  Note that even if subcategories are definied, it is possible to collapse
+	  all subcategories into a flat one-level menu by specifying style="simple"
+	  in the <include> tag in your menu.xml file.
+-->
+
+<xfce-registered-categories>
+	
+	<category name="2DAnimation" toplevel="true" replace="2D Animation" builtin-icon="MULTIMEDIA" />
+        <category name="StopMotionAnimation" toplevel="true" replace="StopMotion Animation" builtin-icon="MULTIMEDIA" /> 
+	<category name="DTP"  toplevel="true" builtin-icon="GRAPHICS" />
+	
+	<category name="ScreenCasting"  toplevel="true" replace="Screen Casting" builtin-icon="GRAPHICS" />
+	<category name="DVDAuthoring" toplevel="true" replace="DVD Authoring" builtin-icon="MULTIMEDIA">
+		<subcategory name="Backup"/>
+		<subcategory name="Production"/>
+	</category>
+
+	<category name="Backup" builtin-icon="MULTIMEDIA" />
+	<category name="Production" builtin-icon="MULTIMEDIA" />
+	<category name="AudioVideo" replace="Media Players" toplevel="true" builtin-icon="MULTIMEDIA">
+		<subcategory name="Database" />
+		<subcategory name="HamRadio" />
+		<subcategory name="Video" />
+		<subcategory name="AudioVideoEditing" />
+		<subcategory name="Player" />
+		<subcategory name="Recorder" />
+	</category>
+
+	<category name="NLVEditor" replace="NLV Editors" toplevel="true" builtin-icon="ACCESSORIES" />
+
+	
+	<category name="Legacy" toplevel="true" replace="Accessories" builtin-icon="ACCESSORIES" />
+	<category name="Core" toplevel="true" replace="Accessories" builtin-icon="ACCESSORIES" />
+	
+	<category name="2DGraphics" replace="2D Graphics" toplevel="true" builtin-icon="GRAPHICS">
+		<subcategory name="Viewer" />
+		<subcategory name="VectorGraphics" />
+		<subcategory name="BitmapEditor" />
+		<subcategory name="AncillaryTool" />
+		<subcategory name="BMP2SVG" />
+
+	</category>
+	<category name="3DGraphics" replace="3D Animation" toplevel="true" builtin-icon="GRAPHICS">
+		<subcategory name="Modeller" />
+		<subcategory name="Renderer" />
+		<subcategory name="RendererQManager" />
+	</category>
+	<category name="Modeller" builtin-icon="GRAPHICS" />
+	<category name="Renderer" builtin-icon="GRAPHICS" />
+	<category name="RendererQManager" replace="RendererQ Managers" builtin-icon="GRAPHICS" />
+	
+	<category name="BitmapEditor" replace="Bitmap Editors" />
+	<category name="AncillaryTool" replace="Ancillary Tools" />
+	<category name="BMP2SVG" />
+	<category name="Viewer" replace="Image Viewers" />
+	<category name="VectorGraphics" replace="Vector Editors" builtin-icon="GRAPHICS" />
+	<category name="Digital Asset Manager" builtin-icon="NETWORK" />
+	<category name="Network" replace="Internet" toplevel="true" builtin-icon="NETWORK">
+		<subcategory name="Email" />
+		<subcategory name="Dialup" />
+		<subcategory name="InstantMessaging" />
+		<subcategory name="IRCClient" />
+		<subcategory name="FileTransfer" />
+		<subcategory name="HamRadio" />
+		<subcategory name="News" />
+		<subcategory name="P2P" />
+		<subcategory name="RemoteAccess" />
+		<subcategory name="Telephony" />
+		<subcategory name="WebBrowser" />
+		<subcategory name="WebCamera" />
+</category>
+	<category name="Dialup" replace="Communication" builtin-icon="NETWORK" />
+	<category name="InstantMessaging" replace="Instant Messaging" builtin-icon="NETWORK" />
+	<category name="IRCClient" replace="IRC Clients" builtin-icon="NETWORK" />
+	<category name="FileTransfer" replace="File Transfer" builtin-icon="NETWORK" />
+	<category name="HamRadio" replace="Ham Radio" builtin-icon="NETWORK" />
+	<category name="News" builtin-icon="NETWORK" />
+	<category name="P2P" replace="Peer-to-Peer" builtin-icon="NETWORK" />
+	<category name="RemoteAccess" replace="Remote Access" builtin-icon="NETWORK" />
+	<category name="Telephony" builtin-icon="NETWORK" />
+	<category name="WebBrowser" replace="Web Browsing" builtin-icon="NETWORK" />
+	<category name="WebDevelopment" replace="Web Development" builtin-icon="NETWORK" />
+	<category name="Snd_Engineering" toplevel="true" replace="Sound Engineering" builtin-icon="MULTIMEDIA">
+		<subcategory name="CD_Backup" />
+		<subcategory name="Editor" />
+		<subcategory name="Encoder" />
+		<subcategory name="Player" />
+		<subcategory name="Sndcard_Config" />
+	</category>
+
+	<category name="CD_Backup"replace="CD Backup" />
+        <category name="Editor" replace="Editors" />
+	<category name="Encoder" replace="Encoders" />
+	<category name="Sndcard_Config" replace="Sound Server Configuration"/>
+	<category name="Player" replace="Players" builtin-icon="MULTIMEDIA" />
+<category name="Publishing"toplevel="true" builtin-icon="NETWORK">
+<subcategory name="Screen_Publishing"/>
+<subcategory name="Web_Publishing"/>
+                <subcategory name="Desktop_Publishing"/>
+        </category>
+        <category name="Web_Publishing" replace="Web"/>
+        <category name="Desktop_Publishing" replace="Desktop"/>
+        <category name="Screen_Publishing" replace="StoryBoard"/>
+
+	<category name="Settings" toplevel="true" builtin-icon="SETTINGS">
+                <subcategory name="DesktopSettings" />
+                <subcategory name="HardwareSettings" />
+                <subcategory name="PackageSettings" />
+                <subcategory name="SoftwareManagerSettings" />       
+                <subcategory name="WirelessConnectivitySettings" />
+ </category>
+        <category name="DesktopSettings" replace="Desktop Settings" builtin-icon="SETTINGS" />
+        <category name="HardwareSettings" replace="Hardware Settings" builtin-icon="SETTINGS" />
+        <category name="PackageSettings" replace="Package Settings" builtin-icon="SETTINGS" />
+<category name="SoftwareManagerSettings" replace="Software Manager" builtin-icon="SETTINGS" />
+<category name="WirelessConnectivitySettings" replace="Wireless Connectivity" builtin-icon="SETTINGS" />
+	<category name="Utility" toplevel="true" replace="Accessories" builtin-icon="ACCESSORIES">
+		<subcategory name="Accessibility" />
+		<subcategory name="Calculator" />
+		<subcategory name="Clock" />
+		<subcategory name="TextEditor" />
+		<subcategory name="Archiving" />
+		<subcategory name="TerminalEmulator" />
+		<subcategory name="FileManager" />
+		<subcategory name="Shell" />
+	</category>
+	<category name="Accessibility" builtin-icon="UTILITY" />
+	<category name="Calculator" replace="Calculators" builtin-icon="ACCESSORIES" />
+	<category name="Clock" replace="Clocks" builtin-icon="ACCESSORIES" />
+	<category name="TextEditor" replace="Text Editing" builtin-icon="ACCESSORIES" />
+</xfce-registered-categories>

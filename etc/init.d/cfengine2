@@ -1,0 +1,146 @@
+#! /bin/sh
+#
+### BEGIN INIT INFO
+# Provides:          cfengine2
+# Required-Start:    $local_fs $remote_fs $network $time
+# Required-Stop:     $local_fs $remote_fs $network
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: GNU configuration engine
+# Description:       Tool for configuring and maintaining network machines
+### END INIT INFO
+#
+# chkconfig: 2345 60 40
+# description: Starts the cfengine daemons for remote and periodic \
+#    execution of cfengine and for environment monitoring.
+#
+
+set -e
+
+CFEXECD=/usr/sbin/cfexecd
+CFSERVD=/usr/sbin/cfservd
+CFENVD=/usr/sbin/cfenvd
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+# Has the package been 'removed' but not purged?
+test -f $CFEXECD || exit 0
+
+. /lib/lsb/init-functions
+
+# Source the config file
+DEFAULT=/etc/default/cfengine2
+if [ -f $DEFAULT ]; then
+    . $DEFAULT
+else
+    RUN_CFSERVD=1
+    RUN_CFEXECD=1
+    RUN_CFENVD=1
+fi
+
+# Return-status
+RETVAL=0
+
+if /sbin/start-stop-daemon -V >/dev/null 2>&1; then
+    # start-stop-daemon runs OK
+    SSD=1
+else
+    # Probably not a Debian system
+    SSD=0
+fi
+
+ctrl_daemon () {
+    # Usage: ctrl_daemon <op> <daemon> <timeout> [<args>]
+    #  where <op> is 'start' or 'stop'. 'stop' args are passed to 
+    #  start-stop-daemon.
+
+    OPERATION=$1; shift
+    DAEMON=$1; shift
+    DAEMONNAME=$(basename $DAEMON)
+    case $OPERATION in
+	"start")
+	    set +e
+	    if [ "$SSD" = "1" ]; then
+		CMD="start-stop-daemon --start --quiet --exec $DAEMON -- $@"
+	    else
+		CMD="$DAEMON $@"
+	    fi
+	    log_progress_msg "$DAEMONNAME"
+	    $CMD || RETVAL=1
+	    set -e
+	    ;;
+	"stop")
+	    set +e
+	    log_progress_msg "$DAEMONNAME"
+	    DAEMON=`basename $DAEMON`
+	    if [ "$SSD" = "1" ]; then
+		start-stop-daemon -o --stop --retry 5 --quiet --name "$DAEMON" "$@"
+	    else
+		pkill `basename $DAEMON` 2>/dev/null
+	    fi
+	    test $? = "0" || RETVAL=1
+	    set -e
+	    ;;
+	"*")
+	    log_warning_msg "cfengine2: Invalid operation, must be 'start' or 'stop'."
+	    ;;
+    esac
+}
+
+
+case "$1" in
+    start)
+	RETVAL=0
+	log_daemon_msg "Starting cfengine2"
+	case "$RUN_CFENVD $RUN_CFEXECD $RUN_CFSERVD" in
+	    *1*) ;;
+	    *) exit 0;;
+	esac
+	if [ "$RUN_CFENVD" = "1" ]; then
+	    ctrl_daemon start "$CFENVD"
+	fi
+	if [ "$RUN_CFEXECD" = "1" ]; then
+	    ctrl_daemon start "$CFEXECD"
+	fi
+	if [ "$RUN_CFSERVD" = "1" ]; then
+	    if [ -f /etc/cfengine/cfservd.conf ]; then
+		ctrl_daemon start "$CFSERVD" "$CFSERVD_ARGS"
+	    else
+		log_warning_msg  "Not starting cfservd (/etc/cfengine/cfservd.conf missing)"
+	    fi
+	fi
+	log_end_msg $RETVAL
+	;;
+    
+    stop)
+	RETVAL=0
+	log_daemon_msg "Stopping cfengine2"
+	if [ "$RUN_CFENVD" = "1" ]; then
+	    ctrl_daemon stop "$CFENVD"
+	fi
+	if [ "$RUN_CFEXECD" = "1" ]; then
+	    ctrl_daemon stop "$CFEXECD"
+	fi
+	if [ "$RUN_CFSERVD" = "1" ]; then
+	    ctrl_daemon stop "$CFSERVD"
+	fi
+	log_end_msg $RETVAL
+	;;
+    
+    reload)
+	;;
+    
+    restart|force-reload)
+	$0 stop
+	sleep 1
+	$0 start
+	;;
+    
+    *)
+	N=/etc/init.d/cfengine2
+	echo "Usage: $N {start|stop|restart|force-reload}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

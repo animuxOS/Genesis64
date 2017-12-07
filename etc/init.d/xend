@@ -1,0 +1,67 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          xend
+# Required-Start:    $remote_fs
+# Required-Stop:     $remote_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: XEN control daemon
+# Description:       XEN control daemon
+### END INIT INFO
+
+PATH=/usr/lib/xen-common/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DESC="XEN control daemon"
+XENSTORED_RUN_DIR="/var/run/xenstored"
+VERSION=$(xen-utils-version -q 2>/dev/null || true)
+ROOT=/usr/lib/xen-$VERSION
+DAEMON=$ROOT/bin/xend
+
+test "$VERSION" || exit 0
+test -x $DAEMON || exit 0
+test -e /proc/xen/privcmd || exit 0
+grep -q "control_d" /proc/xen/capabilities || exit 0
+
+. /lib/lsb/init-functions
+
+start()
+{
+	$DAEMON status && return 0
+	$DAEMON start || return 1
+
+	i=0
+	while [ $i -lt 10 ]; do
+		$DAEMON status && return 0 || true
+		i=$(($i + 1))
+		sleep 1
+	done
+	return 1
+}
+
+stop()
+{
+	$DAEMON status || return 0
+	$DAEMON stop || return 1
+}
+
+case "$1" in
+  start)
+	[ -d "$XENSTORED_RUN_DIR" ] || mkdir -p "$XENSTORED_RUN_DIR"
+	log_daemon_msg "Starting $DESC" "xend"
+	start && log_end_msg 0 || log_end_msg 1
+	;;
+  stop)
+	log_daemon_msg "Stopping $DESC" "xend"
+	stop && log_end_msg 0 || log_end_msg 1
+	;;
+  restart|force-reload)
+	log_daemon_msg "Restarting $DESC" "xend"
+	stop || true
+	start && log_end_msg 0 || log_end_msg 1
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart|force-reload}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

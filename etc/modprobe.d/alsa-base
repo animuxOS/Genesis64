@@ -1,0 +1,181 @@
+# autoloader aliases
+install sound-slot-0 /sbin/modprobe snd-card-0
+install sound-slot-1 /sbin/modprobe snd-card-1
+install sound-slot-2 /sbin/modprobe snd-card-2
+install sound-slot-3 /sbin/modprobe snd-card-3
+install sound-slot-4 /sbin/modprobe snd-card-4
+install sound-slot-5 /sbin/modprobe snd-card-5
+install sound-slot-6 /sbin/modprobe snd-card-6
+install sound-slot-7 /sbin/modprobe snd-card-7
+# Cause optional modules to be loaded above generic modules
+install snd /sbin/modprobe --ignore-install snd && { /sbin/modprobe --quiet snd-ioctl32 ; : ; }
+install snd-pcm /sbin/modprobe --ignore-install snd-pcm && { /sbin/modprobe --quiet snd-pcm-oss ; : ; }
+install snd-mixer /sbin/modprobe --ignore-install snd-mixer && { /sbin/modprobe --quiet snd-mixer-oss ; : ; }
+install snd-seq /sbin/modprobe --ignore-install snd-seq && { /sbin/modprobe --quiet snd-seq-midi ; /sbin/modprobe --quiet snd-seq-oss ; : ; }
+install snd-rawmidi /sbin/modprobe --ignore-install snd-rawmidi && { /sbin/modprobe --quiet snd-seq-midi ; : ; }
+# Cause optional modules to be loaded above sound card driver modules
+install snd-emu10k1 /sbin/modprobe --ignore-install snd-emu10k1 $CMDLINE_OPTS && { /lib/alsa/modprobe-post-install snd-emu10k1 ; /sbin/modprobe --quiet snd-emu10k1-synth ; }
+install snd-via82xx /sbin/modprobe --ignore-install snd-via82xx $CMDLINE_OPTS && { /lib/alsa/modprobe-post-install snd-via82xx ; /sbin/modprobe --quiet snd-seq ; }
+# Cause a script to be run after *-synth module initialization
+install snd-emu8000-synth /sbin/modprobe --ignore-install snd-emu8000-synth && /lib/alsa/modprobe-post-install snd-emu8000-synth
+install snd-emu10k1-synth /sbin/modprobe --ignore-install snd-emu10k1-synth && /lib/alsa/modprobe-post-install snd-emu10k1-synth
+# Cause a script to be run after card driver module initialization
+install snd-ad1816a /sbin/modprobe --ignore-install snd-ad1816a $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-ad1816a
+install snd-ad1848 /sbin/modprobe --ignore-install snd-ad1848 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-ad1848
+install snd-adlib /sbin/modprobe --ignore-install snd-adlib $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-adlib
+install snd-ad1889 /sbin/modprobe --ignore-install snd-ad1889 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-ad1889
+install snd-aica /sbin/modprobe --ignore-install snd-aica $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-aica
+install snd-ali5451 /sbin/modprobe --ignore-install snd-ali5451 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-ali5451
+install snd-als100 /sbin/modprobe --ignore-install snd-als100 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-als100
+install snd-als300 /sbin/modprobe --ignore-install snd-als300 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-als300
+install snd-als4000 /sbin/modprobe --ignore-install snd-als4000 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-als4000
+install snd-aoa /sbin/modprobe --ignore-install snd-aoa $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-aoa
+install snd-aoa-fabric-layout /sbin/modprobe --ignore-install snd-aoa-fabric-layout $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-aoa-fabric-layout
+install snd-aoa-onyx /sbin/modprobe --ignore-install snd-aoa-onyx $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-aoa-onyx
+install snd-aoa-tas /sbin/modprobe --ignore-install snd-aoa-tas $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-aoa-tas
+install snd-aoa-toonie /sbin/modprobe --ignore-install snd-aoa-toonie $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-aoa-toonie
+install snd-aoa-soundbus /sbin/modprobe --ignore-install snd-aoa-soundbus $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-aoa-soundbus
+install snd-aoa-soundbus-i2s /sbin/modprobe --ignore-install snd-aoa-soundbus-i2s $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-aoa-soundbus-i2s
+install snd-armaaci /sbin/modprobe --ignore-install snd-armaaci $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-armaaci
+install snd-asihpi /sbin/modprobe --ignore-install snd-asihpi $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-asihpi
+install snd-at73c213 /sbin/modprobe --ignore-install snd-at73c213 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-at73c213
+install snd-atiixp /sbin/modprobe --ignore-install snd-atiixp $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-atiixp
+install snd-at91-soc /sbin/modprobe --ignore-install snd-at91-soc $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-at91-soc
+install snd-at91-soc-eti-b1-wm8731 /sbin/modprobe --ignore-install snd-at91-soc-eti-b1-wm8731 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-at91-soc-eti-b1-wm8731
+install snd-1-soc-eti-slave /sbin/modprobe --ignore-install snd-1-soc-eti-slave $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-1-soc-eti-slave
+install snd-au1x00 /sbin/modprobe --ignore-install snd-au1x00 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-au1x00
+install snd-au8810 /sbin/modprobe --ignore-install snd-au8810 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-au8810
+install snd-au8820 /sbin/modprobe --ignore-install snd-au8820 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-au8820
+install snd-au8830 /sbin/modprobe --ignore-install snd-au8830 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-au8830
+install snd-azt2320 /sbin/modprobe --ignore-install snd-azt2320 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-azt2320
+install snd-azt3328 /sbin/modprobe --ignore-install snd-azt3328 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-azt3328
+install snd-ca0106 /sbin/modprobe --ignore-install snd-ca0106 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-ca0106
+install snd-cmi8330 /sbin/modprobe --ignore-install snd-cmi8330 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-cmi8330
+install snd-cmipci /sbin/modprobe --ignore-install snd-cmipci $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-cmipci
+install snd-cs4231 /sbin/modprobe --ignore-install snd-cs4231 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-cs4231
+install snd-cs4232 /sbin/modprobe --ignore-install snd-cs4232 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-cs4232
+install snd-cs4236 /sbin/modprobe --ignore-install snd-cs4236 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-cs4236
+install snd-cs4281 /sbin/modprobe --ignore-install snd-cs4281 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-cs4281
+install snd-cs46xx /sbin/modprobe --ignore-install snd-cs46xx $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-cs46xx
+install snd-cs5535audio /sbin/modprobe --ignore-install snd-cs5535audio $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-cs5535audio
+install snd-darla20 /sbin/modprobe --ignore-install snd-darla20 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-darla20
+install snd-darla24 /sbin/modprobe --ignore-install snd-darla24 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-darla24
+install snd-dt019x /sbin/modprobe --ignore-install snd-dt019x $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-dt019x
+install snd-echo3g /sbin/modprobe --ignore-install snd-echo3g $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-echo3g
+install snd-emu10k1x /sbin/modprobe --ignore-install snd-emu10k1x $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-emu10k1x
+install snd-ens1370 /sbin/modprobe --ignore-install snd-ens1370 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-ens1370
+install snd-ens1371 /sbin/modprobe --ignore-install snd-ens1371 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-ens1371
+install snd-es1688 /sbin/modprobe --ignore-install snd-es1688 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-es1688
+install snd-es18xx /sbin/modprobe --ignore-install snd-es18xx $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-es18xx
+install snd-es1938 /sbin/modprobe --ignore-install snd-es1938 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-es1938
+install snd-es1968 /sbin/modprobe --ignore-install snd-es1968 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-es1968
+install snd-es968 /sbin/modprobe --ignore-install snd-es968 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-es968
+install snd-fm801 /sbin/modprobe --ignore-install snd-fm801 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-fm801
+install snd-fm801-tea575x /sbin/modprobe --ignore-install snd-fm801-tea575x $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-fm801-tea575x
+install snd-gina20 /sbin/modprobe --ignore-install snd-gina20 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-gina20
+install snd-gina24 /sbin/modprobe --ignore-install snd-gina24 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-gina24
+install snd-gusclassic /sbin/modprobe --ignore-install snd-gusclassic $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-gusclassic
+install snd-gusextreme /sbin/modprobe --ignore-install snd-gusextreme $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-gusextreme
+install snd-gusmax /sbin/modprobe --ignore-install snd-gusmax $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-gusmax
+install snd-harmony /sbin/modprobe --ignore-install snd-harmony $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-harmony
+install snd-hda-codec-atihdmi /sbin/modprobe --ignore-install snd-hda-codec-atihdmi $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-hda-codec-atihdmi
+install snd-hda-codec-analog /sbin/modprobe --ignore-install snd-hda-codec-analog $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-hda-codec-analog
+install snd-hda-codec-conexant /sbin/modprobe --ignore-install snd-hda-codec-conexant $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-hda-codec-conexant
+install snd-hda-codec-cmedia /sbin/modprobe --ignore-install snd-hda-codec-cmedia $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-hda-codec-cmedia
+install snd-hda-codec-realtek /sbin/modprobe --ignore-install snd-hda-codec-realtek $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-hda-codec-realtek
+install snd-hda-codec-si3054 /sbin/modprobe --ignore-install snd-hda-codec-si3054 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-hda-codec-si3054
+install snd-hda-codec-sigmatel /sbin/modprobe --ignore-install snd-hda-codec-sigmatel $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-hda-codec-sigmatel
+install snd-hda-codec-via /sbin/modprobe --ignore-install snd-hda-codec-via $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-hda-codec-via
+install snd-hda-generic /sbin/modprobe --ignore-install snd-hda-generic $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-hda-generic
+install snd-hda-hwdep /sbin/modprobe --ignore-install snd-hda-hwdep $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-hda-hwdep
+install snd-hda-intel /sbin/modprobe --ignore-install snd-hda-intel $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-hda-intel
+install snd-hda-power-save /sbin/modprobe --ignore-install snd-hda-power-save $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-hda-power-save
+install snd-hdsp /sbin/modprobe --ignore-install snd-hdsp $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-hdsp
+install snd-hdspm /sbin/modprobe --ignore-install snd-hdspm $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-hdspm
+install snd-hifier /sbin/modprobe --ignore-install snd-hifier $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-hifier
+install snd-ice1712 /sbin/modprobe --ignore-install snd-ice1712 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-ice1712
+install snd-ice1724 /sbin/modprobe --ignore-install snd-ice1724 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-ice1724
+install snd-indigo /sbin/modprobe --ignore-install snd-indigo $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-indigo
+install snd-indigodj /sbin/modprobe --ignore-install snd-indigodj $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-indigodj
+install snd-indigoio /sbin/modprobe --ignore-install snd-indigoio $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-indigoio
+install snd-intel8x0 /sbin/modprobe --ignore-install snd-intel8x0 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-intel8x0
+install snd-interwave /sbin/modprobe --ignore-install snd-interwave $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-interwave
+install snd-interwave-stb /sbin/modprobe --ignore-install snd-interwave-stb $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-interwave-stb
+install snd-korg1212 /sbin/modprobe --ignore-install snd-korg1212 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-korg1212
+install snd-layla20 /sbin/modprobe --ignore-install snd-layla20 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-layla20
+install snd-layla24 /sbin/modprobe --ignore-install snd-layla24 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-layla24
+install snd-maestro3 /sbin/modprobe --ignore-install snd-maestro3 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-maestro3
+install snd-mia /sbin/modprobe --ignore-install snd-mia $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-mia
+install snd-miro /sbin/modprobe --ignore-install snd-miro $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-miro
+install snd-mixart /sbin/modprobe --ignore-install snd-mixart $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-mixart
+install snd-ml403-ac97cr /sbin/modprobe --ignore-install snd-ml403-ac97cr $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-ml403-ac97cr
+install snd-mona /sbin/modprobe --ignore-install snd-mona $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-mona
+install snd-mpu401 /sbin/modprobe --ignore-install snd-mpu401 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-mpu401
+install snd-msnd-pinnacle /sbin/modprobe --ignore-install snd-msnd-pinnacle $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-msnd-pinnacle
+install snd-mtpav /sbin/modprobe --ignore-install snd-mtpav $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-mtpav
+install snd-mts64 /sbin/modprobe --ignore-install snd-mts64 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-mts64
+install snd-nm256 /sbin/modprobe --ignore-install snd-nm256 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-nm256
+install snd-opl3sa2 /sbin/modprobe --ignore-install snd-opl3sa2 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-opl3sa2
+install snd-opti92x-ad1848 /sbin/modprobe --ignore-install snd-opti92x-ad1848 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-opti92x-ad1848
+install snd-opti92x-cs4231 /sbin/modprobe --ignore-install snd-opti92x-cs4231 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-opti92x-cs4231
+install snd-opti93x /sbin/modprobe --ignore-install snd-opti93x $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-opti93x
+install snd-oxygen /sbin/modprobe --ignore-install snd-oxygen $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-oxygen
+install snd-pc98-cs4232 /sbin/modprobe --ignore-install snd-pc98-cs4232 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-pc98-cs4232
+install snd-pcsp /sbin/modprobe --ignore-install snd-pcsp $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-pcsp
+install snd-pcxhr /sbin/modprobe --ignore-install snd-pcxhr $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-pcxhr
+install snd-pdaudiocf /sbin/modprobe --ignore-install snd-pdaudiocf $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-pdaudiocf
+install snd-pdplus /sbin/modprobe --ignore-install snd-pdplus $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-pdplus
+install snd-portman2x4 /sbin/modprobe --ignore-install snd-portman2x4 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-portman2x4
+install snd-powermac /sbin/modprobe --ignore-install snd-powermac $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-powermac
+install snd-ps3 /sbin/modprobe --ignore-install snd-ps3 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-ps3
+install snd-pxa2xx-ac97 /sbin/modprobe --ignore-install snd-pxa2xx-ac97 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-pxa2xx-ac97
+install snd-pxa2xx-i2sound /sbin/modprobe --ignore-install snd-pxa2xx-i2sound $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-pxa2xx-i2sound
+install snd-pxa2xx-soc /sbin/modprobe --ignore-install snd-pxa2xx-soc $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-pxa2xx-soc
+install snd-pxa2xx-soc-corgi /sbin/modprobe --ignore-install snd-pxa2xx-soc-corgi $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-pxa2xx-soc-corgi
+install snd-pxa2xx-soc-spitz /sbin/modprobe --ignore-install snd-pxa2xx-soc-spitz $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-pxa2xx-soc-spitz
+install snd-pxa2xx-soc-poodle /sbin/modprobe --ignore-install snd-pxa2xx-soc-poodle $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-pxa2xx-soc-poodle
+install snd-pxa2xx-soc-tosa /sbin/modprobe --ignore-install snd-pxa2xx-soc-tosa $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-pxa2xx-soc-tosa
+install snd-pxa2xx-soc-e800 /sbin/modprobe --ignore-install snd-pxa2xx-soc-e800 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-pxa2xx-soc-e800
+install snd-riptide /sbin/modprobe --ignore-install snd-riptide $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-riptide
+install snd-rme32 /sbin/modprobe --ignore-install snd-rme32 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-rme32
+install snd-rme96 /sbin/modprobe --ignore-install snd-rme96 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-rme96
+install snd-rme9652 /sbin/modprobe --ignore-install snd-rme9652 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-rme9652
+install snd-s3c2410 /sbin/modprobe --ignore-install snd-s3c2410 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-s3c2410
+install snd-s3c24xx-soc /sbin/modprobe --ignore-install snd-s3c24xx-soc $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-s3c24xx-soc
+install snd-sa11xx-uda1341 /sbin/modprobe --ignore-install snd-sa11xx-uda1341 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-sa11xx-uda1341
+install snd-sb16 /sbin/modprobe --ignore-install snd-sb16 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-sb16
+install snd-sb8 /sbin/modprobe --ignore-install snd-sb8 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-sb8
+install snd-sbawe /sbin/modprobe --ignore-install snd-sbawe $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-sbawe
+install snd-sc6000 /sbin/modprobe --ignore-install snd-sc6000 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-sc6000
+install snd-serial-u16550 /sbin/modprobe --ignore-install snd-serial-u16550 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-serial-u16550
+install snd-sgalaxy /sbin/modprobe --ignore-install snd-sgalaxy $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-sgalaxy
+install snd-sis7019 /sbin/modprobe --ignore-install snd-sis7019 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-sis7019
+install snd-soc /sbin/modprobe --ignore-install snd-soc $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-soc
+install snd-soc-cs4270-hwmute /sbin/modprobe --ignore-install snd-soc-cs4270-hwmute $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-soc-cs4270-hwmute
+install snd-soc-cs4270-vd33-errata /sbin/modprobe --ignore-install snd-soc-cs4270-vd33-errata $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-soc-cs4270-vd33-errata
+install snd-soc-pcm-sh7760 /sbin/modprobe --ignore-install snd-soc-pcm-sh7760 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-soc-pcm-sh7760
+install snd-sh7760-ac97 /sbin/modprobe --ignore-install snd-sh7760-ac97 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-sh7760-ac97
+install snd-sonicvibes /sbin/modprobe --ignore-install snd-sonicvibes $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-sonicvibes
+install snd-sscape /sbin/modprobe --ignore-install snd-sscape $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-sscape
+install snd-at91-soc /sbin/modprobe --ignore-install snd-at91-soc $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-at91-soc
+install snd-at91-soc-eti-b1-wm8731 /sbin/modprobe --ignore-install snd-at91-soc-eti-b1-wm8731 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-at91-soc-eti-b1-wm8731
+install snd-sun-amd7930 /sbin/modprobe --ignore-install snd-sun-amd7930 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-sun-amd7930
+install snd-sun-cs4231 /sbin/modprobe --ignore-install snd-sun-cs4231 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-sun-cs4231
+install snd-sun-dbri /sbin/modprobe --ignore-install snd-sun-dbri $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-sun-dbri
+install snd-trident /sbin/modprobe --ignore-install snd-trident $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-trident
+install snd-usb-audio /sbin/modprobe --ignore-install snd-usb-audio $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-usb-audio
+install snd-usb-usx2y /sbin/modprobe --ignore-install snd-usb-usx2y $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-usb-usx2y
+install snd-usb-caiaq /sbin/modprobe --ignore-install snd-usb-caiaq $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-usb-caiaq
+install snd-virtuoso /sbin/modprobe --ignore-install snd-virtuoso $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-virtuoso
+install snd-vx222 /sbin/modprobe --ignore-install snd-vx222 $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-vx222
+install snd-vxpocket /sbin/modprobe --ignore-install snd-vxpocket $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-vxpocket
+install snd-wavefront /sbin/modprobe --ignore-install snd-wavefront $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-wavefront
+install snd-ymfpci /sbin/modprobe --ignore-install snd-ymfpci $CMDLINE_OPTS && /lib/alsa/modprobe-post-install snd-ymfpci
+# Prevent abnormal drivers from grabbing index 0
+options bt87x index=-2
+options cx88_alsa index=-2
+options snd-atiixp-modem index=-2
+options snd-intel8x0m index=-2
+options snd-via82xx-modem index=-2
+# Keep snd-pcsp from beeing loaded as first soundcard
+options snd-pcsp index=-2

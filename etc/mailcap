@@ -1,0 +1,186 @@
+###############################################################################
+#
+#  MIME types and programs that process those types
+#
+#  Much of this file is generated automatically by the program "update-mime".
+#  Please see the "update-mime" man page for more information.
+#
+#  Users can add their own rules if they wish by creating a ".mailcap"
+#  file in their home directory.  Entries included there will take
+#  precedence over those listed here.
+#
+###############################################################################
+
+
+###############################################################################
+#
+#  User section follows:  Any entries included in this section will take
+#  precedence over those created by "update-mime".  DO NOT CHANGE the
+#  "User Section Begins" and "User Section Ends" lines, or anything outside
+#  of this section!
+#
+
+# ----- User Section Begins ----- #
+# -----  User Section Ends  ----- #
+
+###############################################################################
+
+application/x-stopmotion;  /usr/bin/stopmotion  -caption "Animation Creator" '%s';   nametemplate=%s.sto; test=test "$DISPLAY" != ""
+text/plain; less '%s'; needsterminal
+video/mpeg; vlc '%s'; description="MPEG Video"; test=test -n "$DISPLAY"
+video/x-mpeg; vlc '%s'; description="MPEG Video"; test=test -n "$DISPLAY"
+video/mpeg-system; vlc '%s'; description="MPEG Video"; test=test -n "$DISPLAY"
+video/x-mpeg-system; vlc '%s'; description="MPEG Video"; test=test -n "$DISPLAY"
+audio/x-wav; vlc '%s'; description="WAV Audio"; nametemplate=%s.wav; test=test -n "$DISPLAY"
+video/mpeg4; vlc '%s'; description="MPEG-4 Video"; test=test -n "$DISPLAY"
+audio/mpeg; vlc '%s'; description="MPEG Audio"; nametemplate=%s.mpg; test=test -n "$DISPLAY"
+audio/mpegurl; vlc '%s'; description="MPEG Audio URL"; nametemplate=%s.m3u; test=test -n "$DISPLAY"
+audio/x-mp3; vlc '%s'; nametemplate=%s.mp3; description="MPEG Audio"; test=test -n "$DISPLAY"
+audio/mpeg4; vlc '%s'; description="MPEG-4 Audio"; test=test -n "$DISPLAY"
+application/mpeg4-iod; vlc '%s'; description="MPEG-4 Video"; test=test -n "$DISPLAY"
+application/mpeg4-muxcodetable; vlc '%s'; description="MPEG-4 Video"; test=test -n "$DISPLAY"
+text/html; /usr/bin/sensible-browser '%s'; description=HTML Text; nametemplate=%s.html
+application/pdf; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.pdf
+application/x-pdf; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.pdf
+application/x-bzpdf; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.pdf.gz
+application/x-gzpdf; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.pdf.bz2
+application/postscript; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.ps
+application/x-bzpostscript; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.ps.bz2
+application/x-gzpostscript; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.ps.gz
+image/x-eps; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.eps
+image/x-bzeps; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.eps.bz2
+image/x-gzeps; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.eps.gz
+application/x-dvi; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.dvi
+application/x-gzdvi; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.dvi.gz
+application/x-bzdvi; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.dvi.bz2
+image/vnd.djvu; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.djvu
+image/tiff; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.tiff
+application/x-cbr; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.cbr
+application/x-cbz; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.cbz
+application/vnd.sun.xml.impress; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.sxd
+application/vnd.oasis.opendocument.presentation; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.odp
+application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
+text/html; /usr/bin/iceweasel '%s'; description=HTML Text; test=test -n "$DISPLAY";  nametemplate=%s.html
+text/xml; /usr/bin/iceweasel '%s'; description=XML Text; test=test -n "$DISPLAY";  nametemplate=%s.xml
+image/avs; display 'avs:%s'; test=test -n "$DISPLAY"
+image/bie; display 'jbig:%s'; test=test -n "$DISPLAY"
+image/x-ms-bmp; display 'bmp:%s'; test=test -n "$DISPLAY"
+image/cmyk; display 'cmyk:%s'; test=test -n "$DISPLAY"
+image/dcx; display 'dcx:%s'; test=test -n "$DISPLAY"
+image/eps; display 'eps:%s'; test=test -n "$DISPLAY"
+image/fax; display 'fax:%s'; test=test -n "$DISPLAY"
+image/fits; display 'fits:%s'; test=test -n "$DISPLAY"
+image/gif; display 'gif:%s'; test=test -n "$DISPLAY"
+image/gray; display 'gray:%s'; test=test -n "$DISPLAY"
+image/jpeg; display 'jpeg:%s'; test=test -n "$DISPLAY"
+image/pjpeg; display 'jpeg:%s'; test=test -n "$DISPLAY"
+image/miff; display 'miff:%s'; test=test -n "$DISPLAY"
+image/mono; display 'mono:%s'; test=test -n "$DISPLAY"
+image/mtv; display 'mtv:%s'; test=test -n "$DISPLAY"
+image/x-portable-bitmap; display 'pbm:%s'; test=test -n "$DISPLAY"
+image/pcd; display 'pcd:%s'; test=test -n "$DISPLAY"
+image/pcx; display 'pcx:%s'; test=test -n "$DISPLAY"
+image/pdf; display 'pdf:%s'; test=test -n "$DISPLAY"
+image/x-portable-graymap; display 'pgm:%s'; test=test -n "$DISPLAY"
+image/pict; display 'pict:%s'; test=test -n "$DISPLAY"
+image/png; display 'png:%s'; test=test -n "$DISPLAY"
+image/x-portable-anymap; display 'pnm:%s'; test=test -n "$DISPLAY"
+image/x-portable-pixmap; display 'ppm:%s'; test=test -n "$DISPLAY"
+image/ps; display 'ps:%s'; test=test -n "$DISPLAY"
+image/rad; display 'rad:%s'; test=test -n "$DISPLAY"
+image/x-rgb; display 'rgb:%s'; test=test -n "$DISPLAY"
+image/rgba; display 'rgba:%s'; test=test -n "$DISPLAY"
+image/rla; display 'rla:%s'; test=test -n "$DISPLAY"
+image/rle; display 'rle:%s'; test=test -n "$DISPLAY"
+image/sgi; display 'sgi:%s'; test=test -n "$DISPLAY"
+image/sun-raster; display 'sun:%s'; test=test -n "$DISPLAY"
+image/targa; display 'tga:%s'; test=test -n "$DISPLAY"
+image/tiff; display 'tiff:%s'; test=test -n "$DISPLAY"
+image/uyvy; display 'uyvy:%s'; test=test -n "$DISPLAY"
+image/vid; display 'vid:%s'; test=test -n "$DISPLAY"
+image/viff; display 'viff:%s'; test=test -n "$DISPLAY"
+image/x-xbitmap; display 'xbm:%s'; test=test -n "$DISPLAY"
+image/x-xpixmap; display 'xpm:%s'; test=test -n "$DISPLAY"
+image/x-xwindowdump; display 'xwd:%s'; test=test -n "$DISPLAY"
+image/x-icon; display 'icon:%s'; test=test -n "$DISPLAY"
+image/yuv; display 'yuv:%s'; test=test -n "$DISPLAY"
+application/x-ogg; /usr/bin/gmplayer '%s'; description="OggVorbis Audio"
+application/ogg; /usr/bin/gmplayer '%s'; description="OggVorbis Audio"
+audio/mpeg; /usr/bin/gmplayer '%s'; description="MPEG Audio Format"
+audio/x-mpegurl; /usr/bin/gmplayer '%s'; description="Icecast Playlists"
+audio/x-ms-wax; /usr/bin/gmplayer '%s'; description="Audio Format"
+audio/x-ms-wma; /usr/bin/gmplayer '%s'; description="Audio Format"
+audio/x-pls; /usr/bin/gmplayer '%s'; description="MP3 ShoutCast/IceCast Playlist"
+audio/x-scpls; /usr/bin/gmplayer '%s'; description="Shoutcast Playlists"
+audio/x-wav; /usr/bin/gmplayer '%s'; description="Waveform Microsoft Wave/RIFF"
+video/mpeg; /usr/bin/gmplayer '%s'; description="MPEG Video Format"; test=test -n "$DISPLAY"
+video/quicktime; /usr/bin/gmplayer '%s'; description="Apple Quicktime Video"; test=test -n "$DISPLAY"
+video/x-mpeg2; /usr/bin/gmplayer '%s'; description="MPEG Video"; test=test -n "$DISPLAY"
+video/x-mpeg; /usr/bin/gmplayer '%s'; description="MPEG 2 Video"; test=test -n "$DISPLAY"
+video/x-ms-afs; /usr/bin/gmplayer '%s'; description="Audio Video Interleave - Microsoft"; test=test -n "$DISPLAY"
+video/x-ms-asf; /usr/bin/gmplayer '%s'; description="MS ASF video"; test=test -n "$DISPLAY"
+video/x-msvideo; /usr/bin/gmplayer '%s'; description="Audio Video Interleave - Microsoft"; test=test -n "$DISPLAY"
+video/x-ms-wma; /usr/bin/gmplayer '%s'; description="Audio Video Interleave - Microsoft"; test=test -n "$DISPLAY"
+video/x-ms-wmv; /usr/bin/gmplayer '%s'; description="Audio Video Interleave - Microsoft"; test=test -n "$DISPLAY"
+video/x-ms-wmx; /usr/bin/gmplayer '%s'; description="Audio Video Interleave - Microsoft"; test=test -n "$DISPLAY"
+video/x-ms-wvx; /usr/bin/gmplayer '%s'; description="Audio Video Interleave - Microsoft"; test=test -n "$DISPLAY"
+audio/basic; /usr/bin/play '%s' -t au 
+audio/x-aiff; /usr/bin/play '%s' -t aiff
+audio/x-gsm; /usr/bin/play '%s' -t gsm
+audio/x-wav; /usr/bin/play '%s' -t wav
+application/x-java-jnlp-file; /usr/lib/jvm/java-6-sun-1.6.0.07/jre/javaws/javaws '%s'
+application/x-tar; /bin/tar tvf -; print=/bin/tar tvf - | print text/plain:-; copiousoutput
+application/x-gtar; /bin/tar tvzf -; print=/bin/tar tvzf - | print text/plain:-; copiousoutput
+text/plain; more '%s'; needsterminal
+application/ogg; ogg123 '%s'; description="Ogg Vorbis multimedia format"
+image/*; evince '%s'; test=test -n "$DISPLAY"; nametemplate=%s.dummy
+text/plain; view '%s'; edit=vim '%s'; compose=vim '%s'; needsterminal
+video/mpeg; vlc -I rc -V caca '%s'; needsterminal; description="MPEG Video"
+video/x-mpeg; vlc -I rc -V caca '%s'; needsterminal; description="MPEG Video"
+video/mpeg-system; vlc -I rc -V caca '%s'; needsterminal; description="MPEG Video"
+video/x-mpeg-system; vlc -I rc -V caca '%s'; needsterminal; description="MPEG Video"
+audio/x-wav; vlc -I rc -V caca '%s'; nametemplate=%s.wav; needsterminal; description="WAV Audio"
+video/mpeg4; vlc -I rc -V caca '%s'; needsterminal; description="MPEG-4 Video"
+audio/mpeg; vlc -I rc -V caca '%s'; nametemplate=%s.mpg; needsterminal; description="MPEG Audio"
+audio/mpegurl; vlc -I rc -V caca '%s'; nametemplate=%s.m3u; needsterminal; description="MPEG Audio URL"
+audio/x-mp3; vlc -I rc -V caca '%s'; nametemplate=%s.mp3; needsterminal; description="MPEG Audio"
+audio/mpeg4; vlc -I rc -V caca '%s'; needsterminal; description="MPEG-4 Audio"
+application/mpeg4-iod; vlc -I rc -V caca '%s'; needsterminal; description="MPEG-4 Video"
+application/mpeg4-muxcodetable; vlc -I rc -V caca '%s'; needsterminal; description="MPEG-4 Video"
+video/x-msvideo; vlc '%s'; description="MS Video (AVI)"; test=test -n "$DISPLAY"
+video/quicktime; vlc '%s'; description="Apple Quicktime Video"; test=test -n "$DISPLAY"
+application/ogg; vlc '%s'; nametemplate=%s.ogg; description="Ogg stream"; test=test -n "$DISPLAY"
+application/x-ogg; vlc '%s'; nametemplate=%s.ogg; description="Ogg stream"; test=test -n "$DISPLAY"
+application/x-ms-asf-plugin; vlc '%s'; description="Windows Media Video"; test=test -n "$DISPLAY"
+application/x-mplayer2; vlc '%s'; description="Windows Media"; test=test -n "$DISPLAY"
+video/x-msvideo; vlc -I rc -V caca '%s'; needsterminal; description="MS Video (AVI)"
+video/quicktime; vlc -I rc -V caca '%s'; needsterminal; description="Apple Quicktime Video"
+application/ogg; vlc -I rc -V caca '%s'; nametemplate=%s.ogg; needsterminal; description="Ogg stream"
+application/x-ogg; vlc -I rc -V caca '%s'; nametemplate=%s.ogg; needsterminal; description="Ogg stream"
+application/x-ms-asf-plugin; vlc -I rc -V caca '%s'; needsterminal; description="Windows Media Video"
+application/x-mplayer2; vlc -I rc -V caca '%s'; needsterminal; description="Windows Media"
+application/x-abiword; abiword '%s' ; edit=abiword '%s' ; test=test "$DISPLAY" != "" ; description="AbiWord Document"
+application/vnd.ms-word; abiword '%s' ; edit=abiword '%s' ; test=test "$DISPLAY" != "" ; nametemplate=%s.doc ; description="Microsoft Word Document"
+application/msword; abiword '%s' ; edit=abiword '%s' ; test=test "$DISPLAY" != "" ; description="Microsoft Word Document"
+application/rtf; abiword '%s' ; edit=abiword '%s' ; test=test "$DISPLAY" != "" ; description="Rich Text document"
+text/abiword; abiword '%s' ; edit=abiword '%s' ; test=test "$DISPLAY" != "" ; description="AbiWord Document"
+text/plain; abiword '%s' ; edit=abiword '%s' ; test=test "$DISPLAY" != "" ; description="Text file"
+text/richtext; abiword '%s' ; edit=abiword '%s' ; test=test "$DISPLAY" != "" ; description="Rich Text document"
+text/rtf; abiword '%s' ; edit=abiword '%s' ; test=test "$DISPLAY" != "" ; description="Rich Text document"
+application/ogg; audacity '%s'; edit=audacity '%s'; test=test "$DISPLAY" != ""
+audio/basic; audacity '%s'; edit=audacity '%s'; test=test "$DISPLAY" != ""
+audio/mpeg; audacity '%s'; edit=audacity '%s'; test=test "$DISPLAY" != ""
+audio/x-aiff; audacity '%s'; edit=audacity '%s'; test=test "$DISPLAY" != ""
+audio/x-mp3; audacity '%s'; edit=audacity '%s'; test=test "$DISPLAY" != ""
+audio/x-wav; audacity '%s'; edit=audacity '%s'; test=test "$DISPLAY" != ""
+application/x-flac; audacity '%s'; edit=audacity '%s'; test=test "$DISPLAY" != ""
+audio/x-flac; audacity '%s'; edit=audacity '%s'; test=test "$DISPLAY" != ""
+application/x-audacity-project; audacity '%s'; edit=audacity '%s'; test=test "$DISPLAY" != ""
+image/png;  /usr/bin/iceweasel '%s'; description=PNG Image; test=test -n "$DISPLAY";  nametemplate=%s.png
+image/jpeg;  /usr/bin/iceweasel '%s'; description=JPEG Image; test=test -n "$DISPLAY";  nametemplate=%s.jpeg
+image/gif;  /usr/bin/iceweasel '%s'; description=GIF Image; test=test -n "$DISPLAY";  nametemplate=%s.gif
+text/*; less '%s'; needsterminal
+text/*; view '%s'; edit=vim '%s'; compose=vim '%s'; needsterminal
+text/*; more '%s'; needsterminal
+application/x-debian-package; /usr/lib/mime/debian-view '%s'; needsterminal; description=Debian GNU/Linux Package; nametemplate=%s.deb
+audio/basic; /usr/lib/mime/playaudio '%s'; description=Basic uLaw Audio; nametemplate=%s.au

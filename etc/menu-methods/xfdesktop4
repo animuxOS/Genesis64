@@ -1,0 +1,39 @@
+#!/usr/bin/install-menu
+#
+# Generates Xfce menus for all registered applications.
+#
+compat="menu-1"
+
+!include menu.h
+
+outputencoding="UTF-8"
+
+genmenu="menudefs.hook"
+rootprefix="/etc/xdg/xfce4/desktop"
+userprefix=".config/xfce4/desktop/"
+preoutput="<!-- Automatically generated file. Do not edit (see /usr/share/doc/menu/html/index.html) -->\n<xfdesktop-menu>"
+postoutput="</xfdesktop-menu>"
+treewalk="M)"
+postrun="if [ \"/etc/xdg/xfce4/desktop/menu.xml\" != \"" prefix() \
+	"/menu.xml\" ]; then cp /etc/xdg/xfce4/desktop/menu.xml " prefix() \
+	"/menu.xml; fi"
+
+function charreplace($str,$toreplace,$with,$lastchar)=replacewith(escwith($str,$toreplace,$with),$toreplace,$lastchar)
+
+function xmlesc($str)= replace(replace(replace(replace($str, \
+  "&","&amp;"), \
+  "\"","&quot;"), \
+  "<","&lt;"), \
+  ">","&gt;")
+
+function xmltitle()= replace(xmlesc(title()), "/", "-")
+
+supported
+    x11=   nstring(level(), "   ") "<app name=\"" xmltitle() "\" cmd=\"" xmlesc($command) "\" icon=\"" icon() "\"/>\n" 
+    text=  nstring(level(), "   ") "<app name=\"" xmltitle() "\" cmd=\""xmlesc($command) "\" term=\"yes\" icon=\"" icon() "\" />\n"
+    xfce4= nstring(level(), "   ") "<builtin name=\"" xmltitle() "\" cmd=\"" xmlesc($command) "\"/>\n"
+endsupported
+
+startmenu= ""
+submenutitle= nstring(level(), "   ") "<menu name=\"" xmltitle() "\" visible=\"yes\">\n"
+endmenu= ifneq( level(), "0",  nstring(level(), "   ") "</menu>\n" )

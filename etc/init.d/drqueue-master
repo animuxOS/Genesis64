@@ -1,0 +1,68 @@
+#!/bin/bash
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+DAEMON=/var/lib/drqueue/bin/master.Linux
+NAME=master.Linux
+DESC="DrQueue Master Process"
+
+test -x $DAEMON || exit 0
+
+# Include defaults if available
+if [ -f /etc/default/drqueue ]
+then
+    . /etc/default/drqueue
+fi
+
+set -e
+
+case "$1" in
+    start)
+        echo -n "Starting $DESC: $NAME"
+        if start-stop-daemon --quiet --stop --signal 0 --exec $DAEMON
+        then
+            echo " already running."
+        else
+            if start-stop-daemon --quiet -c daemon:daemon --start --background --exec $DAEMON \
+                -- $DAEMON_OPTS
+            then
+                echo "."
+            else
+                echo "$NAME failed to start."
+            fi
+        fi
+        ;;
+    stop)
+        echo -n "Stopping $DESC: $NAME"
+        if start-stop-daemon --quiet --stop --signal 0 --exec $DAEMON
+        then
+            start-stop-daemon --stop --quiet --exec $DAEMON
+            # Now we wait for it to die
+            num=0
+            while start-stop-daemon --quiet --stop --signal 0 --exec $DAEMON
+            do
+                num=$[$num+1]
+                if [ $num -gt 10 ]
+                then
+                    echo -n " not died"
+                    break
+                fi
+                sleep 1
+            done
+            echo "."
+        else
+            echo " not running."
+        fi
+        ;;
+    restart|force-reload)
+        $0 stop
+        $0 start
+        ;;
+    *)
+        N=/etc/init.d/$NAME
+        echo "Usage: $N {start|stop|restart|force-reload}" >&2
+        exit 1
+        ;;
+esac
+
+exit 0
