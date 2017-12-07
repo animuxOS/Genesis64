@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+	
+
+	<camera>
+		<pos>0 -5.2 2.5</pos>
+		<up>0 0 1</up>
+		<!--forwards>0 1 -0.3</forwards-->
+		<forwards>0 1 -0.55</forwards>
+
+		<focus_distance>2.000000</focus_distance>
+		<aspect_ratio>1.333</aspect_ratio>
+		<aperture_radius>0.0001</aperture_radius>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.04</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+		
+		<glare>
+			<weight>0.1</weight>
+			<radius>0.02</radius>
+			<num_blades>3</num_blades>
+		</glare>
+	</camera>
+	
+	<tonemapping>
+		<reinhard>
+			<pre_scale>5.0</pre_scale>
+			<post_scale>1.0</post_scale>
+			<burn>6</burn>
+		</reinhard>
+	</tonemapping>
+
+	<skylight>
+		<!--sundir>0 0.3 1</sundir-->
+		<sundir>0 1 1</sundir>
+		<turbidity>2</turbidity>
+	</skylight>
+
+
+	<medium>
+		<name>highior</name>
+
+		<precedence>10</precedence>
+		<basic>
+			<ior>1000</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<uniform>
+					<value>0</value>
+				</uniform>
+			</absorption_coefficient_spectrum>
+		</basic>
+	</medium>
+	<material>
+		<name>refl</name>
+
+		<specular>
+			<transparent>false</transparent>
+			<internal_medium_name>highior</internal_medium_name>
+		</specular>
+	</material>
+
+
+
+	<medium>
+		<name>glass</name>
+
+		<precedence>10</precedence>
+		<basic>
+			<ior>1.5</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<uniform>
+					<value>0</value>
+				</uniform>
+			</absorption_coefficient_spectrum>
+		</basic>
+	</medium>
+
+	<material>
+		<name>glass</name>
+
+		<specular>
+			<transparent>true</transparent>
+			<internal_medium_name>glass</internal_medium_name>
+		</specular>
+	</material>
+
+	<!-- Ground Material -->
+	<material>
+		<name>checker</name>
+
+		<diffuse>
+			<colour>1 1 1</colour>
+
+			<!--albedo_texture>
+				<uv_set>albedo</uv_set>
+				<path>checker.jpg</path>
+				<exponent>2.3</exponent>
+			</albedo_texture-->
+		</diffuse>
+	</material>
+
+	<!-- Define a Mesh -->
+	<mesh>
+		<name>mesh1</name>
+
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<expose_uv_set>
+				<index>0</index>
+				<name>bump</name>
+			</expose_uv_set>
+
+			<vertex pos="-100 -100 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-100 100 0" normal="0 0 1" uv0="0 100" />
+			<vertex pos="100 100 0" normal="0 0 1" uv0="100 100" />
+			<vertex pos="100 -100 0" normal="0 0 1" uv0="100 0" />
+
+			<triangle_set>
+				<material_name>glass</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>mesh1</mesh_name>
+	</model>
+
+
+
+
+
+
+
+	<material>
+		<name>frosty_glass</name>
+
+		<glossy_transparent>
+			<internal_medium_name>glass</internal_medium_name>
+			<exponent>1000</exponent>
+		</glossy_transparent>
+	</material>
+	
+	
+
+
+
+	<sphere>
+		<center>-1.7 0.0 0.51</center>
+		<radius>0.5</radius>
+
+		<material_name>glass</material_name>
+	</sphere>
+
+	<sphere>
+		<center>-0.6 0.0 0.51</center>
+		<radius>0.5</radius>
+
+		<material_name>frosty_glass</material_name>
+	</sphere>
+	<sphere>
+		<center>0.5 0.0 0.51</center>
+		<radius>0.5</radius>
+
+		<material_name>refl</material_name>
+	</sphere>
+
+</scene>

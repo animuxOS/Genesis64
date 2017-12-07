@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+	<camera>
+		<pos>0 -5 2</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 -0.2</forwards>
+
+		<aperture_radius>0.001</aperture_radius>
+		<focus_distance>3.0</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.04</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+	
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.0</pre_scale>
+			<post_scale>1.0</post_scale>
+		</reinhard>
+	</tonemapping>
+	
+	<background>
+		<spectrum>  
+			<blackbody>
+				<temperature>5000</temperature>
+				<gain>0.00001</gain>
+			</blackbody>
+		</spectrum>
+	</background>
+	
+	<rectanglelight>
+		<pos>0 0 5</pos>
+		<width>0.1</width>
+		<height>0.1</height>
+		
+		<spectrum>
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>1</gain>
+			</blackbody>
+		</spectrum>		
+	</rectanglelight>
+	
+	
+	
+	<!-- Define the mesh once -->
+	<mesh>
+		<name>prism</name>
+		<scale>10</scale>
+		<normal_smoothing>false</normal_smoothing>
+		<external>
+			<path>..\ply\happy_recon\happy_vrip_res4.ply</path>
+		</external>
+	</mesh>
+	
+	<material>
+		<name>default</name>
+		<diffuse>
+			<colour>1 1 1</colour>
+		</diffuse>
+	</material>
+
+	<!-- Define an instance -->
+	<model>
+		<rotation>
+			<matrix>
+				0.970275 0.239186 0.036835 -0.100456 0.536542 -0.837873 -0.220172 0.809267 0.544621 
+			</matrix>
+		</rotation>
+		<pos>-2 0 0</pos>
+		<scale>0.7</scale>
+		
+		<mesh_name>prism</mesh_name>
+	</model>
+	
+	<!-- override the material definition, with one with another colour  -->
+	<material>
+		<name>default</name>
+		<diffuse>
+			<colour>1 0 0</colour>
+		</diffuse>
+	</material>
+	
+	<!-- Define an instance -->
+	<model>
+		<rotation>
+			<matrix>
+				1 0 0 0 0 -1 0 1 0
+			</matrix>
+		</rotation>
+		<pos>2 0 0</pos>
+		<scale>1</scale>
+
+		<mesh_name>prism</mesh_name>
+	</model>
+	
+	<!-- override the material definition, with one with another colour  -->
+	<material>
+		<name>default</name>
+		<diffuse>
+			<colour>0 1 0</colour>
+		</diffuse>
+	</material>
+	
+	<!-- Define an instance -->
+  <!--1 0 0 0 0 -1 0 1 0-->
+  <model>
+    <rotation>
+      <matrix>
+        1 0 0 0 0 -1 0 2 0
+      </matrix>
+		</rotation>
+		<pos>1 2 -1</pos>
+		<scale>1</scale>
+		
+		<mesh_name>prism</mesh_name>
+	</model>
+	
+	<!-- override the material definition, with one with another colour  -->
+	<material>
+		<name>default</name>
+		<diffuse>
+			<colour>0 0 1</colour>
+		</diffuse>
+	</material>
+	
+	
+	<!-- Define an instance -->
+	<model>
+		<rotation>
+			<matrix>
+				1 0 0 0 1 0 0 0 1
+			</matrix>
+		</rotation>
+		<pos>-2 2 1</pos>
+		<scale>1</scale>
+		
+		<mesh_name>prism</mesh_name>
+	</model>
+	
+	
+
+	<!--Ground Plane-->
+	<material>
+		<name>white</name>
+		
+		<diffuse>
+			<colour>0.6 0.6 0.6</colour>
+		</diffuse>
+	</material>
+	
+	<mesh>
+		<name>groundmesh</name>
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<vertex pos="-30 -30 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-30 30 0" normal="0 0 1" uv0="0 10000" />
+			<vertex pos="30 30 0" normal="0 0 1" uv0="10000 10000" />
+			<vertex pos="30 -30 0" normal="0 0 1" uv0="10000 0" />
+
+			<triangle_set>
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>groundmesh</mesh_name>
+	</model>
+
+</scene>

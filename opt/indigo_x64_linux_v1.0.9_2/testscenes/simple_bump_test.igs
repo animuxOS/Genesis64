@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+	<renderer_settings>
+	</renderer_settings>
+
+	<camera>
+		<pos>0 -5.2 2.5</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 -0.3</forwards>
+		
+		<focus_distance>2.000000</focus_distance>
+		<aspect_ratio>1.333</aspect_ratio>
+		<aperture_radius>0.003</aperture_radius>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.04</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+		<autofocus/>
+	</camera>
+	
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.0</pre_scale>
+			<post_scale>1.0</post_scale>
+			<burn>20</burn>
+		</reinhard>
+	</tonemapping>
+	
+	<rectanglelight>
+		<pos>5 0 6</pos>
+		<width>1</width>
+		<height>1</height>
+		<spectrum>  
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.00001</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+
+
+
+	<material>
+		<name>m</name>
+		<diffuse>
+			<colour>1 1 1</colour>
+			
+			<bump_map>
+				<uv_set>bump</uv_set>
+				<path>spherebump.jpg</path>
+				<b>0.02</b>
+				<exponent>1.0</exponent>
+			</bump_map>
+		</diffuse>
+	</material>
+
+
+	
+	<mesh>
+		<name>block</name>
+	
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+			<expose_uv_set>
+				<index>1</index>
+				<name>bump</name>
+			</expose_uv_set>
+				
+			<vertex pos="-1 -1 0" normal="0 0 1" uv0="0 0" uv1="0 0" />
+			<vertex pos="-1 1 0" normal="0 0 1" uv0="0 3" uv1="0 1" />
+			<vertex pos="1 1 0" normal="0 0 1" uv0="3 3" uv1="1 1" />
+			<vertex pos="1 -1 0" normal="0 0 1" uv0="3 0" uv1="1 0" />
+				
+			<triangle_set>						
+				<material_name>m</material_name>
+				<tri>0 2 1</tri>
+				<tri>0 3 2</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<model>
+		<pos>0 0 0.6</pos>
+		<scale>1.5</scale>
+		<mesh_name>block</mesh_name>
+	</model>
+
+</scene>

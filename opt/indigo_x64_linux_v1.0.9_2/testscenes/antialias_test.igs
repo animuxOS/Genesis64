@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+	
+	<!--background>
+		<spectrum>  
+			<blackbody>
+				<temperature>5000</temperature>
+				<gain>0.0001</gain>
+			</blackbody>
+		</spectrum>
+	</background-->
+
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.0</pre_scale>
+			<post_scale>1.0</post_scale>
+			<burn>0.1</burn>
+		</reinhard>
+	</tonemapping>
+
+	<camera>
+		<pos>0 -5.2 2.5</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 -0.3</forwards>
+		
+		<focus_distance>2.000000</focus_distance>
+		<aspect_ratio>1</aspect_ratio>
+		<aperture_radius>0.0001</aperture_radius>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.04</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+
+	<!--rectanglelight>
+		<pos>0 -8 7.5</pos>
+		<width>3</width>
+		<height>3</height>
+		<spectrum>  
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.0004</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight-->
+
+
+	<!-- Ground Material -->
+
+	<material>
+		<name>white</name>
+		
+		<diffuse>
+			<colour>1 1 1</colour>
+		</diffuse>    
+	</material>
+	
+	<material>
+		<name>checker</name>
+		
+		<diffuse>
+			<colour>1 1 1</colour>
+			
+			<albedo_texture>
+				<uv_set>albedo</uv_set>
+				<path>checker.jpg</path>
+				<exponent>2.3</exponent>
+			</albedo_texture>	
+		</diffuse>    
+	</material>
+
+	<medium>
+		<name>high_ior_dielectric</name>
+		
+		<basic>
+			<ior>100.0</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<uniform>
+					<value>0</value>
+				</uniform>
+			</absorption_coefficient_spectrum>
+		</basic>
+	</medium>
+	
+	<!-- MATERIAL sphere -->
+	<material>
+		<name>shiny</name>
+		
+		<specular>
+			<transparent>false</transparent>
+			<internal_medium_name>high_ior_dielectric</internal_medium_name>
+		</specular>
+	</material>
+	
+	<sphere>
+		<center>1.2 0 1.5</center>
+		<radius>1</radius>
+		<material_name>shiny</material_name>
+	</sphere>
+
+	
+		
+	<!-- Define a Mesh -->
+	<mesh>
+		<name>mesh1</name>
+	
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+				
+			<expose_uv_set>
+				<index>0</index>
+				<name>bump</name>
+			</expose_uv_set>
+			
+			<vertex pos="-10 -10 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-10 10 0" normal="0 0 1" uv0="0 10" />
+			<vertex pos="10 10 0" normal="0 0 1" uv0="10 10" />
+			<vertex pos="10 -10 0" normal="0 0 1" uv0="10 0" />
+				
+			<triangle_set>						
+				<material_name>checker</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+			
+			<vertex pos="-10 3 0" normal="0 -1 0" uv0="0 0" />
+			<vertex pos="-10 3 200" normal="0 -1 0" uv0="0 100" />
+			<vertex pos="10 3 200" normal="0 -1 0" uv0="10 100" />
+			<vertex pos="10 3 0" normal="0 -1 0" uv0="10 0" />
+				
+			<triangle_set>						
+				<material_name>checker</material_name>
+				<tri>4 5 6</tri>
+				<tri>4 6 7</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>mesh1</mesh_name>
+	</model>
+	
+	
+	<mesh>
+		<name>lightmesh1</name>
+	
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+				
+			<vertex pos="0.1 -4 0" normal="0 0 1" />
+			<vertex pos="0.1 4 0" normal="0 0 1"  />
+			<vertex pos="-0.1 4 0" normal="0 0 1" />
+			<vertex pos="-0.1 -4 0" normal="0 0 1"  />
+				
+			<triangle_set>						
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<meshlight>
+		<pos>-0.5 0 0.5</pos>
+		<scale>1</scale>
+		<mesh_name>lightmesh1</mesh_name>
+		
+		<spectrum>
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.0001</gain>
+			</blackbody>
+		</spectrum>
+	</meshlight>
+	
+	<mesh>
+		<name>lightmesh2</name>
+	
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+				
+			<vertex pos="0.01 -4 0" normal="0 0 1" />
+			<vertex pos="0.01 4 0" normal="0 0 1"  />
+			<vertex pos="-0.01 4 0" normal="0 0 1" />
+			<vertex pos="-0.01 -4 0" normal="0 0 1"  />
+				
+			<triangle_set>						
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<meshlight>
+		<pos>-0.3 0 0.5</pos>
+		<mesh_name>lightmesh2</mesh_name>
+		<scale>1</scale>
+		
+		<spectrum>
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.001</gain>
+			</blackbody>
+		</spectrum>
+	</meshlight>
+	
+	<meshlight>
+		<pos>-0.1 0 0.5</pos>
+		<mesh_name>lightmesh2</mesh_name>
+		<scale>1</scale>
+		<spectrum>
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.001</gain>
+			</blackbody>
+		</spectrum>
+	</meshlight>
+	
+
+</scene>

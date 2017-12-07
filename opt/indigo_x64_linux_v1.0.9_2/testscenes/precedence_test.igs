@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+	<camera>
+		<pos>0 -2 1</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 0.02</forwards>
+
+		<aperture_radius>0.0001</aperture_radius>
+		<focus_distance>3.0</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.02</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.0</pre_scale>
+			<post_scale>1.0</post_scale>
+		</reinhard>
+	</tonemapping>
+
+	<!--Ground Plane-->
+	<material>
+		<name>white</name>
+		<diffuse>
+			<colour>0.7 0.7 0.7</colour>
+		</diffuse>
+	</material>
+	<mesh>
+		<name>ground_plane_mesh</name>
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<vertex pos="-10 -10 0" normal="0 0 1" />
+			<vertex pos="-10 10 0" normal="0 0 1" />
+			<vertex pos="10 10 0" normal="0 0 1" />
+			<vertex pos="10 -10 0" normal="0 0 1" />
+
+			<triangle_set>
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>ground_plane_mesh</mesh_name>
+	</model>
+
+	<!--material>
+		<name>green</name>
+		<diffuse>
+			<colour>0.2 0.9 0.2</colour>
+		</diffuse>
+	</material>
+	<plane>
+		<normal>1 0 0</normal>
+		<dist>-1</dist>
+
+		<material_name>green</material_name>
+	</plane>
+
+	<material>
+		<name>red</name>
+		<diffuse>
+			<colour>0.9 0.2 0.2</colour>
+		</diffuse>
+	</material>
+
+	<plane>
+		<normal>-1 0 0</normal>
+		<dist>-1</dist>
+
+		<material_name>red</material_name>
+	</plane>
+
+
+	<plane>
+		<normal>0 0 -1</normal>
+		<dist>-2</dist>
+
+		<material_name>white</material_name>
+	</plane>
+
+
+	<plane>
+		<normal>0 -1 0</normal>
+		<dist>-1</dist>
+
+		<material_name>white</material_name>
+	</plane-->
+
+	<rectanglelight>
+		<pos>0.0 0 1.995</pos>
+		<width>0.3</width>
+		<height>0.3</height>
+
+		<spectrum>
+			<blackbody>
+				<temperature>6400</temperature>
+				<gain>0.001</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+
+
+	<medium>
+		<name>glass</name>
+		<precedence>10</precedence>
+		<basic>
+			<ior>1.0</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<uniform>
+					<value>0</value>
+				</uniform>
+			</absorption_coefficient_spectrum>
+		</basic>
+	</medium>
+	
+	<medium>
+		<name>blue</name>
+		<precedence>20</precedence>
+		<basic>
+			<ior>1.5</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<rgb>
+					<rgb>10 10 0</rgb>
+					<gamma>1</gamma>
+				</rgb>
+			</absorption_coefficient_spectrum>
+		</basic>
+	</medium>
+
+	<medium>
+		<name>red</name>
+		<precedence>5</precedence>
+		<basic>
+			<ior>1.5</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<rgb>
+					<rgb>0 10 10</rgb>
+					<gamma>1</gamma>
+				</rgb>
+			</absorption_coefficient_spectrum>
+		</basic>
+	</medium>
+
+	<material>
+		<name>glass</name>
+
+		<specular>
+			<transparent>true</transparent>
+			<internal_medium_name>glass</internal_medium_name>
+		</specular>
+	</material>
+	
+	<material>
+		<name>blue_mat</name>
+
+		<specular>
+			<transparent>true</transparent>
+			<internal_medium_name>blue</internal_medium_name>
+		</specular>
+	</material>
+	<material>
+		<name>red_mat</name>
+
+		<specular>
+			<transparent>true</transparent>
+			<internal_medium_name>red</internal_medium_name>
+		</specular>
+	</material>
+
+	<sphere>
+		<center>-0.9 0.0 0.6</center>
+		<radius>0.5</radius>
+
+		<material_name>red_mat</material_name>
+	</sphere>
+	
+	<sphere>
+		<center>-0.3 0.0 0.6</center>
+		<radius>0.5</radius>
+
+		<material_name>glass</material_name>
+	</sphere>
+	
+	<sphere>
+		<center>0.3 0.0 0.6</center>
+		<radius>0.5</radius>
+
+		<material_name>glass</material_name>
+	</sphere>
+	
+	<sphere>
+		<center>0.9 0.0 0.6</center>
+		<radius>0.5</radius>
+
+		<material_name>blue_mat</material_name>
+	</sphere>
+</scene>
+
+

@@ -1,0 +1,1 @@
+Cached kd-trees are stored here.  Feel free to delete files from this directory.

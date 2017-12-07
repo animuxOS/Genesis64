@@ -1,0 +1,410 @@
+1.0.9
+* Fixed zero diffuse with phong when using albedo texture + specular reflectivity spectrum.
+* Compiled with VS2008
+
+1.0.8
+* Improved energy conservation for Phong material
+* Increased max albedo for phong and diffuse from 0.9 to 1.0
+* added Oren Nayar material
+* staticly linking with OpenEXR
+* OpenEXR support enabled for windows 64-bit build
+* added specular_reflectivity_spectrum option for the Phong material.
+
+1.0.7
+* fixed having to disable bidir for foreground_alpha
+* fixed bug with render region complaining about image size
+* Using inifile.xml instead of inifile.txt
+* made it so that you can specifiy the blur and ring parameters of the MN splat filter.
+* different sampling technique for non-circular apertures.
+* made downsize filter and splat filter both be specified in similar ways.
+* fixed aperture diffraction as a post-process
+
+1.0.6
+* made it so that -t overrides all other means of setting num threads (including auto choose num threads)
+* fixed bug with render regions having black borders in some cases
+* added render_foreground_alpha stuff
+
+1.0.5
+* added check for degenerate triangles when loading meshes
+* fixed deadlocks on linux
+* reduced smallest autofocus dist to 0.0001 m.
+* Made it so that Indigo can be executed from any directory without failing to find inifile.txt etc..
+* adding region rendering
+* updating settings print-out a little
+* made splat_filter and downsize_filter accessible from inifile and renderer_settings
+* added --pack for scene packing
+
+1.0.4
+* added some more checks for XML parsing.
+* changed texturing code a bit (faster)
+* added aperture_diffraction toggle in infile.
+* added aperture_shape camera XML element
+* added obstacle_map camera XML element
+* fixed error handling when parsing camera response functions.
+
+1.0.3
+* added context on invalid boolean xml parsing error message.
+* fixed -h switch for network slave
+
+1.0.2
+* Added initial IES light support
+* added working master mode (-n wm) (Renders as well as acting as network master)
+* added automatic master discovery on LAN
+* made slaves loop after disconnect to search for new master
+* made network master use less memory.
+* added network equality check for checksum computed over scene file, to avoid inconsistent scene files
+* Can specify port to listen on for master with -p switch.
+* changed argument parsing code.
+* new command line usage printing
+* updated some test scenes
+
+1.0.1
+* added camera tone mapping
+* added regular_tabulated spectrum type.
+
+0.9.10
+* released as 0.9 stable
+
+0.9 test 9
+* fixed EXR environment maps being mirrored horizontally.
+* changed external IOR for phong materials back to one because it was causing some crazy artifacts.
+* misc other changes for linux build.
+
+0.9 test 8
+* added some camera parameter checks with exception throwing if incorrect.
+* added correct external IOR for phong.
+* New translucent / glossy transparent code
+* Changed some sampling stuff, especially for phong materials.
+* added metadata writing to pngs.
+* added metadata reading from pngs with --dumpmetadata switch.
+* added optional watermarking with indigo logo - added 'watermark' option in inifile and renderer_settings xml tag.
+* fixed path weighting bug introduced in test 7
+
+0.9 test 7
+* fixed bug with containing media for lights.
+* raise error on re-used mesh name
+* changed specular BSDF *again*
+* fixed diffuse transmitter to avoid noise.
+* changed reinhard tonemapping for better contrast on LDR images
+* speedups / refactor for bidir code.
+
+0.9 test 6
+* added 'auto_choose_num_threads' option to inifile and RendererSettings.
+
+0.9 test 5
+* faster tracing through scenes with many objects
+* added Windows x64 build.
+* OpenEXR env maps / output disabled in x64 build
+
+0.9 test 4
+* sped up / messed with kd-tree building
+* faster tracing
+* added support for missing texture coordinate index in .obj files
+* re-added check for no light sources in scene
+
+0.9 test 3
+* improved XML handling so comments inside bottom level elements are ignored.
+* made transform matrices be arbitrary
+* added halt_samples_per_pixel in inifile
+* added halt_samples_per_pixel element in renderer_settings in scene XML,
+* added -haltspp X command line switch
+* fixed albedo_spectrum for diffuse_transmitter
+* misc. performance enhancements.
+
+0.9 test 2
+* added --ptest option (performance test)
+* fixed crash at tree build time on degenerate triangles
+* updated diffuse_transmitter material to use 'albedo_spectrum' instead of 'colour' like the diffuse material.
+* sped up splatting a little
+* misc. performance increases.
+
+0.9 test 1
+* added indigo_console build
+* moved OpenEXR to dlls
+* made image saves less likely to get corrupted (saves to temp image then moves to final path)
+* added shutter_open_duration (aka shutter speed)
+* made diffuse material use 'albedo_spectrum' instead of 'colour'
+* made phong material use 'diffuse_albedo_spectrum' instead of 'diffuse'
+* rgb_spectrum now requires the 'gamma' element.  Use 2.2 as default.
+* added checks for SSE and SSE2
+* fixed bug with light sampling
+* fixed material binding to spheres
+* added atmosphere medium type
+* added extra_atmospheric parameter to sky_light
+* added ray_origin_nudge_distance parameter to inifile
+* messed around with refraction code a little
+* fixed .bmps loading upside down
+* added exit portals
+* added textured emitters
+
+0.8 test 4 / 0.8 stable
+* fixed small error in colour space conversion stuff
+* sped up the RGB->spectrum code
+* updated manual
+
+0.8 test 3
+* added blended shading normal for blend material (fixes bump for blend mat)
+* fixed null material
+* fixed bump mapping with bidir, messed around with shading stuff
+* changed default burn to 10
+* added diffuse transmitter material
+
+0.8 test 2
+* fix for crash/error with phong mat
+
+0.8 test 1
+* Added hybrid mode
+* added hybrid setting in inifile.
+* Added BIH tree acceleration type.
+* Added bih_tri_threshold to inifile.
+* using ijg jpeg lib instead of intel jpeg lib.
+* added /fixed:no to link input
+* cleaned up log format a little bit
+* added camera glare
+* improved triangle sampling
+* fix for normal calc in light sampling pdf calcs
+* added energy loss compensation for phong BSDF
+* Added RQMC stuff 
+
+v0.7 test 7 (0.7 final)
+* fixed bidir + blend material with null material not working
+* *actually* added save_igi to renderer_settings ;P
+
+v0.7 test 6
+* re-enabled bidir
+* made bidir work with participating media
+* fixed sampling pdf bug for multiple lights
+* fixed not binding texture uv coords for glossy_transparent mat.
+* changed GUI to use wxWidgets
+* Made it so that either absolute paths or relative paths can be used in most places
+(models, textures etc..)
+* the camera (and lights with bidir) can now be inside non-air media.
+* added save_igi, super_sample_factor, display_period, polarisation to renderer_settings
+* indigo scene official filename extension is now 'igs'
+* can't use infinite planes with bidir now
+* changed default super_sample_factor to 3
+
+
+v0.7 test 5
+* Added .igi export
+* added resume from .igi feature (-r)
+
+
+v0.7 test 4
+* Added/finished decent OBJ support.
+* fixed kd-tree caching
+* messed round with mlt stuff, network rendering.
+
+
+v0.7 test 3
+* added dermis and epidermis media types.
+* added basic medium type
+* better spectral sampling of SSS
+* fixed constant on Planck's formula
+* removed sky gain
+* Added scene pathname to window title
+* Messed round with sky/sun model a little
+* printing out line + column number on most scene file parse errors
+* took out PANIC msg.
+* added optional efficiacy_scale for rectangle and mesh lights.
+
+v0.7 test 2
+* reverse gamma correcting diffuse and phong diffuse RGB colours
+* improved phong sampling
+* increased max albedo for diffuse and phong substrate to 0.9
+* diffuse colour for diffuse and phong materials now not used when an albedo texture is used.
+* added henyey_greenstein phase function
+* fixed crash with SSS and no area lights.
+* improved SSS russian roulette
+* added super_sample_factor option to inifile.
+* added display_period option to inifile.
+* fixed energy loss issue in SSS media, causing darkening in highly scattering media.
+
+* fixed clamping of Henyey Greenstein g to [-1, 1]
+* fixed Henyey Greenstein sampling
+
+v0.7 test 1
+* improved disc sampling
+* added in polarisation simulation
+* specular tag of phong removed; use ior instead.
+* added bloom tag to camera tag.
+* added in precedence for transparent specular materials
+* some small speedups for kdtree traversal
+* added in blend material
+* added diffuse_transmitter material
+* added autofocus option for camera
+* (re)added ply model loading
+* fucked around with mesh loading code
+* meshes should use less memory now
+* raises fatal error on unexpected element when parsing scene xml
+* throw error on texture missing, instead of issuing warning
+* changed how burn is used, the burn value is now based on the average image luminance instead of the max over all the pixels.
+* Added in new 'medium' object and changed how specular materials work.
+* changed absorption to absorption_coefficient_spectrum
+* added glossy_transparent material
+* added uniform spectrum type
+* Added internal mesh instancing
+* raises error on non-orthogonal rotation matrix
+* added SSS and participating media in general.
+* added normal_smoothing boolean element to mesh element.
+* removed enable_normal_smoothing element from model element
+* added fatal error if no lights in scene
+* possibly fixed specular bump mapping bug (was not binding uv coords)
+* removed gain from texture elements, using a, b, c polynomial coefficients instead
+* fixed bug where reverse gamma correction was applied multiple times to same texture.
+
+* removed localinifile.txt
+* improved filtering
+* fixed bug where it would die on more than 1 uvset.
+* fixed bump mapping
+* fixed no normal smoothing with bump map issue.
+
+v0.6 (final)
+* added license.txt to distribution.
+* added this changelog.txt file to distribution.
+
+v0.6 test 6
+* added -halt command line parameter to set the halting time (in seconds)
+* messed around with russian roulette
+* fixed some bugs with bidir code.
+* fixed scale for non-mlt mode.
+
+v0.6 test 5
+* added optional 'burn' parameter to Reinhard tone mapping
+* changed default burn to 0.8
+* fixed precision issue that was causing some fireflies in path tracing mode
+
+v0.6 test 4
+* fixed meshlight bug causing noise
+
+v0.6 test 3
+* don't alloc and free buffer on tonemapping
+* fixed broken stuff from 0.6 test2
+* path tracing mode resurrected and is now progressive - can be run forever.
+* sky_gain disabled for now
+* other stuff probably
+* fixed halt_time not working
+
+v0.6 test 2
+* changed some stuff so that bump mapping won't hang warmup on dodgy geometry.
+* fixed bump mapping for phong that was broken for v0.6 test 1
+* Added PNG texture loading
+* rewrote bidir stuff
+* speedup for objecttree
+* improved/fixed bidir and sky interaction
+* kd-tree cache on disk (think this is new in 0.6 test2???)
+* speedups for spectral BSDF and exitant radiance calculations
+
+
+v0.6 test 1
+* speedup with phong pow()s
+* added bump mapping for specular mat
+* Added multithreading
+* Added -t switch to specify number of threads.
+* nice error message on out of mem while building kdtree
+* using doubles for pdf and radiance stuff
+* fixed bug with specular pdf vector order
+* added colour correction
+* background element now takes a single spectrum child element
+* can now have only one of background, skylight, or env_map
+* made window size equal to render size
+* changed default sky gain to 0.002
+* changed bidir RR live prob
+* decreased num warmup mutations by half
+
+v0.5test7 (released as v0.5)
+
+* added -o switch for specifying output pathname for png image
+* hopefully fixed black bug
+* don't save image if size = 0
+* improved wavelength sampling a little
+* removed redundant BSDF calcs
+* added fresnel_scale element to phong mat
+* changed constant term on phong diffuse
+* made bi-dir work with env-maps (still kinda sux tho)
+* added max_num_consec_rejections to stuff that can be overriden in xml scene file.
+* made network master print out time elapsed
+
+
+v0.5test6
+
+* complex IOR metals
+* improved luminance estimate for sky spectra
+* simplified total internal reflection calcs
+* new reflection formula for dielectrics
+
+v0.5test5
+* fixed INF/NAN bug due to INF pdf
+* fixed whitebalance and colour stuff for network renders and non-MLT
+
+v0.5test4
+
+* changed way XYZ, sRGB etc.. conversion works yet again
+* soft coded max_num_consec_rejections
+
+v0.5test3
+
+* can now override following rendersettings in xml (in addition to old ones): bidirectional, frame_upload_period, halt_time, image_save_period, save_tonemapped_exr, save_untonemapped_exr
+* white_balance attribute for camera, better XYZ->sRGB stuff
+
+v0.5test2
+
+* fixed stupid max_depth bug
+* fixed attenuation through transparent materials with bidir.
+* minor changes to colour correction.
+* new emission spectrums: RGB and blackbody
+
+v0.5test1
+
+* Added support for HDR env maps, both spherical floating point raw and openexr lat/long
+* made 3ds materials use exponent of 1.5 for reverse gamma correction. (was off)
+* REMOVED: added fatal error if no lights in scene
+* only bsdf scatter on specular vertex for backwards path tracer.
+* more complete thin lens camera model
+* changed size of sun
+* changed renhard tone mapping to adjust to brightness properly
+
+v0.4
+
+* updated tinyxml
+* inf check for image lum av.
+* hacked up sky radiance so bottom hemisphere emits light
+* fixed cam AOV calcs
+* fixed path tracer black square bug
+* Added double sided surfaces
+* fixed sky colour
+* fixed 1 pixel black border on bottom right of renders
+* made RGB->spectrum conversion nicer
+* added configurable reverse gamma correction on texture loading.
+* new xml scene format stuff
+* bump mapping (may not be totally corrent yet)
+* OpenEXR output of tonemapped and untonemapped images
+
+
+v0.3
+
+* fixed bug where network rendering wasn't loading scene and therefore render settings, tonemapping etc..
+* added slave ip address to 'receiving frame' message for net master.
+* changed way tone mapping is specified in scene file
+* made main window a little more responsive
+* renamed 'focal_length' camera xml element to 'focus_distance'
+* made boolean settings in inifile.txt and scene.xml take true/false instead of 1/0
+* capped number of average luminance samples
+
+
+v0.3 beta1, beta2:
+
+* Added dispersive refraction based on Cauchy's equation
+* Added renderer_settings element that can override inifile settings.
+* Added absorption in transparent materials based roughly on Beer's law.
+* Added mesh emitters
+* removed modelpath and texturepath.  models are now loaded relative to deepest dir containing scenefilepath. 
+(thx Ewout for suggesting this)
+* If no material is specified in .3ds file, white diffuse material called 'dummy' is used.
+* made un-dashed param specify the scene file path.
+
+v0.2:
+
+* added per-mesh element to turn off normal smoothing
+* increased pixel filter radius a little
+* added logging switch to inifile.

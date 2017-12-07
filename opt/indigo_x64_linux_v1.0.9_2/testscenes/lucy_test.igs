@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+	<skylight>
+		<sundir>0 0.3 1</sundir>
+		<turbidity>2</turbidity>
+	</skylight>
+
+	<!--camera>
+		<pos>0.5 2.5 0.8</pos>
+		<up>0 0 1</up>
+		<forwards>0 -1 0</forwards>
+
+		<aperture_radius>0.001</aperture_radius>
+		<focus_distance>10000.0</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.035</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera-->
+
+	<camera>
+		<pos>0.5 1.5 0.8</pos>
+		<up>0 0 1</up>
+		<forwards>0 -1 0.4</forwards>
+
+		<aperture_radius>0.01</aperture_radius>
+		<focus_distance>1.5</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.035</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+	
+	<tonemapping>
+		<reinhard>
+			<pre_scale>2.0</pre_scale>
+			<post_scale>1.0</post_scale>
+		</reinhard>
+	</tonemapping>
+	
+	<!--mesh>
+		<name>lucy</name>
+		<normal_smoothing>false</normal_smoothing>
+		<external>
+			<path>c:\programming\models\ply\lucy.ply</path>
+		</external>
+	</mesh-->
+	<mesh>
+		<name>lucy</name>
+		<normal_smoothing>false</normal_smoothing>
+		<external>
+			<path>C:\programming\models\bunny\reconstruction\bun_zipper_res4.ply</path>
+		</external>
+	</mesh>
+	
+	<!-- Override the prism material-->
+	<material>
+		<name>default</name>
+		
+		<phong>
+			<diffuse>1 1 1</diffuse>
+			<ior>1.5</ior>
+			<exponent>10000</exponent>
+		</phong>
+		<diffuse>
+			<albedo_spectrum>
+				<uniform>
+					<value>1</value>
+				</uniform>
+			</albedo_spectrum>		  
+		</diffuse>
+	</material>
+	
+
+	<model>
+		<rotation>
+			<matrix>
+				1 0 0 0 1 0 0 0 1
+			</matrix>
+		</rotation>
+		<pos>0 0 0.603</pos>
+		<scale>0.001</scale>
+		
+		<mesh_name>lucy</mesh_name>
+	</model>
+	
+	
+	<!--Ground Plane-->
+	<material>
+		<name>white</name>
+		
+		<diffuse>
+			<colour>0.1 0.3 0.1</colour>
+		</diffuse>
+	</material>
+	
+	<mesh>
+		<name>groundmesh</name>
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<vertex pos="-30 -30 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-30 30 0" normal="0 0 1" uv0="0 1000" />
+			<vertex pos="30 30 0" normal="0 0 1" uv0="1000 1000" />
+			<vertex pos="30 -30 0" normal="0 0 1" uv0="1000 0" />
+
+			<triangle_set>
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>groundmesh</mesh_name>
+	</model>
+
+</scene>

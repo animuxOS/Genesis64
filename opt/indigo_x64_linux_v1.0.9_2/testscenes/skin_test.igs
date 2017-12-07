@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+  <camera>
+    <pos>0 -0.3 0.05</pos>
+    <up>0 0 1</up>
+    <forwards>0 1 0</forwards>
+
+    <aperture_radius>0.001000</aperture_radius>
+    <focus_distance>2.000000</focus_distance>
+    <aspect_ratio>1.33333</aspect_ratio>
+    <sensor_width>0.035000</sensor_width>
+    <lens_sensor_dist>0.06</lens_sensor_dist>
+    <white_balance>E</white_balance>
+
+    <autofocus/>
+  </camera>
+
+  <renderer_settings>
+
+    <!--ray_origin_nudge_distance>0.00001</ray_origin_nudge_distance-->
+  </renderer_settings>
+
+  <tonemapping>
+    <reinhard>
+      <pre_scale>1.000000</pre_scale>
+      <post_scale>1.000000</post_scale>
+      <burn>100</burn>
+    </reinhard>
+  </tonemapping>
+  
+	<!--plane>
+		<normal>0 0 1</normal>
+		<dist>0</dist>
+
+		<material_name>floor_plane</material_name>
+	</plane-->
+
+	<rectanglelight>
+		<pos>0.0 0.5 2</pos>
+		<width>1</width>
+		<height>0.1</height>
+
+		<spectrum>
+			<blackbody>
+				<temperature>6400</temperature>
+				<gain>0.001</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+
+	<rectanglelight>
+		<pos>0.0 3 2</pos>
+		<width>1</width>
+		<height>0.1</height>
+
+		<spectrum>
+			<blackbody>
+				<temperature>6400</temperature>
+				<gain>0.001</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+	
+	
+	<!-- Define the needed media -->
+	
+	
+	<medium>
+		<name>epidermis</name>
+		<precedence>20</precedence>
+	
+		<epidermis>
+			<melanin_fraction>0.02</melanin_fraction>
+			<melanin_type_blend>0.25</melanin_type_blend>
+		</epidermis>
+	</medium>
+	
+	<medium>
+		<name>dermis</name>
+		<precedence>30</precedence>
+	
+		<dermis>
+			<hemoglobin_fraction>0.05</hemoglobin_fraction>
+		</dermis>
+	</medium>
+
+  <medium>
+    <name>medium1</name>
+
+    <precedence>20</precedence>
+
+    <basic>
+      <ior>1.0</ior>
+      <cauchy_b_coeff>0.0</cauchy_b_coeff>
+
+
+      <absorption_coefficient_spectrum>
+        <uniform>
+          <value>0</value>
+        </uniform>
+      </absorption_coefficient_spectrum>
+
+      <subsurface_scattering>
+        <scattering_coefficient_spectrum>
+          <!--rgb>
+            <rgb>101 105 110</rgb>
+            <gamma>1</gamma>
+          </rgb-->
+			<uniform>
+				<value>100</value>			 
+			</uniform>
+        </scattering_coefficient_spectrum>
+
+        <phase_function>
+          <henyey_greenstein>
+            <g_spectrum>
+              <rgb>
+                <rgb>0.7 0.6 0.8</rgb>
+                <gamma>1</gamma>
+              </rgb>
+            </g_spectrum>
+          </henyey_greenstein>
+        </phase_function>
+      </subsurface_scattering>
+    </basic>
+  </medium>
+  
+  
+
+  <material>
+		<name>outerboundary</name>
+
+    <specular>
+         <transparent>true</transparent> 
+         <internal_medium_name>medium1</internal_medium_name> 
+    </specular>
+    <!--diffuse>
+
+      <colour>1 0 0</colour>
+    </diffuse-->
+	</material>
+	
+	<material>
+		<name>innerboundary</name>
+
+      <specular>
+         <transparent>true</transparent> 
+         <internal_medium_name>dermis</internal_medium_name> 
+      </specular>
+	</material>
+	
+	
+	<sphere>
+		<center>0 0.2 0.05</center>
+		<radius>0.05</radius>
+		
+		<material_name>outerboundary</material_name>
+	</sphere>
+	
+	<!--sphere>
+		<center>0 0.2 0.05</center>
+		<radius>0.04965</radius>
+		
+		<material_name>innerboundary</material_name>
+	</sphere-->
+</scene>
+
+
+
+
+
+
+
+
+
+

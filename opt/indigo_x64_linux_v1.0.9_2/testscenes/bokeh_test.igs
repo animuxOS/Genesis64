@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+  <camera>
+    <pos>0 -0.2 0</pos>
+    <up>0 0 1</up>
+    <forwards>0 1 0</forwards>
+
+    <aperture_radius>0.01</aperture_radius>
+    <focus_distance>0.2</focus_distance>
+    <aspect_ratio>1.33</aspect_ratio>
+    <sensor_width>0.036</sensor_width>
+    <lens_sensor_dist>0.04</lens_sensor_dist>
+    <white_balance>E</white_balance>
+
+	  <aperture_shape>
+		  <generated>
+			  <num_blades>3</num_blades>
+			  <blade_offset>0.3</blade_offset>
+			  <blade_curvature_radius>0.5</blade_curvature_radius>
+			  <start_angle>0.0</start_angle>
+		  </generated>
+	  </aperture_shape>
+	  
+  </camera>
+
+
+  <tonemapping>
+    <linear>
+      <scale>1000</scale>
+    </linear>
+  </tonemapping>
+
+
+
+
+  <!-- Define a Mesh -->
+  <mesh>
+    <name>lightmesh</name>
+
+    <normal_smoothing>false</normal_smoothing>
+
+    <embedded>
+      <expose_uv_set>
+        <index>0</index>
+        <name>albedo</name>
+      </expose_uv_set>
+
+      <vertex pos="0 0 0" normal="0 -1 0" uv0="0 0" />
+      <vertex pos="0 0 0.001" normal="0 -1 0" uv0="0 1" />
+      <vertex pos="0.001 0 0.001" normal="0 -1 0" uv0="1 1" />
+      <vertex pos="0.001 0 0" normal="0 -1 0" uv0="1 0" />
+
+      <triangle_set>
+        <material_name>mat1</material_name>
+
+        <tri>0 2 1</tri>
+        <tri>0 3 2</tri>
+      </triangle_set>
+    </embedded>
+  </mesh>
+
+
+  <meshlight>
+    <rotation>
+      <matrix>
+        1 0 0 0 1 0 0 0 1
+      </matrix>
+    </rotation> 
+    <pos>-0.02 0 0</pos>
+    <scale>0.5</scale>
+    <mesh_name>lightmesh</mesh_name>
+
+    <!-- define the emission spectrum-->
+    <spectrum>
+      <uniform>
+        <value>300000000</value>
+      </uniform>
+    </spectrum>
+  </meshlight>
+
+
+	<meshlight>
+		<rotation>
+			<matrix>
+				1 0 0 0 1 0 0 0 1
+			</matrix>
+		</rotation>
+		<pos>0.0 1 0</pos>
+		<scale>0.5</scale>
+		<mesh_name>lightmesh</mesh_name>
+
+		<!-- define the emission spectrum-->
+		<spectrum>
+			<uniform>
+				<value>300000000</value>
+			</uniform>
+		</spectrum>
+	</meshlight>
+
+	<!--<meshlight>
+		<rotation>
+			<matrix>
+				1 0 0 0 1 0 0 0 1
+			</matrix>
+		</rotation>
+		<pos>0.1 2 0</pos>
+		<scale>0.5</scale>
+		<mesh_name>lightmesh</mesh_name>
+
+		<spectrum>
+			<uniform>
+				<value>300000000</value>
+			</uniform>
+		</spectrum>
+	</meshlight>-->
+
+
+</scene>
+    
+
+

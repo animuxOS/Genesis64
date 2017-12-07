@@ -1,0 +1,612 @@
+<HTML>
+  
+  <HEAD>
+    <TITLE>Voodoo Camera Tracker: A tool for the integration of virtual and real scenes</TITLE>
+  </HEAD>
+  
+  <body class="main_frm" bgcolor="#FFFFFF" text="#000000" link="#008000" vlink="#008000" alink="#008000">
+
+<H2>Voodoo Camera Tracker: A tool for the integration of virtual and real scenes</H2>
+
+Version 0.9.4 beta for Linux and Windows
+<br>
+Copyright (C) 2002-2007 Laboratorium f&uuml;r Informationstechnologie<br>
+<br>
+<p>
+This non-commercial software tool is developed for research purpose at the <a  class="main_frm" target="_top" href="http://www.lfi.uni-hannover.de">Laboratorium f&uuml;r Informationstechnologie</a>,  University of Hannover.  Permission is granted to any individual or institution to use, copy, and distribute this software, provided that this complete copyright and permission notice is maintained, intact, in all copies and supporting documentation. University of Hannover provides this software "as is" without express or implied warranty.
+</p>
+<hr>
+
+<b> <font color="#000000">Contents:</font></b>
+<a  class="main_frm" href="#overview">[Overview]</a>&nbsp;&nbsp;
+<a  class="main_frm" href="#download">[Download]</a>&nbsp;&nbsp;
+<a  class="main_frm" href="#usage">[Usage]</a>&nbsp;&nbsp;
+<a  class="main_frm" href="#cahvmodel">[Camera Model]</a>&nbsp;&nbsp;
+<a  class="main_frm" href="#trouble">[Troubleshooting]</a>&nbsp;&nbsp;
+<a  class="main_frm" href="#bugs">[Bug Report]</a>&nbsp;&nbsp;
+<hr>
+
+<h2><font color="#000000"><a  class="main_frm" name="overview">Overview </a></font></h2>
+<p>
+The <i>Voodoo Camera Tracker</i>  estimates camera parameters and reconstructs a 3D scene from image sequences. The estimation algorithm offers a full automatic and robust solution to estimate camera parameters for video sequences.
+The results are useful for many applications like film production, 3D reconstruction, or video coding.
+The estimated parameters can be exported to the 3D animation packages: <a  class="main_frm" href="#threedmax">3D Studio Max</a>, <a  class="main_frm" href="#blender">Blender</a>, <a  class="main_frm" href="#lightwave">Lightwave</a>, <a  class="main_frm" href="#maya">Maya</a>, and <a  class="main_frm" href="#softimage">Softimage</a>.
+</p>
+
+<p>
+The <i>Voodoo Camera Tracker</i>  works very alike to commercial available camera trackers (also called match movers), e.g. <a  class="main_frm" target="_top" href="http://www.sci-d-vis.com/"> 3D-Equalizer by Science-D-Visions</a>, <a  class="main_frm" target="_top" href="http://www.2d3.com/">boujou by 2d3</a>,
+ <a  class="main_frm" target="_top" href="http://www.realviz.com/">Matchmover by RealViz </a>, <a  class="main_frm" target="_top" href="http://www.thepixelfarm.co.uk">PFTrack by The Pixel Farm</a>, <a  class="main_frm" target="_top" href="http://www.ssontech.com">SynthEyes by Andersson Technologies</a>. Please consider buying a commercial product, if you need a camera tracker with professional support.
+</p>
+<p>
+The estimation method consist of four processing steps:
+</p>
+
+<UL>
+<LI><a  class="main_frm" href="#detection">Automatic detection of feature points</a>
+<LI><a  class="main_frm" href="#correspondence">Automatic correspondence analysis</a>
+<LI><a  class="main_frm" href="#outlier">Outlier elimination</a>
+<LI><a  class="main_frm" href="#robest">Robust estimation of the camera parameters</a>
+</UL>
+
+<h3><font color="#000000"><a  class="main_frm" name="detection">Automatic detection of feature points</a></font></h3>
+<p>
+The feature points are detected with sub-pixel accuracy using a corner detector.
+The detected feature points in the current image are marked with green crosses. Feature points that are detected as outliers during the processing are marked with red crosses.
+</p>
+<img src="./manual_img/08sr3_286_pnt.jpg"  align=middle  hspace=5 vspace=10>
+
+<h3><font color="#000000"><a  class="main_frm" name="correspondence">Automatic correspondence analysis</a></font></h3>
+<p>
+The points can be matched from one image to the next by choosing matches
+which have the highest cross-correlation of image intensity for regions
+surrounding the points. The paths of the feature points are drawn in yellow here.
+</p>
+<img src="./manual_img/08sr3_286_corr.jpg"  align=middle  hspace=5 vspace=10 >
+
+<h3><font color="#000000"><a  class="main_frm" name="outlier">Outlier elimination</a></font></h3>
+<p>
+Due to misalignments or moving object in the scene some of the correspondences may be incorrect.
+To achieve a robust matching, a random sampling algorithm is employed to detect
+bad correspondences called outliers.
+</p>
+
+<h3><font color="#000000"><a  class="main_frm" name="robest">Robust estimation of camera parameters</a></font></h3>
+
+<p>
+Finally the parameters are estimated by using optimization technique applied to
+the good correspondences called inlier. Virtual objects can be integrated into the real image sequence.
+</p>
+
+<img src="./manual_img/08sr3_286_comp.jpg"  align=middle  hspace=5 vspace=10 >
+
+<h2><font color="#000000"><a  class="main_frm" name="download">Download</a></font></h2>
+The <i>Voodoo Camera Tracker</i>  is availabe for free download from
+<a  class="main_frm" target="_top" href="http://www.digilab.uni-hannover.de">http://www.digilab.uni-hannover.de</a>
+as a binary file for Linux and Windows.
+
+<h2><font color="#000000"><a  class="main_frm" name="usage">Usage</a></font></h2>
+
+<p>
+A typical camera tracking session includes the following steps
+</p>
+<ul>
+      <li> Load an Image <a  class="main_frm" href="#sequence">Sequence</a>
+      <li> Set the <a  class="main_frm" href="#initalcamera">Initial Camera</a> parameter manually or load a camera file.
+      <li> Change some <a  class="main_frm" href="#controls">Controls</a> concerning the tracking process.
+      <li> Start the tracking by pressing the <b>Track</b>  button in the lower right corner.
+      <li> Check the <a  class="main_frm" href="#cameraparameter">Camera Parameter</a> by using the <a  class="main_frm" href="#modellingtools">Modelling Tools</a>
+	   to insert 3D test objects, or examine the 3D scene with the <a  class="main_frm" href="#3dscene">3D Scene Viewer</a>.
+      <li> Refine the camera parameters by runing an additional bundle adjustment or add, remove, or edit feature point tracks manually with the <a  class="main_frm" href="#modellingtools">Modelling Tools</a> or the <a class="main_frm" href="#trackeditor">FPoint Track Editor</a>.
+      <li> Export the estimated camera parameters to the 3D animation package <a  class="main_frm" href="#threedmax">3D Studio Max</a>, <a  class="main_frm" href="#blender">Blender</a>, <a  class="main_frm" href="#lightwave">Lightwave</a>, <a  class="main_frm" href="#maya">Maya</a>, or <a  class="main_frm" href="#softimage">Softimage</a>.
+</ul>
+
+<h3><font color="#000000"><a  class="main_frm" name="maintrack">Main Tracking Window</a></font></h3>
+<p>
+After typing the command <b>&gt;voodoo</b>  the <b>Main Tracking</b>  window is shown (<a  class="main_frm" href="#figure1">Fig. 1</a>).<br>
+</p>
+<a  class="main_frm" name="figure1"><img src="./manual_img/trr.png" align=middle  hspace=45 vspace=10></a>
+<p style="text-indent:1.5cm">    Figure 1. <b>Main Tracking Window</b> </p>
+<p>
+The <a  class="main_frm" name="menu">menu</a> bar of this window has the following structure:
+</p>
+
+<ul>
+  <li>File
+  <ul>
+     <li>Load
+     <ul>
+           <li><a  class="main_frm" href="#sequence">Sequence</a>
+           <li><a  class="main_frm" href="#initalcamera">Initial Camera</a>
+           <li><a  class="main_frm" href="#loadcahv">CAHV Cameras</a>
+           <li><a  class="main_frm" href="#loadfeature">Feature Points</a>
+           <li><a  class="main_frm" href="#loadprimitiv">User Primitives</a>
+     </ul>
+     <li>Save
+     <ul>
+	   <li><a  class="main_frm" href="#threedmax">3D MAX Script</a>
+           <li><a  class="main_frm" href="#blender">Blender Python Script</a>
+	   <li><a  class="main_frm" href="#lightwave">Lightwave 3D</a>
+	   <li><a  class="main_frm" href="#maya">Maya Script</a>
+	   <li><a  class="main_frm" href="#softimage">Softimage 3.9 | XSI</a>
+           <li><a  class="main_frm" href="#textfile">Textfile</a>
+           <li><a  class="main_frm" href="#cameras">CAHV Cameras</a>
+           <li><a  class="main_frm" href="#savefeature">Feature Points</a>
+           <li><a  class="main_frm" href="#saveprimitiv">User Primitives</a>
+
+     </ul>
+     <li>Exit
+  </ul>
+  <li>View
+  <ul>
+           <li><a  class="main_frm" href="#controls">Controls</a>
+           <li><a  class="main_frm" href="#drawoptions">Draw Options</a>
+           <li><a  class="main_frm" href="#cameraparameter">Camera Parameter</a>
+           <li><a  class="main_frm" href="#3dscene">3D Scene Viewer</a>
+           <li><a  class="main_frm" href="#modellingtools">Modelling Tools</a>
+	   <li><a  class="main_frm" href="#trackeditor">FPoint Track Editor</a>
+  </ul>
+  <li>Help
+  <ul>
+           <li><a  class="main_frm" href="#help">Help</a>
+           <li><a  class="main_frm" href="#notifylevel">Notify Level</a>
+  </ul>
+</ul>
+
+<h3><font color="#000000"><a  class="main_frm" name="sequence">File &rarr; Load &rarr; Sequence</a></font></h3>
+
+<p>By choosing this item from the <a  class="main_frm" href="#menu">menu</a> the <b>Sequence Select</b>
+window opens (<a  class="main_frm" href="#figure2">Fig. 2</a>).</p>
+
+  <p> <a  class="main_frm" name="figure2"><img src="./manual_img/seq.png" align=middle  hspace=45 vspace=10></a></p>
+  <p style="text-indent:1.5cm"> Figure 2. <b>Sequence Select</b>  window</P>
+
+<p>You can load an image sequence that is stored in several image files. The <i>Voodoo Camera Tracker</i>  is able to load every image format supported by the <a  class="main_frm" target="_top" href="http://www.imagemagick.org">ImageMagick</a> library. (The Windows version is limited to load only image sequences in Targa 2.0 format).</p>
+
+<ul><li> Click <b> Browse</b>,  a file browser opens.
+    <li> Select the file name of the image sequence you want to track.<br>
+      For example,  if you want to open the sequence: "./sample_image_sequence/uni.##.jpg",
+      you first choose the file folder named "sample_image_sequence", and then click on a file out of the sequence, e.g. "uni.00.jpg". 
+      Then click <b>Open</b>.<br>
+
+ The <i>Voodoo Camera Tracker</i>  tries to detects all other images from the sequence automatically by replacing any number
+ in the file name with a "#". Then it replaces the "#" with any possible number and checks if there is such a
+file in the directory. The <i>Voodoo Camera Tracker</i>  can handle numbering with and without leading zeros. If you
+use numbering without leading zeros, please choose a file with the largest number of digits in the file browser.
+
+ <li> The <i>Voodoo Camera Tracker</i>  fills the detected start and end sequence number as well as step number in the <b> Start, End </b>  and <b> Step </b>  text field. You can modify these numbers according to your needs. With step number 2 for example every second image will be skipped.
+  <li>In the field <b> Deinterlace </b>  you can check one of three options. With <b>not interlaced</b> the selected image sequence will not be deinterlaced. The original data from the file is used for tracking. With the selection <b>maintain even lines</b>  or <b>maintain odd lines</b>  the image sequence will be deinterlaced accordingly.
+ <li>In the field <b> Motion Type </b> you can select two options. With the selection <b>rotation</b>  the camera motion model takes only rotation and zoom operations into account.
+This motion model is valid for sequences taken with a camera on a tripod. If you select <b>free move</b> the camera must include a translational motion.
+  <li>Click <b> OK </b>  and the selected sequence is loaded.
+</ul>
+</p>
+
+<h3><font color="#000000"><a  class="main_frm" name="initalcamera">File &rarr; Load &rarr; Initial Camera</a></font></h3>
+
+<p>
+By choosing this item from the <a  class="main_frm" href="#menu">menu</a> the <b>Initial Camera Parameters</b>
+window opens (<a  class="main_frm" href="#figure3">Fig. 3</a>).</p>
+
+    <p><a  class="main_frm" name="figure3"><img src="./manual_img/ini.png" align=middle  hspace=45  vspace=10 ></a></p>
+    <p style="text-indent:1.5cm">Figure 3. <b>Initial Camera Parameter</b>  window</p>
+
+<p>You can set the initial camera parameters manually or load a camera file.</p>
+
+     <ul><li>Set the parameters in the text fields manually
+
+         <ul>
+            <li> The  desired camera parameters can be filled in the text fields. Only the text field with white background color can be edited,  the others with dark gray background are read only.
+	    <li> In general, it is not necessary to fill in all text fields. The two most important parameters are the size of the <b>Film Back</b> and the <b>Focal Length</b>, which are located in the widget called <b>General</b>. The absolute size of the <b>Film Back</b> is arbitrary, important is the resulting image aspect ratio. The most common aspect ratios are 4:3 = 1.33333 or 16:9 = 1.77777. An easy way to adjust the size of the <b>Film Back</b> is to use the <b>Type</b> combo box, where the type of the used camera can be selected. Please check if the resulting aspect ratio is correct. If you do not know the <b>Focal Length</b> it does not matter, the <i>Voodoo Camera Tracker</i>  is configured to estimate it by default. If you know the <b>Focal Length</b> enter it here and change the settings in the <a  class="main_frm" href="#controls">Main Control Panel</a> not to estimate it.
+	    <li> In the  widget called <b>Advanced</b> some additional parameters like <b>Principal Point</b>  and <b>Radial Distortion</b>  can be set. Leave these parameters to default values if you are not familiar with their meaning.
+	    <li> The  widget called <b>Position</b>  hold the translation and rotation of the camera.
+	    The rotation is given by the angles pan, tilt and roll, which correspond to three successive rotations around the Y-, X- and Z-axes, respectively.
+	    <li>For each image of the sequence the <i>Voodoo Camera Tracker</i>  holds one camera parameter set that is linked to this image. By clicking <b>OK</b>  all camera parameter sets of the image sequence are set according to the parameters of the initial camera.
+         </ul>
+
+        <li>Load a CAHV camera file
+        <ul>
+	    <li> The <i>Voodoo Camera Tracker</i>  uses the CAHV model introduced by Yakimovski and Cunningham. The parameter of these model are read from files which have the extension ".cam". Here you find more information on the <a  class="main_frm" target="_top" href=#cahvmodel>CAHV camera model</a>.
+            <li> To read a CAHV camera file, click the <b>Load</b> button and select a ".cam" file.
+            <li> The loaded parameters are shown in the widget.
+	    <li> For each image of the sequence the <i>Voodoo Camera Tracker</i>  holds one camera parameter set that is linked to this image. By clicking <b>OK</b>  all camera parameter sets of the image sequence are set according to the parameters of the initial camera.
+        </ul>
+</ul>
+
+<h3><font color="#000000"><a  class="main_frm" name="loadcahv">File &rarr; Load &rarr; CAHV Cameras</a></font></h3>
+<p>
+For each image of the sequence the <i>Voodoo Camera Tracker</i> holds one camera parameter set that is linked to this image. The parameter sets can be read from files which have the extension ".cam". The parameters are loaded for all the camera views in the image sequence by choosing this menu item. There must be one file for each image and the files must use the same numbering as the image sequence.
+</p>
+
+<h3><font color="#000000"><a  class="main_frm" name="loadfeature">File &rarr; Load &rarr; Feature Points</a></font></h3>
+<p>
+For each image of the sequence the <i>Voodoo Camera Tracker</i> holds a set of feature points. The feature points can be read from files which have the extension ".pnt". The feature points are loaded for all images of the sequence by choosing this menu item. There must be one file for each image and the files must use the same numbering as the image sequence.
+</p>
+
+<h3><font color="#000000"><a  class="main_frm" name="loadprimitiv">File &rarr; Load &rarr; User Primitives</a></font></h3>
+<p>
+This menu item loads a user primitive in STL (stereolithography) format that can be placed into the scene by using the <a  class="main_frm" target="_top" href=#modellingtools>Modelling Tools</a>. The <i>Voodoo Camera Tracker</i> can read STL files in binary or ASCII format.
+</p>
+
+<h3><font color="#000000"><a  class="main_frm" name="threedmax">File &rarr; Save &rarr; 3D Studio Max (MAX Script)</a></font></h3>
+<p>
+     By choosing this item from the <a  class="main_frm" href="#menu">menu</a> the <i>Voodoo Camera Tracker</i>
+     exports the estimated camera parameters to the 3D animation package <a  class="main_frm" target="_top" href="http://www.autodesk.com/3dsmax/">3D Studio Max</a> using a <b>Max Script</b> file. This file has the extension ".ms". To run the script go to [MAXScripts&rarr;Run Script] in 3D Studio Max. The image sequence can be displayed as an environment map in 3D Studio Max:
+	<ul>
+	<li> in the perspective viewport right-click "Perspective" and select [Views&rarr;voodoo_cam]</li>
+	<li> select [Rendering&rarr;Environment] </li>
+	<li> click the "Environment Map" button and select "bitmap" from the list</li>
+	<li> enter the file name of the image sequence</li>
+	<li> activate the "Sequence" checkbox</li>
+	<li> select [Views&rarr;Viewport Background]</li>
+	<li> activate the "Use Environment Background" and the "Display Background" checkbox and select "voodoo_cam" in the "Viewport" popup list</li>
+	</ul>
+	We tested the import with 3ds max Version 6.
+</p>
+    <a  class="main_frm" name="figure4"><img src="./manual_img/max.jpg" align=middle  hspace=25  vspace=10></a>
+    <p style="text-indent:1.5cm"> Figure 4. Export camera parameters to 3D Studio Max </p>
+
+<h3><font color="#000000"><a  class="main_frm" name="blender">File &rarr; Save &rarr; Blender Python Script</a></font></h3>
+<p>
+     By choosing this item from the <a  class="main_frm" href="#menu">menu</a> the <i>Voodoo Camera Tracker</i>
+     exports the estimated camera parameters to the 3D animation package <a  class="main_frm" target="_top" href="http://www.blender3d.org">Blender</a> using a <b>Python Script</b> file. This file has the extension ".py". Load the python script into Blender's text editor and execute the script with ALT-P. Select the "voodoo_render_cam" camera and press Ctrl-Numpad 0 to activate it. To display the image sequence  as a backbuffer in Blender, go to [Buttons Windows&rarr;Scene&rarr;Render Buttons&rarr;Output] and enter the file name of the image sequence in the "backbuf" field. A '#' at the end of the file name is replaced by the current (four-digit) frame number. We tested the import with Blender Version 2.42a.
+</p>
+
+<h3><font color="#000000"><a  class="main_frm" name="lightwave">File &rarr; Save &rarr; LightWave 3D</a></font></h3>
+<p>
+     By choosing this item from the <a  class="main_frm" href="#menu">menu</a> the <i>Voodoo Camera Tracker</i>
+     exports the estimated camera parameters to the 3D animation package <a  class="main_frm" target="_top" href="http://www.newtek.com/lightwave/">Lightwave 3D</a> using a <b>LightWave Scene</b> file. This file has the extension ".lws". To open the file, go to [File&rarr;Load&rarr;Load Scene] in Lightwave.
+     The image sequence can be displayed as a background image in Lightwave:
+	<ul>
+	<li> select [Image Editor&rarr;Load] </li>
+	<li> enter the file name of the image sequence and activate "Sequence" in the "Image Type" popup list</li>
+	<li> open [Scene&rarr;Backdrop&rarr;Compositing] and select the image sequence in the "Background Image" popup list</li>
+	</ul>
+     We tested the import with LightWave 3D 7.5d Discovery Edition.
+</p>
+
+<h3><font color="#000000"><a  class="main_frm" name="maya">File &rarr; Save &rarr; Maya Script</a></font></h3>
+<p>
+     By choosing this item from the <a  class="main_frm" href="#menu">menu</a> the <i>Voodoo Camera Tracker</i>
+     exports the estimated camera parameters to the 3D animation package <a  class="main_frm" target="_top" href="http://www.autodesk.com/maya">Maya</a> using a <b>Maya Script</b> file. This file has the extension ".ma". To run the script go to [File&rarr;Open Scene] in Maya. 
+     The image sequence can be displayed as an environment map in Maya:
+	<ul>
+	<li> select [Panels&rarr;Perspective&rarr;VoodooCam] </li>
+	<li> select [View&rarr;Camera Attribute Editor] </li>
+	<li> open the "Environment" field and create an image plane</li>
+	<li> the "Image Plane Attributes" window opens and you can enter the file name of the image sequence</li>
+	<li> activate "Use Image Sequence" checkbox and adjust the "Frame Offset"</li>
+	<li> in the "Placement" window select fit "To Size"</li>
+	</ul>
+	We tested the import with Maya Personal Learning Edition Version 8.5.
+</p>
+
+<h3><font color="#000000"><a  class="main_frm" name="softimage">File &rarr; Save &rarr; Softimage 3.9 | XSI (3.0)</a></font></h3>
+<p>
+      By choosing this item from the <a  class="main_frm" href="#menu">menu</a> the <i>Voodoo Camera Tracker</i>
+      exports the estimated camera parameters to the 3D animation package <a  class="main_frm" target="_top" href="http://www.softimage.com/">Softimage 3D</a> using <b>XSI File Format V3.0</b>. This file has the extension ".xsi" and can be imported to Softimage 3.9 or Softimage XSI. To import the file go to [Tools&rarr;Import&rarr;Objects&rarr;XSI Import] in Softimage 3.9 and in XSI go to [File&rarr;Import&rarr;Input .xsi].
+</p>
+     <a  class="main_frm" name="figure5"><img src="./manual_img/soft.jpg" align=middle  hspace=25  vspace=10></a>
+<p style="text-indent:1.5cm"> Figure 5. Export camera parameters to Softimage 3.9</p>
+<p></p>
+
+<h3><font color="#000000"><a  class="main_frm" name="textfile">File &rarr; Save &rarr; Textfile</a></font></h3>
+<p> 
+This menu item exports the estimated camera parameters and 3D feature points into a text file. We suggest you parse this file if you want to write your own
+import filter for an application that is currently not supported by the <i>Voodoo Camera Tracker</i>.
+</p>
+
+<h3><font color="#000000"><a  class="main_frm" name="cameras">File &rarr; Save &rarr; CAHV Cameras</a></font></h3>
+<p> By choosing this item from the <a  class="main_frm" href="#menu">menu</a> the <b>Saving Camera Files</b>  window opens (<a  class="main_frm" href="#figure6">Fig. 6</a>).</p>
+
+   <p><a  class="main_frm" name="figure6"><img src="./manual_img/camm.png" align="middle"  vspace="10"  hspace="45"></a></p>
+   <p style="text-indent:1.5cm">Figure 6. <b>Saving Camera Files</b>  window</p>
+<p>
+For each image of the sequence the <i>Voodoo Camera Tracker</i>  holds one camera parameter set that is linked to this image. These parameters can be stored in a CAHV camera file (extention ".cam"). There is one file for each image.</p>
+<ul>
+      <li> The <i>Voodoo Camera Tracker</i>  suggests a file template. Any "#" in the file template will be automatically replaced  with the frame number of the image.
+      <li> If you want to change the destination directory you can use the <b>Browse</b> button.
+      <li> The <i>Voodoo Camera Tracker</i>  fills the start and end sequence number as well as step number in the <b> Start, End </b>  and <b> Step </b>  text field with the values used for tracking.
+      <li> By clicking <b>OK</b> the estimated camera parameter of the image sequence are saved.
+    </ul>
+<p></p>
+
+<h3><font color="#000000"><a  class="main_frm" name="savefeature">File &rarr; Save &rarr; Feature Points</a></font></h3>
+For each image of the sequence the <i>Voodoo Camera Tracker</i>  holds a set of 2D and 3D feature points. These feature points can be stored in ".pnt" files. There is one file for each image.</p>
+<ul>
+      <li> The <i>Voodoo Camera Tracker</i>  suggests a file template. Any "#" in the file template will be automatically replaced with the frame number of the image.
+      <li> If you want to change the destination directory you can use the <b>Browse</b> button.
+      <li> The <i>Voodoo Camera Tracker</i> fills the start and end sequence number as well as step number in the <b> Start, End </b> and <b> Step </b>  text field with the values used for tracking.
+      <li> By clicking <b>OK</b> the estimated feature points of the image sequence are saved.
+    </ul>
+<p></p>
+
+<h3><font color="#000000"><a  class="main_frm" name="saveprimitiv">File &rarr; Save &rarr; User Primitives</a></font></h3>
+<p>
+This menu item saves user primitive that are placed into the scene with the <a  class="main_frm" target="_top" href=#modellingtools>Modelling Tools</a>.
+</p>
+
+<h3><font color="#000000"><a  class="main_frm" name="exit">File &rarr; Exit</a></font></h3>
+<p>
+     By choosing this item from the <a  class="main_frm" href="#menu">menu</a> the <i>Voodoo Camera Tracker</i>  will be closed.</p>
+<p>     All data, that is not saved, will be lost.</p>
+
+
+<h3><font color="#000000"><a  class="main_frm" name="controls">View &rarr; Controls</a></font></h3>
+
+<p> By choosing this item from the <a  class="main_frm" href="#menu">menu</a> the <b>Main Control Panel</b>  window opens (<a  class="main_frm" href="#figure7">Fig. 7</a>).</p>
+
+<a  class="main_frm" name="figure7"><img src="./manual_img/main.png" align="middle"  hspace="25"  vspace="10"></a>
+<p style="text-indent:1.5cm"> Figure 7.  <b>Main Control Panel</b>  window with  selected <b> Harris</b>  detector</p>
+
+<p> The camera parameter estimation (camera tracking) consists of four basic steps: Detection, Correspondence Analysis, Outlier Elimination and Estimation. For every step the <i>Voodoo Camera Tracker</i> offers different algorithms. You are free to choose different combination of algorithms for every step. For example you can use the <b>Harris</b>  , <b>Foerstner</b>, or <b>Susan</b> corner detector in the detection step. Some algorithms are in development state and therefore disabled in this beta version of the <i>Voodoo Camera Tracker</i>. If you are not familiar with the algorithms you can
+leave everything to the default configuration or play around with some parameters. In case of any trouble feel free to contact us for support.</p>
+
+<p>With the <b>Main Control Panel</b> you can choose the combination and parameter of the algorithms you want.</p>
+
+<ul>
+   <li> By clicking on the box in front of the yellow square a list of algorithms will be shown.
+   <li> An algorithm is selected if a dot  is putted in the box in front of the respective algorithm name and the <b>Apply</b>  or <b>OK</b>  button is pressed.
+   <li>If you click once on the algorithm name the parameter widget of the algorithm is shown on the right side.
+</ul>
+
+<p>The default algorithm in the Correspondence Analysis step is the <b>KLT Tracking</b> method. It uses its own feature point detection algorithm and therefore you can not select an algorithm in the Detection step if the <b>KLT Tracking</b> method is enabled. The two most important parameters that sometimes need adjustment are modified with the "Max. Corners" and the "Win. Size for Local Max." text fields. The "Max. Corners" field limits the number of feature points per image. For sequences that are easy to track, you may want to reduce the number of feature points to speed up the computation. The "Win. Size for Local Max." can be used to evenly distribute the feature points in the image. A larger number increases the spread of the feature points. A nice distribution of feature points in the images is very important for good tracking results. Please also make sure that there are sufficient feature point tracks in the foreground and the background of the scene.
+</p>
+
+<p>You can also skip a step of the estimation process by choosing <b>Skip step</b>. The <i>Voodoo Camera Tracker</i> doesn't execute this step now, but uses the results already in memory for this step, if you press the <b>Track</b> button. This can be very useful, especially if you edit, add, or remove feature points manually (see for <a  class="main_frm" href="#modellingtools">Modelling Tools</a> details). If you don't choose the <b>Skip step</b> option in the Correspondence Analysis step all your edited feature points will be overwritten.</p>
+
+
+
+
+<h3><font color="#000000"><a  class="main_frm" name="drawoptions">View &rarr; Draw Options</a></font></h3>
+
+<p> By choosing this item from the <a  class="main_frm" href="#menu">menu</a> the <b>Draw Options Deck</b>  window opens (<a  class="main_frm" href="#figure8">Fig. 8</a>).
+</p>
+
+ <a  class="main_frm" name="figure8"><img src="./manual_img/draw.png" align=middle  hspace=45  vspace=10></a>
+
+<p style="text-indent:1.5cm">Figure 8.<b> Draw Options Deck</b>  window </p>
+
+<p>There are four button groups in this window</p>
+
+ <ul> <li> 2D Flags
+ <p>The 2D Flags influence the 2D drawings which overlay the actual image
+in the <a  class="main_frm" href="#maintrack">Main Tracking Window</a>. In the following some important terms are defined  </p>
+<ul>
+<li>Inlier: Feature points or correspondences which are found reliably in the outlier elimination step. These feature points or correspondences are used in the final estimation step.
+<li> Outlier: Feature points or correspondences which are found unreliably in the outlier elimination step. These feature points or correspondences are neglected in the final estimation step.
+<li> FPoints: Abbreviation for feature points.
+<li> FCorrs: Abbreviation for (feature) correspondences.
+ <li> Search Win: Search window for the establishment of the correspondences between two consecutive image use in the Correspondence Analysis step</p>
+</ul>
+<li>3D Flags
+ <p>Enables/disables the drawing of three dimensional virtual objects into the image sequence.</p>
+
+  <li>Change Color
+  <p> The color shown on the color button is the current color of the respective object. Click on the color button and select the color you want in the color dialog.
+  </p>
+  <li>Polar Raster
+  <p> Click on the button <b> Enable </b>  and a <b>Polar Raster</b>  appears in the <a  class="main_frm" href="#maintrack">Main Tracking Window</a>. The <b>Polar Raster</b> is a very useful tool to evaluated the estimated camera parameters if the pure rotational camera motion model is applied, which is valid for sequences taken with a camera on a tripod.
+  </p>
+</ul>
+
+  <p> <a  class="main_frm" href="#figure9">Fig. 9</a> shows an example of tracking results. Inlier are marked as green crosses and outlier as red crosses. The paths of feature points are drawn in yellow. One feature point is selected, marked as blue cross and the belonging search window is drawn in orange.</p>
+
+
+  <p><a  class="main_frm" name="figure9">  <img src="./manual_img/exx.jpg" align="middle"  hspace="25" vspace="10"></a></p>
+  <p style="text-indent:1.5cm"> Figure 9. Detected feature points and their paths</p>
+
+
+<h3><font color="#000000"><a  class="main_frm" name="cameraparameter">View &rarr; Camera Parameter</a></font></h3>
+   <p>
+    By choosing this item from the <a  class="main_frm" href="#menu">menu</a> the <b>Camera Parameter</b>  window opens (<a  class="main_frm" href="#figure10">Fig. 10.</a>).
+   </p>
+
+      <p><a  class="main_frm" name="figure10"> <img src="./manual_img/para.png" align="middle" hspace="45" vspace="10"></a> </p>
+      <P style="text-indent:1.5cm">Figure 10. <b>Camera Parameter</b>  window</p>
+
+<p>
+    This window has the same text fields as the <a  class="main_frm" href="#initalcamera">Initial Camera</a> window expect the <b>Load</b>  button. For each image of the sequence the <i>Voodoo Camera Tracker</i>  holds one camera parameter set that is linked to this image. By changing the displayed image in the <a  class="main_frm" href="#maintrack">Main Tracking Window</a> the parameter shown in the <b>Camera Parameter</b>  window change accordingly. Hence you have access to every parameter set of the sequence and can change the parameters according to your needs. Changes are applied to the stored camera parameter set by pressing the <b>OK</b>  or <b>Apply</b>  button.
+</p>
+
+<h3><font color="#000000"><a  class="main_frm" name="3dscene">View &rarr; 3D Scene Viewer </a></font></h3>
+
+
+<p>By choosing this item from the <a  class="main_frm" href="#menu">menu</a> the <b>3D Scene Viewer</b>  window opens (<a  class="main_frm" href="#figure11">Fig. 11.</a>). </p>
+
+ <p><a  class="main_frm" name="figure11"><img src="./manual_img/scene.png" align="middle" hspace="45" vspace="10"></a> </p>
+<p style="text-indent:1.5cm">Figure 11. <b>3D Scene Viewer</b>  window </p>
+
+ <p>In this viewer a 3D scene is displayed with a global 3D coordinate system. One unit of the coordinate system raster equals the focal length given by the actual camera parameter set. By pressing a key and then dragging the mouse while holding down a mouse button you can perform to following movements to explore the scene</p>
+
+<table border="0" cellspacing="0" cellpadding="2">
+<tr><th align="center">key + mouse button</th> <th align="center">movement</th></tr>
+<tr><td align="left">o + left<td align="left">free orbit OpenGL camera</tr>
+<tr><td align="left">o + middle<td align="left">up/down orbit OpenGL camera</tr>
+<tr><td align="left">o + right<td align="left">fast dolly OpenGL camera</tr>
+<tr><td align="left">u + left<td align="left">translate left/right up/down  OpenGL camera</tr>
+<tr><td align="left">u + middle<td align="left">free orbit OpenGL camera</tr>
+<tr><td align="left">u + right<td align="left">translate straight OpenGL camera</tr>
+<tr><td align="left">p + left<td align="left">dolly OpenGL camera</tr>
+<tr><td align="left">p + middle<td align="left">fast dolly OpenGL camera</tr>
+<tr><td align="left">p + middle<td align="left">very fast dolly OpenGL camera along z-axes</tr>
+<tr><td align="left">i + left<td align="left">translate OpenGL camera interest along x-axes</tr>
+<tr><td align="left">i + middle<td align="left">translate OpenGL camera interest along y-axes</tr>
+<tr><td align="left">i + right<td align="left">translate OpenGL camera interest along z-axes</tr>
+<tr><td align="left">s <td align="left"> put OpenGL camera interest on CAHV camera</tr>
+<tr><td align="left">a <td align="left"> reset OpenGL camera position</tr>
+<tr><td align="left">d <td align="left"> put OpenGL camera interest on selected 3d feature point</tr>
+<tr><td align="left">f <td align="left"> flip the coordinate system</tr>
+</table>
+
+<p> The <b> Options</b>  menu of the <b>3D Scene Viewer</b>  window
+contains a <b>Draw Options</b>  window where you can choose whether a 3D object is drawn or not
+and what color is used for drawing.</p>
+
+<h3><font color="#000000"><a  class="main_frm" name="modellingtools">View &rarr; Modelling Tools </a></font></h3>
+<p>By choosing this item from the <a  class="main_frm" href="#menu">menu</a> the <b>Modelling Tools</b>  toolbox is displayed (<a  class="main_frm" href="#figure12">Fig. 12.</a>). </p>
+ <p> <a  class="main_frm" name="figure12"><img src="./manual_img/model1.png" align=middle></a></p>
+  <p style="text-indent:1.5cm"> Figure 12. <b>Modelling Tools</b>  toolbox </p>
+
+<p>
+With these modelling tools you can quickly place simple primitives into the scene and test your estimated camera parameters.
+</p>
+<p>
+First create a primitive by pressing a tool button in the <b>Create</b> toolbox.
+</p>
+<p>
+You can place a primitve easily by using the <b>2d anchor</b> tool button.
+If the <b>2d anchor</b> tool button is selected and you move the mouse over a vertex of the primitive, it will be highlighted (see <a  class="main_frm" href="#figure12">Fig. 12</a>). You can now move the vertex to the correct position in the image by clicking and dragging with the left mouse button. The translation, rotation and scale of the primitive is changed automatically as the vertex is moved. With the (T)-, (R)-, and (S)- buttons, which will appear when you select the <b>2d anchor</b> tool, you can (de)activate the estimation of the primitive's (T)ranslation, (R)otation, and (S)cale parameters.  To place the vertex more exactly you can use the 
+<b>zoom</b> tool button. If you want to delete an object press the DELETE key.
+</p>
+
+<p>
+In <a class="main_frm" href="#figure13">Fig. 13</a> you can see the result of two fitted cubes. You can download this sequence from <a class="main_frm" href="ftp://ftp.tnt.uni-hannover.de/pub/digilab/digilabszene2_15_35.zip">here</a>, and try it yourself.
+</p>
+ <p> <a  class="main_frm" name="figure13"><img src="./manual_img/model2.png" align=middle></a></p>
+  <p style="text-indent:1.5cm"> Figure 13. <b>Fitted Cubes</b> </p>
+
+<p>
+With the <b>selection</b> tool button you can select the active primitve. A primitve can be selected by clicking on one of its vertices.
+The <b>selection</b> tool can also be used to select feature points. One feature point is selected by left click (see <a  class="main_frm" href="#fpoint">FPoint Editor</a>) and multiple feature points are selected by right clicking and dragging the mouse over the feature points.
+</p>
+
+<p>
+To improve the estimation results it is often very useful to add manual feature point tracks. This can be done by using the <b>create feature points</b> button. Left click creates a new feature point at the position of the mouse pointer. The feature point is automatically selected. Now the user can go to the next consecutive image and add another feature point to the selected track by pressing the right mouse button. A correspondence between a selected feature point in the previous image and an existing feature point in the actual image can be generated by clicking on the existing feature point with the middle mouse button. Please note that the mouse wheel can be used to go quickly to the next image of the sequence. It is important to generate long tracks in the background as well as in the foreground and to distribute the feature points well in the images. Manually added feature points are marked with a golden rectangle. They will never be detected as outliers in the Outlier Elimination step. 
+</p>
+<p>
+After you have added manual feature point tracks, you can try to estimate or re-estimate the camera parameters by pressing the <b>Track</b> button. Please make sure that you have selected <b>Skip step</b> in the Correspondence Analysis step or all your edited feature points will be overwritten (see <a  class="main_frm" href="#controls">Main Control Panel</a> for details). When <i>Voodoo Camera Tracker</i> asks you if you want to "Discard" or "Refine" the old results, you should normally press the "Discard" button. If you press the "Discard" button and had selected <b>Skip step</b> in the Correspondence Analysis step, only the results of the Outlier Elimination and the Camera Estimation with be deleted. The automatic Correspondence Analysis step is not execute and the results already in memory (including your manually added feature point tracks) are used.
+Sometimes a "Refine" is also possible with new manually added feature points, but this should only be done if your camera estimation result in memory is already very good and you added just a few manual points to make it perfect. 
+</p>
+<p>
+You should save the CAHV camera parameter and feature points before you try to add manual feature point tracks. If you have saved the CAHV camera parameters and feature points, you can always load them again and have another try if  something went wrong.
+</p>
+
+<p>
+Another option to improve the estimation results is to remove wrong tracks that are not automatically detected as outliers. Use the <b>selection</b> tool to select a feature point and delete it using the <a  class="main_frm" href="#fpoint">FPoint Editor</a>. If multiple feature points are selected by right click, you can delete them by pressing the DELETE key. After you have removed wrong feature point tracks you can try to improve the camera parameters by pressing the <b>Track</b> button and re-estimate (<b>Skip step</b> in the Correspondence Analysis step + "Discard" button) or refine ("Refine" button) the camera parameters.
+</p>
+
+<a  class="main_frm" href="#figure14">Fig. 14</a> shows a sequence with some manually added feature point tracks. The manually added feature points in the foreground are marked with golden rectangles around them. By manual adding and removing feature point tracks it is even possible to estimated camera parameters for footage with low image quality and many moving
+objects, like the one shown in Fig. 14 </a>: <a  class="main_frm" target="_top" href="http://www.archive.org/details/TripDown1905">"Trip Down Market Street Before the Fire (1905)"</a>, public domain footage supplied by <a  class="main_frm" target="_top" href="http://www.archive.org">archive.org</a></p>
+
+<p> <a  class="main_frm" name="figure14"><img src="./manual_img/fpman.png" align=middle></a></p>
+<p style="text-indent:1.5cm"> Figure 14. <b>Manually added feature point tracks</b></p>
+
+<h3><font color="#000000"><a  class="main_frm" name="trackeditor">View &rarr; FPoint Track Editor </a></font></h3>
+<p>
+During automatic tracking, feature point tracks often get lost because of perspective distortion of the tracked image patch, or because tracks in the background are cut by foreground objects, or because tracks get out of the camera's field of view and appear again later.
+The <b>FPoint Track Editor</b> allows to merge those disconnected tracks manually. This is usally done after you have estimated the camera parameters successfully and want to refine your solution. 
+
+</p>
+<p>By choosing <b>FPoint Track Editor</b> from the <a  class="main_frm" href="#menu">menu</a> the <b>FPoint Track Editor</b>  window opens (<a  class="main_frm" href="#figure15">Fig. 15</a>). </p>
+
+<p> <a  class="main_frm" name="figure15"><img src="./manual_img/fpmerge.png" align=middle></a></p>
+<p style="text-indent:1.5cm"> Figure 15. <b>FPoint Track Editor</b>  window </p>
+<p>
+Select a feature point in the first part of the disconnected track using the <b>selection</b> tool button of the <a  class="main_frm" href="#modellingtools">Modelling Tools</a>. Then click the left <b>From selection</b> button in the <b>FPoint Track Editor</b>.
+The left two images in the <b>FPoint Track Editor</b> now display the images where the first part of the disconnected track starts and ends.
+Then move to another image and select a feature point in the second part of the disconnected track and click the right <b>From selection</b> button. Check carefully, if now in all four images the cross marks the same point in 3D and press the <b>Merge</b> button. After you have merged some of the broken tracks you can try to refine you estimation results by pressing the <b>Track</b> button. When <i>Voodoo Camera Tracker</i> asks you if you want to "Discard" or "Refine" the old results, press the "Refine" button (<b>Skip step</b> in the Correspondence Analysis step + "Discard" button will not work here).
+</p>
+
+<p>
+You should save the CAHV camera parameter and feature points before you try to refine the results manually. If you merge a wrong track this can have unpredictable results. If you have saved the CAHV camera parameter and feature points you can always load them again and have another try.
+</p>
+
+<p>
+If you press the <b>Automatic Search</b> button in the "Automatic Search for Merge Candidates" group, disconnected track candidates are searched automatically.
+Use the "Previous" and "Next" button to browse through the candidates and press the <b>Merge</b> button to accept the current candidate. Please note that it is usually not necessary to go through all the candidates. Just try to merge a few, e.g. 50, and check if this already sufficiently improves your results.
+</p>
+
+
+<p>
+The <b>FPoint Track Editor</b> can also be used to remove unwanted feature point tracks. Use the combo box in the "Remove FPoint Tracks" group to select what you want to remove. Then press the remove button.
+</p>
+
+<h3><font color="#000000"><a  class="main_frm" name="help">Help &rarr; Help</a></font></h3>
+
+<p> By choosing this item from the <a  class="main_frm" href="#menu">menu</a> this manual opens.</p>
+
+<h3><font color="#000000"><a  class="main_frm" name="notifylevel">Help &rarr; Notify Level</a></font></h3>
+
+<p> By choosing this item from the <a  class="main_frm" href="#menu">menu</a> the <b>Notify Level</b>  window opens (<a  class="main_frm" href="#figure16">Fig. 16</a>). </p>
+  <p> <a  class="main_frm" name="figure16"><img src="./manual_img/no.png" align=middle></a></p>
+  <p style="text-indent:1.5cm"> Figure 16. <b>Notify Level</b>  window </p>
+
+<p> By choosing the notify level you can change the amount of information printed to the console, while the program is running.</p>
+
+<h3><font color="#000000"><a  class="main_frm" name="fpoint">FPoint Editor</a></font></h3>
+
+  <p> <a  class="main_frm" name="figure17"><img src="./manual_img/fp.png" align=middle></a></p>
+  <p style="text-indent:1.5cm"> Figure 17. <b>FPoint Editor</b>  window </p>
+
+<p>The <b>FPoint Editor</b>  window displays the parameters of a feature point. This window is displayed, if you select a feature point by using the "selection" tool button of the <a  class="main_frm" href="#modellingtools">Modelling Tools</a>.</p>
+
+
+<h2><font color="#000000"><a  class="main_frm" name="trouble">Troubleshooting</a></Font></h2>
+
+<ul>
+<li> Avoid motion blur.</li>
+<li> Avoid fast motions. The displacement of a tracked feature point from frame to frame should be smaller than approx. 30 pixels.</li>
+<li> Avoid very long sequences, e.g. not more than 200-400 frames.</li> 
+<li> Usually, it is more robust to estimate the camera parameters for a camera on a tripod (Motion Type = Rotation).</li> 
+<li> If your camera is not on a tripod (Motion Type = Free Move), record your footage with constant focal length.</li>
+<li> Record your footage with a large field of view (small focal length).</li>
+<li> It is very important to generate long tracks in the background as well as in the foreground and to distribute the feature points well in the images.
+The main reason for failure are insufficient feature point tracks. If the estimation fails, change the parameters of the automatic Correspondence Analysis step in the <a  class="main_frm" href="#controls">Main Control Panel</a>, or add, edit, or delete some feature point tracks manually with the <a  class="main_frm" href="#modellingtools">Modelling Tools</a>.</li>
+<li> The camera motion is estimated in relation to a static scene. Make sure moving objects do not take up large areas in the images.</li> 
+<li> <i>Voodoo Camera Tracker</i> does currently not allow to use a tracking mask to mask out areas with moving object in the images. However, you can manually delete feature point tracks in certain areas of the image with the <a  class="main_frm" href="#modellingtools">Modelling Tools</a>.</li>
+<li> It is not an advantage to use a dolly (except for artistical reasons), because <i>Voodoo Camera Tracker</i> does not constrain the camera motion to a straight line or curve.</li>
+<li>Sometimes at the end of an estimation the <i>Voodoo Camera Tracker</i> asks you
+"The residual error of the estimation is high. Do you want to refine the estimation by bundle adjustment?". If you don't want to answer the question (e.g. if you run the program over night), just select "Bundle adjustment in final estimation" in the <a  class="main_frm" href="#controls">Main Control Panel</a>.</li>
+</ul>
+
+<h2><font color="#000000"><a  class="main_frm" name="cahvmodel">CAHV Camera Model</a></Font></h2>
+
+Parameters of the CAHV camera model:
+<pre>
+(Cx, Cy, Cz)    : CameraPosition [mm]
+(Ax, Ay, Az)    : RotationAxis2  [unit vector]
+(Hx, Hy, Hz)    : RotationAxis0 [pel] (including FocalLength, PixelSizeX, and Principal Point offset) 
+(Vx, Vy, Vz)    : RotationAxis1 [pel] (including FocalLength, PixelSizeY, and Principal Point offset) 
+(K3, K5)        : Radialdistortion  K3 [1/(mm)^2]  K5 [1/(mm)^4]
+(sx, sy)        : PixelSize	[mm/pel]
+(Width, Height) : ImageSize	[pel]
+</pre>
+Internally used parameters:
+<pre>
+(ppx, ppy)      : Principal Point offset [pel]
+f               : Focal Length [mm]
+fov             : Horizontal Field of View [degree] = (2*atan(0.5*Width*sx/f)*180/PI;
+(H0x, H0y, H0z) : RotationAxis0 [unit vector]
+(V0x, V0y, V0z) : RotationAxis1 [unit vector]
+</pre> 
+Image coordinates and 3D coordinates:
+<pre>
+(x, y)          : image coordinates [pel]
+(X, Y, Z)       : 3D coordinates [mm]
+</pre>
+The projection of 3D coordinates in the camera image can be done by
+<pre>
+ [ x' ] =  [ Hx Hy Hz ] [ 1 0 0 -Cx] [ X ]
+ [ y' ] =  [ Vx Vy Vz ] [ 0 1 0 -Cy] [ Y ]
+ [ z' ] =  [ Ax Ay Az ] [ 0 0 1 -Cz] [ Z ]
+                                     [ 1 ]
+</pre>
+or
+<pre>
+ [ x' ] =  [f/sx 0    ppx] [ H0x H0y H0z ] [ 1 0 0 -Cx] [ X ]
+ [ y' ] =  [0    f/sy ppy] [ V0x V0y V0z ] [ 0 1 0 -Cy] [ Y ]
+ [ z' ] =  [0    0    1  ] [ Ax  Ay  Az  ] [ 0 0 1 -Cz] [ Z ]
+                                                        [ 1 ]
+</pre>
+then <code>x = x'/z'</code> and <code>y = y'/z'</code> , if the origin of the image coordinates is in the center of the image,<br>
+or <code>x = x'/z' + 0.5*(Width-1)</code> and <code>y = y'/z' + 0.5*(Height-1)</code> , if the origin of the image coordinates is in the upper left corner.
+
+<h2><font color="#000000"><a  class="main_frm" name="bugs">Bug Report</a></Font></h2>
+<p>
+The <i>Voodoo Camera Tracker</i> is developed for research purpose and has therefore less features than similar commercial products. Please consider buying a commercial product if you need a camera tracker with professional support. However, your experience report is important to us in order to improve the software according to your needs. Please send bugs and hints to Thorsten Thorm&auml;hlen (<a  class="main_frm" target="_top" href="http://www.tnt.uni-hannover.de/~thormae">http://www.tnt.uni-hannover.de/~thormae</a>) or
+Hellward Broszio (<a  class="main_frm" target="_top" href="http://www.tnt.uni-hannover.de/~broszio">http://www.tnt.uni-hannover.de/~broszio</a>). Do not hesitate to contact us in case of any trouble with this software.
+</p>
+
+</body>
+</html>
+

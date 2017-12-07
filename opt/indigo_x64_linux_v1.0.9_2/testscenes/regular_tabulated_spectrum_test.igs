@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+  <camera>
+    <pos>0 -2 0.5</pos>
+    <up>0 0 1</up>
+    <forwards>0 1 0</forwards>
+
+    <aperture_radius>0.001</aperture_radius>
+    <focus_distance>3.0</focus_distance>
+    <aspect_ratio>1.33</aspect_ratio>
+    <sensor_width>0.036</sensor_width>
+    <lens_sensor_dist>0.025</lens_sensor_dist>
+    <white_balance>E</white_balance>
+  </camera>
+
+
+	<tonemapping>
+		<reinhard>
+			<pre_scale>4.0</pre_scale>
+			<post_scale>1.0</post_scale>
+			<!--burn>1.2</burn-->
+		</reinhard>
+	</tonemapping>
+
+
+	<background>
+		<spectrum>
+			<uniform>
+				<value>100000000</value>
+			</uniform>
+		</spectrum>
+	</background>
+
+  <!-- Define a Mesh -->
+  <mesh>
+		<name>mesh1</name>
+
+		<normal_smoothing>false</normal_smoothing>
+
+    <embedded>
+      <expose_uv_set>
+        <index>0</index>
+        <name>albedo</name>
+      </expose_uv_set>
+
+      <vertex pos="-1.5 0 0" normal="0 -1 0" uv0="0 0" />
+      <vertex pos="-1.5 0 2" normal="0 -1 0" uv0="0 1" />
+      <vertex pos="1.5 0 2" normal="0 -1 0" uv0="1 1" />
+      <vertex pos="1.5 0 0" normal="0 -1 0" uv0="1 0" />
+
+      <triangle_set>
+        <material_name>mat1</material_name>
+
+        <tri>0 2 1</tri>
+        <tri>0 3 2</tri>
+      </triangle_set>
+    </embedded>
+  </mesh>
+
+
+	<material>
+		<name>mat1</name>
+		<diffuse>
+			<albedo_spectrum>
+				<regular_tabulated>
+					<start_wavelength>0.4E-06</start_wavelength>
+					<end_wavelength>0.7E-06</end_wavelength>
+					<num_values>10</num_values>
+					<values>
+						1 1 0 0 0 0 0 0 0 0
+					</values>
+				</regular_tabulated>
+			</albedo_spectrum>
+		</diffuse>
+	</material>
+
+	<model>
+		<rotation>
+			<matrix>
+				1 0 0 0 1 0 0 0 1
+			</matrix>
+		</rotation>
+		<pos>0 0 0</pos>
+		<scale>0.5</scale>
+		<mesh_name>mesh1</mesh_name>
+	</model>
+
+
+
+
+
+
+	<!--Ground Plane-->
+  <material>
+    <name>ground</name>
+    <diffuse>
+      <colour>0.7 0.7 0.7</colour>
+    </diffuse>
+  </material>
+
+
+  <mesh>
+    <name>groundmesh</name>
+    <normal_smoothing>false</normal_smoothing>
+    <embedded>
+      <expose_uv_set>
+        <index>0</index>
+        <name>albedo</name>
+      </expose_uv_set>
+
+      <vertex pos="-100 -100 0" normal="0 0 1" uv0="0 0" />
+      <vertex pos="-100 100 0" normal="0 0 1" uv0="0 10000" />
+      <vertex pos="100 100 0" normal="0 0 1" uv0="10000 10000" />
+      <vertex pos="100 -100 0" normal="0 0 1" uv0="10000 0" />
+
+      <triangle_set>
+        <material_name>ground</material_name>
+        <tri>0 1 2</tri>
+        <tri>0 2 3</tri>
+      </triangle_set>
+    </embedded>
+  </mesh>
+
+  <model>
+    <pos>0 0 0</pos>
+    <scale>1.0</scale>
+    <mesh_name>groundmesh</mesh_name>
+  </model>
+</scene>
+    
+
+

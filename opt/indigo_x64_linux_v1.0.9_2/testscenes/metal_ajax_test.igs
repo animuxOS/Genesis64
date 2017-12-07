@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+	<camera>
+		<pos>0 -2 0.6</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 0</forwards>
+
+		<aperture_radius>0.001</aperture_radius>
+		<focus_distance>3.0</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.02</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+	
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.0</pre_scale>
+			<post_scale>1.0</post_scale>
+		</reinhard>
+	</tonemapping>
+
+	<material>
+		<name>white</name>
+		<diffuse>
+			<colour>0.9 0.9 0.9</colour>
+		</diffuse>
+	</material>
+	
+	<!--Ground Plane-->
+	<material>
+		<name>white</name>
+		<diffuse>
+			<colour>0.7 0.7 0.7</colour>
+		</diffuse>
+	</material>
+
+	<!--Ground Plane-->
+	<mesh>
+		<name>mesh1</name>
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<vertex pos="-10 -10 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-10 10 0" normal="0 0 1" uv0="0 10000" />
+			<vertex pos="10 10 0" normal="0 0 1" uv0="10000 10000" />
+			<vertex pos="10 -10 0" normal="0 0 1" uv0="10000 0" />
+
+			<triangle_set>
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>mesh1</mesh_name>
+	</model>
+	
+	<!--plane>
+		<normal>0 0 1</normal>
+		<dist>0</dist>
+
+		<material_name>white</material_name>
+	</plane>
+
+	<plane>
+		<normal>0 -1 0</normal>
+		<dist>-1</dist>
+
+		<material_name>white</material_name>
+	</plane-->
+
+	<rectanglelight>
+		<pos>0.0 -2 1.9</pos>
+		<width>1</width>
+		<height>1</height>
+		
+		<spectrum>
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.004</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+	
+	<rectanglelight>
+		<pos>3 -1 1.9</pos>
+		<width>1</width>
+		<height>1</height>
+		
+		<spectrum>
+			<blackbody>
+				<temperature>4000</temperature>
+				<gain>0.04</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+	
+	
+	
+	<mesh>
+		<name>ajax</name>
+		<normal_smoothing>true</normal_smoothing>
+		<external>
+			<path>..\Ajax_Jotero_com\Ajax_Jotero_com.3ds</path>
+		</external>
+	</mesh>
+	
+	<material>
+		<name>surface</name>
+		
+		<phong>
+			<nk_data>nkdata/ag.nk</nk_data>
+			<exponent>1000</exponent>
+		</phong>
+	</material>
+	
+	<material>
+		<name>default#1</name>
+		
+		<phong>
+			<nk_data>nkdata/cu.nk</nk_data>
+			<exponent>1000</exponent>
+		</phong>
+	</material>
+	
+
+
+	<model>
+		<rotation>
+			<matrix>
+				1 0 0 0 1 0 0 0 1
+			</matrix>
+		</rotation>
+		<pos>-1 -0.8 0</pos>
+		<scale>0.03</scale>
+		<mesh_name>ajax</mesh_name>
+	</model>
+	
+	<material>
+		<name>surface</name>
+		
+		<phong>
+			<nk_data>nkdata/cu.nk</nk_data>
+			<exponent>1000</exponent>
+		</phong>
+	</material>
+
+
+	<model>
+		<rotation>
+			<matrix>
+				1 0 0 0 1 0 0 0 1
+			</matrix>
+		</rotation>
+		<pos>0 -0.95 0</pos>
+		<scale>0.03</scale>
+		<mesh_name>ajax</mesh_name>
+	</model>
+	
+	<material>
+		<name>surface</name>
+		
+		<phong>
+			<nk_data>nkdata/au.nk</nk_data>
+			<exponent>1000</exponent>
+		</phong>
+	</material>
+	
+	<model>
+		<rotation>
+			<matrix>
+				1 0 0 0 1 0 0 0 1
+			</matrix>
+		</rotation>
+		<pos>1 -1.1 0</pos>
+		<scale>0.03</scale>
+		<mesh_name>ajax</mesh_name>
+	</model>
+	
+	
+</scene>
+
+

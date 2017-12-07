@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+	<renderer_settings>
+		<width>400</width>
+		<height>400</height>
+	</renderer_settings>
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.000000</pre_scale>
+			<post_scale>1.000000</post_scale>
+			<burn>6</burn>
+		</reinhard>
+	</tonemapping>
+
+	<camera>
+		<pos>0 -0.12 0</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 0</forwards>
+
+		<aperture_radius>0.001</aperture_radius>
+		<focus_distance>1.000000</focus_distance>
+		<aspect_ratio>1.0</aspect_ratio>
+		<sensor_width>0.02000</sensor_width>
+		<lens_sensor_dist>0.12</lens_sensor_dist>
+		<white_balance>E</white_balance>
+		
+		<autofocus/>
+	</camera>
+	
+
+	<background>
+		<spectrum>  
+			<blackbody>
+				<temperature>5000</temperature>
+				<gain>100000</gain>
+			</blackbody>
+		</spectrum>
+	</background>
+
+	<medium>
+		<name>glass</name>
+
+		<precedence>10</precedence>
+		<basic>
+			<ior>1.5</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<uniform>
+					<value>0</value>
+				</uniform>
+			</absorption_coefficient_spectrum>
+		</basic>
+	</medium>
+
+	<material>
+		<name>glass</name>
+
+		<specular>
+			<transparent>true</transparent>
+			<internal_medium_name>glass</internal_medium_name>
+		</specular>
+	</material>
+
+
+	<material>
+		<name>frosty_glass</name>
+
+		<glossy_transparent>
+			<internal_medium_name>glass</internal_medium_name>
+			<exponent>1000</exponent>
+		</glossy_transparent>
+	</material>
+
+	<sphere>
+		<center>0 0 0</center>
+		<radius>0.01</radius>
+		<material_name>frosty_glass</material_name>
+	</sphere>
+</scene>
+

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+	<renderer_settings>
+		<width>300</width>
+		<height>300</height>
+	</renderer_settings>
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.000000</pre_scale>
+			<post_scale>1.000000</post_scale>
+			<burn>6</burn>
+		</reinhard>
+	</tonemapping>
+
+	<camera>
+		<pos>0 -1 0</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 0</forwards>
+
+		<aperture_radius>0.1000</aperture_radius>
+		<focus_distance>2.000000</focus_distance>
+		<aspect_ratio>1.0</aspect_ratio>
+		<sensor_width>0.035000</sensor_width>
+		<lens_sensor_dist>0.09</lens_sensor_dist>
+		<white_balance>E</white_balance>
+		
+		<autofocus/>
+	</camera>
+	
+
+	<background>
+		<spectrum>  
+			<blackbody>
+				<temperature>5000</temperature>
+				<gain>100000</gain>
+			</blackbody>
+		</spectrum>
+	</background>
+		
+	<medium> 
+		<name>rgb_medium</name> 
+       
+		<precedence>20</precedence> 
+		
+		<basic>
+			<ior>1.0</ior> 
+			<cauchy_b_coeff>0.0</cauchy_b_coeff> 
+			
+				
+			<absorption_coefficient_spectrum>
+				<uniform>
+				  <value>0</value>
+				</uniform>
+			</absorption_coefficient_spectrum> 
+	       
+			<subsurface_scattering> 
+				<scattering_coefficient_spectrum> 
+					<rgb>
+						<rgb>101 105 110</rgb>
+						<gamma>1</gamma>
+					</rgb>
+				</scattering_coefficient_spectrum> 
+				
+				<phase_function> 
+					<henyey_greenstein>
+						<g_spectrum>
+							<rgb>
+								<rgb>0.7 0.6 0.8</rgb>
+								<gamma>1</gamma>
+							</rgb>
+						</g_spectrum>
+					</henyey_greenstein>
+				</phase_function> 
+			</subsurface_scattering> 
+		</basic>
+	</medium> 
+	
+	<medium> 
+		<name>uniform_medium</name> 
+		<precedence>20</precedence> 
+		
+		<basic>
+			<ior>1.0</ior> 
+			<cauchy_b_coeff>0.0</cauchy_b_coeff> 
+			
+				
+			<absorption_coefficient_spectrum>
+				<uniform>
+				  <value>0</value>
+				</uniform>
+			</absorption_coefficient_spectrum> 
+	       
+			<subsurface_scattering> 
+				<scattering_coefficient_spectrum> 
+					<uniform>
+						<value>200</value> 
+					</uniform>
+				</scattering_coefficient_spectrum> 
+				
+				<phase_function>
+					<uniform/>
+				</phase_function>
+			</subsurface_scattering>
+		</basic>
+	</medium> 
+    
+    <material>
+		<name>mat</name>
+
+      <specular>
+         <transparent>true</transparent> 
+         <internal_medium_name>uniform_medium</internal_medium_name> 
+      </specular>
+	</material>
+	
+	<sphere>
+		<center>0 0 0</center>
+		<radius>0.05</radius>
+		<material_name>mat</material_name>
+	</sphere>
+</scene>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

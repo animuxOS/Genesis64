@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+  <renderer_settings>
+    <!-- NOTE: value increased to 1 mm -->
+    <ray_origin_nudge_distance>0.001</ray_origin_nudge_distance>
+  </renderer_settings>
+
+
+	<camera>
+    <!-- Globe has radius 6378135 and is centered at origin -->
+		<pos>0 0 6378137</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 0.2</forwards>
+
+		<focus_distance>2.000000</focus_distance>
+		<aspect_ratio>1.333</aspect_ratio>
+		<aperture_radius>0.001</aperture_radius>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.03</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+	
+	<tonemapping>
+		<linear>
+			<scale>0.2</scale>
+		</linear>
+		<!--reinhard>
+			<pre_scale>5.0</pre_scale>
+			<post_scale>1.0</post_scale>
+			<burn>10</burn>
+		</reinhard-->
+	</tonemapping>
+
+	<skylight>
+		<!--sundir>0 3.0776835371752534025702905760369 1</sundir-->
+		<!--sundir>0.3 1 0.6</sundir-->
+    <sundir>1 1 0.2</sundir>
+		<turbidity>1.8</turbidity>
+    <extra_atmospheric>true</extra_atmospheric>
+	</skylight>
+
+	
+
+	<!--Globe sphere-->
+	<material>
+		<name>globe</name>
+		
+		<diffuse>
+			<albedo_spectrum>
+				<rgb>
+					<rgb>0.4 0.4 0.2</rgb>
+					<gamma>1</gamma>
+				</rgb>
+			</albedo_spectrum>
+		</diffuse>
+	</material>
+	
+	<sphere>
+		<material_name>globe</material_name>
+		<center>0 0 0</center>
+		<radius>6378135</radius>
+	</sphere>
+	
+	
+	<!-- Inner atmosphere (under cloud) sphere -->
+	<medium>
+		<name>inner_atmosphere_medium</name>
+		
+		<precedence>20</precedence>
+		
+		<atmosphere>
+      <turbidity>1.8</turbidity>
+		</atmosphere>
+	</medium>
+	
+	<material>
+		<name>inner_atmosphere_medium_mat</name>
+
+		<specular>
+			<transparent>true</transparent>
+			<internal_medium_name>inner_atmosphere_medium</internal_medium_name>
+		</specular>
+	</material>
+	
+	<!--sphere>
+		<material_name>inner_atmosphere_medium_mat</material_name>
+		<center>0 0 0</center>
+		<radius>6379135</radius>
+	</sphere-->
+	
+	
+	
+	
+	<!--400m thick cloud shell-->
+	<medium>
+		<name>cloud_medium</name>
+		
+		<precedence>10</precedence>
+		
+		<basic>
+			<ior>1.0</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<uniform>
+					<value>0</value>
+				</uniform>
+			</absorption_coefficient_spectrum>
+			
+			
+			<subsurface_scattering>
+				<scattering_coefficient_spectrum>
+					<uniform>
+						<value>0.03</value>
+					</uniform>
+				</scattering_coefficient_spectrum>
+				
+				<phase_function>
+          <!--uniform/-->
+          <henyey_greenstein>
+            <g_spectrum>
+              <uniform>
+                <value>0.844</value>
+              </uniform>
+            </g_spectrum>
+          </henyey_greenstein>
+				</phase_function>
+			</subsurface_scattering>
+		</basic>
+	</medium>
+	
+	<material>
+		<name>cloud_medium_mat</name>
+
+		<specular>
+			<transparent>true</transparent>
+			<internal_medium_name>cloud_medium</internal_medium_name>
+		</specular>
+	</material>
+	
+	<!--sphere>
+		<material_name>cloud_medium_mat</material_name>
+		<center>0 0 0</center>
+		<radius>6379535</radius>
+	</sphere-->
+	
+	
+	
+	<!-- Outer atmospheric shell up to 50km above sea level-->
+	<medium>
+		<name>outer_atmosphere_medium</name>
+		
+		<precedence>2</precedence>
+		
+		<atmosphere>
+			<turbidity>3</turbidity>
+		</atmosphere>
+	</medium>
+	
+	<material>
+		<name>outer_atmosphere_medium_mat</name>
+
+		<specular>
+			<transparent>true</transparent>
+			<internal_medium_name>outer_atmosphere_medium</internal_medium_name>
+		</specular>
+	</material>
+	
+	
+	<sphere>
+		<material_name>outer_atmosphere_medium_mat</material_name>
+		<center>0 0 0</center>
+		<radius>6428135</radius>
+	</sphere>
+
+
+
+
+
+
+
+	<!--material>
+		<name>phong4</name>
+		<phong>
+			<ior>1000</ior>
+			<exponent>10000</exponent>
+			<diffuse_albedo_spectrum>
+				<uniform>
+					<value>0</value>
+				</uniform>
+			</diffuse_albedo_spectrum>
+		</phong>
+	</material>
+		<sphere>
+		<center>0 4 6378136</center>
+		<radius>0.3</radius>
+
+		<material_name>phong4</material_name>
+	</sphere-->
+
+
+
+	
+</scene>

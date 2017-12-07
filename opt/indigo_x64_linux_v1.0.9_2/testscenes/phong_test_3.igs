@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+
+	<camera>
+		<pos>0 -5.2 2.2</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 -0.2</forwards>
+		
+		<focus_distance>2.000000</focus_distance>
+		<aspect_ratio>1.333</aspect_ratio>
+		<aperture_radius>0.003</aperture_radius>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.04</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+		
+		<autofocus/>
+	</camera>
+	
+	<tonemapping>
+		<reinhard>
+			<pre_scale>3.0</pre_scale>
+			<post_scale>1.0</post_scale>
+			<burn>6</burn>
+		</reinhard>
+	</tonemapping>
+	
+	<medium>
+		<name>scattering_medium</name>
+		
+		<basic>
+			<ior>1.5</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<rgb>
+					<rgb>5 1 2</rgb>
+					<gamma>1</gamma>
+				</rgb>
+			</absorption_coefficient_spectrum>			
+		</basic>
+	</medium>
+
+
+
+	<!--TEMP <material>
+		<name>default</name>
+	
+		<glossy_transparent>
+			<exponent>0.1</exponent>
+			<internal_medium_name>scattering_medium</internal_medium_name>
+		</glossy_transparent>
+	</material>-->
+
+
+
+	<material>
+		<name>default</name>
+
+		<phong>
+			<ior>1.5</ior>
+			<diffuse>0.8 0.3 0.3</diffuse>
+			<exponent>30</exponent>
+		</phong>
+	</material>
+
+	<material>
+		<name>spheremat</name>
+
+		<phong>
+			<diffuse>0.0 0.0 0.8</diffuse>
+			<exponent>300</exponent>
+
+			<specular_reflectivity_spectrum>
+				<rgb>
+					<rgb>0.6 0.6 0.6</rgb>
+					<gamma>1</gamma>
+				</rgb>
+			</specular_reflectivity_spectrum>
+		</phong>
+	</material>
+	
+
+	<rectanglelight>
+		<pos>0 0 7.5</pos>
+		<width>17.5</width>
+		<height>10</height>
+		<spectrum>  
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.00001</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+
+
+	<!-- Ground Material -->
+
+	<material>
+		<name>white</name>
+		
+		<phong>
+			<ior>1.5</ior>
+			<diffuse>0.8 0.8 0.8</diffuse>
+			<exponent>1000</exponent>
+		</phong>
+		<!--diffuse>
+			<colour>0.7 0.7 0.7</colour>
+		</diffuse-->
+	</material>
+	
+	<material>
+		<name>checker</name>
+		
+		<diffuse>
+			<colour>1 1 1</colour>
+			
+			<albedo_texture>
+				<uv_set>albedo</uv_set>
+				<path>checker.jpg</path>
+				<exponent>2.3</exponent>
+			</albedo_texture>	
+		</diffuse>    
+	</material>
+
+		
+	<!-- Define a Mesh -->
+	<mesh>
+		<name>mesh1</name>
+	
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+				
+			<expose_uv_set>
+				<index>0</index>
+				<name>bump</name>
+			</expose_uv_set>
+			
+			<vertex pos="-10 -10 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-10 10 0" normal="0 0 1" uv0="0 10" />
+			<vertex pos="10 10 0" normal="0 0 1" uv0="10 10" />
+			<vertex pos="10 -10 0" normal="0 0 1" uv0="10 0" />
+				
+			<triangle_set>						
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+			
+			<vertex pos="-10 3 0" normal="0 -1 1" uv0="0 0" />
+			<vertex pos="-10 3 20" normal="0 -1 1" uv0="0 10" />
+			<vertex pos="10 3 20" normal="0 -1 1" uv0="10 10" />
+			<vertex pos="10 3 0" normal="0 -1 1" uv0="10 0" />
+				
+			<triangle_set>						
+				<material_name>checker</material_name>
+				<tri>4 5 6</tri>
+				<tri>4 6 7</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1</scale>
+		<mesh_name>mesh1</mesh_name>
+	</model>
+	
+
+	
+	<!-- Bar Light -->
+	<mesh>
+		<name>lightmesh1</name>
+	
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+				
+			<vertex pos="-4 0 0.1" normal="0 -1 0" />
+			<vertex pos="4  0 0.1" normal="0 -1 0"  />
+			<vertex pos="4  0 -0.1" normal="0 -1 0" />
+			<vertex pos="-4 0 -0.1" normal="0 -1 0"  />
+				
+			<triangle_set>						
+				<material_name>white</material_name>
+				<tri>0 2 1</tri>
+				<tri>0 3 2</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<!--meshlight>
+		<pos>0 2.5 1</pos>
+		<scale>1</scale>
+		<mesh_name>lightmesh1</mesh_name>
+		
+		<spectrum>
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.0001</gain>
+			</blackbody>
+		</spectrum>
+	</meshlight-->
+	
+	<mesh>
+		<name>statue</name>
+	
+		<normal_smoothing>false</normal_smoothing>
+		<scale>12.0</scale>
+		<external>
+			<path>..\ply\happy_recon\happy_vrip.ply</path>
+			<!--<path>..\ply\happy_recon\happy_vrip_res4.ply</path>-->
+		</external>
+	</mesh>
+	
+	<model>
+		<rotation>
+			<matrix>
+				1 0 0 0 0 -1 0 1 0
+			</matrix>
+		</rotation>
+		<pos>1 0 -0.6</pos>
+		<scale>1</scale>
+		<mesh_name>statue</mesh_name>
+	</model>
+
+
+	<sphere>
+		<center>-1 0 1.2</center>
+		<radius>1.2</radius>
+		<material_name>spheremat</material_name>
+	</sphere>
+	
+</scene>

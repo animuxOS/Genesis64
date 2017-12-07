@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+	<camera>
+		<pos>0 -2 1</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 -0.1</forwards>
+
+		<aperture_radius>0.0001</aperture_radius>
+		<focus_distance>3.0</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.02</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+
+	<tonemapping>
+		<linear>
+			<scale>2000.0</scale>
+		</linear>
+	</tonemapping>
+
+	<!--<rectanglelight>
+		<pos>10 -10 10</pos>
+		<width>0.4</width>
+		<height>0.4</height>
+
+		<spectrum>
+			<blackbody>
+				<temperature>6400</temperature>
+				<gain>0.0001</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>-->
+	<rectanglelight>
+		<pos>0.0 0 3</pos>
+		<width>2.0</width>
+		<height>2.0</height>
+
+		<spectrum>
+			<blackbody>
+				<temperature>6400</temperature>
+				<gain>0.0000001</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+
+	<material>
+		<name>white</name>
+		<diffuse>
+			<colour>0.7 0.7 0.7</colour>
+		</diffuse>
+	</material>
+
+	<!--Ground Plane-->
+	<mesh>
+		<name>mesh1</name>
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<vertex pos="-10 -10 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-10 10 0" normal="0 0 1" uv0="0 10000" />
+			<vertex pos="10 10 0" normal="0 0 1" uv0="10000 10000" />
+			<vertex pos="10 -10 0" normal="0 0 1" uv0="10000 0" />
+
+			<triangle_set>
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>mesh1</mesh_name>
+	</model>
+
+
+	<material>
+		<name>dummy</name>
+
+		<null_material/>
+	</material>
+
+	<sphere>
+		<material_name>dummy</material_name>
+		<center>0 0 0.5</center>
+		<radius>0.45</radius>
+	</sphere>
+
+
+</scene>
+
+

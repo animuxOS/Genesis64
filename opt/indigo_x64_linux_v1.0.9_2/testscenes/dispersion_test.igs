@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+	<camera>
+		<pos>6.481132 -6.507640 5.343665</pos>
+		<up>-0.317370 0.312469 0.895343</up>
+		<forwards>-0.654862 0.610666 -0.3</forwards>
+
+		<aperture_radius>0.001</aperture_radius>
+		<focus_distance>3.0</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.04</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+	
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.0</pre_scale>
+			<post_scale>1.0</post_scale>
+		</reinhard>
+	</tonemapping>
+	
+	<mesh>
+		<name>prism</name>
+		<normal_smoothing>false</normal_smoothing>
+		<external>
+			<path>prism\prism.3ds</path>
+		</external>
+	</mesh>
+	
+	<medium>
+		<name>glass</name>
+
+		<precedence>10</precedence>
+		<basic>
+			<ior>1.7280</ior>
+			<cauchy_b_coeff>0.03</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<uniform>
+					<value>0</value>
+				</uniform>
+			</absorption_coefficient_spectrum>
+		</basic>
+	</medium>
+	
+	<material>
+		<name>prismmat</name>
+		
+		<specular>
+				<transparent>true</transparent>
+				<internal_medium_name>glass</internal_medium_name>
+		</specular>	
+	</material>
+	
+	
+
+	<model>
+		<rotation>
+			<matrix>
+				0.970275 0.239186 0.036835 -0.100456 0.536542 -0.837873 -0.220172 0.809267 0.544621 
+			</matrix>
+		</rotation>
+		<pos>-1.181094 -0.666192 -0.457799</pos>
+		<scale>1.0</scale>
+		
+		<mesh_name>prism</mesh_name>
+	</model>
+	
+	<!--Area Light-->
+	<rectanglelight>
+		<pos>0 0 5</pos>
+		<width>0.1</width>
+		<height>0.1</height>
+		
+		<spectrum>
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.004</gain>
+			</blackbody>
+		</spectrum>		
+	</rectanglelight>
+	
+	<!--Ground Plane-->
+	<material>
+		<name>white</name>
+		
+		<diffuse>
+			<colour>0.6 0.6 0.6</colour>
+		</diffuse>
+	</material>
+	
+	<mesh>
+		<name>groundmesh</name>
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<vertex pos="-30 -30 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-30 30 0" normal="0 0 1" uv0="0 10000" />
+			<vertex pos="30 30 0" normal="0 0 1" uv0="10000 10000" />
+			<vertex pos="30 -30 0" normal="0 0 1" uv0="10000 0" />
+
+			<triangle_set>
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>groundmesh</mesh_name>
+	</model>
+
+</scene>

@@ -1,0 +1,133 @@
+  <HEAD>
+    <TITLE>Voodoo Camera Tracker: A tool for the integration of virtual and real scenes</TITLE>
+  </HEAD>
+  
+  <body class="main_frm" bgcolor="#FFFFFF" text="#000000" link="#008000" vlink="#008000" alink="#008000">
+
+<h2>Download and Installation</h2>
+Copyright (C) 2002-2007 Laboratorium f&uuml;r Informationstechnologie<br>
+<br>
+<p>
+This non-commercial software tool is developed for research purpose at the <a  class="main_frm" target="_top" href="http://www.lfi.uni-hannover.de">Laboratorium f&uuml;r Informationstechnologie</a>,  University of Hannover.  Permission is granted to any individual or institution to use, copy, and distribute this software, provided that this complete copyright and permission notice is maintained, intact, in all copies and supporting documentation. University of Hannover provides this software "as is" without express or implied warranty.
+</p>
+<p>
+Please send bugs and hints to Thorsten Thorm&auml;hlen (<a  class="main_frm" target="_top" href="http://www.tnt.uni-hannover.de/~thormae">http://www.tnt.uni-hannover.de/~thormae</a>), Hellward Broszio (<a  class="main_frm" target="_top" href="http://www.tnt.uni-hannover.de/~broszio">http://www.tnt.uni-hannover.de/~broszio</a>), or use the official <a  class="main_frm" target="_blank" href="http://www.lfi.uni-hannover.de/digilabforum">discussion forum</a>. To receive information about updates to our software you can also join our <a  class="main_frm" href="http://therian.lfi-main.uni-hannover.de/digilabnewsletter/?p=subscribe&id=1">mailing list</a>.
+Your experience report is important to us in order to improve the software
+according to your needs. Do not hesitate to ask for support in case of any trouble with this software.
+</p>
+<hr>
+<b> <font color="#000000">Contents:</font></b>
+<a  class="main_frm" href="#download">[Free Download]</a>&nbsp;&nbsp;    
+<a  class="main_frm" href="#installationlinux">[Installation for Linux]</a>&nbsp;&nbsp; 
+<a  class="main_frm" href="#installationwin32">[Installation for Windows]</a>&nbsp;&nbsp;
+<a  class="main_frm" href="#installationwin32msi">[Installation for Windows - Installer-version]</a>&nbsp;&nbsp;
+<hr>
+<h3> <a  class="main_frm" name="download">Free Download</a></h3>
+<UL>
+<LI><a class="main_frm" href="ftp://ftp.tnt.uni-hannover.de/pub/digilab/voodoo-x86Linux-0.9.4.tar.gz">Voodoo Camera Tracker (Version 0.9.4 beta, x86 binary for Linux)</a>
+<LI><a class="main_frm" href="ftp://ftp.tnt.uni-hannover.de/pub/digilab/voodoo-Win32-0.9.4.zip">Voodoo Camera Tracker (Version 0.9.4 beta, binary for Windows)</a>
+<LI><a class="main_frm" href="ftp://ftp.tnt.uni-hannover.de/pub/digilab/voodoo-Win32-0.9.4.msi">Voodoo Camera Tracker (Version 0.9.4 beta, binary for Windows - Installer-version)</a> 
+</UL>
+
+<h3>Latest changes</h3>
+<UL>
+<LI> added manual editing of feature point tracks</LI>
+<LI> improved the save format for feature point tracks</LI>
+<LI> improved export to textfile </LI>
+<LI> added export to LightWave 3D </LI>
+<LI> fixed bug that caused crash if aspect ratio of image is smaller 1 </LI>
+<LI> added a 'focal length prior' parameter for free-move tracking </LI>
+</UL>
+
+<h3><a  class="main_frm" name="installationlinux">Installation for Linux</a></h3>
+<p>
+Unpack the archive:<BR>
+<BR>
+<code> 
+> cd install-dir<BR>
+> tar -zxvf voodoo-x86Linux-0.9.4.tar.gz<BR>         
+</code> 
+<BR> 
+
+Start the <b>voodoo camera tracker</b> with<BR>
+<p>
+<code> 
+> cd ./voodoo-x86Linux-0.9.4<BR>
+> bin/voodoo
+</code> 
+</p>
+
+The package contains two sample image sequence. The first sequence is taken with a camera on a tripod 
+and demonstrates tracking with the <b>rotation</b> motion model. You can load the first sequence
+with the following command line options
+<p>
+<code> 
+> bin/voodoo -F 0 -L19 -S1 -d1 sample_image_sequence/tripod_rotation/uni.%02d.tga
+</code> 
+</p>
+The second sequence demonstrates tracking with the <b>free move</b> motion model.
+You can load the second sequence with the following command line options
+<p>
+<code> 
+> bin/voodoo -F190 -L210 -S1 -d2 --est-method=FREEMOVE sample_image_sequence/free_move/dredger%03d.tga
+</code> 
+</p>
+
+<p>
+You should be able to execute the binary on any standard x86-based Linux system. We build it on SuSE Linux 10.1.  The application requires <a  class="main_frm" target="_top" href="http://www.opengl.org">OpenGL</a> or <a  class="main_frm" target="_top" href="http://www.mesa3d.org">Mesa</a>.
+</p>
+
+<p>
+These libraries are linked dynamicly:<BR>
+<code> 
+> ldd bin/voodoo<BR>
+        linux-gate.so.1 =>  (0xffffe000)<br>
+        libXext.so.6 => /usr/X11R6/lib/libXext.so.6 (0xb7fc6000)<br>
+        libXt.so.6 => /usr/X11R6/lib/libXt.so.6 (0xb7f76000)<br>
+        libSM.so.6 => /usr/X11R6/lib/libSM.so.6 (0xb7f6d000)<br>
+        libICE.so.6 => /usr/X11R6/lib/libICE.so.6 (0xb7f55000)<br>
+        libX11.so.6 => /usr/X11R6/lib/libX11.so.6 (0xb7e5d000)<br>
+        libpthread.so.0 => /lib/libpthread.so.0 (0xb7e1f000)<br>
+        libGLU.so.1 => /usr/lib/libGLU.so.1 (0xb7da9000)<br>
+        libGL.so.1 => /usr/X11R6/lib/libGL.so.1 (0xb7d24000)<br>
+        libXmu.so.6 => /usr/X11R6/lib/libXmu.so.6 (0xb7d0f000)<br>
+        libXrandr.so.2 => /usr/X11R6/lib/libXrandr.so.2 (0xb7d0c000)<br>
+        libstdc++.so.6 => /usr/lib/libstdc++.so.6 (0xb7c2b000)<br>
+        libm.so.6 => /lib/libm.so.6 (0xb7c06000)<br>
+        libgcc_s.so.1 => /lib/libgcc_s.so.1 (0xb7bfb000)<br>
+        libc.so.6 => /lib/libc.so.6 (0xb7adb000)<br>
+        libdl.so.2 => /lib/libdl.so.2 (0xb7ad7000)<br>
+        /lib/ld-linux.so.2 (0xb7fd5000)<br>
+        libGLcore.so.1 => /usr/X11R6/lib/libGLcore.so.1 (0xb7314000)<br>
+        libnvidia-tls.so.1 => /usr/lib/tls/libnvidia-tls.so.1 (0xb7311000)<br>
+        libXrender.so.1 => /usr/X11R6/lib/libXrender.so.1 (0xb7309000)<br>
+</code>
+</p>
+<h3><a  class="main_frm" name="installationwin32">Installation for Windows</a></h3>
+<UL>
+<LI><h4><a  class="main_frm" name="installationwin32msi">Installation for Windows using the ZIP-file</a></h3>
+	<UL>
+	<LI> <a  class="main_frm" target="_top" href="http://www.winzip.com">UnZIP</a> the archive to any directory you like.
+	<LI> Use the Explorer to go the <code>voodoo-Win32-0.9.4\bin</code> directory.
+	<LI> Start the <b>voodoo camera tracker</b> by running <code>voodoo.exe</code>
+	in the <code>voodoo-Win32-0.9.4\bin</code> directory.
+	</UL>
+ <LI><h4><a  class="main_frm" name="installationwin32msi">Installation for Windows using the installer</a></h3> 
+	<UL> 
+	<LI> Execute the msi installer file and follow the instructions to install the program. 
+	<LI> Start the <b>voodoo camera tracker</b> by using the desktop or start menu shortcut.
+	</UL> 
+ </UL> 
+<p>
+You should be able to install and execute the binary on any win32-based Windows version (95/98/NT/2000/Me/XP/Vista). We build it on Windows XP and also tested it on Windows 98 and Windows 2000. The application requires <a  class="main_frm" target="_top" href="http://www.opengl.org">OpenGL</a>. In contrast to the Linux version the Windows version is limited to load only image sequences in Targa 2.0 format.
+</p>
+</BODY>
+
+</HTML>
+
+
+
+
+
+
+

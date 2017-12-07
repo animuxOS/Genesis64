@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+	<env_map>
+		<!-- Lat/long type map example.  Maps must be .exr files -->
+		<latlong>
+			<path>../exr/uffizi-large.exr</path>
+			<gain>1.0</gain>
+		</latlong>
+	</env_map>
+
+	<camera>
+		<pos>0 -2 1</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 -0.7</forwards>
+
+		<aperture_radius>0.01</aperture_radius>
+		<focus_distance>1.0</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.01</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+	
+	<tonemapping>
+		<reinhard>
+			<pre_scale>3.0</pre_scale>
+			<post_scale>1.0</post_scale>
+		</reinhard>
+	</tonemapping>
+	
+	
+	
+	<!-- Spheres -->
+	<medium>
+		<name>glass</name>
+
+		<precedence>10</precedence>
+		<basic>
+			<ior>1.5</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<uniform>
+					<value>0</value>
+				</uniform>
+			</absorption_coefficient_spectrum>
+		</basic>
+	</medium>
+	
+	<material>
+		<name>glass</name>
+		
+		<specular>
+			<internal_medium_name>glass</internal_medium_name>
+			<transparent>true</transparent>
+		</specular>	
+	</material>
+	
+
+	<sphere>
+		<center>-1.2 -0.8 0.51</center>
+		<radius>0.5</radius>
+
+		<material_name>glass</material_name>
+	</sphere>
+	
+	
+	<material>
+		<name>hiphong</name>
+	
+		<phong>
+			<diffuse>0.0 0.0 0.0</diffuse>
+			<ior>100</ior>
+			<exponent>10000</exponent>
+		</phong>
+	</material>
+	
+	<sphere>
+		<center>0 -0.8 0.51</center>
+		<radius>0.5</radius>
+
+  		<material_name>hiphong</material_name>
+	</sphere>
+	
+	<material>
+		<name>lowphong</name>
+	
+		<phong>
+			<diffuse>0.0 0.0 0.0</diffuse>
+			<ior>1.5</ior>
+			<exponent>100</exponent>
+		</phong>
+	</material>
+	
+	
+	<sphere>
+		<center>1.2 -0.8 0.51</center>
+		<radius>0.5</radius>
+
+        <material_name>lowphong</material_name>		
+	</sphere>
+
+</scene>

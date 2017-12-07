@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+	<skylight>
+		<sundir>0 0.3 1</sundir>
+		<turbidity>2</turbidity>
+	</skylight>
+	
+	<!--
+	 Sunny 16 rule:  
+		f/16, iso 100, shutter speed 1/100s should look good.
+
+		let FOV = 45 degrees
+		then lens_sensor_dist = 0.0434558m
+
+		aperture_radius = lens_sensor_dist / 16*2
+		= 0.001357995
+		
+	 -->
+
+	<camera>
+		<pos>0 -3 0.7</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 -0.3</forwards>
+
+		<aperture_radius>0.001357995</aperture_radius>
+		<focus_distance>1.5</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.0434558</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+
+		<exposure_duration>0.01</exposure_duration>
+	</camera>
+	
+	<tonemapping>
+		<camera>
+			<ev_adjust>0.0</ev_adjust>
+			<film_iso>100.0</film_iso>
+			<response_function_path>data/camera_response_functions/dscs315.txt</response_function_path>
+		</camera>
+	</tonemapping>
+	
+	
+	<material>
+		<name>default</name>
+		
+		<phong>
+			<diffuse>1 1 1</diffuse>
+			<ior>1.5</ior>
+			<exponent>10000</exponent>
+		</phong>
+		<diffuse>
+			<albedo_spectrum>
+				<uniform>
+					<value>1</value>
+				</uniform>
+			</albedo_spectrum>		  
+		</diffuse>
+	</material>
+	
+
+	
+	
+	<!--Ground Plane-->
+	<material>
+		<name>white</name>
+		
+		<diffuse>
+			<colour>0.1 0.3 0.1</colour>
+		</diffuse>
+	</material>
+	
+	<mesh>
+		<name>groundmesh</name>
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<vertex pos="-10 -10 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-10 10 0" normal="0 0 1" uv0="0 1000" />
+			<vertex pos="10 10 0" normal="0 0 1" uv0="1000 1000" />
+			<vertex pos="10 -10 0" normal="0 0 1" uv0="1000 0" />
+
+			<triangle_set>
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>groundmesh</mesh_name>
+	</model>
+
+
+
+	<material>
+		<name>sphere_mat</name>
+
+		<!--diffuse>
+			<albedo_spectrum>
+				<uniform>
+					<value>
+						0.6
+					</value>
+				</uniform>
+			</albedo_spectrum>
+		</diffuse-->
+
+		<phong>
+			<diffuse>0 0 0</diffuse>
+			<ior>100</ior>
+			<exponent>100000</exponent>
+		</phong>
+	</material>
+
+	<sphere>
+		<center>0 0 0.3</center>
+		<radius>0.3</radius>
+		<material_name>sphere_mat</material_name>
+	</sphere>
+</scene>

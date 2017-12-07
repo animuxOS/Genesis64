@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+	<camera>
+		<pos>0 -2 0.6</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 0</forwards>
+
+		<aperture_radius>0.001</aperture_radius>
+		<focus_distance>3.0</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.02</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+	
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.0</pre_scale>
+			<post_scale>1.0</post_scale>
+		</reinhard>
+	</tonemapping>
+
+	<material>
+		<name>white</name>
+		<diffuse>
+			<colour>0.9 0.9 0.9</colour>
+		</diffuse>
+	</material>
+	
+	<!--Ground Plane-->
+	<mesh>
+		<name>mesh1</name>
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<vertex pos="-10 -10 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-10 10 0" normal="0 0 1" uv0="0 10000" />
+			<vertex pos="10 10 0" normal="0 0 1" uv0="10000 10000" />
+			<vertex pos="10 -10 0" normal="0 0 1" uv0="10000 0" />
+
+			<triangle_set>
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>mesh1</mesh_name>
+	</model>
+	
+	
+	<material>
+		<name>back</name>
+		<diffuse>
+			<colour>0.9 0.1 0.1</colour>
+		</diffuse>
+	</material>
+
+	<!--plane>
+		<normal>0 -1 0</normal>
+		<dist>-1</dist>
+
+		<material_name>back</material_name>
+	</plane-->
+	<mesh>
+		<name>mesh2</name>
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<vertex pos="-10 1 -10" normal="0 -1 0" uv0="0 0" />
+			<vertex pos="-10 1 10" normal="0 -1 0" uv0="0 10000" />
+			<vertex pos="10 1 10" normal="0 -1 0" uv0="10000 10000" />
+			<vertex pos="10 1 -10" normal="0 -1 0" uv0="10000 0" />
+
+			<triangle_set>
+				<material_name>back</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>mesh2</mesh_name>
+	</model>
+
+	<rectanglelight>
+		<pos>0.0 -2 1.9</pos>
+		<width>1</width>
+		<height>1</height>
+		
+		<spectrum>
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.004</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+	
+	<rectanglelight>
+		<pos>3 -1 1.9</pos>
+		<width>1</width>
+		<height>1</height>
+		
+		<spectrum>
+			<blackbody>
+				<temperature>4000</temperature>
+				<gain>0.04</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+
+
+	<medium>
+		<name>medium1</name>
+		
+		<basic>
+			<ior>1.0</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<uniform><value>0</value></uniform>
+			</absorption_coefficient_spectrum>
+		</basic>
+	</medium>
+	
+	<material>
+		<name>glass1</name>
+		
+		<specular>
+			<transparent>true</transparent>
+			<internal_medium_name>medium1</internal_medium_name>
+		</specular>
+	</material>
+	
+	
+	<medium>
+		<name>medium2</name>
+		
+		<basic>
+			<ior>1.333</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<uniform><value>0</value></uniform>
+			</absorption_coefficient_spectrum>
+		</basic>
+	</medium>
+	
+	<material>
+		<name>glass2</name>
+		
+		<specular>
+			<transparent>true</transparent>
+			<internal_medium_name>medium2</internal_medium_name>
+		</specular>
+	</material>
+	
+	
+	
+	<medium>
+		<name>medium3</name>
+		
+		<basic>
+			<ior>1.5</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<uniform><value>0</value></uniform>
+			</absorption_coefficient_spectrum>
+		</basic>
+	</medium>
+	
+	<material>
+		<name>glass3</name>
+		
+		<specular>
+			<transparent>true</transparent>
+			<internal_medium_name>medium3</internal_medium_name>
+		</specular>
+	</material>
+	
+	
+	<medium>
+		<name>medium4</name>
+		
+		<basic>
+			<ior>2</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<uniform><value>0</value></uniform>
+			</absorption_coefficient_spectrum>
+		</basic>
+	</medium>
+	
+	<material>
+		<name>glass4</name>
+		
+		<specular>
+			<transparent>true</transparent>
+			<internal_medium_name>medium4</internal_medium_name>
+		</specular>
+	</material>
+	
+	
+	<sphere>
+		<center>-1.2 0 0.31</center>
+		<radius>0.3</radius>
+
+		<material_name>glass1</material_name>
+	</sphere>
+	
+	<sphere>
+		<center>-0.4 0 0.31</center>
+		<radius>0.3</radius>
+
+		<material_name>glass2</material_name>
+	</sphere>
+	
+	<sphere>
+		<center>0.4 0 0.31</center>
+		<radius>0.3</radius>
+
+		<material_name>glass3</material_name>
+	</sphere>
+	
+	<sphere>
+		<center>1.2 0 0.31</center>
+		<radius>0.3</radius>
+
+		<material_name>glass4</material_name>
+	</sphere>
+	
+	
+</scene>
+
+

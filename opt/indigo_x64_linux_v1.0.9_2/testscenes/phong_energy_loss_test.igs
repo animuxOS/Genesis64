@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+	
+	<camera>
+		<pos>0 -1 0</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 0</forwards>
+
+		<aperture_radius>0.0001</aperture_radius>
+		<focus_distance>2.000000</focus_distance>
+		<aspect_ratio>1.0</aspect_ratio>
+		<sensor_width>0.035000</sensor_width>
+		<lens_sensor_dist>0.09</lens_sensor_dist>
+		<white_balance>E</white_balance>
+		
+		<autofocus/>
+	</camera>
+	
+	<renderer_settings>
+		<width>300</width>
+		<height>300</height>
+	</renderer_settings>
+	<tonemapping>
+		<reinhard>
+			<pre_scale>4.000000</pre_scale>
+			<post_scale>1.000000</post_scale>
+			<burn>6</burn>
+		</reinhard>
+	</tonemapping>
+
+
+	<background>
+		<spectrum>  
+			<blackbody>
+				<temperature>5000</temperature>
+				<gain>1</gain>
+			</blackbody>
+		</spectrum>
+	</background>
+		
+
+
+
+	<material>
+		<name>phong</name>
+		<phong>
+			<ior>10000</ior>
+			<exponent>1000</exponent>
+			<diffuse>0 0 0</diffuse>
+		</phong>
+	</material>
+    
+	
+	<sphere>
+		<center>0 0 0</center>
+		<radius>0.14</radius>
+		<material_name>phong</material_name>
+	</sphere>
+</scene>

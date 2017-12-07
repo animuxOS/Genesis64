@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+	<camera>
+		<pos>3.7 0 1</pos>
+		<up>0 0 1</up>
+		<forwards>-1 0 0</forwards>
+
+		<aperture_radius>0.01</aperture_radius>
+		<focus_distance>3.0</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.035</lens_sensor_dist>
+		<white_balance>D50</white_balance>
+	</camera>
+	
+	<tonemapping>
+		<reinhard>
+			<pre_scale>4.0</pre_scale>
+			<post_scale>1.0</post_scale>
+			<burn>6.0</burn>
+		</reinhard>
+	</tonemapping>
+	
+	<skylight>
+		<sundir>0.5 -0.3 1</sundir>
+		<turbidity>2</turbidity>
+	</skylight>
+	
+		
+	<!--Ground Plane-->
+	<material>
+		<name>white</name>
+		<diffuse>
+			<colour>0.7 0.7 0.7</colour>
+		</diffuse>
+	</material>
+	
+	
+	<material>
+		<name>Preview</name>
+		<diffuse>
+			<colour>0.7 0.7 0.7</colour>
+		</diffuse>
+	</material>
+	
+	<material>
+		<name>nails</name>
+		<diffuse>
+			<colour>0.7 0.7 0.7</colour>
+		</diffuse>
+	</material>
+
+	<material>
+		<name>skin</name>
+		<diffuse>
+			<colour>0.7 0.7 0.7</colour>
+		</diffuse>
+	</material>
+		
+	<mesh>
+		<name>test_mesh</name>
+		<normal_smoothing>false</normal_smoothing>
+		
+		<scale>1</scale>
+		<external>
+			<path>../obj/hand/hand_00.obj</path>
+		</external>
+	</mesh>
+	
+	<model>
+		<pos>0 0 0</pos>
+		<scale>3</scale>
+		<rotation>
+			<matrix>
+				1 0 0 0 0 -1 0 1 0
+			</matrix>
+		</rotation>
+		<mesh_name>test_mesh</mesh_name>
+	</model>
+</scene>	
+	
+	
+
+
+
+

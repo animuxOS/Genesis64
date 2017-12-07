@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+	<renderer_settings>
+		<metropolis>false</metropolis>
+		<bidirectional>true</bidirectional>
+
+		<downsize_filter>
+			<!--<box/>-->
+			<mn_cubic>
+				<ring>0.2</ring>
+				<blur>0.6</blur>
+			</mn_cubic>
+
+			<!--<gaussian></gaussian>-->
+		</downsize_filter>
+
+		<super_sample_factor>2</super_sample_factor>
+
+		<aperture_diffraction>true</aperture_diffraction>
+		<post_process_diffraction>true</post_process_diffraction>
+	</renderer_settings>
+</config>

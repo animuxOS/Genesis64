@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.000000</pre_scale>
+			<post_scale>1.000000</post_scale>
+			<burn>1000</burn>
+		</reinhard>
+	</tonemapping>
+
+	<camera>
+		<pos>0 -0.3 0.0</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 0</forwards>
+
+		<aperture_radius>0.001000</aperture_radius>
+		<focus_distance>2.000000</focus_distance>
+		<aspect_ratio>1.33333</aspect_ratio>
+		<sensor_width>0.035000</sensor_width>
+		<lens_sensor_dist>0.06</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+
+		<autofocus/>
+	</camera>
+
+
+	<rectanglelight>
+		<pos>2 -3 2</pos>
+		<width>0.4</width>
+		<height>0.4</height>
+
+		<spectrum>
+			<blackbody>
+				<temperature>6400</temperature>
+				<gain>0.001</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+
+	<rectanglelight>
+		<pos>-2 3 2</pos>
+		<width>0.4</width>
+		<height>0.4</height>
+
+		<spectrum>
+			<blackbody>
+				<temperature>6400</temperature>
+				<gain>0.001</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+	
+	
+	<!-- Define the needed media -->
+	
+	
+	<medium>
+		<name>epidermis</name>
+		<precedence>2</precedence>
+	
+		<epidermis>
+			<melanin_fraction>0.02</melanin_fraction>
+			<melanin_type_blend>0.25</melanin_type_blend>
+		</epidermis>
+	</medium>
+	
+	<medium>
+		<name>dermis</name>
+		<precedence>3</precedence>
+	
+		<dermis>
+			<hemoglobin_fraction>0.05</hemoglobin_fraction>
+		</dermis>
+	</medium>
+    
+    <material>
+		<name>outerboundary</name>
+
+      <specular>
+         <transparent>true</transparent> 
+         <internal_medium_name>epidermis</internal_medium_name> 
+      </specular>
+	</material>
+	
+	
+	
+	
+	<mesh>
+		<name>hand</name>
+		<normal_smoothing>false</normal_smoothing>
+		<scale>0.0005</scale>
+		<external>
+			<path>..\cyberware_scans\female2_100\female2_100.obj</path>
+		</external>
+	</mesh>
+	
+	<!--material>
+		<name>default</name>
+		
+		<diffuse>
+			<colour>1 1 1</colour>
+		</diffuse>
+	</material-->
+	
+	<material>
+		<name>default</name>
+
+      <specular>
+         <transparent>true</transparent> 
+         <internal_medium_name>dermis</internal_medium_name> 
+      </specular>
+	</material>
+	
+	<model>
+		<rotation>
+			<!--matrix>
+				1 0 0 0 0 -1 0 1 0
+			</matrix-->
+			<matrix>
+				1 0 0 0 1 0 0 0 1
+			</matrix>
+		</rotation>
+		<pos>0 0 0</pos>
+		<scale>1</scale>
+		
+		<mesh_name>hand</mesh_name>
+	</model>
+</scene>
+
+
+
+
+
+
+
+
+
+

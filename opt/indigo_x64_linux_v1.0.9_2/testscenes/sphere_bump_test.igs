@@ -1,0 +1,94 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.0</pre_scale>
+			<post_scale>1.0</post_scale>
+			<burn>100</burn>
+		</reinhard>
+	</tonemapping>
+
+	<camera>
+		<pos>0 -5.2 2.5</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 -0.3</forwards>
+		
+		<focus_distance>2.000000</focus_distance>
+		<aspect_ratio>1.333</aspect_ratio>
+		<aperture_radius>0.001</aperture_radius>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.04</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+
+	<rectanglelight>
+		<pos>7 0 7.5</pos>
+		<width>3</width>
+		<height>3</height>
+		<spectrum>  
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.00001</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+
+
+	<material>
+		<name>subject_mat</name>
+		
+		
+		<diffuse>
+			<albedo_spectrum>
+				<uniform>
+					<value>
+						0.8
+					</value>
+				</uniform>
+			</albedo_spectrum>
+			<bump_map>
+				<uv_set>default</uv_set>
+				<path>indigo.jpg</path>
+				<b>0.001</b>
+				<exponent>2.2</exponent>
+			</bump_map>
+		</diffuse>
+	</material>
+	
+	<material>
+		<name>subject_mat2</name>
+		
+		
+		<diffuse>
+			<albedo_spectrum>
+				<uniform>
+					<value>
+						0.8
+					</value>
+				</uniform>
+			</albedo_spectrum>
+			<bump_map>
+				<uv_set>default</uv_set>
+				<path>spherebump.jpg</path>
+				<b>0.01</b>
+				<exponent>2.2</exponent>
+			</bump_map>
+		</diffuse>
+	</material>
+	
+	<sphere>
+		<center>-1 0 1</center>
+		<radius>1</radius>
+		<material_name>subject_mat</material_name>
+	</sphere>
+	
+	<sphere>
+		<center>1 0 1</center>
+		<radius>1</radius>
+		<material_name>subject_mat2</material_name>
+	</sphere>
+
+</scene>

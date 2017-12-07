@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<scene>
+
+	<!--
+	This scene uses the XYZ RGB Dragon model from 
+	http://graphics.stanford.edu/data/3Dscanrep/
+	
+	direct link: http://graphics.stanford.edu/data/3Dscanrep/xyzrgb/xyzrgb_dragon.ply.gz
+	You'll need to put it in a directory called '..\ply\', or edit the path below.
+	-->
+
+	<camera>
+		<pos>0 5 1.0</pos>
+		<up>0 0 1</up>
+		<forwards>0 -1 -0.1</forwards>
+
+		<aperture_radius>0.004</aperture_radius>
+		<focus_distance>3.0</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.035</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+		
+		<autofocus/>
+	</camera>
+	
+
+	<skylight>
+		<sundir>0.6 0 1</sundir>
+		<turbidity>2</turbidity>
+	</skylight>
+
+
+	<tonemapping>
+		<reinhard>
+			<pre_scale>5.0</pre_scale>
+			<post_scale>1.0</post_scale>
+			<post_scale>6.0</post_scale>
+		</reinhard>
+	</tonemapping>
+	
+	<material>
+		<name>white</name>
+		<diffuse>
+			<colour>0.8 0.8 0.8</colour>
+		</diffuse>
+	</material>
+
+	<!--Ground Plane-->
+	<mesh>
+		<name>groundmesh</name>
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<vertex pos="-4 -4 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-4 4 0" normal="0 0 1" uv0="0 10000" />
+			<vertex pos="4 4 0" normal="0 0 1" uv0="10000 10000" />
+			<vertex pos="4 -4 0" normal="0 0 1" uv0="10000 0" />
+
+			<triangle_set>
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+
+	<!--model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>groundmesh</mesh_name>
+	</model-->
+
+	
+	
+
+	
+	
+	<!-- Define the mesh once -->
+	<mesh>
+		<name>hipolymesh</name>
+		<scale>0.015</scale>
+		<normal_smoothing>false</normal_smoothing>
+		<external>
+			<path>..\ply\xyzrgb_dragon.ply</path>
+		</external>
+	</mesh>
+	
+	<material>
+		<name>default</name>
+		<phong>
+			<diffuse>0.4 0.4 0.9</diffuse>
+			<ior>1.4</ior>
+			<exponent>1000</exponent>
+		</phong>
+	</material>
+	
+	<model>
+		<rotation>
+			<matrix>
+				1 0 0 0 0 -1 0 1 0
+			</matrix>
+		</rotation>
+		<pos>0 0 0.6</pos>
+		<scale>1.0</scale>
+		
+		<mesh_name>hipolymesh</mesh_name>
+	</model>
+	
+	
+	<material>
+		<name>default</name>
+		<diffuse>
+			<colour>0.9 0.4 0.4</colour>
+		</diffuse>
+	</material>
+
+	
+	<model>
+		<rotation>
+			<matrix>
+				1 0 0 0 0 -1 0 1 0
+			</matrix>
+		</rotation>
+		<pos>-2 -1.5 0.6</pos>
+		<scale>1.0</scale>
+		
+		<mesh_name>hipolymesh</mesh_name>
+	</model>
+	
+		
+	<material>
+		<name>default</name>
+		<diffuse>
+			<colour>0.4 0.9 0.4</colour>
+		</diffuse>
+	</material>
+	
+	<model>
+		<rotation>
+			<matrix>
+				1 0 0 0 0 -1 0 1 0
+			</matrix>
+		</rotation>
+		<pos>2 1.5 0.6</pos>
+		<scale>1.0</scale>
+		
+		<mesh_name>hipolymesh</mesh_name>
+	</model>
+	
+	
+	
+
+</scene>
+
+

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+	<background>
+		<spectrum>
+			<!--blackbody>
+				<temperature>6500</temperature>
+				<gain>0.5</gain>
+			</blackbody-->
+			<uniform>
+				<value>100</value>
+			</uniform>
+		</spectrum>
+	</background>
+
+	<camera>
+		<pos>0 -10 1</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 0</forwards>
+
+		<aperture_radius>0.0001</aperture_radius>
+		<focus_distance>10000.0</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.12</lens_sensor_dist>
+		<white_balance>E</white_balance>
+	</camera>
+	
+	<tonemapping>
+		<reinhard>
+			<pre_scale>5.0</pre_scale>
+			<post_scale>1.0</post_scale>
+			<burn>9</burn>
+		</reinhard>
+		<!--linear>
+			<scale>200.0</scale>
+		</linear-->
+	</tonemapping>
+	
+	
+	<material>
+		<name>white</name>
+		<diffuse>
+			<colour>0.8 0.8 0.8</colour>
+		</diffuse>
+	</material>
+
+	<material>
+		<name>mat1</name>	
+						
+		<diffuse>
+			<albedo_spectrum>
+				<uniform>
+					<value>1.0</value>
+				</uniform>
+			</albedo_spectrum>
+			
+			<!--albedo_texture>
+				<uv_set>albedo</uv_set>
+				<path>../_peacock__by_darkbecky.jpg</path>
+				<path>ColorChecker_sRGB_from_Ref.bmp</path>
+				<path>linear_gradient.png</path>
+				<exponent>2.2</exponent>
+				<a>0</a>
+				<b>1</b>
+				<c>0</c>
+			</albedo_texture-->
+		</diffuse>
+	</material>
+
+
+	<!-- Define a Mesh -->
+	<mesh>
+		<name>mesh1</name>
+		
+		<normal_smoothing>true</normal_smoothing>
+	
+		<!-- define an 'embedded' nesh instead of loading a .3ds file -->
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>				
+
+			<vertex pos="-1.5 0 0" normal="0 -1 0" uv0="0 0" />
+			<vertex pos="-1.5 0 2" normal="0 -1 0" uv0="0 1" />
+			<vertex pos="1.5 0 2" normal="0 -1 0" uv0="1 1" />
+			<vertex pos="1.5 0 0" normal="0 -1 0" uv0="1 0" />
+
+			<triangle_set>						
+				<material_name>mat1</material_name>
+				
+				<!-- Define the triangles by giving the indices of the vertices they are composed of -->
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>			
+		</embedded>
+	</mesh>	
+	
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<rotation>
+			<matrix>
+				1 0 0 0 1 0 0 0 1
+			</matrix>
+		</rotation>
+		
+		<!-- Use the mesh defined above called 'mesh1' -->
+		<mesh_name>mesh1</mesh_name>
+	</model>
+
+</scene>	
+	
+	
+
+
+
+

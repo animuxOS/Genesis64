@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.0</pre_scale>
+			<post_scale>1.0</post_scale>
+		</reinhard>
+	</tonemapping>
+
+	<camera>
+		<pos>0 -7.2 2.5</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 -0.3</forwards>
+
+		<focus_distance>2.000000</focus_distance>
+		<aspect_ratio>1.333</aspect_ratio>
+		<aperture_radius>0.0001</aperture_radius>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.04</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+
+	<background>
+		<spectrum>  
+			<!--blackbody>
+				<temperature>5000</temperature>
+				<gain>0.0001</gain>
+			</blackbody-->
+			<rgb>
+				<rgb>0 0 6</rgb>
+        <gamma>1</gamma>
+			</rgb>
+		</spectrum>
+	</background>
+
+	<rectanglelight>
+		<pos>8 -8 7.5</pos>
+		<width>1</width>
+		<height>1</height>
+		<spectrum>  
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.0004</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+	
+
+
+	<!-- Ground Material -->
+	<material>
+		<name>checker</name>
+
+		<phong>
+			<diffuse>1 1 1</diffuse>
+			<exponent>1000</exponent>
+			<ior>1.5</ior>
+
+			<albedo_texture>
+				<uv_set>albedo</uv_set>
+				<path>checker.jpg</path>
+				<exponent>2.3</exponent>
+			</albedo_texture>
+		</phong>
+	</material>
+
+	<!-- Define a Mesh -->
+	<mesh>
+		<name>groundmesh</name>
+
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<expose_uv_set>
+				<index>0</index>
+				<name>bump</name>
+			</expose_uv_set>
+
+			<vertex pos="-10000 -10000 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-10000 10000 0" normal="0 0 1" uv0="0 10000" />
+			<vertex pos="10000 10000 0" normal="0 0 1" uv0="10000 10000" />
+			<vertex pos="10000 -10000 0" normal="0 0 1" uv0="10000 0" />
+
+			<triangle_set>
+				<material_name>checker</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+
+		</embedded>
+	</mesh>
+
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>groundmesh</mesh_name>
+	</model>
+
+
+	<material>
+		<name>wallmat</name>
+
+		<phong>
+			<diffuse>1 1 1</diffuse>
+			<exponent>1000</exponent>
+			<ior>1.5</ior>
+		</phong>
+	</material>
+
+	<plane>
+		<normal>1 0 0</normal>
+		<dist>-2.5</dist>
+		
+		<material_name>wallmat</material_name>
+	</plane>
+
+
+	<material>
+		<name>phong1</name>
+		<phong>
+			<ior>100</ior>
+			<exponent>1000</exponent>
+			<diffuse>1 1 1</diffuse>
+		</phong>	   
+	</material>
+
+	<material>
+		<name>phong2</name>
+		<phong>
+			<ior>100</ior>
+			<exponent>1000</exponent>
+			<diffuse>0 0 0</diffuse>
+		</phong>
+	</material>
+
+	<material>
+		<name>phong3</name>
+		<phong>
+			<ior>1.5</ior>
+			<exponent>100</exponent>
+			<diffuse>0.7 0.3 0</diffuse>
+		</phong>
+	</material>
+
+	<material>
+		<name>phong4</name>
+		<phong>
+			<exponent>10000</exponent>
+			
+			<nk_data>nkdata/au.nk</nk_data>	
+		</phong>
+	</material>
+	
+	<material>
+		<name>phong5</name>
+		<phong>
+			<ior>1.5</ior>
+			<exponent>1000</exponent>
+			<diffuse>1 1 1</diffuse>
+		</phong>
+	</material>
+
+	<sphere>
+		<center>-1.7 0.0 0.51</center>
+		<radius>0.6</radius>
+
+		<material_name>phong1</material_name>
+	</sphere>
+
+	<sphere>
+		<center>-0.6 0.0 0.51</center>
+		<radius>0.6</radius>
+
+		<material_name>phong2</material_name>
+	</sphere>
+
+	<sphere>
+		<center>0.6 0.0 0.51</center>
+		<radius>0.6</radius>
+
+		<material_name>phong3</material_name>
+	</sphere>
+
+	<sphere>
+		<center>1.7 0.0 0.51</center>
+		<radius>0.6</radius>
+
+		<material_name>phong4</material_name>
+	</sphere>
+	
+	<sphere>
+		<center>2.8 0.0 0.51</center>
+		<radius>0.6</radius>
+
+		<material_name>phong5</material_name>
+	</sphere>
+</scene>

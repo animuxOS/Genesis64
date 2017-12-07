@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+	<renderer_settings>
+		<width>480</width>
+		<height>480</height>
+	</renderer_settings>
+
+
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.0</pre_scale>
+			<post_scale>1.0</post_scale>
+		</reinhard>
+		<!--linear>
+			<scale>200.0</scale>
+		</linear-->
+	</tonemapping>
+
+		
+	<medium>
+		<name>medium1</name>
+		
+		<basic>
+			<ior>1.5</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<absorption_coefficient_spectrum>
+				<uniform>
+					<value>0</value>
+				</uniform>
+			</absorption_coefficient_spectrum>
+		</basic>
+	</medium>
+	
+	<!--material>
+		<name>subject_mat</name>
+		
+		
+		<glossy_transparent>
+			<internal_medium_name>medium1</internal_medium_name>
+			<exponent>10000</exponent>
+			
+			<bump_map>
+				<uv_set>bump</uv_set>
+				<path>spherebump.jpg</path>
+				<b>0.01</b>
+				<exponent>2.2</exponent>
+			</bump_map>
+		</glossy_transparent>
+	</material-->
+	
+	<material>
+		<name>subject_mat</name>
+		
+		
+		<diffuse>
+			<colour>0.8 0.8 0</colour>
+			<bump_map>
+				<uv_set>bump</uv_set>
+				<path>spherebump.jpg</path>
+				<b>0.1</b>
+				<exponent>2.2</exponent>
+			</bump_map>
+		</diffuse>
+	</material>
+
+
+<!--specular>
+			<transparent>true</transparent>
+			<ior>1.5</ior>
+			<cauchy_b_coeff>0.0</cauchy_b_coeff>
+			<rgb_absorptivity>0 0 0</rgb_absorptivity>
+		</specular-->
+		
+		<!--concrete-->
+		
+		<!--phong>
+			<diffuse>0.7 0.7 0.7</diffuse>
+			<specular>0.04 0.04 0.04</specular>
+			<fresnel_scale>0.2</fresnel_scale>
+			<exponent>1000</exponent>
+			
+			<albedo_texture>
+				<uv_set>albedo</uv_set>
+				<path>curves1.jpg</path>
+				<gain>1.0</gain>
+				<exponent>2.0</exponent>
+			</albedo_texture>		
+		</phong-->
+		
+		<!--phong>
+			<nk_data>nkdata/al.nk</nk_data>
+			<exponent>100000.0</exponent>
+			<fresnel_scale>1.0</fresnel_scale>
+			
+			<bump_map>
+				<uv_set>bump</uv_set>
+				<path>CircularWear.jpg</path>
+				<gain>10.0</gain>
+				<exponent>1.0</exponent>
+			</bump_map>
+			
+			<albedo_texture>
+				<uv_set>bump</uv_set>
+				<path>CircularWear.jpg</path>
+				<gain>10.0</gain>
+				<exponent>1.0</exponent>
+			</albedo_texture>
+			
+			
+		</phong-->
+		
+		<!--phong>
+			<nk_data>nkdata/au.nk</nk_data>
+			<exponent>100000.0</exponent>
+			<fresnel_scale>1.0</fresnel_scale>
+		</phong-->
+
+	<camera>
+		<pos>0 -5.2 2.5</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 -0.3</forwards>
+		
+		<focus_distance>2.000000</focus_distance>
+		<aspect_ratio>1</aspect_ratio>
+		<aperture_radius>0.001</aperture_radius>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.04</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+
+	<rectanglelight>
+		<pos>0 0 7.5</pos>
+		<width>17.5</width>
+		<height>10</height>
+		<spectrum>  
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.00001</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+
+
+	<!-- Ground Material -->
+
+	<material>
+		<name>white</name>
+		
+		<diffuse>
+			<colour>1 1 1</colour>
+		</diffuse>    
+	</material>
+	
+	<material>
+		<name>checker</name>
+		
+		<diffuse>
+			<colour>1 1 1</colour>
+			
+			<albedo_texture>
+				<uv_set>albedo</uv_set>
+				<path>checker.jpg</path>
+				<b>1.0</b>
+				<exponent>2.3</exponent>
+			</albedo_texture>	
+		</diffuse>    
+	</material>
+
+	<!-- MATERIAL sphere -->
+
+	<sphere>
+		<center>1.2 0 1</center>
+		<radius>1</radius>
+		<material_name>subject_mat</material_name>
+	</sphere>
+
+	
+		
+	<!-- Define a Mesh -->
+	<mesh>
+		<name>mesh1</name>
+	
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+				
+			<expose_uv_set>
+				<index>0</index>
+				<name>bump</name>
+			</expose_uv_set>
+			
+			<vertex pos="-10 -10 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-10 10 0" normal="0 0 1" uv0="0 10" />
+			<vertex pos="10 10 0" normal="0 0 1" uv0="10 10" />
+			<vertex pos="10 -10 0" normal="0 0 1" uv0="10 0" />
+				
+			<triangle_set>						
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+			
+			<vertex pos="-10 3 0" normal="0 -1 1" uv0="0 0" />
+			<vertex pos="-10 3 20" normal="0 -1 1" uv0="0 10" />
+			<vertex pos="10 3 20" normal="0 -1 1" uv0="10 10" />
+			<vertex pos="10 3 0" normal="0 -1 1" uv0="10 0" />
+				
+			<triangle_set>						
+				<material_name>checker</material_name>
+				<tri>4 5 6</tri>
+				<tri>4 6 7</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>mesh1</mesh_name>
+	</model>
+	
+	
+	<mesh>
+		<name>block</name>
+		
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+			<expose_uv_set>
+				<index>0</index>
+				<name>bump</name>
+			</expose_uv_set>
+			
+			<vertex pos="1.000000 1.000000 -1.000000" normal="-0.000000 -0.000000 -1.000000"/>
+			<vertex pos="1.000000 -1.000000 -1.000000" normal="-0.000000 -0.000000 -1.000000"/>
+			<vertex pos="-1.000000 -1.000000 -1.000000" normal="-0.000000 -0.000000 -1.000000"/>
+			<vertex pos="-1.000000 1.000000 -1.000000" normal="-0.000000 -0.000000 -1.000000"/>
+			<vertex pos="1.000000 1.000000 1.000000" normal="0.000000 0.000000 1.000000" uv0="1 1" />
+			<vertex pos="-1.000000 1.000000 1.000000" normal="0.000000 0.000000 1.000000" uv0="-1 1" />
+			<vertex pos="-1.000000 -1.000000 1.000000" normal="0.000000 0.000000 1.000000" uv0="-1 -1" />
+			<vertex pos="0.999999 -1.000001 1.000000" normal="0.000000 0.000000 1.000000" uv0="1 -1" />
+			<vertex pos="1.000000 1.000000 -1.000000" normal="1.000000 -0.000000 0.000000"/>
+			<vertex pos="1.000000 1.000000 1.000000" normal="1.000000 -0.000000 0.000000"/>
+			<vertex pos="0.999999 -1.000001 1.000000" normal="1.000000 -0.000000 0.000000"/>
+			<vertex pos="1.000000 -1.000000 -1.000000" normal="1.000000 -0.000000 0.000000"/>
+			<vertex pos="1.000000 -1.000000 -1.000000" normal="-0.000000 -1.000000 -0.000000" uv0="1 -1" />
+			<vertex pos="0.999999 -1.000001 1.000000" normal="-0.000000 -1.000000 -0.000000" uv0="1 1" />
+			<vertex pos="-1.000000 -1.000000 1.000000" normal="-0.000000 -1.000000 -0.000000" uv0="-1 1" />
+			<vertex pos="-1.000000 -1.000000 -1.000000" normal="-0.000000 -1.000000 -0.000000" uv0="-1 -1" />
+			<vertex pos="-1.000000 -1.000000 -1.000000" normal="-1.000000 0.000000 -0.000000"/>
+			<vertex pos="-1.000000 -1.000000 1.000000" normal="-1.000000 0.000000 -0.000000"/>
+			<vertex pos="-1.000000 1.000000 1.000000" normal="-1.000000 0.000000 -0.000000"/>
+			<vertex pos="-1.000000 1.000000 -1.000000" normal="-1.000000 0.000000 -0.000000"/>
+			<vertex pos="1.000000 1.000000 1.000000" normal="0.000000 1.000000 0.000000"/>
+			<vertex pos="1.000000 1.000000 -1.000000" normal="0.000000 1.000000 0.000000"/>
+			<vertex pos="-1.000000 1.000000 -1.000000" normal="0.000000 1.000000 0.000000"/>
+			<vertex pos="-1.000000 1.000000 1.000000" normal="0.000000 1.000000 0.000000"/>
+			<triangle_set>
+				<material_name>subject_mat</material_name>
+				<tri>0 1 2</tri>
+				<tri>2 3 0</tri>
+				<tri>4 5 6</tri>
+				<tri>6 7 4</tri>
+				<tri>8 9 10</tri>
+				<tri>10 11 8</tri>
+				<tri>12 13 14</tri>
+				<tri>14 15 12</tri>
+				<tri>16 17 18</tri>
+				<tri>18 19 16</tri>
+				<tri>20 21 22</tri>
+				<tri>22 23 20</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<model>
+		<pos>-1.1 0.5 -1.4</pos>
+		<scale>1.8</scale>
+		<mesh_name>block</mesh_name>
+	</model>
+	
+
+</scene>

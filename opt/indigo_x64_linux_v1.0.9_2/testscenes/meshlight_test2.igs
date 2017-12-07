@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+	<background>
+		<spectrum>
+			<rgb>
+				<rgb>0 0 0.5</rgb>
+			</rgb>
+		</spectrum>
+	</background>
+
+	<camera>
+		<pos>10.904162 -0.553904 3.456007</pos>
+		<up>-0.281953 0.026689 0.959057</up>
+		<forwards>-0.957692 0.052289 -0.283006</forwards>
+		
+		<aperture_radius>0.001</aperture_radius>
+		<focus_distance>3.0</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.02</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+	
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.0</pre_scale>
+			<post_scale>1.0</post_scale>
+		</reinhard>
+	</tonemapping>
+
+	<!--Area Light-->
+	<rectanglelight>
+		<pos>0 -4 2</pos>
+		<width>2.0</width>
+		<height>2.0</height>
+		
+		<spectrum>
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.00004</gain>
+			</blackbody>
+		</spectrum>	
+	</rectanglelight>
+	
+	<mesh>
+		<name>plane</name>
+		<normal_smoothing>false</normal_smoothing>
+		
+		<external>
+			<path>meshlight_test2_meshes\Plane.3ds</path>
+		</external>
+	</mesh>
+	
+	<meshlight>
+		<rotation>
+			<matrix>
+				1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000 
+			</matrix>
+		</rotation>
+		<pos>0.000000 2.985365 2.000000</pos>
+		<scale>1.0</scale>
+		<mesh_name>plane</mesh_name>
+		
+		<spectrum>
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.00004</gain>
+			</blackbody>
+		</spectrum>
+	</meshlight>
+	
+	<!--mesh>
+		<name>cube</name>
+		<normal_smoothing>false</normal_smoothing>
+		
+		<external>
+			<path>meshlight_test2_meshes\Cube.3ds</path>
+		</external>
+	</mesh>
+
+	<meshlight>
+		<rotation>
+			<matrix>
+				1.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.0000 
+			</matrix>
+		</rotation>
+		<pos>0.000000 0.000000 2.000000</pos>
+		<scale>1.0</scale>
+		<mesh_name>cube</mesh_name>
+		
+		<spectrum>
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.00004</gain>
+			</blackbody>
+		</spectrum>
+	</meshlight-->
+
+	<!--Ground Plane-->
+	<material>
+		<name>white</name>
+		
+		<diffuse>
+			<colour>0.6 0.6 0.6</colour>
+		</diffuse>
+	</material>
+	<mesh>
+		<name>mesh1</name>
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<vertex pos="-10 -10 0" normal="0 0 1" />
+			<vertex pos="-10 10 0" normal="0 0 1" />
+			<vertex pos="10 10 0" normal="0 0 1" />
+			<vertex pos="10 -10 0" normal="0 0 1" />
+
+			<triangle_set>
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>mesh1</mesh_name>
+	</model>
+</scene>

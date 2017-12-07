@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+	<!--background>
+		<spectrum>
+			<blackbody>
+				<temperature>3500</temperature>
+				<gain>1.0</gain>
+			</blackbody>
+		</spectrum>
+	</background-->
+
+	<camera>
+		<pos>0 -2 0.6</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 0</forwards>
+
+		<aperture_radius>0.001</aperture_radius>
+		<focus_distance>3.0</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.02</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+	
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.0</pre_scale>
+			<post_scale>1.0</post_scale>
+		</reinhard>
+	</tonemapping>
+
+	<material>
+		<name>white</name>
+		<diffuse>
+			<colour>0.9 0.9 0.9</colour>
+		</diffuse>
+	</material>
+	
+	<rectanglelight>
+		<pos>0.0 -2 1.9</pos>
+		<width>1</width>
+		<height>1</height>
+		
+		<spectrum>
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.004</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+	
+	<rectanglelight>
+		<pos>3 -1 1.9</pos>
+		<width>1</width>
+		<height>1</height>
+		
+		<spectrum>
+			<blackbody>
+				<temperature>4000</temperature>
+				<gain>0.04</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+
+	
+	<material>
+		<name>aluminium</name>
+		
+		<phong>
+			<nk_data>nkdata/al.nk</nk_data>
+			<exponent>1000</exponent>
+		</phong>
+	</material>
+	
+	<material>
+		<name>silver</name>
+		
+		<phong>
+			<nk_data>nkdata/ag.nk</nk_data>
+			<exponent>1000</exponent>
+		</phong>
+	</material>
+	
+	<material>
+		<name>gold</name>
+		
+		<phong>
+			<nk_data>nkdata/au.nk</nk_data>
+			<exponent>1000</exponent>
+		</phong>
+	</material>
+	
+	<material>
+		<name>copper</name>
+		
+		<phong>
+			<nk_data>nkdata/cu.nk</nk_data>
+			<exponent>1000</exponent>
+		</phong>
+	</material>
+	
+	
+	<sphere>
+		<center>-1.2 0 0.31</center>
+		<radius>0.3</radius>
+
+		<material_name>aluminium</material_name>
+	</sphere>
+	
+	<sphere>
+		<center>-0.4 0 0.31</center>
+		<radius>0.3</radius>
+
+		<material_name>silver</material_name>
+	</sphere>
+	
+	<sphere>
+		<center>0.4 0 0.31</center>
+		<radius>0.3</radius>
+
+		<material_name>gold</material_name>
+	</sphere>
+	
+	<sphere>
+		<center>1.2 0 0.31</center>
+		<radius>0.3</radius>
+
+		<material_name>copper</material_name>
+	</sphere>
+	
+	
+	<!--Ground Plane-->
+	<material>
+		<name>white</name>
+		
+		<diffuse>
+			<colour>0.6 0.6 0.6</colour>
+		</diffuse>
+	</material>
+	
+	<mesh>
+		<name>groundmesh</name>
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<vertex pos="-30 -30 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-30 30 0" normal="0 0 1" uv0="0 10000" />
+			<vertex pos="30 30 0" normal="0 0 1" uv0="10000 10000" />
+			<vertex pos="30 -30 0" normal="0 0 1" uv0="10000 0" />
+
+			<triangle_set>
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+
+	
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>groundmesh</mesh_name>
+	</model>
+	
+	
+</scene>
+
+

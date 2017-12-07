@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Exporter script from 3ds Max by Suvakas -->
+
+<scene>
+	<tonemapping>
+		<linear>
+			<scale>0.01</scale>
+		</linear>
+    <!--reinhard>
+      <pre_scale>1</pre_scale>
+      <post_scale>1</post_scale>
+      <burn>10</burn>
+    </reinhard-->
+	</tonemapping>
+
+
+  <!-- Camera Name: Camera01 -->
+  <camera>
+    <pos>-0.153093 -0.153093 0.125</pos>
+    <up>0.353553 0.353553 0.866025</up>
+    <forwards>0.612372 0.612372 -0.5</forwards>
+
+    <focus_distance>0.25</focus_distance>
+    <aspect_ratio>1.33333</aspect_ratio>
+    <aperture_radius>0.00271599</aperture_radius>
+    <sensor_width>0.036</sensor_width>
+    <lens_sensor_dist>0.0434558</lens_sensor_dist>
+    <white_balance>D65</white_balance>
+    <autofocus/>
+  </camera>
+
+
+  <mesh>
+    <name>1</name>
+    <normal_smoothing>true</normal_smoothing>
+
+    <external>
+      <path>3ds\1.3ds</path>
+    </external>
+  </mesh>
+
+  <mesh>
+    <name>2</name>
+    <normal_smoothing>true</normal_smoothing>
+
+    <external>
+      <path>3ds\2.3ds</path>
+    </external>
+  </mesh>
+
+
+
+  <material>
+    <name>missing_material</name>
+    <diffuse>
+      <albedo_spectrum>
+        <rgb>
+          <rgb>1.0 0.0 0.0</rgb>
+          <gamma>2.2</gamma>
+        </rgb>
+      </albedo_spectrum>
+    </diffuse>
+  </material>
+
+
+  <material>
+    <name>dummy</name>
+
+    <diffuse>
+      <albedo_spectrum>
+        <rgb>
+          <rgb>1.0 0.0 0.0</rgb>
+          <gamma>2.2</gamma>
+        </rgb>
+      </albedo_spectrum>
+    </diffuse>
+  </material>
+
+
+  <material>
+    <name>default</name>
+
+    <diffuse>
+      <albedo_spectrum>
+        <rgb>
+          <rgb>1.0 0.0 0.0</rgb>
+          <gamma>2.2</gamma>
+        </rgb>
+      </albedo_spectrum>
+    </diffuse>
+  </material>
+
+
+  <material>
+    <name>01_-_Default</name>
+    <diffuse>
+      <albedo_spectrum>
+        <rgb>
+          <rgb>0.588235 0.588235 0.588235</rgb>
+          <gamma>2.2</gamma>
+        </rgb>
+      </albedo_spectrum>
+    </diffuse>
+  </material>
+
+
+	<!-- ModelName in Max: Plane01 -->
+	<model>
+		<pos>0.00388425 0.00159503 0.0</pos>
+		<scale>0.001</scale>
+		<rotation>
+			<matrix>
+			1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0
+			</matrix>
+		</rotation>
+		<mesh_name>1</mesh_name>
+	</model>
+
+
+	<!-- ModelName in Max: Box01 -->
+	<meshlight>
+		<pos>0.00388425 0.00159503 0.0</pos>
+		<scale>0.001</scale>
+		<rotation>
+			<matrix>
+			1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0
+			</matrix>
+		</rotation>
+		<mesh_name>2</mesh_name>
+
+		<spectrum>
+		<blackbody>
+			<temperature>2800</temperature>
+			<gain>0.001</gain>
+		</blackbody>
+		</spectrum>
+
+
+		<efficacy_scale>
+			<power_drawn>100</power_drawn>
+			<overall_luminous_efficacy>17.5</overall_luminous_efficacy>
+		</efficacy_scale>
+	</meshlight>
+
+
+</scene>

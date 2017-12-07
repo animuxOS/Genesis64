@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.0</pre_scale>
+			<post_scale>1.0</post_scale>
+		</reinhard>
+	</tonemapping>
+
+	<camera>
+		<pos>0 -20 6</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 -0.3</forwards>
+
+		<focus_distance>2.000000</focus_distance>
+		<aspect_ratio>1.333</aspect_ratio>
+		<aperture_radius>0.001</aperture_radius>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.16</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+	</camera>
+
+	<!--background>
+		<spectrum>  
+
+			<rgb>
+				<rgb>1 1 2</rgb>
+				<gamma>1</gamma>
+			</rgb>
+		</spectrum>
+	</background-->
+	
+	<skylight>
+		<sundir>-5 -20 7</sundir>
+		<turbidity>2</turbidity>
+	</skylight>
+
+	<!--<rectanglelight>
+		<pos>-5 -20 7.5</pos>
+		<width>1</width>
+		<height>1</height>
+		<spectrum>  
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.0004</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>-->
+	
+
+
+	<!-- Ground Material -->
+	<material>
+		<name>checker</name>
+
+		<diffuse>
+			<albedo_spectrum>
+				<uniform>
+					<value>0</value>
+				</uniform>
+			</albedo_spectrum>
+
+			<albedo_texture>
+				<uv_set>albedo</uv_set>
+				<path>checker.jpg</path>
+				<exponent>2.3</exponent>
+			</albedo_texture>
+		</diffuse>
+	</material>
+
+	<!-- Define a Mesh -->
+	<mesh>
+		<name>mesh1</name>
+
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<expose_uv_set>
+				<index>0</index>
+				<name>bump</name>
+			</expose_uv_set>
+
+			<vertex pos="-10000 -10000 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-10000 10000 0" normal="0 0 1" uv0="0 10000" />
+			<vertex pos="10000 10000 0" normal="0 0 1" uv0="10000 10000" />
+			<vertex pos="10000 -10000 0" normal="0 0 1" uv0="10000 0" />
+
+			<triangle_set>
+				<material_name>checker</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+
+		</embedded>
+	</mesh>
+
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1.0</scale>
+		<mesh_name>mesh1</mesh_name>
+	</model>
+
+
+
+
+	<material>
+		<name>1</name>
+		<diffuse>
+			<albedo_spectrum>
+				<uniform>
+					<value>0.7</value>
+				</uniform>
+			</albedo_spectrum>		  
+		</diffuse>   
+	</material>
+
+	<material>
+		<name>2</name>
+		<oren_nayar>
+			<albedo_spectrum>
+				<uniform>
+					<value>0.7</value>
+				</uniform>
+			</albedo_spectrum>
+
+			<sigma>0.0</sigma>
+		</oren_nayar>
+	</material>
+
+	<material>
+		<name>3</name>
+		<oren_nayar>
+			<albedo_spectrum>
+				<uniform>
+					<value>0.7</value>
+				</uniform>
+			</albedo_spectrum>
+
+			<sigma>0.2</sigma>
+		</oren_nayar>
+	</material>
+	
+	<material>
+		<name>4</name>
+		<oren_nayar>
+			<albedo_spectrum>
+				<uniform>
+					<value>0.7</value>
+				</uniform>
+			</albedo_spectrum>
+
+			<sigma>0.5</sigma>
+		</oren_nayar>
+	</material>
+
+	<!--<material>
+		<name>phong2</name>
+		<phong>
+			<ior>1.5</ior>
+			<exponent>100</exponent>
+			<diffuse_albedo_spectrum>
+				<uniform>
+					<value>0</value>
+				</uniform>
+			</diffuse_albedo_spectrum>
+		</phong>
+	</material>
+
+	<material>
+		<name>phong3</name>
+		<phong>
+			<ior>1.5</ior>
+			<exponent>1000</exponent>
+			<diffuse_albedo_spectrum>
+				<uniform>
+					<value>0</value>
+				</uniform>
+			</diffuse_albedo_spectrum>
+		</phong>
+	</material>
+
+	<material>
+		<name>phong4</name>
+		<phong>
+			<ior>1.5</ior>
+			<exponent>10000</exponent>
+			<diffuse_albedo_spectrum>
+				<uniform>
+					<value>0</value>
+				</uniform>
+			</diffuse_albedo_spectrum>
+		</phong>
+	</material>-->
+
+	<sphere>
+		<center>-1.7 0.0 0.51</center>
+		<radius>0.5</radius>
+
+		<material_name>1</material_name>
+	</sphere>
+
+	<sphere>
+		<center>-0.6 0.0 0.51</center>
+		<radius>0.5</radius>
+
+		<material_name>2</material_name>
+	</sphere>
+
+	<sphere>
+		<center>0.6 0.0 0.51</center>
+		<radius>0.5</radius>
+
+		<material_name>3</material_name>
+	</sphere>
+
+	<sphere>
+		<center>1.7 0.0 0.51</center>
+		<radius>0.5</radius>
+
+		<material_name>4</material_name>
+	</sphere>
+</scene>

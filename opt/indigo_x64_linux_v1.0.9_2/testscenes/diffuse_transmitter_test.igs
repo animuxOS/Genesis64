@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+	<camera>
+		<pos>0 -5.2 2.5</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 -0.2</forwards>
+		
+		<focus_distance>2.000000</focus_distance>
+		<aspect_ratio>1.3333</aspect_ratio>
+		<aperture_radius>0.003</aperture_radius>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.04</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+		<autofocus/>
+	</camera>
+	
+	<tonemapping>
+		<reinhard>
+			<pre_scale>5.0</pre_scale>
+			<post_scale>1.0</post_scale>
+			<burn>9</burn>
+		</reinhard>
+	</tonemapping>
+	
+	<rectanglelight>
+		<pos>0 0 6</pos>
+		<width>2</width>
+		<height>2</height>
+		<spectrum>  
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.00001</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+
+
+	<!-- this is the diffuse transmitter material -->
+	<material>
+		<name>diff_tran</name>
+		
+		<diffuse_transmitter>
+			<!--colour>0 0 0</colour-->
+      <albedo_spectrum>
+        <rgb>
+          <rgb>0 0 0</rgb>
+          <gamma>1</gamma>
+        </rgb>
+      </albedo_spectrum>
+			
+			<albedo_texture>
+				<uv_set>albedo</uv_set>
+				<path>ColorChecker_sRGB_from_Ref.jpg</path>
+				<exponent>2.2</exponent>
+			</albedo_texture>
+		</diffuse_transmitter>
+	</material>
+
+
+
+	<!-- Ground Material -->
+	<material>
+		<name>white</name>
+		
+		<diffuse>
+			<colour>0.7 0.7 0.7</colour>
+		</diffuse>
+	</material>
+	
+	<material>
+		<name>checker</name>
+		
+		<diffuse>
+			<colour>1 1 1</colour>
+			
+			<albedo_texture>
+				<uv_set>albedo</uv_set>
+				<path>checker.jpg</path>
+				<exponent>2.3</exponent>
+			</albedo_texture>	
+		</diffuse>    
+	</material>
+
+		
+	<!-- Define a Mesh -->
+	<mesh>
+		<name>mesh1</name>
+	
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+				
+			<expose_uv_set>
+				<index>0</index>
+				<name>bump</name>
+			</expose_uv_set>
+			
+			<vertex pos="-10 -10 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-10 10 0" normal="0 0 1" uv0="0 10" />
+			<vertex pos="10 10 0" normal="0 0 1" uv0="10 10" />
+			<vertex pos="10 -10 0" normal="0 0 1" uv0="10 0" />
+				
+			<triangle_set>						
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+			
+			<vertex pos="-10 3 0" normal="0 -1 1" uv0="0 0" />
+			<vertex pos="-10 3 20" normal="0 -1 1" uv0="0 10" />
+			<vertex pos="10 3 20" normal="0 -1 1" uv0="10 10" />
+			<vertex pos="10 3 0" normal="0 -1 1" uv0="10 0" />
+				
+			<triangle_set>						
+				<material_name>checker</material_name>
+				<tri>4 5 6</tri>
+				<tri>4 6 7</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1</scale>
+		<mesh_name>mesh1</mesh_name>
+	</model>
+	
+	
+	
+	<mesh>
+		<name>block</name>
+	
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+				
+			<vertex pos="-1 -1 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-1 1 0" normal="0 0 1" uv0="0 1" />
+			<vertex pos="1 1 0" normal="0 0 1" uv0="1 1" />
+			<vertex pos="1 -1 0" normal="0 0 1" uv0="1 0" />
+				
+			<triangle_set>						
+				<material_name>diff_tran</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<model>
+		<pos>0 2 1</pos>
+		<scale>1.5</scale>
+		<mesh_name>block</mesh_name>
+	</model>
+
+</scene>
+
+
+
+

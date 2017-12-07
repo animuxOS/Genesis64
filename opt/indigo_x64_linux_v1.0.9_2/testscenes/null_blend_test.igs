@@ -1,0 +1,198 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+
+	<renderer_settings>
+	</renderer_settings>
+
+	<camera>
+		<pos>0 -5.2 2.5</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 -0.3</forwards>
+		
+		<focus_distance>2.000000</focus_distance>
+		<aspect_ratio>1.333</aspect_ratio>
+		<aperture_radius>0.003</aperture_radius>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.04</lens_sensor_dist>
+		<white_balance>D65</white_balance>
+		<autofocus/>
+	</camera>
+	
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.0</pre_scale>
+			<post_scale>1.0</post_scale>
+			<burn>6</burn>
+		</reinhard>
+	</tonemapping>
+	
+	<rectanglelight>
+		<pos>5 0 6</pos>
+		<width>3</width>
+		<height>3</height>
+		<spectrum>  
+			<blackbody>
+				<temperature>6500</temperature>
+				<gain>0.00001</gain>
+			</blackbody>
+		</spectrum>
+	</rectanglelight>
+
+
+
+
+	
+	<material>
+		<name>a</name>
+		<phong>
+			<ior>3</ior>
+			<diffuse>1 0 0</diffuse>
+			<exponent>10000</exponent>
+			
+			<bump_map>
+				<uv_set>bump</uv_set>
+				<path>indigo.jpg</path>
+				<b>0.001</b>
+				<exponent>1.0</exponent>
+			</bump_map>
+		</phong>
+	</material>
+
+	<material>
+		<name>b</name>
+		<null_material/>
+	</material>
+	
+
+	<material>
+		<name>blendmat</name>
+		
+		<blend>
+			<a_name>a</a_name>
+			<b_name>b</b_name>
+			<blend_factor>0.5</blend_factor>
+			
+			<blend_map>
+				<uv_set>albedo</uv_set>
+				<path>checker.jpg</path>
+				<exponent>1.0</exponent>
+			</blend_map>
+		</blend>
+	</material>
+
+
+
+
+
+
+
+
+
+	<!-- Ground Material -->
+
+	<material>
+		<name>white</name>
+		
+		<diffuse>
+			<colour>0.7 0.7 0.7</colour>
+		</diffuse>
+	</material>
+	
+	<material>
+		<name>checker</name>
+		
+		<diffuse>
+			<colour>1 1 1</colour>
+			
+			<albedo_texture>
+				<uv_set>albedo</uv_set>
+				<path>checker.jpg</path>
+				<exponent>2.3</exponent>
+			</albedo_texture>	
+		</diffuse>    
+	</material>
+
+		
+	<!-- Define a Mesh -->
+	<mesh>
+		<name>mesh1</name>
+	
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+				
+			<expose_uv_set>
+				<index>0</index>
+				<name>bump</name>
+			</expose_uv_set>
+			
+			<vertex pos="-10 -10 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-10 10 0" normal="0 0 1" uv0="0 10" />
+			<vertex pos="10 10 0" normal="0 0 1" uv0="10 10" />
+			<vertex pos="10 -10 0" normal="0 0 1" uv0="10 0" />
+				
+			<triangle_set>						
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+			
+			<vertex pos="-10 3 0" normal="0 -1 1" uv0="0 0" />
+			<vertex pos="-10 3 20" normal="0 -1 1" uv0="0 10" />
+			<vertex pos="10 3 20" normal="0 -1 1" uv0="10 10" />
+			<vertex pos="10 3 0" normal="0 -1 1" uv0="10 0" />
+				
+			<triangle_set>						
+				<material_name>checker</material_name>
+				<tri>4 5 6</tri>
+				<tri>4 6 7</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1</scale>
+		<mesh_name>mesh1</mesh_name>
+	</model>
+	
+	
+	<mesh>
+		<name>block</name>
+	
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+			<expose_uv_set>
+				<index>1</index>
+				<name>bump</name>
+			</expose_uv_set>
+				
+			<vertex pos="-1 -1 0" normal="0 0 1" uv0="0 0" uv1="0 0" />
+			<vertex pos="-1 1 0" normal="0 0 1" uv0="0 3" uv1="0 1" />
+			<vertex pos="1 1 0" normal="0 0 1" uv0="3 3" uv1="1 1" />
+			<vertex pos="1 -1 0" normal="0 0 1" uv0="3 0" uv1="1 0" />
+				
+			<triangle_set>						
+				<material_name>blendmat</material_name>
+				<tri>0 2 1</tri>
+				<tri>0 3 2</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+	
+	<model>
+		<pos>0 0 0.5</pos>
+		<scale>1.5</scale>
+		<mesh_name>block</mesh_name>
+	</model>
+
+</scene>

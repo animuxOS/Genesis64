@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+	<tonemapping>
+		<reinhard>
+			<pre_scale>1.0</pre_scale>
+			<post_scale>1.0</post_scale>
+		</reinhard>
+	</tonemapping>
+
+	<camera>
+		<pos>0 -6 2</pos>
+		<up>0 0 1</up>
+		<forwards>0 1 0</forwards>
+		
+		<aperture_radius>0.001</aperture_radius>
+		<focus_distance>10000.0</focus_distance>
+		<aspect_ratio>1.33</aspect_ratio>
+		<sensor_width>0.036</sensor_width>
+		<lens_sensor_dist>0.02</lens_sensor_dist>
+		<white_balance>A</white_balance>
+	</camera>
+	
+
+	<!-- Ground Material -->
+
+	<material>
+		<name>white</name>
+
+		<diffuse>
+			<colour>0.7 0.7 0.7</colour>
+		</diffuse>
+	</material>
+
+
+	<!-- Define a Mesh -->
+	<mesh>
+		<name>mesh1</name>
+
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<expose_uv_set>
+				<index>0</index>
+				<name>bump</name>
+			</expose_uv_set>
+
+			<vertex pos="-10 -10 0" normal="0 0 1" uv0="0 0" />
+			<vertex pos="-10 10 0" normal="0 0 1" uv0="0 10" />
+			<vertex pos="10 10 0" normal="0 0 1" uv0="10 10" />
+			<vertex pos="10 -10 0" normal="0 0 1" uv0="10 0" />
+
+			<triangle_set>
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+
+			<vertex pos="-10 0.5 0" normal="0 -1 1" uv0="0 0" />
+			<vertex pos="-10 0.5 20" normal="0 -1 1" uv0="0 10" />
+			<vertex pos="10 0.5 20" normal="0 -1 1" uv0="10 10" />
+			<vertex pos="10 0.5 0" normal="0 -1 1" uv0="10 0" />
+
+			<triangle_set>
+				<material_name>white</material_name>
+				<tri>4 5 6</tri>
+				<tri>4 6 7</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+
+	<model>
+		<pos>0 0 0</pos>
+		<scale>1</scale>
+		<mesh_name>mesh1</mesh_name>
+	</model>
+
+
+	<mesh>
+		<name>lightmesh</name>
+		<normal_smoothing>false</normal_smoothing>
+		<embedded>
+			<expose_uv_set>
+				<index>0</index>
+				<name>albedo</name>
+			</expose_uv_set>
+
+			<vertex pos="-0.02 -0.02 0" normal="0 0 -1" uv0="0 0" />
+			<vertex pos="-0.02 0.02 0.02" normal="0 0 -1" uv0="0 10000" />
+			<vertex pos="0.02 0.02 0.02" normal="0 0 -1" uv0="10000 10000" />
+			<vertex pos="0.02 -0.02 0" normal="0 0 -1" uv0="10000 0" />
+
+			<triangle_set>
+				<material_name>white</material_name>
+				<tri>0 1 2</tri>
+				<tri>0 2 3</tri>
+			</triangle_set>
+		</embedded>
+	</mesh>
+
+
+
+	<!--<meshlight>
+		<pos>-2 0 2</pos>
+		<scale>1.0</scale>
+		<mesh_name>lightmesh</mesh_name>
+
+		<spectrum>
+			<blackbody>
+				<temperature>3000</temperature>
+				<gain>1.0</gain>
+			</blackbody>
+		</spectrum>
+
+		<ies_profile>
+			<path>C:/programming/models/IES/40_planning_luminaire_cn/ies/_family/en/erco_ies_en_CL_downlights_409/ERCO_85252000_2xTC-DEL_18W.ies</path>
+			--><!--<path>C:/programming/models/IES/ITL40406.IES</path>--><!--
+		</ies_profile>
+	</meshlight>-->
+
+
+	<meshlight>
+		<pos>0 -0.2 6</pos>
+		<scale>1.0</scale>
+		<mesh_name>lightmesh</mesh_name>
+
+		<spectrum>
+			<blackbody>
+				<temperature>3000</temperature>
+				<gain>1.0</gain>
+			</blackbody>
+		</spectrum>
+
+		<ies_profile>
+			<!--<path>C:\programming\models\IES\19.ies</path>-->
+			<path>C:/programming/models/IES/40_planning_luminaire_cn/ies/_family/en/erco_ies_en_CL_downlights_409/ERCO_85263000_2xTC-DEL_26W.ies</path>
+		</ies_profile>
+	</meshlight>
+
+	<!--
+		<meshlight>
+			<pos>2 0 2</pos>
+			<scale>1.0</scale>
+			<mesh_name>lightmesh</mesh_name>
+
+			<spectrum>
+				<blackbody>
+					<temperature>3000</temperature>
+					<gain>1.0</gain>
+				</blackbody>
+			</spectrum>
+
+			--><!--<efficacy_scale>
+				<overall_luminous_efficacy>1</overall_luminous_efficacy>
+				<power_drawn>2400</power_drawn>
+			</efficacy_scale>-->
+				<!--
+			<ies_profile>
+				<path>C:/programming/models/IES/40_planning_luminaire_cn/ies/_family/en/erco_ies_en_CL_downlights_409/ERCO_85263000_2xTC-DEL_26W.ies</path>
+			</ies_profile>
+		</meshlight>-->
+			</scene>
+			
